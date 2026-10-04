@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 type Store = {
   ready: boolean;
@@ -46,29 +46,40 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem(KEY, JSON.stringify({ week, servings, overrides, checked }));
   }, [ready, week, servings, overrides, checked]);
 
+  const goWeek = useCallback((w: number) => setWeek(Math.min(52, Math.max(1, w))), []);
+  const setSlot = useCallback(
+    (key: string, recipeId: string | null) =>
+      setOverrides((prev) => ({ ...prev, [key]: recipeId })),
+    []
+  );
+  const toggleChecked = useCallback(
+    (key: string) => setChecked((prev) => ({ ...prev, [key]: !prev[key] })),
+    []
+  );
+  const clearWeekOverrides = useCallback((w: number) => {
+    setOverrides((prev) => {
+      const next = { ...prev };
+      for (const k of Object.keys(next)) {
+        if (k.startsWith(`${w}_`)) delete next[k];
+      }
+      return next;
+    });
+  }, []);
+
   const value = useMemo<Store>(
     () => ({
       ready,
       week,
-      setWeek: (w) => setWeek(Math.min(52, Math.max(1, w))),
+      setWeek: goWeek,
       servings,
       setServings,
       overrides,
-      setSlot: (key, recipeId) =>
-        setOverrides((prev) => ({ ...prev, [key]: recipeId })),
+      setSlot,
       checked,
-      toggleChecked: (key) =>
-        setChecked((prev) => ({ ...prev, [key]: !prev[key] })),
-      clearWeekOverrides: (w) =>
-        setOverrides((prev) => {
-          const next = { ...prev };
-          for (const k of Object.keys(next)) {
-            if (k.startsWith(`${w}_`)) delete next[k];
-          }
-          return next;
-        }),
+      toggleChecked,
+      clearWeekOverrides,
     }),
-    [ready, week, servings, overrides, checked]
+    [ready, week, goWeek, servings, overrides, setSlot, checked, toggleChecked, clearWeekOverrides]
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

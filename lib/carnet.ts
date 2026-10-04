@@ -158,13 +158,33 @@ export function filterRecipes(opts: {
   });
 }
 
-export function surprise(opts: { tag?: string; cuisine?: string }): Recipe | undefined {
-  const pool = filterRecipes(opts).filter((r) => r.ingredients.length > 0 && !r.tags.includes("sauce"));
-  if (!pool.length) return undefined;
-  return pool[Math.floor(Math.random() * pool.length)];
+function mulberry32(seed: number) {
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
 }
 
-export function receiveMenu(guests: number, withApero: boolean): Recipe[] {
+function pickN(arr: Recipe[], n: number, rand: () => number): Recipe[] {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy.slice(0, n);
+}
+
+export function surprise(opts: { tag?: string; cuisine?: string; seed?: number }): Recipe | undefined {
+  const pool = filterRecipes(opts).filter((r) => r.ingredients.length > 0 && !r.tags.includes("sauce"));
+  if (!pool.length) return undefined;
+  const rand = opts.seed == null ? Math.random : mulberry32(opts.seed);
+  return pool[Math.floor(rand() * pool.length)];
+}
+
+export function receiveMenu(guests: number, withApero: boolean, seed = 1): Recipe[] {
   const mains = carnet.recipes.filter(
     (r) =>
       (r.tags.includes("invites") || r.tags.includes("batch") || r.cuisine === "francaise") &&
@@ -174,11 +194,10 @@ export function receiveMenu(guests: number, withApero: boolean): Recipe[] {
   );
   const aperos = carnet.recipes.filter((r) => r.tags.includes("apero") && r.ingredients.length > 0);
   const desserts = carnet.recipes.filter((r) => r.tags.includes("dessert"));
-  const pick = (arr: Recipe[], n: number) =>
-    [...arr].sort(() => Math.random() - 0.5).slice(0, n);
+  const rand = mulberry32(seed * 1009 + guests * 17 + (withApero ? 3 : 0));
   const out: Recipe[] = [];
-  if (withApero) out.push(...pick(aperos, guests > 4 ? 2 : 1));
-  out.push(...pick(mains, 1));
-  out.push(...pick(desserts, 1));
+  if (withApero) out.push(...pickN(aperos, guests > 4 ? 2 : 1, rand));
+  out.push(...pickN(mains, 1, rand));
+  out.push(...pickN(desserts, 1, rand));
   return out;
 }

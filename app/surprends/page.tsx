@@ -4,11 +4,18 @@ import { useState } from "react";
 import { TAGS, surprise } from "@/lib/carnet";
 import type { Recipe } from "@/lib/types";
 import { RecipeCard } from "@/components/recipe-card";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function SurprendsPage() {
   const [tag, setTag] = useState("");
+  const [seed, setSeed] = useState(0);
   const [recipe, setRecipe] = useState<Recipe | undefined>();
+
+  const draw = () => {
+    const next = seed + 1;
+    setSeed(next);
+    setRecipe(surprise({ tag, seed: Date.now() + next }) || undefined);
+  };
 
   return (
     <div className="mx-auto max-w-lg space-y-6">
@@ -33,14 +40,14 @@ export default function SurprendsPage() {
           ))}
         </select>
       </label>
-      <Button
-        className="w-full"
-        onClick={() => setRecipe(surprise({ tag }) || undefined)}
-      >
+      <button type="button" className={`${buttonVariants()} w-full`} onClick={draw}>
         Tirer une recette
-      </Button>
+      </button>
       {recipe ? (
-        <RecipeCard recipe={recipe} />
+        <div className="space-y-2">
+          <p className="text-sm text-muted-foreground">Tirage n°{seed}</p>
+          <RecipeCard recipe={recipe} />
+        </div>
       ) : (
         <p className="text-center text-sm text-muted-foreground">Clique pour piocher dans le carnet.</p>
       )}

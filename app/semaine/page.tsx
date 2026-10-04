@@ -105,9 +105,13 @@ function MealRow({
           <p className="text-sm text-muted-foreground">{slot?.label || "Repas à préciser"}</p>
         )}
       </div>
-      <Button variant="ghost" size="sm" onClick={onReplace}>
+      <button
+        type="button"
+        className={buttonVariants({ variant: "ghost", size: "sm" })}
+        onClick={onReplace}
+      >
         Remplacer
-      </Button>
+      </button>
     </div>
   );
 }

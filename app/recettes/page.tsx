@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CUISINES, TAGS, filterRecipes } from "@/lib/carnet";
 import { RecipeCard } from "@/components/recipe-card";
 import { Input } from "@/components/ui/input";
@@ -10,7 +10,11 @@ export default function RecettesPage() {
   const [q, setQ] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [tag, setTag] = useState("");
+  const [limit, setLimit] = useState(60);
   const list = useMemo(() => filterRecipes({ q, cuisine, tag }), [q, cuisine, tag]);
+  useEffect(() => {
+    setLimit(60);
+  }, [q, cuisine, tag]);
 
   return (
     <div className="space-y-5">
@@ -20,7 +24,12 @@ export default function RecettesPage() {
           Une recette peut avoir plusieurs étiquettes. Ce n’est plus un onglet par thème.
         </p>
       </div>
-      <Input placeholder="Rechercher (poulet, courgette, express…)" value={q} onChange={(e) => setQ(e.target.value)} />
+      <Input
+        placeholder="Rechercher (poulet, courgette, express…)"
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+        aria-label="Rechercher une recette"
+      />
       <div className="flex flex-wrap gap-2">
         <Chip active={!cuisine} onClick={() => setCuisine("")}>
           Toutes cuisines
@@ -41,17 +50,30 @@ export default function RecettesPage() {
           </Chip>
         ))}
       </div>
-      <p className="text-sm text-muted-foreground">{list.length} recette{list.length > 1 ? "s" : ""}</p>
+      <p className="text-sm text-muted-foreground" role="status">
+        {list.length} recette{list.length > 1 ? "s" : ""}
+        {q.trim() ? ` pour « ${q.trim()} »` : ""}
+        {tag ? ` · filtre ${TAGS.find((t) => t.id === tag)?.label ?? tag}` : ""}
+      </p>
       {list.length === 0 ? (
         <p className="rounded-2xl bg-muted/50 p-8 text-center text-sm text-muted-foreground">
-          Rien pour ces filtres. Essaie « express » ou « Mr Cuisine ».
+          Aucune recette pour « {q || tag || cuisine || "ces filtres"} ». Essaie « poulet » ou « express ».
         </p>
       ) : (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {list.slice(0, 120).map((r) => (
+          {list.slice(0, limit).map((r) => (
             <RecipeCard key={r.id} recipe={r} />
           ))}
         </div>
+      )}
+      {list.length > limit && (
+        <button
+          type="button"
+          className="w-full rounded-2xl bg-muted py-3 text-sm hover:bg-muted/80"
+          onClick={() => setLimit((n) => n + 60)}
+        >
+          Afficher plus ({list.length - limit} restantes)
+        </button>
       )}
     </div>
   );

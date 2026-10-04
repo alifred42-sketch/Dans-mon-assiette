@@ -3,14 +3,14 @@
 import { useMemo, useState } from "react";
 import { receiveMenu } from "@/lib/carnet";
 import { RecipeCard } from "@/components/recipe-card";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 
 export default function RecoisPage() {
   const [guests, setGuests] = useState(6);
   const [apero, setApero] = useState(true);
-  const [seed, setSeed] = useState(0);
-  const menu = useMemo(() => receiveMenu(guests, apero), [guests, apero, seed]);
+  const [seed, setSeed] = useState(1);
+  const menu = useMemo(() => receiveMenu(guests, apero, seed), [guests, apero, seed]);
 
   return (
     <div className="space-y-6">
@@ -38,10 +38,13 @@ export default function RecoisPage() {
           Apéritif dînatoire
         </label>
       </div>
-      <Button onClick={() => setSeed((s) => s + 1)}>Composer un autre menu</Button>
+      <button type="button" className={buttonVariants()} onClick={() => setSeed((s) => s + 1)}>
+        Composer un autre menu
+      </button>
+      <p className="text-sm text-muted-foreground">Menu n°{seed}</p>
       <div className="grid gap-3 sm:grid-cols-2">
         {menu.map((r) => (
-          <RecipeCard key={r.id + seed} recipe={r} />
+          <RecipeCard key={`${r.id}-${seed}`} recipe={r} />
         ))}
       </div>
       {menu.length === 0 && (
