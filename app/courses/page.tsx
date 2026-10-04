@@ -1,14 +1,20 @@
-"use client";
-
 import Link from "next/link";
 import { carnet, shoppingForWeek } from "@/lib/carnet";
-import { useStore } from "@/lib/store";
+import { clampServings, clampWeek, getChecked, getOverrides } from "@/lib/prefs";
+import { toggleChecked } from "@/app/actions";
 import { WeekControls } from "@/components/week-controls";
-import { Checkbox } from "@/components/ui/checkbox";
 import { buttonVariants } from "@/components/ui/button";
 
-export default function CoursesPage() {
-  const { week, overrides, servings, checked, toggleChecked } = useStore();
+export default async function CoursesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ w?: string; n?: string }>;
+}) {
+  const sp = await searchParams;
+  const week = clampWeek(sp.w);
+  const servings = clampServings(sp.n);
+  const overrides = await getOverrides();
+  const checked = await getChecked();
   const items = shoppingForWeek(week, overrides, servings);
   const remaining = items.filter((i) => !checked[`${week}_${i.key}`]).length;
 
@@ -21,12 +27,12 @@ export default function CoursesPage() {
             {items.length} articles, {remaining} encore à prendre. Doublons fusionnés (plus 4 lignes « courgettes »).
           </p>
         </div>
-        <WeekControls />
+        <WeekControls week={week} servings={servings} path="/courses" />
       </div>
       {items.length === 0 ? (
         <p className="rounded-2xl bg-muted/50 p-8 text-center text-sm text-muted-foreground">
           Aucun ingrédient pour cette semaine. Choisis des repas dans le{" "}
-          <Link href="/semaine" className="text-primary underline">
+          <Link href={`/semaine?w=${week}`} className="text-primary underline">
             semainier
           </Link>
           .
@@ -45,11 +51,23 @@ export default function CoursesPage() {
                     const done = !!checked[key];
                     return (
                       <li key={item.key} className="flex items-start gap-3 px-4 py-3">
-                        <Checkbox
-                          checked={done}
-                          onCheckedChange={() => toggleChecked(key)}
-                          className="mt-1"
-                        />
+                        <form action={toggleChecked}>
+                          <input type="hidden" name="key" value={key} />
+                          <input type="hidden" name="week" value={week} />
+                          <input type="hidden" name="n" value={servings} />
+                          <button
+                            type="submit"
+                            aria-pressed={done}
+                            className={`mt-0.5 inline-flex size-5 items-center justify-center rounded border ${
+                              done
+                                ? "border-primary bg-primary text-primary-foreground"
+                                : "border-input bg-background"
+                            }`}
+                            aria-label={done ? "Retirer des cochés" : "Cocher"}
+                          >
+                            {done ? "✓" : ""}
+                          </button>
+                        </form>
                         <div className={done ? "text-muted-foreground line-through" : ""}>
                           <p className="font-medium">{item.label}</p>
                           <p className="text-xs text-muted-foreground">
@@ -65,7 +83,7 @@ export default function CoursesPage() {
           })}
         </div>
       )}
-      <Link href="/semaine" className={buttonVariants({ variant: "outline" })}>
+      <Link href={`/semaine?w=${week}&n=${servings}`} className={buttonVariants({ variant: "outline" })}>
         Modifier la semaine
       </Link>
     </div>

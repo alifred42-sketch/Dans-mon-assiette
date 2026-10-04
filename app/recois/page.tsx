@@ -1,16 +1,21 @@
-"use client";
-
-import { useMemo, useState } from "react";
 import { receiveMenu } from "@/lib/carnet";
 import { RecipeCard } from "@/components/recipe-card";
 import { buttonVariants } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
 
-export default function RecoisPage() {
-  const [guests, setGuests] = useState(6);
-  const [apero, setApero] = useState(true);
-  const [seed, setSeed] = useState(1);
-  const menu = useMemo(() => receiveMenu(guests, apero, seed), [guests, apero, seed]);
+type Search = { guests?: string; apero?: string | string[]; seed?: string };
+
+export default async function RecoisPage({
+  searchParams,
+}: {
+  searchParams: Promise<Search>;
+}) {
+  const sp = await searchParams;
+  const guests = Math.min(12, Math.max(2, Number(sp.guests) || 6));
+  const aperoRaw = sp.apero;
+  const aperoParts = aperoRaw == null ? ["1"] : Array.isArray(aperoRaw) ? aperoRaw : [aperoRaw];
+  const apero = aperoParts.includes("1");
+  const seed = Math.max(1, Number(sp.seed) || 1);
+  const menu = receiveMenu(guests, apero, seed);
 
   return (
     <div className="space-y-6">
@@ -20,27 +25,30 @@ export default function RecoisPage() {
           Un menu tiré du carnet, pas d’un générateur fantôme. Les quantités suivent le nombre d’invités.
         </p>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div>
-          <Label htmlFor="guests">Invités</Label>
-          <input
-            id="guests"
-            type="number"
-            min={2}
-            max={12}
-            value={guests}
-            onChange={(e) => setGuests(Number(e.target.value) || 2)}
-            className="mt-1 h-9 w-full rounded-lg border border-input bg-background px-2"
-          />
+      <form action="/recois" method="get" className="space-y-4">
+        <div className="grid gap-4 sm:grid-cols-2">
+          <label className="block text-sm">
+            Invités
+            <input
+              name="guests"
+              type="number"
+              min={2}
+              max={12}
+              defaultValue={guests}
+              className="mt-1 h-9 w-full rounded-lg border border-input bg-background px-2"
+            />
+          </label>
+          <label className="flex items-end gap-2 pb-1 text-sm">
+            <input type="hidden" name="apero" value="0" />
+            <input type="checkbox" name="apero" value="1" defaultChecked={apero} />
+            Apéritif dînatoire
+          </label>
         </div>
-        <label className="flex items-end gap-2 pb-1 text-sm">
-          <input type="checkbox" checked={apero} onChange={(e) => setApero(e.target.checked)} />
-          Apéritif dînatoire
-        </label>
-      </div>
-      <button type="button" className={buttonVariants()} onClick={() => setSeed((s) => s + 1)}>
-        Composer un autre menu
-      </button>
+        <input type="hidden" name="seed" value={seed + 1} />
+        <button type="submit" className={buttonVariants()}>
+          Composer un autre menu
+        </button>
+      </form>
       <p className="text-sm text-muted-foreground">Menu n°{seed}</p>
       <div className="grid gap-3 sm:grid-cols-2">
         {menu.map((r) => (

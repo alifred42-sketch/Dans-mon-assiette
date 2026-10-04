@@ -1,12 +1,17 @@
-"use client";
-
 import Link from "next/link";
 import { batchForWeek } from "@/lib/carnet";
-import { useStore } from "@/lib/store";
+import { clampServings, clampWeek, getOverrides } from "@/lib/prefs";
 import { WeekControls } from "@/components/week-controls";
 
-export default function BatchPage() {
-  const { week, overrides } = useStore();
+export default async function BatchPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ w?: string; n?: string }>;
+}) {
+  const sp = await searchParams;
+  const week = clampWeek(sp.w);
+  const servings = clampServings(sp.n);
+  const overrides = await getOverrides();
   const items = batchForWeek(week, overrides);
 
   return (
@@ -18,7 +23,7 @@ export default function BatchPage() {
             Plats qui se préparent à l’avance ou au robot — plus les « Ligne source 5 » du tableur.
           </p>
         </div>
-        <WeekControls />
+        <WeekControls week={week} servings={servings} path="/batch" />
       </div>
       {items.length === 0 ? (
         <p className="rounded-2xl bg-muted/50 p-8 text-center text-sm text-muted-foreground">

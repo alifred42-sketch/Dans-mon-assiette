@@ -1,21 +1,18 @@
-"use client";
-
-import { useState } from "react";
 import { TAGS, surprise } from "@/lib/carnet";
-import type { Recipe } from "@/lib/types";
 import { RecipeCard } from "@/components/recipe-card";
 import { buttonVariants } from "@/components/ui/button";
 
-export default function SurprendsPage() {
-  const [tag, setTag] = useState("");
-  const [seed, setSeed] = useState(0);
-  const [recipe, setRecipe] = useState<Recipe | undefined>();
+type Search = { tag?: string; seed?: string };
 
-  const draw = () => {
-    const next = seed + 1;
-    setSeed(next);
-    setRecipe(surprise({ tag, seed: Date.now() + next }) || undefined);
-  };
+export default async function SurprendsPage({
+  searchParams,
+}: {
+  searchParams: Promise<Search>;
+}) {
+  const sp = await searchParams;
+  const tag = sp.tag || "";
+  const seed = Math.max(0, Number(sp.seed) || 0);
+  const recipe = seed > 0 ? surprise({ tag, seed }) : undefined;
 
   return (
     <div className="mx-auto max-w-lg space-y-6">
@@ -25,24 +22,27 @@ export default function SurprendsPage() {
           Une recette du carnet, pas une invention. Tu peux limiter au express, au poisson, au robot…
         </p>
       </div>
-      <label className="block text-sm">
-        Envie
-        <select
-          className="mt-1 h-9 w-full rounded-lg border border-input bg-background px-2"
-          value={tag}
-          onChange={(e) => setTag(e.target.value)}
-        >
-          <option value="">Peu importe</option>
-          {TAGS.map((t) => (
-            <option key={t.id} value={t.id}>
-              {t.label}
-            </option>
-          ))}
-        </select>
-      </label>
-      <button type="button" className={`${buttonVariants()} w-full`} onClick={draw}>
-        Tirer une recette
-      </button>
+      <form action="/surprends" method="get" className="space-y-4">
+        <label className="block text-sm">
+          Envie
+          <select
+            name="tag"
+            defaultValue={tag}
+            className="mt-1 h-9 w-full rounded-lg border border-input bg-background px-2"
+          >
+            <option value="">Peu importe</option>
+            {TAGS.map((t) => (
+              <option key={t.id} value={t.id}>
+                {t.label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <input type="hidden" name="seed" value={seed + 1} />
+        <button type="submit" className={`${buttonVariants()} w-full`}>
+          Tirer une recette
+        </button>
+      </form>
       {recipe ? (
         <div className="space-y-2">
           <p className="text-sm text-muted-foreground">Tirage n°{seed}</p>

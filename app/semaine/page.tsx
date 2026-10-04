@@ -1,18 +1,29 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
-import { DAYS, DAY_LABEL, getRecipe, slotKey, weekPlan } from "@/lib/carnet";
+import { DAYS, DAY_LABEL, filterRecipes, getRecipe, slotKey, weekPlan } from "@/lib/carnet";
 import { dishKind } from "@/lib/dish";
-import { useStore } from "@/lib/store";
-import { RecipePicker } from "@/components/recipe-picker";
+import { clampServings, clampWeek, getOverrides } from "@/lib/prefs";
+import { clearWeekReplacements, replaceMeal } from "@/app/actions";
 import { WeekControls } from "@/components/week-controls";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
-export default function SemainePage() {
-  const { week, overrides, setSlot, clearWeekOverrides } = useStore();
+type Search = { w?: string; n?: string; replace?: string; rq?: string };
+
+export default async function SemainePage({
+  searchParams,
+}: {
+  searchParams: Promise<Search>;
+}) {
+  const sp = await searchParams;
+  const week = clampWeek(sp.w);
+  const servings = clampServings(sp.n);
+  const overrides = await getOverrides();
   const slots = weekPlan(week, overrides);
-  const [pick, setPick] = useState<{ key: string; title: string } | null>(null);
+  const replace = sp.replace || "";
+  const [replaceDay, replaceMealName] = replace.split("_");
+  const replaceKey = replace ? slotKey(week, replaceDay, replaceMealName || "midi") : "";
+  const replaceTitle =
+    slots.find((s) => s.day === replaceDay && s.meal === replaceMealName)?.label || replace;
+  const pickList = replace ? filterRecipes({ q: sp.rq }).slice(0, 40) : [];
 
   return (
     <div className="space-y-6">
@@ -23,8 +34,62 @@ export default function SemainePage() {
             Clique un plat pour ouvrir la fiche. Remplace un repas : courses et batch suivent.
           </p>
         </div>
-        <WeekControls />
+        <WeekControls week={week} servings={servings} path="/semaine" />
       </div>
+
+      {replace ? (
+        <section className="rounded-2xl bg-card p-4 ring-2 ring-primary">
+          <h2 className="font-heading text-lg">Remplacer {replaceTitle}</h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Choisis une recette du carnet. Courses et batch se recalculent.
+          </p>
+          <form action="/semaine" className="mt-3 flex gap-2">
+            <input type="hidden" name="w" value={week} />
+            <input type="hidden" name="n" value={servings} />
+            <input type="hidden" name="replace" value={replace} />
+            <input
+              name="rq"
+              defaultValue={sp.rq || ""}
+              data-autosubmit="input"
+              placeholder="Rechercher une recette…"
+              className="h-9 flex-1 rounded-lg border border-input bg-background px-3 text-sm"
+            />
+            <button type="submit" className={buttonVariants({ size: "sm" })}>
+              Filtrer
+            </button>
+          </form>
+          <form action={replaceMeal} className="mt-3">
+            <input type="hidden" name="week" value={week} />
+            <input type="hidden" name="key" value={replaceKey} />
+            <input type="hidden" name="recipeId" value="" />
+            <button type="submit" className="w-full rounded-lg border border-border py-2 text-sm hover:bg-muted">
+              Laisser ce repas vide
+            </button>
+          </form>
+          <ul className="mt-2 divide-y">
+            {pickList.map((r) => (
+              <li key={r.id}>
+                <form action={replaceMeal}>
+                  <input type="hidden" name="week" value={week} />
+                  <input type="hidden" name="key" value={replaceKey} />
+                  <input type="hidden" name="recipeId" value={r.id} />
+                  <button type="submit" className="flex w-full flex-col items-start py-3 text-left hover:text-primary">
+                    <span className="font-medium">{r.name}</span>
+                    <span className="text-xs text-muted-foreground">
+                      {r.timeMin} min · {r.ingredients.length} ingrédients
+                      {r.robot ? " · Mr Cuisine" : ""}
+                    </span>
+                  </button>
+                </form>
+              </li>
+            ))}
+          </ul>
+          <Link href={`/semaine?w=${week}&n=${servings}`} className="mt-2 inline-block text-sm text-muted-foreground hover:underline">
+            Annuler
+          </Link>
+        </section>
+      ) : null}
+
       <div className="grid gap-3 md:grid-cols-2">
         {DAYS.map((day) => {
           const midi = slots.find((s) => s.day === day && s.meal === "midi");
@@ -32,62 +97,44 @@ export default function SemainePage() {
           return (
             <article key={day} className="rounded-2xl bg-card p-4 ring-1 ring-foreground/8">
               <h2 className="mb-3 font-heading text-lg">{DAY_LABEL[day]}</h2>
-              <MealRow
-                label="Midi"
-                slot={midi}
-                onReplace={() =>
-                  setPick({
-                    key: slotKey(week, day, "midi"),
-                    title: midi?.label || "midi",
-                  })
-                }
-              />
-              <MealRow
-                label="Soir"
-                slot={soir}
-                onReplace={() =>
-                  setPick({
-                    key: slotKey(week, day, "soir"),
-                    title: soir?.label || "soir",
-                  })
-                }
-              />
+              <MealRow week={week} servings={servings} day={day} meal="midi" label="Midi" slot={midi} />
+              <MealRow week={week} servings={servings} day={day} meal="soir" label="Soir" slot={soir} />
             </article>
           );
         })}
       </div>
       <div className="flex flex-wrap gap-2">
-        <Link href="/courses" className={buttonVariants()}>
+        <Link href={`/courses?w=${week}&n=${servings}`} className={buttonVariants()}>
           Voir les courses de la semaine
         </Link>
-        <Link href="/batch" className={buttonVariants({ variant: "outline" })}>
+        <Link href={`/batch?w=${week}&n=${servings}`} className={buttonVariants({ variant: "outline" })}>
           Voir le batch
         </Link>
-        <Button variant="ghost" onClick={() => clearWeekOverrides(week)}>
-          Annuler les remplacements
-        </Button>
+        <form action={clearWeekReplacements}>
+          <input type="hidden" name="week" value={week} />
+          <button type="submit" className={buttonVariants({ variant: "ghost" })}>
+            Annuler les remplacements
+          </button>
+        </form>
       </div>
-      <RecipePicker
-        open={!!pick}
-        onOpenChange={(o) => !o && setPick(null)}
-        title={pick?.title || ""}
-        onPick={(id) => {
-          if (pick) setSlot(pick.key, id);
-          setPick(null);
-        }}
-      />
     </div>
   );
 }
 
 function MealRow({
+  week,
+  servings,
+  day,
+  meal,
   label,
   slot,
-  onReplace,
 }: {
+  week: number;
+  servings: number;
+  day: string;
+  meal: string;
   label: string;
   slot?: { recipeId: string | null; label: string };
-  onReplace: () => void;
 }) {
   const recipe = getRecipe(slot?.recipeId);
   return (
@@ -96,7 +143,10 @@ function MealRow({
         <p className="text-xs uppercase tracking-wide text-muted-foreground">{label}</p>
         {recipe ? (
           <div>
-            <Link href={`/recettes/${recipe.id}`} className="font-medium text-primary underline-offset-4 hover:underline">
+            <Link
+              href={`/recettes/${recipe.id}`}
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
               {recipe.name}
             </Link>
             <p className="text-xs text-muted-foreground">{dishKind(recipe).label}</p>
@@ -105,13 +155,12 @@ function MealRow({
           <p className="text-sm text-muted-foreground">{slot?.label || "Repas à préciser"}</p>
         )}
       </div>
-      <button
-        type="button"
+      <Link
+        href={`/semaine?w=${week}&n=${servings}&replace=${day}_${meal}`}
         className={buttonVariants({ variant: "ghost", size: "sm" })}
-        onClick={onReplace}
       >
         Remplacer
-      </button>
+      </Link>
     </div>
   );
 }
