@@ -21,7 +21,7 @@ const TILES = [
 export default function HomePage() {
   return (
     <div className="space-y-8">
-      <section className="max-w-2xl space-y-3">
+      <section className="max-w-2xl space-y-4">
         <p className="text-sm font-medium text-primary">Carnet nettoyé</p>
         <h1 className="font-heading text-4xl leading-tight md:text-5xl">
           52 semaines dans mon assiette
@@ -29,6 +29,16 @@ export default function HomePage() {
         <p className="text-base text-muted-foreground md:text-lg">
           {carnet.subtitle} Plus de photos stock (poulet sur une soupe, loremflickr).
           Chaque plat a un pictogramme du vrai type : poisson, volaille, velouté…
+        </p>
+        <a
+          href="/api/telecharger"
+          download="Dans-mon-assiette.xlsx"
+          className="inline-flex items-center rounded-full bg-primary px-5 py-3 text-base font-medium text-primary-foreground hover:bg-primary/90"
+        >
+          Télécharger le classeur Excel
+        </a>
+        <p className="text-sm text-muted-foreground">
+          5 onglets, 717 vrais liens vers les fiches. Plus de <code>__xludf.DUMMYFUNCTION</code>.
         </p>
       </section>
       <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -47,17 +57,9 @@ export default function HomePage() {
           );
         })}
       </section>
-      <p className="flex flex-wrap items-center gap-3 text-sm">
-        <a
-          href="/api/telecharger"
-          download="Dans-mon-assiette.xlsx"
-          className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-primary-foreground hover:bg-primary/90"
-        >
-          Télécharger le classeur Excel
-        </a>
-        <span className="text-muted-foreground">
-          Chez toi : <code className="rounded bg-muted px-1.5 py-0.5 text-xs">docker compose up --build</code> puis localhost:4317
-        </span>
+      <p className="text-sm text-muted-foreground">
+        Chez toi : <code className="rounded bg-muted px-1.5 py-0.5 text-xs">docker compose up --build</code>{" "}
+        puis <a className="underline" href="http://localhost:4317/api/telecharger">localhost:4317/api/telecharger</a>
       </p>
       <section className="rounded-2xl bg-muted/60 p-5">
         <h2 className="font-heading text-lg">Petit-déjeuner (toute la semaine)</h2>

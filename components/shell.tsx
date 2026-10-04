@@ -17,6 +17,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <Link href="/" className="font-heading text-lg tracking-tight">
             Dans mon assiette
           </Link>
+          <a
+            href="/api/telecharger"
+            download="Dans-mon-assiette.xlsx"
+            className="rounded-full bg-primary px-3 py-1.5 text-sm text-primary-foreground md:hidden"
+          >
+            Excel
+          </a>
           <nav className="hidden items-center gap-1 md:flex">
             {NAV.map((item) => (
               <Link
@@ -34,6 +41,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
               <Sparkles className="size-3.5" />
               Surprends-moi
             </Link>
+            <a
+              href="/api/telecharger"
+              download="Dans-mon-assiette.xlsx"
+              className="ml-2 rounded-full bg-primary px-3 py-1.5 text-sm text-primary-foreground hover:bg-primary/90"
+            >
+              Télécharger Excel
+            </a>
           </nav>
         </div>
       </header>

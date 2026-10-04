@@ -7,6 +7,7 @@ export async function GET() {
     headers: {
       "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
       "Content-Disposition": 'attachment; filename="Dans-mon-assiette.xlsx"',
+      "Content-Length": String(file.byteLength),
       "Cache-Control": "no-store",
     },
   });
