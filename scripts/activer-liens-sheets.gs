@@ -1,6 +1,6 @@
 /**
- * Google Sheets : Extensions → Apps Script → coller → Exécuter activerLiens.
- * Les plats sont déjà visibles. Ce script les rend cliquables vers Fiche_Recette.
+ * À coller seulement si, après import du .xlsx, un plat n’est pas cliquable.
+ * Extensions → Apps Script → coller → Exécuter activerLiens.
  */
 function onOpen() {
   SpreadsheetApp.getUi()
@@ -13,41 +13,49 @@ function activerLiens() {
   var ss = SpreadsheetApp.getActive();
   var dash = ss.getSheetByName("Dashboard");
   var fiche = ss.getSheetByName("Fiche_Recette");
-  var map = ss.getSheetByName("_MAP");
-  var courses = ss.getSheetByName("LISTES COURSES 2");
-  var batch = ss.getSheetByName("BATCH");
-  if (!dash || !fiche || !map) {
-    SpreadsheetApp.getUi().alert("Importe le classeur (Dashboard, Fiche_Recette, _MAP).");
+  var courses = ss.getSheetByName("Courses");
+  var batch = ss.getSheetByName("Batch");
+  if (!dash || !fiche) {
+    SpreadsheetApp.getUi().alert("Il faut les onglets Dashboard et Fiche_Recette.");
     return;
   }
-  map.showSheet();
+
   var gidFiche = fiche.getSheetId();
   var gidDash = dash.getSheetId();
-  var gidCourses = courses ? courses.getSheetId() : gidDash;
-  var gidBatch = batch ? batch.getSheetId() : gidDash;
-  var last = map.getLastRow();
-  if (last < 2) return;
-  var rows = map.getRange(2, 1, last - 1, 7).getValues();
-  rows.forEach(function (row) {
-    var name = String(row[3] || "").replace(/"/g, '""');
-    var ficheRow = row[4];
-    var dr = row[5];
-    var dc = row[6];
-    if (!name || !ficheRow || !dr || !dc) return;
-    dash.getRange(dr, dc).setFormula(
-      '=HYPERLINK("#gid=' + gidFiche + "&range=C" + ficheRow + '","' + name + '")'
-    );
-  });
-  dash.getRange("A2").setFormula('=HYPERLINK("#gid=' + gidCourses + '&range=A1","MES COURSES")');
-  dash.getRange("C2").setFormula('=HYPERLINK("#gid=' + gidBatch + '&range=A1","MON BATCH")');
-  dash.getRange("E2").setFormula('=HYPERLINK("#gid=' + gidFiche + '&range=A1","MES RECETTES")');
-  fiche.getRange("B3").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","RETOUR AU DASHBOARD")');
-  fiche.getRange("C3").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","RETOUR AU PLANNING")');
+  var nameToRow = {};
+  var lastFiche = fiche.getLastRow();
+  var plats = fiche.getRange(7, 3, Math.max(lastFiche - 6, 1), 1).getValues();
+  for (var i = 0; i < plats.length; i++) {
+    var name = String(plats[i][0] || "").trim();
+    if (name && !nameToRow[name]) nameToRow[name] = 7 + i;
+  }
+
+  var lastDash = dash.getLastRow();
+  var lastCol = dash.getLastColumn();
+  var grid = dash.getRange(1, 1, lastDash, lastCol).getValues();
+  for (var r = 0; r < grid.length; r++) {
+    for (var c = 0; c < grid[r].length; c++) {
+      var label = String(grid[r][c] || "").trim();
+      var dest = nameToRow[label];
+      if (!dest) continue;
+      dash.getRange(r + 1, c + 1).setFormula(
+        '=HYPERLINK("#gid=' + gidFiche + "&range=C" + dest + '","' + label.replace(/"/g, '""') + '")'
+      );
+    }
+  }
+
+  dash.getRange("A2").setFormula('=HYPERLINK("#gid=' + gidFiche + '&range=A1","↓ Toutes les fiches")');
   if (courses) {
-    courses.getRange("F1").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","RETOUR AU DASHBOARD")');
+    dash.getRange("C2").setFormula(
+      '=HYPERLINK("#gid=' + courses.getSheetId() + '&range=A1","🛒 Mes courses")'
+    );
+    courses.getRange("F1").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","← Dashboard")');
   }
   if (batch) {
-    batch.getRange("F1").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","RETOUR AU DASHBOARD")');
+    dash.getRange("E2").setFormula(
+      '=HYPERLINK("#gid=' + batch.getSheetId() + '&range=A1","🍳 Mon batch")'
+    );
+    batch.getRange("F1").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","← Dashboard")');
   }
-  map.hideSheet();
+  fiche.getRange("A3").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A5","← Retour au planning")');
 }

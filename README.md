@@ -1,50 +1,31 @@
 # Dans mon assiette
 
-Carnet alimentaire d’Aline, repris depuis le Google Sheet (73 onglets, liens cassés, audits ChatGPT).
+Carnet alimentaire d’Aline, nettoyé : **4 onglets**, 52 semaines, 720 plats, plus les 45 feuilles d’audit.
 
-**Ici :** 52 semaines cliquables, bibliothèque de recettes, courses fusionnées, batch, « Je reçois » et « Surprends-moi ».  
-**Pas encore :** photos maison du plat (Cookomix), comptes, abonnements. Les fausses images stock du tableur ont été retirées : on affiche un pictogramme du type réel (poisson, poulet, velouté…).
+Fichier : [`public/Dans-mon-assiette.xlsx`](public/Dans-mon-assiette.xlsx)
 
-## Sur ton ordi (Docker)
+| Onglet | Contenu |
+| --- | --- |
+| **Dashboard** | Les 52 semaines. Chaque plat est un lien interne vers sa fiche. |
+| **Fiche_Recette** | Une ligne = une recette. « ← Semaine » ramène au menu. |
+| **Courses** | Liste de courses. |
+| **Batch** | Batch cooking. |
 
-Docker Desktop doit être ouvert.
+Les plats sont du **texte** (plus de cellules vides). Les liens sont des **hyperliens Excel internes** (`Fiche_Recette!C7`), pas des formules `#gid=0`. Google Sheets les convertit tout seul au bon gid à l’import — c’est ce qui les rend cliquables.
 
-Dans le dossier du projet :
+## Ouvrir dans Google Sheets
+
+1. Va sur [https://sheets.new](https://sheets.new) (feuille Google vide, dans ton Drive).
+2. **Fichier → Importer → Télécharger** le `Dans-mon-assiette.xlsx`.
+3. Choisis **Remplacer le tableur**.
+4. Clique un plat souligné sur le Dashboard : ça saute à sa fiche.
+
+Si un plat n’est pas cliquable après l’import : **Extensions → Apps Script**, colle [`scripts/activer-liens-sheets.gs`](scripts/activer-liens-sheets.gs), exécute `activerLiens`.
+
+## Recréer le classeur
 
 ```bash
-docker compose up --build
+python3 scripts/build-xlsx.py
 ```
 
-La première fois, ça prend quelques minutes (télécharge Node et compile). Ensuite ouvre [http://localhost:4317](http://localhost:4317).
-
-- Excel : bouton **Télécharger le classeur Excel**, ou [http://localhost:4317/api/telecharger](http://localhost:4317/api/telecharger)
-- Arrêter : `Ctrl+C`, puis `docker compose down`
-
-Si le port 4317 est déjà pris : ferme l’autre appli, ou change le premier `4317` dans `docker-compose.yml` (`"8088:4317"` → [http://localhost:8088](http://localhost:8088)).
-
-## Sans Docker (Node.js)
-
-```bash
-npm install
-npm run dev
-```
-
-Ouvre [http://localhost:4317](http://localhost:4317).
-
-## Fichier Excel propre
-
-Même première feuille que l’original (**Dashboard**), plus les onglets qu’elle ouvre :
-
-1. Dashboard (les 52 semaines en texte, pas de formules vides)
-2. Fiche_Recette
-3. LISTES COURSES 2
-4. BATCH
-5. _APP_DATA
-
-Plus de `__xludf.DUMMYFUNCTION`, plus de photos loremflickr.
-
-À importer dans Google Sheets : Fichier → Importer. Le fichier est aussi dans [`public/Dans-mon-assiette.xlsx`](public/Dans-mon-assiette.xlsx).
-
-## Données
-
-Issues du classeur d’origine : `Planning_APP`, `BDD_Classique`, `BDD_MrCuisine`, plus les vraies recettes des onglets Express / Saisons / Apéro / Robot. Les 45 onglets AUDIT / V38–V52 / « images à intégrer » ont été écartés.
+Le source d’origine doit être dans `/tmp/orig/sheet.xlsx`.
