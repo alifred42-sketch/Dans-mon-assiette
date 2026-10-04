@@ -47,10 +47,17 @@ export default function HomePage() {
           );
         })}
       </section>
-      <p className="text-sm">
-        <a href="/Dans-mon-assiette.xlsx" className="text-primary underline-offset-4 hover:underline">
-          Télécharger le classeur propre (6 onglets, vrais liens)
+      <p className="flex flex-wrap items-center gap-3 text-sm">
+        <a
+          href="/api/telecharger"
+          download="Dans-mon-assiette.xlsx"
+          className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-primary-foreground hover:bg-primary/90"
+        >
+          Télécharger le classeur Excel
         </a>
+        <span className="text-muted-foreground">
+          Chez toi : <code className="rounded bg-muted px-1.5 py-0.5 text-xs">docker compose up --build</code> puis localhost:4317
+        </span>
       </p>
       <section className="rounded-2xl bg-muted/60 p-5">
         <h2 className="font-heading text-lg">Petit-déjeuner (toute la semaine)</h2>

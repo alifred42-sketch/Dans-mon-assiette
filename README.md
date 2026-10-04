@@ -5,26 +5,43 @@ Carnet alimentaire d’Aline, repris depuis le Google Sheet (73 onglets, liens c
 **Ici :** 52 semaines cliquables, bibliothèque de recettes, courses fusionnées, batch, « Je reçois » et « Surprends-moi ».  
 **Pas encore :** photos maison du plat (Cookomix), comptes, abonnements. Les fausses images stock du tableur ont été retirées : on affiche un pictogramme du type réel (poisson, poulet, velouté…).
 
-## Lancer
+## Sur ton ordi (Docker)
+
+Docker Desktop doit être ouvert.
+
+Dans le dossier du projet :
+
+```bash
+docker compose up --build
+```
+
+La première fois, ça prend quelques minutes (télécharge Node et compile). Ensuite ouvre [http://localhost:4317](http://localhost:4317).
+
+- Excel : bouton **Télécharger le classeur Excel**, ou [http://localhost:4317/api/telecharger](http://localhost:4317/api/telecharger)
+- Arrêter : `Ctrl+C`, puis `docker compose down`
+
+Si le port 4317 est déjà pris : ferme l’autre appli, ou change le premier `4317` dans `docker-compose.yml` (`"8088:4317"` → [http://localhost:8088](http://localhost:8088)).
+
+## Sans Docker (Node.js)
 
 ```bash
 npm install
-npm run dev -- --port 4317
+npm run dev
 ```
 
 Ouvre [http://localhost:4317](http://localhost:4317).
 
 ## Fichier Excel propre
 
-[`public/Dans-mon-assiette.xlsx`](public/Dans-mon-assiette.xlsx) — 6 onglets :
+6 onglets, vrais liens (plus de `__xludf.DUMMYFUNCTION`) :
 
-1. Accueil (vrais liens)
+1. Accueil
 2. Planning (52 × midi/soir → fiche)
 3. Recettes
 4. Courses (semaine 1, doublons fusionnés)
 5. Batch
 
-À importer dans Google Sheets : Fichier → Importer.
+À importer dans Google Sheets : Fichier → Importer. Le fichier est aussi dans [`public/Dans-mon-assiette.xlsx`](public/Dans-mon-assiette.xlsx).
 
 ## Données
 

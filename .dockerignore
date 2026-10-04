@@ -1,0 +1,10 @@
+node_modules
+.next
+.git
+.gitignore
+*.md
+.cursor
+agent-tools
+terminals
+tsconfig.tsbuildinfo
+next-env.d.ts

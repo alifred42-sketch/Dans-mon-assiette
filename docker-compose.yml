@@ -1,0 +1,12 @@
+# Lance l’app sur ton ordi : docker compose up --build
+# Puis ouvre http://localhost:4317
+services:
+  assiette:
+    build: .
+    container_name: dans-mon-assiette
+    ports:
+      - "4317:4317"
+    environment:
+      PORT: "4317"
+      HOSTNAME: "0.0.0.0"
+    restart: unless-stopped
