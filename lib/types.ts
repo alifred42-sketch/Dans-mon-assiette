@@ -3,6 +3,12 @@ export type Recipe = {
   name: string;
   ingredients: string[];
   steps: string[];
+  robot: string[];
+  notes: string[];
+  source: string;
+  timePrep?: string;
+  timeCook?: string;
+  servings?: string;
 };
 
 export type PlanSlot = {

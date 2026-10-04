@@ -15,28 +15,38 @@ export default async function FichePage({
   const recipe = getRecipe(id);
   if (!recipe) notFound();
 
+  const menuNames = [
+    ...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.name)),
+  ];
   const weeks = [...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.week))];
   const ings = recipe.ingredients.filter((line) => line.trim());
-  const realIngs = ings.filter((line) => !isPlaceholderIngredient(line));
+  const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
+  const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
+    .filter(Boolean)
+    .join(" · ");
 
   return (
     <article className="space-y-6">
       <Link href={`/?w=${week}`} className="text-sm text-primary underline underline-offset-4">
         ← Semaine {week}
       </Link>
-      <header>
+      <header className="space-y-2">
         <h1 className="font-heading text-3xl leading-tight">{recipe.name}</h1>
+        {menuNames.some((n) => n !== recipe.name) && (
+          <p className="text-sm text-muted-foreground">Au menu : {menuNames.join(" · ")}</p>
+        )}
+        {meta && <p className="text-sm text-muted-foreground">{meta}</p>}
         {weeks.length > 0 && (
-          <p className="mt-2 text-sm text-muted-foreground">
-            Au menu des semaines {weeks.slice(0, 10).join(", ")}
-            {weeks.length > 10 ? "…" : ""}.
+          <p className="text-xs text-muted-foreground">
+            Semaines {weeks.slice(0, 10).join(", ")}
+            {weeks.length > 10 ? "…" : ""}
           </p>
         )}
       </header>
       <section>
         <h2 className="font-heading text-xl">Ingrédients</h2>
         {ings.length === 0 ? (
-          <p className="mt-2 text-sm text-muted-foreground">Pas de liste dans la fiche d’origine.</p>
+          <p className="mt-2 text-sm text-muted-foreground">Pas de liste dans cette fiche.</p>
         ) : (
           <ul className="mt-2 divide-y">
             {ings.map((line) => (
@@ -46,16 +56,14 @@ export default async function FichePage({
             ))}
           </ul>
         )}
-        {ings.length > 0 && realIngs.length === 0 && (
-          <p className="mt-2 text-xs text-muted-foreground">
-            Cette fiche n’a pas de liste détaillée : elle n’ajoute rien aux courses.
-          </p>
+        {ings.length > 0 && shopIngs.length === 0 && (
+          <p className="mt-2 text-xs text-muted-foreground">Rien de cette fiche n’est ajouté aux courses.</p>
         )}
       </section>
       <section>
         <h2 className="font-heading text-xl">Préparation</h2>
         {recipe.steps.length === 0 ? (
-          <p className="mt-2 text-sm text-muted-foreground">Pas d’étapes dans la fiche d’origine.</p>
+          <p className="mt-2 text-sm text-muted-foreground">Pas d’étapes dans cette fiche.</p>
         ) : (
           <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
             {recipe.steps.map((step) => (
@@ -64,6 +72,26 @@ export default async function FichePage({
           </ol>
         )}
       </section>
+      {recipe.robot.length > 0 && (
+        <section>
+          <h2 className="font-heading text-xl">Mr Cuisine</h2>
+          <ul className="mt-2 space-y-1 text-sm">
+            {recipe.robot.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+      {recipe.notes.length > 0 && (
+        <section>
+          <h2 className="font-heading text-xl">Notes</h2>
+          <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+            {recipe.notes.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+        </section>
+      )}
     </article>
   );
 }
