@@ -118,13 +118,18 @@ COLLECTIONS = [
 ]
 
 STOP_CARD = re.compile(
-    r"liste courses|à imprimer|onglet —|annexe —|"
+    r"liste (de )?courses|mini liste|à imprimer|onglet —|annexe —|"
     r"nouvelles sauces|page à ajouter|retour au dashboard|"
-    r"menus par saison|toujours avoir|hyperlink|"
+    r"menus par saison|toujours avoir|avoir toujours|hyperlink|"
     r"mon placard anti|onglet —|kit ap[ée]ro|"
     r"petits amuse-bouches",
     re.I,
 )
+NOT_A_TITLE = {
+    "deja present", "deja integre", "non", "non necessaire", "oui",
+    "possible", "option", "option plaisir", "apres repas", "choix",
+    "parfait", "avec saumon ou jambon",
+}
 JUNK = re.compile(
     r"liste courses|à imprimer|onglet —|annexe —|retour au dashboard|hyperlink",
     re.I,
@@ -380,11 +385,19 @@ def is_heading(line: str) -> bool:
     if not t or is_stop(t) or PLACEHOLDER.match(t):
         return False
     f = heading_key(t)
-    if f in HEADING_KEYS or f.startswith("preparation") or f.startswith("mr cuisine"):
+    marked = t.endswith(":") or unicodedata.category(t[0]) == "So" or t.startswith(("Ingrédients", "Préparation", "Montage"))
+    if marked and (
+        f in HEADING_KEYS
+        or f.startswith("preparation")
+        or f.startswith("mr cuisine")
+        or f.startswith("recherche")
+        or f.startswith("avec mr")
+        or f.startswith("appareil")
+        or f.startswith("version monsieur")
+        or f.startswith("version mr")
+    ):
         return True
-    if f.startswith("recherche") or f.startswith("avec mr") or f.startswith("appareil"):
-        return True
-    if f.startswith("version monsieur") or f.startswith("version mr"):
+    if t.startswith("⏱️"):
         return True
     if CAT_HEADER.match(t):
         return True
@@ -430,6 +443,10 @@ def parse_card(body: list[str]) -> tuple[list[dict], str, list[str], list[str], 
         if line.startswith(("🔗", "📅 Semaine", "📅 Autres", "📅 SEMAINE", "📅 Futures")):
             continue
         if is_heading(line):
+            sub = heading_key(line)
+            if current and sub in {"choix", "option", "option plaisir", "apres repas", "possible"}:
+                current["lines"].append(line)
+                continue
             current = {"title": decorate_title(line), "lines": []}
             sections.append(current)
             continue
@@ -437,7 +454,13 @@ def parse_card(body: list[str]) -> tuple[list[dict], str, list[str], list[str], 
             blurbs.append(line)
             continue
         current["lines"].append(line)
-    sections = [sec for sec in sections if sec["lines"] or heading_key(sec["title"]) in ROBOT_KIND]
+    sections = [
+        sec
+        for sec in sections
+        if sec["lines"]
+        or heading_key(sec["title"]) in ROBOT_KIND
+        or (sec["title"] or "").startswith("⏱️")
+    ]
     ingredients: list[str] = []
     steps: list[str] = []
     robot: list[str] = []
@@ -948,7 +971,9 @@ def is_emoji_dish(line: str) -> bool:
         return False
     if line.endswith(":") and len(line) < 36:
         return False
-    if line.startswith(("✨", "⭐", "☀️", "⚠️", "💡", "❤️", "🌿", "✅", "➡️", "✔", "📌")):
+    if line.startswith(("✨", "⭐", "☀️", "⚠️", "💡", "❤️", "🌿", "✅", "➡️", "✔", "📌", "⚪", "❌")):
+        return False
+    if fold(strip_emoji(line)) in NOT_A_TITLE:
         return False
     first = line[0]
     if unicodedata.category(first) != "So":
@@ -981,7 +1006,7 @@ def first_filled(by_row: dict[int, str], row: int, n: int = 6) -> str:
 
 
 def is_collect_start(line: str, gap: int, ahead: str, by_row: dict[int, str] | None = None, row: int = 0) -> bool:
-    if not line or fold(line) in SKIP_TITLE or is_stop(line):
+    if not line or fold(line) in SKIP_TITLE or fold(strip_emoji(line)) in NOT_A_TITLE or is_stop(line):
         return False
     if line.startswith("☐") or line.startswith("☑"):
         return False
@@ -1050,7 +1075,7 @@ def parse_collection_sheet(ws, source: str) -> list[dict]:
                 break
             body.append(s)
         title_fold = fold(title)
-        if title_fold in SKIP_TITLE or len(title) < 4:
+        if title_fold in SKIP_TITLE or fold(strip_emoji(title)) in NOT_A_TITLE or len(title) < 4:
             continue
         if title_fold.startswith(("onglet", "annexe", "menus par saison", "saison automne", "kit apero", "petits amuse")):
             continue
@@ -1369,6 +1394,8 @@ def main() -> None:
     print("batch missing", [w for w in range(1, 53) if bw[w] == 0])
     print("batch 14", bw[14], "15", bw[15], "32", bw[32], "46", bw[46])
     print("collections", [(c["slug"], len(c["recipeIds"])) for c in collections_out])
+    bad_names = [r["name"] for r in store.values() if fold(strip_emoji(r["name"])) in NOT_A_TITLE or "mini liste" in fold(r["name"])]
+    print("bad-titles", bad_names)
     by_id = {r["id"]: r for r in store.values()}
     for w in (1, 2):
         print(f"WEEK {w}")

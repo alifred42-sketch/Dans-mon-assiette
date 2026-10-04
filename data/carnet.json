@@ -1517,6 +1517,10 @@
       ],
       "sections": [
         {
+          "title": "⏱️ Préparation : 10 min",
+          "lines": []
+        },
+        {
           "title": "🛒 Ingrédients",
           "lines": [
             "Courgettes",
@@ -1821,7 +1825,8 @@
             "Viande hachée",
             "Oignon",
             "Herbes",
-            "Riz complet (facultatif)"
+            "Riz complet (facultatif)",
+            "Épices"
           ]
         },
         {
@@ -4044,7 +4049,8 @@
         "olives",
         "basilic",
         "poivre",
-        "moutarde"
+        "moutarde",
+        "20 g de feta."
       ],
       "steps": [
         "Assembler tous les ingrédients et servir frais.",
@@ -4066,8 +4072,7 @@
         "➡️ 🥗 Salades complètes",
         "➡️ 🐟 Assiettes poisson froid",
         "➡️ Repas express",
-        "🍱 BATCH COOKING — SEMAINE \"REPAS BUREAU\"",
-        "20 g de feta."
+        "🍱 BATCH COOKING — SEMAINE \"REPAS BUREAU\""
       ],
       "sections": [
         {
@@ -11113,6 +11118,7 @@
         "Moutarde",
         "Persil",
         "Poivre",
+        "Possible :",
         "1 portion de St Môret",
         "ou 25 g de Caprice des Dieux",
         "Remplacer les champignons par des poireaux",
@@ -11195,8 +11201,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage fin de repas :",
           "lines": [
+            "✅ Possible :",
             "1 portion de St Môret",
             "ou 25 g de Caprice des Dieux"
           ]
@@ -11547,7 +11554,8 @@
         "🧄 Ail",
         "🍋 Citron",
         "⚫ Poivre",
-        "1 tranche de pain complet possible"
+        "1 tranche de pain complet possible",
+        "feta 30 g"
       ],
       "steps": [],
       "robot": [],
@@ -11556,7 +11564,6 @@
         "Concombre râpé",
         "Ail",
         "Menthe",
-        "feta 30 g",
         "➡️ Ajouter du houmous pour une assiette méditerranéenne."
       ],
       "sections": [
@@ -11603,8 +11610,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "feta 30 g"
           ]
         },
@@ -12090,8 +12098,7 @@
         "🟡 Cumin",
         "🧄 Ail",
         "🌿 Coriandre",
-        "➡️ Sauce yaourt menthe citron",
-        "Feta épinards"
+        "➡️ Sauce yaourt menthe citron"
       ],
       "steps": [
         "Préparer la farce.",
@@ -12102,6 +12109,9 @@
       ],
       "notes": [
         "Poulet curry",
+        "Légumes",
+        "Feta épinards",
+        "🍱 BATCH COOKING — SEMAINE \"VOYAGE DES SAVEURS\"",
         "Riz cuit pour repas rapide",
         "Houmous maison",
         "Poulet épicé",
@@ -12110,6 +12120,10 @@
         "Bourguignon (plusieurs portions)"
       ],
       "sections": [
+        {
+          "title": "⏱️ Préparation : 30 min",
+          "lines": []
+        },
         {
           "title": "🛒 Ingrédients",
           "lines": [
@@ -12158,12 +12172,8 @@
         {
           "title": "🔄 Variantes :",
           "lines": [
-            "Poulet curry"
-          ]
-        },
-        {
-          "title": "🥒 Légumes",
-          "lines": [
+            "Poulet curry",
+            "Légumes",
             "Feta épinards",
             "🍱 BATCH COOKING — SEMAINE \"VOYAGE DES SAVEURS\""
           ]
@@ -12776,7 +12786,9 @@
         "⚫ Poivre",
         "Riz",
         "Semoule",
-        "Courgettes grillées"
+        "Courgettes grillées",
+        "20 g de parmesan",
+        "ou mozzarella râpée"
       ],
       "steps": [
         "Mélanger la viande avec l’œuf, les épices et la chapelure.",
@@ -12788,8 +12800,6 @@
         "Paprika fumé",
         "Ail",
         "Origan",
-        "20 g de parmesan",
-        "ou mozzarella râpée",
         "Version orientale avec cumin",
         "Version bœuf",
         "Version sauce champignons",
@@ -12866,8 +12876,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "20 g de parmesan",
             "ou mozzarella râpée"
           ]
@@ -13625,6 +13636,10 @@
       ],
       "sections": [
         {
+          "title": "⏱️ Préparation : 15 min",
+          "lines": []
+        },
+        {
           "title": "🍱 BATCH cooking : ⭐⭐⭐⭐⭐",
           "lines": [
             "💪 Satiété : 💪 Très rassasiant"
@@ -13797,11 +13812,14 @@
         "🌿 Coriandre",
         "Riz",
         "Salade",
+        "30 g de cheddar râpé",
+        "ou feta émiettée",
         "bœuf haché",
         "tomates",
         "haricots rouges",
         "poivrons",
-        "piment doux"
+        "piment doux",
+        "20 g de cheddar ou mozzarella."
       ],
       "steps": [
         "Faire revenir la viande.",
@@ -13812,11 +13830,8 @@
         "Chili con carne"
       ],
       "notes": [
-        "30 g de cheddar râpé",
-        "ou feta émiettée",
         "➡️ Version poulet ou légumes.",
         "💪 Satiété : 💪 Très rassasiant",
-        "20 g de cheddar ou mozzarella.",
         "Avec patate douce."
       ],
       "sections": [
@@ -13875,8 +13890,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "30 g de cheddar râpé",
             "ou feta émiettée"
           ]
@@ -13905,7 +13921,8 @@
         "🌿 Persil",
         "⚫ Poivre",
         "🧄 Ail (facultatif)",
-        "1 tranche de pain complet possible avec salade"
+        "1 tranche de pain complet possible avec salade",
+        "30 g de feta à côté"
       ],
       "steps": [
         "Cuire doucement les pommes de terre.",
@@ -13916,7 +13933,6 @@
         "Omelette"
       ],
       "notes": [
-        "30 g de feta à côté",
         "Ajouter courgettes",
         "Ajouter poivrons",
         "Ajouter jambon",
@@ -13967,8 +13983,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "30 g de feta à côté"
           ]
         },
@@ -14405,7 +14422,8 @@
         "🌿 Thym",
         "🌿 Romarin",
         "🧄 Ail",
-        "⚫ Poivre"
+        "⚫ Poivre",
+        "30 g de fromage à côté si envie"
       ],
       "steps": [],
       "robot": [
@@ -14415,7 +14433,6 @@
         "Échalotes",
         "Bouillon",
         "1 cuillère de skyr",
-        "30 g de fromage à côté si envie",
         "Poulet grillé",
         "Boulettes",
         "Saucisses aux herbes"
@@ -14460,8 +14477,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "30 g de fromage à côté si envie"
           ]
         },
@@ -15268,18 +15286,22 @@
     {
       "id": "r-f1352e28e6",
       "name": "🍞 Pain complet maison (option)",
-      "ingredients": [
-        "Pour les jours où tu as envie de faire maison."
-      ],
+      "ingredients": [],
       "steps": [],
       "robot": [
         "Pain"
       ],
-      "notes": [],
+      "notes": [
+        "🥪 tartines",
+        "🥣 soupes",
+        "🥚 œufs cocotte"
+      ],
       "sections": [
         {
           "title": "🤖 Recherche :",
-          "lines": []
+          "lines": [
+            "\"Pain\""
+          ]
         },
         {
           "title": "À garder pour :",
@@ -15525,15 +15547,14 @@
         "pommes de terre",
         "lait",
         "ail",
-        "persil"
+        "persil",
+        "Un peu de parmesan dessus."
       ],
       "steps": [],
       "robot": [
         "Brandade"
       ],
-      "notes": [
-        "Un peu de parmesan dessus."
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -15542,12 +15563,8 @@
             "pommes de terre",
             "lait",
             "ail",
-            "persil"
-          ]
-        },
-        {
-          "title": "🧀 Option :",
-          "lines": [
+            "persil",
+            "🧀 Option :",
             "Un peu de parmesan dessus."
           ]
         },
@@ -15659,15 +15676,14 @@
         "lait",
         "crème",
         "ail",
-        "muscade"
+        "muscade",
+        "Un peu de fromage dessus."
       ],
       "steps": [],
       "robot": [
         "Gratin dauphinois"
       ],
-      "notes": [
-        "Un peu de fromage dessus."
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -15676,12 +15692,8 @@
             "lait",
             "crème",
             "ail",
-            "muscade"
-          ]
-        },
-        {
-          "title": "🧀 Option :",
-          "lines": [
+            "muscade",
+            "🧀 Option :",
             "Un peu de fromage dessus."
           ]
         },
@@ -15721,7 +15733,8 @@
             "pâte brisée",
             "œufs",
             "jambon",
-            "crème"
+            "crème",
+            "fromage"
           ]
         },
         {
@@ -16205,7 +16218,8 @@
         "Merguez sauce tomate"
       ],
       "notes": [
-        "semoule"
+        "semoule",
+        "légumes"
       ],
       "sections": [
         {
@@ -16235,7 +16249,8 @@
         {
           "title": "À servir avec :",
           "lines": [
-            "semoule"
+            "semoule",
+            "légumes"
           ]
         }
       ],
@@ -16248,6 +16263,7 @@
       "ingredients": [
         "poulet",
         "merguez",
+        "légumes",
         "semoule",
         "ras el hanout",
         "cumin",
@@ -16265,12 +16281,8 @@
           "title": "🛒 Ingrédients",
           "lines": [
             "poulet",
-            "merguez"
-          ]
-        },
-        {
-          "title": "🥒 légumes",
-          "lines": [
+            "merguez",
+            "légumes",
             "semoule"
           ]
         },
@@ -16596,15 +16608,14 @@
         "bouillon",
         "curry doux",
         "muscade",
-        "poivre"
+        "poivre",
+        "1 cuillère de St Môret au moment de mixer."
       ],
       "steps": [],
       "robot": [
         "Velouté de potiron"
       ],
-      "notes": [
-        "1 cuillère de St Môret au moment de mixer."
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -16621,12 +16632,8 @@
           "lines": [
             "curry doux",
             "muscade",
-            "poivre"
-          ]
-        },
-        {
-          "title": "🧀 Option plaisir :",
-          "lines": [
+            "poivre",
+            "🧀 Option plaisir :",
             "1 cuillère de St Môret au moment de mixer."
           ]
         },
@@ -16942,7 +16949,8 @@
           "lines": [
             "œufs",
             "lait",
-            "crème légère"
+            "crème légère",
+            "fromage"
           ]
         },
         {
@@ -17048,6 +17056,7 @@
         "carottes + pommes de terre",
         "courgettes + pommes de terre",
         "brocoli + pommes de terre",
+        "🧀 Option :",
         "Un peu de parmesan."
       ],
       "sections": [
@@ -17056,12 +17065,8 @@
           "lines": [
             "carottes + pommes de terre",
             "courgettes + pommes de terre",
-            "brocoli + pommes de terre"
-          ]
-        },
-        {
-          "title": "🧀 Option :",
-          "lines": [
+            "brocoli + pommes de terre",
+            "🧀 Option :",
             "Un peu de parmesan."
           ]
         },
@@ -17701,11 +17706,21 @@
         "pommes de terre fines tranches (facultatif)",
         "mozzarella ou chèvre : 60 g",
         "1 tranche complète possible",
+        "🍚 Risotto crémeux poulet, champignons & parmesan",
+        "Un de ses grands points forts ❤️",
+        "Hacher",
+        "Faire revenir",
+        "➡️ poulet + champignons",
+        "Cuisson automatique",
+        "➡️ riz + bouillon",
+        "Finir",
+        "➡️ fromage blanc + parmesan pour le côté crémeux",
         "➡️ parmesan compté dans la recette",
-        "➡️ parmesan déjà prévu",
-        "➡️ parmesan déjà compté",
-        "➡️ chèvre déjà prévu",
-        "➡️ pommes de terre déjà intégrées",
+        "🥕 Purée maison carottes, pommes de terre & fromage blanc",
+        "Une base parfaite pour accompagner poisson ou viande ❤️",
+        "Cuisson vapeur légumes",
+        "Mixage parfait",
+        "Texture plus légère qu’une purée classique",
         "🥒 courgettes chèvre",
         "🍄 champignons jambon"
       ],
@@ -17713,175 +17728,9 @@
         "➡️ oignon + légumes",
         "➡️ cuisson avec bouillon",
         "➡️ texture velours",
-        "➡️ fromage blanc après mixage",
-        "Cuisson mijotée homogène"
+        "➡️ fromage blanc après mixage"
       ],
-      "robot": [
-        "🍚 Risotto crémeux poulet, champignons & parmesan",
-        "Un de ses grands points forts ❤️",
-        "Hacher",
-        "➡️ échalotes",
-        "Faire revenir",
-        "➡️ poulet + champignons",
-        "Cuisson automatique",
-        "➡️ riz + bouillon",
-        "Finir",
-        "Cuisson vapeur légumes",
-        "Mixage parfait",
-        "Texture plus légère qu’une purée classique",
-        "Hacher oignon/ail",
-        "Cuire doucement",
-        "Mixer pour une sauce lisse",
-        "🐟 Brandade légère de cabillaud",
-        "Une recette idéale avec ton appareil ❤️",
-        "Cuire pommes de terre",
-        "Cuire poisson vapeur",
-        "Écraser/mélanger la préparation",
-        "🍛 Chili doux de poulet & légumes",
-        "Un plat mijoté plein de saveurs 🌶️",
-        "Hacher oignon et légumes",
-        "Faire revenir les ingrédients",
-        "Cuisson mijotée lente",
-        "Mélange régulier sans surveiller",
-        "🥣 Velouté lentilles corail, carottes & curry",
-        "Une soupe repas parfaite pour le soir ❤️",
-        "🍚 Risotto saumon fumé, poireaux & citron",
-        "Un risotto très doux 🍋",
-        "🥘 Blanquette légère de poulet aux légumes",
-        "Le plat cocooning par excellence ❤️",
-        "Découpe légumes",
-        "Cuisson douce du poulet",
-        "🌯 Garniture poulet épicé pour wraps",
-        "Hacher les légumes",
-        "Préparer la marinade",
-        "Cuire doucement le poulet",
-        "Préparer une garniture prête pour plusieurs jours",
-        "🍲 Velouté de légumes rôtis façon maison",
-        "Cuire avec le bouillon",
-        "Mixer en velours",
-        "Ajouter le fromage blanc pour une texture crémeuse",
-        "🐟 Saumon vapeur sauce citron-aneth",
-        "Une recette simple mais très élégante ❤️",
-        "🍝 Sauce bolognaise maison légère",
-        "Un accompagnement maison bien meilleur ❤️",
-        "Cuisson vapeur",
-        "Mixage adapté",
-        "Texture onctueuse sans beaucoup de beurre",
-        "🍛 Curry doux de crevettes & légumes",
-        "Une recette parfumée et légère 🦐",
-        "Hacher oignon/légumes",
-        "Préparer la sauce curry",
-        "Cuisson douce",
-        "Mélange régulier",
-        "🍲 Potage façon grand-mère poulet & légumes",
-        "Un vrai repas du soir complet ❤️",
-        "Découpe des légumes",
-        "Cuisson douce du potage",
-        "Effilochage du poulet",
-        "Mixage partiel pour garder des morceaux",
-        "🍚 Risotto crémeux champignons & poulet",
-        "Un grand classique pour ton appareil ❤️",
-        "🐟 Brandade légère de cabillaud & carottes",
-        "Une version plus douce que la traditionnelle ❤️",
-        "Cuisson vapeur poisson",
-        "Cuisson pommes de terre",
-        "Écrasage/mélange de la brandade",
-        "Texture régulière",
-        "🍗 Poulet aux olives & légumes du soleil",
-        "Un petit air du Sud ☀️",
-        "🥘 Ratatouille maison aux légumes rôtis",
-        "Une recette qui te ressemble Aline ❤️",
-        "(courgettes, tomates, légumes du soleil)",
-        "🍲 Minestrone complet aux légumes & poulet",
-        "Préparer le bouillon parfumé",
-        "Cuisson de la soupe",
-        "Mélange homogène",
-        "🍝 Sauce tomate maison & boulettes de poulet",
-        "Une recette familiale qui change ❤️",
-        "🐟 Colin sauce moutarde légère & légumes vapeur",
-        "Un plat simple, rapide et équilibré ❤️",
-        "🥘 Couscous léger poulet & légumes",
-        "Une version plaisir mais plus équilibrée ❤️",
-        "Cuire les légumes doucement",
-        "Réussir une semoule bien gonflée",
-        "🍗 Blanquette de poulet ultra facile",
-        "Un plat parfait à préparer à l’avance ❤️",
-        "🎃 Velouté potimarron, carottes & poulet",
-        "Une soupe repas douce et réconfortante 🍂",
-        "🍚 Risotto crémeux crevettes & poireaux",
-        "Un risotto qui fait son petit effet 🦐❤️",
-        "🥘 Tajine léger poulet, carottes & courgettes",
-        "Un voyage dans l’assiette 🌞",
-        "Hacher oignon",
-        "Préparer les épices",
-        "Cuisson mijotée douce",
-        "🐟 Saumon sauce poireaux citronnée",
-        "Un plat élégant mais facile ❤️",
-        "🍝 Gratin de pâtes poulet, courgettes & tomate",
-        "préparer la sauce",
-        "hacher légumes",
-        "mélanger la préparation",
-        "gagner du temps avant passage au four",
-        "🥣 Velouté de légumes rôtis & chèvre frais",
-        "Cuisson du velouté",
-        "Mixage ultra fin",
-        "Ajout du chèvre pour une texture crémeuse",
-        "🍛 Curry doux de poulet aux légumes",
-        "Un plat parfumé sans être trop lourd 🌞",
-        "🐟 Papillote vapeur cabillaud, légumes & citron",
-        "Une recette légère mais très savoureuse ❤️",
-        "🍚 Risotto jambon, poireaux & parmesan",
-        "Un plat simple façon cuisine italienne 🇮🇹",
-        "🥘 Gratin de légumes du soleil façon provençale",
-        "Préparer l’appareil",
-        "Hacher les herbes",
-        "Gagner du temps avant cuisson au four",
-        "🍲 Soupe repas façon pot-au-feu léger",
-        "Découpe régulière des légumes",
-        "Cuisson douce du bouillon",
-        "Poulet bien tendre",
-        "🍗 Poulet basquaise aux légumes du soleil",
-        "Une recette pleine de couleurs ☀️",
-        "🐟 Brandade saumon & cabillaud légère",
-        "Une version plus gourmande de la brandade ❤️",
-        "🍚 Risotto légumes du soleil & chèvre frais",
-        "🥘 Moussaka légère revisitée (sans trop d’aubergine 😉)",
-        "Une version plus adaptée à tes goûts",
-        "Préparer sauce tomate",
-        "Mélanger l’appareil léger",
-        "Préparer la garniture",
-        "🍲 Velouté poireaux, courgettes & lentilles corail",
-        "🍛 Curry de crevettes & courgettes",
-        "Un plat parfumé et rapide 🦐",
-        "cuisson douce des légumes",
-        "🐟 Cabillaud sauce tomate provençale",
-        "Une recette légère qui sent le soleil ☀️",
-        "🍝 Lasagnes légères poulet, courgettes & tomate",
-        "Une recette plaisir version équilibrée ❤️",
-        "préparer la sauce tomate",
-        "préparer la sauce blanche légère",
-        "mélanger les préparations",
-        "🥘 Courgettes farcies poulet & légumes",
-        "Une recette parfaite avec tes courgettes ❤️",
-        "hacher la farce",
-        "mélanger tous les ingrédients",
-        "préparer la garniture rapidement",
-        "🍲 Soupe repas poulet, légumes & petites pâtes",
-        "Une soupe qui remplace un vrai dîner ❤️",
-        "Cuire le bouillon parfumé",
-        "Cuire les pâtes directement dans la préparation",
-        "Mélanger sans surveillance",
-        "🍚 Risotto poulet, courgettes & tomates séchées",
-        "Un risotto plein de soleil ☀️",
-        "🐟 Saumon vapeur façon provençale",
-        "Un plat léger mais gourmand ❤️",
-        "🍗 Mijoté de dinde aux légumes",
-        "mijoter doucement la viande",
-        "obtenir une sauce bien parfumée",
-        "préparer plusieurs portions",
-        "🥘 Gratin léger de légumes du soleil",
-        "mélanger rapidement"
-      ],
+      "robot": [],
       "notes": [
         "fromage blanc : 150 g",
         "parmesan : 30 g",
@@ -17911,100 +17760,8 @@
         "➡️ 30 minutes",
         "🐟 cabillaud",
         "🐔 poulet",
-        "🍕 tortillas pizza",
-        "🍝 pâtes",
-        "🌯 wraps",
-        "🥘 plats mijotés",
-        "➡️ parmesan léger dessus",
-        "➡️ riz basmati : 60 g cru/personne",
-        "➡️ un peu de cheddar râpé (20 g/personne)",
-        "hacher les légumes",
-        "cuire les lentilles",
-        "mixer en velours",
-        "obtenir une texture crémeuse sans crème",
-        "découpe poireaux",
-        "cuisson du risotto",
-        "mélange automatique",
-        "texture crémeuse",
-        "➡️ riz : 60 g cru/personne",
-        "🥗 salades",
-        "🍚 bowls",
-        "légumes dans le panier vapeur",
-        "saumon cuit doucement",
-        "sauce préparée à côté",
-        "➡️ pommes de terre vapeur : 150 g/personne",
-        "hacher les légumes finement",
-        "faire revenir la viande",
-        "mijoter la sauce",
-        "mixer si besoin pour une sauce lisse",
-        "🥘 gratins",
-        "🍚 riz",
-        "➡️ 60 g crues/personne",
-        "hacher les échalotes",
-        "cuire sans devoir remuer toutes les 2 minutes",
-        "obtenir un riz crémeux",
-        "➡️ un peu de parmesan dessus",
-        "découpe régulière des légumes",
-        "cuisson douce",
-        "grande quantité pour plusieurs repas",
-        "🍗 avec du poulet",
-        "🐟 avec du poisson",
-        "🍳 avec des œufs",
-        "🍚 avec du riz",
-        "➡️ 1 tranche complète si besoin",
-        "➡️ parmesan 10 g/personne",
-        "préparer la sauce",
-        "mélanger la viande",
-        "cuire doucement les boulettes",
-        "➡️ pâtes complètes 60 g crues/personne",
-        "ou",
-        "➡️ courgettes façon spaghetti",
-        "cuisson vapeur du poisson",
-        "cuisson légumes en même temps",
-        "➡️ 60 g crue/personne",
-        "cuisson douce du poulet",
-        "légumes fondants",
-        "sauce bien liée",
-        "moins de surveillance",
-        "cuire les légumes",
-        "mixer une texture velours",
-        "garder un repas complet avec le poulet",
-        "cuire le riz sans surveillance constante",
-        "obtenir un risotto crémeux",
-        "➡️ semoule complète 60 g crue/personne",
-        "cuisson vapeur du saumon",
-        "fondue de poireaux parfaite",
-        "sauce préparée rapidement",
-        "hacher oignon et légumes",
-        "préparer la sauce curry",
-        "cuisson douce du poisson",
-        "poisson qui reste moelleux",
-        "cuisson du riz parfaite",
-        "mélange régulier",
-        "➡️ environ 35 minutes + cuisson four",
-        "hacher oignons et ail",
-        "préparer la sauce tomate",
-        "mijoter doucement le poulet",
-        "obtenir une sauce bien parfumée",
-        "cuisson vapeur des poissons",
-        "cuisson pommes de terre",
-        "mélange homogène",
-        "cuisson régulière du riz",
-        "texture crémeuse sans excès de crème",
-        "➡️ environ 45 minutes + four",
-        "➡️ un peu de mozzarella ou parmesan",
-        "mixer en velouté",
-        "préparer la sauce tomate maison",
-        "cuire doucement le poisson",
-        "garder un poisson moelleux",
-        "➡️ un peu de chèvre ou mozzarella dessus",
-        "découper les légumes",
-        "faire revenir les ingrédients",
-        "cuisson automatique du riz",
-        "cuisson vapeur douce",
-        "poisson moelleux",
-        "sauce maison rapide",
-        "➡️ riz ou pommes de terre selon envie"
+        "MR CUISINE 4",
+        "🍅 Sauce tomate maison pour pizzas, pâtes & wraps"
       ],
       "sections": [
         {
@@ -18975,12 +18732,8 @@
         {
           "title": "🧀 Fromage :",
           "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "MR CUISINE 2",
-          "lines": [
+            "❌ Non",
+            "MR CUISINE 2",
             "🍚 Risotto crémeux poulet, champignons & parmesan",
             "Un de ses grands points forts ❤️",
             "Hacher",
@@ -19014,12 +18767,8 @@
         {
           "title": "🧀 Fromage :",
           "lines": [
-            "➡️ parmesan compté dans la recette"
-          ]
-        },
-        {
-          "title": "MR CUISINE 3",
-          "lines": [
+            "➡️ parmesan compté dans la recette",
+            "MR CUISINE 3",
             "🥕 Purée maison carottes, pommes de terre & fromage blanc",
             "Une base parfaite pour accompagner poisson ou viande ❤️",
             "✅ Cuisson vapeur légumes",
@@ -19041,1282 +18790,10 @@
           ]
         },
         {
-          "title": "MR CUISINE 4",
+          "title": "🥩 viande grillée",
           "lines": [
-            "🍅 Sauce tomate maison pour pizzas, pâtes & wraps",
-            "Une recette “à avoir toujours” dans le carnet ❤️",
-            "✅ Hacher oignon/ail",
-            "✅ Cuire doucement",
-            "✅ Mixer pour une sauce lisse"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ 25 minutes"
-          ]
-        },
-        {
-          "title": "Utilisations :",
-          "lines": [
-            "🍕 tortillas pizza",
-            "🍝 pâtes",
-            "🌯 wraps",
-            "🥘 plats mijotés"
-          ]
-        },
-        {
-          "title": "MR CUISINE 5",
-          "lines": [
-            "🐟 Brandade légère de cabillaud",
-            "Une recette idéale avec ton appareil ❤️",
-            "✅ Cuire pommes de terre",
-            "✅ Cuire poisson vapeur",
-            "✅ Écraser/mélanger la préparation"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "Possible :",
-          "lines": [
-            "➡️ parmesan léger dessus"
-          ]
-        },
-        {
-          "title": "MR CUISINE 6",
-          "lines": [
-            "🍛 Chili doux de poulet & légumes",
-            "Un plat mijoté plein de saveurs 🌶️",
-            "✅ Hacher oignon et légumes",
-            "✅ Faire revenir les ingrédients",
-            "✅ Cuisson mijotée lente",
-            "✅ Mélange régulier sans surveiller"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Accompagnement :",
-          "lines": [
-            "➡️ riz basmati : 60 g cru/personne"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "Possible :",
-          "lines": [
-            "➡️ un peu de cheddar râpé (20 g/personne)"
-          ]
-        },
-        {
-          "title": "MR CUISINE 7",
-          "lines": [
-            "🥣 Velouté lentilles corail, carottes & curry",
-            "Une soupe repas parfaite pour le soir ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Il est parfait pour cette recette :",
-          "lines": [
-            "✅ hacher les légumes",
-            "✅ cuire les lentilles",
-            "✅ mixer en velours",
-            "✅ obtenir une texture crémeuse sans crème"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "✅ 1 tranche complète possible"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "MR CUISINE 8",
-          "lines": [
-            "🍚 Risotto saumon fumé, poireaux & citron",
-            "Un risotto très doux 🍋"
-          ]
-        },
-        {
-          "title": "⭐ Une recette idéale :",
-          "lines": [
-            "✅ découpe poireaux",
-            "✅ cuisson du risotto",
-            "✅ mélange automatique",
-            "✅ texture crémeuse"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Portion :",
-          "lines": [
-            "➡️ 60 g riz cru/personne"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "➡️ parmesan déjà prévu"
-          ]
-        },
-        {
-          "title": "MR CUISINE 9",
-          "lines": [
-            "🥘 Blanquette légère de poulet aux légumes",
-            "Le plat cocooning par excellence ❤️",
-            "✅ Découpe légumes",
-            "✅ Cuisson douce du poulet"
-          ]
-        },
-        {
-          "title": "✅ Préparation de la sauce",
-          "lines": [
-            "✅ Mélange homogène"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 50 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Accompagnement :",
-          "lines": [
-            "➡️ riz : 60 g cru/personne"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "MR CUISINE 10",
-          "lines": [
-            "🌯 Garniture poulet épicé pour wraps",
-            "Une préparation à faire en avance pour plusieurs repas 😉",
-            "✅ Hacher les légumes",
-            "✅ Préparer la marinade",
-            "✅ Cuire doucement le poulet",
-            "✅ Préparer une garniture prête pour plusieurs jours"
-          ]
-        },
-        {
-          "title": "Utilisations :",
-          "lines": [
-            "🌯 wraps",
-            "🥗 salades",
-            "🍚 bowls"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 30 minutes"
-          ]
-        },
-        {
-          "title": "MR CUISINE 11",
-          "lines": [
-            "🍲 Velouté de légumes rôtis façon maison",
-            "Une soupe pleine de goût pour les soirs d’hiver 🍂",
-            "✅ Hacher les légumes",
-            "✅ Cuire avec le bouillon",
-            "✅ Mixer en velours",
-            "✅ Ajouter le fromage blanc pour une texture crémeuse"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "✅ 1 tranche complète possible"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "MR CUISINE 12",
-          "lines": [
-            "🐟 Saumon vapeur sauce citron-aneth",
-            "Une recette simple mais très élégante ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Parfait pour la cuisson vapeur :",
-          "lines": [
-            "✅ légumes dans le panier vapeur",
-            "✅ saumon cuit doucement",
-            "✅ sauce préparée à côté"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 30 minutes"
-          ]
-        },
-        {
-          "title": "🥔 Accompagnement :",
-          "lines": [
-            "➡️ pommes de terre vapeur : 150 g/personne"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "MR CUISINE 13",
-          "lines": [
-            "🍝 Sauce bolognaise maison légère",
-            "Une base à préparer en quantité pour plusieurs repas ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Très pratique :",
-          "lines": [
-            "✅ hacher les légumes finement",
-            "✅ faire revenir la viande",
-            "✅ mijoter la sauce",
-            "✅ mixer si besoin pour une sauce lisse"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "Utilisations :",
-          "lines": [
-            "🍝 pâtes",
-            "🌯 wraps",
-            "🥘 gratins",
-            "🍚 riz"
-          ]
-        },
-        {
-          "title": "🍝 Portion pâtes :",
-          "lines": [
-            "➡️ 60 g crues/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 14",
-          "lines": [
-            "🥔 Purée complète légère carottes, pommes de terre & poireaux",
-            "Un accompagnement maison bien meilleur ❤️",
-            "✅ Cuisson vapeur",
-            "✅ Mixage adapté",
-            "✅ Texture onctueuse sans beaucoup de beurre"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ 35 minutes"
-          ]
-        },
-        {
-          "title": "🐟 poisson",
-          "lines": [
-            "🐔 poulet"
-          ]
-        },
-        {
-          "title": "MR CUISINE 15",
-          "lines": [
-            "🍛 Curry doux de crevettes & légumes",
-            "Une recette parfumée et légère 🦐",
-            "✅ Hacher oignon/légumes",
-            "✅ Préparer la sauce curry",
-            "✅ Cuisson douce",
-            "✅ Mélange régulier"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Accompagnement :",
-          "lines": [
-            "➡️ riz basmati : 60 g cru/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 16",
-          "lines": [
-            "🍲 Potage façon grand-mère poulet & légumes",
-            "Un vrai repas du soir complet ❤️",
-            "✅ Découpe des légumes",
-            "✅ Cuisson douce du potage",
-            "✅ Effilochage du poulet",
-            "✅ Mixage partiel pour garder des morceaux"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "✅ 1 tranche complète possible"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "MR CUISINE 17",
-          "lines": [
-            "🍚 Risotto crémeux champignons & poulet",
-            "Un grand classique pour ton appareil ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Une recette où il fait la différence :",
-          "lines": [
-            "✅ hacher les échalotes",
-            "✅ cuire sans devoir remuer toutes les 2 minutes",
-            "✅ obtenir un riz crémeux"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Portion :",
-          "lines": [
-            "➡️ 60 g riz cru/personne"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "➡️ parmesan déjà compté"
-          ]
-        },
-        {
-          "title": "MR CUISINE 18",
-          "lines": [
-            "🐟 Brandade légère de cabillaud & carottes",
-            "Une version plus douce que la traditionnelle ❤️",
-            "✅ Cuisson vapeur poisson",
-            "✅ Cuisson pommes de terre",
-            "✅ Écrasage/mélange de la brandade",
-            "✅ Texture régulière"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "Possible :",
-          "lines": [
-            "➡️ un peu de parmesan dessus"
-          ]
-        },
-        {
-          "title": "MR CUISINE 19",
-          "lines": [
-            "🍗 Poulet aux olives & légumes du soleil",
-            "Un petit air du Sud ☀️",
-            "✅ Découpe légumes"
-          ]
-        },
-        {
-          "title": "✅ Préparation sauce",
-          "lines": [
-            "✅ Cuisson mijotée homogène"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Accompagnement :",
-          "lines": [
-            "➡️ riz : 60 g cru/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 20",
-          "lines": [
-            "🥘 Ratatouille maison aux légumes rôtis",
-            "Une recette qui te ressemble Aline ❤️",
-            "(courgettes, tomates, légumes du soleil)"
-          ]
-        },
-        {
-          "title": "⭐ Parfait pour préparer en avance :",
-          "lines": [
-            "✅ découpe régulière des légumes",
-            "✅ cuisson douce",
-            "✅ grande quantité pour plusieurs repas"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 50 minutes"
-          ]
-        },
-        {
-          "title": "À utiliser :",
-          "lines": [
-            "🍗 avec du poulet",
-            "🐟 avec du poisson",
-            "🍳 avec des œufs",
-            "🍚 avec du riz"
-          ]
-        },
-        {
-          "title": "MR CUISINE 21",
-          "lines": [
-            "🍲 Minestrone complet aux légumes & poulet",
-            "Une soupe italienne qui devient un vrai repas 🍅",
-            "✅ Hacher les légumes",
-            "✅ Préparer le bouillon parfumé",
-            "✅ Cuisson de la soupe",
-            "✅ Mélange homogène"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 40 minutes"
-          ]
-        },
-        {
-          "title": "✅ Possible :",
-          "lines": [
-            "➡️ 1 tranche complète si besoin"
-          ]
-        },
-        {
-          "title": "Possible :",
-          "lines": [
-            "➡️ parmesan 10 g/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 22",
-          "lines": [
-            "🍝 Sauce tomate maison & boulettes de poulet",
-            "Une recette familiale qui change ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Très pratique :",
-          "lines": [
-            "✅ hacher les légumes",
-            "✅ préparer la sauce",
-            "✅ mélanger la viande",
-            "✅ cuire doucement les boulettes"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 50 minutes"
-          ]
-        },
-        {
-          "title": "🍝 Accompagnement :",
-          "lines": [
-            "➡️ pâtes complètes 60 g crues/personne",
-            "ou",
-            "➡️ courgettes façon spaghetti"
-          ]
-        },
-        {
-          "title": "MR CUISINE 23",
-          "lines": [
-            "🐟 Colin sauce moutarde légère & légumes vapeur",
-            "Un plat simple, rapide et équilibré ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Idéal :",
-          "lines": [
-            "✅ cuisson vapeur du poisson",
-            "✅ cuisson légumes en même temps"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 30 minutes"
-          ]
-        },
-        {
-          "title": "🥔 Accompagnement :",
-          "lines": [
-            "➡️ pommes de terre vapeur 150 g/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 24",
-          "lines": [
-            "🥘 Couscous léger poulet & légumes",
-            "Une version plaisir mais plus équilibrée ❤️",
-            "✅ Préparer le bouillon parfumé",
-            "✅ Cuire les légumes doucement",
-            "✅ Réussir une semoule bien gonflée"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 50 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Portion semoule :",
-          "lines": [
-            "➡️ 60 g crue/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 25",
-          "lines": [
-            "🍗 Blanquette de poulet ultra facile",
-            "Un plat parfait à préparer à l’avance ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Gros avantage :",
-          "lines": [
-            "✅ cuisson douce du poulet",
-            "✅ légumes fondants",
-            "✅ sauce bien liée",
-            "✅ moins de surveillance"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 50 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Accompagnement :",
-          "lines": [
-            "➡️ riz basmati 60 g cru/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 26",
-          "lines": [
-            "🎃 Velouté potimarron, carottes & poulet",
-            "Une soupe repas douce et réconfortante 🍂"
-          ]
-        },
-        {
-          "title": "⭐ Parfait pour :",
-          "lines": [
-            "✅ cuire les légumes",
-            "✅ mixer une texture velours",
-            "✅ garder un repas complet avec le poulet"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 40 minutes"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "✅ 1 tranche complète possible"
-          ]
-        },
-        {
-          "title": "MR CUISINE 27",
-          "lines": [
-            "🍚 Risotto crémeux crevettes & poireaux",
-            "Un risotto qui fait son petit effet 🦐❤️"
-          ]
-        },
-        {
-          "title": "⭐ Une recette où il est vraiment utile :",
-          "lines": [
-            "✅ hacher les échalotes",
-            "✅ cuire le riz sans surveillance constante",
-            "✅ obtenir un risotto crémeux"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Portion :",
-          "lines": [
-            "➡️ 60 g riz cru/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 28",
-          "lines": [
-            "🥘 Tajine léger poulet, carottes & courgettes",
-            "Un voyage dans l’assiette 🌞",
-            "✅ Hacher oignon",
-            "✅ Préparer les épices",
-            "✅ Cuisson mijotée douce",
-            "✅ Mélange régulier"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Accompagnement :",
-          "lines": [
-            "➡️ semoule complète 60 g crue/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 29",
-          "lines": [
-            "🐟 Saumon sauce poireaux citronnée",
-            "Un plat élégant mais facile ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Très pratique :",
-          "lines": [
-            "✅ cuisson vapeur du saumon",
-            "✅ fondue de poireaux parfaite",
-            "✅ sauce préparée rapidement"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🥔 Accompagnement :",
-          "lines": [
-            "➡️ pommes de terre vapeur 150 g/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 30",
-          "lines": [
-            "🍝 Gratin de pâtes poulet, courgettes & tomate",
-            "Un plat familial qui plaît à tout le monde 😋",
-            "✅ préparer la sauce",
-            "✅ hacher légumes",
-            "✅ mélanger la préparation",
-            "✅ gagner du temps avant passage au four"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 40 minutes"
-          ]
-        },
-        {
-          "title": "MR CUISINE 31",
-          "lines": [
-            "🥣 Velouté de légumes rôtis & chèvre frais",
-            "Une soupe pleine de goût pour les soirs où tu veux du réconfort ❤️",
-            "✅ Découpe des légumes",
-            "✅ Cuisson du velouté",
-            "✅ Mixage ultra fin",
-            "✅ Ajout du chèvre pour une texture crémeuse"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 40 minutes"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "✅ 1 tranche complète possible"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "➡️ chèvre déjà prévu"
-          ]
-        },
-        {
-          "title": "MR CUISINE 32",
-          "lines": [
-            "🍛 Curry doux de poulet aux légumes",
-            "Un plat parfumé sans être trop lourd 🌞"
-          ]
-        },
-        {
-          "title": "⭐ Très pratique :",
-          "lines": [
-            "✅ hacher oignon et légumes",
-            "✅ préparer la sauce curry",
-            "✅ cuisson douce du poulet",
-            "✅ mélange automatique"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Accompagnement :",
-          "lines": [
-            "➡️ riz basmati : 60 g cru/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 33",
-          "lines": [
-            "🐟 Papillote vapeur cabillaud, légumes & citron",
-            "Une recette légère mais très savoureuse ❤️"
-          ]
-        },
-        {
-          "title": "⭐ La vapeur est idéale :",
-          "lines": [
-            "✅ cuisson douce du poisson",
-            "✅ légumes fondants",
-            "✅ poisson qui reste moelleux"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 30 minutes"
-          ]
-        },
-        {
-          "title": "🥔 Accompagnement :",
-          "lines": [
-            "➡️ pommes de terre vapeur 150 g/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 34",
-          "lines": [
-            "🍚 Risotto jambon, poireaux & parmesan",
-            "Un plat simple façon cuisine italienne 🇮🇹"
-          ]
-        },
-        {
-          "title": "⭐ Son domaine :",
-          "lines": [
-            "✅ cuisson du riz parfaite",
-            "✅ mélange régulier",
-            "✅ texture crémeuse"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Portion :",
-          "lines": [
-            "➡️ 60 g riz cru/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 35",
-          "lines": [
-            "🥘 Gratin de légumes du soleil façon provençale",
-            "Une recette qui te ressemble Aline ☀️❤️",
-            "✅ Préparer l’appareil",
-            "✅ Hacher les herbes",
-            "✅ Mélanger la préparation",
-            "✅ Gagner du temps avant cuisson au four"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes + cuisson four"
-          ]
-        },
-        {
-          "title": "MR CUISINE 36",
-          "lines": [
-            "🍲 Soupe repas façon pot-au-feu léger",
-            "Un plat complet et réconfortant pour les soirées fraîches 🍂",
-            "✅ Découpe régulière des légumes",
-            "✅ Cuisson douce du bouillon",
-            "✅ Poulet bien tendre",
-            "✅ Possibilité de garder les morceaux ou mixer une partie"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "🍚 🥔 Féculent :",
-          "lines": [
-            "➡️ pommes de terre déjà intégrées"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "❌ Non nécessaire"
-          ]
-        },
-        {
-          "title": "MR CUISINE 37",
-          "lines": [
-            "🍗 Poulet basquaise aux légumes du soleil",
-            "Une recette pleine de couleurs ☀️"
-          ]
-        },
-        {
-          "title": "⭐ Très adapté :",
-          "lines": [
-            "✅ hacher oignons et ail",
-            "✅ préparer la sauce tomate",
-            "✅ mijoter doucement le poulet",
-            "✅ obtenir une sauce bien parfumée"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Accompagnement :",
-          "lines": [
-            "➡️ riz basmati 60 g cru/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 38",
-          "lines": [
-            "🐟 Brandade saumon & cabillaud légère",
-            "Une version plus gourmande de la brandade ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Parfait pour :",
-          "lines": [
-            "✅ cuisson vapeur des poissons",
-            "✅ cuisson pommes de terre",
-            "✅ mélange homogène",
-            "✅ texture crémeuse"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 50 minutes"
-          ]
-        },
-        {
-          "title": "Possible :",
-          "lines": [
-            "➡️ un peu de parmesan dessus"
-          ]
-        },
-        {
-          "title": "MR CUISINE 39",
-          "lines": [
-            "🍚 Risotto légumes du soleil & chèvre frais",
-            "Une recette qui colle bien à tes légumes préférés ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Son point fort :",
-          "lines": [
-            "✅ cuisson régulière du riz",
-            "✅ mélange automatique",
-            "✅ texture crémeuse sans excès de crème"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Portion :",
-          "lines": [
-            "➡️ 60 g riz cru/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 40",
-          "lines": [
-            "🥘 Moussaka légère revisitée (sans trop d’aubergine 😉)",
-            "Une version plus adaptée à tes goûts",
-            "✅ Hacher oignon",
-            "✅ Préparer sauce tomate",
-            "✅ Mélanger l’appareil léger",
-            "✅ Préparer la garniture"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes + four"
-          ]
-        },
-        {
-          "title": "Possible :",
-          "lines": [
-            "➡️ un peu de mozzarella ou parmesan"
-          ]
-        },
-        {
-          "title": "MR CUISINE 41",
-          "lines": [
-            "🍲 Velouté poireaux, courgettes & lentilles corail",
-            "Une soupe repas qui cale bien sans être lourde ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Parfait pour cette recette :",
-          "lines": [
-            "✅ hacher les légumes",
-            "✅ cuire les lentilles",
-            "✅ mixer en velouté",
-            "✅ obtenir une texture crémeuse sans crème"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "✅ 1 tranche complète possible"
-          ]
-        },
-        {
-          "title": "MR CUISINE 42",
-          "lines": [
-            "🍛 Curry de crevettes & courgettes",
-            "Un plat parfumé et rapide 🦐",
-            "✅ hacher oignon et légumes",
-            "✅ préparer la sauce curry",
-            "✅ cuisson douce des légumes",
-            "✅ mélange homogène"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Accompagnement :",
-          "lines": [
-            "➡️ riz basmati : 60 g cru/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 43",
-          "lines": [
-            "🐟 Cabillaud sauce tomate provençale",
-            "Une recette légère qui sent le soleil ☀️"
-          ]
-        },
-        {
-          "title": "⭐ Très pratique :",
-          "lines": [
-            "✅ préparer la sauce tomate maison",
-            "✅ cuire doucement le poisson",
-            "✅ garder un poisson moelleux"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🥔 Accompagnement :",
-          "lines": [
-            "➡️ pommes de terre vapeur 150 g/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 44",
-          "lines": [
-            "🍝 Lasagnes légères poulet, courgettes & tomate",
-            "Une recette plaisir version équilibrée ❤️",
-            "✅ hacher les légumes",
-            "✅ préparer la sauce tomate",
-            "✅ préparer la sauce blanche légère",
-            "✅ mélanger les préparations"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes + four"
-          ]
-        },
-        {
-          "title": "MR CUISINE 45",
-          "lines": [
-            "🥘 Courgettes farcies poulet & légumes",
-            "Une recette parfaite avec tes courgettes ❤️",
-            "✅ hacher la farce",
-            "✅ mélanger tous les ingrédients",
-            "✅ préparer la garniture rapidement"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 30 minutes + cuisson four"
-          ]
-        },
-        {
-          "title": "Possible :",
-          "lines": [
-            "➡️ un peu de chèvre ou mozzarella dessus"
-          ]
-        },
-        {
-          "title": "MR CUISINE 46",
-          "lines": [
-            "🍲 Soupe repas poulet, légumes & petites pâtes",
-            "Une soupe qui remplace un vrai dîner ❤️",
-            "✅ Hacher les légumes",
-            "✅ Cuire le bouillon parfumé",
-            "✅ Cuire les pâtes directement dans la préparation",
-            "✅ Mélanger sans surveillance"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 40 minutes"
-          ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "❌ Pas nécessaire"
-          ]
-        },
-        {
-          "title": "MR CUISINE 47",
-          "lines": [
-            "🍚 Risotto poulet, courgettes & tomates séchées",
-            "Un risotto plein de soleil ☀️"
-          ]
-        },
-        {
-          "title": "⭐ Une recette où il est vraiment utile :",
-          "lines": [
-            "✅ découper les légumes",
-            "✅ faire revenir les ingrédients",
-            "✅ cuisson automatique du riz",
-            "✅ texture crémeuse"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Portion :",
-          "lines": [
-            "➡️ 60 g riz cru/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 48",
-          "lines": [
-            "🐟 Saumon vapeur façon provençale",
-            "Un plat léger mais gourmand ❤️"
-          ]
-        },
-        {
-          "title": "⭐ Très adapté :",
-          "lines": [
-            "✅ cuisson vapeur douce",
-            "✅ légumes fondants",
-            "✅ poisson moelleux",
-            "✅ sauce maison rapide"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 30 minutes"
-          ]
-        },
-        {
-          "title": "🥔 Accompagnement :",
-          "lines": [
-            "➡️ pommes de terre vapeur 150 g/personne"
-          ]
-        },
-        {
-          "title": "MR CUISINE 49",
-          "lines": [
-            "🍗 Mijoté de dinde aux légumes",
-            "Un plat familial facile à préparer en avance ❤️",
-            "✅ hacher les légumes",
-            "✅ mijoter doucement la viande",
-            "✅ obtenir une sauce bien parfumée",
-            "✅ préparer plusieurs portions"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 45 minutes"
-          ]
-        },
-        {
-          "title": "🍚 Accompagnement :",
-          "lines": [
-            "➡️ riz ou pommes de terre selon envie"
-          ]
-        },
-        {
-          "title": "MR CUISINE 50",
-          "lines": [
-            "🥘 Gratin léger de légumes du soleil",
-            "Une recette parfaite pour utiliser les légumes de saison ☀️",
-            "✅ hacher les herbes",
-            "✅ préparer l’appareil",
-            "✅ mélanger rapidement",
-            "✅ gagner du temps avant cuisson au four"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ environ 35 minutes + four"
+            "MR CUISINE 4",
+            "🍅 Sauce tomate maison pour pizzas, pâtes & wraps"
           ]
         }
       ],
@@ -20585,6 +19062,10 @@
         "🐟 Saumon légumes rôtis"
       ],
       "sections": [
+        {
+          "title": "⏱️ Préparation : 5 min",
+          "lines": []
+        },
         {
           "title": "🛒 Ingrédients",
           "lines": [
@@ -21083,15 +19564,14 @@
         "Fromage blanc : 150 g",
         "Bouillon : 100 ml",
         "Persil",
-        "Poivre"
-      ],
-      "steps": [],
-      "robot": [
+        "Poivre",
         "Cuire champignons + échalote",
         "Ajouter bouillon",
         "Mixer légèrement",
         "Ajouter fromage blanc en fin"
       ],
+      "steps": [],
+      "robot": [],
       "notes": [
         "🍗 poulet moutarde",
         "🥩 viandes blanches"
@@ -21105,12 +19585,8 @@
             "☐ Fromage blanc : 150 g",
             "☐ Bouillon : 100 ml",
             "☐ Persil",
-            "☐ Poivre"
-          ]
-        },
-        {
-          "title": "🤖 MR CUISINE",
-          "lines": [
+            "☐ Poivre",
+            "MR CUISINE",
             "☐ Cuire champignons + échalote",
             "☐ Ajouter bouillon",
             "☐ Mixer légèrement",
@@ -21130,18 +19606,23 @@
     {
       "id": "r-b07360fd58",
       "name": "🍅 11 — SAUCE TOMATE PROVENÇALE MAISON ☀️",
-      "ingredients": [],
-      "steps": [],
-      "robot": [
-        "Mettre oignon + ail",
-        "➡️ 5 secondes / vitesse 5",
-        "Ajouter huile",
-        "➡️ 3 min / 120°C / vitesse 1",
-        "Ajouter tomates + épices",
-        "➡️ 20 min / 100°C / vitesse 2",
-        "Mixer si besoin",
-        "➡️ 20 secondes / vitesse 6"
+      "ingredients": [
+        "(cabillaud provençal, légumes du soleil, pâtes, pizza, gratins)",
+        "Tomates concassées : 500 g",
+        "Oignon : 1",
+        "Ail : 2 gousses",
+        "Huile d’olive : 1 c. à soupe",
+        "Basilic : 1 c. à soupe",
+        "Origan : 1 c. à café",
+        "Paprika doux : 1 c. à café",
+        "Poivre"
       ],
+      "steps": [
+        "Ajouter huile : 3 min / 120°C / vitesse 1",
+        "Ajouter tomates + épices : 20 min / 100°C / vitesse 2",
+        "Mixer si besoin : 20 secondes / vitesse 6"
+      ],
+      "robot": [],
       "notes": [
         "🐟 Cabillaud façon provençale",
         "🍝 Pâtes bolognaise",
@@ -21149,19 +19630,6 @@
         "🥘 Paëlla"
       ],
       "sections": [
-        {
-          "title": "MR CUISINE Smart 🤖",
-          "lines": [
-            "☐ Mettre oignon + ail",
-            "➡️ 5 secondes / vitesse 5",
-            "☐ Ajouter huile",
-            "➡️ 3 min / 120°C / vitesse 1",
-            "☐ Ajouter tomates + épices",
-            "➡️ 20 min / 100°C / vitesse 2",
-            "☐ Mixer si besoin",
-            "➡️ 20 secondes / vitesse 6"
-          ]
-        },
         {
           "title": "➡️ Utilisation :",
           "lines": [
@@ -21229,15 +19697,14 @@
         "Maïzena : 30 g",
         "Fromage blanc : 100 g",
         "Muscade : 1 pincée",
-        "Poivre"
-      ],
-      "steps": [],
-      "robot": [
+        "Poivre",
         "Mettre lait + maïzena",
         "➡️ 8 min / 90°C / vitesse 3",
         "Ajouter fromage blanc",
         "➡️ 20 secondes vitesse 4"
       ],
+      "steps": [],
+      "robot": [],
       "notes": [
         "🍝 Lasagnes courgettes saumon",
         "🥒 Gratin léger de légumes"
@@ -21250,12 +19717,8 @@
             "☐ Maïzena : 30 g",
             "☐ Fromage blanc : 100 g",
             "☐ Muscade : 1 pincée",
-            "☐ Poivre"
-          ]
-        },
-        {
-          "title": "MR CUISINE Smart",
-          "lines": [
+            "☐ Poivre",
+            "MR CUISINE Smart",
             "☐ Mettre lait + maïzena",
             "➡️ 8 min / 90°C / vitesse 3",
             "☐ Ajouter fromage blanc",
@@ -21283,10 +19746,7 @@
         "Fromage blanc : 150 g",
         "Persil",
         "Ail",
-        "Poivre"
-      ],
-      "steps": [],
-      "robot": [
+        "Poivre",
         "Échalote + ail",
         "➡️ 5 sec vitesse 5",
         "Ajouter champignons",
@@ -21296,6 +19756,8 @@
         "Ajouter fromage blanc",
         "➡️ 20 sec vitesse 3"
       ],
+      "steps": [],
+      "robot": [],
       "notes": [],
       "sections": [
         {
@@ -21307,12 +19769,8 @@
             "☐ Fromage blanc : 150 g",
             "☐ Persil",
             "☐ Ail",
-            "☐ Poivre"
-          ]
-        },
-        {
-          "title": "MR CUISINE Smart",
-          "lines": [
+            "☐ Poivre",
+            "MR CUISINE Smart",
             "☐ Échalote + ail",
             "➡️ 5 sec vitesse 5",
             "☐ Ajouter champignons",
@@ -21339,10 +19797,7 @@
         "Curry doux : 1 c. à café",
         "Curcuma : 1/2 c. à café",
         "Cumin : 1/2 c. à café",
-        "Paprika : 1 c. à café"
-      ],
-      "steps": [],
-      "robot": [
+        "Paprika : 1 c. à café",
         "Oignon + ail + gingembre",
         "➡️ 5 sec vitesse 5",
         "Faire revenir",
@@ -21352,6 +19807,8 @@
         "Ajouter yaourt en fin",
         "➡️ 20 sec vitesse 3"
       ],
+      "steps": [],
+      "robot": [],
       "notes": [],
       "sections": [
         {
@@ -21365,12 +19822,8 @@
             "☐ Curry doux : 1 c. à café",
             "☐ Curcuma : 1/2 c. à café",
             "☐ Cumin : 1/2 c. à café",
-            "☐ Paprika : 1 c. à café"
-          ]
-        },
-        {
-          "title": "MR CUISINE Smart",
-          "lines": [
+            "☐ Paprika : 1 c. à café",
+            "MR CUISINE Smart",
             "☐ Oignon + ail + gingembre",
             "➡️ 5 sec vitesse 5",
             "☐ Faire revenir",
@@ -21513,10 +19966,7 @@
         "Oignon",
         "Ail",
         "Basilic",
-        "Origan"
-      ],
-      "steps": [],
-      "robot": [
+        "Origan",
         "Mixer légumes",
         "➡️ 5 sec vitesse 5",
         "Faire revenir viande",
@@ -21524,6 +19974,8 @@
         "Ajouter tomates + herbes",
         "➡️ 30 min / 100°C / vitesse douce"
       ],
+      "steps": [],
+      "robot": [],
       "notes": [],
       "sections": [
         {
@@ -21536,12 +19988,8 @@
             "☐ Oignon",
             "☐ Ail",
             "☐ Basilic",
-            "☐ Origan"
-          ]
-        },
-        {
-          "title": "MR CUISINE Smart",
-          "lines": [
+            "☐ Origan",
+            "MR CUISINE Smart",
             "☐ Mixer légumes",
             "➡️ 5 sec vitesse 5",
             "☐ Faire revenir viande",
@@ -21961,14 +20409,13 @@
         "Persil",
         "Basilic",
         "Ail",
-        "Poivre"
-      ],
-      "steps": [],
-      "robot": [],
-      "notes": [
+        "Poivre",
         "Quelques morceaux de mini-artichauts mixés",
         "➡️ Très fraîche en été ☀️"
       ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -21978,12 +20425,8 @@
             "☐ Persil",
             "☐ Basilic",
             "☐ Ail",
-            "☐ Poivre"
-          ]
-        },
-        {
-          "title": "Option :",
-          "lines": [
+            "☐ Poivre",
+            "Option :",
             "☐ Quelques morceaux de mini-artichauts mixés",
             "➡️ Très fraîche en été ☀️"
           ]
@@ -22001,15 +20444,14 @@
         "Ciboulette : 1 c. à soupe",
         "Citron",
         "Moutarde : 1 c. à café",
-        "Poivre"
-      ],
-      "steps": [],
-      "robot": [
+        "Poivre",
         "Mixer cornichons",
         "➡️ 5 sec vitesse 5",
         "Ajouter le reste",
         "➡️ 15 sec vitesse 3"
       ],
+      "steps": [],
+      "robot": [],
       "notes": [
         "🍟 frites au four"
       ],
@@ -22022,12 +20464,8 @@
             "☐ Ciboulette : 1 c. à soupe",
             "☐ Citron",
             "☐ Moutarde : 1 c. à café",
-            "☐ Poivre"
-          ]
-        },
-        {
-          "title": "MR CUISINE Smart",
-          "lines": [
+            "☐ Poivre",
+            "MR CUISINE Smart",
             "☐ Mixer cornichons",
             "➡️ 5 sec vitesse 5",
             "☐ Ajouter le reste",
@@ -22095,14 +20533,13 @@
         "Citron vert : 1/2",
         "Ciboulette",
         "Poivre",
-        "Paprika doux"
-      ],
-      "steps": [],
-      "robot": [
+        "Paprika doux",
         "Mixer tous les ingrédients",
         "➡️ 20 sec vitesse 6",
         "➡️ Une alternative crémeuse sans mayonnaise."
       ],
+      "steps": [],
+      "robot": [],
       "notes": [],
       "sections": [
         {
@@ -22113,12 +20550,8 @@
             "☐ Citron vert : 1/2",
             "☐ Ciboulette",
             "☐ Poivre",
-            "☐ Paprika doux"
-          ]
-        },
-        {
-          "title": "MR CUISINE Smart",
-          "lines": [
+            "☐ Paprika doux",
+            "MR CUISINE Smart",
             "☐ Mixer tous les ingrédients",
             "➡️ 20 sec vitesse 6",
             "➡️ Une alternative crémeuse sans mayonnaise."
@@ -22137,15 +20570,14 @@
         "Amandes ou pignons : 20 g",
         "Huile d’olive : 2 c. à soupe",
         "Fromage blanc : 100 g",
-        "Ail"
-      ],
-      "steps": [],
-      "robot": [
+        "Ail",
         "Mixer basilic + ail + fruits secs",
         "➡️ 15 sec vitesse 8",
         "Ajouter reste",
         "➡️ 20 sec vitesse 5"
       ],
+      "steps": [],
+      "robot": [],
       "notes": [
         "🍝 pâtes saumon",
         "🍕 tartines italiennes"
@@ -22159,12 +20591,8 @@
             "☐ Amandes ou pignons : 20 g",
             "☐ Huile d’olive : 2 c. à soupe",
             "☐ Fromage blanc : 100 g",
-            "☐ Ail"
-          ]
-        },
-        {
-          "title": "🤖 MR CUISINE",
-          "lines": [
+            "☐ Ail",
+            "MR CUISINE",
             "☐ Mixer basilic + ail + fruits secs",
             "➡️ 15 sec vitesse 8",
             "☐ Ajouter reste",
@@ -22261,21 +20689,24 @@
     {
       "id": "r-89cac3eec0",
       "name": "🍅 35 — BASE TOMATE À TOUT FAIRE (BATCH COOKING)",
-      "ingredients": [],
-      "steps": [],
-      "robot": [
-        "Oignons + ail",
-        "➡️ 5 sec / vitesse 5",
-        "Ajouter huile",
-        "➡️ 4 min / 120°C / vitesse 1",
-        "Ajouter tomates + épices",
-        "➡️ 35 min / 100°C / vitesse 2",
-        "Mixer texture velours",
-        "➡️ 30 sec / vitesse 6"
+      "ingredients": [
+        "Tomates concassées : 1,5 kg",
+        "Oignons : 3",
+        "Ail : 5 gousses",
+        "Huile d’olive : 2 c. à soupe",
+        "Basilic",
+        "Origan",
+        "Paprika doux",
+        "Poivre"
       ],
+      "steps": [
+        "Ajouter huile : 4 min / 120°C / vitesse 1",
+        "Ajouter tomates + épices : 35 min / 100°C / vitesse 2",
+        "Mixer texture velours : 30 sec / vitesse 6",
+        "Se congèle très bien en portions"
+      ],
+      "robot": [],
       "notes": [
-        "4 jours au réfrigérateur",
-        "Se congèle très bien en portions",
         "Cabillaud provençal",
         "Pâtes bolognaise",
         "Pizza maison",
@@ -22284,19 +20715,6 @@
         "Lasagnes"
       ],
       "sections": [
-        {
-          "title": "MR CUISINE Smart 🤖",
-          "lines": [
-            "☐ Oignons + ail",
-            "➡️ 5 sec / vitesse 5",
-            "☐ Ajouter huile",
-            "➡️ 4 min / 120°C / vitesse 1",
-            "☐ Ajouter tomates + épices",
-            "➡️ 35 min / 100°C / vitesse 2",
-            "☐ Mixer texture velours",
-            "➡️ 30 sec / vitesse 6"
-          ]
-        },
         {
           "title": "Conservation :",
           "lines": [
@@ -22396,10 +20814,7 @@
         "Fromage blanc : 300 g",
         "Persil",
         "Ail",
-        "Poivre"
-      ],
-      "steps": [],
-      "robot": [
+        "Poivre",
         "Échalotes + ail",
         "➡️ 5 sec vitesse 5",
         "Ajouter champignons",
@@ -22408,6 +20823,8 @@
         "➡️ 15 min / 100°C",
         "Ajouter fromage blanc après cuisson"
       ],
+      "steps": [],
+      "robot": [],
       "notes": [
         "3 jours frigo",
         "❌ Éviter de congeler avec fromage blanc",
@@ -22425,12 +20842,8 @@
             "☐ Fromage blanc : 300 g",
             "☐ Persil",
             "☐ Ail",
-            "☐ Poivre"
-          ]
-        },
-        {
-          "title": "🤖 MR CUISINE",
-          "lines": [
+            "☐ Poivre",
+            "MR CUISINE",
             "☐ Échalotes + ail",
             "➡️ 5 sec vitesse 5",
             "☐ Ajouter champignons",
@@ -24072,16 +22485,19 @@
         "ciboulette",
         "paprika",
         "poivre",
-        "1 tranche de pain complet"
+        "1 tranche de pain complet",
+        "➡️ 20 g de mozzarella ou feta dans l’omelette"
       ],
       "steps": [],
       "robot": [
         "Cuisson douce des champignons possible."
       ],
-      "notes": [
-        "➡️ 20 g de mozzarella ou feta dans l’omelette"
-      ],
+      "notes": [],
       "sections": [
+        {
+          "title": "⏱️ Temps : 10-15 min",
+          "lines": []
+        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -24107,8 +22523,9 @@
           ]
         },
         {
-          "title": "Option plaisir :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Option plaisir :",
             "➡️ 20 g de mozzarella ou feta dans l’omelette"
           ]
         },
@@ -24120,7 +22537,6 @@
         }
       ],
       "source": "EXPRESS 15 MIN",
-      "blurb": "⏱️ Temps : 10-15 min",
       "timePrep": "10-15 min"
     },
     {
@@ -24178,8 +22594,8 @@
       "blurb": "Parfaite quand il fait chaud ☀️"
     },
     {
-      "id": "r-bde818470e",
-      "name": "⏱️ 15 min",
+      "id": "r-cc1cb0b455",
+      "name": "Pâtes crémeuses courgettes & parmesan",
       "ingredients": [
         "pâtes",
         "courgettes",
@@ -24190,9 +22606,18 @@
         "poivre"
       ],
       "steps": [],
-      "robot": [],
-      "notes": [],
+      "robot": [
+        "Courgettes",
+        "Sauce crème"
+      ],
+      "notes": [
+        "Avec saumon ou jambon."
+      ],
       "sections": [
+        {
+          "title": "⏱️ 15 min",
+          "lines": []
+        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -24215,63 +22640,28 @@
           "lines": [
             "❌ Non"
           ]
-        }
-      ],
-      "source": "EXPRESS 15 MIN"
-    },
-    {
-      "id": "r-6ad1d6e8d8",
-      "name": "⚪ Déjà présent",
-      "ingredients": [],
-      "steps": [],
-      "robot": [
-        "Courgettes",
-        "Sauce crème",
-        "Très adapté pour cuisson douce.",
-        "⭐⭐⭐⭐ parfait.",
-        "🥚 Œufs",
-        "🧀 St Môret",
-        "🧀 Mozzarella",
-        "🧀 Feta",
-        "🥒 Concombre",
-        "🍅 Tomates",
-        "⭐⭐⭐⭐ idéal pour les soupes froides.",
-        "Œufs durs"
-      ],
-      "notes": [
-        "Avec saumon ou jambon.",
-        "🥒 Courgettes",
-        "🐟 Saumon fumé",
-        "🍝 Pâtes",
-        "🥖 Pain complet",
-        "🍚 Riz",
-        "🥫 Thon",
-        "🍗 Jambon"
-      ],
-      "sections": [
+        },
         {
-          "title": "🤖 MR CUISINE Smart :",
+          "title": "🧀 Fromage :",
           "lines": [
-            "⭐⭐⭐⭐ parfait.",
-            "🛒 MINI LISTE DE COURSES EXPRESS À AVOIR TOUJOURS",
-            "🥚 Œufs",
-            "🧀 St Môret",
-            "🧀 Mozzarella",
-            "🧀 Feta",
-            "🥒 Concombre",
-            "🍅 Tomates"
+            "⚪ Déjà présent"
           ]
         },
         {
-          "title": "🥗 Salade",
+          "title": "🤖 MR CUISINE Smart :",
+          "lines": []
+        },
+        {
+          "title": "🤖 Recherche :",
           "lines": [
-            "🥒 Courgettes",
-            "🐟 Saumon fumé",
-            "🍝 Pâtes",
-            "🥖 Pain complet",
-            "🍚 Riz",
-            "🥫 Thon",
-            "🍗 Jambon"
+            "\"Courgettes\"",
+            "\"Sauce crème\""
+          ]
+        },
+        {
+          "title": "🔄 Variante :",
+          "lines": [
+            "Avec saumon ou jambon."
           ]
         }
       ],
@@ -24336,13 +22726,12 @@
         "tomates",
         "pommes de terre vapeur",
         "poivre",
-        "thym"
+        "thym",
+        "30 g possible si envie."
       ],
       "steps": [],
       "robot": [],
-      "notes": [
-        "30 g possible si envie."
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -24367,8 +22756,9 @@
           ]
         },
         {
-          "title": "Après repas :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Après repas :",
             "✅ 30 g possible si envie."
           ]
         }
@@ -24383,34 +22773,30 @@
         "jambon",
         "tomate",
         "salade",
+        "mozzarella",
+        "comté",
+        "emmental",
         "origan",
         "poivre"
       ],
       "steps": [],
       "robot": [],
-      "notes": [
-        "mozzarella",
-        "comté",
-        "emmental"
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
           "lines": [
             "pain complet",
-            "jambon"
-          ]
-        },
-        {
-          "title": "🧀 fromage",
-          "lines": [
+            "jambon",
+            "fromage",
             "tomate",
             "salade"
           ]
         },
         {
-          "title": "Choix :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Choix :",
             "mozzarella",
             "comté",
             "emmental"
@@ -24493,7 +22879,9 @@
         "1 à 2 tranches complet"
       ],
       "steps": [],
-      "robot": [],
+      "robot": [
+        "Très adapté pour cuisson douce."
+      ],
       "notes": [],
       "sections": [
         {
@@ -24516,6 +22904,18 @@
           "title": "🍞 🥖 Pain :",
           "lines": [
             "✅ 1 à 2 tranches complet"
+          ]
+        },
+        {
+          "title": "🧀 Fromage :",
+          "lines": [
+            "⚪ Déjà présent"
+          ]
+        },
+        {
+          "title": "🤖 MR CUISINE Smart :",
+          "lines": [
+            "Très adapté pour cuisson douce."
           ]
         }
       ],
@@ -24586,7 +22986,9 @@
         "1 à 2 tartines complètes"
       ],
       "steps": [],
-      "robot": [],
+      "robot": [
+        "⭐⭐⭐⭐ parfait."
+      ],
       "notes": [],
       "sections": [
         {
@@ -24609,6 +23011,18 @@
           "title": "🍞 🥖 Pain :",
           "lines": [
             "✅ 1 à 2 tartines complètes"
+          ]
+        },
+        {
+          "title": "🧀 Fromage :",
+          "lines": [
+            "⚪ Déjà présent"
+          ]
+        },
+        {
+          "title": "🤖 MR CUISINE Smart :",
+          "lines": [
+            "⭐⭐⭐⭐ parfait."
           ]
         }
       ],
@@ -25510,7 +23924,8 @@
         "poivre",
         "Découpe légumes",
         "Cuisson riz possible",
-        "➡️ riz 60 g cru/personne"
+        "➡️ riz 60 g cru/personne",
+        "➡️ feta 30 g/personne"
       ],
       "steps": [],
       "robot": [],
@@ -25518,8 +23933,7 @@
         "fromage blanc : 150 g",
         "citron",
         "paprika fumé",
-        "ciboulette",
-        "➡️ feta 30 g/personne"
+        "ciboulette"
       ],
       "sections": [
         {
@@ -25575,8 +23989,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ feta 30 g/personne"
           ]
         }
@@ -25986,15 +24401,15 @@
         "thym : 1 c. à café",
         "persil",
         "poivre",
-        "ail"
+        "ail",
+        "➡️ 1 tranche complète si faim"
       ],
       "steps": [],
       "robot": [],
       "notes": [
         "cuisson soupe",
         "découpe",
-        "mélange",
-        "➡️ 1 tranche complète si faim"
+        "mélange"
       ],
       "sections": [
         {
@@ -26030,8 +24445,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🍞 Pain :",
           "lines": [
+            "✅ Possible :",
             "➡️ 1 tranche complète si faim"
           ]
         },
@@ -26137,6 +24553,7 @@
         "paprika fumé : 1 c. à café",
         "herbes de Provence : 1 c. à café",
         "poivre",
+        "➡️ 1 tranche complète si besoin",
         "➡️ chèvre frais 30 g/personne"
       ],
       "steps": [],
@@ -26148,8 +24565,7 @@
         "fromage blanc : 150 g",
         "citron",
         "ciboulette",
-        "moutarde douce",
-        "➡️ 1 tranche complète si besoin"
+        "moutarde douce"
       ],
       "sections": [
         {
@@ -26177,8 +24593,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🍞 Pain :",
           "lines": [
+            "✅ Possible :",
             "➡️ 1 tranche complète si besoin"
           ]
         },
@@ -26435,7 +24852,8 @@
         "salade",
         "paprika doux : 1 c. à café",
         "poivre",
-        "ail : 1 pincée"
+        "ail : 1 pincée",
+        "➡️ un peu de mozzarella ou gruyère râpé (20 g/personne)"
       ],
       "steps": [],
       "robot": [
@@ -26443,8 +24861,7 @@
         "Mélanger la sauce"
       ],
       "notes": [
-        "➡️ 1 à 2 tartines selon faim",
-        "➡️ un peu de mozzarella ou gruyère râpé (20 g/personne)"
+        "➡️ 1 à 2 tartines selon faim"
       ],
       "sections": [
         {
@@ -26487,8 +24904,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ un peu de mozzarella ou gruyère râpé (20 g/personne)"
           ]
         }
@@ -26733,7 +25151,8 @@
         "bouillon",
         "muscade : 1 pincée",
         "poivre",
-        "persil"
+        "persil",
+        "➡️ 1 tranche complète"
       ],
       "steps": [],
       "robot": [
@@ -26742,8 +25161,7 @@
       "notes": [
         "fromage blanc : 100 g",
         "cuisson soupe",
-        "mixage velouté",
-        "➡️ 1 tranche complète"
+        "mixage velouté"
       ],
       "sections": [
         {
@@ -26781,8 +25199,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🍞 Pain :",
           "lines": [
+            "✅ Possible :",
             "➡️ 1 tranche complète"
           ]
         },
@@ -26998,16 +25417,15 @@
         "paprika",
         "citron",
         "poivre",
-        "1 tranche complète"
+        "1 tranche complète",
+        "20 g de feta émiettée."
       ],
       "steps": [],
       "robot": [
         "Mayonnaise légère",
         "Œufs durs"
       ],
-      "notes": [
-        "20 g de feta émiettée."
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -27034,8 +25452,9 @@
           ]
         },
         {
-          "title": "Option :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Option :",
             "20 g de feta émiettée."
           ]
         },
@@ -27067,7 +25486,9 @@
         "1 à 2 tartines complètes grillées"
       ],
       "steps": [],
-      "robot": [],
+      "robot": [
+        "⭐⭐⭐⭐ idéal pour les soupes froides."
+      ],
       "notes": [],
       "sections": [
         {
@@ -27091,6 +25512,18 @@
           "title": "🍞 🥖 Pain :",
           "lines": [
             "✅ 1 à 2 tartines complètes grillées"
+          ]
+        },
+        {
+          "title": "🧀 Fromage :",
+          "lines": [
+            "⚪ Déjà présent"
+          ]
+        },
+        {
+          "title": "🤖 MR CUISINE Smart :",
+          "lines": [
+            "⭐⭐⭐⭐ idéal pour les soupes froides."
           ]
         }
       ],
@@ -27343,13 +25776,12 @@
         "basilic frais",
         "huile d’olive",
         "poivre",
-        "fleur de sel"
+        "fleur de sel",
+        "Ajouter quelques morceaux de jambon cru."
       ],
       "steps": [],
       "robot": [],
-      "notes": [
-        "Ajouter quelques morceaux de jambon cru."
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -27364,12 +25796,8 @@
           "lines": [
             "huile d’olive",
             "poivre",
-            "fleur de sel"
-          ]
-        },
-        {
-          "title": "Option :",
-          "lines": [
+            "fleur de sel",
+            "Option :",
             "Ajouter quelques morceaux de jambon cru."
           ]
         }
@@ -27652,16 +26080,15 @@
         "mozzarella",
         "basilic",
         "jambon cru",
+        "thon",
+        "poulet froid",
         "pesto maison"
       ],
       "steps": [],
       "robot": [
         "Pesto"
       ],
-      "notes": [
-        "thon",
-        "poulet froid"
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -27670,12 +26097,8 @@
             "tomates cerises",
             "mozzarella",
             "basilic",
-            "jambon cru"
-          ]
-        },
-        {
-          "title": "Option :",
-          "lines": [
+            "jambon cru",
+            "Option :",
             "thon",
             "poulet froid"
           ]
@@ -28387,15 +26810,14 @@
         "lait",
         "crème",
         "ail",
-        "muscade"
+        "muscade",
+        "un peu de fromage râpé"
       ],
       "steps": [],
       "robot": [
         "Gratin dauphinois"
       ],
-      "notes": [
-        "un peu de fromage râpé"
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -28404,12 +26826,8 @@
             "lait",
             "crème",
             "ail",
-            "muscade"
-          ]
-        },
-        {
-          "title": "🧀 Option :",
-          "lines": [
+            "muscade",
+            "🧀 Option :",
             "un peu de fromage râpé"
           ]
         },
@@ -28431,15 +26849,14 @@
         "saumon",
         "pommes de terre",
         "lait",
-        "persil"
+        "persil",
+        "parmesan dessus"
       ],
       "steps": [],
       "robot": [
         "Hachis parmentier"
       ],
-      "notes": [
-        "parmesan dessus"
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -28448,12 +26865,8 @@
             "saumon",
             "pommes de terre",
             "lait",
-            "persil"
-          ]
-        },
-        {
-          "title": "🧀 Option :",
-          "lines": [
+            "persil",
+            "🧀 Option :",
             "parmesan dessus"
           ]
         },
@@ -28974,17 +27387,16 @@
         "tomates",
         "concombre",
         "menthe",
-        "citron"
+        "citron",
+        "crevettes",
+        "poulet froid",
+        "feta"
       ],
       "steps": [],
       "robot": [
         "Taboulé"
       ],
-      "notes": [
-        "crevettes",
-        "poulet froid",
-        "feta"
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -28993,12 +27405,8 @@
             "tomates",
             "concombre",
             "menthe",
-            "citron"
-          ]
-        },
-        {
-          "title": "Option :",
-          "lines": [
+            "citron",
+            "Option :",
             "crevettes",
             "poulet froid",
             "feta"
@@ -29706,8 +28114,8 @@
       "source": "APERO VERRINES AB"
     },
     {
-      "id": "r-638340000d",
-      "name": "⏱️ 10 minutes",
+      "id": "r-c27d71faed",
+      "name": "🥚 Tartine complète œuf avocat St Môret",
       "ingredients": [
         "pain complet",
         "St Môret",
@@ -29719,9 +28127,15 @@
         "poivre"
       ],
       "steps": [],
-      "robot": [],
+      "robot": [
+        "Œufs durs"
+      ],
       "notes": [],
       "sections": [
+        {
+          "title": "⏱️ 10 minutes",
+          "lines": []
+        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -29739,35 +28153,48 @@
             "paprika",
             "poivre"
           ]
+        },
+        {
+          "title": "🧀 Fromage :",
+          "lines": [
+            "⚪ Déjà présent"
+          ]
+        },
+        {
+          "title": "🤖 MR CUISINE Smart :",
+          "lines": []
+        },
+        {
+          "title": "🤖 Recherche :",
+          "lines": [
+            "\"Œufs durs\""
+          ]
         }
       ],
       "source": "JE SUIS FATIGUEE"
     },
     {
-      "id": "r-16136a4e46",
-      "name": "⏱️ 15 minutes",
+      "id": "r-50f64b1080",
+      "name": "🍝 Pâtes express sauce tomate maison",
       "ingredients": [
         "pâtes",
         "sauce tomate maison congelée",
         "parmesan",
         "basilic",
-        "origan",
-        "saumon fumé",
-        "pommes de terre vapeur",
-        "salade",
-        "fromage blanc citronné",
-        "aneth",
-        "ciboulette"
+        "origan"
       ],
       "steps": [],
       "robot": [
         "Sauce tomate"
       ],
       "notes": [
-        "➡️ 20-30 g",
-        "1 tranche complète si besoin"
+        "➡️ 20-30 g"
       ],
       "sections": [
+        {
+          "title": "⏱️ 15 minutes",
+          "lines": []
+        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -29803,6 +28230,52 @@
       "source": "JE SUIS FATIGUEE"
     },
     {
+      "id": "r-d5da6a7f15",
+      "name": "🐟 Saumon fumé & pommes de terre minute",
+      "ingredients": [
+        "saumon fumé",
+        "pommes de terre vapeur",
+        "salade",
+        "fromage blanc citronné",
+        "aneth",
+        "ciboulette",
+        "1 tranche complète si besoin"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
+        {
+          "title": "⏱️ 15 minutes",
+          "lines": []
+        },
+        {
+          "title": "🛒 Ingrédients :",
+          "lines": [
+            "saumon fumé",
+            "pommes de terre vapeur",
+            "salade",
+            "fromage blanc citronné"
+          ]
+        },
+        {
+          "title": "🌿 Épices :",
+          "lines": [
+            "aneth",
+            "ciboulette"
+          ]
+        },
+        {
+          "title": "🍞 🥖 Pain :",
+          "lines": [
+            "Option :",
+            "1 tranche complète si besoin"
+          ]
+        }
+      ],
+      "source": "JE SUIS FATIGUEE"
+    },
+    {
       "id": "r-a373d67eb6",
       "name": "🥩 Steak haché façon bistrot",
       "ingredients": [
@@ -29818,6 +28291,10 @@
       "robot": [],
       "notes": [],
       "sections": [
+        {
+          "title": "⏱️ 15 minutes",
+          "lines": []
+        },
         {
           "title": "Avec :",
           "lines": [
@@ -29841,8 +28318,7 @@
           ]
         }
       ],
-      "source": "JE SUIS FATIGUEE",
-      "blurb": "⏱️ 15 minutes"
+      "source": "JE SUIS FATIGUEE"
     },
     {
       "id": "r-63e8770e3f",
@@ -29892,8 +28368,8 @@
       "source": "JE SUIS FATIGUEE"
     },
     {
-      "id": "r-910697e14c",
-      "name": "⏱️ 10-15 minutes",
+      "id": "r-f39050adb8",
+      "name": "🌯 Wrap chaud poulet fromage",
       "ingredients": [
         "tortilla complète",
         "poulet restant",
@@ -29908,15 +28384,15 @@
       "notes": [],
       "sections": [
         {
+          "title": "⏱️ 10-15 minutes",
+          "lines": []
+        },
+        {
           "title": "🛒 Ingrédients :",
           "lines": [
             "tortilla complète",
-            "poulet restant"
-          ]
-        },
-        {
-          "title": "🧀 fromage",
-          "lines": [
+            "poulet restant",
+            "fromage",
             "tomates",
             "salade"
           ]
@@ -29991,8 +28467,8 @@
       "source": "JE SUIS FATIGUEE"
     },
     {
-      "id": "r-efd13626fe",
-      "name": "⏱️ 20 minutes",
+      "id": "r-5ab6473efd",
+      "name": "🐟 Cabillaud tomate courgettes express",
       "ingredients": [
         "cabillaud",
         "courgettes",
@@ -30007,6 +28483,10 @@
       ],
       "notes": [],
       "sections": [
+        {
+          "title": "⏱️ 20 minutes",
+          "lines": []
+        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -30057,12 +28537,8 @@
           "title": "🛒 Ingrédients :",
           "lines": [
             "pain complet",
-            "jambon"
-          ]
-        },
-        {
-          "title": "🧀 fromage",
-          "lines": [
+            "jambon",
+            "fromage",
             "salade"
           ]
         },
@@ -30591,14 +29067,14 @@
         "thym",
         "laurier",
         "basilic",
-        "poivre"
+        "poivre",
+        "30 g de parmesan ou comté possible."
       ],
       "steps": [],
       "robot": [
         "Osso bucco"
       ],
       "notes": [
-        "30 g de parmesan ou comté possible.",
         "Avec dinde pour un budget plus léger."
       ],
       "sections": [
@@ -30630,8 +29106,9 @@
           ]
         },
         {
-          "title": "✅ Après repas :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Après repas :",
             "30 g de parmesan ou comté possible."
           ]
         },
@@ -30744,15 +29221,14 @@
         "crème légère",
         "aneth",
         "citron",
-        "poivre"
+        "poivre",
+        "un peu de parmesan."
       ],
       "steps": [],
       "robot": [
         "Fondue de poireaux"
       ],
-      "notes": [
-        "un peu de parmesan."
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -30778,8 +29254,9 @@
           ]
         },
         {
-          "title": "Option :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Option :",
             "un peu de parmesan."
           ]
         },
@@ -30809,15 +29286,14 @@
         "paprika fumé",
         "persil",
         "poivre",
-        "1 tranche complet selon faim"
+        "1 tranche complet selon faim",
+        "un peu de feta."
       ],
       "steps": [],
       "robot": [
         "Tortilla"
       ],
-      "notes": [
-        "un peu de feta."
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -30844,8 +29320,9 @@
           ]
         },
         {
-          "title": "Option :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Option :",
             "un peu de feta."
           ]
         },
@@ -31221,6 +29698,7 @@
         "paprika doux : 1 c. à café",
         "piment doux : 1 pincée",
         "poivre",
+        "➡️ un peu de cheddar râpé 20 g/personne",
         "curry doux : 1/2 c. à café",
         "ail : 1/2 c. à café"
       ],
@@ -31240,7 +29718,6 @@
         "oignon",
         "citron vert",
         "➡️ riz basmati : 60 g cru/personne",
-        "➡️ un peu de cheddar râpé 20 g/personne",
         "➡️ environ 45 minutes"
       ],
       "sections": [
@@ -31284,8 +29761,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ un peu de cheddar râpé 20 g/personne"
           ]
         }
@@ -31516,7 +29994,8 @@
         "thym : 1 c. à café",
         "ail : 1/2 c. à café",
         "poivre",
-        "Découpe"
+        "Découpe",
+        "➡️ feta 30 g/personne"
       ],
       "steps": [],
       "robot": [],
@@ -31525,8 +30004,7 @@
         "paprika fumé",
         "citron",
         "ciboulette",
-        "➡️ boulgour ou pommes de terre : 60 g/personne",
-        "➡️ feta 30 g/personne"
+        "➡️ boulgour ou pommes de terre : 60 g/personne"
       ],
       "sections": [
         {
@@ -31581,8 +30059,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ feta 30 g/personne"
           ]
         }
@@ -31692,7 +30171,8 @@
         "basilic : 1 c. à café",
         "origan : 1 c. à café",
         "thym : 1 c. à café",
-        "poivre"
+        "poivre",
+        "➡️ parmesan 10 g dans l’assiette"
       ],
       "steps": [],
       "robot": [
@@ -31705,8 +30185,7 @@
         "ail",
         "oignon",
         "basilic",
-        "➡️ 1 tranche complète",
-        "➡️ parmesan 10 g dans l’assiette"
+        "➡️ 1 tranche complète"
       ],
       "sections": [
         {
@@ -31753,8 +30232,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ parmesan 10 g dans l’assiette"
           ]
         }
@@ -32107,7 +30587,8 @@
         "aneth : 1 c. à café",
         "citron",
         "ail : 1 pincée",
-        "poivre"
+        "poivre",
+        "➡️ chapelure + parmesan 10 g/personne sur le dessus"
       ],
       "steps": [
         "Cuisson légumes"
@@ -32116,8 +30597,7 @@
       "notes": [
         "lait demi-écrémé",
         "fromage blanc : 100 g",
-        "muscade",
-        "➡️ chapelure + parmesan 10 g/personne sur le dessus"
+        "muscade"
       ],
       "sections": [
         {
@@ -32171,8 +30651,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ chapelure + parmesan 10 g/personne sur le dessus"
           ]
         }
@@ -32429,7 +30910,8 @@
         "aneth : 1 c. à café",
         "muscade : 1 pincée",
         "poivre",
-        "ail : 1 pincée"
+        "ail : 1 pincée",
+        "➡️ gruyère râpé 20 g/personne dessus"
       ],
       "steps": [
         "Découpe poireaux"
@@ -32437,9 +30919,7 @@
       "robot": [
         "Cuisson vapeur pommes de terre"
       ],
-      "notes": [
-        "➡️ gruyère râpé 20 g/personne dessus"
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -32493,8 +30973,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ gruyère râpé 20 g/personne dessus"
           ]
         }
@@ -32909,7 +31390,8 @@
         "origan : 1 c. à café",
         "paprika doux : 1 c. à café",
         "poivre",
-        "⚠️ Tortilla à la place"
+        "⚠️ Tortilla à la place",
+        "➡️ feta 30 g/personne"
       ],
       "steps": [],
       "robot": [
@@ -32922,8 +31404,7 @@
         "concombre râpé",
         "citron",
         "menthe",
-        "ail",
-        "➡️ feta 30 g/personne"
+        "ail"
       ],
       "sections": [
         {
@@ -32970,8 +31451,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ feta 30 g/personne"
           ]
         }
@@ -33418,7 +31900,8 @@
         "poivre",
         "Découpe légumes",
         "Mélange épices",
-        "⚠️ Tortilla à la place"
+        "⚠️ Tortilla à la place",
+        "➡️ feta 30 g/personne"
       ],
       "steps": [],
       "robot": [
@@ -33429,8 +31912,7 @@
         "fromage blanc : 150 g",
         "citron vert",
         "paprika fumé",
-        "cumin",
-        "➡️ feta 30 g/personne"
+        "cumin"
       ],
       "sections": [
         {
@@ -33480,8 +31962,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ feta 30 g/personne"
           ]
         }
@@ -33567,7 +32050,8 @@
       "ingredients": [
         "paprika fumé : 1 c. à café",
         "thym : 1 c. à café",
-        "ail : 1/2 c. à café"
+        "ail : 1/2 c. à café",
+        "➡️ gruyère râpé ou parmesan 20 g/personne"
       ],
       "steps": [],
       "robot": [
@@ -33580,8 +32064,7 @@
         "pommes de terre",
         "fromage blanc : 150 g",
         "muscade",
-        "poivre",
-        "➡️ gruyère râpé ou parmesan 20 g/personne"
+        "poivre"
       ],
       "sections": [
         {
@@ -33623,8 +32106,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ gruyère râpé ou parmesan 20 g/personne"
           ]
         }
@@ -33647,15 +32131,14 @@
         "muscade",
         "persil : 1 c. à soupe",
         "poivre",
-        "ail : 1/2 c. à café"
+        "ail : 1/2 c. à café",
+        "➡️ chapelure + parmesan léger dessus"
       ],
       "steps": [],
       "robot": [
         "Cuisson pommes de terre"
       ],
-      "notes": [
-        "➡️ chapelure + parmesan léger dessus"
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -33703,8 +32186,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ chapelure + parmesan léger dessus"
           ]
         }
@@ -34150,6 +32634,7 @@
         "paprika fumé : 1 c. à café",
         "ail : 1/2 c. à café",
         "poivre",
+        "➡️ chèvre frais ou mozzarella 30 g/personne",
         "aubergine (facultatif 😉)",
         "poulet ou jambon",
         "herbes de Provence",
@@ -34167,19 +32652,18 @@
         "Gagner du temps avant cuisson au four"
       ],
       "notes": [
-        "➡️ chèvre frais ou mozzarella 30 g/personne",
         "➡️ environ 35 minutes + cuisson four"
       ],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
           "lines": [
-            "courgettes : 3",
-            "tomates : 5",
+            "courgettes",
+            "tomates",
             "poivrons",
+            "aubergine (facultatif puisque tu en manges peu 😉)",
             "oignons",
-            "aubergine (facultatif 😉)",
-            "poulet ou jambon"
+            "poulet ou jambon blanc"
           ]
         },
         {
@@ -34193,36 +32677,36 @@
         {
           "title": "🌿 Épices :",
           "lines": [
-            "herbes de Provence",
-            "paprika fumé",
-            "ail",
+            "herbes de Provence : 1 c. à café",
+            "paprika fumé : 1 c. à café",
+            "ail : 1/2 c. à café",
             "poivre"
           ]
         },
         {
-          "title": "🧀 Dessus :",
-          "lines": [
-            "mozzarella ou chèvre : 30 g/personne"
-          ]
-        },
-        {
-          "title": "🤖 Avec MR CUISINE Smart",
+          "title": "🤖 MR CUISINE Smart :",
           "lines": [
             "✅ Préparer l’appareil",
-            "✅ Hacher les herbes",
-            "✅ Mélanger la préparation",
-            "✅ Gagner du temps avant cuisson au four"
+            "✅ Mixer les herbes/épices",
+            "✅ Découper les légumes"
           ]
         },
         {
-          "title": "⏱️ Temps :",
+          "title": "🍞 Pain :",
           "lines": [
-            "➡️ environ 35 minutes + cuisson four"
+            "❌ Non"
+          ]
+        },
+        {
+          "title": "🧀 Fromage :",
+          "lines": [
+            "✅ Possible :",
+            "➡️ chèvre frais ou mozzarella 30 g/personne"
           ]
         }
       ],
       "source": "Bonus recettes",
-      "blurb": "Une recette qui te ressemble Aline ☀️❤️"
+      "blurb": "Très « Aline » avec tes légumes rôtis ❤️☀️"
     },
     {
       "id": "r-ae4f6aaa28",
@@ -34563,7 +33047,8 @@
         "⚠️ Parmesan dans la sauce"
       ],
       "steps": [
-        "Découpe légumes"
+        "Découpe légumes",
+        "➡️ frites congelées au four : 120 g"
       ],
       "robot": [
         "Sauce maison",
@@ -35156,76 +33641,6 @@
       "blurb": "Une base parfaite pour accompagner poisson ou viande ❤️"
     },
     {
-      "id": "r-323d6bb056",
-      "name": "🍅 Sauce tomate maison pour pizzas, pâtes & wraps",
-      "ingredients": [
-        "tomates concassées : 800 g",
-        "oignon",
-        "ail",
-        "basilic",
-        "origan",
-        "paprika doux",
-        "poivre",
-        "herbes de Provence"
-      ],
-      "steps": [],
-      "robot": [
-        "Hacher oignon/ail",
-        "Cuire doucement",
-        "Mixer pour une sauce lisse"
-      ],
-      "notes": [
-        "➡️ 25 minutes",
-        "🍕 tortillas pizza",
-        "🍝 pâtes",
-        "🌯 wraps"
-      ],
-      "sections": [
-        {
-          "title": "🛒 Ingrédients :",
-          "lines": [
-            "tomates concassées : 800 g",
-            "oignon",
-            "ail",
-            "basilic",
-            "origan"
-          ]
-        },
-        {
-          "title": "🌿 Épices :",
-          "lines": [
-            "paprika doux",
-            "poivre",
-            "herbes de Provence"
-          ]
-        },
-        {
-          "title": "🤖 Avec MR CUISINE Smart",
-          "lines": [
-            "✅ Hacher oignon/ail",
-            "✅ Cuire doucement",
-            "✅ Mixer pour une sauce lisse"
-          ]
-        },
-        {
-          "title": "⏱️ Temps :",
-          "lines": [
-            "➡️ 25 minutes"
-          ]
-        },
-        {
-          "title": "Utilisations :",
-          "lines": [
-            "🍕 tortillas pizza",
-            "🍝 pâtes",
-            "🌯 wraps"
-          ]
-        }
-      ],
-      "source": "MR CUISINE",
-      "blurb": "Une recette “à avoir toujours” dans le carnet ❤️"
-    },
-    {
       "id": "r-cd47b05231",
       "name": "🐟 Brandade légère de cabillaud",
       "ingredients": [
@@ -35237,7 +33652,8 @@
         "persil",
         "citron",
         "poivre",
-        "muscade"
+        "muscade",
+        "➡️ parmesan léger dessus"
       ],
       "steps": [],
       "robot": [
@@ -35246,8 +33662,7 @@
         "Écraser/mélanger la préparation"
       ],
       "notes": [
-        "➡️ environ 45 minutes",
-        "➡️ parmesan léger dessus"
+        "➡️ environ 45 minutes"
       ],
       "sections": [
         {
@@ -35290,8 +33705,9 @@
           ]
         },
         {
-          "title": "Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Possible :",
             "➡️ parmesan léger dessus"
           ]
         }
@@ -36069,7 +34485,8 @@
         "persil",
         "citron",
         "muscade",
-        "poivre"
+        "poivre",
+        "➡️ un peu de parmesan dessus"
       ],
       "steps": [],
       "robot": [
@@ -36079,8 +34496,7 @@
         "Texture régulière"
       ],
       "notes": [
-        "➡️ environ 45 minutes",
-        "➡️ un peu de parmesan dessus"
+        "➡️ environ 45 minutes"
       ],
       "sections": [
         {
@@ -36125,8 +34541,9 @@
           ]
         },
         {
-          "title": "Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Possible :",
             "➡️ un peu de parmesan dessus"
           ]
         }
@@ -36305,7 +34722,9 @@
         "basilic",
         "origan",
         "ail",
-        "poivre"
+        "poivre",
+        "➡️ 1 tranche complète si besoin",
+        "➡️ parmesan 10 g/personne"
       ],
       "steps": [],
       "robot": [
@@ -36315,9 +34734,7 @@
         "Mélange homogène"
       ],
       "notes": [
-        "➡️ environ 40 minutes",
-        "➡️ 1 tranche complète si besoin",
-        "➡️ parmesan 10 g/personne"
+        "➡️ environ 40 minutes"
       ],
       "sections": [
         {
@@ -36345,14 +34762,16 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🍞 Pain :",
           "lines": [
+            "✅ Possible :",
             "➡️ 1 tranche complète si besoin"
           ]
         },
         {
-          "title": "Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Possible :",
             "➡️ parmesan 10 g/personne"
           ]
         }
@@ -37464,7 +35883,8 @@
         "aneth",
         "persil",
         "muscade",
-        "poivre"
+        "poivre",
+        "➡️ un peu de parmesan dessus"
       ],
       "steps": [],
       "robot": [],
@@ -37473,8 +35893,7 @@
         "cuisson pommes de terre",
         "mélange homogène",
         "texture crémeuse",
-        "➡️ environ 50 minutes",
-        "➡️ un peu de parmesan dessus"
+        "➡️ environ 50 minutes"
       ],
       "sections": [
         {
@@ -37518,8 +35937,9 @@
           ]
         },
         {
-          "title": "Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Possible :",
             "➡️ un peu de parmesan dessus"
           ]
         }
@@ -37619,7 +36039,8 @@
         "paprika",
         "ail",
         "thym",
-        "basilic"
+        "basilic",
+        "➡️ un peu de mozzarella ou parmesan"
       ],
       "steps": [],
       "robot": [
@@ -37633,8 +36054,7 @@
         "œufs : 2",
         "muscade",
         "poivre",
-        "➡️ environ 45 minutes + four",
-        "➡️ un peu de mozzarella ou parmesan"
+        "➡️ environ 45 minutes + four"
       ],
       "sections": [
         {
@@ -37681,8 +36101,9 @@
           ]
         },
         {
-          "title": "Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Possible :",
             "➡️ un peu de mozzarella ou parmesan"
           ]
         }
@@ -37998,7 +36419,8 @@
         "paprika fumé",
         "thym",
         "basilic",
-        "poivre"
+        "poivre",
+        "➡️ un peu de chèvre ou mozzarella dessus"
       ],
       "steps": [],
       "robot": [
@@ -38008,8 +36430,7 @@
       ],
       "notes": [
         "fromage blanc : 100 g",
-        "➡️ environ 30 minutes + cuisson four",
-        "➡️ un peu de chèvre ou mozzarella dessus"
+        "➡️ environ 30 minutes + cuisson four"
       ],
       "sections": [
         {
@@ -38053,8 +36474,9 @@
           ]
         },
         {
-          "title": "Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "Possible :",
             "➡️ un peu de chèvre ou mozzarella dessus"
           ]
         }
@@ -38104,6 +36526,12 @@
           "title": "⏱️ Temps :",
           "lines": [
             "➡️ environ 40 minutes"
+          ]
+        },
+        {
+          "title": "🍞 Pain :",
+          "lines": [
+            "❌ Pas nécessaire"
           ]
         }
       ],
@@ -38559,7 +36987,6 @@
       "id": "r-a64a37703a",
       "name": "🥩 Boulettes de viande maison",
       "ingredients": [
-        "Former les boulettes.",
         "boulettes de bœuf",
         "courgettes",
         "carottes",
@@ -38581,6 +37008,8 @@
         "œuf",
         "persil",
         "ail",
+        "épices",
+        "Former les boulettes.",
         "crues ou cuites",
         "🍅 sauce tomate",
         "🍝 pâtes"
@@ -38592,12 +37021,8 @@
             "viande hachée",
             "œuf",
             "persil",
-            "ail"
-          ]
-        },
-        {
-          "title": "🌿 épices",
-          "lines": [
+            "ail",
+            "épices",
             "Former les boulettes."
           ]
         },
@@ -38644,7 +37069,8 @@
           "title": "Préparer :",
           "lines": [
             "blancs de poulet",
-            "bouillon"
+            "bouillon",
+            "épices"
           ]
         },
         {
@@ -38692,7 +37118,8 @@
         "persil",
         "dans bac à glaçons",
         "sauces",
-        "plats mijotés"
+        "plats mijotés",
+        "légumes"
       ],
       "sections": [
         {
@@ -38713,7 +37140,8 @@
           "title": "À utiliser :",
           "lines": [
             "sauces",
-            "plats mijotés"
+            "plats mijotés",
+            "légumes"
           ]
         },
         {
@@ -38825,7 +37253,9 @@
       "ingredients": [],
       "steps": [],
       "robot": [
-        "Pesto"
+        "Pesto",
+        "Sauce",
+        "📌 PAGE ASTUCE À METTRE DANS TON CLASSEUR"
       ],
       "notes": [
         "fromage frais aux herbes",
@@ -38850,12 +37280,8 @@
         {
           "title": "🤖 Recherche :",
           "lines": [
-            "\"Pesto\""
-          ]
-        },
-        {
-          "title": "🥣 \"Sauce\"",
-          "lines": [
+            "\"Pesto\"",
+            "\"Sauce\"",
             "📌 PAGE ASTUCE À METTRE DANS TON CLASSEUR"
           ]
         }
@@ -39152,26 +37578,20 @@
       "id": "r-75c12fe616",
       "name": "🥗 Salade repas anti-gaspi",
       "ingredients": [
-        "jambon ou thon",
-        "œufs"
+        "légumes grillés",
+        "œuf",
+        "jambon ou thon"
       ],
       "steps": [],
       "robot": [],
-      "notes": [
-        "légumes grillés",
-        "œuf"
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "Avec les restes :",
           "lines": [
             "légumes grillés",
-            "œuf"
-          ]
-        },
-        {
-          "title": "🧀 fromage",
-          "lines": [
+            "œuf",
+            "fromage",
             "jambon ou thon"
           ]
         }
@@ -39467,25 +37887,20 @@
       "id": "r-a408e19d4f",
       "name": "🥗 Grande salade composée",
       "ingredients": [
+        "légumes",
         "œufs",
-        "poisson ou jambon",
-        "thon",
-        "tomates",
-        "mozzarella"
+        "poisson ou jambon"
       ],
       "steps": [],
       "robot": [],
       "notes": [],
       "sections": [
         {
-          "title": "🥒 légumes",
+          "title": "Avec les restes :",
           "lines": [
-            "œufs"
-          ]
-        },
-        {
-          "title": "🧀 fromage",
-          "lines": [
+            "légumes",
+            "œufs",
+            "fromage",
             "poisson ou jambon"
           ]
         }
@@ -39651,7 +38066,8 @@
           "lines": [
             "œufs",
             "tomates",
-            "poivrons"
+            "poivrons",
+            "épices"
           ]
         }
       ],
@@ -40123,6 +38539,7 @@
       "id": "r-99ffb7882d",
       "name": "🥣 Soupe asiatique légère",
       "ingredients": [
+        "légumes",
         "œuf",
         "champignons"
       ],
@@ -40133,8 +38550,9 @@
       "notes": [],
       "sections": [
         {
-          "title": "🥒 légumes",
+          "title": "Avec :",
           "lines": [
+            "légumes",
             "œuf",
             "champignons"
           ]
@@ -40766,12 +39184,8 @@
           "title": "Avec :",
           "lines": [
             "pain de mie complet",
-            "jambon"
-          ]
-        },
-        {
-          "title": "🧀 fromage",
-          "lines": [
+            "jambon",
+            "fromage",
             "béchamel légère"
           ]
         },
@@ -42234,12 +40648,8 @@
           "lines": [
             "poulet",
             "tomates",
-            "yaourt"
-          ]
-        },
-        {
-          "title": "🌿 épices",
-          "lines": [
+            "yaourt",
+            "épices",
             "riz"
           ]
         },
@@ -42928,6 +41338,7 @@
         "origan : 1 c. à café",
         "➡️ 1/2 pizza + grande salade verte",
         "➡️ mozzarella environ 50 g",
+        "🍟 Option plaisir :",
         "➡️ quelques frites au four possibles exceptionnellement (100 g) si grosse envie"
       ],
       "sections": [
@@ -42980,12 +41391,8 @@
         {
           "title": "⚠️ Déjà dans la pizza :",
           "lines": [
-            "➡️ mozzarella environ 50 g"
-          ]
-        },
-        {
-          "title": "🍟 Option plaisir :",
-          "lines": [
+            "➡️ mozzarella environ 50 g",
+            "🍟 Option plaisir :",
             "➡️ quelques frites au four possibles exceptionnellement (100 g) si grosse envie"
           ]
         }
@@ -44593,7 +43000,9 @@
         "paprika fumé : 1 c. à café",
         "cumin : 1/2 c. à café",
         "ail : 1/2 c. à café",
-        "poivre"
+        "poivre",
+        "➡️ feta 30 g ou parmesan 10 g dans la sauce",
+        "Mélange de la sauce"
       ],
       "steps": [
         "Découpe légumes"
@@ -44606,9 +43015,6 @@
         "ail : 1/2 c. à café",
         "moutarde : 1 c. à café",
         "➡️ 1 tranche complète possible",
-        "➡️ feta 30 g ou parmesan 10 g dans la sauce",
-        "Mélange de la sauce",
-        "❌ Cuisson finale des pâtes : selon préférence",
         "➡️ pâtes : 60 g crues/personne",
         "➡️ parmesan 10 g/personne possible"
       ],
@@ -44662,8 +43068,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ feta 30 g ou parmesan 10 g dans la sauce",
             "✅ Mélange de la sauce",
             "❌ Cuisson finale des pâtes : selon préférence"
@@ -44898,6 +43305,7 @@
         "tomates",
         "oignon",
         "bouillon",
+        "épices",
         "➡️ semoule : 60 g crue/personne",
         "Si tu prends une merguez, garde une seule portion de semoule et augmente les légumes 😉"
       ],
@@ -44907,7 +43315,8 @@
           "lines": [
             "tomates",
             "oignon",
-            "bouillon"
+            "bouillon",
+            "épices"
           ]
         },
         {
@@ -44968,7 +43377,8 @@
         "poulet : 600 g",
         "salade",
         "tomates",
-        "concombre"
+        "concombre",
+        "➡️ cheddar râpé 20 g/personne"
       ],
       "steps": [
         "Découpe légumes"
@@ -44983,8 +43393,7 @@
         "ail : 1/2 c. à café",
         "piment doux : 1/2 c. à café",
         "poivre",
-        "➡️ 1 wrap/personne",
-        "➡️ cheddar râpé 20 g/personne"
+        "➡️ 1 wrap/personne"
       ],
       "sections": [
         {
@@ -45034,8 +43443,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ cheddar râpé 20 g/personne"
           ]
         }
@@ -45578,6 +43988,7 @@
         "origan : 1 c. à café",
         "poivre",
         "paprika doux : 1 pincée",
+        "➡️ chèvre frais 30 g sur les tartines à la place du jambon",
         "tomates",
         "carottes",
         "oignon",
@@ -45607,8 +44018,7 @@
         "basilic : 1 c. à soupe",
         "ail : 1/2 c. à café",
         "citron",
-        "➡️ 1 à 2 petites tranches selon faim",
-        "➡️ chèvre frais 30 g sur les tartines à la place du jambon"
+        "➡️ 1 à 2 petites tranches selon faim"
       ],
       "sections": [
         {
@@ -45667,8 +44077,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ chèvre frais 30 g sur les tartines à la place du jambon"
           ]
         }
@@ -45759,7 +44170,8 @@
         "basilic : 1 c. à café",
         "origan : 1 c. à café",
         "paprika doux : 1/2 c. à café",
-        "poivre"
+        "poivre",
+        "➡️ chèvre frais 30 g sur une tartine à la place du jambon"
       ],
       "steps": [
         "➡️ texture bien lisse"
@@ -45782,8 +44194,7 @@
         "citron",
         "ail",
         "➡️ mixage du gaspacho",
-        "➡️ 1 à 2 petites tranches selon faim",
-        "➡️ chèvre frais 30 g sur une tartine à la place du jambon"
+        "➡️ 1 à 2 petites tranches selon faim"
       ],
       "sections": [
         {
@@ -45848,8 +44259,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ chèvre frais 30 g sur une tartine à la place du jambon"
           ]
         }
@@ -45872,6 +44284,7 @@
         "persil : 1 c. à soupe",
         "poivre",
         "➡️ pommes de terre : 120 g/personne",
+        "➡️ 25 g de comté si envie",
         "Thon ou maquereau",
         "Haricots verts",
         "Herbes fraîches",
@@ -45887,8 +44300,7 @@
         "fromage blanc : 120 g",
         "moutarde : 1 c. à café",
         "citron",
-        "ciboulette",
-        "➡️ 25 g de comté si envie"
+        "ciboulette"
       ],
       "sections": [
         {
@@ -45941,8 +44353,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ 25 g de comté si envie"
           ]
         }
@@ -46147,7 +44560,8 @@
         "basilic : 1 c. à café",
         "origan : 1 c. à café",
         "poivre",
-        "paprika doux : 1 pincée"
+        "paprika doux : 1 pincée",
+        "➡️ mozzarella 30 g/personne"
       ],
       "steps": [
         "➡️ texture bien lisse"
@@ -46170,8 +44584,7 @@
         "citron",
         "ail",
         "➡️ mixage du gaspacho",
-        "➡️ 1 à 2 petites tranches complètes",
-        "➡️ mozzarella 30 g/personne"
+        "➡️ 1 à 2 petites tranches complètes"
       ],
       "sections": [
         {
@@ -46236,8 +44649,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ mozzarella 30 g/personne"
           ]
         }
@@ -46405,7 +44819,8 @@
         "basilic : 1 c. à café",
         "origan : 1 c. à café",
         "poivre",
-        "paprika doux : 1 pincée"
+        "paprika doux : 1 pincée",
+        "➡️ chèvre frais 30 g sur une tartine"
       ],
       "steps": [],
       "robot": [],
@@ -46428,8 +44843,7 @@
         "➡️ mixer le gaspacho très fin",
         "➡️ préparer la crème basilic",
         "➡️ obtenir une texture velours",
-        "➡️ 1 à 2 petites tranches complètes",
-        "➡️ chèvre frais 30 g sur une tartine"
+        "➡️ 1 à 2 petites tranches complètes"
       ],
       "sections": [
         {
@@ -46490,8 +44904,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ chèvre frais 30 g sur une tartine"
           ]
         }
@@ -46700,7 +45115,8 @@
       "ingredients": [
         "poivre",
         "basilic : 1 c. à café",
-        "paprika doux : 1 pincée"
+        "paprika doux : 1 pincée",
+        "➡️ chèvre frais 30 g sur une tartine"
       ],
       "steps": [],
       "robot": [],
@@ -46722,8 +45138,7 @@
         "➡️ mixer le gaspacho très fin",
         "➡️ préparer la crème aux herbes",
         "➡️ obtenir une texture velours",
-        "➡️ 1 à 2 petites tranches complètes",
-        "➡️ chèvre frais 30 g sur une tartine"
+        "➡️ 1 à 2 petites tranches complètes"
       ],
       "sections": [
         {
@@ -46782,8 +45197,9 @@
           ]
         },
         {
-          "title": "✅ Possible :",
+          "title": "🧀 Fromage :",
           "lines": [
+            "✅ Possible :",
             "➡️ chèvre frais 30 g sur une tartine"
           ]
         }
@@ -47113,7 +45529,7 @@
       "day": "MARDI",
       "meal": "Soir",
       "name": "🥣 Velouté maison + tartine",
-      "recipeId": "r-b17bf4bbeb"
+      "recipeId": "r-3a7b357b85"
     },
     {
       "week": 4,
@@ -47337,7 +45753,7 @@
       "day": "JEUDI",
       "meal": "Soir",
       "name": "🥗 Salade repas méditerranéenne",
-      "recipeId": "r-05b735f44d"
+      "recipeId": "r-68f05ec51f"
     },
     {
       "week": 6,
@@ -48793,7 +47209,7 @@
       "day": "JEUDI",
       "meal": "Soir",
       "name": "🥗 Salade méditerranéenne",
-      "recipeId": "r-05b735f44d"
+      "recipeId": "r-68f05ec51f"
     },
     {
       "week": 21,
@@ -92121,8 +90537,7 @@
       "recipeIds": [
         "r-376d7c7d61",
         "r-0590c1550b",
-        "r-bde818470e",
-        "r-6ad1d6e8d8",
+        "r-cc1cb0b455",
         "r-5683efa1c7",
         "r-6d9464bdf0",
         "r-860ef4c338",
@@ -92171,7 +90586,6 @@
         "r-27adcd34e6",
         "r-19acbc340f",
         "r-478ccb8641",
-        "r-6ad1d6e8d8",
         "r-be651a77eb",
         "r-c450588386",
         "r-8aa2b04e7d",
@@ -92275,14 +90689,14 @@
       "name": "Je suis fatiguée",
       "blurb": "En rentrant du travail.",
       "recipeIds": [
-        "r-638340000d",
-        "r-6ad1d6e8d8",
-        "r-16136a4e46",
+        "r-c27d71faed",
+        "r-50f64b1080",
+        "r-d5da6a7f15",
         "r-a373d67eb6",
         "r-63e8770e3f",
-        "r-910697e14c",
+        "r-f39050adb8",
         "r-a36eca5de2",
-        "r-efd13626fe",
+        "r-5ab6473efd",
         "r-26c39ad517",
         "r-46db79901d"
       ]
@@ -92443,7 +90857,6 @@
         "r-bb6f9bfee0",
         "r-c2ef299d17",
         "r-1e1f0d67e6",
-        "r-323d6bb056",
         "r-cd47b05231",
         "r-99dab97b56",
         "r-5a15ab45ea",
