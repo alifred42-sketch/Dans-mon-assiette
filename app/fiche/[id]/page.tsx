@@ -1,17 +1,17 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { carnet, clampWeek, getCollections, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
+import { FicheBack } from "@/components/fiche-back";
+import { carnet, getCollections, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
+
+export function generateStaticParams() {
+  return carnet.recipes.map((recipe) => ({ id: recipe.id }));
+}
 
 export default async function FichePage({
   params,
-  searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ w?: string }>;
 }) {
   const { id } = await params;
-  const { w } = await searchParams;
-  const week = clampWeek(w);
   const recipe = getRecipe(id);
   if (!recipe) notFound();
 
@@ -26,14 +26,9 @@ export default async function FichePage({
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
     .filter(Boolean)
     .join(" · ");
-  const backHref = w ? `/?w=${week}` : fromCol ? `/carnet/${fromCol.slug}` : "/recettes";
-  const backLabel = w ? `← Semaine ${week}` : fromCol ? `← ${fromCol.name}` : "← Carnet";
-
   return (
     <article className="space-y-6">
-      <Link href={backHref} className="text-sm text-primary underline underline-offset-4">
-        {backLabel}
-      </Link>
+      <FicheBack fromCol={fromCol ? { slug: fromCol.slug, name: fromCol.name } : undefined} />
       <header className="space-y-2">
         <h1 className="font-heading text-3xl leading-tight">{recipe.name}</h1>
         {recipe.blurb ? <p className="text-sm leading-relaxed text-muted-foreground">{recipe.blurb}</p> : null}

@@ -7,11 +7,15 @@ Le carnet d’Aline, sur téléphone : les 52 semaines, les courses, le batch, e
 - Les courses et le batch viennent du tableur
 - Rien n’est inventé
 
-## Sur le téléphone (Android)
+## Sur le téléphone
 
-1. Ouvre le lien de l’appli dans **Chrome**
-2. Menu (⋮) → **Ajouter à l’écran d’accueil** / **Installer l’application**
-3. Si une ancienne icône ne s’ouvre pas : appuie longtemps dessus → supprimer, puis réinstalle depuis le lien
+Adresse qui reste en ligne :
+
+**https://katana5260.github.io/Dans-mon-assiette/**
+
+1. Ouvre ce lien dans **Chrome**
+2. Menu (⋮) → **Ajouter à l’écran d’accueil**
+3. Si une ancienne icône ouvre « no tunnel » : supprime-la, puis réinstalle depuis ce lien
 
 La recherche du carnet trouve un nom, un légume, un fromage ou « Mr Cuisine ».
 

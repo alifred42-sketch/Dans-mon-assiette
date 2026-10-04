@@ -1,14 +1,16 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function WeekPicker({ week, path }: { week: number; path: string }) {
+  const router = useRouter();
   const prev = Math.max(1, week - 1);
   const next = Math.min(52, week + 1);
   const hrefFor = (n: number) => `${path === "/" ? "/" : path}?w=${n}`;
 
   function go(n: number) {
-    window.location.assign(hrefFor(n));
+    router.push(hrefFor(n));
   }
 
   return (

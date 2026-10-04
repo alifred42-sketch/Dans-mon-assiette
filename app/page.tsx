@@ -1,17 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, getRecipe, weekPlan } from "@/lib/carnet";
 import { WeekPicker } from "@/components/week-picker";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
-export default async function HomePage({
-  searchParams,
-}: {
-  searchParams: Promise<{ w?: string }>;
-}) {
-  const { w } = await searchParams;
-  const week = clampWeek(w);
+export default function HomePage() {
+  const search = useSearchParams();
+  const week = clampWeek(search.get("w"));
   const slots = weekPlan(week);
   const breakfast = breakfastForWeek(week);
 

@@ -1,8 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getCollection, recipesForCollection } from "@/lib/carnet";
+import { getCollection, getCollections, recipesForCollection } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
+
+export function generateStaticParams() {
+  return getCollections().map((col) => ({ slug: col.slug }));
+}
 
 export default async function CollectionPage({
   params,

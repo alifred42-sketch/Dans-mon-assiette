@@ -1,16 +1,17 @@
-const CACHE = "assiette-v4";
+const CACHE = "assiette-v5";
+const SCOPE = self.registration.scope;
 const PRECACHE = [
-  "/",
-  "/recettes",
-  "/courses",
-  "/batch",
-  "/manifest.json",
-  "/icon-192.png",
-  "/icon-512.png",
-  "/icon-maskable-512.png",
-  "/apple-touch-icon.png",
-  "/icon.svg",
-];
+  "./",
+  "./recettes/",
+  "./courses/",
+  "./batch/",
+  "./manifest.json",
+  "./icon-192.png",
+  "./icon-512.png",
+  "./icon-maskable-512.png",
+  "./apple-touch-icon.png",
+  "./icon.svg",
+].map((path) => new URL(path, SCOPE).href);
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -47,7 +48,7 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(async () => {
           const cached = await caches.match(request);
-          return cached || caches.match("/");
+          return cached || caches.match(new URL("./", SCOPE).href);
         }),
     );
     return;

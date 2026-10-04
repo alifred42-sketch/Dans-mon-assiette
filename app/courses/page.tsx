@@ -1,17 +1,13 @@
+"use client";
+
+import { useSearchParams } from "next/navigation";
 import { clampWeek, shoppingForWeek } from "@/lib/carnet";
 import { CheckList } from "@/components/check-list";
 import { WeekPicker } from "@/components/week-picker";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
-export default async function CoursesPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ w?: string }>;
-}) {
-  const { w } = await searchParams;
-  const week = clampWeek(w);
+export default function CoursesPage() {
+  const search = useSearchParams();
+  const week = clampWeek(search.get("w"));
   const items = shoppingForWeek(week).map((item) => ({
     id: `${item.aisle}|${item.label}`,
     title: item.label,
