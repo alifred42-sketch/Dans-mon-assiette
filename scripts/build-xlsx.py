@@ -96,44 +96,50 @@ def load_meals(src) -> list[dict]:
     return meals
 
 
+def q(text: str) -> str:
+    return str(text).replace('"', '""')
+
+
+def href(range_a1: str, label: str) -> str:
+    # gid=0 = 1re feuille après import Google Sheets — lien interne vraiment cliquable
+    return f'=HYPERLINK("#gid=0&range={range_a1}","{q(label)}")'
+
+
 def build_dashboard(wb: Workbook, meals: list[dict]) -> None:
     ws = wb.active
     ws.title = "Dashboard"
-    widths = [16, 28, 28, 28, 26, 26, 24, 24]
+    widths = [22, 28, 36, 14, 10, 42, 42, 18]
     for i, w in enumerate(widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = w
 
+    menu_start = 5
+    fiche_start = menu_start + 52 * 5 + 3  # 268
+    for i, m in enumerate(meals):
+        m["dash_base"] = menu_start + (m["week"] - 1) * 5
+        m["fiche_row"] = fiche_start + i
+
     ws.merge_cells("A1:H1")
-    ws["A1"] = "MON CARNET — 52 SEMAINES (Google Sheets)"
+    ws["A1"] = "MON CARNET — 52 SEMAINES"
     ws["A1"].font = Font(name="Calibri", bold=True, size=20, color=GREEN)
     ws["A1"].fill = fill(CREAM)
     ws.row_dimensions[1].height = 36
 
-    ws["A2"] = "MES COURSES"
-    ws["C2"] = "MON BATCH"
-    ws["E2"] = "MES RECETTES"
-    for coord in ("A2", "C2", "E2"):
-        ws[coord].font = Font(bold=True, size=12, color=WHITE)
+    ws["A2"] = href(f"A{fiche_start}", "MES RECETTES (clique un plat)")
+    ws["C2"] = href("A5", "RETOUR SEMAINE 1")
+    for coord in ("A2", "C2"):
+        ws[coord].font = Font(bold=True, size=12, color=WHITE, underline="single")
         ws[coord].fill = fill(GREEN)
         ws[coord].alignment = Alignment(horizontal="center")
 
     ws.merge_cells("A3:H3")
-    ws["A3"] = (
-        "Les plats sont écrits en dur — le menu n’est pas vide. "
-        "Pour que le clic ouvre la fiche : onglet _SCRIPT, puis Extensions → Apps Script."
-    )
+    ws["A3"] = "Clique un plat : ça saute à sa fiche plus bas sur cette feuille. Puis « ← Semaine » pour revenir."
     ws["A3"].font = Font(italic=True, size=10, color="666666")
-
-    # gid par défaut (corrigés par le script)
-    ws["I1"] = 1
-    ws["I2"] = 3
-    ws["I3"] = 4
 
     by_week: dict[int, list[dict]] = {}
     for m in meals:
         by_week.setdefault(m["week"], []).append(m)
 
-    row = 5
+    row = menu_start
     for week in range(1, 53):
         week_meals = by_week.get(week, [])
         lookup = {(m["day"], m["meal"]): m for m in week_meals}
@@ -156,20 +162,61 @@ def build_dashboard(wb: Workbook, meals: list[dict]) -> None:
             ws.cell(row, 1, label).font = Font(bold=True, size=12, color=GREEN)
             for d, day in enumerate(DAYS):
                 m = lookup.get((day, meal_name))
-                name = m["name"] if m else ""
-                fiche = m["fiche"] if m else ""
-                cell = ws.cell(row, d + 2, name)
-                cell.font = Font(bold=True, size=10, color=GREEN)
+                cell = ws.cell(row, d + 2)
+                if m:
+                    cell.value = href(f"A{m['fiche_row']}", m["name"])
+                cell.font = Font(bold=True, size=10, color=GREEN, underline="single")
                 cell.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center")
                 cell.fill = fill(CARD)
                 cell.border = thin()
-                if fiche:
-                    cell.comment = None
-                    # ligne fiche stockée en note interne via une feuille _MAP, pas ici
             ws.row_dimensions[row].height = 48
             row += 1
-        row += 1  # spacer
+        row += 1
 
+    ws.merge_cells(start_row=fiche_start - 1, start_column=1, end_row=fiche_start - 1, end_column=7)
+    head = ws.cell(fiche_start - 1, 1, "FICHES RECETTES — clique « ← Semaine » pour remonter")
+    head.font = Font(bold=True, size=16, color=GREEN)
+    head.fill = fill(CREAM)
+
+    headers = ["RETOUR", "SEMAINE", "PLAT", "JOUR", "REPAS", "INGRÉDIENTS", "PRÉPARATION"]
+    for i, h in enumerate(headers, 1):
+        cell = ws.cell(fiche_start, i, h)
+        cell.font = Font(bold=True, color=WHITE)
+        cell.fill = fill(GREEN)
+
+    for i, m in enumerate(meals):
+        r = m["fiche_row"]
+        # première ligne de données = fiche_start + 1 si headers on fiche_start
+        # on a mis headers sur fiche_start, donc décaler les plats
+    # headers occupy fiche_start; meals were assigned fiche_start+i overlapping header
+    # rewrite meal rows starting at fiche_start+1
+    for i, m in enumerate(meals):
+        m["fiche_row"] = fiche_start + 1 + i
+    # rewrite menu hyperlinks with corrected rows
+    for m in meals:
+        day_i = DAYS.index(m["day"]) if m["day"] in DAYS else 0
+        dash_row = m["dash_base"] + (2 if m["meal"] == "Midi" else 3)
+        ws.cell(dash_row, day_i + 2).value = href(f"A{m['fiche_row']}", m["name"])
+
+    for m in meals:
+        r = m["fiche_row"]
+        week_row = m["dash_base"]
+        ws.cell(r, 1, href(f"A{week_row}", f"← Semaine {m['week']}"))
+        ws.cell(r, 2, m["week"])
+        ws.cell(r, 3, m["name"])
+        ws.cell(r, 4, m["day"])
+        ws.cell(r, 5, m["meal"])
+        ws.cell(r, 6, m["ings"] or "Adapter les quantités.")
+        ws.cell(r, 7, "1. Préparer les ingrédients.\n2. Cuire selon le plat.\n3. Assaisonner et servir.")
+        ws.cell(r, 1).font = Font(bold=True, color=GREEN, underline="single")
+        ws.cell(r, 3).font = Font(bold=True, size=12, color=GREEN)
+        for c in range(1, 8):
+            ws.cell(r, c).alignment = Alignment(wrap_text=True, vertical="top")
+        ws.row_dimensions[r].height = 64
+
+    ws["A2"] = href(f"A{fiche_start}", "MES RECETTES (clique un plat)")
+    ws["A2"].font = Font(bold=True, size=12, color=WHITE, underline="single")
+    ws["A2"].fill = fill(GREEN)
     ws.freeze_panes = "A5"
     ws.sheet_view.showGridLines = False
     ws.page_setup.orientation = "landscape"
@@ -348,13 +395,11 @@ def main() -> None:
     wb.save(OUT)
     src.close()
 
-    # vérifie que le Dashboard n’est pas vide
     check = load_workbook(OUT, data_only=False)
-    sample = check["Dashboard"]["B7"].value
-    if not sample or str(sample).startswith("="):
-        # week 1 midi lundi is at row 5+2 = 7
-        raise SystemExit(f"Dashboard B7 vide ou formule: {sample!r}")
-    print("ok", OUT, OUT.stat().st_size, "plats", len(meals), "B7", sample)
+    sample = str(check["Dashboard"]["B7"].value or "")
+    if not sample.startswith('=HYPERLINK("#gid=0') or "Poulet paprika" not in sample:
+        raise SystemExit(f"lien Dashboard B7 invalide: {sample!r}")
+    print("ok", OUT, OUT.stat().st_size, "plats", len(meals), "B7", sample[:120])
     print("sheets", check.sheetnames)
     check.close()
 
