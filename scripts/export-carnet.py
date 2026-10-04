@@ -79,6 +79,8 @@ DISH = {
     "bolognaise", "bourguignon", "frittata",
 }
 
+LIBRARY = {"200 RECETTE", "BDD_Classique", "BDD_MrCuisine"}
+
 COLLECTIONS = [
     ("sauces", "Sauces", "Toutes les sauces du carnet.", ["SAUCES"]),
     ("marinades", "Marinades", "Pour le poulet, le poisson, le batch.", ["MARINADES"]),
@@ -174,6 +176,48 @@ WEEK_PREP = re.compile(
     r"pr[ée]paration du dimanche|^[àa] pr[ée]parer|batch cooking|⭐\s*pr[ée]paration",
     re.I,
 )
+JUNK = re.compile(
+    r"liste courses|à imprimer|onglet —|annexe —|retour au dashboard|hyperlink",
+    re.I,
+)
+CHATTY = re.compile(
+    r"^(encore une recette|un bon plat|un plat|parfaite? pour|je sais que|toujours notre format)",
+    re.I,
+)
+
+
+def is_junk(line: str) -> bool:
+    if not line:
+        return True
+    if JUNK.search(line) or line.startswith("☐"):
+        return True
+    f = fold(line)
+    return f.startswith("liste ") or "a imprimer" in f
+
+
+def is_robot_program(line: str) -> bool:
+    t = line.strip()
+    if not t or is_junk(t):
+        return False
+    if t.startswith(("☐", "🛒", "📅")):
+        return False
+    if t.startswith('"') or t.startswith("«") or t.endswith('"'):
+        return True
+    if t.startswith("➡️") and INSTR.search(t):
+        return True
+    return False
+
+
+def is_real_step(line: str) -> bool:
+    if not line or is_junk(line) or line.startswith("☐"):
+        return False
+    if line.startswith("Au robot :"):
+        return is_robot_program(line.replace("Au robot :", "", 1))
+    if re.match(r"^\d+\.\s+", line):
+        return True
+    if INSTR.search(line):
+        return True
+    return len(line) >= 28 and not line.startswith(("☐", "🛒", "📅", "🍞", "🧀"))
 
 
 def split_body(body: list[str]) -> tuple[list[str], list[str], list[str], list[str]]:
@@ -183,8 +227,10 @@ def split_body(body: list[str]) -> tuple[list[str], list[str], list[str], list[s
     notes: list[str] = []
     section = "ings"
     for line in body:
+        if is_junk(line):
+            break
         f = fold(line)
-        if PLACEHOLDER.match(line):
+        if PLACEHOLDER.match(line) or CHATTY.search(line):
             continue
         if f.startswith("ingredient") or f == "ingr" or f.startswith("ingr dients"):
             section = "ings"
@@ -192,10 +238,8 @@ def split_body(body: list[str]) -> tuple[list[str], list[str], list[str], list[s
         if f.startswith("preparation") or f.startswith("montage") or f.startswith("etape"):
             section = "steps"
             continue
-        if line.startswith("🤖") or "mr cuisine" in f or f.startswith("recherche robot") or f.startswith("recherche"):
+        if line.startswith("🤖") or f.startswith("mr cuisine") or f.startswith("recherche robot"):
             section = "robot"
-            if line.startswith("🤖") and len(line) > 4 and "recette" not in f:
-                robot.append(line)
             continue
         if line.startswith("💡") or f.startswith("astuce") or f.startswith("variante"):
             section = "notes"
@@ -215,41 +259,48 @@ def split_body(body: list[str]) -> tuple[list[str], list[str], list[str], list[s
             else:
                 ingredients.append(line)
         elif section == "steps":
-            if line.startswith("Étape"):
+            if line.startswith("Étape") or is_junk(line) or line.startswith("☐"):
                 continue
             steps.append(re.sub(r"^\d+\.\s*", "", line))
         elif section == "robot":
-            robot.append(line)
+            if is_robot_program(line):
+                robot.append(line.strip().strip('"«»'))
         else:
             notes.append(line)
-    return ingredients, steps, robot, notes
+    return ingredients, [s for s in steps if is_real_step(s)], robot, notes
 
 
 def normalize_recipe(rec: dict) -> dict:
-    kept_ings: list[str] = []
+    clean_ings: list[str] = []
     for line in rec.get("ingredients") or []:
-        if INSTR.search(line) and not line.startswith(("🥣", "🌿", "🧀", "🍞")):
-            rec.setdefault("steps", []).append(re.sub(r"^(\d+\.\s*|➡️\s*)", "", line))
-        else:
-            kept_ings.append(line)
-    rec["ingredients"] = kept_ings
-    if not rec.get("steps"):
-        steps = []
-        for line in rec.get("robot") or []:
-            q = line.strip().strip('"“”').strip()
-            if not q or q.startswith("🤖") and len(q) < 8:
-                continue
-            if q.startswith("🤖"):
-                q = q.lstrip("🤖 ").strip()
-            if fold(q) in {"mr cuisine", "mr cuisine smart", "recherche robot", "recherche"}:
-                continue
-            if q.startswith("➡️"):
-                q = q.lstrip("➡️ ").strip()
-            if q.startswith('"') or q.startswith("«"):
-                steps.append(f"Au robot : {q.strip('«»\"')}")
-            elif len(q) >= 3:
-                steps.append(q if q[:1].isupper() or q.startswith("Au ") else f"Au robot : {q}")
-        rec["steps"] = steps
+        if not line or is_junk(line) or CHATTY.search(line) or line.startswith("☐"):
+            continue
+        f = fold(line)
+        if f in {"epices", "recherche", "variantes", "variante", "ingredients", "avec", "sauce"}:
+            continue
+        if line.startswith("🤖"):
+            continue
+        if line.endswith(":") and len(line) < 24:
+            continue
+        if line.startswith('"') and line.endswith('"'):
+            rec.setdefault("robot", []).append(line)
+            continue
+        clean_ings.append(line)
+    rec["ingredients"] = clean_ings
+    cleaned_robot: list[str] = []
+    for line in rec.get("robot") or []:
+        if is_junk(line) or line.startswith("☐"):
+            continue
+        t = re.sub(r"^🤖\s*", "", line).strip().strip('"«»')
+        if not t or fold(t) in {"mr cuisine", "mr cuisine smart", "recherche robot", "recherche"}:
+            continue
+        if is_robot_program(line) or (len(t.split()) <= 6 and not t.startswith("☐")):
+            cleaned_robot.append(t)
+    rec["robot"] = cleaned_robot
+    rec["steps"] = [s for s in rec.get("steps") or [] if is_real_step(s)]
+    if not rec["steps"] and rec["robot"]:
+        rec["steps"] = [f"Au robot : {line}" for line in rec["robot"][:3]]
+    rec["notes"] = [n for n in rec.get("notes") or [] if n and not is_junk(n)]
     return rec
 
 
@@ -270,7 +321,8 @@ def make_recipe(name: str, body: list[str], source: str) -> dict:
 
 def richer(a: dict, b: dict) -> dict:
     def score(r: dict) -> int:
-        return 6 * len(r.get("steps") or []) + len(r.get("ingredients") or []) + len(r.get("robot") or [])
+        bonus = 40 if r.get("source") in LIBRARY else 0
+        return 8 * len([s for s in r.get("steps") or [] if is_real_step(s)]) + len(r.get("ingredients") or []) + bonus
 
     return a if score(a) >= score(b) else b
 
@@ -512,6 +564,8 @@ def parse_collection_sheet(ws, source: str) -> list[dict]:
             if consume and s == nxt:
                 consume = False
                 continue
+            if is_junk(s):
+                break
             body.append(s)
         if fold(title) in SKIP_TITLE or len(title) < 4:
             continue
@@ -545,9 +599,6 @@ def index_recipes(store: dict[str, dict]) -> dict[str, dict]:
     return idx
 
 
-LIBRARY = {"200 RECETTE", "BDD_Classique", "BDD_MrCuisine"}
-
-
 def pick_named(name: str, nom_bdd: str, idx: dict[str, dict], library: list[dict]) -> dict | None:
     if nom_bdd and official_ok(name, nom_bdd):
         hit = idx.get(fold(nom_bdd))
@@ -555,7 +606,13 @@ def pick_named(name: str, nom_bdd: str, idx: dict[str, dict], library: list[dict
             return hit
     key = fold(name)
     if key and key in idx:
-        return idx[key]
+        rec = idx[key]
+        if rec.get("source") in LIBRARY:
+            return rec
+        for lib in library:
+            if fold(lib["name"]) == key:
+                return lib
+        return rec
     plan_tok = tokens(name)
     distinctive = plan_tok - GENERIC - {"riz", "legumes", "tartine", "roti"}
     plan_dish = plan_tok & DISH
@@ -672,14 +729,18 @@ def main() -> None:
         if rec is None and app_name and fold(app_name) != fold(name):
             rec = pick_named(app_name, nom_bdd, idx, library)
         body = (menu["body"] if menu else [])[:]
-        extra_ings = [x for x in app_ings if x and not PLACEHOLDER.match(x)]
+        extra_ings = [
+            x
+            for x in app_ings
+            if x and not PLACEHOLDER.match(x) and not is_junk(x) and not (x.startswith('"') and x.endswith('"'))
+        ]
         extra_ings += courses_by_dish.get((week, fold(name)), [])
         extra_ings += courses_by_dish.get((week, fold(app_name)), [])
         if rec is None:
             rec = normalize_recipe(make_recipe(name, body, "52 MENUS"))
             have = {fold(x) for x in rec["ingredients"]}
             for line in extra_ings:
-                if line and fold(line) not in have and not PLACEHOLDER.match(line):
+                if line and fold(line) not in have and not PLACEHOLDER.match(line) and not is_junk(line):
                     rec["ingredients"].append(line)
                     have.add(fold(line))
             rec = merge_recipe(store, rec)
