@@ -1,24 +1,35 @@
 # Dans mon assiette
 
-Carnet alimentaire d’Aline, nettoyé : **4 onglets**, 52 semaines, 720 plats, plus les 45 feuilles d’audit.
+Petite appli du carnet d’Aline, pour téléphone ou tablette Android. Pas de compte, pas d’abonnement.
 
-Fichier : [`public/Dans-mon-assiette.xlsx`](public/Dans-mon-assiette.xlsx)
+- Choisir la semaine (1 à 52) change les repas
+- Un plat n’est cliquable que s’il a **exactement** le même titre qu’une fiche
+- Les courses se recalculent à partir de ces fiches
+- Aucune recette inventée, aucune correspondance approximative
 
-| Onglet | Contenu |
-| --- | --- |
-| **Dashboard** | Les 52 semaines. Chaque plat est un lien interne vers sa fiche. |
-| **Fiche_Recette** | Une ligne = une recette. « ← Semaine » ramène au menu. |
-| **Courses** | Liste de courses. |
-| **Batch** | Batch cooking. |
+## Sur le téléphone (Android)
 
-Le classeur `carnet_aline_52_semaines.xlsx` s’affiche dans Google Sheets. Les plats sont du texte : Sheets n’active pas tout seul les liens Excel.
+1. Ouvre l’adresse de l’appli dans Chrome
+2. Menu (⋮) → **Ajouter à l’écran d’accueil**
+3. L’icône s’ouvre comme une appli
 
-Sur **cette même feuille** : **Extensions → Apps Script**, colle [`scripts/activer-liens-sheets.gs`](scripts/activer-liens-sheets.gs), exécute `activerLiens`. Chaque plat devient un lien vers sa fiche (`#gid` réel).
-
-## Recréer le classeur
+## En local
 
 ```bash
-python3 scripts/build-xlsx.py
+npm install
+npm run dev
 ```
 
-Le source d’origine doit être dans `/tmp/orig/sheet.xlsx`.
+Ouvre [http://localhost:4317](http://localhost:4317).
+
+Avec Docker : `docker compose up --build`, puis la même adresse.
+
+## Données
+
+Exportées depuis le tableur d’origine (`_APP_DATA` + `Fiche_Recette`) :
+
+```bash
+python3 scripts/export-carnet.py
+```
+
+Un repas n’est relié à une fiche que si les deux titres sont identiques. Sinon le plat reste visible, sans lien.

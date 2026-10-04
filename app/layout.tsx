@@ -15,10 +15,10 @@ const heading = Fraunces({
 
 export const metadata: Metadata = {
   title: "Dans mon assiette",
-  description:
-    "Le carnet d’Aline : 52 semaines, recettes cliquables, courses et batch — sans l’usine à gaz Excel.",
+  description: "Les 52 semaines d’Aline : choisir la semaine, ouvrir une fiche, recalculer les courses.",
   manifest: "/manifest.json",
-  appleWebApp: { capable: true, title: "Dans mon assiette" },
+  appleWebApp: { capable: true, title: "Dans mon assiette", statusBarStyle: "default" },
+  icons: { icon: "/icon.svg", apple: "/icon.svg" },
 };
 
 export const viewport: Viewport = {

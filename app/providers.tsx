@@ -1,11 +1,10 @@
+import { Suspense } from "react";
 import { Shell } from "@/components/shell";
-import { VanillaEnhance } from "@/components/vanilla-enhance";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <Shell>
-      {children}
-      <VanillaEnhance />
-    </Shell>
+    <Suspense fallback={<div className="p-6 text-sm text-muted-foreground">Chargement…</div>}>
+      <Shell>{children}</Shell>
+    </Suspense>
   );
 }
