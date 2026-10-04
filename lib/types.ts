@@ -32,6 +32,19 @@ export type CourseRow = {
   aisle: string;
 };
 
+export type Collection = {
+  slug: string;
+  name: string;
+  blurb: string;
+  recipeIds: string[];
+};
+
+export type Breakfast = {
+  week: number;
+  title: string;
+  lines: string[];
+};
+
 export type Carnet = {
   title: string;
   subtitle: string;
@@ -39,4 +52,6 @@ export type Carnet = {
   plan: PlanSlot[];
   batch: BatchItem[];
   courses: CourseRow[];
+  collections: Collection[];
+  breakfasts: Breakfast[];
 };

@@ -1,5 +1,5 @@
 import data from "@/data/carnet.json";
-import type { Carnet, PlanSlot, Recipe } from "./types";
+import type { Breakfast, Carnet, Collection, PlanSlot, Recipe } from "./types";
 
 export const carnet = data as Carnet;
 
@@ -32,6 +32,24 @@ export function getRecipe(id: string | null | undefined): Recipe | undefined {
 
 export function weekPlan(week: number): PlanSlot[] {
   return carnet.plan.filter((p) => p.week === week);
+}
+
+export function breakfastForWeek(week: number): Breakfast | undefined {
+  return (carnet.breakfasts || []).find((item) => item.week === week);
+}
+
+export function getCollections(): Collection[] {
+  return carnet.collections || [];
+}
+
+export function getCollection(slug: string): Collection | undefined {
+  return getCollections().find((item) => item.slug === slug);
+}
+
+export function recipesForCollection(slug: string): Recipe[] {
+  const col = getCollection(slug);
+  if (!col) return [];
+  return col.recipeIds.map((id) => recipesById.get(id)).filter((r): r is Recipe => !!r);
 }
 
 export function clampWeek(raw: string | undefined | null): number {

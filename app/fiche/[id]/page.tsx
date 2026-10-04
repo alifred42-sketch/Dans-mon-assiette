@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { carnet, clampWeek, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
+import { carnet, clampWeek, getCollections, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 
 export default async function FichePage({
   params,
@@ -19,16 +19,19 @@ export default async function FichePage({
     ...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.name)),
   ];
   const weeks = [...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.week))];
+  const fromCol = getCollections().find((col) => col.recipeIds.includes(recipe.id));
   const ings = recipe.ingredients.filter((line) => line.trim());
   const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
     .filter(Boolean)
     .join(" · ");
+  const backHref = w ? `/?w=${week}` : fromCol ? `/carnet/${fromCol.slug}` : "/recettes";
+  const backLabel = w ? `← Semaine ${week}` : fromCol ? `← ${fromCol.name}` : "← Carnet";
 
   return (
     <article className="space-y-6">
-      <Link href={`/?w=${week}`} className="text-sm text-primary underline underline-offset-4">
-        ← Semaine {week}
+      <Link href={backHref} className="text-sm text-primary underline underline-offset-4">
+        {backLabel}
       </Link>
       <header className="space-y-2">
         <h1 className="font-heading text-3xl leading-tight">{recipe.name}</h1>

@@ -1,32 +1,36 @@
 import Link from "next/link";
-import { carnet } from "@/lib/carnet";
+import { carnet, getCollections } from "@/lib/carnet";
+import { RecipeList } from "@/components/recipe-list";
 
 export default function RecettesPage() {
+  const collections = getCollections().filter((col) => col.recipeIds.length > 0);
   const recipes = [...carnet.recipes].sort((a, b) => a.name.localeCompare(b.name, "fr"));
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
       <div>
-        <h1 className="font-heading text-3xl">Recettes</h1>
+        <h1 className="font-heading text-3xl">Carnet</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          {recipes.length} fiches du carnet. Aucune recette ajoutée.
+          Les onglets utiles du fichier : saisons, apéro, sauces, express… Les feuilles
+          d’audit ne sont pas là.
         </p>
       </div>
-      {recipes.length === 0 ? (
-        <p className="rounded-2xl bg-muted/70 p-6 text-center text-sm text-muted-foreground">
-          Aucune fiche dans le carnet.
-        </p>
-      ) : (
-        <ul className="divide-y rounded-2xl bg-card ring-1 ring-foreground/10">
-          {recipes.map((recipe) => (
-            <li key={recipe.id}>
-              <Link href={`/fiche/${recipe.id}`} className="block px-4 py-4 text-base leading-snug">
-                {recipe.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      <div className="grid grid-cols-2 gap-3">
+        {collections.map((col) => (
+          <Link
+            key={col.slug}
+            href={`/carnet/${col.slug}`}
+            className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10"
+          >
+            <p className="font-heading text-lg leading-tight">{col.name}</p>
+            <p className="mt-1 text-xs text-muted-foreground">{col.recipeIds.length} fiches</p>
+          </Link>
+        ))}
+      </div>
+      <section className="space-y-3">
+        <h2 className="font-heading text-xl">Toutes les fiches</h2>
+        <RecipeList items={recipes.map((r) => ({ id: r.id, name: r.name }))} />
+      </section>
     </div>
   );
 }

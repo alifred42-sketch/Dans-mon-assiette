@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DAYS, DAY_LABEL, clampWeek, getRecipe, weekPlan } from "@/lib/carnet";
+import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, getRecipe, weekPlan } from "@/lib/carnet";
 import { WeekPicker } from "@/components/week-picker";
 
 export const dynamic = "force-dynamic";
@@ -13,20 +13,29 @@ export default async function HomePage({
   const { w } = await searchParams;
   const week = clampWeek(w);
   const slots = weekPlan(week);
+  const breakfast = breakfastForWeek(week);
 
   return (
     <div className="space-y-5">
       <div>
         <h1 className="font-heading text-3xl leading-tight">Semaine {week}</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Clique un plat souligné pour ouvrir sa fiche. Un plat sans soulignement n’a pas de
-          fiche certaine.
-        </p>
-        <p className="mt-2 text-xs text-muted-foreground">
-          Sur Android : Chrome → menu ⋮ → Ajouter à l’écran d’accueil.
-        </p>
+        {breakfast?.title ? (
+          <p className="mt-1 text-sm text-muted-foreground">{breakfast.title.replace(/^SEMAINE \d+\s+[—–-]\s+/i, "")}</p>
+        ) : (
+          <p className="mt-1 text-sm text-muted-foreground">Clique un plat pour ouvrir sa fiche.</p>
+        )}
       </div>
       <WeekPicker week={week} path="/" />
+      {breakfast && breakfast.lines.length > 0 ? (
+        <section className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
+          <h2 className="font-heading text-lg">Petit-déjeuner</h2>
+          <ul className="mt-2 space-y-1 text-sm">
+            {breakfast.lines.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
       <div className="space-y-3">
         {DAYS.map((day) => {
           const midi = slots.find((s) => s.day === day && s.meal === "Midi");
@@ -68,19 +77,20 @@ function MealRow({
   slot?: { name: string; recipeId: string | null };
 }) {
   const recipe = getRecipe(slot?.recipeId);
+  const name = slot?.name || "Repas non indiqué";
   return (
     <div className="border-t border-border/60 py-3 first:border-t-0 first:pt-0">
       <p className="text-xs uppercase tracking-wide text-muted-foreground">{label}</p>
-        {recipe ? (
-          <Link
-            href={`/fiche/${recipe.id}?w=${week}`}
-            className="mt-1 block text-base font-medium text-primary underline decoration-primary/40 underline-offset-4"
-          >
-            {slot?.name || recipe.name}
-          </Link>
-        ) : (
-          <p className="mt-1 text-base">{slot?.name || "Repas non indiqué"}</p>
-        )}
+      {recipe ? (
+        <Link
+          href={`/fiche/${recipe.id}?w=${week}`}
+          className="mt-1 block text-base font-medium text-primary underline decoration-primary/40 underline-offset-4"
+        >
+          {name}
+        </Link>
+      ) : (
+        <p className="mt-1 text-base">{name}</p>
+      )}
     </div>
   );
 }
