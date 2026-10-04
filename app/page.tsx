@@ -38,7 +38,8 @@ export default function HomePage() {
           Télécharger le classeur Excel
         </a>
         <p className="text-sm text-muted-foreground">
-          5 onglets, 717 vrais liens vers les fiches. Plus de <code>__xludf.DUMMYFUNCTION</code>.
+          Même première feuille que le carnet d’Aline : <strong>Dashboard</strong>, menu de la semaine,
+          clic vers la fiche. Plus de formules Google cassées.
         </p>
       </section>
       <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

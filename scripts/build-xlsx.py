@@ -1,280 +1,241 @@
 #!/usr/bin/env python3
-"""Génère un xlsx simple (valeurs seules, sans liens externes) + un zip de CSV."""
+"""Reconstruit le Dashboard d’origine + fiches / courses / batch, sans formules Google cassées."""
 
 from __future__ import annotations
 
-import csv
-import json
 import re
-import zipfile
-from io import StringIO
 from pathlib import Path
 
-from openpyxl import Workbook
-from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl import Workbook, load_workbook
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
+from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.worksheet import Worksheet
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = json.loads((ROOT / "data" / "carnet.json").read_text())
-OUT_XLSX = ROOT / "public" / "Dans-mon-assiette.xlsx"
-OUT_CSV_ZIP = ROOT / "public" / "Dans-mon-assiette-csv.zip"
+ORIG = Path("/tmp/orig/sheet.xlsx")
+OUT = ROOT / "public" / "Dans-mon-assiette.xlsx"
 
-DAY = {
-    "LUNDI": "Lundi",
-    "MARDI": "Mardi",
-    "MERCREDI": "Mercredi",
-    "JEUDI": "Jeudi",
-    "VENDREDI": "Vendredi",
-    "SAMEDI": "Samedi",
-    "DIMANCHE": "Dimanche",
-}
-AISLES = {a["id"]: a["label"] for a in DATA["aisles"]}
-RECIPES = {r["id"]: r for r in DATA["recipes"]}
-
+DAYS = ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"]
+DAY_LABEL = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
 ILLEGAL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
 
+GREEN = "4A5A3A"
+CREAM = "F6F1E6"
+WHITE = "FFFFFF"
+CARD = "FFFCF6"
 
-def clean(value: object) -> str:
-    text = "" if value is None else str(value)
-    text = text.replace("🔗", "").replace("\r\n", "\n")
+
+def clean(value: object) -> str | int | float:
+    if value is None:
+        return ""
+    if isinstance(value, (int, float)) and not isinstance(value, bool):
+        if float(value).is_integer():
+            return int(value)
+        return value
+    text = str(value).replace("\r\n", "\n")
+    if text.startswith("=IMAGE(") or "__xludf.DUMMYFUNCTION" in text:
+        return ""
     return ILLEGAL.sub("", text)[:32000]
 
 
-def style_header(ws: Worksheet, cols: int) -> None:
-    fill = PatternFill("solid", fgColor="4A5A3A")
-    font = Font(color="FFFFFF", bold=True)
-    for col in range(1, cols + 1):
-        cell = ws.cell(1, col)
-        cell.fill = fill
-        cell.font = font
-        cell.alignment = Alignment(vertical="center")
-    ws.auto_filter.ref = f"A1:{get_column_letter(cols)}{ws.max_row}"
-    ws.freeze_panes = "A2"
-    ws.sheet_view.showGridLines = True
+def fill(hex_color: str) -> PatternFill:
+    return PatternFill("solid", fgColor=hex_color)
 
 
-def autosize(ws: Worksheet, widths: list[int]) -> None:
-    for i, width in enumerate(widths, 1):
-        ws.column_dimensions[get_column_letter(i)].width = width
+def thin() -> Border:
+    s = Side(style="thin", color="D9D3C5")
+    return Border(left=s, right=s, top=s, bottom=s)
 
 
-def shopping(week: int = 1) -> list[dict]:
-    bag: dict[str, dict] = {}
-    for slot in DATA["plan"]:
-        if slot["week"] != week:
+def copy_used(
+    src: Worksheet,
+    dest: Worksheet,
+    cols: int,
+    skip_image: bool = False,
+    keep_rows: bool = False,
+) -> None:
+    dest.sheet_view.showGridLines = True
+    for r in range(1, src.max_row + 1):
+        empty = True
+        values = []
+        for c in range(1, cols + 1):
+            val = src.cell(r, c).value
+            if skip_image and c == 1 and isinstance(val, str) and val.startswith("=IMAGE"):
+                val = ""
+            val = clean(val)
+            values.append(val)
+            if val not in ("", None):
+                empty = False
+        if empty and r > 3 and not keep_rows:
             continue
-        recipe = RECIPES.get(slot.get("recipeId") or "")
-        if not recipe:
-            continue
-        for ing in recipe["ingredients"]:
-            key = ing.get("key") or ""
-            if len(key) < 2:
-                continue
-            label = clean(ing.get("raw"))
-            cur = bag.get(key)
-            if cur:
-                if recipe["name"] not in cur["recipes"]:
-                    cur["recipes"].append(recipe["name"])
-            else:
-                bag[key] = {
-                    "aisle_id": ing.get("aisle") or "",
-                    "aisle": AISLES.get(ing.get("aisle"), ing.get("aisle") or ""),
-                    "label": label,
-                    "recipes": [recipe["name"]],
-                }
-    order = [a["id"] for a in DATA["aisles"]]
-    rows = list(bag.values())
-    rows.sort(
-        key=lambda r: (
-            order.index(r["aisle_id"]) if r["aisle_id"] in order else 99,
-            r["label"].lower(),
+        for c, val in enumerate(values, 1):
+            dest.cell(r, c, val)
+            dest.cell(r, c).alignment = Alignment(wrap_text=True, vertical="top")
+
+
+def build_dashboard(wb: Workbook) -> None:
+    ws = wb.active
+    ws.title = "Dashboard"
+    ws.merge_cells("A1:H1")
+    ws.merge_cells("A7:H7")
+    ws.merge_cells("A14:H14")
+    widths = [18, 28, 28, 28, 26, 26, 22, 22]
+    for i, w in enumerate(widths, 1):
+        ws.column_dimensions[get_column_letter(i)].width = w
+    ws.row_dimensions[1].height = 42
+    ws.row_dimensions[7].height = 32
+    ws.row_dimensions[10].height = 72
+    ws.row_dimensions[11].height = 72
+    ws.row_dimensions[14].height = 28
+    ws.row_dimensions[20].height = 28
+
+    ws["A1"] = "🍽️ MON CARNET — MA CUISINE AU QUOTIDIEN"
+    ws["A1"].font = Font(name="Calibri", bold=True, size=22, color=GREEN)
+    ws["A1"].alignment = Alignment(horizontal="left", vertical="center")
+    ws["A1"].fill = fill(CREAM)
+
+    ws["A4"] = "📅 Semaine"
+    ws["A4"].font = Font(bold=True, size=16, color=GREEN)
+    ws["B4"] = 1
+    ws["B4"].font = Font(bold=True, size=18, color=GREEN)
+    ws["B4"].fill = fill("E8EEDD")
+    ws["C4"] = "← change ce chiffre (1 à 52), le menu suit"
+    ws["C4"].font = Font(italic=True, size=11, color="666666")
+    dv = DataValidation(type="whole", operator="between", formula1="1", formula2="52")
+    dv.add("B4")
+    ws.add_data_validation(dv)
+
+    ws["A7"] = "📅 MON MENU DE LA SEMAINE"
+    ws["A7"].font = Font(bold=True, size=20, color=GREEN)
+    ws["A7"].fill = fill(CREAM)
+
+    for i, label in enumerate(DAY_LABEL):
+        cell = ws.cell(9, i + 2, label)
+        cell.font = Font(bold=True, size=14, color=WHITE)
+        cell.fill = fill(GREEN)
+        cell.alignment = Alignment(horizontal="center")
+
+    ws["A10"] = "☀️ MIDI"
+    ws["A11"] = "🌙 SOIR"
+    for r in (10, 11):
+        ws.cell(r, 1).font = Font(bold=True, size=14, color=GREEN)
+        ws.cell(r, 1).alignment = Alignment(vertical="center")
+
+    # 14 repas / semaine, dans _APP_DATA à partir de la ligne 2, fiches à partir de la ligne 7
+    for d in range(7):
+        midi_off = d * 2
+        soir_off = d * 2 + 1
+        midi = ws.cell(10, d + 2)
+        soir = ws.cell(11, d + 2)
+        midi.value = (
+            f'=HYPERLINK("#Fiche_Recette!C"&(7+($B$4-1)*14+{midi_off}),'
+            f'INDEX(_APP_DATA!D:D,2+($B$4-1)*14+{midi_off}))'
         )
-    )
-    return rows
-
-
-def batch(week: int = 1) -> list[tuple[str, str, str]]:
-    seen: set[str] = set()
-    items: list[tuple[str, str, str]] = []
-    for slot in DATA["plan"]:
-        if slot["week"] != week:
-            continue
-        recipe = RECIPES.get(slot.get("recipeId") or "")
-        if not recipe:
-            continue
-        tags = recipe.get("tags") or []
-        name = recipe["name"]
-        batchy = (
-            recipe.get("robot")
-            or "batch" in tags
-            or "soupe" in tags
-            or re.search(r"sauce|bolognaise|chili|velouté|veloute|curry|dahl", name, re.I)
+        soir.value = (
+            f'=HYPERLINK("#Fiche_Recette!C"&(7+($B$4-1)*14+{soir_off}),'
+            f'INDEX(_APP_DATA!D:D,2+($B$4-1)*14+{soir_off}))'
         )
-        if not batchy:
-            continue
-        when = f"{DAY.get(slot['day'], slot['day'])} {slot['meal']}"
-        if recipe["id"] in seen:
-            for i, (n, w, robot) in enumerate(items):
-                if n == name:
-                    items[i] = (n, f"{w} · {when}", robot)
-                    break
-            continue
-        seen.add(recipe["id"])
-        items.append((name, when, "oui" if recipe.get("robot") else ""))
-    return items
+        for cell in (midi, soir):
+            cell.font = Font(bold=True, size=11, color=GREEN, underline="single")
+            cell.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center")
+            cell.fill = fill(CARD)
+            cell.border = thin()
+
+    ws["A14"] = "🎯 JE VEUX CUISINER CE PLAT"
+    ws["A14"].font = Font(bold=True, size=18, color=GREEN)
+    ws["A14"].fill = fill(CREAM)
+    ws["B17"] = "Recette :"
+    ws["B17"].font = Font(bold=True, size=14)
+    ws["C17"] = "=B10"
+    ws["C17"].font = Font(bold=True, size=14, color=GREEN)
+
+    ws["B20"] = '=HYPERLINK("#\'LISTES COURSES 2\'!A1","🛒 MES COURSES")'
+    ws["D20"] = '=HYPERLINK("#BATCH!A1","🍳 MON BATCH")'
+    ws["F20"] = '=HYPERLINK("#Fiche_Recette!A1","🍽️ MES RECETTES")'
+    for coord in ("B20", "D20", "F20"):
+        ws[coord].font = Font(bold=True, size=14, color=WHITE)
+        ws[coord].fill = fill(GREEN)
+        ws[coord].alignment = Alignment(horizontal="center", vertical="center")
+
+    ws["B22"] = "ℹ️ B4 = semaine active (1 à 52). Clique un repas MIDI/SOIR pour ouvrir sa fiche."
+    ws["B22"].font = Font(size=10, color="666666")
+    ws.freeze_panes = "A9"
+    ws.sheet_view.showGridLines = False
+    ws.sheet_properties.pageSetUpPr.fitToPage = True
+    ws.page_setup.orientation = "landscape"
+    ws.page_setup.fitToPage = True
+    ws.page_setup.fitToWidth = 1
+    ws.page_setup.fitToHeight = 1
 
 
-def write_xlsx(path: Path) -> None:
+def main() -> None:
+    src = load_workbook(ORIG, data_only=False, read_only=False)
     wb = Workbook()
+    build_dashboard(wb)
 
-    accueil = wb.active
-    accueil.title = "Accueil"
-    accueil["A1"] = "Dans mon assiette"
-    accueil["A1"].font = Font(bold=True, size=16, color="4A5A3A")
-    accueil["A3"] = "Classeur simple : 5 onglets, valeurs seules (s’ouvre dans Excel et Google Sheets)."
-    accueil["A4"] = "Les 45 feuilles d’audit ChatGPT ont été retirées."
-    accueil["A6"] = "Onglets"
-    accueil["A7"] = "Planning — 52 semaines, midi et soir"
-    accueil["A8"] = "Recettes — 705 fiches (id, nom, ingrédients, étapes)"
-    accueil["A9"] = "Courses — semaine 1, doublons fusionnés"
-    accueil["A10"] = "Batch — ce qui se prépare à l’avance, semaine 1"
-    accueil["A12"] = "Petit-déjeuner : " + " · ".join(DATA["breakfast"]["items"])
-    autosize(accueil, [90])
+    fiche = wb.create_sheet("Fiche_Recette")
+    copy_used(src["Fiche_Recette"], fiche, 8, skip_image=True, keep_rows=True)
+    fiche["A1"] = ""
+    fiche["B3"] = '=HYPERLINK("#Dashboard!A1","⬅️ RETOUR AU DASHBOARD")'
+    fiche["C3"] = '=HYPERLINK("#Dashboard!A1","⬅️ RETOUR AU PLANNING")'
+    fiche["B3"].font = Font(bold=True, color=GREEN, underline="single")
+    fiche["C3"].font = Font(bold=True, color=GREEN, underline="single")
+    fiche.freeze_panes = "A7"
+    fiche.auto_filter.ref = f"B6:H{max(fiche.max_row, 7)}"
+    for i, w in enumerate([4, 12, 48, 14, 10, 40, 40, 12], 1):
+        fiche.column_dimensions[get_column_letter(i)].width = w
+    for cell in fiche[1]:
+        cell.font = Font(bold=True, color=WHITE)
+        cell.fill = fill(GREEN)
 
-    plan = wb.create_sheet("Planning")
-    plan.append(["Semaine", "Jour", "Repas", "Plat", "Id recette"])
-    for slot in DATA["plan"]:
-        plan.append(
-            [
-                slot["week"],
-                DAY.get(slot["day"], slot["day"]),
-                slot["meal"],
-                clean(slot.get("label") or RECIPES.get(slot.get("recipeId") or "", {}).get("name", "")),
-                slot.get("recipeId") or "",
-            ]
-        )
-    style_header(plan, 5)
-    autosize(plan, [12, 14, 10, 55, 14])
+    app = wb.create_sheet("_APP_DATA")
+    copy_used(src["_APP_DATA"], app, 9, keep_rows=True)
+    app.auto_filter.ref = f"A1:I{app.max_row}"
+    app.freeze_panes = "A2"
+    for i, w in enumerate([10, 12, 10, 45, 16, 12, 40, 40, 10], 1):
+        app.column_dimensions[get_column_letter(i)].width = w
+    for cell in app[1]:
+        cell.font = Font(bold=True, color=WHITE)
+        cell.fill = fill(GREEN)
 
-    rec = wb.create_sheet("Recettes")
-    rec.append(
-        [
-            "Id",
-            "Nom",
-            "Cuisine",
-            "Tags",
-            "Robot",
-            "Minutes",
-            "Personnes",
-            "Ingredients",
-            "Etapes",
-        ]
-    )
-    for recipe in DATA["recipes"]:
-        rec.append(
-            [
-                recipe["id"],
-                clean(recipe["name"]),
-                recipe.get("cuisine") or "",
-                ", ".join(recipe.get("tags") or []),
-                "oui" if recipe.get("robot") else "",
-                recipe.get("timeMin") or "",
-                recipe.get("servings") or "",
-                clean(" | ".join(i.get("raw", "") for i in recipe.get("ingredients") or [])),
-                clean(" | ".join(recipe.get("steps") or [])),
-            ]
-        )
-    style_header(rec, 9)
-    autosize(rec, [10, 45, 14, 24, 10, 10, 12, 60, 60])
+    courses = wb.create_sheet("LISTES COURSES 2")
+    copy_used(src["LISTES COURSES 2"], courses, 4)
+    courses["F1"] = '=HYPERLINK("#Dashboard!A1","⬅️ RETOUR AU DASHBOARD")'
+    courses["F1"].font = Font(bold=True, color=GREEN, underline="single")
+    courses.auto_filter.ref = f"A1:D{courses.max_row}"
+    courses.freeze_panes = "A3"
+    for i, w in enumerate([12, 40, 22, 50], 1):
+        courses.column_dimensions[get_column_letter(i)].width = w
+    for cell in courses[1]:
+        cell.font = Font(bold=True, color=WHITE)
+        cell.fill = fill(GREEN)
 
-    courses = wb.create_sheet("Courses")
-    courses.append(["Rayon", "A acheter", "Pour quels plats"])
-    for row in shopping(1):
-        courses.append([row["aisle"], row["label"], " · ".join(row["recipes"][:4])])
-    style_header(courses, 3)
-    autosize(courses, [22, 50, 60])
+    batch = wb.create_sheet("BATCH")
+    copy_used(src["BATCH"], batch, 4)
+    batch["F1"] = '=HYPERLINK("#Dashboard!A1","⬅️ RETOUR AU DASHBOARD")'
+    batch["F1"].font = Font(bold=True, color=GREEN, underline="single")
+    batch.auto_filter.ref = f"A1:D{batch.max_row}"
+    batch.freeze_panes = "A3"
+    for i, w in enumerate([12, 55, 16, 22], 1):
+        batch.column_dimensions[get_column_letter(i)].width = w
+    for cell in batch[1]:
+        cell.font = Font(bold=True, color=WHITE)
+        cell.fill = fill(GREEN)
 
-    batch_ws = wb.create_sheet("Batch")
-    batch_ws.append(["Plat", "Quand (semaine 1)", "Mr Cuisine"])
-    for name, when, robot in batch(1):
-        batch_ws.append([clean(name), when, robot])
-    style_header(batch_ws, 3)
-    autosize(batch_ws, [50, 40, 14])
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    wb.save(OUT)
+    src.close()
 
-    path.parent.mkdir(parents=True, exist_ok=True)
-    wb.save(path)
+    # garde-fou : aucun lien externe
+    import zipfile
 
-
-def write_csv_zip(path: Path) -> None:
-    files = {
-        "Planning.csv": [
-            ["Semaine", "Jour", "Repas", "Plat", "Id recette"],
-            *[
-                [
-                    s["week"],
-                    DAY.get(s["day"], s["day"]),
-                    s["meal"],
-                    clean(s.get("label") or ""),
-                    s.get("recipeId") or "",
-                ]
-                for s in DATA["plan"]
-            ],
-        ],
-        "Recettes.csv": [
-            ["Id", "Nom", "Cuisine", "Tags", "Robot", "Minutes", "Personnes", "Ingredients"],
-            *[
-                [
-                    r["id"],
-                    clean(r["name"]),
-                    r.get("cuisine") or "",
-                    ", ".join(r.get("tags") or []),
-                    "oui" if r.get("robot") else "",
-                    r.get("timeMin") or "",
-                    r.get("servings") or "",
-                    clean(" | ".join(i.get("raw", "") for i in r.get("ingredients") or [])),
-                ]
-                for r in DATA["recipes"]
-            ],
-        ],
-        "Courses.csv": [
-            ["Rayon", "A acheter", "Pour quels plats"],
-            *[[row["aisle"], row["label"], " · ".join(row["recipes"][:4])] for row in shopping(1)],
-        ],
-    }
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with zipfile.ZipFile(path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
-        for name, rows in files.items():
-            buf = StringIO()
-            writer = csv.writer(buf, lineterminator="\n")
-            writer.writerows(rows)
-            zf.writestr(name, buf.getvalue().encode("utf-8-sig"))
-
-
-def assert_opens(path: Path) -> None:
-    import zipfile as zf
-
-    if not zf.is_zipfile(path):
-        raise SystemExit(f"{path} n’est pas un zip/xlsx")
-    with zf.ZipFile(path) as z:
-        if z.testzip():
-            raise SystemExit("xlsx corrompu")
+    with zipfile.ZipFile(OUT) as z:
         for name in z.namelist():
-            if name.endswith(".rels"):
-                data = z.read(name).decode("utf-8", "replace")
-                if "hyperlink" in data and "TargetMode=\"External\"" in data:
-                    raise SystemExit(f"liens externes restants dans {name}")
-    from openpyxl import load_workbook
-
-    wb = load_workbook(path, read_only=True, data_only=True)
-    names = wb.sheetnames
-    if names != ["Accueil", "Planning", "Recettes", "Courses", "Batch"]:
-        raise SystemExit(f"onglets inattendus: {names}")
-    print("xlsx ok", path, "sheets", names)
+            if name.endswith(".rels") and "TargetMode=\"External\"" in z.read(name).decode("utf-8", "replace"):
+                raise SystemExit(f"lien externe dans {name}")
+    print("ok", OUT, OUT.stat().st_size, "sheets", wb.sheetnames)
 
 
 if __name__ == "__main__":
-    write_xlsx(OUT_XLSX)
-    write_csv_zip(OUT_CSV_ZIP)
-    assert_opens(OUT_XLSX)
-    print("csv zip", OUT_CSV_ZIP, OUT_CSV_ZIP.stat().st_size)
+    main()

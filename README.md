@@ -33,13 +33,15 @@ Ouvre [http://localhost:4317](http://localhost:4317).
 
 ## Fichier Excel propre
 
-6 onglets, vrais liens (plus de `__xludf.DUMMYFUNCTION`) :
+Même première feuille que l’original (**Dashboard**), plus les onglets qu’elle ouvre :
 
-1. Accueil
-2. Planning (52 × midi/soir → fiche)
-3. Recettes
-4. Courses (semaine 1, doublons fusionnés)
-5. Batch
+1. Dashboard (semaine 1–52, midi/soir cliquables)
+2. Fiche_Recette
+3. LISTES COURSES 2
+4. BATCH
+5. _APP_DATA
+
+Plus de `__xludf.DUMMYFUNCTION`, plus de photos loremflickr.
 
 À importer dans Google Sheets : Fichier → Importer. Le fichier est aussi dans [`public/Dans-mon-assiette.xlsx`](public/Dans-mon-assiette.xlsx).
 
