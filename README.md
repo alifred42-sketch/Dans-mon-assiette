@@ -11,16 +11,18 @@ Fichier : [`public/Dans-mon-assiette.xlsx`](public/Dans-mon-assiette.xlsx)
 | **Courses** | Liste de courses. |
 | **Batch** | Batch cooking. |
 
-Les plats sont du **texte** (plus de cellules vides). Les liens sont des **hyperliens Excel internes** (`Fiche_Recette!C7`), pas des formules `#gid=0`. Google Sheets les convertit tout seul au bon gid à l’import — c’est ce qui les rend cliquables.
+Les plats sont du **texte brut** (aucun hyperlien dans le `.xlsx` : Google Sheets vidait le fichier à l’ouverture).
 
 ## Ouvrir dans Google Sheets
 
-1. Va sur [https://sheets.new](https://sheets.new) (feuille Google vide, dans ton Drive).
-2. **Fichier → Importer → Télécharger** le `Dans-mon-assiette.xlsx`.
-3. Choisis **Remplacer le tableur**.
-4. Clique un plat souligné sur le Dashboard : ça saute à sa fiche.
+**Si la feuille s’est ouverte blanche** (cas le plus fréquent) : sur cette feuille, **Extensions → Apps Script**, colle [`scripts/remplir-carnet.gs`](scripts/remplir-carnet.gs), exécute `creerCarnet`. Le carnet se remplit avec les liens cliquables.
 
-Si un plat n’est pas cliquable après l’import : **Extensions → Apps Script**, colle [`scripts/activer-liens-sheets.gs`](scripts/activer-liens-sheets.gs), exécute `activerLiens`.
+Sinon :
+
+1. [https://sheets.new](https://sheets.new)
+2. **Fichier → Importer → Télécharger** `Dans-mon-assiette.xlsx`
+3. **Remplacer le tableur**
+4. Puis le script ci-dessus pour activer les liens.
 
 ## Recréer le classeur
 
