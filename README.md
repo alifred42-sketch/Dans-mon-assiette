@@ -3,7 +3,7 @@
 Carnet alimentaire d’Aline, repris depuis le Google Sheet (73 onglets, liens cassés, audits ChatGPT).
 
 **Ici :** 52 semaines cliquables, bibliothèque de recettes, courses fusionnées, batch, « Je reçois » et « Surprends-moi ».  
-**Pas encore :** 1000 photos maison, comptes, abonnements — ça, c’est le cap Cookomix.
+**Pas encore :** photos maison du plat (Cookomix), comptes, abonnements. Les fausses images stock du tableur ont été retirées : on affiche un pictogramme du type réel (poisson, poulet, velouté…).
 
 ## Lancer
 

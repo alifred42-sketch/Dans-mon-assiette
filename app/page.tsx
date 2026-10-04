@@ -27,7 +27,8 @@ export default function HomePage() {
           52 semaines dans mon assiette
         </h1>
         <p className="text-base text-muted-foreground md:text-lg">
-          {carnet.subtitle} Les 45 onglets d’audit ChatGPT ont disparu. Chaque plat est un vrai lien.
+          {carnet.subtitle} Plus de photos stock (poulet sur une soupe, loremflickr).
+          Chaque plat a un pictogramme du vrai type : poisson, volaille, velouté…
         </p>
       </section>
       <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

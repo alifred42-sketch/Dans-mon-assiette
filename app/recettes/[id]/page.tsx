@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { carnet, getRecipe } from "@/lib/carnet";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
+import { DishMark } from "@/components/dish-mark";
 
 export default async function RecettePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -16,6 +17,7 @@ export default async function RecettePage({ params }: { params: Promise<{ id: st
         ← Toutes les recettes
       </Link>
       <header className="space-y-3">
+        <DishMark recipe={recipe} size="hero" />
         <h1 className="font-heading text-4xl leading-tight">{recipe.name}</h1>
         <div className="flex flex-wrap gap-2">
           {recipe.robot && <Badge>Mr Cuisine</Badge>}

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { DAYS, DAY_LABEL, getRecipe, slotKey, weekPlan } from "@/lib/carnet";
+import { dishKind } from "@/lib/dish";
 import { useStore } from "@/lib/store";
 import { RecipePicker } from "@/components/recipe-picker";
 import { WeekControls } from "@/components/week-controls";
@@ -94,9 +95,12 @@ function MealRow({
       <div className="min-w-0">
         <p className="text-xs uppercase tracking-wide text-muted-foreground">{label}</p>
         {recipe ? (
-          <Link href={`/recettes/${recipe.id}`} className="font-medium text-primary underline-offset-4 hover:underline">
-            {recipe.name}
-          </Link>
+          <div>
+            <Link href={`/recettes/${recipe.id}`} className="font-medium text-primary underline-offset-4 hover:underline">
+              {recipe.name}
+            </Link>
+            <p className="text-xs text-muted-foreground">{dishKind(recipe).label}</p>
+          </div>
         ) : (
           <p className="text-sm text-muted-foreground">{slot?.label || "Repas à préciser"}</p>
         )}

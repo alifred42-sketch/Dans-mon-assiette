@@ -2,17 +2,7 @@ import Link from "next/link";
 import { Clock, Users } from "lucide-react";
 import type { Recipe } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
-
-const TINT: Record<string, string> = {
-  francaise: "from-lime-100 to-stone-100",
-  italienne: "from-emerald-100 to-stone-100",
-  espagnole: "from-amber-100 to-stone-100",
-  marocaine: "from-orange-100 to-stone-100",
-  asiatique: "from-sky-100 to-stone-100",
-  grecque: "from-cyan-100 to-stone-100",
-  monde: "from-rose-100 to-stone-100",
-};
+import { DishMark } from "@/components/dish-mark";
 
 export function RecipeCard({
   recipe,
@@ -29,18 +19,13 @@ export function RecipeCard({
       href={to}
       className="group flex flex-col overflow-hidden rounded-2xl bg-card ring-1 ring-foreground/8 transition hover:-translate-y-0.5 hover:ring-primary/30"
     >
-      <div
-        className={cn(
-          "relative flex items-end bg-gradient-to-br px-4 py-3",
-          compact ? "h-20" : "h-28",
-          TINT[recipe.cuisine] || "from-stone-100 to-stone-50"
-        )}
-      >
-        <p className="font-heading text-base leading-snug text-foreground group-hover:text-primary">
-          {recipe.name}
-        </p>
+      <div className="p-3 pb-0">
+        <DishMark recipe={recipe} />
       </div>
       <div className="flex flex-1 flex-col gap-2 p-3">
+        <p className="font-heading text-base leading-snug group-hover:text-primary">
+          {recipe.name}
+        </p>
         <div className="flex flex-wrap gap-1">
           {recipe.robot && <Badge variant="secondary">Mr Cuisine</Badge>}
           {recipe.tags.slice(0, compact ? 1 : 3).map((t) => (
