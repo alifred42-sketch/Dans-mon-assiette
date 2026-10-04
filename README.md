@@ -11,18 +11,9 @@ Fichier : [`public/Dans-mon-assiette.xlsx`](public/Dans-mon-assiette.xlsx)
 | **Courses** | Liste de courses. |
 | **Batch** | Batch cooking. |
 
-Les plats sont du **texte brut** (aucun hyperlien dans le `.xlsx` : Google Sheets vidait le fichier à l’ouverture).
+Le classeur `carnet_aline_52_semaines.xlsx` s’affiche dans Google Sheets. Les plats sont du texte : Sheets n’active pas tout seul les liens Excel.
 
-## Ouvrir dans Google Sheets
-
-**Si la feuille s’est ouverte blanche** (cas le plus fréquent) : sur cette feuille, **Extensions → Apps Script**, colle [`scripts/remplir-carnet.gs`](scripts/remplir-carnet.gs), exécute `creerCarnet`. Le carnet se remplit avec les liens cliquables.
-
-Sinon :
-
-1. [https://sheets.new](https://sheets.new)
-2. **Fichier → Importer → Télécharger** `Dans-mon-assiette.xlsx`
-3. **Remplacer le tableur**
-4. Puis le script ci-dessus pour activer les liens.
+Sur **cette même feuille** : **Extensions → Apps Script**, colle [`scripts/activer-liens-sheets.gs`](scripts/activer-liens-sheets.gs), exécute `activerLiens`. Chaque plat devient un lien vers sa fiche (`#gid` réel).
 
 ## Recréer le classeur
 
