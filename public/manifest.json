@@ -1,0 +1,9 @@
+{
+  "name": "Dans mon assiette",
+  "short_name": "Assiette",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f1e6",
+  "theme_color": "#4a5a3a",
+  "lang": "fr"
+}
