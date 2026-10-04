@@ -1,0 +1,248 @@
+import { carnet, getRecipe, isPlaceholderIngredient, weekPlan } from "./carnet";
+import type { ShoppingItem } from "./carnet";
+
+function fold(value: string): string {
+  return value
+    .toLocaleLowerCase("fr")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/['’]/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function stripDecor(raw: string): string {
+  return raw.replace(/🔗/g, "").replace(/[☐✅❌⚪✔]/g, "").replace(/\s+/g, " ").trim();
+}
+
+function isJunk(line: string): boolean {
+  const t = stripDecor(line);
+  if (!t || isPlaceholderIngredient(t)) return true;
+  if (/^["«].*["»]$/.test(t)) return true;
+  if (/parfaite pour/i.test(t)) return true;
+  if (/aucun fromage|le repas contient|après repas possible|par personne\)/i.test(t)) return true;
+  if (/^(➡️|💡|🤖|📅|🔍)/.test(t)) return true;
+  if (/^recherch/i.test(t)) return true;
+  if (/^épices\s*(&|et)?\s*aromates$/i.test(t)) return true;
+  if (t.startsWith("(") && t.endsWith(")")) return true;
+  return false;
+}
+
+function cleanName(raw: string): string {
+  return stripDecor(raw)
+    .replace(/^[^\p{L}\p{N}]+/u, "")
+    .replace(/\s*\([^)]*\)\s*$/g, "")
+    .replace(/[.,;:]+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function num(raw: string): number {
+  return Number(raw.replace(",", "."));
+}
+
+function normUnit(raw: string): string {
+  const u = fold(raw).replace(/\s+/g, " ");
+  if (u === "g" || u === "gr" || u === "grammes") return "g";
+  if (u === "kg") return "kg";
+  if (u === "ml") return "ml";
+  if (u === "cl") return "cl";
+  if (u === "l" || u === "litro" || u === "litre" || u === "litres") return "l";
+  if (/c a (s|soupe)|cas|cs/.test(u)) return "c. à s.";
+  if (/c a (c|cafe)|cac|cc/.test(u)) return "c. à c.";
+  if (/gousse/.test(u)) return "gousse";
+  if (/tranche/.test(u)) return "tranche";
+  return raw.trim();
+}
+
+type Parsed = {
+  name: string;
+  qtyText?: string;
+  amount?: number;
+  unit?: string;
+};
+
+function parseLine(raw: string): Parsed | null {
+  const t = stripDecor(raw);
+  if (!t || isJunk(t)) return null;
+
+  const colon = t.match(/^([^:]{2,40})\s*:\s+(.+)$/);
+  if (colon && !/https?:/i.test(colon[2])) {
+    const qtyPart = colon[2].trim();
+    const qty = parseQtyHead(qtyPart);
+    return { name: cleanName(colon[1]), qtyText: qtyPart, ...qty };
+  }
+
+  const de = t.match(
+    /^(\d+(?:[.,]\d+)?)\s*(g|kg|ml|cl|l|c\.\s*à\s*(?:s\.|c\.|soupe|café)|càs|cac|cs|cc|tranche[s]?|gousse[s]?)\s+(?:de\s+|d['’])?(.+)$/i,
+  );
+  if (de) {
+    return {
+      name: cleanName(de[3]),
+      qtyText: `${de[1]} ${de[2]}`,
+      amount: num(de[1]),
+      unit: normUnit(de[2]),
+    };
+  }
+
+  const lead = t.match(/^(\d+(?:[.,]\d+)?)\s+(.+)$/);
+  if (lead) {
+    const rest = lead[2];
+    const paren = rest.match(/^(.+?)\s*\((.+)\)$/);
+    const name = cleanName(paren ? paren[1] : rest);
+    const extra = paren ? ` (${paren[2]})` : "";
+    return {
+      name,
+      qtyText: `${lead[1]}${extra}`,
+      amount: num(lead[1]),
+    };
+  }
+
+  const name = cleanName(t);
+  if (!name) return null;
+  return { name };
+}
+
+function parseQtyHead(qtyPart: string): { amount?: number; unit?: string } {
+  const m = qtyPart.match(/^(\d+(?:[.,]\d+)?)\s*(g|kg|ml|cl|l|c\.\s*à\s*(?:s\.|c\.|soupe|café)|càs|cac|cs|cc|tranche[s]?|gousse[s]?)?\b/i);
+  if (!m) return {};
+  return { amount: num(m[1]), unit: m[2] ? normUnit(m[2]) : undefined };
+}
+
+function guessAisle(name: string): string {
+  const f = fold(name);
+  if (/poulet|boeuf|steak|jambon|lardon|saucisse|dinde|porc|agneau|viande|hache/.test(f)) return "🥩 Viandes";
+  if (/saumon|cabillaud|thon|poisson|crevette|lieu|colin|sardine|maquereau/.test(f)) return "🐟 Poisson";
+  if (/oeuf/.test(f)) return "🥚 Œufs";
+  if (
+    /yaourt|skyr|fromage|chevre|mozzarella|parmesan|st moret|lait|creme|beurre|ricotta|feta/.test(f)
+  ) {
+    return "🥛 Frais";
+  }
+  if (
+    /courgette|tomate|carotte|oignon|poireau|salade|citron|poivron|concombre|champignon|pomme de terre|ail|basilic|persil|melon|avocat|radis|haricot vert/.test(
+      f,
+    )
+  ) {
+    return "🥕 Légumes & fruits";
+  }
+  return "🥫 Épicerie";
+}
+
+function formatNumber(n: number): string {
+  return Number.isInteger(n) ? String(n) : String(Math.round(n * 10) / 10).replace(".", ",");
+}
+
+function formatQty(
+  parts: { amount?: number; unit?: string; qtyText?: string }[],
+): string | undefined {
+  const measured = parts.filter((part) => part.amount != null);
+  if (measured.length > 0) {
+    const units = new Set(measured.map((part) => part.unit || ""));
+    if (units.size === 1) {
+      const unit = [...units][0];
+      const sum = measured.reduce((acc, part) => acc + (part.amount || 0), 0);
+      const core = `${formatNumber(sum)}${unit ? ` ${unit}` : ""}`;
+      if (measured.length === parts.length) return core;
+      return `${core} + autres plats`;
+    }
+  }
+  const texts = parts.map((part) => part.qtyText).filter((text): text is string => Boolean(text));
+  if (texts.length === 0) return undefined;
+  return [...new Set(texts)].join(" + ");
+}
+
+function prettyName(names: string[]): string {
+  const name = [...names].sort((a, b) => b.length - a.length)[0] || names[0];
+  if (!name) return name;
+  return name.charAt(0).toLocaleUpperCase("fr") + name.slice(1);
+}
+
+export function shoppingForWeek(week: number): ShoppingItem[] {
+  const official = (carnet.courses || []).filter((row) => row.week === week);
+  const aisleByName = new Map<string, string>();
+  for (const row of official) {
+    const key = fold(row.ingredient);
+    if (key && !aisleByName.has(key)) aisleByName.set(key, row.aisle);
+  }
+
+  type Acc = {
+    names: string[];
+    recipes: string[];
+    parts: { amount?: number; unit?: string; qtyText?: string }[];
+  };
+  const bag = new Map<string, Acc>();
+
+  function aisleFor(name: string): string {
+    const key = fold(name);
+    if (aisleByName.has(key)) return aisleByName.get(key) || guessAisle(name);
+    for (const [known, aisle] of aisleByName) {
+      if (known.includes(key) || key.includes(known)) return aisle;
+    }
+    return guessAisle(name);
+  }
+
+  function add(parsed: Parsed, recipeName: string) {
+    const key = fold(parsed.name);
+    if (!key) return;
+    const cur = bag.get(key) || { names: [], recipes: [], parts: [] };
+    if (!cur.names.includes(parsed.name)) cur.names.push(parsed.name);
+    if (recipeName && !cur.recipes.includes(recipeName)) cur.recipes.push(recipeName);
+    cur.parts.push({ amount: parsed.amount, unit: parsed.unit, qtyText: parsed.qtyText });
+    bag.set(key, cur);
+  }
+
+  for (const slot of weekPlan(week)) {
+    const recipe = getRecipe(slot.recipeId);
+    if (!recipe) continue;
+    const foodSection = /ingr|épice|epice|légume|viande|fromage|sauce|appareil|pain|féculent|feculent|dessus|assais/i;
+    const lines = [
+      ...(recipe.ingredients || []),
+      ...(recipe.sections || [])
+        .filter((section) => foodSection.test(section.title || ""))
+        .flatMap((section) => section.lines),
+    ];
+    const seen = new Set<string>();
+    for (const line of lines) {
+      const parsed = parseLine(line);
+      if (!parsed) continue;
+      const dedupe = `${fold(parsed.name)}|${parsed.qtyText || ""}`;
+      if (seen.has(dedupe)) continue;
+      seen.add(dedupe);
+      add(parsed, slot.name || recipe.name);
+    }
+  }
+
+  if (bag.size === 0) {
+    for (const row of official) {
+      const parsed = parseLine(row.ingredient);
+      if (!parsed) continue;
+      add(parsed, row.dish);
+    }
+  }
+
+  return [...bag.entries()]
+    .map(([, item]) => {
+      const name = prettyName(item.names);
+      const qty = formatQty(item.parts);
+      return {
+        label: qty ? `${name} : ${qty}` : name,
+        recipes: item.recipes,
+        aisle: aisleFor(name),
+      };
+    })
+    .sort((a, b) => {
+      const order = [
+        "🥩 Viandes",
+        "🐟 Poisson",
+        "🥛 Frais",
+        "🥚 Œufs",
+        "🥕 Légumes & fruits",
+        "🥫 Épicerie",
+        "🛒 À vérifier",
+      ];
+      const aisle = (order.indexOf(a.aisle) === -1 ? 99 : order.indexOf(a.aisle)) - (order.indexOf(b.aisle) === -1 ? 99 : order.indexOf(b.aisle));
+      if (aisle !== 0) return aisle;
+      return a.label.localeCompare(b.label, "fr");
+    });
+}

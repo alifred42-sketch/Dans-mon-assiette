@@ -20,8 +20,8 @@ export default function CoursesPage() {
       <div>
         <h1 className="font-heading text-3xl">Courses</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Semaine {week}. Coche un ingrédient pour le barrer. Change de semaine pour
-          recalculer.
+          Semaine {week}. Les quantités viennent des fiches, additionnées sur la
+          semaine. S’il n’y a pas de grammage, le tableur n’en avait pas.
         </p>
       </div>
       <WeekPicker week={week} path="/courses" />

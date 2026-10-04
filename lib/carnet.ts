@@ -74,21 +74,6 @@ export type ShoppingItem = {
   aisle: string;
 };
 
-const AISLE_ORDER = [
-  "🥩 Viandes",
-  "🐟 Poisson",
-  "🥛 Frais",
-  "🥚 Œufs",
-  "🥕 Légumes & fruits",
-  "🥫 Épicerie",
-  "🛒 À vérifier",
-];
-
-function aisleRank(aisle: string): number {
-  const i = AISLE_ORDER.indexOf(aisle);
-  return i === -1 ? AISLE_ORDER.length : i;
-}
-
 export function batchForWeek(week: number): { id: string; title: string; detail?: string; group?: string }[] {
   return (carnet.batch || [])
     .filter((item) => item.week === week)
@@ -99,43 +84,4 @@ export function batchForWeek(week: number): { id: string; title: string; detail?
     }));
 }
 
-export function shoppingForWeek(week: number): ShoppingItem[] {
-  const official = (carnet.courses || []).filter((row) => row.week === week);
-  const bag = new Map<string, ShoppingItem>();
-
-  if (official.length > 0) {
-    for (const row of official) {
-      const label = row.ingredient.trim();
-      if (!label) continue;
-      const key = `${row.aisle}|${label.toLocaleLowerCase("fr")}`;
-      const cur = bag.get(key);
-      if (cur) {
-        if (row.dish && !cur.recipes.includes(row.dish)) cur.recipes.push(row.dish);
-      } else {
-        bag.set(key, { label, recipes: row.dish ? [row.dish] : [], aisle: row.aisle });
-      }
-    }
-  } else {
-    for (const slot of weekPlan(week)) {
-      const recipe = getRecipe(slot.recipeId);
-      if (!recipe) continue;
-      for (const raw of recipe.ingredients) {
-        const label = raw.replace(/🔗/g, "").trim();
-        if (!label || isPlaceholderIngredient(label)) continue;
-        const key = label.toLocaleLowerCase("fr");
-        const cur = bag.get(key);
-        if (cur) {
-          if (!cur.recipes.includes(recipe.name)) cur.recipes.push(recipe.name);
-        } else {
-          bag.set(key, { label, recipes: [recipe.name], aisle: "🛒 À vérifier" });
-        }
-      }
-    }
-  }
-
-  return [...bag.values()].sort((a, b) => {
-    const aisle = aisleRank(a.aisle) - aisleRank(b.aisle);
-    if (aisle !== 0) return aisle;
-    return a.label.localeCompare(b.label, "fr");
-  });
-}
+export { shoppingForWeek } from "./shopping";
