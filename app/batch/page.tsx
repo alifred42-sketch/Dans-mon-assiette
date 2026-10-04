@@ -25,7 +25,7 @@ export default async function BatchPage({
       <WeekPicker week={week} path="/batch" />
       {items.length === 0 ? (
         <p className="rounded-2xl bg-muted/70 p-6 text-center text-sm text-muted-foreground">
-          Pas de batch noté pour cette semaine dans le tableur.
+          Rien de noté à préparer en avance pour cette semaine.
         </p>
       ) : (
         <CheckList storageKey={`assiette-batch-${week}`} items={items} />

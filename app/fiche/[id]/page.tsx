@@ -65,17 +65,26 @@ export default async function FichePage({
       </section>
       <section>
         <h2 className="font-heading text-xl">Préparation</h2>
-        {recipe.steps.length === 0 ? (
-          <p className="mt-2 text-sm text-muted-foreground">Pas d’étapes dans cette fiche.</p>
-        ) : (
+        {recipe.steps.length > 0 ? (
           <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
             {recipe.steps.map((step) => (
               <li key={step}>{step}</li>
             ))}
           </ol>
+        ) : recipe.robot.length > 0 ? (
+          <ul className="mt-2 space-y-1 text-sm leading-relaxed">
+            {recipe.robot.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+        ) : (
+          <p className="mt-2 text-sm text-muted-foreground">
+            Le fichier ne détaille pas les gestes pour ce plat. Les ingrédients ci-dessus viennent
+            du carnet.
+          </p>
         )}
       </section>
-      {recipe.robot.length > 0 && (
+      {recipe.robot.length > 0 && recipe.steps.length > 0 && (
         <section>
           <h2 className="font-heading text-xl">Mr Cuisine</h2>
           <ul className="mt-2 space-y-1 text-sm">
