@@ -19,9 +19,24 @@ export type PlanSlot = {
   recipeId: string | null;
 };
 
+export type BatchItem = {
+  week: number;
+  text: string;
+  type: string;
+};
+
+export type CourseRow = {
+  week: number;
+  dish: string;
+  ingredient: string;
+  aisle: string;
+};
+
 export type Carnet = {
   title: string;
   subtitle: string;
   recipes: Recipe[];
   plan: PlanSlot[];
+  batch: BatchItem[];
+  courses: CourseRow[];
 };

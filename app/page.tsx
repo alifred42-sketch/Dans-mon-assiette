@@ -2,6 +2,9 @@ import Link from "next/link";
 import { DAYS, DAY_LABEL, clampWeek, getRecipe, weekPlan } from "@/lib/carnet";
 import { WeekPicker } from "@/components/week-picker";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default async function HomePage({
   searchParams,
 }: {
@@ -37,12 +40,20 @@ export default async function HomePage({
           );
         })}
       </div>
-      <Link
-        href={`/courses?w=${week}`}
-        className="flex min-h-12 items-center justify-center rounded-2xl bg-primary px-4 text-base font-semibold text-primary-foreground"
-      >
-        Courses de la semaine {week}
-      </Link>
+      <div className="grid grid-cols-2 gap-3">
+        <Link
+          href={`/courses?w=${week}`}
+          className="flex min-h-12 items-center justify-center rounded-2xl bg-primary px-4 text-center text-base font-semibold text-primary-foreground"
+        >
+          Courses
+        </Link>
+        <Link
+          href={`/batch?w=${week}`}
+          className="flex min-h-12 items-center justify-center rounded-2xl bg-card px-4 text-center text-base font-semibold ring-1 ring-foreground/15"
+        >
+          Batch
+        </Link>
+      </div>
     </div>
   );
 }
@@ -60,16 +71,16 @@ function MealRow({
   return (
     <div className="border-t border-border/60 py-3 first:border-t-0 first:pt-0">
       <p className="text-xs uppercase tracking-wide text-muted-foreground">{label}</p>
-      {recipe ? (
-        <Link
-          href={`/fiche/${recipe.id}?w=${week}`}
-          className="mt-1 block text-base font-medium text-primary underline decoration-primary/40 underline-offset-4"
-        >
-          {recipe.name}
-        </Link>
-      ) : (
-        <p className="mt-1 text-base">{slot?.name || "Repas non indiqué"}</p>
-      )}
+        {recipe ? (
+          <Link
+            href={`/fiche/${recipe.id}?w=${week}`}
+            className="mt-1 block text-base font-medium text-primary underline decoration-primary/40 underline-offset-4"
+          >
+            {slot?.name || recipe.name}
+          </Link>
+        ) : (
+          <p className="mt-1 text-base">{slot?.name || "Repas non indiqué"}</p>
+        )}
     </div>
   );
 }

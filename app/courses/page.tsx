@@ -1,6 +1,9 @@
 import { clampWeek, shoppingForWeek } from "@/lib/carnet";
-import { ShoppingList } from "@/components/shopping-list";
+import { CheckList } from "@/components/check-list";
 import { WeekPicker } from "@/components/week-picker";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function CoursesPage({
   searchParams,
@@ -9,18 +12,24 @@ export default async function CoursesPage({
 }) {
   const { w } = await searchParams;
   const week = clampWeek(w);
-  const items = shoppingForWeek(week);
+  const items = shoppingForWeek(week).map((item) => ({
+    id: `${item.aisle}|${item.label}`,
+    title: item.label,
+    detail: item.recipes.join(" · "),
+    group: item.aisle,
+  }));
 
   return (
     <div className="space-y-5">
       <div>
         <h1 className="font-heading text-3xl">Courses</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Liste recalculée à partir des fiches de la semaine {week}. Rien n’est inventé.
+          Semaine {week}. Coche un ingrédient pour le barrer. Change de semaine pour
+          recalculer.
         </p>
       </div>
       <WeekPicker week={week} path="/courses" />
-      <ShoppingList week={week} items={items} />
+      <CheckList storageKey={`assiette-courses-${week}`} items={items} />
     </div>
   );
 }

@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { CalendarDays, ShoppingCart, UtensilsCrossed } from "lucide-react";
+import { CalendarDays, CookingPot, ShoppingCart, UtensilsCrossed } from "lucide-react";
 
 const NAV = [
   { href: "/", label: "Semaine", icon: CalendarDays },
-  { href: "/recettes", label: "Recettes", icon: UtensilsCrossed },
   { href: "/courses", label: "Courses", icon: ShoppingCart },
+  { href: "/batch", label: "Batch", icon: CookingPot },
+  { href: "/recettes", label: "Recettes", icon: UtensilsCrossed },
 ];
 
 export function Shell({ children }: { children: React.ReactNode }) {
@@ -27,7 +28,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       </header>
       <main className="mx-auto w-full max-w-lg flex-1 px-4 pb-28 pt-5">{children}</main>
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-border/70 bg-background/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md">
-        <div className="mx-auto grid max-w-lg grid-cols-3">
+        <div className="mx-auto grid max-w-lg grid-cols-4">
           {NAV.map((item) => {
             const Icon = item.icon;
             const href = item.href === "/recettes" ? item.href : `${item.href}${weekQuery}`;
