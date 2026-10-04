@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 export type CheckItem = {
   id: string;
@@ -8,6 +8,15 @@ export type CheckItem = {
   detail?: string;
   group?: string;
 };
+
+function loadStore(key: string): Record<string, boolean> {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(key) || "{}");
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
 
 export function CheckList({
   storageKey,
@@ -18,17 +27,17 @@ export function CheckList({
 }) {
   const [checked, setChecked] = useState<Record<string, boolean>>({});
   const [ready, setReady] = useState(false);
+  const touched = useRef(false);
 
-  useEffect(() => {
-    try {
-      setChecked(JSON.parse(localStorage.getItem(storageKey) || "{}"));
-    } catch {
-      setChecked({});
+  useLayoutEffect(() => {
+    if (!touched.current) {
+      setChecked(loadStore(storageKey));
     }
     setReady(true);
   }, [storageKey]);
 
   function toggle(id: string) {
+    touched.current = true;
     setChecked((prev) => {
       const next = { ...prev, [id]: !prev[id] };
       try {
@@ -52,13 +61,13 @@ export function CheckList({
   let lastGroup: string | undefined;
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-3" data-ready={ready ? "true" : "false"}>
       <p className="text-sm text-muted-foreground">
         {items.length} lignes · {ready ? remaining : items.length} encore à faire.
       </p>
       <ul className="divide-y overflow-hidden rounded-2xl bg-card ring-1 ring-foreground/10">
         {items.map((item) => {
-          const done = ready && !!checked[item.id];
+          const done = !!checked[item.id];
           const showGroup = item.group && item.group !== lastGroup;
           lastGroup = item.group;
           return (
@@ -68,23 +77,20 @@ export function CheckList({
                   {item.group}
                 </p>
               ) : null}
-              <button
-                type="button"
-                onClick={() => toggle(item.id)}
-                aria-pressed={done}
-                className="flex w-full items-start gap-3 px-4 py-4 text-left [touch-action:manipulation]"
-              >
+              <label className="flex cursor-pointer items-start gap-3 px-4 py-4 [touch-action:manipulation]">
+                <input
+                  type="checkbox"
+                  className="peer sr-only"
+                  checked={done}
+                  onChange={() => toggle(item.id)}
+                />
                 <span
-                  className={`mt-0.5 inline-flex size-7 shrink-0 items-center justify-center rounded-md border-2 text-sm font-bold ${
-                    done
-                      ? "border-primary bg-primary text-primary-foreground"
-                      : "border-foreground/40 bg-background"
-                  }`}
+                  className="mt-0.5 inline-flex size-7 shrink-0 items-center justify-center rounded-md border-2 border-foreground/40 bg-background text-sm font-bold peer-checked:border-primary peer-checked:bg-primary peer-checked:text-primary-foreground"
                   aria-hidden
                 >
                   {done ? "✓" : ""}
                 </span>
-                <span className={done ? "text-muted-foreground line-through" : ""}>
+                <span className="peer-checked:text-muted-foreground peer-checked:line-through">
                   <span className="block font-medium leading-snug">{item.title}</span>
                   {item.detail ? (
                     <span className="mt-1 block text-xs text-muted-foreground no-underline">
@@ -92,7 +98,7 @@ export function CheckList({
                     </span>
                   ) : null}
                 </span>
-              </button>
+              </label>
             </li>
           );
         })}
