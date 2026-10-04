@@ -7,22 +7,30 @@ export function foldText(value: string): string {
     .replace(/[\u0300-\u036f]/g, "");
 }
 
+export function recipeLines(recipe: Recipe): string[] {
+  const seen = new Set<string>();
+  const lines: string[] = [];
+  const add = (raw: string | undefined) => {
+    const line = (raw || "").replace(/\s+/g, " ").trim();
+    if (!line || seen.has(line)) return;
+    seen.add(line);
+    lines.push(line);
+  };
+  for (const section of recipe.sections || []) {
+    for (const line of section.lines) add(line);
+  }
+  for (const line of recipe.ingredients || []) add(line);
+  for (const line of recipe.notes || []) add(line);
+  for (const line of recipe.robot || []) add(line);
+  return lines;
+}
+
+export function matchingLines(lines: string[], query: string): string[] {
+  return lines.filter((line) => matchesQuery(line, query));
+}
+
 export function recipeHaystack(recipe: Recipe): string {
-  const parts = [
-    recipe.name,
-    recipe.blurb || "",
-    recipe.source,
-    recipe.timePrep || "",
-    recipe.timeCook || "",
-    ...(recipe.ingredients || []),
-    ...(recipe.steps || []),
-    ...(recipe.robot || []),
-    ...(recipe.notes || []),
-    ...(recipe.sections || []).flatMap((section) => [section.title, ...section.lines]),
-  ];
-  const folded = foldText(parts.filter(Boolean).join(" "));
-  const words = folded.split(/[^a-z0-9]+/).filter((word) => word.length > 1);
-  return Array.from(new Set(words)).join(" ");
+  return [recipe.name, ...recipeLines(recipe), recipe.source, recipe.blurb || ""].join(" ");
 }
 
 export function matchesQuery(haystack: string, query: string): boolean {

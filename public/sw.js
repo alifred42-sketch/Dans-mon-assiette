@@ -1,4 +1,4 @@
-const CACHE = "assiette-v3";
+const CACHE = "assiette-v4";
 const PRECACHE = [
   "/",
   "/recettes",

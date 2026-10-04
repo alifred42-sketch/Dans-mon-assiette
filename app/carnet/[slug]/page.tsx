@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCollection, recipesForCollection } from "@/lib/carnet";
-import { recipeHaystack } from "@/lib/search";
+import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 
 export default async function CollectionPage({
@@ -29,7 +29,7 @@ export default async function CollectionPage({
         </p>
       ) : (
         <RecipeList
-          items={recipes.map((r) => ({ id: r.id, name: r.name, text: recipeHaystack(r) }))}
+          items={recipes.map((r) => ({ id: r.id, name: r.name, lines: recipeLines(r) }))}
         />
       )}
     </div>
