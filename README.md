@@ -35,7 +35,7 @@ Ouvre [http://localhost:4317](http://localhost:4317).
 
 Même première feuille que l’original (**Dashboard**), plus les onglets qu’elle ouvre :
 
-1. Dashboard (semaine 1–52, midi/soir cliquables)
+1. Dashboard (les 52 semaines en texte, pas de formules vides)
 2. Fiche_Recette
 3. LISTES COURSES 2
 4. BATCH

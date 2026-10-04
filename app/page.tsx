@@ -38,7 +38,7 @@ export default function HomePage() {
           Télécharger Dans-mon-assiette.xlsx
         </a>
         <p className="text-sm text-muted-foreground">
-          Le fichier part de cette page, pas d’un site externe. Ensuite : Google Sheets → Fichier → Importer → Remplacer.
+          Pour Google Sheets : Fichier → Importer → Remplacer. Les 52 semaines sont écrites en dur. Onglet _SCRIPT pour activer les clics.
         </p>
       </section>
       <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

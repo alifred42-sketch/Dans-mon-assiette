@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reconstruit le Dashboard d’origine + fiches / courses / batch, sans formules Google cassées."""
+"""Classeur Google Sheets : plats en texte (jamais vides) + script de liens."""
 
 from __future__ import annotations
 
@@ -9,12 +9,12 @@ from pathlib import Path
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
-from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.worksheet import Worksheet
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIG = Path("/tmp/orig/sheet.xlsx")
 OUT = ROOT / "public" / "Dans-mon-assiette.xlsx"
+GS = ROOT / "scripts" / "activer-liens-sheets.gs"
 
 DAYS = ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"]
 DAY_LABEL = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
@@ -74,126 +74,217 @@ def copy_used(
             dest.cell(r, c).alignment = Alignment(wrap_text=True, vertical="top")
 
 
-def build_dashboard(wb: Workbook) -> None:
+def load_meals(src) -> list[dict]:
+    app = src["_APP_DATA"]
+    meals: list[dict] = []
+    idx = 0
+    for r in range(2, app.max_row + 1):
+        plat = clean(app.cell(r, 4).value)
+        if not plat:
+            continue
+        meals.append(
+            {
+                "week": int(app.cell(r, 1).value or 0),
+                "day": str(app.cell(r, 2).value or ""),
+                "meal": str(app.cell(r, 3).value or ""),
+                "name": str(plat),
+                "ings": str(clean(app.cell(r, 8).value) or ""),
+                "fiche": 7 + idx,
+            }
+        )
+        idx += 1
+    return meals
+
+
+def build_dashboard(wb: Workbook, meals: list[dict]) -> None:
     ws = wb.active
     ws.title = "Dashboard"
-    ws.merge_cells("A1:H1")
-    ws.merge_cells("A7:H7")
-    ws.merge_cells("A14:H14")
-    widths = [18, 28, 28, 28, 26, 26, 22, 22]
+    widths = [16, 28, 28, 28, 26, 26, 24, 24]
     for i, w in enumerate(widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = w
-    ws.row_dimensions[1].height = 42
-    ws.row_dimensions[7].height = 32
-    ws.row_dimensions[10].height = 72
-    ws.row_dimensions[11].height = 72
-    ws.row_dimensions[14].height = 28
-    ws.row_dimensions[20].height = 28
 
-    ws["A1"] = "🍽️ MON CARNET — MA CUISINE AU QUOTIDIEN"
-    ws["A1"].font = Font(name="Calibri", bold=True, size=22, color=GREEN)
-    ws["A1"].alignment = Alignment(horizontal="left", vertical="center")
+    ws.merge_cells("A1:H1")
+    ws["A1"] = "MON CARNET — 52 SEMAINES (Google Sheets)"
+    ws["A1"].font = Font(name="Calibri", bold=True, size=20, color=GREEN)
     ws["A1"].fill = fill(CREAM)
+    ws.row_dimensions[1].height = 36
 
-    ws["A4"] = "📅 Semaine"
-    ws["A4"].font = Font(bold=True, size=16, color=GREEN)
-    ws["B4"] = 1
-    ws["B4"].font = Font(bold=True, size=18, color=GREEN)
-    ws["B4"].fill = fill("E8EEDD")
-    ws["C4"] = "← change ce chiffre (1 à 52), le menu suit"
-    ws["C4"].font = Font(italic=True, size=11, color="666666")
-    dv = DataValidation(type="whole", operator="between", formula1="1", formula2="52")
-    dv.add("B4")
-    ws.add_data_validation(dv)
-    # gids Google Sheets (1er onglet = 0, puis 1, 2, 3, 4 à l’import habituel)
-    ws["H23"] = "gid Fiches"
-    ws["I23"] = 1
-    ws["H24"] = "gid Courses"
-    ws["I24"] = 3
-    ws["H25"] = "gid Batch"
-    ws["I25"] = 4
-    for r in range(23, 26):
-        ws.cell(r, 8).font = Font(size=9, color="888888")
-        ws.cell(r, 9).font = Font(size=9, color="888888")
-        ws.cell(r, 9).fill = fill("E8EEDD")
-
-    ws["A7"] = "📅 MON MENU DE LA SEMAINE"
-    ws["A7"].font = Font(bold=True, size=20, color=GREEN)
-    ws["A7"].fill = fill(CREAM)
-
-    for i, label in enumerate(DAY_LABEL):
-        cell = ws.cell(9, i + 2, label)
-        cell.font = Font(bold=True, size=14, color=WHITE)
-        cell.fill = fill(GREEN)
-        cell.alignment = Alignment(horizontal="center")
-
-    ws["A10"] = "☀️ MIDI"
-    ws["A11"] = "🌙 SOIR"
-    for r in (10, 11):
-        ws.cell(r, 1).font = Font(bold=True, size=14, color=GREEN)
-        ws.cell(r, 1).alignment = Alignment(vertical="center")
-
-    # 14 repas / semaine, dans _APP_DATA à partir de la ligne 2, fiches à partir de la ligne 7
-    for d in range(7):
-        midi_off = d * 2
-        soir_off = d * 2 + 1
-        midi = ws.cell(10, d + 2)
-        soir = ws.cell(11, d + 2)
-        # Format Google Sheets : #gid=…&range=… (Excel #Feuille!C7 n’est pas cliquable dans Sheets)
-        midi.value = (
-            f'=HYPERLINK("#gid="&$I$23&"&range=C"&(7+($B$4-1)*14+{midi_off}),'
-            f'INDEX(_APP_DATA!D:D,2+($B$4-1)*14+{midi_off}))'
-        )
-        soir.value = (
-            f'=HYPERLINK("#gid="&$I$23&"&range=C"&(7+($B$4-1)*14+{soir_off}),'
-            f'INDEX(_APP_DATA!D:D,2+($B$4-1)*14+{soir_off}))'
-        )
-        for cell in (midi, soir):
-            cell.font = Font(bold=True, size=11, color=GREEN, underline="single")
-            cell.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center")
-            cell.fill = fill(CARD)
-            cell.border = thin()
-
-    ws["A14"] = "🎯 JE VEUX CUISINER CE PLAT"
-    ws["A14"].font = Font(bold=True, size=18, color=GREEN)
-    ws["A14"].fill = fill(CREAM)
-    ws["B17"] = "Recette :"
-    ws["B17"].font = Font(bold=True, size=14)
-    ws["C17"] = "=B10"
-    ws["C17"].font = Font(bold=True, size=14, color=GREEN)
-
-    ws["B20"] = '=HYPERLINK("#gid="&$I$24&"&range=A1","🛒 MES COURSES")'
-    ws["D20"] = '=HYPERLINK("#gid="&$I$25&"&range=A1","🍳 MON BATCH")'
-    ws["F20"] = '=HYPERLINK("#gid="&$I$23&"&range=A1","🍽️ MES RECETTES")'
-    for coord in ("B20", "D20", "F20"):
-        ws[coord].font = Font(bold=True, size=14, color=WHITE)
+    ws["A2"] = "MES COURSES"
+    ws["C2"] = "MON BATCH"
+    ws["E2"] = "MES RECETTES"
+    for coord in ("A2", "C2", "E2"):
+        ws[coord].font = Font(bold=True, size=12, color=WHITE)
         ws[coord].fill = fill(GREEN)
-        ws[coord].alignment = Alignment(horizontal="center", vertical="center")
+        ws[coord].alignment = Alignment(horizontal="center")
 
-    ws["B22"] = (
-        "B4 = semaine (1–52). Liens au format Google Sheets. "
-        "Si un clic ne saute pas : ouvre l’onglet Fiche_Recette, copie le gid= de l’URL dans I23."
+    ws.merge_cells("A3:H3")
+    ws["A3"] = (
+        "Les plats sont écrits en dur — le menu n’est pas vide. "
+        "Pour que le clic ouvre la fiche : onglet _SCRIPT, puis Extensions → Apps Script."
     )
-    ws["B22"].font = Font(size=10, color="666666")
-    ws.freeze_panes = "A9"
+    ws["A3"].font = Font(italic=True, size=10, color="666666")
+
+    # gid par défaut (corrigés par le script)
+    ws["I1"] = 1
+    ws["I2"] = 3
+    ws["I3"] = 4
+
+    by_week: dict[int, list[dict]] = {}
+    for m in meals:
+        by_week.setdefault(m["week"], []).append(m)
+
+    row = 5
+    for week in range(1, 53):
+        week_meals = by_week.get(week, [])
+        lookup = {(m["day"], m["meal"]): m for m in week_meals}
+
+        ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=8)
+        title = ws.cell(row, 1, f"SEMAINE {week}")
+        title.font = Font(bold=True, size=16, color=GREEN)
+        title.fill = fill(CREAM)
+        ws.row_dimensions[row].height = 22
+        row += 1
+
+        for i, label in enumerate(DAY_LABEL):
+            cell = ws.cell(row, i + 2, label)
+            cell.font = Font(bold=True, size=11, color=WHITE)
+            cell.fill = fill(GREEN)
+            cell.alignment = Alignment(horizontal="center")
+        row += 1
+
+        for meal_name, label in (("Midi", "MIDI"), ("Soir", "SOIR")):
+            ws.cell(row, 1, label).font = Font(bold=True, size=12, color=GREEN)
+            for d, day in enumerate(DAYS):
+                m = lookup.get((day, meal_name))
+                name = m["name"] if m else ""
+                fiche = m["fiche"] if m else ""
+                cell = ws.cell(row, d + 2, name)
+                cell.font = Font(bold=True, size=10, color=GREEN)
+                cell.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center")
+                cell.fill = fill(CARD)
+                cell.border = thin()
+                if fiche:
+                    cell.comment = None
+                    # ligne fiche stockée en note interne via une feuille _MAP, pas ici
+            ws.row_dimensions[row].height = 48
+            row += 1
+        row += 1  # spacer
+
+    ws.freeze_panes = "A5"
     ws.sheet_view.showGridLines = False
-    ws.sheet_properties.pageSetUpPr.fitToPage = True
     ws.page_setup.orientation = "landscape"
     ws.page_setup.fitToPage = True
     ws.page_setup.fitToWidth = 1
-    ws.page_setup.fitToHeight = 1
+    ws.page_setup.fitToHeight = 0
+
+
+def build_map(wb: Workbook, meals: list[dict]) -> None:
+    ws = wb.create_sheet("_MAP")
+    ws["A1"] = "semaine"
+    ws["B1"] = "jour"
+    ws["C1"] = "repas"
+    ws["D1"] = "plat"
+    ws["E1"] = "fiche_ligne"
+    ws["F1"] = "dash_ligne"
+    ws["G1"] = "dash_col"
+    for cell in ws[1]:
+        cell.font = Font(bold=True, color=WHITE)
+        cell.fill = fill(GREEN)
+
+    # même géométrie que Dashboard : semaine k commence à la ligne 5 + (k-1)*5
+    #  title, headers, midi, soir, spacer = 5 rows
+    for i, m in enumerate(meals, 2):
+        week = m["week"]
+        day_i = DAYS.index(m["day"]) if m["day"] in DAYS else 0
+        base = 5 + (week - 1) * 5
+        dash_row = base + 2 if m["meal"] == "Midi" else base + 3
+        ws.cell(i, 1, week)
+        ws.cell(i, 2, m["day"])
+        ws.cell(i, 3, m["meal"])
+        ws.cell(i, 4, m["name"])
+        ws.cell(i, 5, m["fiche"])
+        ws.cell(i, 6, dash_row)
+        ws.cell(i, 7, day_i + 2)
+    for i, w in enumerate([10, 12, 10, 48, 12, 12, 10], 1):
+        ws.column_dimensions[get_column_letter(i)].width = w
+    ws.sheet_state = "hidden"
+
+
+SCRIPT = r'''/**
+ * Google Sheets : Extensions → Apps Script → coller → Exécuter activerLiens.
+ * Les plats sont déjà visibles. Ce script les rend cliquables vers Fiche_Recette.
+ */
+function onOpen() {
+  SpreadsheetApp.getUi()
+    .createMenu("Carnet")
+    .addItem("Activer les liens cliquables", "activerLiens")
+    .addToUi();
+}
+
+function activerLiens() {
+  var ss = SpreadsheetApp.getActive();
+  var dash = ss.getSheetByName("Dashboard");
+  var fiche = ss.getSheetByName("Fiche_Recette");
+  var map = ss.getSheetByName("_MAP");
+  var courses = ss.getSheetByName("LISTES COURSES 2");
+  var batch = ss.getSheetByName("BATCH");
+  if (!dash || !fiche || !map) {
+    SpreadsheetApp.getUi().alert("Importe le classeur (Dashboard, Fiche_Recette, _MAP).");
+    return;
+  }
+  map.showSheet();
+  var gidFiche = fiche.getSheetId();
+  var gidDash = dash.getSheetId();
+  var gidCourses = courses ? courses.getSheetId() : gidDash;
+  var gidBatch = batch ? batch.getSheetId() : gidDash;
+  var last = map.getLastRow();
+  if (last < 2) return;
+  var rows = map.getRange(2, 1, last - 1, 7).getValues();
+  rows.forEach(function (row) {
+    var name = String(row[3] || "").replace(/"/g, '""');
+    var ficheRow = row[4];
+    var dr = row[5];
+    var dc = row[6];
+    if (!name || !ficheRow || !dr || !dc) return;
+    dash.getRange(dr, dc).setFormula(
+      '=HYPERLINK("#gid=' + gidFiche + "&range=C" + ficheRow + '","' + name + '")'
+    );
+  });
+  dash.getRange("A2").setFormula('=HYPERLINK("#gid=' + gidCourses + '&range=A1","MES COURSES")');
+  dash.getRange("C2").setFormula('=HYPERLINK("#gid=' + gidBatch + '&range=A1","MON BATCH")');
+  dash.getRange("E2").setFormula('=HYPERLINK("#gid=' + gidFiche + '&range=A1","MES RECETTES")');
+  fiche.getRange("B3").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","RETOUR AU DASHBOARD")');
+  fiche.getRange("C3").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","RETOUR AU PLANNING")');
+  if (courses) {
+    courses.getRange("F1").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","RETOUR AU DASHBOARD")');
+  }
+  if (batch) {
+    batch.getRange("F1").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","RETOUR AU DASHBOARD")');
+  }
+  map.hideSheet();
+}
+'''
+
+
+def write_script(_meals: list[dict]) -> str:
+    return SCRIPT
 
 
 def main() -> None:
     src = load_workbook(ORIG, data_only=False, read_only=False)
+    meals = load_meals(src)
+    if len(meals) < 700:
+        raise SystemExit(f"pas assez de plats: {len(meals)}")
+
     wb = Workbook()
-    build_dashboard(wb)
+    build_dashboard(wb, meals)
+    build_map(wb, meals)
 
     fiche = wb.create_sheet("Fiche_Recette")
     copy_used(src["Fiche_Recette"], fiche, 8, skip_image=True, keep_rows=True)
     fiche["A1"] = ""
-    fiche["B3"] = '=HYPERLINK("#gid=0&range=A1","⬅️ RETOUR AU DASHBOARD")'
-    fiche["C3"] = '=HYPERLINK("#gid=0&range=A1","⬅️ RETOUR AU PLANNING")'
+    fiche["B3"] = "RETOUR AU DASHBOARD"
+    fiche["C3"] = "RETOUR AU PLANNING"
     fiche["B3"].font = Font(bold=True, color=GREEN, underline="single")
     fiche["C3"].font = Font(bold=True, color=GREEN, underline="single")
     fiche.freeze_panes = "A7"
@@ -216,7 +307,7 @@ def main() -> None:
 
     courses = wb.create_sheet("LISTES COURSES 2")
     copy_used(src["LISTES COURSES 2"], courses, 4)
-    courses["F1"] = '=HYPERLINK("#gid=0&range=A1","⬅️ RETOUR AU DASHBOARD")'
+    courses["F1"] = "RETOUR AU DASHBOARD"
     courses["F1"].font = Font(bold=True, color=GREEN, underline="single")
     courses.auto_filter.ref = f"A1:D{courses.max_row}"
     courses.freeze_panes = "A3"
@@ -228,7 +319,7 @@ def main() -> None:
 
     batch = wb.create_sheet("BATCH")
     copy_used(src["BATCH"], batch, 4)
-    batch["F1"] = '=HYPERLINK("#gid=0&range=A1","⬅️ RETOUR AU DASHBOARD")'
+    batch["F1"] = "RETOUR AU DASHBOARD"
     batch["F1"].font = Font(bold=True, color=GREEN, underline="single")
     batch.auto_filter.ref = f"A1:D{batch.max_row}"
     batch.freeze_panes = "A3"
@@ -238,43 +329,34 @@ def main() -> None:
         cell.font = Font(bold=True, color=WHITE)
         cell.fill = fill(GREEN)
 
+    script_text = write_script(meals)
+    GS.write_text(script_text, encoding="utf-8")
+
     script = wb.create_sheet("_SCRIPT")
-    script["A1"] = "Si les plats ne sont pas cliquables dans Google Sheets"
+    script["A1"] = "Activer les liens dans Google Sheets (une fois)"
     script["A1"].font = Font(bold=True, size=14, color=GREEN)
     script["A3"] = "1. Extensions → Apps Script"
-    script["A4"] = "2. Efface le code, colle celui ci-dessous, Enregistrer"
-    script["A5"] = "3. Exécuter reparerGids (autoriser ton compte une fois)"
-    script["A6"] = "4. Reviens au Dashboard : les plats deviennent des liens"
-    script["A8"] = (
-        "function onOpen(){ reparerGids(); }\n"
-        "function reparerGids(){\n"
-        "  var ss = SpreadsheetApp.getActive();\n"
-        "  var dash = ss.getSheetByName('Dashboard');\n"
-        "  var fiche = ss.getSheetByName('Fiche_Recette');\n"
-        "  var courses = ss.getSheetByName('LISTES COURSES 2');\n"
-        "  var batch = ss.getSheetByName('BATCH');\n"
-        "  if (!dash || !fiche) return;\n"
-        "  dash.getRange('I23').setValue(fiche.getSheetId());\n"
-        "  if (courses) dash.getRange('I24').setValue(courses.getSheetId());\n"
-        "  if (batch) dash.getRange('I25').setValue(batch.getSheetId());\n"
-        "}\n"
-    )
+    script["A4"] = "2. Efface le code proposé, ouvre le fichier activer-liens-sheets.gs du projet, colle-le"
+    script["A5"] = "3. Enregistrer, exécuter activerLiens, autoriser"
+    script["A6"] = "4. Retour au Dashboard : chaque plat ouvre sa fiche"
+    script["A8"] = script_text
     script["A8"].alignment = Alignment(wrap_text=True, vertical="top")
-    script.row_dimensions[8].height = 180
-    script.column_dimensions["A"].width = 100
+    script.row_dimensions[8].height = 200
+    script.column_dimensions["A"].width = 120
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     wb.save(OUT)
     src.close()
 
-    # garde-fou : aucun lien externe
-    import zipfile
-
-    with zipfile.ZipFile(OUT) as z:
-        for name in z.namelist():
-            if name.endswith(".rels") and "TargetMode=\"External\"" in z.read(name).decode("utf-8", "replace"):
-                raise SystemExit(f"lien externe dans {name}")
-    print("ok", OUT, OUT.stat().st_size, "sheets", wb.sheetnames)
+    # vérifie que le Dashboard n’est pas vide
+    check = load_workbook(OUT, data_only=False)
+    sample = check["Dashboard"]["B7"].value
+    if not sample or str(sample).startswith("="):
+        # week 1 midi lundi is at row 5+2 = 7
+        raise SystemExit(f"Dashboard B7 vide ou formule: {sample!r}")
+    print("ok", OUT, OUT.stat().st_size, "plats", len(meals), "B7", sample)
+    print("sheets", check.sheetnames)
+    check.close()
 
 
 if __name__ == "__main__":
