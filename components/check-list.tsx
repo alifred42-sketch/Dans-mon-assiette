@@ -80,16 +80,10 @@ export function CheckList({
               <label className="flex cursor-pointer items-start gap-3 px-4 py-4 [touch-action:manipulation]">
                 <input
                   type="checkbox"
-                  className="peer sr-only"
+                  className="peer mt-1 size-7 shrink-0 accent-[oklch(0.42_0.06_130)]"
                   checked={done}
                   onChange={() => toggle(item.id)}
                 />
-                <span
-                  className="mt-0.5 inline-flex size-7 shrink-0 items-center justify-center rounded-md border-2 border-foreground/40 bg-background text-sm font-bold peer-checked:border-primary peer-checked:bg-primary peer-checked:text-primary-foreground"
-                  aria-hidden
-                >
-                  {done ? "✓" : ""}
-                </span>
                 <span className="peer-checked:text-muted-foreground peer-checked:line-through">
                   <span className="block font-medium leading-snug">{item.title}</span>
                   {item.detail ? (
