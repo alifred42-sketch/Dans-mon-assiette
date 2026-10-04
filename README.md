@@ -9,8 +9,11 @@ Le carnet d’Aline, sur téléphone : les 52 semaines, les courses, le batch, e
 
 ## Sur le téléphone (Android)
 
-1. Ouvre l’adresse de l’appli dans Chrome
-2. Menu (⋮) → **Ajouter à l’écran d’accueil**
+1. Ouvre le lien de l’appli dans **Chrome**
+2. Menu (⋮) → **Ajouter à l’écran d’accueil** / **Installer l’application**
+3. Si une ancienne icône ne s’ouvre pas : appuie longtemps dessus → supprimer, puis réinstalle depuis le lien
+
+La recherche du carnet trouve un nom, un légume, un fromage ou « Mr Cuisine ».
 
 ## En local
 

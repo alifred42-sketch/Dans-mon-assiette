@@ -18,7 +18,14 @@ export const metadata: Metadata = {
   description: "Les 52 semaines d’Aline : choisir la semaine, ouvrir une fiche, recalculer les courses.",
   manifest: "/manifest.json",
   appleWebApp: { capable: true, title: "Dans mon assiette", statusBarStyle: "default" },
-  icons: { icon: "/icon.svg", apple: "/icon.svg" },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export const viewport: Viewport = {

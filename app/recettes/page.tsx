@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { carnet, getCollections } from "@/lib/carnet";
+import { recipeHaystack } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 
 export default function RecettesPage() {
@@ -29,7 +30,9 @@ export default function RecettesPage() {
       </div>
       <section className="space-y-3">
         <h2 className="font-heading text-xl">Toutes les fiches</h2>
-        <RecipeList items={recipes.map((r) => ({ id: r.id, name: r.name }))} />
+        <RecipeList
+          items={recipes.map((r) => ({ id: r.id, name: r.name, text: recipeHaystack(r) }))}
+        />
       </section>
     </div>
   );
