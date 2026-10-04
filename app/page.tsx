@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, getRecipe, weekPlan } from "@/lib/carnet";
+import { InstallApp } from "@/components/install-app";
 import { WeekPicker } from "@/components/week-picker";
 
 export default function HomePage() {
@@ -21,6 +22,7 @@ export default function HomePage() {
           <p className="mt-1 text-sm text-muted-foreground">Clique un plat pour ouvrir sa fiche.</p>
         )}
       </div>
+      <InstallApp />
       <WeekPicker week={week} path="/" />
       {breakfast && breakfast.lines.length > 0 ? (
         <section className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">

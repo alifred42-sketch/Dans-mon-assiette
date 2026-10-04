@@ -1,10 +1,10 @@
 {
-  "id": "./",
+  "id": "/Dans-mon-assiette/",
   "name": "Dans mon assiette",
   "short_name": "Assiette",
   "description": "Les 52 semaines d’Aline : fiches, courses et batch.",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/Dans-mon-assiette/",
+  "scope": "/Dans-mon-assiette/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f6f1e6",
@@ -12,19 +12,19 @@
   "lang": "fr",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "/Dans-mon-assiette/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "/Dans-mon-assiette/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-maskable-512.png",
+      "src": "/Dans-mon-assiette/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
