@@ -120,8 +120,9 @@ COLLECTIONS = [
 STOP_CARD = re.compile(
     r"liste courses|à imprimer|onglet —|annexe —|"
     r"nouvelles sauces|page à ajouter|retour au dashboard|"
-    r"menus par saison|toujours avoir\s*:|hyperlink|"
-    r"mon placard anti|onglet —",
+    r"menus par saison|toujours avoir|hyperlink|"
+    r"mon placard anti|onglet —|kit ap[ée]ro|"
+    r"petits amuse-bouches",
     re.I,
 )
 JUNK = re.compile(
@@ -328,12 +329,13 @@ HEADING_KEYS = {
     "temps", "accompagnement", "accompagnements", "dessert conseille",
     "remplacements", "batch cooking", "congelation", "avec",
     "dans le saladier", "ideale avec", "utilisations", "epices aromates",
+    "garnitures", "versions", "idees", "version ete", "version fete",
 }
 FOOD_KIND = {
     "ingredients", "ingredient", "viande", "legumes", "feculent", "fromage",
     "pain", "epices", "assaisonnement", "appareil", "appareil leger",
     "dessus", "sauce", "creme finale", "avec", "dans le saladier",
-    "epices aromates",
+    "epices aromates", "garnitures",
 }
 STEP_KIND = {"preparation", "preparation classique", "montage", "etape", "etapes"}
 ROBOT_KIND = {
@@ -354,6 +356,9 @@ SECTION_ICON = {
     "appareil": "🥣",
     "appareil leger": "🥣",
     "dessus": "🧀",
+    "garnitures": "🧀",
+    "versions": "🔄",
+    "idees": "💡",
     "sauce": "🥣",
     "preparation": "👩‍🍳",
     "mr cuisine": "🤖",
@@ -938,7 +943,44 @@ def parse_52_menus(ws) -> tuple[dict[tuple[int, str, str], dict], dict[int, dict
     return meals, weeks
 
 
-def is_collect_start(line: str, gap: int, ahead: str) -> bool:
+def is_emoji_dish(line: str) -> bool:
+    if not line or is_heading(line) or is_stop(line) or META.match(line):
+        return False
+    if line.endswith(":") and len(line) < 36:
+        return False
+    if line.startswith(("✨", "⭐", "☀️", "⚠️", "💡", "❤️", "🌿", "✅", "➡️", "✔", "📌")):
+        return False
+    first = line[0]
+    if unicodedata.category(first) != "So":
+        return False
+    name = strip_emoji(line).strip()
+    if name.endswith((".", "!", "?")):
+        return False
+    words = [w for w in name.split() if w]
+    if len(words) < 2 and fold(name) not in {"samoussas", "brochettes", "verrine"}:
+        return False
+    return 3 <= len(name) <= 80
+
+
+def is_recipe_struct(line: str) -> bool:
+    if not line:
+        return False
+    f = heading_key(line)
+    return f.startswith((
+        "ingredient", "garniture", "versions", "idees", "epice", "montage",
+        "mr cuisine", "assais", "version ete", "version fete", "recherche",
+    ))
+
+
+def first_filled(by_row: dict[int, str], row: int, n: int = 6) -> str:
+    for k in range(1, n + 1):
+        s = by_row.get(row + k, "")
+        if s:
+            return s
+    return ""
+
+
+def is_collect_start(line: str, gap: int, ahead: str, by_row: dict[int, str] | None = None, row: int = 0) -> bool:
     if not line or fold(line) in SKIP_TITLE or is_stop(line):
         return False
     if line.startswith("☐") or line.startswith("☑"):
@@ -947,8 +989,19 @@ def is_collect_start(line: str, gap: int, ahead: str) -> bool:
         return True
     if COLLECT_HEAD.search(line):
         return True
+    nxt = first_filled(by_row, row) if by_row else ""
+    if is_emoji_dish(line):
+        if is_emoji_dish(nxt):
+            return False
+        if is_recipe_struct(nxt):
+            return True
+        nxt2 = first_filled(by_row, row + 1) if by_row else ""
+        if nxt and not is_heading(nxt) and is_recipe_struct(nxt2):
+            return True
+        return False
+    ahead_f = fold(ahead)
     if gap >= 2 and 8 <= len(line) <= 90 and not line.endswith(":") and not META.match(line):
-        if any(k in fold(ahead) for k in ("ingredient", "epice", "preparation", "montage", "mr cuisine", "temps")):
+        if any(k in ahead_f for k in ("ingredient", "epice", "preparation", "montage", "mr cuisine", "temps", "garniture")):
             return True
     return False
 
@@ -976,7 +1029,7 @@ def parse_collection_sheet(ws, source: str) -> list[dict]:
             empty += 1
             continue
         ahead = " ".join(by_row.get(r + k, "") for k in range(1, 10))
-        if is_collect_start(s, empty, ahead):
+        if is_collect_start(s, empty, ahead, by_row, r):
             starts.append(r)
         empty = 0
     cards = []
@@ -999,7 +1052,7 @@ def parse_collection_sheet(ws, source: str) -> list[dict]:
         title_fold = fold(title)
         if title_fold in SKIP_TITLE or len(title) < 4:
             continue
-        if title_fold.startswith(("onglet", "annexe", "menus par saison", "saison automne")) and "recette" not in title_fold:
+        if title_fold.startswith(("onglet", "annexe", "menus par saison", "saison automne", "kit apero", "petits amuse")):
             continue
         card = make_recipe(title, body, source)
         if card["ingredients"] or card["steps"] or card["robot"] or card["notes"] or card.get("sections"):

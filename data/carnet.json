@@ -1123,9 +1123,7 @@
         "Cuire les lentilles, laisser refroidir puis mélanger avec les légumes.",
         "Préparable à l’avance pour les déjeuners au travail."
       ],
-      "robot": [
-        "Cuisson des lentilles"
-      ],
+      "robot": [],
       "notes": [
         "➡️ Vinaigrette citronnée légère 🔗",
         "Préparable à l’avance pour les déjeuners au travail."
@@ -1249,9 +1247,7 @@
         "Ajouter les œufs.",
         "Cuire doucement jusqu’à obtenir la texture souhaitée."
       ],
-      "robot": [
-        "Œufs cocotte"
-      ],
+      "robot": [],
       "notes": [
         "➡️ Sauce fromage blanc aux herbes 🔗"
       ],
@@ -2163,9 +2159,7 @@
         "Ajouter le poisson.",
         "Très léger le soir avec beaucoup de légumes."
       ],
-      "robot": [
-        "Cuisson vapeur poisson"
-      ],
+      "robot": [],
       "notes": [
         "➡️ Sauce skyr citron 🔗",
         "Très léger le soir avec beaucoup de légumes."
@@ -15761,17 +15755,16 @@
         "farine",
         "levure",
         "eau",
-        "huile d’olive"
+        "huile d’olive",
+        "🍅 tomate mozzarella basilic",
+        "🍄 jambon champignons",
+        "🐟 saumon crème"
       ],
       "steps": [],
       "robot": [
         "Pâte à pizza"
       ],
-      "notes": [
-        "🍅 tomate mozzarella basilic",
-        "🍄 jambon champignons",
-        "🐟 saumon crème"
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -15789,7 +15782,7 @@
           ]
         },
         {
-          "title": "Garnitures :",
+          "title": "🧀 Garnitures :",
           "lines": [
             "🍅 tomate mozzarella basilic",
             "🍄 jambon champignons",
@@ -16973,29 +16966,19 @@
     {
       "id": "r-1a027a4e41",
       "name": "🥞 Crêpes salées maison",
-      "ingredients": [],
-      "steps": [],
-      "robot": [
-        "Pâte à crêpes"
-      ],
-      "notes": [
+      "ingredients": [
         "🍄 jambon champignons",
-        "🐟 saumon poireaux",
-        "🥚 œuf fromage"
+        "🐟 saumon poireaux"
       ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
       "sections": [
         {
-          "title": "Garnitures :",
+          "title": "🧀 Garnitures :",
           "lines": [
             "🍄 jambon champignons",
-            "🐟 saumon poireaux",
-            "🥚 œuf fromage"
-          ]
-        },
-        {
-          "title": "🤖 Recherche :",
-          "lines": [
-            "\"Pâte à crêpes\""
+            "🐟 saumon poireaux"
           ]
         }
       ],
@@ -17094,31 +17077,22 @@
     {
       "id": "r-de1aff336d",
       "name": "🍅 Coulis de tomates maison",
-      "ingredients": [],
-      "steps": [],
-      "robot": [
-        "Coulis de tomates"
-      ],
-      "notes": [
+      "ingredients": [
+        "Indispensable dans ton classeur ❤️",
         "🍝 pâtes",
         "🍕 pizzas",
-        "🥩 boulettes",
-        "🍳 œufs à la tomate"
+        "🥩 boulettes"
       ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
       "sections": [
         {
           "title": "À utiliser pour :",
           "lines": [
             "🍝 pâtes",
             "🍕 pizzas",
-            "🥩 boulettes",
-            "🍳 œufs à la tomate"
-          ]
-        },
-        {
-          "title": "🤖 Recherche :",
-          "lines": [
-            "\"Coulis de tomates\""
+            "🥩 boulettes"
           ]
         }
       ],
@@ -17340,30 +17314,20 @@
         "crème légère",
         "moutarde douce",
         "poivre",
-        "muscade"
+        "muscade",
+        "Très utile pour plein de recettes.",
+        "🐟 saumon",
+        "🥧 tartes",
+        "🍝 pâtes"
       ],
       "steps": [],
       "robot": [
         "Fondue de poireaux"
       ],
-      "notes": [
-        "🐟 saumon",
-        "🥧 tartes",
-        "🍝 pâtes",
-        "🥚 œufs cocotte"
-      ],
+      "notes": [],
       "sections": [
         {
-          "title": "À utiliser avec :",
-          "lines": [
-            "🐟 saumon",
-            "🥧 tartes",
-            "🍝 pâtes",
-            "🥚 œufs cocotte"
-          ]
-        },
-        {
-          "title": "🛒 Ingrédients :",
+          "title": "🛒 Ingrédients",
           "lines": [
             "poireaux",
             "crème légère",
@@ -17741,7 +17705,9 @@
         "➡️ parmesan déjà prévu",
         "➡️ parmesan déjà compté",
         "➡️ chèvre déjà prévu",
-        "➡️ pommes de terre déjà intégrées"
+        "➡️ pommes de terre déjà intégrées",
+        "🥒 courgettes chèvre",
+        "🍄 champignons jambon"
       ],
       "steps": [
         "➡️ oignon + légumes",
@@ -17914,8 +17880,7 @@
         "obtenir une sauce bien parfumée",
         "préparer plusieurs portions",
         "🥘 Gratin léger de légumes du soleil",
-        "mélanger rapidement",
-        "Flan de légumes"
+        "mélanger rapidement"
       ],
       "notes": [
         "fromage blanc : 150 g",
@@ -18039,10 +18004,7 @@
         "cuisson vapeur douce",
         "poisson moelleux",
         "sauce maison rapide",
-        "➡️ riz ou pommes de terre selon envie",
-        "🥒 courgettes chèvre",
-        "🍄 champignons jambon",
-        "🐟 saumon poireaux"
+        "➡️ riz ou pommes de terre selon envie"
       ],
       "sections": [
         {
@@ -20657,8 +20619,8 @@
       "timePrep": "5 min"
     },
     {
-      "id": "r-1b35485d7b",
-      "name": "🌶️ Sauce paprika légère",
+      "id": "r-0aff2c7b56",
+      "name": "🥕 légumes rôtis",
       "ingredients": [
         "Fromage blanc ou skyr",
         "Paprika",
@@ -20666,22 +20628,14 @@
         "Ail en poudre",
         "Poivre"
       ],
-      "steps": [],
-      "robot": [],
-      "notes": [
-        "🍗 poulet",
-        "🥔 pommes de terre",
-        "🥕 légumes rôtis"
+      "steps": [
+        "Cuisson légumes vapeur possible"
       ],
+      "robot": [
+        "➡️ légumes rôtis / sauce"
+      ],
+      "notes": [],
       "sections": [
-        {
-          "title": "Pour :",
-          "lines": [
-            "🍗 poulet",
-            "🥔 pommes de terre",
-            "🥕 légumes rôtis"
-          ]
-        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -23587,6 +23541,27 @@
       "id": "r-e5b6c7beb1",
       "name": "🌯 3 — MÉLANGE FAJITAS / TEX-MEX 🌮",
       "ingredients": [
+        "🌯 wraps mexicains",
+        "🌮 fajitas"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
+        {
+          "title": "Pour :",
+          "lines": [
+            "🌯 wraps mexicains",
+            "🌮 fajitas"
+          ]
+        }
+      ],
+      "source": "Epices"
+    },
+    {
+      "id": "r-bbee576cfa",
+      "name": "🍗 poulet épicé",
+      "ingredients": [
         "Paprika fumé : 3 c. à soupe",
         "Cumin : 2 c. à soupe",
         "Coriandre moulue : 1 c. à soupe",
@@ -23597,20 +23572,8 @@
       ],
       "steps": [],
       "robot": [],
-      "notes": [
-        "🌯 wraps mexicains",
-        "🌮 fajitas",
-        "🍗 poulet épicé"
-      ],
+      "notes": [],
       "sections": [
-        {
-          "title": "Pour :",
-          "lines": [
-            "🌯 wraps mexicains",
-            "🌮 fajitas",
-            "🍗 poulet épicé"
-          ]
-        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -23630,6 +23593,27 @@
       "id": "r-cc0110cfac",
       "name": "🇬🇷 4 — MÉLANGE GREC SOLEIL ☀️",
       "ingredients": [
+        "🍗 poulet grec",
+        "🐟 saumon grec"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
+        {
+          "title": "Pour :",
+          "lines": [
+            "🍗 poulet grec",
+            "🐟 saumon grec"
+          ]
+        }
+      ],
+      "source": "Epices"
+    },
+    {
+      "id": "r-05b735f44d",
+      "name": "🥗 salades méditerranéennes",
+      "ingredients": [
         "Origan : 3 c. à soupe",
         "Basilic : 2 c. à soupe",
         "Ail poudre : 1 c. à soupe",
@@ -23638,22 +23622,14 @@
         "Menthe séchée : 1 c. à café",
         "Poivre"
       ],
-      "steps": [],
-      "robot": [],
-      "notes": [
-        "🍗 poulet grec",
-        "🐟 saumon grec",
-        "🥗 salades méditerranéennes"
+      "steps": [
+        "Mixage de la tartinade"
       ],
+      "robot": [
+        "Cuisson des lentilles"
+      ],
+      "notes": [],
       "sections": [
-        {
-          "title": "Pour :",
-          "lines": [
-            "🍗 poulet grec",
-            "🐟 saumon grec",
-            "🥗 salades méditerranéennes"
-          ]
-        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -23673,6 +23649,29 @@
       "id": "r-0fb1660969",
       "name": "🇮🇹 5 — MÉLANGE ITALIEN TOMATE & PIZZA 🍕",
       "ingredients": [
+        "🍕 pizzas maison",
+        "🍝 pâtes",
+        "🍅 sauces tomates"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
+        {
+          "title": "Pour :",
+          "lines": [
+            "🍕 pizzas maison",
+            "🍝 pâtes",
+            "🍅 sauces tomates"
+          ]
+        }
+      ],
+      "source": "Epices"
+    },
+    {
+      "id": "r-b98c773116",
+      "name": "🍆 légumes grillés",
+      "ingredients": [
         "Basilic séché : 3 c. à soupe",
         "Origan : 3 c. à soupe",
         "Ail poudre : 1 c. à soupe",
@@ -23682,22 +23681,8 @@
       ],
       "steps": [],
       "robot": [],
-      "notes": [
-        "🍕 pizzas maison",
-        "🍝 pâtes",
-        "🍅 sauces tomates",
-        "🍆 légumes grillés"
-      ],
+      "notes": [],
       "sections": [
-        {
-          "title": "Pour :",
-          "lines": [
-            "🍕 pizzas maison",
-            "🍝 pâtes",
-            "🍅 sauces tomates",
-            "🍆 légumes grillés"
-          ]
-        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -23716,6 +23701,25 @@
       "id": "r-39b79f5312",
       "name": "🇲🇦 6 — MÉLANGE TAJINE MAROC 🌍",
       "ingredients": [
+        "🍲 tajines"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
+        {
+          "title": "Pour :",
+          "lines": [
+            "🍲 tajines"
+          ]
+        }
+      ],
+      "source": "Epices"
+    },
+    {
+      "id": "r-7e9ac7cf02",
+      "name": "🍗 poulet marocain",
+      "ingredients": [
         "Cumin : 2 c. à soupe",
         "Paprika : 2 c. à soupe",
         "Curcuma : 1 c. à soupe",
@@ -23726,20 +23730,8 @@
       ],
       "steps": [],
       "robot": [],
-      "notes": [
-        "🍲 tajines",
-        "🍗 poulet marocain",
-        "🐟 poissons"
-      ],
+      "notes": [],
       "sections": [
-        {
-          "title": "Pour :",
-          "lines": [
-            "🍲 tajines",
-            "🍗 poulet marocain",
-            "🐟 poissons"
-          ]
-        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -23753,11 +23745,31 @@
           ]
         }
       ],
-      "source": "Epices"
+      "source": "Epices",
+      "blurb": "🐟 poissons"
     },
     {
       "id": "r-c526145b8c",
       "name": "🇮🇳 7 — MÉLANGE CURRY DOUX INDIEN 🍛",
+      "ingredients": [
+        "🍗 poulet tikka"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
+        {
+          "title": "Pour :",
+          "lines": [
+            "🍗 poulet tikka"
+          ]
+        }
+      ],
+      "source": "Epices"
+    },
+    {
+      "id": "r-d7a5212511",
+      "name": "🥕 légumes curry",
       "ingredients": [
         "Curry doux : 4 c. à soupe",
         "Curcuma : 1 c. à soupe",
@@ -23768,20 +23780,8 @@
       ],
       "steps": [],
       "robot": [],
-      "notes": [
-        "🍗 poulet tikka",
-        "🥕 légumes curry",
-        "🐟 poissons"
-      ],
+      "notes": [],
       "sections": [
-        {
-          "title": "Pour :",
-          "lines": [
-            "🍗 poulet tikka",
-            "🥕 légumes curry",
-            "🐟 poissons"
-          ]
-        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -23794,7 +23794,8 @@
           ]
         }
       ],
-      "source": "Epices"
+      "source": "Epices",
+      "blurb": "🐟 poissons"
     },
     {
       "id": "r-30b15ff2e3",
@@ -23841,6 +23842,29 @@
       "id": "r-b6e0c1f1bb",
       "name": "🥔 9 — MÉLANGE LÉGUMES RÔTIS AU FOUR 🥕",
       "ingredients": [
+        "🥒 courgettes",
+        "🥕 carottes",
+        "🫑 poivrons"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
+        {
+          "title": "Pour :",
+          "lines": [
+            "🥒 courgettes",
+            "🥕 carottes",
+            "🫑 poivrons"
+          ]
+        }
+      ],
+      "source": "Epices"
+    },
+    {
+      "id": "r-cf9d5e66cb",
+      "name": "🥔 pommes de terre",
+      "ingredients": [
         "Paprika fumé : 2 c. à soupe",
         "Thym : 2 c. à soupe",
         "Origan : 1 c. à soupe",
@@ -23849,23 +23873,11 @@
         "Poivre"
       ],
       "steps": [],
-      "robot": [],
-      "notes": [
-        "🥒 courgettes",
-        "🥕 carottes",
-        "🫑 poivrons",
-        "🥔 pommes de terre"
+      "robot": [
+        "Velouté de poireaux"
       ],
+      "notes": [],
       "sections": [
-        {
-          "title": "Pour :",
-          "lines": [
-            "🥒 courgettes",
-            "🥕 carottes",
-            "🫑 poivrons",
-            "🥔 pommes de terre"
-          ]
-        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -23884,6 +23896,25 @@
       "id": "r-c52e7c5a0c",
       "name": "🍟 10 — MÉLANGE FRITES AU FOUR VERSION BISTROT 😋",
       "ingredients": [
+        "🍟 pommes de terre"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
+        {
+          "title": "Pour :",
+          "lines": [
+            "🍟 pommes de terre"
+          ]
+        }
+      ],
+      "source": "Epices"
+    },
+    {
+      "id": "r-a59202e976",
+      "name": "🍠 patates douces",
+      "ingredients": [
         "Paprika fumé : 2 c. à soupe",
         "Paprika doux : 1 c. à soupe",
         "Ail poudre : 1 c. à soupe",
@@ -23893,18 +23924,8 @@
       ],
       "steps": [],
       "robot": [],
-      "notes": [
-        "🍟 pommes de terre",
-        "🍠 patates douces"
-      ],
+      "notes": [],
       "sections": [
-        {
-          "title": "Pour :",
-          "lines": [
-            "🍟 pommes de terre",
-            "🍠 patates douces"
-          ]
-        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -24157,8 +24178,8 @@
       "blurb": "Parfaite quand il fait chaud ☀️"
     },
     {
-      "id": "r-cc1cb0b455",
-      "name": "Pâtes crémeuses courgettes & parmesan",
+      "id": "r-bde818470e",
+      "name": "⏱️ 15 min",
       "ingredients": [
         "pâtes",
         "courgettes",
@@ -24169,13 +24190,8 @@
         "poivre"
       ],
       "steps": [],
-      "robot": [
-        "Courgettes",
-        "Sauce crème"
-      ],
-      "notes": [
-        "Avec saumon ou jambon."
-      ],
+      "robot": [],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -24199,33 +24215,67 @@
           "lines": [
             "❌ Non"
           ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "⚪ Déjà présent"
-          ]
-        },
+        }
+      ],
+      "source": "EXPRESS 15 MIN"
+    },
+    {
+      "id": "r-6ad1d6e8d8",
+      "name": "⚪ Déjà présent",
+      "ingredients": [],
+      "steps": [],
+      "robot": [
+        "Courgettes",
+        "Sauce crème",
+        "Très adapté pour cuisson douce.",
+        "⭐⭐⭐⭐ parfait.",
+        "🥚 Œufs",
+        "🧀 St Môret",
+        "🧀 Mozzarella",
+        "🧀 Feta",
+        "🥒 Concombre",
+        "🍅 Tomates",
+        "⭐⭐⭐⭐ idéal pour les soupes froides.",
+        "Œufs durs"
+      ],
+      "notes": [
+        "Avec saumon ou jambon.",
+        "🥒 Courgettes",
+        "🐟 Saumon fumé",
+        "🍝 Pâtes",
+        "🥖 Pain complet",
+        "🍚 Riz",
+        "🥫 Thon",
+        "🍗 Jambon"
+      ],
+      "sections": [
         {
           "title": "🤖 MR CUISINE Smart :",
-          "lines": []
-        },
-        {
-          "title": "🤖 Recherche :",
           "lines": [
-            "\"Courgettes\"",
-            "\"Sauce crème\""
+            "⭐⭐⭐⭐ parfait.",
+            "🛒 MINI LISTE DE COURSES EXPRESS À AVOIR TOUJOURS",
+            "🥚 Œufs",
+            "🧀 St Môret",
+            "🧀 Mozzarella",
+            "🧀 Feta",
+            "🥒 Concombre",
+            "🍅 Tomates"
           ]
         },
         {
-          "title": "🔄 Variante :",
+          "title": "🥗 Salade",
           "lines": [
-            "Avec saumon ou jambon."
+            "🥒 Courgettes",
+            "🐟 Saumon fumé",
+            "🍝 Pâtes",
+            "🥖 Pain complet",
+            "🍚 Riz",
+            "🥫 Thon",
+            "🍗 Jambon"
           ]
         }
       ],
-      "source": "EXPRESS 15 MIN",
-      "blurb": "⏱️ 15 min"
+      "source": "EXPRESS 15 MIN"
     },
     {
       "id": "r-5683efa1c7",
@@ -24443,9 +24493,7 @@
         "1 à 2 tranches complet"
       ],
       "steps": [],
-      "robot": [
-        "Très adapté pour cuisson douce."
-      ],
+      "robot": [],
       "notes": [],
       "sections": [
         {
@@ -24468,18 +24516,6 @@
           "title": "🍞 🥖 Pain :",
           "lines": [
             "✅ 1 à 2 tranches complet"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "⚪ Déjà présent"
-          ]
-        },
-        {
-          "title": "🤖 MR CUISINE Smart :",
-          "lines": [
-            "Très adapté pour cuisson douce."
           ]
         }
       ],
@@ -24550,24 +24586,8 @@
         "1 à 2 tartines complètes"
       ],
       "steps": [],
-      "robot": [
-        "⭐⭐⭐⭐ parfait.",
-        "🥚 Œufs",
-        "🧀 St Môret",
-        "🧀 Mozzarella",
-        "🧀 Feta",
-        "🥒 Concombre",
-        "🍅 Tomates"
-      ],
-      "notes": [
-        "🥒 Courgettes",
-        "🐟 Saumon fumé",
-        "🍝 Pâtes",
-        "🥖 Pain complet",
-        "🍚 Riz",
-        "🥫 Thon",
-        "🍗 Jambon"
-      ],
+      "robot": [],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -24589,37 +24609,6 @@
           "title": "🍞 🥖 Pain :",
           "lines": [
             "✅ 1 à 2 tartines complètes"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "⚪ Déjà présent"
-          ]
-        },
-        {
-          "title": "🤖 MR CUISINE Smart :",
-          "lines": [
-            "⭐⭐⭐⭐ parfait.",
-            "🛒 MINI LISTE DE COURSES EXPRESS À AVOIR TOUJOURS",
-            "🥚 Œufs",
-            "🧀 St Môret",
-            "🧀 Mozzarella",
-            "🧀 Feta",
-            "🥒 Concombre",
-            "🍅 Tomates"
-          ]
-        },
-        {
-          "title": "🥗 Salade",
-          "lines": [
-            "🥒 Courgettes",
-            "🐟 Saumon fumé",
-            "🍝 Pâtes",
-            "🥖 Pain complet",
-            "🍚 Riz",
-            "🥫 Thon",
-            "🍗 Jambon"
           ]
         }
       ],
@@ -27078,9 +27067,7 @@
         "1 à 2 tartines complètes grillées"
       ],
       "steps": [],
-      "robot": [
-        "⭐⭐⭐⭐ idéal pour les soupes froides."
-      ],
+      "robot": [],
       "notes": [],
       "sections": [
         {
@@ -27104,18 +27091,6 @@
           "title": "🍞 🥖 Pain :",
           "lines": [
             "✅ 1 à 2 tartines complètes grillées"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "⚪ Déjà présent"
-          ]
-        },
-        {
-          "title": "🤖 MR CUISINE Smart :",
-          "lines": [
-            "⭐⭐⭐⭐ idéal pour les soupes froides."
           ]
         }
       ],
@@ -27569,8 +27544,6 @@
         "poivrons",
         "🥒 courgettes grillées",
         "🍅 tomates provençales",
-        "thym",
-        "ail",
         "⚠️ Tortilla à la place"
       ],
       "steps": [],
@@ -27584,9 +27557,6 @@
         "Préparer une garniture prête pour plusieurs jours"
       ],
       "notes": [
-        "🥔 Pommes de terre grenaille aux herbes",
-        "(je garde une petite partie car tu en fais peu 😉)",
-        "🍓 Salade de fruits frais",
         "🌯 wraps",
         "🥗 salades",
         "🍚 bowls",
@@ -27594,36 +27564,31 @@
       ],
       "sections": [
         {
-          "title": "Avec :",
+          "title": "🤖 Avec MR CUISINE Smart",
           "lines": [
-            "🥒 courgettes grillées",
-            "🍅 tomates provençales"
+            "✅ Hacher les légumes",
+            "✅ Préparer la marinade",
+            "✅ Cuire doucement le poulet",
+            "✅ Préparer une garniture prête pour plusieurs jours"
           ]
         },
         {
-          "title": "Accompagnement :",
+          "title": "Utilisations :",
           "lines": [
-            "🥔 Pommes de terre grenaille aux herbes"
+            "🌯 wraps",
+            "🥗 salades",
+            "🍚 bowls"
           ]
         },
         {
-          "title": "🌿 Épices :",
+          "title": "⏱️ Temps :",
           "lines": [
-            "thym",
-            "paprika",
-            "ail"
-          ]
-        },
-        {
-          "title": "Dessert invité :",
-          "lines": [
-            "(je garde une petite partie car tu en fais peu 😉)",
-            "🍓 Salade de fruits frais"
+            "➡️ environ 30 minutes"
           ]
         }
       ],
       "source": "ETE 2",
-      "blurb": "citron huile d’olive"
+      "blurb": "paprika fumé cumin"
     },
     {
       "id": "r-9a0e8072d2",
@@ -27635,13 +27600,9 @@
         "ciboulette"
       ],
       "steps": [],
-      "robot": [
-        "Œufs durs"
-      ],
+      "robot": [],
       "notes": [
-        "🥑 avocat",
-        "🐟 saumon fumé",
-        "🍅 tomate"
+        "🥑 avocat"
       ],
       "sections": [
         {
@@ -27656,11 +27617,22 @@
         {
           "title": "🔄 Variantes :",
           "lines": [
-            "🥑 avocat",
-            "🐟 saumon fumé",
-            "🍅 tomate"
+            "🥑 avocat"
           ]
-        },
+        }
+      ],
+      "source": "ETE 2"
+    },
+    {
+      "id": "r-9a84e2cfcf",
+      "name": "🐟 saumon fumé",
+      "ingredients": [],
+      "steps": [],
+      "robot": [
+        "Œufs durs"
+      ],
+      "notes": [],
+      "sections": [
         {
           "title": "🤖 MR CUISINE :",
           "lines": [
@@ -27668,7 +27640,8 @@
           ]
         }
       ],
-      "source": "ETE 2"
+      "source": "ETE 2",
+      "blurb": "🍅 tomate"
     },
     {
       "id": "r-68f05ec51f",
@@ -27859,19 +27832,16 @@
     {
       "id": "r-291b2944c5",
       "name": "🧀 Plateau apéro équilibré terrasse",
-      "ingredients": [],
-      "steps": [],
-      "robot": [
-        "Rillettes de thon"
-      ],
-      "notes": [
+      "ingredients": [
         "🥒 bâtonnets de légumes",
         "🍅 tomates cerises",
         "🧀 cubes de fromage",
         "🐟 rillettes de thon maison",
-        "🥚 œufs mimosa",
-        "🥜 quelques noix"
+        "🥚 œufs mimosa"
       ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
       "sections": [
         {
           "title": "À préparer :",
@@ -27880,10 +27850,22 @@
             "🍅 tomates cerises",
             "🧀 cubes de fromage",
             "🐟 rillettes de thon maison",
-            "🥚 œufs mimosa",
-            "🥜 quelques noix"
+            "🥚 œufs mimosa"
           ]
-        },
+        }
+      ],
+      "source": "ETE 2"
+    },
+    {
+      "id": "r-fa4268ac37",
+      "name": "🥜 quelques noix",
+      "ingredients": [],
+      "steps": [],
+      "robot": [
+        "Rillettes de thon"
+      ],
+      "notes": [],
+      "sections": [
         {
           "title": "🤖 MR CUISINE :",
           "lines": [
@@ -28268,6 +28250,24 @@
       ],
       "source": "AUTOMNE",
       "blurb": "Parce qu’il faut aussi garder les plaisirs 😍"
+    },
+    {
+      "id": "r-9a7861ed08",
+      "name": "🥕 légumes de saison",
+      "ingredients": [],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
+        {
+          "title": "🧀 fromage plaisir intégré",
+          "lines": [
+            "🥚 œufs conservés",
+            "🐟 poissons et viandes variés"
+          ]
+        }
+      ],
+      "source": "HIVER"
     },
     {
       "id": "r-ce2dcf496b",
@@ -29549,45 +29549,9 @@
       ],
       "steps": [],
       "robot": [
-        "Velouté champignons",
-        "🥐 PETITS AMUSE-BOUCHES CHAUDS",
-        "🍕 Mini pizzas maison",
-        "Pâte à pizza",
-        "🥟 Samoussas"
+        "Velouté champignons"
       ],
-      "notes": [
-        "mozzarella basilic",
-        "jambon champignons",
-        "chèvre miel",
-        "🥟 Poulet curry",
-        "🥟 Bœuf paprika",
-        "🥟 Saumon poireaux",
-        "➡️ four ou air chaud si tu as un appareil adapté.",
-        "🥐 Feuilletés express",
-        "jambon fromage",
-        "pesto mozzarella",
-        "chèvre miel",
-        "saumon fumé fromage frais",
-        "🍢 Brochettes froides",
-        "🍅 tomate cerise",
-        "⚪ mozzarella",
-        "🌿 basilic",
-        "🍐 poire",
-        "🧀 gorgonzola",
-        "🌰 noix",
-        "🛒 KIT APÉRO À TOUJOURS AVOIR",
-        "🧀 St Môret",
-        "🧀 Feta",
-        "🧀 Chèvre frais",
-        "🐟 Saumon fumé (congélation possible)",
-        "🍤 Crevettes",
-        "🥚 Œufs",
-        "🍅 Tomates cerises",
-        "🥒 Concombre",
-        "🥖 Pain complet",
-        "🌿 Herbes fraîches",
-        "🥜 Noix/amandes"
-      ],
+      "notes": [],
       "sections": [
         {
           "title": "🛒 Ingrédients :",
@@ -29612,13 +29576,29 @@
         {
           "title": "🤖 Recherche :",
           "lines": [
-            "\"Velouté champignons\"",
-            "🥐 PETITS AMUSE-BOUCHES CHAUDS",
-            "🍕 Mini pizzas maison"
+            "\"Velouté champignons\""
           ]
-        },
+        }
+      ],
+      "source": "APERO VERRINES AB",
+      "blurb": "Version repas de fête ✨"
+    },
+    {
+      "id": "r-c9c718a4d8",
+      "name": "🍕 Mini pizzas maison",
+      "ingredients": [
+        "mozzarella basilic",
+        "jambon champignons",
+        "chèvre miel"
+      ],
+      "steps": [],
+      "robot": [
+        "Pâte à pizza"
+      ],
+      "notes": [],
+      "sections": [
         {
-          "title": "Garnitures :",
+          "title": "🧀 Garnitures :",
           "lines": [
             "mozzarella basilic",
             "jambon champignons",
@@ -29628,12 +29608,29 @@
         {
           "title": "🤖 MR CUISINE Smart :",
           "lines": [
-            "\"Pâte à pizza\"",
-            "🥟 Samoussas"
+            "\"Pâte à pizza\""
           ]
-        },
+        }
+      ],
+      "source": "APERO VERRINES AB"
+    },
+    {
+      "id": "r-0ca6f8e023",
+      "name": "🥟 Samoussas",
+      "ingredients": [
+        "🥟 Poulet curry",
+        "🥟 Bœuf paprika",
+        "🥟 Saumon poireaux",
+        "➡️ four ou air chaud si tu as un appareil adapté."
+      ],
+      "steps": [
+        "Cuisson :"
+      ],
+      "robot": [],
+      "notes": [],
+      "sections": [
         {
-          "title": "Versions :",
+          "title": "🔄 Versions :",
           "lines": [
             "🥟 Poulet curry",
             "🥟 Bœuf paprika",
@@ -29643,20 +29640,52 @@
         {
           "title": "Cuisson :",
           "lines": [
-            "➡️ four ou air chaud si tu as un appareil adapté.",
-            "🥐 Feuilletés express"
+            "➡️ four ou air chaud si tu as un appareil adapté."
           ]
-        },
+        }
+      ],
+      "source": "APERO VERRINES AB"
+    },
+    {
+      "id": "r-d6ce8ca249",
+      "name": "🥐 Feuilletés express",
+      "ingredients": [
+        "jambon fromage",
+        "pesto mozzarella",
+        "chèvre miel",
+        "saumon fumé fromage frais"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
         {
-          "title": "Idées :",
+          "title": "💡 Idées :",
           "lines": [
             "jambon fromage",
             "pesto mozzarella",
             "chèvre miel",
-            "saumon fumé fromage frais",
-            "🍢 Brochettes froides"
+            "saumon fumé fromage frais"
           ]
-        },
+        }
+      ],
+      "source": "APERO VERRINES AB"
+    },
+    {
+      "id": "r-d018093264",
+      "name": "🍢 Brochettes froides",
+      "ingredients": [
+        "🍅 tomate cerise",
+        "⚪ mozzarella",
+        "🌿 basilic",
+        "🍐 poire",
+        "🧀 gorgonzola",
+        "🌰 noix"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
+      "sections": [
         {
           "title": "Version été :",
           "lines": [
@@ -29670,28 +29699,15 @@
           "lines": [
             "🍐 poire",
             "🧀 gorgonzola",
-            "🌰 noix",
-            "🛒 KIT APÉRO À TOUJOURS AVOIR",
-            "🧀 St Môret",
-            "🧀 Feta",
-            "🧀 Chèvre frais",
-            "🐟 Saumon fumé (congélation possible)",
-            "🍤 Crevettes",
-            "🥚 Œufs",
-            "🍅 Tomates cerises",
-            "🥒 Concombre",
-            "🥖 Pain complet",
-            "🌿 Herbes fraîches",
-            "🥜 Noix/amandes"
+            "🌰 noix"
           ]
         }
       ],
-      "source": "APERO VERRINES AB",
-      "blurb": "Version repas de fête ✨"
+      "source": "APERO VERRINES AB"
     },
     {
-      "id": "r-c27d71faed",
-      "name": "🥚 Tartine complète œuf avocat St Môret",
+      "id": "r-638340000d",
+      "name": "⏱️ 10 minutes",
       "ingredients": [
         "pain complet",
         "St Môret",
@@ -29703,9 +29719,7 @@
         "poivre"
       ],
       "steps": [],
-      "robot": [
-        "Œufs durs"
-      ],
+      "robot": [],
       "notes": [],
       "sections": [
         {
@@ -29725,43 +29739,33 @@
             "paprika",
             "poivre"
           ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "⚪ Déjà présent"
-          ]
-        },
-        {
-          "title": "🤖 MR CUISINE Smart :",
-          "lines": []
-        },
-        {
-          "title": "🤖 Recherche :",
-          "lines": [
-            "\"Œufs durs\""
-          ]
         }
       ],
-      "source": "JE SUIS FATIGUEE",
-      "blurb": "⏱️ 10 minutes"
+      "source": "JE SUIS FATIGUEE"
     },
     {
-      "id": "r-50f64b1080",
-      "name": "🍝 Pâtes express sauce tomate maison",
+      "id": "r-16136a4e46",
+      "name": "⏱️ 15 minutes",
       "ingredients": [
         "pâtes",
         "sauce tomate maison congelée",
         "parmesan",
         "basilic",
-        "origan"
+        "origan",
+        "saumon fumé",
+        "pommes de terre vapeur",
+        "salade",
+        "fromage blanc citronné",
+        "aneth",
+        "ciboulette"
       ],
       "steps": [],
       "robot": [
         "Sauce tomate"
       ],
       "notes": [
-        "➡️ 20-30 g"
+        "➡️ 20-30 g",
+        "1 tranche complète si besoin"
       ],
       "sections": [
         {
@@ -29796,51 +29800,7 @@
           ]
         }
       ],
-      "source": "JE SUIS FATIGUEE",
-      "blurb": "⏱️ 15 minutes"
-    },
-    {
-      "id": "r-d5da6a7f15",
-      "name": "🐟 Saumon fumé & pommes de terre minute",
-      "ingredients": [
-        "saumon fumé",
-        "pommes de terre vapeur",
-        "salade",
-        "fromage blanc citronné",
-        "aneth",
-        "ciboulette"
-      ],
-      "steps": [],
-      "robot": [],
-      "notes": [
-        "1 tranche complète si besoin"
-      ],
-      "sections": [
-        {
-          "title": "🛒 Ingrédients :",
-          "lines": [
-            "saumon fumé",
-            "pommes de terre vapeur",
-            "salade",
-            "fromage blanc citronné"
-          ]
-        },
-        {
-          "title": "🌿 Épices :",
-          "lines": [
-            "aneth",
-            "ciboulette"
-          ]
-        },
-        {
-          "title": "Option :",
-          "lines": [
-            "1 tranche complète si besoin"
-          ]
-        }
-      ],
-      "source": "JE SUIS FATIGUEE",
-      "blurb": "⏱️ 15 minutes"
+      "source": "JE SUIS FATIGUEE"
     },
     {
       "id": "r-a373d67eb6",
@@ -29932,8 +29892,8 @@
       "source": "JE SUIS FATIGUEE"
     },
     {
-      "id": "r-f39050adb8",
-      "name": "🌯 Wrap chaud poulet fromage",
+      "id": "r-910697e14c",
+      "name": "⏱️ 10-15 minutes",
       "ingredients": [
         "tortilla complète",
         "poulet restant",
@@ -29975,8 +29935,7 @@
           ]
         }
       ],
-      "source": "JE SUIS FATIGUEE",
-      "blurb": "⏱️ 10-15 minutes"
+      "source": "JE SUIS FATIGUEE"
     },
     {
       "id": "r-a36eca5de2",
@@ -30032,8 +29991,8 @@
       "source": "JE SUIS FATIGUEE"
     },
     {
-      "id": "r-5ab6473efd",
-      "name": "🐟 Cabillaud tomate courgettes express",
+      "id": "r-efd13626fe",
+      "name": "⏱️ 20 minutes",
       "ingredients": [
         "cabillaud",
         "courgettes",
@@ -30075,8 +30034,7 @@
           ]
         }
       ],
-      "source": "JE SUIS FATIGUEE",
-      "blurb": "⏱️ 20 minutes"
+      "source": "JE SUIS FATIGUEE"
     },
     {
       "id": "r-26c39ad517",
@@ -30174,8 +30132,8 @@
       "source": "JE SUIS FATIGUEE"
     },
     {
-      "id": "r-4b32000151",
-      "name": "☀️ Apéro terrasse d’été",
+      "id": "r-77321f17d7",
+      "name": "🥒 Verrines avocat crevettes citron",
       "ingredients": [
         "avocat",
         "crevettes",
@@ -30215,8 +30173,7 @@
           ]
         }
       ],
-      "source": "RECEVOIR DES INVITES",
-      "blurb": "🥒 Verrines avocat crevettes citron"
+      "source": "RECEVOIR DES INVITES"
     },
     {
       "id": "r-01f05a70bc",
@@ -30370,8 +30327,41 @@
       "source": "RECEVOIR DES INVITES"
     },
     {
-      "id": "r-0cf4a80784",
-      "name": "🎄 Repas de Noël ou fêtes",
+      "id": "r-570d3ee146",
+      "name": "🥔 Pommes de terre grenaille aux herbes",
+      "ingredients": [
+        "thym",
+        "paprika",
+        "ail"
+      ],
+      "steps": [],
+      "robot": [],
+      "notes": [
+        "(je garde une petite partie car tu en fais peu 😉)",
+        "🍓 Salade de fruits frais"
+      ],
+      "sections": [
+        {
+          "title": "🌿 Épices :",
+          "lines": [
+            "thym",
+            "paprika",
+            "ail"
+          ]
+        },
+        {
+          "title": "Dessert invité :",
+          "lines": [
+            "(je garde une petite partie car tu en fais peu 😉)",
+            "🍓 Salade de fruits frais"
+          ]
+        }
+      ],
+      "source": "RECEVOIR DES INVITES"
+    },
+    {
+      "id": "r-8aa6f62f61",
+      "name": "🥂 Mini verrines saumon fumé",
       "ingredients": [
         "saumon fumé",
         "fromage frais",
@@ -30380,16 +30370,8 @@
       ],
       "steps": [],
       "robot": [],
-      "notes": [
-        "🥂 Mini verrines saumon fumé"
-      ],
+      "notes": [],
       "sections": [
-        {
-          "title": "Apéritif :",
-          "lines": [
-            "🥂 Mini verrines saumon fumé"
-          ]
-        },
         {
           "title": "🛒 Ingrédients :",
           "lines": [
@@ -34813,6 +34795,142 @@
       "blurb": "On termine cette série avec une recette pleine de couleurs ☀️❤️"
     },
     {
+      "id": "r-f756d2c53e",
+      "name": "🍫 chocolat noir",
+      "ingredients": [],
+      "steps": [],
+      "robot": [
+        "Gâteau au yaourt"
+      ],
+      "notes": [],
+      "sections": [
+        {
+          "title": "🤖 Recherche :",
+          "lines": [
+            "\"Gâteau au yaourt\""
+          ]
+        }
+      ],
+      "source": "MR CUISINE",
+      "blurb": "🍋 citron"
+    },
+    {
+      "id": "r-cfc62d8178",
+      "name": "🐟 thon tomate",
+      "ingredients": [],
+      "steps": [],
+      "robot": [
+        "Quiche"
+      ],
+      "notes": [],
+      "sections": [
+        {
+          "title": "🤖 Recherche :",
+          "lines": [
+            "\"Quiche\""
+          ]
+        }
+      ],
+      "source": "MR CUISINE"
+    },
+    {
+      "id": "r-bac7e05aac",
+      "name": "🥚 œuf fromage",
+      "ingredients": [],
+      "steps": [],
+      "robot": [
+        "Pâte à crêpes"
+      ],
+      "notes": [],
+      "sections": [
+        {
+          "title": "🤖 Recherche :",
+          "lines": [
+            "\"Pâte à crêpes\""
+          ]
+        }
+      ],
+      "source": "MR CUISINE"
+    },
+    {
+      "id": "r-bcb36c699b",
+      "name": "🍳 œufs à la tomate",
+      "ingredients": [],
+      "steps": [],
+      "robot": [
+        "Coulis de tomates"
+      ],
+      "notes": [],
+      "sections": [
+        {
+          "title": "🤖 Recherche :",
+          "lines": [
+            "\"Coulis de tomates\""
+          ]
+        }
+      ],
+      "source": "MR CUISINE"
+    },
+    {
+      "id": "r-35f1833eb2",
+      "name": "🥚 œufs cocotte",
+      "ingredients": [
+        "poireaux",
+        "crème légère",
+        "moutarde douce",
+        "poivre",
+        "muscade"
+      ],
+      "steps": [],
+      "robot": [
+        "Fondue de poireaux"
+      ],
+      "notes": [],
+      "sections": [
+        {
+          "title": "🛒 Ingrédients :",
+          "lines": [
+            "poireaux",
+            "crème légère",
+            "moutarde douce"
+          ]
+        },
+        {
+          "title": "🌿 Épices :",
+          "lines": [
+            "poivre",
+            "muscade"
+          ]
+        },
+        {
+          "title": "🤖 Recherche :",
+          "lines": [
+            "\"Fondue de poireaux\""
+          ]
+        }
+      ],
+      "source": "MR CUISINE"
+    },
+    {
+      "id": "r-615c01edc2",
+      "name": "🐟 saumon poireaux",
+      "ingredients": [],
+      "steps": [],
+      "robot": [
+        "Flan de légumes"
+      ],
+      "notes": [],
+      "sections": [
+        {
+          "title": "🤖 Recherche :",
+          "lines": [
+            "\"Flan de légumes\""
+          ]
+        }
+      ],
+      "source": "MR CUISINE"
+    },
+    {
       "id": "r-bb6f9bfee0",
       "name": "🍲 Velouté complet courgettes, poireaux & poulet",
       "ingredients": [
@@ -35060,8 +35178,7 @@
         "➡️ 25 minutes",
         "🍕 tortillas pizza",
         "🍝 pâtes",
-        "🌯 wraps",
-        "🥘 plats mijotés"
+        "🌯 wraps"
       ],
       "sections": [
         {
@@ -35101,8 +35218,7 @@
           "lines": [
             "🍕 tortillas pizza",
             "🍝 pâtes",
-            "🌯 wraps",
-            "🥘 plats mijotés"
+            "🌯 wraps"
           ]
         }
       ],
@@ -36128,8 +36244,7 @@
         "➡️ environ 50 minutes",
         "🍗 avec du poulet",
         "🐟 avec du poisson",
-        "🍳 avec des œufs",
-        "🍚 avec du riz"
+        "🍳 avec des œufs"
       ],
       "sections": [
         {
@@ -36176,8 +36291,7 @@
           "lines": [
             "🍗 avec du poulet",
             "🐟 avec du poisson",
-            "🍳 avec des œufs",
-            "🍚 avec du riz"
+            "🍳 avec des œufs"
           ]
         }
       ],
@@ -37991,12 +38105,6 @@
           "lines": [
             "➡️ environ 40 minutes"
           ]
-        },
-        {
-          "title": "🍞 Pain :",
-          "lines": [
-            "❌ Pas nécessaire"
-          ]
         }
       ],
       "source": "MR CUISINE",
@@ -38385,29 +38493,42 @@
     {
       "id": "r-421c0d31ea",
       "name": "🍲 Soupes maison en portions",
-      "ingredients": [],
-      "steps": [],
-      "robot": [
-        "Velouté"
-      ],
-      "notes": [
+      "ingredients": [
         "🥣 Courgettes St Môret",
-        "🥣 Courge curry",
-        "🥣 Carottes coco",
-        "🥣 Champignons",
-        "pots individuels",
-        "Sortir le matin → prêt le soir."
+        "🥣 Courge curry"
       ],
+      "steps": [],
+      "robot": [],
+      "notes": [],
       "sections": [
         {
           "title": "À préparer :",
           "lines": [
             "🥣 Courgettes St Môret",
-            "🥣 Courge curry",
-            "🥣 Carottes coco",
-            "🥣 Champignons"
+            "🥣 Courge curry"
           ]
-        },
+        }
+      ],
+      "source": "MR CUISINE 3"
+    },
+    {
+      "id": "r-6930a9d64c",
+      "name": "🥣 Carottes coco",
+      "ingredients": [
+        "curry doux : 1/2 c. à café",
+        "cumin : 1 pincée",
+        "poivre",
+        "paprika fumé : 1/2 c. à café"
+      ],
+      "steps": [],
+      "robot": [
+        "Velouté"
+      ],
+      "notes": [
+        "pots individuels",
+        "Sortir le matin → prêt le soir."
+      ],
+      "sections": [
         {
           "title": "🤖 MR CUISINE :",
           "lines": []
@@ -38431,7 +38552,8 @@
           ]
         }
       ],
-      "source": "MR CUISINE 3"
+      "source": "MR CUISINE 3",
+      "blurb": "🥣 Champignons"
     },
     {
       "id": "r-a64a37703a",
@@ -38504,18 +38626,18 @@
     {
       "id": "r-c3336c37fd",
       "name": "🍗 Poulet effiloché",
-      "ingredients": [],
-      "steps": [],
-      "robot": [
-        "Poulet vapeur"
-      ],
-      "notes": [
+      "ingredients": [
         "blancs de poulet",
-        "bouillon",
+        "bouillon"
+      ],
+      "steps": [
+        "Préparer :"
+      ],
+      "robot": [],
+      "notes": [
         "🌯 wraps",
         "🥗 salades",
-        "🥪 sandwichs complets",
-        "🍚 riz sauté"
+        "🥪 sandwichs complets"
       ],
       "sections": [
         {
@@ -38530,10 +38652,23 @@
           "lines": [
             "🌯 wraps",
             "🥗 salades",
-            "🥪 sandwichs complets",
-            "🍚 riz sauté"
+            "🥪 sandwichs complets"
           ]
-        },
+        }
+      ],
+      "source": "MR CUISINE 3",
+      "blurb": "Très pratique !"
+    },
+    {
+      "id": "r-0e6499780e",
+      "name": "🍚 riz sauté",
+      "ingredients": [],
+      "steps": [],
+      "robot": [
+        "Poulet vapeur"
+      ],
+      "notes": [],
+      "sections": [
         {
           "title": "🤖 Recherche :",
           "lines": [
@@ -38541,8 +38676,7 @@
           ]
         }
       ],
-      "source": "MR CUISINE 3",
-      "blurb": "Très pratique !"
+      "source": "MR CUISINE 3"
     },
     {
       "id": "r-37e800220c",
@@ -38621,16 +38755,15 @@
     {
       "id": "r-a77fa5b70f",
       "name": "🥣 Fondue de poireaux",
-      "ingredients": [],
-      "steps": [],
-      "robot": [
-        "Fondue de poireaux"
+      "ingredients": [
+        "À congeler en petites portions."
       ],
+      "steps": [],
+      "robot": [],
       "notes": [
         "🐟 saumon",
         "🥧 quiche",
-        "🍝 pâtes",
-        "🥚 œufs cocotte"
+        "🍝 pâtes"
       ],
       "sections": [
         {
@@ -38638,14 +38771,7 @@
           "lines": [
             "🐟 saumon",
             "🥧 quiche",
-            "🍝 pâtes",
-            "🥚 œufs cocotte"
-          ]
-        },
-        {
-          "title": "🤖 Recherche :",
-          "lines": [
-            "\"Fondue de poireaux\""
+            "🍝 pâtes"
           ]
         }
       ],
@@ -38696,17 +38822,7 @@
     {
       "id": "r-422181cf69",
       "name": "🧀 Garnitures apéro prêtes",
-      "ingredients": [
-        "❄️ Ce que je peux toujours avoir au congélateur :",
-        "sauce tomate maison",
-        "soupe en portions",
-        "légumes grillés",
-        "boulettes maison",
-        "poulet effiloché",
-        "fondue de poireaux",
-        "pesto",
-        "pain complet tranché"
-      ],
+      "ingredients": [],
       "steps": [],
       "robot": [
         "Pesto"
@@ -38740,17 +38856,7 @@
         {
           "title": "🥣 \"Sauce\"",
           "lines": [
-            "📌 PAGE ASTUCE À METTRE DANS TON CLASSEUR",
-            "❄️ Ce que je peux toujours avoir au congélateur :",
-            "✅ sauce tomate maison",
-            "✅ soupe en portions",
-            "✅ légumes grillés",
-            "✅ boulettes maison",
-            "✅ poulet effiloché",
-            "✅ fondue de poireaux",
-            "✅ pesto",
-            "✅ pain complet tranché",
-            "🛒 LISTE \"SECOURS\" QUAND JE N’AI PAS ENVIE DE CUISINER"
+            "📌 PAGE ASTUCE À METTRE DANS TON CLASSEUR"
           ]
         }
       ],
@@ -39520,7 +39626,7 @@
         "basilic"
       ],
       "steps": [
-        "Mixage de la tartinade"
+        "Découpe possible des légumes"
       ],
       "robot": [],
       "notes": [],
@@ -46986,7 +47092,7 @@
       "day": "LUNDI",
       "meal": "Midi",
       "name": "🐟 Maquereaux moutarde & pommes de terre",
-      "recipeId": "r-79f9f3b7c4"
+      "recipeId": "r-cf9d5e66cb"
     },
     {
       "week": 4,
@@ -47231,7 +47337,7 @@
       "day": "JEUDI",
       "meal": "Soir",
       "name": "🥗 Salade repas méditerranéenne",
-      "recipeId": "r-68f05ec51f"
+      "recipeId": "r-05b735f44d"
     },
     {
       "week": 6,
@@ -47399,7 +47505,7 @@
       "day": "MARDI",
       "meal": "Soir",
       "name": "🥔 Pommes de terre garnies façon repas complet",
-      "recipeId": "r-9f56f26c45"
+      "recipeId": "r-cf9d5e66cb"
     },
     {
       "week": 8,
@@ -47707,7 +47813,7 @@
       "day": "MERCREDI",
       "meal": "Soir",
       "name": "🥚 Œufs cocotte épinards/chèvre",
-      "recipeId": "r-ea69524e92"
+      "recipeId": "r-35f1833eb2"
     },
     {
       "week": 11,
@@ -48267,7 +48373,7 @@
       "day": "LUNDI",
       "meal": "Soir",
       "name": "🥚 Œufs cocotte tomate basilic",
-      "recipeId": "r-ea69524e92"
+      "recipeId": "r-35f1833eb2"
     },
     {
       "week": 17,
@@ -48295,7 +48401,7 @@
       "day": "MERCREDI",
       "meal": "Soir",
       "name": "🥣 Velouté poireaux pommes de terre",
-      "recipeId": "r-5e88cfd057"
+      "recipeId": "r-cf9d5e66cb"
     },
     {
       "week": 17,
@@ -48687,7 +48793,7 @@
       "day": "JEUDI",
       "meal": "Soir",
       "name": "🥗 Salade méditerranéenne",
-      "recipeId": "r-68f05ec51f"
+      "recipeId": "r-05b735f44d"
     },
     {
       "week": 21,
@@ -48918,7 +49024,7 @@
       "day": "DIMANCHE",
       "meal": "Midi",
       "name": "🍖 Rôti de bœuf, légumes rôtis & pommes de terre",
-      "recipeId": "r-1604da1a6a"
+      "recipeId": "r-cf9d5e66cb"
     },
     {
       "week": 23,
@@ -48953,7 +49059,7 @@
       "day": "MARDI",
       "meal": "Soir",
       "name": "🥣 Velouté poireaux pommes de terre + tartine",
-      "recipeId": "r-5e88cfd057"
+      "recipeId": "r-cf9d5e66cb"
     },
     {
       "week": 24,
@@ -49506,7 +49612,7 @@
       "day": "DIMANCHE",
       "meal": "Midi",
       "name": "🍖 Filet mignon moutarde & légumes rôtis",
-      "recipeId": "r-ea69524e92"
+      "recipeId": "r-0aff2c7b56"
     },
     {
       "week": 29,
@@ -49604,7 +49710,7 @@
       "day": "DIMANCHE",
       "meal": "Midi",
       "name": "🍖 Rôti de bœuf sauce moutarde & légumes rôtis",
-      "recipeId": "r-1604da1a6a"
+      "recipeId": "r-0aff2c7b56"
     },
     {
       "week": 30,
@@ -50171,7 +50277,7 @@
       "day": "LUNDI",
       "meal": "Soir",
       "name": "🥗 Salade tiède de légumes rôtis & chèvre",
-      "recipeId": "r-e74139914e"
+      "recipeId": "r-0aff2c7b56"
     },
     {
       "week": 37,
@@ -50465,7 +50571,7 @@
       "day": "LUNDI",
       "meal": "Soir",
       "name": "🥗 Salade tiède de légumes rôtis & œufs",
-      "recipeId": "r-e74139914e"
+      "recipeId": "r-0aff2c7b56"
     },
     {
       "week": 40,
@@ -50535,7 +50641,7 @@
       "day": "SAMEDI",
       "meal": "Soir",
       "name": "🇮🇹 Bruschettas italiennes & salade méditerranéenne",
-      "recipeId": "r-047f7424eb"
+      "recipeId": "r-05b735f44d"
     },
     {
       "week": 40,
@@ -50563,7 +50669,7 @@
       "day": "LUNDI",
       "meal": "Soir",
       "name": "🥗 Salade de lentilles corail façon méditerranéenne",
-      "recipeId": "r-8cb821d384"
+      "recipeId": "r-05b735f44d"
     },
     {
       "week": 41,
@@ -50899,7 +51005,7 @@
       "day": "JEUDI",
       "meal": "Soir",
       "name": "🥣 Velouté carottes-coco & tartines de maquereaux",
-      "recipeId": "r-089cee7987"
+      "recipeId": "r-6930a9d64c"
     },
     {
       "week": 44,
@@ -51200,7 +51306,7 @@
       "day": "VENDREDI",
       "meal": "Midi",
       "name": "🐟 Filets de colin sauce citron & légumes rôtis",
-      "recipeId": "r-2fbacfb4db"
+      "recipeId": "r-0aff2c7b56"
     },
     {
       "week": 47,
@@ -51389,7 +51495,7 @@
       "day": "JEUDI",
       "meal": "Soir",
       "name": "🥗 Salade de lentilles corail façon méditerranéenne",
-      "recipeId": "r-8cb821d384"
+      "recipeId": "r-05b735f44d"
     },
     {
       "week": 49,
@@ -91915,7 +92021,7 @@
       "blurb": "Toutes les sauces du carnet.",
       "recipeIds": [
         "r-6a536a8796",
-        "r-1b35485d7b",
+        "r-0aff2c7b56",
         "r-01dfb0c638",
         "r-ed136e86f9",
         "r-d810d08dfd",
@@ -91990,13 +92096,20 @@
         "r-2b72316717",
         "r-943f15fbe2",
         "r-e5b6c7beb1",
+        "r-bbee576cfa",
         "r-cc0110cfac",
+        "r-05b735f44d",
         "r-0fb1660969",
+        "r-b98c773116",
         "r-39b79f5312",
+        "r-7e9ac7cf02",
         "r-c526145b8c",
+        "r-d7a5212511",
         "r-30b15ff2e3",
         "r-b6e0c1f1bb",
+        "r-cf9d5e66cb",
         "r-c52e7c5a0c",
+        "r-a59202e976",
         "r-6a927551a7",
         "r-b5131d111b"
       ]
@@ -92008,7 +92121,8 @@
       "recipeIds": [
         "r-376d7c7d61",
         "r-0590c1550b",
-        "r-cc1cb0b455",
+        "r-bde818470e",
+        "r-6ad1d6e8d8",
         "r-5683efa1c7",
         "r-6d9464bdf0",
         "r-860ef4c338",
@@ -92057,6 +92171,7 @@
         "r-27adcd34e6",
         "r-19acbc340f",
         "r-478ccb8641",
+        "r-6ad1d6e8d8",
         "r-be651a77eb",
         "r-c450588386",
         "r-8aa2b04e7d",
@@ -92069,11 +92184,13 @@
         "r-c8e91f61d6",
         "r-43f1667b8e",
         "r-9a0e8072d2",
+        "r-9a84e2cfcf",
         "r-68f05ec51f",
         "r-a1648b2f0a",
         "r-16b9a93f41",
         "r-4c3c676c65",
-        "r-291b2944c5"
+        "r-291b2944c5",
+        "r-fa4268ac37"
       ]
     },
     {
@@ -92098,6 +92215,7 @@
       "name": "Hiver",
       "blurb": "Soupes et plats chauds.",
       "recipeIds": [
+        "r-9a7861ed08",
         "r-ce2dcf496b",
         "r-56ef344d3c",
         "r-21c5d3d2ba",
@@ -92145,7 +92263,11 @@
         "r-059416b732",
         "r-c27caf2e83",
         "r-20345d4e26",
-        "r-d4f308c720"
+        "r-d4f308c720",
+        "r-c9c718a4d8",
+        "r-0ca6f8e023",
+        "r-d6ce8ca249",
+        "r-d018093264"
       ]
     },
     {
@@ -92153,14 +92275,14 @@
       "name": "Je suis fatiguée",
       "blurb": "En rentrant du travail.",
       "recipeIds": [
-        "r-c27d71faed",
-        "r-50f64b1080",
-        "r-d5da6a7f15",
+        "r-638340000d",
+        "r-6ad1d6e8d8",
+        "r-16136a4e46",
         "r-a373d67eb6",
         "r-63e8770e3f",
-        "r-f39050adb8",
+        "r-910697e14c",
         "r-a36eca5de2",
-        "r-5ab6473efd",
+        "r-efd13626fe",
         "r-26c39ad517",
         "r-46db79901d"
       ]
@@ -92170,13 +92292,14 @@
       "name": "Recevoir",
       "blurb": "Quand il y a du monde.",
       "recipeIds": [
-        "r-4b32000151",
+        "r-77321f17d7",
         "r-01f05a70bc",
         "r-76f65ddf01",
         "r-0e364bc1eb",
         "r-9958fa88f3",
         "r-43f1667b8e",
-        "r-0cf4a80784",
+        "r-570d3ee146",
+        "r-8aa6f62f61",
         "r-5754f74ea4",
         "r-72156ca948",
         "r-6d6b3ad6a7"
@@ -92273,6 +92396,7 @@
         "r-185194203e",
         "r-0f4e91c956",
         "r-14aa59c57e",
+        "r-f756d2c53e",
         "r-0afd842152",
         "r-e6ef289c1b",
         "r-1c4329d6f0",
@@ -92295,15 +92419,19 @@
         "r-e79335a6fc",
         "r-1e76dc3c99",
         "r-4eb3e0935b",
+        "r-cfc62d8178",
         "r-1a027a4e41",
+        "r-bac7e05aac",
         "r-bc488517c3",
         "r-28a62501be",
         "r-de1aff336d",
+        "r-bcb36c699b",
         "r-cca632b0a5",
         "r-9d21738040",
         "r-7e83748f10",
         "r-f7eaf272ce",
         "r-0ead00f1d6",
+        "r-35f1833eb2",
         "r-5a33ccfcfe",
         "r-63725d1501",
         "r-e585033a15",
@@ -92311,6 +92439,7 @@
         "r-520e2105e0",
         "r-8fba3255e5",
         "r-127e5d9b9c",
+        "r-615c01edc2",
         "r-bb6f9bfee0",
         "r-c2ef299d17",
         "r-1e1f0d67e6",
@@ -92364,8 +92493,10 @@
         "r-d4a2a550ce",
         "r-f8241b6268",
         "r-421c0d31ea",
+        "r-6930a9d64c",
         "r-a64a37703a",
         "r-c3336c37fd",
+        "r-0e6499780e",
         "r-37e800220c",
         "r-c2e2da7c3e",
         "r-a77fa5b70f",
