@@ -33,13 +33,12 @@ export default function HomePage() {
         <a
           href="/api/telecharger"
           download="Dans-mon-assiette.xlsx"
-          className="inline-flex items-center rounded-full bg-primary px-5 py-3 text-base font-medium text-primary-foreground hover:bg-primary/90"
+          className="inline-flex items-center rounded-full bg-primary px-6 py-4 text-lg font-semibold text-primary-foreground hover:bg-primary/90"
         >
-          Télécharger le classeur Excel
+          Télécharger Dans-mon-assiette.xlsx
         </a>
         <p className="text-sm text-muted-foreground">
-          Même première feuille que le carnet d’Aline : <strong>Dashboard</strong>, menu de la semaine,
-          clic vers la fiche. Plus de formules Google cassées.
+          Le fichier part de cette page, pas d’un site externe. Ensuite : Google Sheets → Fichier → Importer → Remplacer.
         </p>
       </section>
       <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
