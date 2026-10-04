@@ -1,6 +1,7 @@
 /**
- * À coller seulement si, après import du .xlsx, un plat n’est pas cliquable.
- * Extensions → Apps Script → coller → Exécuter activerLiens.
+ * À coller DANS le Google Sheet qui s’affiche déjà (carnet_aline_52_semaines).
+ * Extensions → Apps Script → tout effacer → coller → activerLiens → Exécuter.
+ * Ne vide rien. Rend chaque plat cliquable vers sa fiche.
  */
 function onOpen() {
   SpreadsheetApp.getUi()
@@ -11,34 +12,60 @@ function onOpen() {
 
 function activerLiens() {
   var ss = SpreadsheetApp.getActive();
-  var dash = ss.getSheetByName("Dashboard");
+  var dash = ss.getSheetByName("Dashboard") || ss.getSheets()[0];
   var fiche = ss.getSheetByName("Fiche_Recette");
   var courses = ss.getSheetByName("Courses");
   var batch = ss.getSheetByName("Batch");
-  if (!dash || !fiche) {
-    SpreadsheetApp.getUi().alert("Il faut les onglets Dashboard et Fiche_Recette.");
+  if (!fiche) {
+    SpreadsheetApp.getUi().alert("Onglet Fiche_Recette introuvable.");
     return;
   }
 
   var gidFiche = fiche.getSheetId();
   var gidDash = dash.getSheetId();
+  var lastFiche = Math.max(fiche.getLastRow(), 7);
+  var ficheGrid = fiche.getRange(7, 1, lastFiche - 6, 5).getDisplayValues();
+  var keyToRow = {};
   var nameToRow = {};
-  var lastFiche = fiche.getLastRow();
-  var plats = fiche.getRange(7, 3, Math.max(lastFiche - 6, 1), 1).getValues();
-  for (var i = 0; i < plats.length; i++) {
-    var name = String(plats[i][0] || "").trim();
-    if (name && !nameToRow[name]) nameToRow[name] = 7 + i;
+  var back = [];
+  for (var i = 0; i < ficheGrid.length; i++) {
+    var week = String(ficheGrid[i][1] || "").trim();
+    var plat = String(ficheGrid[i][2] || "").trim();
+    var jour = String(ficheGrid[i][3] || "").trim();
+    var repas = String(ficheGrid[i][4] || "").trim();
+    var dest = 7 + i;
+    if (plat) {
+      keyToRow[week + "|" + jour + "|" + repas] = dest;
+      keyToRow[week + "|" + plat] = dest;
+      if (!nameToRow[plat]) nameToRow[plat] = dest;
+    }
+    var weekNum = parseInt(week, 10);
+    var weekRow = isNaN(weekNum) ? 5 : 5 + (weekNum - 1) * 5;
+    back.push(['=HYPERLINK("#gid=' + gidDash + "&range=A" + weekRow + '","← Semaine ' + week + '")']);
   }
+  fiche.getRange(7, 1, back.length, 1).setFormulas(back);
+  fiche.getRange("A3").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A5","← Retour au planning")');
 
   var lastDash = dash.getLastRow();
-  var lastCol = dash.getLastColumn();
-  var grid = dash.getRange(1, 1, lastDash, lastCol).getValues();
-  for (var r = 0; r < grid.length; r++) {
-    for (var c = 0; c < grid[r].length; c++) {
-      var label = String(grid[r][c] || "").trim();
-      var dest = nameToRow[label];
+  var lastCol = Math.max(dash.getLastColumn(), 8);
+  var shown = dash.getRange(1, 1, lastDash, lastCol).getDisplayValues();
+  var DAYS = ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"];
+
+  for (var r = 0; r < shown.length; r++) {
+    var rowNum = r + 1;
+    var week = Math.floor((rowNum - 5) / 5) + 1;
+    var offset = (rowNum - 5) % 5;
+    var repas = offset === 2 ? "Midi" : offset === 3 ? "Soir" : "";
+    for (var c = 0; c < shown[r].length; c++) {
+      var label = String(shown[r][c] || "").trim();
+      if (!label || label.indexOf("SEMAINE") === 0) continue;
+      var dest = null;
+      if (repas && c >= 1 && c <= 7) {
+        dest = keyToRow[week + "|" + DAYS[c - 1] + "|" + repas] || keyToRow[week + "|" + label];
+      }
+      dest = dest || nameToRow[label];
       if (!dest) continue;
-      dash.getRange(r + 1, c + 1).setFormula(
+      dash.getRange(rowNum, c + 1).setFormula(
         '=HYPERLINK("#gid=' + gidFiche + "&range=C" + dest + '","' + label.replace(/"/g, '""') + '")'
       );
     }
@@ -57,5 +84,4 @@ function activerLiens() {
     );
     batch.getRange("F1").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A1","← Dashboard")');
   }
-  fiche.getRange("A3").setFormula('=HYPERLINK("#gid=' + gidDash + '&range=A5","← Retour au planning")');
 }
