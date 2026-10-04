@@ -20,6 +20,7 @@ export default async function FichePage({
   ];
   const weeks = [...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.week))];
   const fromCol = getCollections().find((col) => col.recipeIds.includes(recipe.id));
+  const sections = (recipe.sections || []).filter((sec) => sec.title || sec.lines.length);
   const ings = recipe.ingredients.filter((line) => line.trim());
   const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
@@ -35,6 +36,7 @@ export default async function FichePage({
       </Link>
       <header className="space-y-2">
         <h1 className="font-heading text-3xl leading-tight">{recipe.name}</h1>
+        {recipe.blurb ? <p className="text-sm leading-relaxed text-muted-foreground">{recipe.blurb}</p> : null}
         {menuNames.some((n) => n !== recipe.name) && (
           <p className="text-sm text-muted-foreground">Au menu : {menuNames.join(" · ")}</p>
         )}
@@ -46,63 +48,67 @@ export default async function FichePage({
           </p>
         )}
       </header>
-      <section>
-        <h2 className="font-heading text-xl">Ingrédients</h2>
-        {ings.length === 0 ? (
-          <p className="mt-2 text-sm text-muted-foreground">Pas de liste dans cette fiche.</p>
-        ) : (
-          <ul className="mt-2 divide-y">
-            {ings.map((line) => (
-              <li key={line} className="py-2 text-sm leading-relaxed">
-                {line}
-              </li>
-            ))}
-          </ul>
-        )}
-        {ings.length > 0 && shopIngs.length === 0 && (
-          <p className="mt-2 text-xs text-muted-foreground">Rien de cette fiche n’est ajouté aux courses.</p>
-        )}
-      </section>
-      <section>
-        <h2 className="font-heading text-xl">Préparation</h2>
-        {recipe.steps.length > 0 ? (
-          <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
-            {recipe.steps.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ol>
-        ) : recipe.robot.length > 0 ? (
-          <ul className="mt-2 space-y-1 text-sm leading-relaxed">
-            {recipe.robot.map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
-        ) : (
-          <p className="mt-2 text-sm text-muted-foreground">
-            Le fichier ne détaille pas les gestes pour ce plat. Les ingrédients ci-dessus viennent
-            du carnet.
-          </p>
-        )}
-      </section>
-      {recipe.robot.length > 0 && recipe.steps.length > 0 && (
-        <section>
-          <h2 className="font-heading text-xl">Mr Cuisine</h2>
-          <ul className="mt-2 space-y-1 text-sm">
-            {recipe.robot.map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
-        </section>
+
+      {sections.length > 0 ? (
+        sections.map((sec) => (
+          <section key={sec.title}>
+            <h2 className="font-heading text-xl">{sec.title}</h2>
+            {sec.lines.length === 0 ? null : (
+              <ul className="mt-2 divide-y">
+                {sec.lines.map((line) => (
+                  <li key={`${sec.title}-${line}`} className="py-2 text-sm leading-relaxed">
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        ))
+      ) : (
+        <>
+          <section>
+            <h2 className="font-heading text-xl">🛒 Ingrédients</h2>
+            {ings.length === 0 ? (
+              <p className="mt-2 text-sm text-muted-foreground">Pas de liste dans cette fiche.</p>
+            ) : (
+              <ul className="mt-2 divide-y">
+                {ings.map((line) => (
+                  <li key={line} className="py-2 text-sm leading-relaxed">
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+          <section>
+            <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
+            {recipe.steps.length > 0 ? (
+              <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+                {recipe.steps.map((step) => (
+                  <li key={step}>{step}</li>
+                ))}
+              </ol>
+            ) : (
+              <p className="mt-2 text-sm text-muted-foreground">
+                Le carnet n’écrit pas les gestes pour ce plat. Rien n’a été inventé.
+              </p>
+            )}
+          </section>
+          {recipe.robot.length > 0 && (
+            <section>
+              <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
+              <ul className="mt-2 space-y-1 text-sm">
+                {recipe.robot.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </>
       )}
-      {recipe.notes.length > 0 && (
-        <section>
-          <h2 className="font-heading text-xl">Notes</h2>
-          <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-            {recipe.notes.map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
-        </section>
+
+      {ings.length > 0 && shopIngs.length === 0 && (
+        <p className="text-xs text-muted-foreground">Rien de cette fiche n’est ajouté aux courses.</p>
       )}
     </article>
   );

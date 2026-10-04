@@ -1,3 +1,8 @@
+export type RecipeSection = {
+  title: string;
+  lines: string[];
+};
+
 export type Recipe = {
   id: string;
   name: string;
@@ -5,6 +10,8 @@ export type Recipe = {
   steps: string[];
   robot: string[];
   notes: string[];
+  sections?: RecipeSection[];
+  blurb?: string;
   source: string;
   timePrep?: string;
   timeCook?: string;

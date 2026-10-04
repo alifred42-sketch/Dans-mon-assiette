@@ -63,7 +63,7 @@ const PLACEHOLDER = /^ingr[ée]dients à prévoir/i;
 export function isPlaceholderIngredient(line: string): boolean {
   const t = line.trim();
   if (PLACEHOLDER.test(t)) return true;
-  if (/^(➡️|❌|💡|✔|✅|OU|Mélanger|Servir|Ingrédients|Remplacement)/i.test(t)) return true;
+  if (/^(➡️|❌|💡|✔|✅|OU|Mélanger|Servir|Ingrédients|Remplacement|Variantes?|Épices|Recherche)/i.test(t)) return true;
   if (t.startsWith("(") && t.endsWith(")")) return true;
   return false;
 }

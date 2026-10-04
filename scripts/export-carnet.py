@@ -27,13 +27,15 @@ COMBO_RE = re.compile(
 SECTION = re.compile(
     r"^(🛒\s*)?ingr[ée]dients\b|^(👩‍🍳\s*)?pr[ée]paration\b|^montage\b|"
     r"^🤖\s*(mr cuisine|monsieur cuisine|version|recherche)|"
-    r"^assaisonnement\b|^[ée]pices\b|^avec\s*:|^variantes?\s*:",
+    r"^assaisonnement\b|^[ée]pices\b|^avec\s*:|^variantes?\s*:|"
+    r"^dans le saladier\b|^cr[èe]me finale\b|^sauce\s*:",
     re.I,
 )
 META = re.compile(
     r"^(🍽️\s*)?difficult[ée].*|temps de pr[ée]paration\s*:|temps de cuisson\s*:|"
     r"portions?\s*:|⏱️\s*pr[ée]paration\s*:|🔥\s*cuisson\s*:|👥\s*pour|"
-    r"🏷️\s*cat[ée]gorie|🍱\s*batch|❄️\s*cong[ée]lation|^⏱️\s*temps",
+    r"🏷️\s*cat[ée]gorie|🍱\s*batch|❄️\s*cong[ée]lation|^⏱️\s*temps|"
+    r"^💪\s*sati[ée]t[ée]",
     re.I,
 )
 CAT_HEADER = re.compile(
@@ -44,8 +46,10 @@ CAT_HEADER = re.compile(
 COLLECT_HEAD = re.compile(
     r"(N[°º]\s*\d+|RECETTE\s+\d+|EXPRESS\s+\d+|BONUS(\s+RECETTE)?\s*\d+|"
     r"VERRINE\s+N|REPAS\s+N|MENU\s+N|PR[ÉE]PARATION\s+N|"
-    r"RECETTE\s+(SAUCE|AUTOMNE|HIVER|PRINTEMPS|[ÉE]T[ÉE])|"
-    r"^\W*\d+\s+[—–-]\s+\w)",
+    r"RECETTE\s+(SAUCE|AUTOMNE|HIVER|PRINTEMPS|[ÉE]T[ÉE]|MR CUISINE)|"
+    r"MR CUISINE\s+\d+|"
+    r"^\W*\d+\s+[—–-]\s+\w|"
+    r"MARINADE\s+|SAUCE\s+\d+)",
     re.I,
 )
 SKIP_TITLE = {
@@ -61,6 +65,10 @@ SKIP_TITLE = {
     "objectif",
     "l idee",
     "toujours",
+    "nouvelles sauces a ajouter",
+    "nouvelles sauces a ajouter au classeur",
+    "page a ajouter dans ton classeur",
+    "mon placard anti panique",
 }
 
 GENERIC = {
@@ -68,18 +76,30 @@ GENERIC = {
     "un", "une", "avec", "facon", "maison", "leger", "legere", "recette", "pour",
     "ou", "sauce", "plus", "tartine", "complete", "repas", "leger",
 }
-PROTEINS = {
+MEAT = {
     "poulet", "cabillaud", "saumon", "thon", "boeuf", "veau", "dinde", "crevette",
-    "crevettes", "maquereau", "steak", "veloute", "chili", "risotto", "soupe",
-    "omelette", "wrap", "poisson", "hache", "boulette", "boulettes", "escalope",
+    "crevettes", "maquereau", "steak", "poisson", "hache", "boulette", "boulettes",
+    "escalope", "jambon", "merguez", "porc",
+}
+DISC_VEG = {
+    "champignon", "champignons", "courgette", "courgettes", "poireau", "poireaux",
+    "asperge", "asperges", "carotte", "carottes", "potiron", "butternut",
+}
+PROTEINS = MEAT | {
+    "veloute", "chili", "risotto", "soupe", "omelette", "wrap",
 }
 DISH = {
     "omelette", "wrap", "risotto", "veloute", "chili", "soupe", "muffin", "gratin",
     "lasagne", "lasagnes", "pizza", "burger", "tartine", "salade", "steak",
-    "bolognaise", "bourguignon", "frittata",
+    "bolognaise", "bourguignon", "frittata", "quiche",
 }
 
 LIBRARY = {"200 RECETTE", "BDD_Classique", "BDD_MrCuisine"}
+SOURCE_RANK = {
+    "200 RECETTE": 5,
+    "BDD_Classique": 4,
+    "BDD_MrCuisine": 3,
+}
 
 COLLECTIONS = [
     ("sauces", "Sauces", "Toutes les sauces du carnet.", ["SAUCES"]),
@@ -96,6 +116,49 @@ COLLECTIONS = [
     ("bonus", "Bonus", "En plus du planning des 52 semaines.", ["BONUS", "Bonus recettes"]),
     ("mrcuisine", "Mr Cuisine", "Ce qui se fait au robot.", ["MR CUISINE", "MR CUISINE 2", "MR CUISINE 3"]),
 ]
+
+STOP_CARD = re.compile(
+    r"liste courses|à imprimer|onglet —|annexe —|"
+    r"nouvelles sauces|page à ajouter|retour au dashboard|"
+    r"menus par saison|toujours avoir\s*:|hyperlink|"
+    r"mon placard anti|onglet —",
+    re.I,
+)
+JUNK = re.compile(
+    r"liste courses|à imprimer|onglet —|annexe —|retour au dashboard|hyperlink",
+    re.I,
+)
+CHATTY = re.compile(
+    r"^(encore une recette|encore une belle|un bon plat|un plat|"
+    r"parfaite? pour|je sais que|toujours notre format|"
+    r"parce qu|celle que tu|une de tes recettes|quand envie|"
+    r"un risotto bien|un plat familial|bien meilleure|"
+    r"tr[èe]s pratique|dans le saladier|un classique|"
+    r"une salade complète|une base à|id[ée]al |"
+    r"à mettre dans|pour tes soir|[àa] mettre dans ton|"
+    r"une recette qui)",
+    re.I,
+)
+PAGE_LINE = re.compile(r"page (organisation|astuce|à ajouter)|📌\s*page", re.I)
+SAUCE_TITLE = re.compile(r"^(n\s*\d+\s+)?(sauce|marinade)\b", re.I)
+ING_SKIP = {
+    "epices", "recherche", "variantes", "variante", "ingredients", "avec",
+    "sauce", "assaisonnement", "fromage", "pain", "accompagnement",
+    "accompagnements", "selon saison", "ou", "pour", "utilisations",
+    "ideale avec", "parfait pour", "possible", "option", "deja present",
+    "deja prevu", "portion", "repos",
+}
+INSTR = re.compile(
+    r"^(\d+\.\s*|➡️\s*)?(d[ée]coupe|cuisson|mixage|faire |ajouter|m[ée]langer|"
+    r"cuire |assembler|garnir|rouler|laisser |couper |servir |pr[ée]parer |"
+    r"nacrer |terminer |[ée]mincer |r[âa]per |enfourner |mixer |"
+    r"r[ée]chauffer |concasser |inciser |farci)",
+    re.I,
+)
+WEEK_PREP = re.compile(
+    r"pr[ée]paration du dimanche|^[àa] pr[ée]parer|batch cooking|⭐\s*pr[ée]paration",
+    re.I,
+)
 
 
 def text(value: object) -> str:
@@ -146,6 +209,10 @@ def tokens(s: str) -> set[str]:
     return out
 
 
+def strip_box(s: str) -> str:
+    return BOX.sub("", s).strip()
+
+
 def col_a(ws) -> list[tuple[int, str]]:
     return [(r, text(ws.cell(r, 1).value)) for r in range(1, (ws.max_row or 0) + 1)]
 
@@ -167,57 +234,234 @@ def parse_meta(blob: str, rec: dict) -> None:
             rec["timePrep"] = m.group(1).strip()
 
 
-INSTR = re.compile(
-    r"^(\d+\.\s*|➡️\s*)?(découpe|cuisson|mixage|faire |ajouter|m[ée]langer|cuire |"
-    r"assembler|garnir|rouler|laisser |couper |servir |pr[ée]parer )",
-    re.I,
-)
-WEEK_PREP = re.compile(
-    r"pr[ée]paration du dimanche|^[àa] pr[ée]parer|batch cooking|⭐\s*pr[ée]paration",
-    re.I,
-)
-JUNK = re.compile(
-    r"liste courses|à imprimer|onglet —|annexe —|retour au dashboard|hyperlink",
-    re.I,
-)
-CHATTY = re.compile(
-    r"^(encore une recette|un bon plat|un plat|parfaite? pour|je sais que|toujours notre format)",
-    re.I,
-)
+def is_stop(line: str) -> bool:
+    return bool(line and STOP_CARD.search(line))
 
 
 def is_junk(line: str) -> bool:
     if not line:
         return True
-    if JUNK.search(line) or line.startswith("☐"):
+    if is_stop(line):
         return True
     f = fold(line)
     return f.startswith("liste ") or "a imprimer" in f
 
 
+def is_quoted_program(line: str) -> bool:
+    t = strip_box(line).strip().strip("«»")
+    if len(t) >= 2 and t[0] == '"' and t[-1] == '"':
+        return True
+    if line.strip().startswith('"') or line.strip().startswith("«"):
+        return True
+    return False
+
+
 def is_robot_program(line: str) -> bool:
-    t = line.strip()
+    t = strip_box(line)
     if not t or is_junk(t):
         return False
-    if t.startswith(("☐", "🛒", "📅")):
+    if t.startswith(("🛒", "📅")):
         return False
-    if t.startswith('"') or t.startswith("«") or t.endswith('"'):
-        return True
-    if t.startswith("➡️") and INSTR.search(t):
+    if is_quoted_program(line) or is_quoted_program(t):
         return True
     return False
 
 
 def is_real_step(line: str) -> bool:
-    if not line or is_junk(line) or line.startswith("☐"):
+    if not line or is_junk(line) or PAGE_LINE.search(line):
         return False
-    if line.startswith("Au robot :"):
-        return is_robot_program(line.replace("Au robot :", "", 1))
-    if re.match(r"^\d+\.\s+", line):
+    t = strip_box(line)
+    if t.startswith(("❌", "🛒", "📅", "🍞", "🧀", "⭐", "🔗", "📌")):
+        return False
+    if CHATTY.search(t):
+        return False
+    if t.startswith("Au robot :"):
+        rest = t.replace("Au robot :", "", 1).strip()
+        return bool(INSTR.search(rest)) and len(rest) >= 12
+    if re.match(r"^\d+\.\s+", t):
         return True
-    if INSTR.search(line):
+    if INSTR.search(t) and "personne" not in fold(t):
         return True
-    return len(line) >= 28 and not line.startswith(("☐", "🛒", "📅", "🍞", "🧀"))
+    if t.startswith("➡️") and len(t) >= 18:
+        return True
+    return len(t) >= 32
+
+
+def keep_ingredient(line: str) -> str | None:
+    if not line or is_junk(line) or CHATTY.search(line) or PLACEHOLDER.match(line):
+        return None
+    t = strip_box(line).replace("🔗", "").strip()
+    if not t:
+        return None
+    if t.startswith(("❌", "🤖", "📅", "🔗", "💡", "⭐", "📷", "📌")):
+        return None
+    if PAGE_LINE.search(t):
+        return None
+    f = fold(t)
+    if f in ING_SKIP or f.startswith("recherche ") or f.startswith("mr cuisine"):
+        return None
+    if f.startswith("possible") or f.startswith("option") or f.startswith("deja"):
+        return None
+    if f.startswith("ideale") or f.startswith("utilisation") or f.startswith("parfait"):
+        return None
+    if f.startswith("aucun ") or f.startswith("pas de ") or f.startswith("non avec"):
+        return None
+    if META.match(t) or CAT_HEADER.match(t):
+        return None
+    if t.endswith(":") and len(t) < 28:
+        return None
+    if is_quoted_program(t):
+        return None
+    if t.startswith("➡️") and INSTR.search(t):
+        return None
+    return t
+
+
+HEADING_KEYS = {
+    "ingredients", "ingredient", "ingr", "viande", "legumes", "feculent",
+    "fromage", "pain", "epices", "assaisonnement", "appareil", "appareil leger",
+    "dessus", "sauce", "creme finale", "preparation", "preparation classique",
+    "montage", "etapes", "etape", "mr cuisine", "mr cuisine smart",
+    "recherche", "recherche robot", "recherche mr cuisine",
+    "avec mr cuisine", "avec mr cuisine smart", "version mr cuisine smart",
+    "version monsieur cuisine smart", "variantes", "variante", "astuce",
+    "temps", "accompagnement", "accompagnements", "dessert conseille",
+    "remplacements", "batch cooking", "congelation", "avec",
+    "dans le saladier", "ideale avec", "utilisations", "epices aromates",
+}
+FOOD_KIND = {
+    "ingredients", "ingredient", "viande", "legumes", "feculent", "fromage",
+    "pain", "epices", "assaisonnement", "appareil", "appareil leger",
+    "dessus", "sauce", "creme finale", "avec", "dans le saladier",
+    "epices aromates",
+}
+STEP_KIND = {"preparation", "preparation classique", "montage", "etape", "etapes"}
+ROBOT_KIND = {
+    "mr cuisine", "mr cuisine smart", "recherche", "recherche robot",
+    "recherche mr cuisine", "avec mr cuisine", "avec mr cuisine smart",
+    "version mr cuisine smart", "version monsieur cuisine smart",
+}
+SECTION_ICON = {
+    "ingredients": "🛒",
+    "ingredient": "🛒",
+    "viande": "🥩",
+    "legumes": "🥒",
+    "feculent": "🍚",
+    "fromage": "🧀",
+    "pain": "🍞",
+    "epices": "🌿",
+    "assaisonnement": "🌿",
+    "appareil": "🥣",
+    "appareil leger": "🥣",
+    "dessus": "🧀",
+    "sauce": "🥣",
+    "preparation": "👩‍🍳",
+    "mr cuisine": "🤖",
+    "recherche": "🤖",
+    "avec mr cuisine": "🤖",
+    "avec mr cuisine smart": "🤖",
+    "temps": "⏱️",
+    "variantes": "🔄",
+    "astuce": "💡",
+}
+
+
+def heading_key(line: str) -> str:
+    return fold(line.rstrip(":").strip())
+
+
+def is_heading(line: str) -> bool:
+    t = line.strip()
+    if not t or is_stop(t) or PLACEHOLDER.match(t):
+        return False
+    f = heading_key(t)
+    if f in HEADING_KEYS or f.startswith("preparation") or f.startswith("mr cuisine"):
+        return True
+    if f.startswith("recherche") or f.startswith("avec mr") or f.startswith("appareil"):
+        return True
+    if f.startswith("version monsieur") or f.startswith("version mr"):
+        return True
+    if CAT_HEADER.match(t):
+        return True
+    if t.endswith(":"):
+        left, _, right = t.partition(":")
+        if right.strip() and re.search(r"\d", right):
+            return False
+        if len(t) <= 42 and not re.search(r"\d", left):
+            return True
+    return False
+
+
+def decorate_title(title: str) -> str:
+    t = title.strip()
+    f = heading_key(t)
+    icon = SECTION_ICON.get(f)
+    if icon and icon not in t:
+        return f"{icon} {t}"
+    return t
+
+
+def section_kind(title: str) -> str:
+    f = heading_key(title)
+    if f in FOOD_KIND or f.startswith("appareil") or f.startswith("epice") or f.startswith("assais"):
+        return "food"
+    if f in STEP_KIND or f.startswith("preparation") or f.startswith("etape"):
+        return "steps"
+    if f in ROBOT_KIND or f.startswith("mr cuisine") or f.startswith("recherche") or f.startswith("avec mr"):
+        return "robot"
+    return "notes"
+
+
+def parse_card(body: list[str]) -> tuple[list[dict], str, list[str], list[str], list[str], list[str]]:
+    sections: list[dict] = []
+    blurbs: list[str] = []
+    current: dict | None = None
+    for raw in body:
+        line = raw.strip()
+        if not line:
+            continue
+        if is_stop(line):
+            break
+        if line.startswith(("🔗", "📅 Semaine", "📅 Autres", "📅 SEMAINE", "📅 Futures")):
+            continue
+        if is_heading(line):
+            current = {"title": decorate_title(line), "lines": []}
+            sections.append(current)
+            continue
+        if current is None:
+            blurbs.append(line)
+            continue
+        current["lines"].append(line)
+    sections = [sec for sec in sections if sec["lines"] or heading_key(sec["title"]) in ROBOT_KIND]
+    ingredients: list[str] = []
+    steps: list[str] = []
+    robot: list[str] = []
+    notes: list[str] = []
+    for sec in sections:
+        kind = section_kind(sec["title"])
+        for line in sec["lines"]:
+            if kind == "food":
+                kept = keep_ingredient(line)
+                if kept:
+                    ingredients.append(kept)
+            elif kind == "steps":
+                t = re.sub(r"^\d+\.\s*", "", strip_box(line))
+                if is_real_step(t) or is_real_step(line):
+                    steps.append(t)
+            elif kind == "robot":
+                t = strip_box(line)
+                if is_quoted_program(line) or is_quoted_program(t):
+                    robot.append(t.strip().strip('"«»'))
+                elif t and not is_junk(t):
+                    if is_quoted_program(f'"{t}"') or len(t.split()) <= 8:
+                        if not t.startswith(("❌", "💡")):
+                            robot.append(t.strip().strip('"«»'))
+            else:
+                t = strip_box(line)
+                if t and not is_junk(t) and not PAGE_LINE.search(t):
+                    notes.append(t)
+    blurb = " ".join(blurbs[:2]).strip()
+    return sections, blurb, ingredients, steps, robot, notes
 
 
 def split_body(body: list[str]) -> tuple[list[str], list[str], list[str], list[str]]:
@@ -226,86 +470,170 @@ def split_body(body: list[str]) -> tuple[list[str], list[str], list[str], list[s
     robot: list[str] = []
     notes: list[str] = []
     section = "ings"
-    for line in body:
-        if is_junk(line):
+    pending_verb = ""
+
+    def flush_pending() -> None:
+        nonlocal pending_verb
+        pending_verb = ""
+
+    for raw in body:
+        line = raw.strip()
+        if is_stop(line) or is_junk(line):
             break
         f = fold(line)
         if PLACEHOLDER.match(line) or CHATTY.search(line):
             continue
-        if f.startswith("ingredient") or f == "ingr" or f.startswith("ingr dients"):
+        if f.startswith("ingredient") or f == "ingr" or f.startswith("ingr dients") or f in {
+            "avec",
+            "dans le saladier",
+        }:
             section = "ings"
+            flush_pending()
             continue
-        if f.startswith("preparation") or f.startswith("montage") or f.startswith("etape"):
+        if f.startswith("preparation") or f.startswith("montage") or f.startswith("etape") or f.startswith("faire :"):
             section = "steps"
+            flush_pending()
             continue
-        if line.startswith("🤖") or f.startswith("mr cuisine") or f.startswith("recherche robot"):
+        if (
+            line.startswith("🤖")
+            or f.startswith("mr cuisine")
+            or f.startswith("recherche robot")
+            or f.startswith("recherche")
+            or f.startswith("version monsieur")
+            or f.startswith("avec mr cuisine")
+        ):
             section = "robot"
+            flush_pending()
             continue
         if line.startswith("💡") or f.startswith("astuce") or f.startswith("variante"):
             section = "notes"
-            if f in {"astuce", "variante", "variantes"}:
+            flush_pending()
+            if f in {"astuce", "variante", "variantes"} or f.startswith("astuce"):
                 continue
-        if line.startswith(("🔗", "📅 Semaine", "📅 Autres", "📅 SEMAINE")):
+        if f.startswith("ideale") or f.startswith("utilisation") or f.startswith("present dans") or f.startswith("utilise"):
+            section = "notes"
+            flush_pending()
             continue
-        if CAT_HEADER.match(line) or f in {"ou", "ingredients", "epices", "avec"}:
+        if line.startswith(("🔗", "📅 Semaine", "📅 Autres", "📅 SEMAINE", "📅 Futures")):
+            continue
+        if CAT_HEADER.match(line) or f in {"ou", "ingredients", "epices", "avec", "assaisonnement"}:
             continue
         if META.match(line):
             continue
-        if re.match(r"^\d+\.\s+", line) or (line.startswith("➡️") and INSTR.search(line)):
+        if re.match(r"^\d+\.\s+", strip_box(line)) or (line.startswith("➡️") and INSTR.search(line) and section != "robot"):
             section = "steps"
+
         if section == "ings":
-            if INSTR.search(line) and not line.startswith(("🥣", "🌿")):
-                steps.append(re.sub(r"^(\d+\.\s*|➡️\s*)", "", line))
+            if INSTR.search(strip_box(line)) and not line.startswith(("🥣", "🌿")):
+                steps.append(re.sub(r"^(\d+\.\s*|➡️\s*)", "", strip_box(line)))
             else:
-                ingredients.append(line)
+                kept = keep_ingredient(line)
+                if kept:
+                    ingredients.append(kept)
         elif section == "steps":
-            if line.startswith("Étape") or is_junk(line) or line.startswith("☐"):
+            t = strip_box(line)
+            if t.startswith("Étape") or is_junk(t):
                 continue
-            steps.append(re.sub(r"^\d+\.\s*", "", line))
+            if re.match(r"^\d+\.\s+", t):
+                steps.append(re.sub(r"^\d+\.\s*", "", t))
+            elif is_real_step(t):
+                steps.append(re.sub(r"^➡️\s*", "", t))
         elif section == "robot":
-            if is_robot_program(line):
-                robot.append(line.strip().strip('"«»'))
+            t = strip_box(line)
+            if is_quoted_program(line) or is_quoted_program(t):
+                robot.append(t.strip().strip('"«»'))
+                flush_pending()
+            elif t.startswith("➡️"):
+                detail = t.lstrip("➡️ ").strip()
+                if pending_verb:
+                    steps.append(f"{pending_verb} : {detail}")
+                    pending_verb = ""
+                elif INSTR.search(t) or len(detail) >= 18:
+                    steps.append(detail)
+            elif INSTR.search(t) and len(t.split()) <= 5:
+                pending_verb = t.rstrip(" :")
+            elif is_real_step(t):
+                steps.append(t)
         else:
-            notes.append(line)
+            t = strip_box(line)
+            if t and not is_junk(t) and not CHATTY.search(t):
+                notes.append(t)
     return ingredients, [s for s in steps if is_real_step(s)], robot, notes
 
 
 def normalize_recipe(rec: dict) -> dict:
-    clean_ings: list[str] = []
-    for line in rec.get("ingredients") or []:
-        if not line or is_junk(line) or CHATTY.search(line) or line.startswith("☐"):
-            continue
+    ingredients: list[str] = []
+    steps: list[str] = []
+    robot: list[str] = []
+    notes: list[str] = list(rec.get("notes") or [])
+    section = "ings"
+    for raw in rec.get("ingredients") or []:
+        line = raw.strip()
+        if is_stop(line):
+            break
         f = fold(line)
-        if f in {"epices", "recherche", "variantes", "variante", "ingredients", "avec", "sauce"}:
+        if f.startswith("variante"):
+            section = "notes"
             continue
-        if line.startswith("🤖"):
+        if line.startswith("🤖") or f.startswith("recherche"):
+            section = "robot"
+            if is_quoted_program(line):
+                robot.append(strip_box(line).strip('"«»'))
             continue
-        if line.endswith(":") and len(line) < 24:
+        if section == "notes":
+            kept = strip_box(line)
+            if kept and not is_junk(kept):
+                notes.append(kept)
             continue
-        if line.startswith('"') and line.endswith('"'):
-            rec.setdefault("robot", []).append(line)
+        if section == "robot":
+            if is_quoted_program(line):
+                robot.append(strip_box(line).strip('"«»'))
             continue
-        clean_ings.append(line)
+        kept = keep_ingredient(line)
+        if kept:
+            ingredients.append(kept)
+        elif is_quoted_program(line):
+            robot.append(strip_box(line).strip('"«»'))
+
+    for raw in rec.get("steps") or []:
+        if is_real_step(raw):
+            steps.append(re.sub(r"^\d+\.\s*", "", strip_box(raw)))
+
+    for raw in rec.get("robot") or []:
+        t = re.sub(r"^🤖\s*", "", strip_box(raw)).strip().strip('"«»')
+        if not t or is_junk(t):
+            continue
+        if fold(t) in {"mr cuisine", "mr cuisine smart", "recherche robot", "recherche"}:
+            continue
+        if is_quoted_program(raw) or is_quoted_program(t) or (len(t.split()) <= 8 and not t.startswith("☐")):
+            if t not in robot:
+                robot.append(t)
+
+    seen_ing: set[str] = set()
+    clean_ings: list[str] = []
+    for line in ingredients:
+        key = fold(line)
+        if key and key not in seen_ing:
+            seen_ing.add(key)
+            clean_ings.append(line)
+
     rec["ingredients"] = clean_ings
-    cleaned_robot: list[str] = []
-    for line in rec.get("robot") or []:
-        if is_junk(line) or line.startswith("☐"):
-            continue
-        t = re.sub(r"^🤖\s*", "", line).strip().strip('"«»')
-        if not t or fold(t) in {"mr cuisine", "mr cuisine smart", "recherche robot", "recherche"}:
-            continue
-        if is_robot_program(line) or (len(t.split()) <= 6 and not t.startswith("☐")):
-            cleaned_robot.append(t)
-    rec["robot"] = cleaned_robot
-    rec["steps"] = [s for s in rec.get("steps") or [] if is_real_step(s)]
-    if not rec["steps"] and rec["robot"]:
-        rec["steps"] = [f"Au robot : {line}" for line in rec["robot"][:3]]
-    rec["notes"] = [n for n in rec.get("notes") or [] if n and not is_junk(n)]
+    rec["steps"] = steps
+    rec["robot"] = robot
+    rec["notes"] = [n for n in notes if n and not is_junk(n) and not CHATTY.search(n)]
+    if rec.get("sections"):
+        rec["sections"] = [
+            {"title": sec["title"], "lines": [ln for ln in sec.get("lines") or [] if ln and not is_stop(ln)]}
+            for sec in rec["sections"]
+            if sec.get("title")
+        ]
     return rec
 
 
 def make_recipe(name: str, body: list[str], source: str) -> dict:
-    ingredients, steps, robot, notes = split_body(body)
+    sections, blurb, ingredients, steps, robot, notes = parse_card(body)
+    if not ingredients and not steps and not robot:
+        ingredients, steps, robot, notes = split_body(body)
     rec = {
         "id": rid(source, name),
         "name": name,
@@ -313,22 +641,81 @@ def make_recipe(name: str, body: list[str], source: str) -> dict:
         "steps": steps,
         "robot": robot,
         "notes": notes,
+        "sections": sections,
         "source": source,
     }
+    if blurb:
+        rec["blurb"] = blurb
     parse_meta("\n".join(body), rec)
-    return rec
+    return normalize_recipe(rec)
 
 
-def richer(a: dict, b: dict) -> dict:
-    def score(r: dict) -> int:
-        bonus = 40 if r.get("source") in LIBRARY else 0
-        return 8 * len([s for s in r.get("steps") or [] if is_real_step(s)]) + len(r.get("ingredients") or []) + bonus
+def merge_lists(a: list[str], b: list[str]) -> list[str]:
+    by_key: dict[str, str] = {}
+    order: list[str] = []
+    for line in list(a or []) + list(b or []):
+        bare = fold(re.sub(r"\d+[.,]?\d*", "", line))
+        key = bare or fold(line)
+        if not key:
+            continue
+        prev = by_key.get(key)
+        if prev is None:
+            by_key[key] = line
+            order.append(key)
+        elif re.search(r"\d", line) and not re.search(r"\d", prev):
+            by_key[key] = line
+    return [by_key[k] for k in order]
 
-    return a if score(a) >= score(b) else b
+
+def better_steps(a: list[str], b: list[str]) -> list[str]:
+    sa = [s for s in a or [] if is_real_step(s)]
+    sb = [s for s in b or [] if is_real_step(s)]
+    return sa if len(sa) >= len(sb) else sb
+
+
+def combine_recipes(prev: dict, rec: dict) -> dict:
+    out = dict(prev)
+    prev_rank = SOURCE_RANK.get(prev.get("source", ""), 1)
+    rec_rank = SOURCE_RANK.get(rec.get("source", ""), 1)
+    if rec_rank > prev_rank:
+        out["source"] = rec["source"]
+        if NUMED.search(rec.get("name") or "") or len(rec.get("name") or "") > len(prev.get("name") or ""):
+            out["name"] = rec["name"]
+    prev_ings = prev.get("ingredients") or []
+    rec_ings = rec.get("ingredients") or []
+    out["ingredients"] = merge_lists(prev_ings, rec_ings)
+    out["steps"] = better_steps(prev.get("steps") or [], rec.get("steps") or [])
+    out["robot"] = merge_lists(prev.get("robot") or [], rec.get("robot") or [])
+    out["notes"] = merge_lists(prev.get("notes") or [], rec.get("notes") or [])
+    for key in ("timePrep", "timeCook", "servings"):
+        if rec.get(key) and not out.get(key):
+            out[key] = rec[key]
+    out["id"] = prev["id"]
+    def section_weight(r: dict) -> int:
+        return sum(len(s.get("lines") or []) for s in r.get("sections") or [])
+
+    if section_weight(rec) > section_weight(prev):
+        out["sections"] = rec.get("sections") or []
+        if rec.get("blurb"):
+            out["blurb"] = rec["blurb"]
+    elif prev.get("sections"):
+        out["sections"] = prev["sections"]
+    elif rec.get("sections"):
+        out["sections"] = rec["sections"]
+    if rec.get("blurb") and not out.get("blurb"):
+        out["blurb"] = rec["blurb"]
+    if out.get("steps") and out.get("sections"):
+        has_prep = any(section_kind(s["title"]) == "steps" for s in out["sections"])
+        if not has_prep:
+            out["sections"].append({
+                "title": "👩‍🍳 Préparation",
+                "lines": [f"{i + 1}. {step}" for i, step in enumerate(out["steps"])],
+            })
+    return normalize_recipe(out)
 
 
 def is_200_start(s: str, gap: int) -> bool:
-    if not s or fold(s) in SKIP_TITLE:
+    if not s or fold(s) in SKIP_TITLE or is_stop(s):
         return False
     if NUMED.search(s):
         return True
@@ -364,7 +751,14 @@ def parse_200(ws) -> list[dict]:
     for i, start in enumerate(starts):
         end = starts[i + 1] if i + 1 < len(starts) else (ws.max_row or start) + 1
         title = by_row[start]
-        body = [by_row[r] for r in range(start + 1, end) if by_row.get(r)]
+        body = []
+        for r in range(start + 1, end):
+            s = by_row.get(r)
+            if not s:
+                continue
+            if is_stop(s):
+                break
+            body.append(s)
         card = make_recipe(title, body, "200 RECETTE")
         if card["ingredients"] or card["steps"]:
             cards.append(card)
@@ -377,21 +771,40 @@ def parse_bdd(ws, source: str, prep_col: int) -> list[dict]:
         name = text(ws.cell(r, 1).value)
         if not name:
             continue
-        rec = {
-            "id": rid(source, name),
-            "name": name,
-            "ingredients": lines(ws.cell(r, 3).value),
-            "steps": lines(ws.cell(r, prep_col).value),
-            "robot": [],
-            "notes": [],
-            "source": source,
-        }
+        body = ["🛒 Ingrédients"] + lines(ws.cell(r, 3).value)
+        prep = lines(ws.cell(r, prep_col).value)
+        if prep:
+            body += ["👩‍🍳 Préparation"] + prep
+        rec = make_recipe(name, body, source)
         if source == "BDD_Classique":
-            rec["timePrep"] = text(ws.cell(r, 5).value)
-            rec["timeCook"] = text(ws.cell(r, 6).value)
-            rec["servings"] = text(ws.cell(r, 7).value)
+            rec["timePrep"] = text(ws.cell(r, 5).value) or rec.get("timePrep")
+            rec["timeCook"] = text(ws.cell(r, 6).value) or rec.get("timeCook")
+            rec["servings"] = text(ws.cell(r, 7).value) or rec.get("servings")
         out.append(rec)
     return out
+
+
+def sauce_name(name: str) -> bool:
+    return bool(SAUCE_TITLE.search(re.sub(r"^\d+\s+", "", fold(name))))
+
+
+def titles_conflict(plan_name: str, nom_bdd: str) -> bool:
+    pt, bt = tokens(plan_name), tokens(nom_bdd)
+    if sauce_name(plan_name) != sauce_name(nom_bdd):
+        return True
+    plan_meat, bdd_meat = pt & MEAT, bt & MEAT
+    if (plan_meat or bdd_meat) and not (plan_meat & bdd_meat):
+        return True
+    plan_veg, bdd_veg = pt & DISC_VEG, bt & DISC_VEG
+    if plan_veg and bdd_veg and not (plan_veg & bdd_veg):
+        return True
+    plan_dish, bdd_dish = pt & DISH, bt & DISH
+    if plan_dish and bdd_dish and not (plan_dish & bdd_dish):
+        return True
+    extra_dish = (bt & DISH) - (pt & DISH)
+    if extra_dish and (pt & DISH):
+        return True
+    return False
 
 
 def official_ok(plan_name: str, nom_bdd: str) -> bool:
@@ -400,16 +813,26 @@ def official_ok(plan_name: str, nom_bdd: str) -> bool:
     pf, bf = fold(plan_name), fold(nom_bdd)
     if not pf or not bf:
         return False
-    if pf == bf or (len(pf) >= 10 and (pf in bf or bf in pf)):
-        return True
+    if titles_conflict(plan_name, nom_bdd):
+        return False
     pt, bt = tokens(plan_name), tokens(nom_bdd)
+    extra_meat = (bt & MEAT) - (pt & MEAT)
+    extra_dish = (bt & DISH) - (pt & DISH)
+    if pf == bf:
+        return True
+    if len(pf) >= 10 and pf in bf and not extra_meat and not extra_dish:
+        return True
+    if len(bf) >= 10 and bf in pf and not extra_meat and not extra_dish:
+        return True
+    if extra_meat or extra_dish:
+        return False
     if not pt or not bt:
         return False
-    prot = pt & PROTEINS
+    prot = pt & MEAT
     if prot and prot <= bt and len(pt & bt) >= 2:
         return True
-    distinctive = pt - GENERIC - {"roti", "grille", "vapeur"}
-    if distinctive and distinctive <= bt:
+    distinctive = pt - GENERIC - {"roti", "grille", "vapeur", "maison", "leger", "legere"}
+    if len(distinctive) >= 2 and distinctive <= bt:
         return True
     return False
 
@@ -516,8 +939,12 @@ def parse_52_menus(ws) -> tuple[dict[tuple[int, str, str], dict], dict[int, dict
 
 
 def is_collect_start(line: str, gap: int, ahead: str) -> bool:
-    if not line or fold(line) in SKIP_TITLE:
+    if not line or fold(line) in SKIP_TITLE or is_stop(line):
         return False
+    if line.startswith("☐") or line.startswith("☑"):
+        return False
+    if re.match(r"^MR CUISINE\s+\d+\s*$", line, re.I):
+        return True
     if COLLECT_HEAD.search(line):
         return True
     if gap >= 2 and 8 <= len(line) <= 90 and not line.endswith(":") and not META.match(line):
@@ -531,8 +958,10 @@ def title_from_header(line: str, nxt: str) -> tuple[str, bool]:
     if "—" in line or "–" in line:
         return line, False
     compact = fold(line)
-    if re.search(r"n\s*\d+$", compact) or re.fullmatch(r"(bonus|express|recette|menu|repas|verrine|preparation).*", compact):
-        if nxt and not SECTION.match(nxt):
+    if re.search(r"n\s*\d+$", compact) or re.fullmatch(
+        r"(bonus|express|recette|menu|repas|verrine|preparation|mr cuisine).*", compact
+    ):
+        if nxt and not SECTION.match(nxt) and not is_stop(nxt):
             return nxt, True
     return line, False
 
@@ -564,29 +993,41 @@ def parse_collection_sheet(ws, source: str) -> list[dict]:
             if consume and s == nxt:
                 consume = False
                 continue
-            if is_junk(s):
+            if is_stop(s):
                 break
             body.append(s)
-        if fold(title) in SKIP_TITLE or len(title) < 4:
+        title_fold = fold(title)
+        if title_fold in SKIP_TITLE or len(title) < 4:
             continue
-        if fold(title).startswith(("onglet", "annexe", "menus par saison", "saison automne", "hiver", "printemps")) and "recette" not in fold(title):
+        if title_fold.startswith(("onglet", "annexe", "menus par saison", "saison automne")) and "recette" not in title_fold:
             continue
-        card = normalize_recipe(make_recipe(title, body, source))
-        if card["ingredients"] or card["steps"] or card["robot"] or card["notes"]:
+        card = make_recipe(title, body, source)
+        if card["ingredients"] or card["steps"] or card["robot"] or card["notes"] or card.get("sections"):
             cards.append(card)
     return cards
+
+
+def recipe_num(name: str) -> str | None:
+    m = NUMED.search(name or "")
+    return m.group(1).lstrip("0") or "0" if m else None
 
 
 def merge_recipe(store: dict[str, dict], rec: dict) -> dict:
     key = fold(rec["name"])
     if not key:
         key = rec["id"]
+    num = recipe_num(rec["name"])
     prev = store.get(key)
+    if not prev and num:
+        for existing in store.values():
+            if recipe_num(existing["name"]) == num and existing.get("source") in LIBRARY and rec.get("source") in LIBRARY:
+                prev = existing
+                key = fold(existing["name"])
+                break
     if not prev:
         store[key] = rec
         return rec
-    store[key] = richer(prev, rec)
-    store[key]["id"] = prev["id"]
+    store[key] = combine_recipes(prev, rec)
     return store[key]
 
 
@@ -596,10 +1037,11 @@ def index_recipes(store: dict[str, dict]) -> dict[str, dict]:
         m = NUMED.search(rec["name"])
         if m:
             idx.setdefault(fold(m.group(2)), rec)
+            idx.setdefault(fold(m.group(2).split("🤖")[0]), rec)
     return idx
 
 
-def pick_named(name: str, nom_bdd: str, idx: dict[str, dict], library: list[dict]) -> dict | None:
+def pick_named(name: str, nom_bdd: str, idx: dict[str, dict], library: list[dict], store: dict[str, dict]) -> dict | None:
     if nom_bdd and official_ok(name, nom_bdd):
         hit = idx.get(fold(nom_bdd))
         if hit:
@@ -613,35 +1055,50 @@ def pick_named(name: str, nom_bdd: str, idx: dict[str, dict], library: list[dict
             if fold(lib["name"]) == key:
                 return lib
         return rec
+
+    close: list[tuple[int, int, dict]] = []
+    for rec in store.values():
+        if titles_conflict(name, rec["name"]):
+            continue
+        if not (official_ok(name, rec["name"]) or official_ok(rec["name"], name)):
+            continue
+        hit = len(tokens(name) & tokens(rec["name"]))
+        close.append((hit, len(rec.get("steps") or []), rec))
+    close.sort(key=lambda x: (x[0], x[1], len(x[2].get("ingredients") or [])), reverse=True)
+    if close:
+        return close[0][2]
+
     plan_tok = tokens(name)
     distinctive = plan_tok - GENERIC - {"riz", "legumes", "tartine", "roti"}
     plan_dish = plan_tok & DISH
     if len(plan_tok) == 1:
         only = next(iter(plan_tok))
         if len(only) >= 7:
-            rare = [rec for rec in library if only in tokens(rec["name"])]
+            rare = [rec for rec in library if only in tokens(rec["name"]) and not titles_conflict(name, rec["name"])]
             if rare:
-                rare.sort(key=lambda r: len(r.get("ingredients") or []), reverse=True)
+                rare.sort(key=lambda r: (1 if r.get("steps") else 0, len(r.get("ingredients") or [])), reverse=True)
                 return rare[0]
         return None
     if len(plan_tok) < 2:
         return None
-    scored: list[tuple[int, dict]] = []
+    fuzzy: list[tuple[int, dict]] = []
     for rec in library:
         title_tok = tokens(rec["name"])
         if plan_dish and not (plan_dish & title_tok):
             continue
         if distinctive and not (distinctive & title_tok):
             continue
+        if titles_conflict(name, rec["name"]):
+            continue
         hit = len(plan_tok & title_tok)
         if hit < 2:
             continue
-        scored.append((hit, rec))
-    scored.sort(key=lambda x: (x[0], len(x[1].get("ingredients") or []), 1 if x[1]["source"] == "200 RECETTE" else 0), reverse=True)
-    if not scored:
+        fuzzy.append((hit, rec))
+    fuzzy.sort(key=lambda x: (x[0], 1 if x[1].get("steps") else 0, len(x[1].get("ingredients") or []), 1 if x[1]["source"] == "200 RECETTE" else 0), reverse=True)
+    if not fuzzy:
         return None
-    if len(scored) == 1 or scored[0][0] > scored[1][0] or scored[0][0] >= 2:
-        return scored[0][1]
+    if len(fuzzy) == 1 or fuzzy[0][0] > fuzzy[1][0] or fuzzy[0][0] >= 2:
+        return fuzzy[0][1]
     return None
 
 
@@ -649,16 +1106,16 @@ def main() -> None:
     wb = load_workbook(ORIG, data_only=True)
     store: dict[str, dict] = {}
     for rec in parse_bdd(wb["BDD_Classique"], "BDD_Classique", 4):
-        merge_recipe(store, normalize_recipe(rec))
+        merge_recipe(store, rec)
     for rec in parse_bdd(wb["BDD_MrCuisine"], "BDD_MrCuisine", 4):
-        merge_recipe(store, normalize_recipe(rec))
+        merge_recipe(store, rec)
     for rec in parse_200(wb["200 RECETTE"]):
-        merge_recipe(store, normalize_recipe(rec))
+        merge_recipe(store, rec)
 
     menu_meals, week_meta = parse_52_menus(wb["52 MENUS"])
 
-    courses_by_dish: dict[tuple[int, str], list[str]] = {}
     courses: list[dict] = []
+    courses_by_dish: dict[tuple[int, str], list[str]] = {}
     ws = wb["_COURSES_DATA"]
     for r in range(2, (ws.max_row or 0) + 1):
         raw_week = ws.cell(r, 1).value
@@ -725,45 +1182,63 @@ def main() -> None:
         name = name.rstrip(" :").strip()
         if not name:
             continue
-        rec = pick_named(name, nom_bdd, idx, library)
+        rec = pick_named(name, nom_bdd, idx, library, store)
         if rec is None and app_name and fold(app_name) != fold(name):
-            rec = pick_named(app_name, nom_bdd, idx, library)
+            rec = pick_named(app_name, nom_bdd, idx, library, store)
         body = (menu["body"] if menu else [])[:]
         extra_ings = [
             x
             for x in app_ings
-            if x and not PLACEHOLDER.match(x) and not is_junk(x) and not (x.startswith('"') and x.endswith('"'))
+            if keep_ingredient(x)
         ]
-        extra_ings += courses_by_dish.get((week, fold(name)), [])
-        extra_ings += courses_by_dish.get((week, fold(app_name)), [])
         if rec is None:
-            rec = normalize_recipe(make_recipe(name, body, "52 MENUS"))
+            rec = make_recipe(name, body, "52 MENUS")
             have = {fold(x) for x in rec["ingredients"]}
             for line in extra_ings:
-                if line and fold(line) not in have and not PLACEHOLDER.match(line) and not is_junk(line):
-                    rec["ingredients"].append(line)
-                    have.add(fold(line))
+                kept = keep_ingredient(line)
+                if kept and fold(kept) not in have:
+                    rec["ingredients"].append(kept)
+                    have.add(fold(kept))
             rec = merge_recipe(store, rec)
             idx[fold(rec["name"])] = rec
-        elif body:
-            extra = normalize_recipe(make_recipe(name, body, "52 MENUS"))
-            if extra["steps"] and not rec.get("steps"):
+        else:
+            extra = make_recipe(name, body, "52 MENUS")
+            if extra["steps"] and (not rec.get("steps") or len(extra["steps"]) > len(rec.get("steps") or [])):
                 rec["steps"] = extra["steps"]
             if extra["robot"] and not rec.get("robot"):
                 rec["robot"] = extra["robot"]
+            if extra["ingredients"] and len(rec.get("ingredients") or []) < 3:
+                rec["ingredients"] = merge_lists(rec.get("ingredients") or [], extra["ingredients"])
+        if len(rec.get("ingredients") or []) < 3:
+            extras = extra_ings + courses_by_dish.get((week, fold(name)), []) + courses_by_dish.get((week, fold(app_name)), [])
+            have = {fold(x) for x in rec["ingredients"]}
+            added: list[str] = []
+            for line in extras:
+                kept = keep_ingredient(line)
+                if kept and fold(kept) not in have:
+                    rec["ingredients"].append(kept)
+                    have.add(fold(kept))
+                    added.append(kept)
+            if added and rec.get("sections") is not None:
+                food = next((s for s in rec["sections"] if section_kind(s["title"]) == "food"), None)
+                if food:
+                    food["lines"] = merge_lists(food["lines"], added)
+                else:
+                    rec["sections"].insert(0, {"title": "🛒 Ingrédients", "lines": added})
         plan.append({"week": week, "day": day, "meal": meal, "name": name, "recipeId": rec["id"]})
 
     for rec in store.values():
         normalize_recipe(rec)
         if rec.get("steps"):
             continue
-        num = NUMED.search(rec["name"])
+        num = recipe_num(rec["name"])
         if not num:
             continue
         for other in store.values():
-            om = NUMED.search(other["name"])
-            if om and om.group(1) == num.group(1) and other.get("steps"):
+            if recipe_num(other["name"]) == num and other.get("steps"):
                 rec["steps"] = other["steps"][:]
+                if other.get("robot") and not rec.get("robot"):
+                    rec["robot"] = other["robot"][:]
                 break
 
     skip_batch = (
@@ -835,10 +1310,12 @@ def main() -> None:
     linked = sum(1 for p in plan if p["recipeId"])
     print("recipes", len(store), "plan", len(plan), "linked", linked)
     print("no-steps", sum(1 for r in store.values() if not r.get("steps")))
+    print("real-steps", sum(1 for r in store.values() if any(not s.startswith("Au robot") for s in r.get("steps") or [])))
     from collections import Counter
     bw = Counter(i["week"] for i in batch)
     print("batch missing", [w for w in range(1, 53) if bw[w] == 0])
     print("batch 14", bw[14], "15", bw[15], "32", bw[32], "46", bw[46])
+    print("collections", [(c["slug"], len(c["recipeIds"])) for c in collections_out])
     by_id = {r["id"]: r for r in store.values()}
     for w in (1, 2):
         print(f"WEEK {w}")
@@ -846,7 +1323,7 @@ def main() -> None:
             rec = by_id[p["recipeId"]]
             print(
                 f"  {p['day'][:3]} {p['meal']:4} {p['name'][:46]:46} "
-                f"ings={len(rec['ingredients'])} src={rec['source']}"
+                f"ings={len(rec['ingredients'])} steps={len(rec.get('steps') or [])} src={rec['source']}"
             )
 
 

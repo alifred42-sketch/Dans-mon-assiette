@@ -12,9 +12,19 @@ export function RecipeList({
 }) {
   const [q, setQ] = useState("");
   const filtered = useMemo(() => {
-    const needle = q.trim().toLocaleLowerCase("fr");
+    const needle = q
+      .trim()
+      .toLocaleLowerCase("fr")
+      .normalize("NFD")
+      .replace(/\p{M}/gu, "");
     if (!needle) return items;
-    return items.filter((item) => item.name.toLocaleLowerCase("fr").includes(needle));
+    return items.filter((item) =>
+      item.name
+        .toLocaleLowerCase("fr")
+        .normalize("NFD")
+        .replace(/\p{M}/gu, "")
+        .includes(needle),
+    );
   }, [items, q]);
 
   return (
