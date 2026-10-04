@@ -50,13 +50,13 @@ export default async function FichePage({
       </header>
 
       {sections.length > 0 ? (
-        sections.map((sec) => (
-          <section key={sec.title}>
+        sections.map((sec, si) => (
+          <section key={`${si}-${sec.title}`}>
             <h2 className="font-heading text-xl">{sec.title}</h2>
             {sec.lines.length === 0 ? null : (
               <ul className="mt-2 divide-y">
-                {sec.lines.map((line) => (
-                  <li key={`${sec.title}-${line}`} className="py-2 text-sm leading-relaxed">
+                {sec.lines.map((line, li) => (
+                  <li key={`${si}-${li}`} className="py-2 text-sm leading-relaxed">
                     {line}
                   </li>
                 ))}
@@ -72,8 +72,8 @@ export default async function FichePage({
               <p className="mt-2 text-sm text-muted-foreground">Pas de liste dans cette fiche.</p>
             ) : (
               <ul className="mt-2 divide-y">
-                {ings.map((line) => (
-                  <li key={line} className="py-2 text-sm leading-relaxed">
+                {ings.map((line, i) => (
+                  <li key={`ing-${i}`} className="py-2 text-sm leading-relaxed">
                     {line}
                   </li>
                 ))}
@@ -84,8 +84,8 @@ export default async function FichePage({
             <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
             {recipe.steps.length > 0 ? (
               <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
-                {recipe.steps.map((step) => (
-                  <li key={step}>{step}</li>
+                {recipe.steps.map((step, i) => (
+                  <li key={`step-${i}`}>{step}</li>
                 ))}
               </ol>
             ) : (
@@ -98,8 +98,8 @@ export default async function FichePage({
             <section>
               <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
               <ul className="mt-2 space-y-1 text-sm">
-                {recipe.robot.map((line) => (
-                  <li key={line}>{line}</li>
+                {recipe.robot.map((line, i) => (
+                  <li key={`robot-${i}`}>{line}</li>
                 ))}
               </ul>
             </section>

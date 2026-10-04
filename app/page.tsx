@@ -30,8 +30,8 @@ export default async function HomePage({
         <section className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
           <h2 className="font-heading text-lg">Petit-déjeuner</h2>
           <ul className="mt-2 space-y-1 text-sm">
-            {breakfast.lines.map((line) => (
-              <li key={line}>{line}</li>
+            {breakfast.lines.map((line, i) => (
+              <li key={`breakfast-${i}`}>{line}</li>
             ))}
           </ul>
         </section>
