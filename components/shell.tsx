@@ -5,7 +5,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { CalendarDays, CookingPot, ShoppingCart, UtensilsCrossed } from "lucide-react";
 
 const NAV = [
-  { href: "/", label: "Semaine", icon: CalendarDays },
+  { href: "/semaine", label: "Semaine", icon: CalendarDays },
   { href: "/courses", label: "Courses", icon: ShoppingCart },
   { href: "/batch", label: "Batch", icon: CookingPot },
   { href: "/recettes", label: "Recettes", icon: UtensilsCrossed },
@@ -31,9 +31,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <div className="mx-auto grid max-w-lg grid-cols-4">
           {NAV.map((item) => {
             const Icon = item.icon;
-            const href = item.href === "/recettes" ? item.href : `${item.href}${weekQuery}`;
+            const href = `${item.href}${item.href === "/recettes" ? "" : weekQuery}`;
             const active =
-              item.href === "/"
+              item.href === "/semaine"
                 ? pathname === "/"
                 : item.href === "/recettes"
                   ? pathname.startsWith("/recettes") || pathname.startsWith("/carnet") || pathname.startsWith("/fiche")
