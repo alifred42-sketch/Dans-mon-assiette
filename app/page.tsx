@@ -36,7 +36,7 @@ export default function HomePage() {
         </section>
 
         <Link
-          href="/?w=1"
+          href="/semaine?w=1"
           className="mt-8 inline-flex min-h-16 w-full max-w-md items-center justify-center rounded-[22px] bg-[#8FA89B] px-7 text-lg font-extrabold text-white shadow-sm transition hover:brightness-95 active:scale-[0.99]"
         >
           Sauver ma semaine !
