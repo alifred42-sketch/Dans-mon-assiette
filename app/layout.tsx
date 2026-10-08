@@ -16,7 +16,7 @@ const heading = Fraunces({
 
 export const metadata: Metadata = {
   title: "CUISINE CHIC OUF !",
-  description: "Les 52 semaines d’Aline : choisir la semaine, ouvrir une fiche, recalculer les courses.",
+  description: "Pas de panique, on mange quoi ce soir ? 52 semaines de menus, du batchcooking simple et vos listes de courses automatisées.",
   manifest: `${BASE_PATH}/manifest.json`,
   appleWebApp: { capable: true, title: "CUISINE CHIC OUF !", statusBarStyle: "default" },
   icons: {
