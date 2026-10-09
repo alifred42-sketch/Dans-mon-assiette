@@ -26,7 +26,7 @@ export default async function FichePage({
   const ings = recipe.ingredients.filter((line) => line.trim());
   const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
   const quickIds = ["r-c1ed1606a4", "r-c27d71faed", "r-50f64b1080"];
-  const alternatives = quickIds.map((quickId) => carnet.recipes.find((r) => r.id === quickId)).filter((r): r is NonNullable<typeof r> => !!r && r.id !== recipe.id).slice(0,3).map((r) => ({ id: r.id, name: r.name }));
+  const alternatives = quickIds.map((quickId) => carnet.recipes.find((r) => r.id === quickId)).filter((r): r is NonNullable<typeof r> => !!r).slice(0,3).map((r) => ({ id: r.id, name: r.name }));
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
     .filter(Boolean)
     .join(" · ");
