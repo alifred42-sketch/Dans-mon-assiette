@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { FicheBack } from "@/components/fiche-back";
 import { CookingWakeLock } from "@/components/cooking-wake-lock";
 import { RecipeTools } from "@/components/recipe-tools";
 import { carnet, getCollections, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
@@ -22,7 +21,6 @@ export default async function FichePage({
     ...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.name)),
   ];
   const weeks = [...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.week))];
-  const fromCol = getCollections().find((col) => col.recipeIds.includes(recipe.id));
   const sections = (recipe.sections || []).filter((sec) => (sec.title || sec.lines.length) && !/ingr[eé]dients?/i.test(sec.title || ""));
   const ings = recipe.ingredients.filter((line) => line.trim());
   const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
@@ -31,9 +29,14 @@ export default async function FichePage({
   const sauceRecipes = carnet.recipes.filter((candidate) => /sauce|marinade|vinaigrette|pesto|coulis/i.test(candidate.name));
   function linkedInstruction(line: string) {
     const normalized = line.toLocaleLowerCase("fr");
-    const target = sauceRecipes.find((candidate) => normalized.includes(candidate.name.toLocaleLowerCase("fr")));
+    const target = sauceRecipes
+      .filter((candidate) => {
+        const name = candidate.name.toLocaleLowerCase("fr");
+        return normalized.includes(name) || (normalized.trim().length >= 6 && name.includes(normalized.trim()));
+      })
+      .sort((a, b) => b.name.length - a.name.length)[0];
     if (!target) return line;
-    return <><span>{line.slice(0, normalized.indexOf(target.name.toLocaleLowerCase("fr")))}</span><Link href={`/fiche/${target.id}`} className="font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">{line.slice(normalized.indexOf(target.name.toLocaleLowerCase("fr")), normalized.indexOf(target.name.toLocaleLowerCase("fr")) + target.name.length)}</Link><span>{line.slice(normalized.indexOf(target.name.toLocaleLowerCase("fr")) + target.name.length)}</span></>;
+    return <Link href={`/fiche/${target.id}`} className="font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">{line}</Link>;
   }
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
     .filter(Boolean)
@@ -41,7 +44,6 @@ export default async function FichePage({
   return (
     <article className="space-y-6">
       <CookingWakeLock />
-      <FicheBack fromCol={fromCol ? { slug: fromCol.slug, name: fromCol.name } : undefined} />
       <header className="space-y-2">
         <h1 className="font-heading text-3xl leading-tight">{recipe.name}</h1>
         {recipe.blurb ? <p className="text-sm leading-relaxed text-muted-foreground">{recipe.blurb}</p> : null}
@@ -67,7 +69,7 @@ export default async function FichePage({
               <ul className="mt-2 divide-y">
                 {sec.lines.map((line, li) => (
                   <li key={`${si}-${li}`} className="py-2 text-sm leading-relaxed">
-                    {line}
+                    {linkedInstruction(line)}
                   </li>
                 ))}
               </ul>
