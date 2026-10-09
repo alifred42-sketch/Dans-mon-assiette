@@ -290,23 +290,17 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
       }
     }
   }
-  // Compléter avec les anciennes lignes de courses uniquement pour les repas non liés à une fiche.
-  const plannedNames = new Set(
-    weekPlan(week)
-      .filter((slot) => Boolean(getRecipe(slot.recipeId)))
-      .flatMap((slot) => [fold(slot.name || ""), fold(getRecipe(slot.recipeId)?.name || "")])
-      .filter(Boolean),
-  );
+  // Compléter avec les lignes historiques qui manquent aux fiches, sans doubler les quantités déjà calculées.
   for (const row of official) {
-    const dishKey = fold(row.dish);
-    const alreadyCovered = [...plannedNames].some((name) =>
-      name === dishKey ||
-      (Math.min(name.length, dishKey.length) >= 16 && (name.includes(dishKey) || dishKey.includes(name))),
-    );
-    if (alreadyCovered) continue;
     const parsed = parseLine(row.ingredient);
     if (!parsed) continue;
-    add(parsed, row.dish);
+    const key = canonicalIngredient(parsed.name);
+    const existing = bag.get(key);
+    if (!existing) {
+      add(parsed, row.dish);
+    } else if (!existing.parts.some((part) => part.amount != null || part.qtyText)) {
+      add(parsed, row.dish);
+    }
   }
 
   return [...bag.entries()]
