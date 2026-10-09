@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CookingWakeLock } from "@/components/cooking-wake-lock";
 import { RecipeTools } from "@/components/recipe-tools";
-import { carnet, getCollections, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
+import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 
 export function generateStaticParams() {
   return carnet.recipes.map((recipe) => ({ id: recipe.id }));
