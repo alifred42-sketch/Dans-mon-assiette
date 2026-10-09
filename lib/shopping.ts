@@ -51,7 +51,7 @@ function cleanName(raw: string): string {
 
 function scaleIngredientLine(line: string, factor: number): string {
   if (!Number.isFinite(factor) || factor <= 0 || factor === 1) return line;
-  return line.replace(/^(\\s*(?:[^:]{1,40}:\\s*)?)(\\d+(?:[.,]\\d+)?)(?=\\s|$)/, (whole, prefix: string, raw: string) => {
+  return line.replace(/^(\s*(?:[^:]{1,40}:\s*)?)(\d+(?:[.,]\d+)?)(?=\s|$)/, (whole, prefix: string, raw: string) => {
     const value = Number(raw.replace(",", "."));
     if (!Number.isFinite(value) || value <= 0 || value > 1000) return whole;
     const scaled = Math.round(value * factor * 100) / 100;
