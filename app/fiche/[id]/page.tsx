@@ -117,6 +117,22 @@ export default async function FichePage({
         </>
       )}
 
+      {sections.length > 0 && recipe.steps.length > 0 && !sections.some((sec) => /préparation|preparation|étapes|etapes|instructions/i.test(sec.title)) ? (
+        <section>
+          <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
+          <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+            {recipe.steps.map((step, i) => <li key={`step-extra-${i}`}>{linkedInstruction(step)}</li>)}
+          </ol>
+        </section>
+      ) : null}
+      {sections.length > 0 && recipe.robot.length > 0 && !sections.some((sec) => /mr cuisine|robot/i.test(sec.title)) ? (
+        <section>
+          <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
+          <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+            {recipe.robot.map((line, i) => <li key={`robot-extra-${i}`}>{linkedInstruction(line)}</li>)}
+          </ol>
+        </section>
+      ) : null}
       {ings.length > 0 && shopIngs.length === 0 && (
         <p className="text-xs text-muted-foreground">Rien de cette fiche n’est ajouté aux courses.</p>
       )}
