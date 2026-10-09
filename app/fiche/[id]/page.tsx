@@ -57,7 +57,7 @@ export default async function FichePage({
         )}
       </header>
 
-      <RecipeTools recipeId={recipe.id} ingredients={shopIngs} alternatives={alternatives} />
+      <RecipeTools recipeId={recipe.id} ingredients={shopIngs} alternatives={alternatives} baseServings={Number.parseInt(recipe.servings || "4", 10) || 4} />
 
       {sections.length > 0 ? (
         sections.map((sec, si) => (
