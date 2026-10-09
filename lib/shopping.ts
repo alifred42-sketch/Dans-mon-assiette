@@ -33,16 +33,20 @@ function canonicalIngredient(raw: string): string {
     .replace(/\b(patates?|pdt|pommes de terres?|pommes terres?)\b/g, "pomme de terre")
     .replace(/\btomates? cerises?\b/g, "tomate cerise")
     .replace(/\boignons? (jaunes?|blancs?|rouges?)\b/g, "oignon")
-    .replace(/\bcreme (liquide|legere|epaisse|entiere|fraiche)\b/g, "creme")
+    .replace(/\bcreme(?: fraiche)?(?: liquide| legere| epaisse| entiere| semi epaisse| fleurette)?\b/g, "creme")
     .replace(/\bhuile (d )?olive\b/g, "huile olive")
-    .replace(/\bail (frais|en poudre)\b/g, "ail")
     .replace(/\bescalopes? de poulet\b/g, "poulet")
+    .replace(/\bfilets? de poulet\b/g, "poulet")
+    .replace(/\bpoulet (emince|en lanieres|cuit|cru)\b/g, "poulet")
     .replace(/\bpoulets?\b/g, "poulet")
     .replace(/\bboeuf hache\b/g, "boeuf")
+    .replace(/\bsteaks? haches? de boeuf\b/g, "boeuf")
     .replace(/\bpoivrons? (rouges?|verts?|jaunes?)\b/g, "poivron")
     .replace(/\bcarottes? nouvelles?\b/g, "carotte")
     .replace(/\bcourgettes\b/g, "courgette")
     .replace(/\btomates\b/g, "tomate")
+    .replace(/\bbeurre (doux|sale|demi sel)\b/g, "beurre")
+    .replace(/\bchampignons? de paris\b/g, "champignon")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -257,17 +261,16 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
     const relatedSauces = new Map<string, typeof carnet.recipes[number]>();
     const sectionLines = (recipe.sections || [])
       .filter((section) => foodSection.test(section.title || ""))
-      .flatMap((section) => section.lines)
+      .flatMap((section) => section.lines);
+    const rawLines = [...(recipe.ingredients || []), ...sectionLines];
+    const lines = rawLines
       .filter((line) => {
         const related = findLinkedSauce(line);
         if (!related || related.id === recipe.id) return true;
         relatedSauces.set(related.id, related);
         return false;
-      });
-    const lines = [
-      ...(recipe.ingredients || []).map((line) => scaleIngredientLine(line, factor)),
-      ...sectionLines.map((line) => scaleIngredientLine(line, factor)),
-    ];
+      })
+      .map((line) => scaleIngredientLine(line, factor));
     const seen = new Set<string>();
     for (const line of lines) {
       const parsed = parseLine(line);
