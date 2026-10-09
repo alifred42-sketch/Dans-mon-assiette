@@ -798,9 +798,16 @@
         "Pain complet",
         "Fromage frais"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [
         {
           "title": "Selon saison :",
@@ -9607,13 +9614,19 @@
         "Maïs (facultatif)",
         "Ciboulette"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Fondue de poireaux"
       ],
       "notes": [
         "➡️ Sauce citron-ciboulette 🔗",
-        "💡 Se prépare parfaitement la veille."
+        "💡 Se prépare parfaitement la veille.",
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
       ],
       "sections": [
         {
@@ -14828,14 +14841,20 @@
         "poivre",
         "basilic"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Velouté de courgettes"
       ],
       "notes": [
         "chèvre frais",
         "ricotta",
-        "fromage blanc"
+        "fromage blanc",
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
       ],
       "sections": [
         {
@@ -15064,7 +15083,12 @@
         "poivre",
         "persil"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Risotto champignons",
         "Risotto aux champignons",
@@ -15073,7 +15097,8 @@
       "notes": [
         "🐟 saumon",
         "🍗 poulet",
-        "🥒 courgettes"
+        "🥒 courgettes",
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
       ],
       "sections": [
         {
@@ -16364,11 +16389,18 @@
         "ail",
         "origan"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Poisson sauce tomate"
       ],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -16712,11 +16744,18 @@
         "curcuma",
         "gingembre"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Velouté de carottes"
       ],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -22488,11 +22527,18 @@
         "1 tranche de pain complet",
         "➡️ 20 g de mozzarella ou feta dans l’omelette"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Cuisson douce des champignons possible."
       ],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [
         {
           "title": "⏱️ Temps : 10-15 min",
@@ -23849,7 +23895,12 @@
         "poivre",
         "➡️ chèvre frais 30 g/personne"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Découpe légumes"
       ],
@@ -23857,7 +23908,8 @@
         "fromage blanc",
         "ciboulette",
         "citron",
-        "➡️ 1 tranche complète/personne"
+        "➡️ 1 tranche complète/personne",
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
       ],
       "sections": [
         {
@@ -28287,9 +28339,16 @@
         "ail",
         "30 g après repas possible ❤️"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [
         {
           "title": "⏱️ 15 minutes",
@@ -28335,9 +28394,16 @@
         "huile d’olive",
         "1 tranche complet"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [
         {
           "title": "Dans le saladier :",
@@ -37298,12 +37364,18 @@
         "carottes",
         "oignons"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Sauce bolognaise"
       ],
       "notes": [
-        "Faire double quantité → congeler une portion."
+        "Faire double quantité → congeler une portion.",
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
       ],
       "sections": [
         {
@@ -37330,9 +37402,16 @@
         "tomates",
         "œuf dur"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [],
       "source": "52 MENUS"
     },
@@ -37344,11 +37423,18 @@
         "jambon",
         "légumes"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Rillettes de thon"
       ],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [
         {
           "title": "🤖 MR CUISINE :",
@@ -37370,9 +37456,16 @@
         "maquereaux",
         "concombre"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [
         {
           "title": "Composition :",
@@ -37394,11 +37487,18 @@
         "champignons",
         "haricots verts"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Sauce moutarde"
       ],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [
         {
           "title": "Avec :",
@@ -37438,11 +37538,18 @@
         "🥚 omelettes",
         "🥕 légumes"
       ],
-      "steps": [],
+      "steps": [
+        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
+        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
+        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
+        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+      ],
       "robot": [
         "Velouté de légumes"
       ],
-      "notes": [],
+      "notes": [
+        "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
+      ],
       "sections": [
         {
           "title": "Soupe :",
@@ -45206,6 +45313,166 @@
       ],
       "source": "52 MENUS",
       "blurb": "Une soirée fraîche et légère après le burger du midi ❤️ Ingrédients (4 personnes)"
+    },
+    {
+      "id": "test-vide-frigo-s1",
+      "name": "🍱 Opération Vide-Frigo ! — assiette de restes et crudités",
+      "ingredients": [
+        "Restes de poulet ou légumes cuits du batchcooking",
+        "Riz ou pommes de terre déjà cuits",
+        "Salade verte ou crudités disponibles",
+        "2 cuillères à soupe de yaourt nature",
+        "Citron, moutarde, poivre"
+      ],
+      "steps": [
+        "Sortir les restes cuits de la semaine et vérifier leur conservation.",
+        "Assembler les légumes, la protéine et le féculent déjà cuits dans une assiette.",
+        "Mélanger le yaourt, le citron, une pointe de moutarde et le poivre pour faire une sauce minute.",
+        "Si les restes sont insuffisants, les transformer en gratin express avec un peu de fromage et passer au four 10 à 15 minutes."
+      ],
+      "robot": [],
+      "notes": [
+        "Repas anti-gaspillage : utiliser les restes correctement conservés, ou les transformer en gratin express."
+      ],
+      "source": "Création ciblée — test semaines 1 et 2",
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "2",
+      "blurb": "Repas anti-gaspillage : utiliser les restes correctement conservés, ou les transformer en gratin express."
+    },
+    {
+      "id": "test-pizza-s1",
+      "name": "🍕 Pizza maison express du vendredi soir",
+      "ingredients": [
+        "1 pâte à pizza",
+        "150 g de coulis de tomate",
+        "125 g de mozzarella",
+        "Champignons ou légumes rôtis restants",
+        "Origan"
+      ],
+      "steps": [
+        "Préchauffer le four selon les indications de la pâte, généralement à 220 °C.",
+        "Étaler le coulis de tomate sur la pâte.",
+        "Ajouter la mozzarella, les champignons ou les légumes restants et l’origan.",
+        "Enfourner 12 à 15 minutes, jusqu’à ce que la pâte soit dorée et le fromage fondu."
+      ],
+      "robot": [],
+      "notes": [
+        "Repas plaisir simple, adaptable avec les restes de légumes."
+      ],
+      "source": "Création ciblée — test semaines 1 et 2",
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "2",
+      "blurb": "Repas plaisir simple, adaptable avec les restes de légumes."
+    },
+    {
+      "id": "test-burger-s1",
+      "name": "🍔 Burgers maison du samedi",
+      "ingredients": [
+        "2 pains à burger",
+        "2 steaks hachés",
+        "2 tranches de fromage",
+        "Salade",
+        "1 tomate",
+        "2 cuillères à soupe de sauce au choix"
+      ],
+      "steps": [
+        "Faire cuire les steaks dans une poêle bien chaude jusqu’à la cuisson souhaitée.",
+        "Réchauffer les pains quelques minutes.",
+        "Garnir avec la sauce, la salade, la tomate, les steaks et le fromage.",
+        "Servir avec des crudités ou des pommes de terre déjà cuites au four."
+      ],
+      "robot": [],
+      "notes": [
+        "Repas plaisir du week-end, sans préparation compliquée."
+      ],
+      "source": "Création ciblée — test semaines 1 et 2",
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "2",
+      "blurb": "Repas plaisir du week-end, sans préparation compliquée."
+    },
+    {
+      "id": "test-vide-frigo-s2",
+      "name": "🍱 Opération Vide-Frigo ! — bol chaud ou gratin minute",
+      "ingredients": [
+        "Restes de légumes cuits de la semaine",
+        "Restes de riz, pommes de terre ou pâtes",
+        "Restes de viande, poisson ou 2 œufs",
+        "Un peu de fromage râpé (facultatif)",
+        "Herbes, poivre"
+      ],
+      "steps": [
+        "Réunir les restes correctement conservés et les couper en morceaux si nécessaire.",
+        "Pour un bol chaud, réchauffer séparément puis assembler avec des herbes et du poivre.",
+        "Pour un gratin, mélanger les restes dans un plat, ajouter un peu de fromage et enfourner 10 à 15 minutes à 200 °C.",
+        "Ne pas utiliser un reste qui a été mal refroidi ou conservé trop longtemps."
+      ],
+      "robot": [],
+      "notes": [
+        "Deux solutions anti-gaspillage : bol chaud ou gratin express."
+      ],
+      "source": "Création ciblée — test semaines 1 et 2",
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "2",
+      "blurb": "Deux solutions anti-gaspillage : bol chaud ou gratin express."
+    },
+    {
+      "id": "test-pizza-s2",
+      "name": "🍕 Pizza express aux boulettes et légumes",
+      "ingredients": [
+        "1 pâte à pizza",
+        "150 g de coulis de tomate",
+        "Quelques boulettes cuites de la semaine",
+        "125 g de mozzarella",
+        "Légumes rôtis restants",
+        "Origan"
+      ],
+      "steps": [
+        "Préchauffer le four à 220 °C ou selon les indications de la pâte.",
+        "Étaler le coulis sur la pâte.",
+        "Répartir les boulettes coupées, les légumes rôtis et la mozzarella.",
+        "Ajouter l’origan et cuire 12 à 15 minutes, jusqu’à ce que la pâte soit dorée."
+      ],
+      "robot": [],
+      "notes": [
+        "Pizza du vendredi soir avec une utilisation maligne des préparations déjà faites."
+      ],
+      "source": "Création ciblée — test semaines 1 et 2",
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "2",
+      "blurb": "Pizza du vendredi soir avec une utilisation maligne des préparations déjà faites."
+    },
+    {
+      "id": "test-burger-s2",
+      "name": "🍔 Burgers maison façon bistrot",
+      "ingredients": [
+        "2 pains à burger",
+        "2 steaks hachés",
+        "2 tranches de fromage",
+        "Salade",
+        "1 tomate",
+        "Cornichons (facultatif)",
+        "Sauce burger ou moutarde douce"
+      ],
+      "steps": [
+        "Cuire les steaks dans une poêle chaude.",
+        "Faire tiédir les pains et préparer les crudités.",
+        "Garnir les pains avec la sauce, la salade, la tomate, les steaks et le fromage.",
+        "Ajouter les cornichons si souhaité et servir immédiatement."
+      ],
+      "robot": [],
+      "notes": [
+        "Repas plaisir simple du samedi."
+      ],
+      "source": "Création ciblée — test semaines 1 et 2",
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "2",
+      "blurb": "Repas plaisir simple du samedi."
     }
   ],
   "plan": [
@@ -45269,42 +45536,42 @@
       "week": 1,
       "day": "VENDREDI",
       "meal": "Midi",
-      "name": "🐟 Saumon poireaux citron",
-      "recipeId": "r-ef75c2304d"
+      "name": "🍱 Opération Vide-Frigo !",
+      "recipeId": "test-vide-frigo-s1"
     },
     {
       "week": 1,
       "day": "VENDREDI",
       "meal": "Soir",
-      "name": "🥂 Apéro repas léger",
-      "recipeId": "r-dc1f699ff9"
+      "name": "🍕 Pizza maison express",
+      "recipeId": "test-pizza-s1"
     },
     {
       "week": 1,
       "day": "SAMEDI",
       "meal": "Midi",
-      "name": "🥘 Chili con carne doux",
-      "recipeId": "r-50e9f84517"
+      "name": "🍔 Burgers maison",
+      "recipeId": "test-burger-s1"
     },
     {
       "week": 1,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🥗 Repas léger",
-      "recipeId": "r-dc1f699ff9"
+      "name": "🍕 Pizza ou croques express",
+      "recipeId": "test-pizza-s1"
     },
     {
       "week": 1,
       "day": "DIMANCHE",
       "meal": "Midi",
-      "name": "🍗 Poulet rôti",
+      "name": "🍗 Assiette assemblée du batchcooking",
       "recipeId": "r-b5d84e8dfe"
     },
     {
       "week": 1,
       "day": "DIMANCHE",
       "meal": "Soir",
-      "name": "🥣 Soupe maison",
+      "name": "🥣 Velouté de légumes du batchcooking",
       "recipeId": "r-9f72f3e182"
     },
     {
@@ -45367,42 +45634,42 @@
       "week": 2,
       "day": "VENDREDI",
       "meal": "Midi",
-      "name": "🌶️ Chili con carne doux",
-      "recipeId": "r-50e9f84517"
+      "name": "🍱 Opération Vide-Frigo !",
+      "recipeId": "test-vide-frigo-s2"
     },
     {
       "week": 2,
       "day": "VENDREDI",
       "meal": "Soir",
-      "name": "🥂 Apéro repas léger",
-      "recipeId": "r-dc1f699ff9"
+      "name": "🍕 Pizza express aux boulettes et légumes",
+      "recipeId": "test-pizza-s2"
     },
     {
       "week": 2,
       "day": "SAMEDI",
       "meal": "Midi",
-      "name": "🍗 Escalope de dinde sauce moutarde",
-      "recipeId": "r-0f5bcbbf3c"
+      "name": "🍔 Burgers maison façon bistrot",
+      "recipeId": "test-burger-s2"
     },
     {
       "week": 2,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🍳 Omelette complète",
-      "recipeId": "r-376d7c7d61"
+      "name": "🍕 Pizza express aux boulettes et légumes",
+      "recipeId": "test-pizza-s2"
     },
     {
       "week": 2,
       "day": "DIMANCHE",
       "meal": "Midi",
-      "name": "🍲 Bœuf bourguignon familial",
+      "name": "🥘 Assiette assemblée du batchcooking",
       "recipeId": "r-bd28f91212"
     },
     {
       "week": 2,
       "day": "DIMANCHE",
       "meal": "Soir",
-      "name": "🥣 Soupe maison + tartine",
+      "name": "🥣 Velouté de légumes de saison",
       "recipeId": "r-31f2803315"
     },
     {
@@ -69574,960 +69841,6 @@
   ],
   "courses": [
     {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "courgettes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "1 pomme de terre",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "oignon",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "bouillon",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "St Môret",
-      "aisle": "🥛 Frais"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "curry doux",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "poivre",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "basilic",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "\"Velouté de courgettes\"",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "chèvre frais",
-      "aisle": "🥛 Frais"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "ricotta",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Velouté courgettes St Môret",
-      "ingredient": "fromage blanc",
-      "aisle": "🥛 Frais"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Cabillaud sauce tomate provençale",
-      "ingredient": "cabillaud",
-      "aisle": "🐟 Poisson"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Cabillaud sauce tomate provençale",
-      "ingredient": "tomates",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Cabillaud sauce tomate provençale",
-      "ingredient": "courgettes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Cabillaud sauce tomate provençale",
-      "ingredient": "olives (facultatif)",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Cabillaud sauce tomate provençale",
-      "ingredient": "basilic",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Cabillaud sauce tomate provençale",
-      "ingredient": "ail",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Cabillaud sauce tomate provençale",
-      "ingredient": "origan",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Cabillaud sauce tomate provençale",
-      "ingredient": "\"Poisson sauce tomate\"",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🍳 Omelette courgettes chèvre",
-      "ingredient": "Courgettes râpées",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🍳 Omelette courgettes chèvre",
-      "ingredient": "Œufs",
-      "aisle": "🥚 Œufs"
-    },
-    {
-      "week": 1,
-      "dish": "🍳 Omelette courgettes chèvre",
-      "ingredient": "Farine complète",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🍳 Omelette courgettes chèvre",
-      "ingredient": "Chèvre frais",
-      "aisle": "🥛 Frais"
-    },
-    {
-      "week": 1,
-      "dish": "🍳 Omelette courgettes chèvre",
-      "ingredient": "Herbes",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🍳 Omelette courgettes chèvre",
-      "ingredient": "Poivre",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Saumon poireaux citron",
-      "ingredient": "Riz spécial risotto",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Saumon poireaux citron",
-      "ingredient": "Saumon frais ou fumé",
-      "aisle": "🐟 Poisson"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Saumon poireaux citron",
-      "ingredient": "Poireaux",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Saumon poireaux citron",
-      "ingredient": "Bouillon",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Saumon poireaux citron",
-      "ingredient": "Citron",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Saumon poireaux citron",
-      "ingredient": "Parmesan",
-      "aisle": "🥛 Frais"
-    },
-    {
-      "week": 1,
-      "dish": "🐟 Saumon poireaux citron",
-      "ingredient": "Aneth",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "500 g de bœuf haché",
-      "aisle": "🥩 Viandes"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "Haricots rouges (selon goût)",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "Tomates concassées",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "Carottes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "Poivron",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "Oignon",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "🧂 Épices & aromates",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "🌶️ Paprika fumé",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "🟡 Cumin",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "🌶️ Piment doux (facultatif)",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🥘 Chili con carne doux",
-      "ingredient": "🧄 Ail",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🍗 Poulet rôti",
-      "ingredient": "Cuisses ou blancs de poulet",
-      "aisle": "🥩 Viandes"
-    },
-    {
-      "week": 1,
-      "dish": "🍗 Poulet rôti",
-      "ingredient": "Champignons",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🍗 Poulet rôti",
-      "ingredient": "Carottes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🍗 Poulet rôti",
-      "ingredient": "Courgettes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🍗 Poulet rôti",
-      "ingredient": "Oignons",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🍗 Poulet rôti",
-      "ingredient": "Thym",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🍗 Poulet rôti",
-      "ingredient": "Ail",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "Courgettes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "Carottes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "Poireaux",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "Oignons",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "Pommes de terre",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "Pain complet",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "Fromage frais",
-      "aisle": "🥛 Frais"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "✅ Parfaite pour ce type de recette",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "🍋 Sauce vinaigrette légère citronnée",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "🥗 salades",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "🍈 melon/mozzarella",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "🐟 poissons froids",
-      "aisle": "🐟 Poisson"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "🍔 Sauce burger légère",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "🍔 burgers maison",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "🌯 wraps",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "🥚 omelettes",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "🥔 pommes de terre",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 1,
-      "dish": "🥣 Soupe maison",
-      "ingredient": "🥕 légumes",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🍗 Poulet aux courgettes façon provençale",
-      "ingredient": "Blancs de poulet",
-      "aisle": "🥩 Viandes"
-    },
-    {
-      "week": 2,
-      "dish": "🍗 Poulet aux courgettes façon provençale",
-      "ingredient": "Courgettes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍗 Poulet aux courgettes façon provençale",
-      "ingredient": "Tomates concassées",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍗 Poulet aux courgettes façon provençale",
-      "ingredient": "Oignon",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍗 Poulet aux courgettes façon provençale",
-      "ingredient": "Ail",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍗 Poulet aux courgettes façon provençale",
-      "ingredient": "Basilic",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍗 Poulet aux courgettes façon provençale",
-      "ingredient": "Paprika",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🍗 Poulet aux courgettes façon provençale",
-      "ingredient": "Huile d’olive",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Velouté carottes curry + tartine complète",
-      "ingredient": "carottes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Velouté carottes curry + tartine complète",
-      "ingredient": "lait de coco",
-      "aisle": "🥛 Frais"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Velouté carottes curry + tartine complète",
-      "ingredient": "oignon",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Velouté carottes curry + tartine complète",
-      "ingredient": "bouillon",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Velouté carottes curry + tartine complète",
-      "ingredient": "curry",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Velouté carottes curry + tartine complète",
-      "ingredient": "curcuma",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Velouté carottes curry + tartine complète",
-      "ingredient": "gingembre",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Velouté carottes curry + tartine complète",
-      "ingredient": "\"Velouté de carottes\"",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥘 Boulettes de bœuf sauce tomate",
-      "ingredient": "500 g de bœuf haché",
-      "aisle": "🥩 Viandes"
-    },
-    {
-      "week": 2,
-      "dish": "🥘 Boulettes de bœuf sauce tomate",
-      "ingredient": "1 œuf",
-      "aisle": "🥚 Œufs"
-    },
-    {
-      "week": 2,
-      "dish": "🥘 Boulettes de bœuf sauce tomate",
-      "ingredient": "Chapelure",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🥘 Boulettes de bœuf sauce tomate",
-      "ingredient": "Tomates concassées",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥘 Boulettes de bœuf sauce tomate",
-      "ingredient": "Oignon",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥘 Boulettes de bœuf sauce tomate",
-      "ingredient": "Carotte râpée",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥘 Boulettes de bœuf sauce tomate",
-      "ingredient": "🧂 Épices & aromates",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🥘 Boulettes de bœuf sauce tomate",
-      "ingredient": "🧄 Ail",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥘 Boulettes de bœuf sauce tomate",
-      "ingredient": "⚫ Poivre",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "courgettes",
-      "ingredient": "300 g de riz spécial risotto",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "courgettes",
-      "ingredient": "2 courgettes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "courgettes",
-      "ingredient": "1 oignon",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "courgettes",
-      "ingredient": "1 gousse d’ail",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "courgettes",
-      "ingredient": "700 ml de bouillon de légumes",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "courgettes",
-      "ingredient": "40 g de parmesan",
-      "aisle": "🥛 Frais"
-    },
-    {
-      "week": 2,
-      "dish": "courgettes",
-      "ingredient": "1 cuillère à soupe d’huile d’olive",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "courgettes",
-      "ingredient": "Poivre",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "courgettes",
-      "ingredient": "Basilic ou persil",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "riz arborio",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "champignons",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "parmesan",
-      "aisle": "🥛 Frais"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "bouillon",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "oignon",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "poivre",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "persil",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "\"Risotto champignons\"",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "🐟 saumon",
-      "aisle": "🐟 Poisson"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "🍗 poulet",
-      "aisle": "🥩 Viandes"
-    },
-    {
-      "week": 2,
-      "dish": "🍝 Risotto champignons parmesan",
-      "ingredient": "🥒 courgettes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥗 Assiette fraîche",
-      "ingredient": "Œufs durs",
-      "aisle": "🥚 Œufs"
-    },
-    {
-      "week": 2,
-      "dish": "🥗 Assiette fraîche",
-      "ingredient": "Pommes de terre vapeur",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥗 Assiette fraîche",
-      "ingredient": "Tomates",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥗 Assiette fraîche",
-      "ingredient": "Concombre",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥗 Assiette fraîche",
-      "ingredient": "Carottes râpées",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥗 Assiette fraîche",
-      "ingredient": "Salade",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "500 g de bœuf haché",
-      "aisle": "🥩 Viandes"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "Haricots rouges (selon goût)",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "Tomates concassées",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "Carottes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "Poivron",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "Oignon",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "🧂 Épices & aromates",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "🌶️ Paprika fumé",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "🟡 Cumin",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "🌶️ Piment doux (facultatif)",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🌶️ Chili con carne doux",
-      "ingredient": "🧄 Ail",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍲 Bœuf bourguignon familial",
-      "ingredient": "1 kg de bœuf à mijoter",
-      "aisle": "🥩 Viandes"
-    },
-    {
-      "week": 2,
-      "dish": "🍲 Bœuf bourguignon familial",
-      "ingredient": "4 carottes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍲 Bœuf bourguignon familial",
-      "ingredient": "250 g de champignons",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍲 Bœuf bourguignon familial",
-      "ingredient": "2 oignons",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍲 Bœuf bourguignon familial",
-      "ingredient": "1 bouquet garni",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🍲 Bœuf bourguignon familial",
-      "ingredient": "Bouillon de bœuf",
-      "aisle": "🥩 Viandes"
-    },
-    {
-      "week": 2,
-      "dish": "🍲 Bœuf bourguignon familial",
-      "ingredient": "Vin rouge (facultatif selon préférence)",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🍲 Bœuf bourguignon familial",
-      "ingredient": "🧂 Épices & aromates",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🍲 Bœuf bourguignon familial",
-      "ingredient": "🧄 Ail",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🍲 Bœuf bourguignon familial",
-      "ingredient": "⚫ Poivre",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "Courgettes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "Carottes",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "Poireaux",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "Oignons",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "Pommes de terre",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "Pain complet",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "Fromage frais",
-      "aisle": "🥛 Frais"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "✅ Parfaite pour ce type de recette",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "🍋 Sauce vinaigrette légère citronnée",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "🥗 salades",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "🍈 melon/mozzarella",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "🐟 poissons froids",
-      "aisle": "🐟 Poisson"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "🍔 Sauce burger légère",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "🍔 burgers maison",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "🌯 wraps",
-      "aisle": "🥫 Épicerie"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "🥚 omelettes",
-      "aisle": "🛒 À vérifier"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "🥔 pommes de terre",
-      "aisle": "🥕 Légumes & fruits"
-    },
-    {
-      "week": 2,
-      "dish": "🥣 Soupe maison + tartine",
-      "ingredient": "🥕 légumes",
-      "aisle": "🛒 À vérifier"
-    },
-    {
       "week": 3,
       "dish": "🐟 Cabillaud façon provençale + légumes",
       "ingredient": "4 dos de cabillaud",
@@ -90428,6 +89741,1320 @@
       "dish": "🥣 Soupe froide courgette-menthe & tartines de saumon",
       "ingredient": "⭐ Parfaite quand il fait chaud.",
       "aisle": "🛒 À vérifier"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "2 blancs de poulet (environ 300 g)",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "2 courgettes (environ 500 g)",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "1 oignon",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "2 gousses d'ail",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "Riz basmati cru : 120 g",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "(60 g par personne)",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "Le repas contient déjà du riz.",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "2 c. à café paprika fumé",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "1 c. à café paprika doux",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "1 c. à café herbes de Provence",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "ail",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "poivre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "sel",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "1 c. à soupe d'huile d'olive",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "100 g fromage blanc 0–3 %",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "1 c. à café moutarde",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "jus d'un demi-citron",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "paprika fumé",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "ciboulette",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "Mélanger le tout.",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Poulet paprika + courgettes rôties + riz",
+      "ingredient": "Servir froid.",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté courgettes St Môret",
+      "ingredient": "courgettes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté courgettes St Môret",
+      "ingredient": "1 pomme de terre",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté courgettes St Môret",
+      "ingredient": "oignon",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté courgettes St Môret",
+      "ingredient": "bouillon",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté courgettes St Môret",
+      "ingredient": "St Môret",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté courgettes St Môret",
+      "ingredient": "curry doux",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté courgettes St Môret",
+      "ingredient": "poivre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté courgettes St Môret",
+      "ingredient": "basilic",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🐟 Cabillaud sauce tomate provençale",
+      "ingredient": "cabillaud",
+      "aisle": "🐟 Poisson"
+    },
+    {
+      "week": 1,
+      "dish": "🐟 Cabillaud sauce tomate provençale",
+      "ingredient": "tomates",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🐟 Cabillaud sauce tomate provençale",
+      "ingredient": "courgettes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🐟 Cabillaud sauce tomate provençale",
+      "ingredient": "olives (facultatif)",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🐟 Cabillaud sauce tomate provençale",
+      "ingredient": "basilic",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🐟 Cabillaud sauce tomate provençale",
+      "ingredient": "ail",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🐟 Cabillaud sauce tomate provençale",
+      "ingredient": "origan",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Grande salade repas",
+      "ingredient": "salade verte",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Grande salade repas",
+      "ingredient": "tomates",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Grande salade repas",
+      "ingredient": "œufs",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Grande salade repas",
+      "ingredient": "thon",
+      "aisle": "🐟 Poisson"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Grande salade repas",
+      "ingredient": "mozzarella",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Grande salade repas",
+      "ingredient": "quelques noix",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Grande salade repas",
+      "ingredient": "moutarde",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Grande salade repas",
+      "ingredient": "citron",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Grande salade repas",
+      "ingredient": "huile d’olive",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Grande salade repas",
+      "ingredient": "1 tranche complet",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥩 Steak haché façon bistrot",
+      "ingredient": "steak haché",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 1,
+      "dish": "🥩 Steak haché façon bistrot",
+      "ingredient": "haricots verts",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥩 Steak haché façon bistrot",
+      "ingredient": "champignons à la crème légère",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥩 Steak haché façon bistrot",
+      "ingredient": "poivre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥩 Steak haché façon bistrot",
+      "ingredient": "persil",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥩 Steak haché façon bistrot",
+      "ingredient": "ail",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥩 Steak haché façon bistrot",
+      "ingredient": "30 g après repas possible ❤️",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍳 Omelette courgettes chèvre",
+      "ingredient": "œufs : 6",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 1,
+      "dish": "🍳 Omelette courgettes chèvre",
+      "ingredient": "courgettes : 2",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍳 Omelette courgettes chèvre",
+      "ingredient": "tomates cerises",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍳 Omelette courgettes chèvre",
+      "ingredient": "oignon",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍳 Omelette courgettes chèvre",
+      "ingredient": "salade verte",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍳 Omelette courgettes chèvre",
+      "ingredient": "paprika doux : 1 c. à café",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍳 Omelette courgettes chèvre",
+      "ingredient": "herbes de Provence : 1 c. à café",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍳 Omelette courgettes chèvre",
+      "ingredient": "poivre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍳 Omelette courgettes chèvre",
+      "ingredient": "➡️ chèvre frais 30 g/personne",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍝 Bolognaise maison",
+      "ingredient": "bœuf haché",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 1,
+      "dish": "🍝 Bolognaise maison",
+      "ingredient": "tomates",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍝 Bolognaise maison",
+      "ingredient": "carottes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍝 Bolognaise maison",
+      "ingredient": "oignons",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Restes + crudités",
+      "ingredient": "salade",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Restes + crudités",
+      "ingredient": "tomates",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥗 Restes + crudités",
+      "ingredient": "œuf dur",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 1,
+      "dish": "🍱 Opération Vide-Frigo !",
+      "ingredient": "Restes de poulet ou légumes cuits du batchcooking",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 1,
+      "dish": "🍱 Opération Vide-Frigo !",
+      "ingredient": "Riz ou pommes de terre déjà cuits",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍱 Opération Vide-Frigo !",
+      "ingredient": "Salade verte ou crudités disponibles",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍱 Opération Vide-Frigo !",
+      "ingredient": "2 cuillères à soupe de yaourt nature",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 1,
+      "dish": "🍱 Opération Vide-Frigo !",
+      "ingredient": "Citron, moutarde, poivre",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍕 Pizza maison express",
+      "ingredient": "1 pâte à pizza",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍕 Pizza maison express",
+      "ingredient": "150 g de coulis de tomate",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍕 Pizza maison express",
+      "ingredient": "125 g de mozzarella",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 1,
+      "dish": "🍕 Pizza maison express",
+      "ingredient": "Champignons ou légumes rôtis restants",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍕 Pizza maison express",
+      "ingredient": "Origan",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍔 Burgers maison",
+      "ingredient": "2 pains à burger",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍔 Burgers maison",
+      "ingredient": "2 steaks hachés",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 1,
+      "dish": "🍔 Burgers maison",
+      "ingredient": "2 tranches de fromage",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 1,
+      "dish": "🍔 Burgers maison",
+      "ingredient": "Salade",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍔 Burgers maison",
+      "ingredient": "1 tomate",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍔 Burgers maison",
+      "ingredient": "2 cuillères à soupe de sauce au choix",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍕 Pizza ou croques express",
+      "ingredient": "1 pâte à pizza",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍕 Pizza ou croques express",
+      "ingredient": "150 g de coulis de tomate",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍕 Pizza ou croques express",
+      "ingredient": "125 g de mozzarella",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 1,
+      "dish": "🍕 Pizza ou croques express",
+      "ingredient": "Champignons ou légumes rôtis restants",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍕 Pizza ou croques express",
+      "ingredient": "Origan",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Assiette assemblée du batchcooking",
+      "ingredient": "Cuisses ou blancs de poulet",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Assiette assemblée du batchcooking",
+      "ingredient": "Champignons",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Assiette assemblée du batchcooking",
+      "ingredient": "Carottes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Assiette assemblée du batchcooking",
+      "ingredient": "Courgettes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Assiette assemblée du batchcooking",
+      "ingredient": "Oignons",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Assiette assemblée du batchcooking",
+      "ingredient": "Thym",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🍗 Assiette assemblée du batchcooking",
+      "ingredient": "Ail",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté de légumes du batchcooking",
+      "ingredient": "Courgettes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté de légumes du batchcooking",
+      "ingredient": "Carottes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté de légumes du batchcooking",
+      "ingredient": "Poireaux",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté de légumes du batchcooking",
+      "ingredient": "Oignons",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté de légumes du batchcooking",
+      "ingredient": "Pommes de terre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté de légumes du batchcooking",
+      "ingredient": "Pain complet",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 1,
+      "dish": "🥣 Velouté de légumes du batchcooking",
+      "ingredient": "Fromage frais",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🍗 Poulet aux courgettes façon provençale",
+      "ingredient": "Blancs de poulet",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 2,
+      "dish": "🍗 Poulet aux courgettes façon provençale",
+      "ingredient": "Courgettes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍗 Poulet aux courgettes façon provençale",
+      "ingredient": "Tomates concassées",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍗 Poulet aux courgettes façon provençale",
+      "ingredient": "Oignon",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍗 Poulet aux courgettes façon provençale",
+      "ingredient": "Ail",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍗 Poulet aux courgettes façon provençale",
+      "ingredient": "Basilic",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍗 Poulet aux courgettes façon provençale",
+      "ingredient": "Paprika",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍗 Poulet aux courgettes façon provençale",
+      "ingredient": "Huile d’olive",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté carottes curry + tartine complète",
+      "ingredient": "carottes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté carottes curry + tartine complète",
+      "ingredient": "lait de coco",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté carottes curry + tartine complète",
+      "ingredient": "oignon",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté carottes curry + tartine complète",
+      "ingredient": "bouillon",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté carottes curry + tartine complète",
+      "ingredient": "curry",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté carottes curry + tartine complète",
+      "ingredient": "curcuma",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté carottes curry + tartine complète",
+      "ingredient": "gingembre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🐟 Saumon citronné + riz",
+      "ingredient": "Riz complet",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🐟 Saumon citronné + riz",
+      "ingredient": "Saumon fumé",
+      "aisle": "🐟 Poisson"
+    },
+    {
+      "week": 2,
+      "dish": "🐟 Saumon citronné + riz",
+      "ingredient": "Concombre",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🐟 Saumon citronné + riz",
+      "ingredient": "Tomates",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🐟 Saumon citronné + riz",
+      "ingredient": "Maïs (facultatif)",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🐟 Saumon citronné + riz",
+      "ingredient": "Ciboulette",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥚 Salade complète œufs & maquereaux",
+      "ingredient": "salade",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥚 Salade complète œufs & maquereaux",
+      "ingredient": "tomates",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥚 Salade complète œufs & maquereaux",
+      "ingredient": "œufs durs",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🥚 Salade complète œufs & maquereaux",
+      "ingredient": "maquereaux",
+      "aisle": "🐟 Poisson"
+    },
+    {
+      "week": 2,
+      "dish": "🥚 Salade complète œufs & maquereaux",
+      "ingredient": "concombre",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "500 g de bœuf haché",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "1 œuf",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "Chapelure",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "Tomates concassées",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "Oignon",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "Carotte râpée",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "🌿 Basilic",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "🌿 Origan",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "🧄 Ail",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "⚫ Poivre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "Pâtes classiques (portion adaptée)",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "Riz",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Boulettes de bœuf sauce tomate",
+      "ingredient": "Courgettes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🧀 Courgettes gratinées chèvre",
+      "ingredient": "4 plaques de ravioles du commerce",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🧀 Courgettes gratinées chèvre",
+      "ingredient": "2 courgettes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🧀 Courgettes gratinées chèvre",
+      "ingredient": "1 boule de mozzarella",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🧀 Courgettes gratinées chèvre",
+      "ingredient": "Sauce tomate",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🧀 Courgettes gratinées chèvre",
+      "ingredient": "🌿 Basilic",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🧀 Courgettes gratinées chèvre",
+      "ingredient": "🌿 Origan",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🧀 Courgettes gratinées chèvre",
+      "ingredient": "🧄 Ail",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🧀 Courgettes gratinées chèvre",
+      "ingredient": "⚫ Poivre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍝 Risotto champignons parmesan",
+      "ingredient": "riz arborio",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍝 Risotto champignons parmesan",
+      "ingredient": "champignons",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍝 Risotto champignons parmesan",
+      "ingredient": "parmesan",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍝 Risotto champignons parmesan",
+      "ingredient": "bouillon",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍝 Risotto champignons parmesan",
+      "ingredient": "oignon",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍝 Risotto champignons parmesan",
+      "ingredient": "poivre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍝 Risotto champignons parmesan",
+      "ingredient": "persil",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥗 Assiette fraîche",
+      "ingredient": "Œufs durs",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🥗 Assiette fraîche",
+      "ingredient": "Pommes de terre vapeur",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥗 Assiette fraîche",
+      "ingredient": "Tomates",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥗 Assiette fraîche",
+      "ingredient": "Concombre",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥗 Assiette fraîche",
+      "ingredient": "Carottes râpées",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥗 Assiette fraîche",
+      "ingredient": "Salade",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍱 Opération Vide-Frigo !",
+      "ingredient": "Restes de légumes cuits de la semaine",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍱 Opération Vide-Frigo !",
+      "ingredient": "Restes de riz, pommes de terre ou pâtes",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍱 Opération Vide-Frigo !",
+      "ingredient": "Restes de viande, poisson ou 2 œufs",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 2,
+      "dish": "🍱 Opération Vide-Frigo !",
+      "ingredient": "Un peu de fromage râpé (facultatif)",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🍱 Opération Vide-Frigo !",
+      "ingredient": "Herbes, poivre",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "1 pâte à pizza",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "150 g de coulis de tomate",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "Quelques boulettes cuites de la semaine",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "125 g de mozzarella",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "Légumes rôtis restants",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "Origan",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍔 Burgers maison façon bistrot",
+      "ingredient": "2 pains à burger",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍔 Burgers maison façon bistrot",
+      "ingredient": "2 steaks hachés",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 2,
+      "dish": "🍔 Burgers maison façon bistrot",
+      "ingredient": "2 tranches de fromage",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🍔 Burgers maison façon bistrot",
+      "ingredient": "Salade",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍔 Burgers maison façon bistrot",
+      "ingredient": "1 tomate",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍔 Burgers maison façon bistrot",
+      "ingredient": "Cornichons (facultatif)",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍔 Burgers maison façon bistrot",
+      "ingredient": "Sauce burger ou moutarde douce",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "1 pâte à pizza",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "150 g de coulis de tomate",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "Quelques boulettes cuites de la semaine",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "125 g de mozzarella",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "Légumes rôtis restants",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🍕 Pizza express aux boulettes et légumes",
+      "ingredient": "Origan",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "1 kg de bœuf à mijoter",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "4 carottes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "250 g de champignons",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "2 oignons",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "1 bouquet garni",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "Bouillon de bœuf",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "Vin rouge (facultatif selon préférence)",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "🌿 Thym",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "🌿 Laurier",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "🧄 Ail",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "⚫ Poivre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "🌿 Persil frais",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "🥔 Pommes de terre vapeur",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥘 Assiette assemblée du batchcooking",
+      "ingredient": "🥕 Légumes verts",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "poireaux",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "pommes de terre",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "carottes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "St Môret",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "jambon ou saumon fumé",
+      "aisle": "🥩 Viandes"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "Courgettes",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "Oignons",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "Pain complet",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "Fromage frais",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "🥗 salades",
+      "aisle": "🥕 Légumes & fruits"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "🍈 melon/mozzarella",
+      "aisle": "🥛 Frais"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "🐟 poissons froids",
+      "aisle": "🐟 Poisson"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "🍔 Sauce burger légère",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "🍔 burgers maison",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "🌯 wraps",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "🥚 omelettes",
+      "aisle": "🥫 Épicerie"
+    },
+    {
+      "week": 2,
+      "dish": "🥣 Velouté de légumes de saison",
+      "ingredient": "🥕 légumes",
+      "aisle": "🥕 Légumes & fruits"
     }
   ],
   "collections": [
