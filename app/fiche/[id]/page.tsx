@@ -30,7 +30,12 @@ export default async function FichePage({
   function cleanMatch(value: string) { return value.toLocaleLowerCase("fr").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim(); }
   function findSauceRecipe(line: string) {
     const cleaned = cleanMatch(line);
-    return sauceRecipes.filter((candidate) => { const name = cleanMatch(candidate.name); return cleaned.includes(name) || (cleaned.length >= 6 && name.includes(cleaned)); }).sort((a, b) => b.name.length - a.name.length)[0];
+    const exact = sauceRecipes.filter((candidate) => cleaned.includes(cleanMatch(candidate.name))).sort((a, b) => b.name.length - a.name.length)[0];
+    if (exact) return exact;
+    return sauceRecipes.filter((candidate) => {
+      const name = cleanMatch(candidate.name);
+      return cleaned.length >= 6 && name.includes(cleaned);
+    }).sort((a, b) => a.name.length - b.name.length)[0];
   }
   const ingredientTargets = Object.fromEntries(shopIngs.map((line, index) => { const target = findSauceRecipe(line); return target ? [index, { id: target.id, name: target.name }] : null; }).filter((value): value is [number, { id: string; name: string }] => value !== null));
   function linkedInstruction(line: string) {
