@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, getRecipe, weekPlan } from "@/lib/carnet";
 import { InstallApp } from "@/components/install-app";
+import { MealReminders } from "@/components/meal-reminders";
 import { WeekPicker } from "@/components/week-picker";
 
 export default function WeekPage() {
@@ -47,6 +48,7 @@ export default function WeekPage() {
       {weekday === 5 ? <aside className="rounded-2xl border border-[#D98A6C]/30 bg-[#F3C6B1]/35 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">C'est vendredi ! Rangez les tupperwares du batchcooking, place à la cuisine plaisir !</aside> : null}
       {weekday === 6 ? <aside className="rounded-2xl border border-[#D98A6C]/30 bg-[#F3C6B1]/35 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">Week-end en mode Cuisine Chic Ouf : on se fait plaisir sans se prendre la tête.</aside> : null}
       <WeekPicker week={week} path="/semaine" />
+      <MealReminders />
       {breakfast && breakfast.lines.length > 0 ? (
         <section className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
           <h2 className="font-heading text-lg">Petit-déjeuner</h2>
