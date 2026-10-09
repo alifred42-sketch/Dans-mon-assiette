@@ -19,10 +19,31 @@ export default async function RecettesPage({ searchParams }: { searchParams: Pro
     tired: "fatiguee", "mr-cuisine": "mrcuisine", apero: "apero", recevoir: "invites",
     printemps: "printemps", ete: "ete", automne: "automne", hiver: "hiver", bonus: "bonus",
   };
-  const selectedCollection = allCollections.find((col) => col.slug === slugByFilter[filter]);
+  const selectedCollection = allCollections.find((col) => col.slug === slugByFilter[filter] && col.recipeIds.length > 0);
   const selectedIds = selectedCollection ? new Set(selectedCollection.recipeIds) : null;
+  const month = new Date().getMonth() + 1;
+  const seasonal = month >= 3 && month <= 5 ? "printemps" : month >= 6 && month <= 8 ? "ete" : month >= 9 && month <= 11 ? "automne" : "hiver";
+  const fallbackFilter = (recipe: (typeof carnet.recipes)[number]) => {
+    const hay = [recipe.name, recipe.blurb || "", ...recipeLines(recipe)].join(" ").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLocaleLowerCase("fr");
+    switch (filter) {
+      case "sauces": return /sauce|vinaigrette|pesto|coulis|mayonnaise|beurre compose/.test(hay);
+      case "marinades": return /marinade|mariner/.test(hay);
+      case "epices": return /epice|aromate|assaisonnement|melange d'herbes/.test(hay);
+      case "express": return /express|rapide|15 min|20 min|10 min/.test(hay) || (Number.parseInt(recipe.timePrep || "99", 10) + Number.parseInt(recipe.timeCook || "99", 10) <= 20);
+      case "tired": return /fatigue|flemme|facile|sans cuisson|3 ingredients|rapide/.test(hay) || (recipe.steps.length > 0 && recipe.steps.length <= 4);
+      case "mr-cuisine": return recipe.robot.length > 0;
+      case "apero": return /aperitif|apero|verrine|tartinade|tapenade|toast/.test(hay);
+      case "recevoir": return /invites|recevoir|festif|convivial|famille|repas de fete/.test(hay);
+      case "printemps": return selectedIds ? false : /asperge|petit pois|radis|fraise|artichaut/.test(hay) || seasonal === "printemps";
+      case "ete": return /tomate|courgette|aubergine|melon|peche|barbecue|salade fraiche/.test(hay) || seasonal === "ete";
+      case "automne": return /potimarron|courge|champignon|chataigne|pomme|poire|poireau/.test(hay) || seasonal === "automne";
+      case "hiver": return /chou|endive|poireau|carotte|navet|veloute|soupe chaude/.test(hay) || seasonal === "hiver";
+      case "bonus": return recipe.notes.length > 0 || /astuce|variante|bonus|anti gaspi/.test(hay);
+      default: return true;
+    }
+  };
   const recipes = carnet.recipes
-    .filter((recipe) => !filter || (selectedIds ? selectedIds.has(recipe.id) : true))
+    .filter((recipe) => !filter || (selectedIds ? selectedIds.has(recipe.id) : fallbackFilter(recipe)))
     .sort((a, b) => a.name.localeCompare(b.name, "fr"))
     .map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
 
