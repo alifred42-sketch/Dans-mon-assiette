@@ -17,7 +17,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const search = useSearchParams();
   const [showSplash, setShowSplash] = useState(true);
-  useEffect(() => { setShowSplash(true); const timer = window.setTimeout(() => setShowSplash(false), 3000); return () => window.clearTimeout(timer); }, [pathname]);
+  const queryString = search.toString();
+  useEffect(() => { setShowSplash(true); const timer = window.setTimeout(() => setShowSplash(false), 3000); return () => window.clearTimeout(timer); }, [pathname, queryString]);
   const week = search.get("w");
   const weekQuery = week ? `?w=${week}` : "";
 
