@@ -32,7 +32,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </Link>
         </div>
       </header>
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-28 pt-6"><BackButton />{children}</main>
+      <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-28 pt-6"><BackButton />{children}<div className="mt-10 border-t border-[#E9E9E4] pt-5 text-center"><Link href="/notre-histoire" className="text-sm font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">Notre Histoire — pourquoi Cuisine Chic Ouf ?</Link></div></main>
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-[#E9E9E4] bg-[#F9F9F7]/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md">
         <div className="mx-auto grid max-w-lg grid-cols-4">
           {NAV.map((item) => {
