@@ -25,7 +25,8 @@ export default async function FichePage({
   const sections = (recipe.sections || []).filter((sec) => sec.title || sec.lines.length);
   const ings = recipe.ingredients.filter((line) => line.trim());
   const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
-  const alternatives = carnet.recipes.filter((r) => r.id !== recipe.id && /omelette|pâtes au thon|salade repas|express|fatigué/i.test(r.name)).slice(0,3).map((r) => ({ id: r.id, name: r.name }));
+  const quickIds = ["r-c1ed1606a4", "r-c27d71faed", "r-50f64b1080"];
+  const alternatives = quickIds.map((quickId) => carnet.recipes.find((r) => r.id === quickId)).filter((r): r is NonNullable<typeof r> => !!r && r.id !== recipe.id).slice(0,3).map((r) => ({ id: r.id, name: r.name }));
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
     .filter(Boolean)
     .join(" · ");
@@ -48,7 +49,7 @@ export default async function FichePage({
         )}
       </header>
 
-      <RecipeTools ingredients={shopIngs} alternatives={alternatives} />
+      <RecipeTools recipeId={recipe.id} ingredients={shopIngs} alternatives={alternatives} />
 
       {sections.length > 0 ? (
         sections.map((sec, si) => (
