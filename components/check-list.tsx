@@ -59,7 +59,7 @@ export function CheckList({
 
   const remaining = items.filter((item) => !checked[item.id]).length;
   let lastGroup: string | undefined;
-  const sortedItems = [...items].sort((a, b) => Number(!!checked[a.id]) - Number(!!checked[b.id]) || (a.group || "").localeCompare(b.group || "", "fr"));
+  const sortedItems = [...items].sort((a, b) => Number(!!checked[a.id]) - Number(!!checked[b.id]) || (a.group || "").localeCompare(b.group || "", "fr") || a.title.localeCompare(b.title, "fr"));
 
   return (
     <div className="space-y-3" data-ready={ready ? "true" : "false"}>
@@ -85,7 +85,7 @@ export function CheckList({
                   checked={done}
                   onChange={() => toggle(item.id)}
                 />
-                <span className="peer-checked:text-muted-foreground peer-checked:line-through">
+                <span className={done ? "text-muted-foreground" : "text-[#8FA89B]"}>
                   <span className="block font-medium leading-snug">{item.title}</span>
                   {item.detail ? (
                     <span className="mt-1 block text-xs text-muted-foreground no-underline">
