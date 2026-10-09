@@ -84,20 +84,6 @@ export default async function FichePage({
       ) : (
         <>
           <section>
-            <h2 className="font-heading text-xl">🛒 Ingrédients</h2>
-            {ings.length === 0 ? (
-              <p className="mt-2 text-sm text-muted-foreground">Pas de liste dans cette fiche.</p>
-            ) : (
-              <ul className="mt-2 divide-y">
-                {ings.map((line, i) => (
-                  <li key={`ing-${i}`} className="py-2 text-sm leading-relaxed">
-                    {line}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
-          <section>
             <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
             {recipe.steps.length > 0 ? (
               <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
