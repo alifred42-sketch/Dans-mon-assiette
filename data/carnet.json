@@ -56765,15 +56765,15 @@
       "week": 9,
       "day": "SAMEDI",
       "meal": "Midi",
-      "name": "🥣 Velouté printanier carotte-poireau",
-      "recipeId": "cco-veloute-carotte-poireau"
+      "name": "🍕 Pizza maison méditerranéenne",
+      "recipeId": "cco-pizza-mediterranee"
     },
     {
       "week": 9,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🍅 Gaspacho maison + tartines",
-      "recipeId": "r-c6c7772066"
+      "name": "🍔 Burger maison façon bistrot",
+      "recipeId": "cco-burger-bistrot"
     },
     {
       "week": 9,
@@ -56863,15 +56863,15 @@
       "week": 10,
       "day": "SAMEDI",
       "meal": "Midi",
-      "name": "🥣 Velouté printanier carotte-poireau",
-      "recipeId": "cco-veloute-carotte-poireau"
+      "name": "🍕 Pizza maison jambon-champignons",
+      "recipeId": "cco-pizza-jambon-champignons"
     },
     {
       "week": 10,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🍅 Gaspacho + tartines",
-      "recipeId": "r-58a4b367c8"
+      "name": "🌮 Tacos maison poulet-poivrons",
+      "recipeId": "cco-tacos-poulet"
     },
     {
       "week": 10,
@@ -57885,15 +57885,15 @@
       "week": 21,
       "day": "MARDI",
       "meal": "Midi",
-      "name": "🍅 Gaspacho andalou frais",
-      "recipeId": "cco-gaspacho-andalou"
+      "name": "🍝 Lasagnes maison courgettes bœuf",
+      "recipeId": "r-dabd3f5ac2"
     },
     {
       "week": 21,
       "day": "MARDI",
       "meal": "Soir",
-      "name": "🥣 Velouté tomate basilic + tartine",
-      "recipeId": "r-45b3ac4798"
+      "name": "🍅 Gaspacho andalou frais",
+      "recipeId": "cco-gaspacho-andalou"
     },
     {
       "week": 21,
@@ -57983,15 +57983,15 @@
       "week": 22,
       "day": "MARDI",
       "meal": "Midi",
-      "name": "🥒 Gaspacho concombre-menthe",
-      "recipeId": "cco-gaspacho-concombre"
+      "name": "🍚 Risotto poulet courgettes parmesan ❤️",
+      "recipeId": "r-b2b3918bfe"
     },
     {
       "week": 22,
       "day": "MARDI",
       "meal": "Soir",
-      "name": "🥣 Velouté carottes cumin + tartine chèvre",
-      "recipeId": "r-089cee7987"
+      "name": "🥒 Gaspacho concombre-menthe",
+      "recipeId": "cco-gaspacho-concombre"
     },
     {
       "week": 22,
@@ -58095,15 +58095,15 @@
       "week": 23,
       "day": "MERCREDI",
       "meal": "Midi",
-      "name": "🍅 Gaspacho andalou frais",
-      "recipeId": "cco-gaspacho-andalou"
+      "name": "🥙 Keftas de bœuf façon turque + légumes",
+      "recipeId": "r-1604da1a6a"
     },
     {
       "week": 23,
       "day": "MERCREDI",
       "meal": "Soir",
-      "name": "🥣 Soupe de légumes + tartine",
-      "recipeId": "r-9f72f3e182"
+      "name": "🍅 Gaspacho andalou frais",
+      "recipeId": "cco-gaspacho-andalou"
     },
     {
       "week": 23,
@@ -58179,15 +58179,15 @@
       "week": 24,
       "day": "MARDI",
       "meal": "Midi",
-      "name": "🥒 Gaspacho concombre-menthe",
-      "recipeId": "cco-gaspacho-concombre"
+      "name": "🍝 Penne au saumon sauce citron légère",
+      "recipeId": "r-cf3eca399d"
     },
     {
       "week": 24,
       "day": "MARDI",
       "meal": "Soir",
-      "name": "🥣 Velouté poireaux pommes de terre + tartine",
-      "recipeId": "r-cf9d5e66cb"
+      "name": "🥒 Gaspacho concombre-menthe",
+      "recipeId": "cco-gaspacho-concombre"
     },
     {
       "week": 24,
@@ -58277,15 +58277,15 @@
       "week": 25,
       "day": "MARDI",
       "meal": "Midi",
-      "name": "🍅 Gaspacho andalou frais",
-      "recipeId": "cco-gaspacho-andalou"
+      "name": "🍆 Parmigiana de courgettes légère",
+      "recipeId": "r-72e662c2be"
     },
     {
       "week": 25,
       "day": "MARDI",
       "meal": "Soir",
-      "name": "🥣 Soupe tomate basilic + tartine jambon fromage",
-      "recipeId": "r-6f5ef08ff7"
+      "name": "🍅 Gaspacho andalou frais",
+      "recipeId": "cco-gaspacho-andalou"
     },
     {
       "week": 25,
@@ -58375,15 +58375,15 @@
       "week": 26,
       "day": "MARDI",
       "meal": "Midi",
-      "name": "🥒 Gaspacho concombre-menthe",
-      "recipeId": "cco-gaspacho-concombre"
+      "name": "🍝 Pâtes façon carbonara légère",
+      "recipeId": "r-cd7afc007b"
     },
     {
       "week": 26,
       "day": "MARDI",
       "meal": "Soir",
-      "name": "🥣 Velouté courgettes & chèvre",
-      "recipeId": "r-2045b89320"
+      "name": "🥒 Gaspacho concombre-menthe",
+      "recipeId": "cco-gaspacho-concombre"
     },
     {
       "week": 26,
@@ -59565,15 +59565,15 @@
       "week": 38,
       "day": "MERCREDI",
       "meal": "Midi",
-      "name": "🥣 Velouté de courge et châtaignes",
-      "recipeId": "cco-veloute-courge-chataigne"
+      "name": "🥙 Assiette poulet façon chawarma maison",
+      "recipeId": "r-548c345e0f"
     },
     {
       "week": 38,
       "day": "MERCREDI",
       "meal": "Soir",
-      "name": "🍅 Gaspacho tomate basilic + tartines œufs avocat",
-      "recipeId": "r-07b8eca016"
+      "name": "🥣 Velouté de courge et châtaignes",
+      "recipeId": "cco-veloute-courge-chataigne"
     },
     {
       "week": 38,
@@ -59775,15 +59775,15 @@
       "week": 40,
       "day": "JEUDI",
       "meal": "Midi",
-      "name": "🥣 Velouté de courge et châtaignes",
-      "recipeId": "cco-veloute-courge-chataigne"
+      "name": "🍗 Poulet façon souvlaki & légumes grillés",
+      "recipeId": "r-76033d4d4b"
     },
     {
       "week": 40,
       "day": "JEUDI",
       "meal": "Soir",
-      "name": "🥒 Velouté froid courgette-basilic & tartine de saumon",
-      "recipeId": "r-cdc393c0ab"
+      "name": "🥣 Velouté de courge et châtaignes",
+      "recipeId": "cco-veloute-courge-chataigne"
     },
     {
       "week": 40,
@@ -59901,15 +59901,15 @@
       "week": 41,
       "day": "SAMEDI",
       "meal": "Midi",
-      "name": "🥣 Velouté carotte-lentilles corail",
-      "recipeId": "cco-veloute-carotte-lentilles"
+      "name": "🌮 Tacos maison poulet-poivrons",
+      "recipeId": "cco-tacos-poulet"
     },
     {
       "week": 41,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🍲 Velouté froid courgette-concombre & tartines de poulet",
-      "recipeId": "r-bb6f9bfee0"
+      "name": "🥣 Velouté carotte-lentilles corail",
+      "recipeId": "cco-veloute-carotte-lentilles"
     },
     {
       "week": 41,
@@ -60979,15 +60979,15 @@
       "week": 52,
       "day": "SAMEDI",
       "meal": "Midi",
-      "name": "🥣 Velouté de courge et châtaignes",
-      "recipeId": "cco-veloute-courge-chataigne"
+      "name": "🍔 Burger italien tomate-mozzarella",
+      "recipeId": "cco-burger-italien"
     },
     {
       "week": 52,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "☀️ Gaspacho melon-tomate & tartines méditerranéennes",
-      "recipeId": "r-a554cb564b"
+      "name": "🍕 Pizza maison trois fromages",
+      "recipeId": "cco-pizza-trois-fromages"
     },
     {
       "week": 52,
