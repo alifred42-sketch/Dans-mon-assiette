@@ -149,7 +149,7 @@ function guessAisle(name: string): string {
     return "🥛 Frais";
   }
   if (
-    /courgette|tomate|carotte|oignon|poireau|salade|citron|poivron|concombre|champignon|pomme de terre|patate|\\bpdt\\b|ail|basilic|persil|melon|avocat|radis|haricot vert/.test(
+    /courgette|tomate|carotte|oignon|poireau|salade|citron|poivron|concombre|champignon|pomme de terre|patate|\bpdt\b|ail|basilic|persil|melon|avocat|radis|haricot vert/.test(
       f,
     )
   ) {
@@ -223,7 +223,7 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
   const bag = new Map<string, Acc>();
 
   function aisleFor(name: string): string {
-    const key = fold(name);
+    const key = canonicalIngredient(name);
     if (aisleByName.has(key)) return aisleByName.get(key) || guessAisle(name);
     for (const [known, aisle] of aisleByName) {
       if (known.includes(key) || key.includes(known)) return aisle;
