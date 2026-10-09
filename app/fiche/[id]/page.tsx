@@ -27,16 +27,16 @@ export default async function FichePage({
   const quickIds = ["r-c1ed1606a4", "r-c27d71faed", "r-50f64b1080"];
   const alternatives = quickIds.map((quickId) => carnet.recipes.find((r) => r.id === quickId)).filter((r): r is NonNullable<typeof r> => !!r).slice(0,3).map((r) => ({ id: r.id, name: r.name }));
   const sauceRecipes = carnet.recipes.filter((candidate) => /sauce|marinade|vinaigrette|pesto|coulis/i.test(candidate.name));
+  function cleanMatch(value: string) { return value.toLocaleLowerCase("fr").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").replace(/[^a-z0-9\\s]/g, " ").replace(/\\s+/g, " ").trim(); }
+  function findSauceRecipe(line: string) {
+    const cleaned = cleanMatch(line);
+    return sauceRecipes.filter((candidate) => { const name = cleanMatch(candidate.name); return cleaned.includes(name) || (cleaned.length >= 6 && name.includes(cleaned)); }).sort((a, b) => b.name.length - a.name.length)[0];
+  }
+  const ingredientTargets = Object.fromEntries(shopIngs.map((line, index) => { const target = findSauceRecipe(line); return target ? [index, { id: target.id, name: target.name }] : null; }).filter((value): value is [string, { id: string; name: string }] => value !== null));
   function linkedInstruction(line: string) {
-    const normalized = line.toLocaleLowerCase("fr");
-    const target = sauceRecipes
-      .filter((candidate) => {
-        const name = candidate.name.toLocaleLowerCase("fr");
-        return normalized.includes(name) || (normalized.trim().length >= 6 && name.includes(normalized.trim()));
-      })
-      .sort((a, b) => b.name.length - a.name.length)[0];
+    const target = findSauceRecipe(line);
     if (!target) return line;
-    return <Link href={`/fiche/${target.id}`} className="font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">{line}</Link>;
+    return <Link href={"/fiche/" + target.id} className="font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">{line}</Link>;
   }
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
     .filter(Boolean)
@@ -59,7 +59,7 @@ export default async function FichePage({
         )}
       </header>
 
-      <RecipeTools recipeId={recipe.id} ingredients={shopIngs} alternatives={alternatives} baseServings={Number.parseInt(recipe.servings || "4", 10) || 4} />
+      <RecipeTools recipeId={recipe.id} ingredients={shopIngs} alternatives={alternatives} baseServings={Number.parseInt(recipe.servings || "4", 10) || 4} ingredientTargets={ingredientTargets} />
 
       {sections.length > 0 ? (
         sections.map((sec, si) => (
