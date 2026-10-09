@@ -180,6 +180,17 @@ function prettyName(names: string[]): string {
   return name.charAt(0).toLocaleUpperCase("fr") + name.slice(1);
 }
 
+function findLinkedSauce(line: string) {
+  const cleaned = fold(line);
+  const sauces = carnet.recipes.filter((candidate) => /sauce|marinade|vinaigrette|pesto|coulis/i.test(candidate.name));
+  const exact = sauces.filter((candidate) => cleaned.includes(fold(candidate.name))).sort((a, b) => b.name.length - a.name.length)[0];
+  if (exact) return exact;
+  return sauces.filter((candidate) => {
+    const name = fold(candidate.name);
+    return cleaned.length >= 6 && name.includes(cleaned);
+  }).sort((a, b) => a.name.length - b.name.length)[0];
+}
+
 export function shoppingForWeek(week: number, servingsByRecipe: Record<string, number> = {}): ShoppingItem[] {
   const official = (carnet.courses || []).filter((row) => row.week === week);
   const aisleByName = new Map<string, string>();
@@ -219,24 +230,44 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
     if (!recipe) continue;
     const foodSection = /ingr|épice|epice|légume|viande|fromage|sauce|appareil|pain|féculent|feculent|dessus|assais/i;
     const baseServings = Number.parseInt(recipe.servings || "4", 10) || 4;
-    const factor = (servingsByRecipe[recipe.id] || baseServings) / baseServings;
+    const selectedServings = servingsByRecipe[recipe.id] || baseServings;
+    const factor = selectedServings / baseServings;
+    const relatedSauces = new Map<string, typeof carnet.recipes[number]>();
+    const sectionLines = (recipe.sections || [])
+      .filter((section) => foodSection.test(section.title || ""))
+      .flatMap((section) => section.lines)
+      .filter((line) => {
+        const related = findLinkedSauce(line);
+        if (!related || related.id === recipe.id) return true;
+        relatedSauces.set(related.id, related);
+        return false;
+      });
     const lines = [
       ...(recipe.ingredients || []).map((line) => scaleIngredientLine(line, factor)),
-      ...(recipe.sections || [])
-        .filter((section) => foodSection.test(section.title || ""))
-        .flatMap((section) => section.lines.map((line) => scaleIngredientLine(line, factor))),
+      ...sectionLines.map((line) => scaleIngredientLine(line, factor)),
     ];
     const seen = new Set<string>();
     for (const line of lines) {
       const parsed = parseLine(line);
       if (!parsed) continue;
-      const dedupe = `${fold(parsed.name)}|${parsed.qtyText || ""}`;
+      const dedupe = `${canonicalIngredient(parsed.name)}|${parsed.qtyText || ""}`;
       if (seen.has(dedupe)) continue;
       seen.add(dedupe);
       add(parsed, slot.name || recipe.name);
     }
+    for (const related of relatedSauces.values()) {
+      const sauceBase = Number.parseInt(related.servings || String(baseServings), 10) || baseServings;
+      const sauceFactor = selectedServings / sauceBase;
+      for (const line of related.ingredients || []) {
+        const parsed = parseLine(scaleIngredientLine(line, sauceFactor));
+        if (!parsed) continue;
+        const dedupe = `${canonicalIngredient(parsed.name)}|${parsed.qtyText || ""}`;
+        if (seen.has(dedupe)) continue;
+        seen.add(dedupe);
+        add(parsed, `${slot.name || recipe.name} — ${related.name}`);
+      }
+    }
   }
-
   if (bag.size === 0) {
     for (const row of official) {
       const parsed = parseLine(row.ingredient);
