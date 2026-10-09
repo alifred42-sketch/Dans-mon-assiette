@@ -14,13 +14,13 @@ function scaleLine(line: string, factor: number) {
   });
 }
 
-export function RecipeTools({ recipeId, ingredients, alternatives }: { recipeId: string; ingredients: string[]; alternatives: Alternative[] }) {
-  const [servings, setServings] = useState(4);
+export function RecipeTools({ recipeId, ingredients, alternatives, baseServings = 4 }: { recipeId: string; ingredients: string[]; alternatives: Alternative[]; baseServings?: number }) {
+  const [servings, setServings] = useState(baseServings);
   const [ready, setReady] = useState(false);
-  useEffect(() => { try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; if (saved[recipeId]) setServings(saved[recipeId]); } catch {} setReady(true); }, [recipeId]);
+  useEffect(() => { try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; if (saved[recipeId]) setServings(saved[recipeId]); else setServings(baseServings); } catch {} setReady(true); }, [recipeId, baseServings]);
   useEffect(() => { if (!ready) return; try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; saved[recipeId] = servings; localStorage.setItem("assiette-recipe-servings", JSON.stringify(saved)); window.dispatchEvent(new CustomEvent("assiette-servings-change")); } catch {} }, [recipeId, servings, ready]);
   const [showSos, setShowSos] = useState(false);
-  const scaled = useMemo(() => ingredients.map((line) => scaleLine(line, servings / 4)), [ingredients, servings]);
+  const scaled = useMemo(() => ingredients.map((line) => scaleLine(line, servings / baseServings)), [ingredients, servings]);
   return (
     <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -31,7 +31,7 @@ export function RecipeTools({ recipeId, ingredients, alternatives }: { recipeId:
           <button type="button" aria-label="Ajouter une personne" onClick={() => setServings(n => Math.min(20,n+1))} className="size-9 rounded-full bg-[#8FA89B] text-lg font-bold text-white">+</button>
         </div>
       </div>
-      <p className="text-xs text-[#6B6B67]">Quantités indicatives calculées à partir d’une base de 4 personnes.</p>
+      <p className="text-xs text-[#6B6B67]">Quantités indicatives calculées à partir d’une base de {baseServings} personne{baseServings > 1 ? "s" : ""}.</p>
       <div className="space-y-2">
         <h3 className="font-heading text-lg font-semibold text-[#2B2B2B]">🛒 Ingrédients pour {servings} personne{servings > 1 ? "s" : ""}</h3>
         <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed">{scaled.map((line,i)=><li key={i}>{line}</li>)}</ul>
