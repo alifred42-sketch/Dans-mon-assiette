@@ -9,7 +9,7 @@ const reminders = [
   { day: 5, hour: 18, minute: 30, title: "🍔 Alerte Week-end Plaisir !", body: "Ce soir, c'est flemme et gourmandise." },
 ];
 
-export function MealReminders() {
+export function MealReminders({ visible = true }: { visible?: boolean }) {
   const [permission, setPermission] = useState<NotificationPermission | "unsupported">("default");
   const [enabled, setEnabled] = useState(false);
   useEffect(() => {
@@ -57,7 +57,7 @@ export function MealReminders() {
   }
   function disable() { localStorage.removeItem("cuisine-chic-ouf-reminders"); setEnabled(false); }
   return (
-    <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4">
+    <section className={visible ? "space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4" : "hidden"}>
       <div>
         <h2 className="font-heading text-lg font-bold">🔔 Mes rappels Cuisine Chic Ouf</h2>
         <p className="mt-1 text-sm leading-relaxed text-[#666660]">Dimanche 10 h : batchcooking · Lundi 17 h 30 : menu prêt · Vendredi 18 h 30 : week-end plaisir.</p>
