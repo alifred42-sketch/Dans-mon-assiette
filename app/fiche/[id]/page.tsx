@@ -22,7 +22,7 @@ export default async function FichePage({
   ];
   const weeks = [...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.week))];
   const fromCol = getCollections().find((col) => col.recipeIds.includes(recipe.id));
-  const sections = (recipe.sections || []).filter((sec) => sec.title || sec.lines.length);
+  const sections = (recipe.sections || []).filter((sec) => (sec.title || sec.lines.length) && !/ingr[eé]dients?/i.test(sec.title || ""));
   const ings = recipe.ingredients.filter((line) => line.trim());
   const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
   const quickIds = ["r-c1ed1606a4", "r-c27d71faed", "r-50f64b1080"];
