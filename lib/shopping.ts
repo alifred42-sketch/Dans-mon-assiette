@@ -58,15 +58,14 @@ function cleanName(raw: string): string {
 
 function scaleIngredientLine(line: string, factor: number): string {
   if (!Number.isFinite(factor) || factor <= 0 || factor === 1) return line;
-  return line.replace(/^(\s*(?:[^:]{1,40}:\s*)?)(\d+(?:[.,]\d+)?(?:\/\d+(?:[.,]\d+)?)?)(?=\s|$)/, (whole, prefix: string, raw: string) => {
+  return line.replace(/\d+(?:[.,]\d+)?(?:\/\d+(?:[.,]\d+)?)?/g, (raw) => {
     const fraction = raw.split("/");
     const value = fraction.length === 2 ? Number(fraction[0].replace(",", ".")) / Number(fraction[1].replace(",", ".")) : Number(raw.replace(",", "."));
-    if (!Number.isFinite(value) || value <= 0 || value > 1000) return whole;
+    if (!Number.isFinite(value) || value <= 0 || value > 1000) return raw;
     const scaled = Math.round(value * factor * 100) / 100;
-    return prefix + String(scaled).replace(".", ",");
+    return String(scaled).replace(".", ",");
   });
 }
-
 function num(raw: string): number {
   const fraction = raw.split("/");
   return fraction.length === 2 ? Number(fraction[0].replace(",", ".")) / Number(fraction[1].replace(",", ".")) : Number(raw.replace(",", "."));
@@ -129,6 +128,11 @@ function parseLine(raw: string): Parsed | null {
     };
   }
 
+  const embedded = t.match(/^(.{2,40}?)\s+(\d+(?:[.,]\d+)?(?:\/\d+(?:[.,]\d+)?)?)\s*(g|kg|ml|cl|l|c\.\s*à\s*(?:s\.|c\.|soupe|café)|càs|cac|cs|cc|tranche[s]?|gousse[s]?)?\s+(?:de\s+|d['’])?(.+)$/i);
+  if (embedded) {
+    const unit = embedded[3] ? normUnit(embedded[3]) : undefined;
+    return { name: cleanName(embedded[1] + " " + embedded[4]), qtyText: embedded[2] + (embedded[3] ? " " + embedded[3] : ""), amount: num(embedded[2]), unit };
+  }
   const name = cleanName(t);
   if (!name) return null;
   return { name };
