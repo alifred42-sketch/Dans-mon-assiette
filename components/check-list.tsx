@@ -17,7 +17,9 @@ export function CheckList({ storageKey, items }: { storageKey: string; items: Ch
   const touched = useRef(false);
 
   useLayoutEffect(() => {
-    if (!touched.current) setChecked(loadStore(storageKey));
+    touched.current = false;
+    setReady(false);
+    setChecked(loadStore(storageKey));
     setReady(true);
   }, [storageKey]);
 
