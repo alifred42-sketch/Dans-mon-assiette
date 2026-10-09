@@ -88,16 +88,22 @@
       "id": "r-027c5f4f20",
       "name": "🐟 RECETTE 002 — Cabillaud pommes de terre sauce skyr citron",
       "ingredients": [
-        "Dos de cabillaud",
-        "Pommes de terre",
-        "Haricots verts ou légumes de saison",
-        "Sauce skyr citron"
+        "600 g de dos de cabillaud (4 portions de 150 g)",
+        "600 g de pommes de terre",
+        "400 g de haricots verts",
+        "150 g de skyr nature",
+        "1 citron",
+        "1 c. à café de moutarde douce",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à soupe d’aneth ou de ciboulette",
+        "Sel et poivre"
       ],
       "steps": [
-        "Cuire les pommes de terre vapeur.",
-        "Cuire le cabillaud au four avec citron et herbes.",
-        "Servir avec la sauce skyr citron.",
-        "La sauce peut être préparée 3 jours à l’avance au réfrigérateur."
+        "Éplucher les pommes de terre, les couper en morceaux et les cuire à l’eau bouillante salée 18 à 20 minutes; cuire les haricots verts 8 à 10 minutes.",
+        "Mélanger le skyr, le jus de la moitié du citron, la moutarde, les herbes, le sel et le poivre; réserver au frais.",
+        "Préchauffer le four à 190 °C. Déposer le cabillaud dans un plat, ajouter l’huile, le reste de citron et un peu de poivre.",
+        "Cuire le poisson 12 à 15 minutes selon l’épaisseur, jusqu’à ce qu’il soit opaque et se détache facilement.",
+        "Servir le cabillaud avec les pommes de terre, les haricots verts et la sauce skyr citron."
       ],
       "robot": [
         "Poisson vapeur"
@@ -118,19 +124,25 @@
         {
           "title": "⏱️ Préparation : 10 min",
           "lines": [
-            "1. Cuire les pommes de terre vapeur.",
-            "2. Cuire le cabillaud au four avec citron et herbes.",
-            "3. Servir avec la sauce skyr citron.",
-            "4. La sauce peut être préparée 3 jours à l’avance au réfrigérateur."
+            "1. Éplucher les pommes de terre, les couper en morceaux et les cuire à l’eau bouillante salée 18 à 20 minutes; cuire les haricots verts 8 à 10 minutes.",
+            "2. Mélanger le skyr, le jus de la moitié du citron, la moutarde, les herbes, le sel et le poivre; réserver au frais.",
+            "3. Préchauffer le four à 190 °C. Déposer le cabillaud dans un plat, ajouter l’huile, le reste de citron et un peu de poivre.",
+            "4. Cuire le poisson 12 à 15 minutes selon l’épaisseur, jusqu’à ce qu’il soit opaque et se détache facilement.",
+            "5. Servir le cabillaud avec les pommes de terre, les haricots verts et la sauce skyr citron."
           ]
         },
         {
           "title": "🛒 Ingrédients",
           "lines": [
-            "Dos de cabillaud",
-            "Pommes de terre",
-            "Haricots verts ou légumes de saison",
-            "Sauce skyr citron 🔗"
+            "600 g de dos de cabillaud (4 portions de 150 g)",
+            "600 g de pommes de terre",
+            "400 g de haricots verts",
+            "150 g de skyr nature",
+            "1 citron",
+            "1 c. à café de moutarde douce",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à soupe d’aneth ou de ciboulette",
+            "Sel et poivre"
           ]
         },
         {
@@ -168,7 +180,7 @@
         }
       ],
       "source": "200 RECETTE",
-      "timePrep": "10 min",
+      "timePrep": "15 min",
       "timeCook": "20 min",
       "servings": "4 personnes",
       "blurb": "🏷️ Catégorie : 🐟 Poissons"
@@ -976,15 +988,21 @@
       "id": "r-4c28f40550",
       "name": "🐟 RECETTE 014 — Maquereaux à la moutarde douce & légumes vapeur",
       "ingredients": [
-        "Filets de maquereaux",
-        "Pommes de terre vapeur",
-        "Haricots verts ou légumes de saison",
-        "Citron"
+        "600 g de filets de maquereau frais ou 4 filets (environ 150 g chacun)",
+        "600 g de pommes de terre",
+        "400 g de haricots verts",
+        "1 citron",
+        "1 c. à soupe de moutarde douce",
+        "2 c. à soupe de fromage blanc",
+        "1 c. à soupe d’huile d’olive",
+        "Sel et poivre"
       ],
       "steps": [
-        "Cuire les légumes.",
-        "Réchauffer ou cuire le maquereau.",
-        "Ajouter la sauce moutarde douce."
+        "Laver les pommes de terre et les cuire à l’eau bouillante salée 18 à 22 minutes; cuire les haricots verts 8 à 10 minutes à la vapeur ou à l’eau.",
+        "Mélanger la moutarde douce, le fromage blanc, le jus d’un demi-citron, le sel et le poivre pour préparer la sauce.",
+        "Faire chauffer l’huile dans une poêle et cuire les filets de maquereau 3 à 4 minutes côté peau puis 2 à 3 minutes de l’autre côté, selon l’épaisseur.",
+        "Vérifier que le poisson est opaque et se détache facilement; arroser du reste de citron.",
+        "Servir le maquereau avec les pommes de terre, les haricots verts et la sauce moutarde."
       ],
       "robot": [],
       "notes": [
@@ -995,18 +1013,24 @@
         {
           "title": "⏱️ Préparation : 10 min",
           "lines": [
-            "1. Cuire les légumes.",
-            "2. Réchauffer ou cuire le maquereau.",
-            "3. Ajouter la sauce moutarde douce."
+            "1. Laver les pommes de terre et les cuire à l’eau bouillante salée 18 à 22 minutes; cuire les haricots verts 8 à 10 minutes à la vapeur ou à l’eau.",
+            "2. Mélanger la moutarde douce, le fromage blanc, le jus d’un demi-citron, le sel et le poivre pour préparer la sauce.",
+            "3. Faire chauffer l’huile dans une poêle et cuire les filets de maquereau 3 à 4 minutes côté peau puis 2 à 3 minutes de l’autre côté, selon l’épaisseur.",
+            "4. Vérifier que le poisson est opaque et se détache facilement; arroser du reste de citron.",
+            "5. Servir le maquereau avec les pommes de terre, les haricots verts et la sauce moutarde."
           ]
         },
         {
           "title": "🛒 Ingrédients",
           "lines": [
-            "Filets de maquereaux",
-            "Pommes de terre vapeur",
-            "Haricots verts ou légumes de saison",
-            "Citron"
+            "600 g de filets de maquereau frais ou 4 filets (environ 150 g chacun)",
+            "600 g de pommes de terre",
+            "400 g de haricots verts",
+            "1 citron",
+            "1 c. à soupe de moutarde douce",
+            "2 c. à soupe de fromage blanc",
+            "1 c. à soupe d’huile d’olive",
+            "Sel et poivre"
           ]
         },
         {
@@ -1031,8 +1055,8 @@
         }
       ],
       "source": "200 RECETTE",
-      "timePrep": "10 min",
-      "timeCook": "15 min",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
       "servings": "4 personnes",
       "blurb": "🏷️ Catégorie : 🐟 Poissons"
     },
@@ -48261,22 +48285,23 @@
       "id": "r-3e85bd0bdb",
       "name": "🐟 Tartines de maquereaux façon bistrot",
       "ingredients": [
-        "maquereaux : 120 g/personne",
-        "pain complet",
-        "tomates",
-        "concombre",
-        "salade",
-        "paprika fumé : 1/2 c. à café",
-        "poivre",
-        "aneth : 1 c. à café",
-        "(le fromage blanc est déjà dans la recette)"
+        "240 g de maquereaux cuits ou en conserve égouttés",
+        "4 tranches de pain complet",
+        "2 tomates",
+        "1/2 concombre",
+        "4 feuilles de salade",
+        "100 g de fromage blanc",
+        "1/2 citron",
+        "1 c. à café d’aneth",
+        "1/2 c. à café de paprika fumé",
+        "Poivre"
       ],
       "steps": [
-        "Lire la liste d’ingrédients et préparer les quantités; laver, éplucher et couper les légumes en morceaux réguliers.",
-        "Faire chauffer l’huile dans une poêle ou une cocotte et faire revenir l’oignon 3 minutes.",
-        "Ajouter la protéine principale et la faire dorer; ajouter les légumes et les aromates puis cuire 6 à 8 minutes en remuant.",
-        "Ajouter la sauce ou le liquide prévu et poursuivre la cuisson 10 à 20 minutes selon la taille des morceaux, jusqu’à cuisson complète.",
-        "Goûter, rectifier l’assaisonnement et servir chaud avec l’accompagnement indiqué dans la fiche."
+        "Égoutter les maquereaux et les émietter à la fourchette; retirer les éventuelles arêtes visibles.",
+        "Mélanger le fromage blanc avec le jus de citron, l’aneth, le paprika fumé et le poivre.",
+        "Laver les tomates, le concombre et la salade; couper les tomates et le concombre en rondelles.",
+        "Griller les tranches de pain 2 à 3 minutes si vous souhaitez une tartine croustillante.",
+        "Garnir le pain de salade, de crudités et de maquereaux assaisonnés. Servir immédiatement."
       ],
       "robot": [
         "Émiettage/mélange de la tartinade"
@@ -48293,11 +48318,16 @@
         {
           "title": "🛒 Ingrédients :",
           "lines": [
-            "maquereaux : 120 g/personne",
-            "pain complet",
-            "tomates",
-            "concombre",
-            "salade"
+            "240 g de maquereaux cuits ou en conserve égouttés",
+            "4 tranches de pain complet",
+            "2 tomates",
+            "1/2 concombre",
+            "4 feuilles de salade",
+            "100 g de fromage blanc",
+            "1/2 citron",
+            "1 c. à café d’aneth",
+            "1/2 c. à café de paprika fumé",
+            "Poivre"
           ]
         },
         {
@@ -48327,11 +48357,11 @@
         {
           "title": "✅ Préparation sauce",
           "lines": [
-            "1. Lire la liste d’ingrédients et préparer les quantités; laver, éplucher et couper les légumes en morceaux réguliers.",
-            "2. Faire chauffer l’huile dans une poêle ou une cocotte et faire revenir l’oignon 3 minutes.",
-            "3. Ajouter la protéine principale et la faire dorer; ajouter les légumes et les aromates puis cuire 6 à 8 minutes en remuant.",
-            "4. Ajouter la sauce ou le liquide prévu et poursuivre la cuisson 10 à 20 minutes selon la taille des morceaux, jusqu’à cuisson complète.",
-            "5. Goûter, rectifier l’assaisonnement et servir chaud avec l’accompagnement indiqué dans la fiche."
+            "1. Égoutter les maquereaux et les émietter à la fourchette; retirer les éventuelles arêtes visibles.",
+            "2. Mélanger le fromage blanc avec le jus de citron, l’aneth, le paprika fumé et le poivre.",
+            "3. Laver les tomates, le concombre et la salade; couper les tomates et le concombre en rondelles.",
+            "4. Griller les tranches de pain 2 à 3 minutes si vous souhaitez une tartine croustillante.",
+            "5. Garnir le pain de salade, de crudités et de maquereaux assaisonnés. Servir immédiatement."
           ]
         },
         {
@@ -48350,8 +48380,8 @@
       ],
       "source": "52 MENUS",
       "blurb": "Je garde ton maquereau que tu apprécies ❤️",
-      "timePrep": "15 min",
-      "timeCook": "15 min",
+      "timePrep": "12 min",
+      "timeCook": "3 min",
       "servings": "4 personnes"
     },
     {
@@ -49204,21 +49234,23 @@
       "id": "r-0a15688331",
       "name": "🐟 Tartines de maquereaux façon nordique",
       "ingredients": [
-        "maquereaux : 120 g/personne",
-        "pain complet",
-        "concombre",
-        "salade",
-        "tomates",
-        "aneth : 1 c. à café",
-        "paprika fumé : 1/2 c. à café",
-        "poivre"
+        "240 g de maquereaux cuits ou en conserve égouttés",
+        "4 tranches de pain complet",
+        "1/2 concombre",
+        "4 feuilles de salade",
+        "2 tomates",
+        "1 c. à café d’aneth",
+        "1/2 c. à café de paprika fumé",
+        "100 g de fromage blanc",
+        "1/2 citron",
+        "Poivre"
       ],
       "steps": [
-        "Lire la liste d’ingrédients et préparer les quantités; laver, éplucher et couper les légumes en morceaux réguliers.",
-        "Faire chauffer l’huile dans une poêle ou une cocotte et faire revenir l’oignon 3 minutes.",
-        "Ajouter la protéine principale et la faire dorer; ajouter les légumes et les aromates puis cuire 6 à 8 minutes en remuant.",
-        "Ajouter la sauce ou le liquide prévu et poursuivre la cuisson 10 à 20 minutes selon la taille des morceaux, jusqu’à cuisson complète.",
-        "Goûter, rectifier l’assaisonnement et servir chaud avec l’accompagnement indiqué dans la fiche."
+        "Égoutter les maquereaux et les émietter soigneusement.",
+        "Mélanger le fromage blanc avec le jus de citron, l’aneth, le paprika fumé et le poivre.",
+        "Laver le concombre, les tomates et la salade; couper les crudités en fines tranches.",
+        "Faire griller le pain 2 à 3 minutes si désiré.",
+        "Répartir la salade, les crudités et les maquereaux sur les tranches de pain; ajouter la sauce et servir."
       ],
       "robot": [],
       "notes": [
@@ -49232,11 +49264,16 @@
         {
           "title": "🛒 Ingrédients :",
           "lines": [
-            "maquereaux : 120 g/personne",
-            "pain complet",
-            "concombre",
-            "salade",
-            "tomates"
+            "240 g de maquereaux cuits ou en conserve égouttés",
+            "4 tranches de pain complet",
+            "1/2 concombre",
+            "4 feuilles de salade",
+            "2 tomates",
+            "1 c. à café d’aneth",
+            "1/2 c. à café de paprika fumé",
+            "100 g de fromage blanc",
+            "1/2 citron",
+            "Poivre"
           ]
         },
         {
@@ -49263,11 +49300,11 @@
         {
           "title": "✅ Préparation de la tartinade",
           "lines": [
-            "1. Lire la liste d’ingrédients et préparer les quantités; laver, éplucher et couper les légumes en morceaux réguliers.",
-            "2. Faire chauffer l’huile dans une poêle ou une cocotte et faire revenir l’oignon 3 minutes.",
-            "3. Ajouter la protéine principale et la faire dorer; ajouter les légumes et les aromates puis cuire 6 à 8 minutes en remuant.",
-            "4. Ajouter la sauce ou le liquide prévu et poursuivre la cuisson 10 à 20 minutes selon la taille des morceaux, jusqu’à cuisson complète.",
-            "5. Goûter, rectifier l’assaisonnement et servir chaud avec l’accompagnement indiqué dans la fiche."
+            "1. Égoutter les maquereaux et les émietter soigneusement.",
+            "2. Mélanger le fromage blanc avec le jus de citron, l’aneth, le paprika fumé et le poivre.",
+            "3. Laver le concombre, les tomates et la salade; couper les crudités en fines tranches.",
+            "4. Faire griller le pain 2 à 3 minutes si désiré.",
+            "5. Répartir la salade, les crudités et les maquereaux sur les tranches de pain; ajouter la sauce et servir."
           ]
         },
         {
@@ -49285,8 +49322,8 @@
       ],
       "source": "52 MENUS",
       "blurb": "Une recette rapide avec ton poisson préféré ❤️",
-      "timePrep": "15 min",
-      "timeCook": "15 min",
+      "timePrep": "12 min",
+      "timeCook": "3 min",
       "servings": "4 personnes"
     },
     {
@@ -50651,17 +50688,24 @@
       "id": "r-a554cb564b",
       "name": "☀️ Gaspacho melon-tomate & tartines méditerranéennes",
       "ingredients": [
-        "poivre",
-        "basilic : 1 c. à café",
-        "paprika doux : 1 pincée",
-        "➡️ chèvre frais 30 g sur une tartine"
+        "400 g de tomates mûres",
+        "250 g de chair de melon",
+        "1/2 concombre",
+        "1/2 poivron jaune",
+        "2 c. à soupe d’huile d’olive",
+        "1 c. à soupe de vinaigre de cidre",
+        "100 ml d’eau froide",
+        "4 tranches de pain complet",
+        "120 g de chèvre frais",
+        "6 feuilles de basilic",
+        "Sel et poivre"
       ],
       "steps": [
-        "Lire la liste d’ingrédients et préparer les quantités; laver, éplucher et couper les légumes en morceaux réguliers.",
-        "Faire chauffer l’huile dans une poêle ou une cocotte et faire revenir l’oignon 3 minutes.",
-        "Ajouter la protéine principale et la faire dorer; ajouter les légumes et les aromates puis cuire 6 à 8 minutes en remuant.",
-        "Ajouter la sauce ou le liquide prévu et poursuivre la cuisson 10 à 20 minutes selon la taille des morceaux, jusqu’à cuisson complète.",
-        "Goûter, rectifier l’assaisonnement et servir chaud avec l’accompagnement indiqué dans la fiche."
+        "Laver les tomates, le concombre et le poivron; couper en morceaux. Retirer la peau et les graines du melon puis couper la chair en dés.",
+        "Mixer les tomates, le melon, le concombre, le poivron, l’huile, le vinaigre et l’eau froide jusqu’à obtenir une texture lisse.",
+        "Saler, poivrer et réfrigérer au moins 1 heure pour servir bien frais.",
+        "Faire griller les tranches de pain 2 à 3 minutes et tartiner de chèvre frais.",
+        "Ajouter le basilic ciselé et servir les tartines avec le gaspacho frais."
       ],
       "robot": [],
       "notes": [
@@ -50688,10 +50732,17 @@
         {
           "title": "🛒 Ingrédients",
           "lines": [
-            "poivre",
-            "basilic : 1 c. à café",
-            "paprika doux : 1 pincée",
-            "➡️ chèvre frais 30 g sur une tartine"
+            "400 g de tomates mûres",
+            "250 g de chair de melon",
+            "1/2 concombre",
+            "1/2 poivron jaune",
+            "2 c. à soupe d’huile d’olive",
+            "1 c. à soupe de vinaigre de cidre",
+            "100 ml d’eau froide",
+            "4 tranches de pain complet",
+            "120 g de chèvre frais",
+            "6 feuilles de basilic",
+            "Sel et poivre"
           ]
         },
         {
@@ -50759,18 +50810,18 @@
         {
           "title": "👩‍🍳 Préparation",
           "lines": [
-            "1. Lire la liste d’ingrédients et préparer les quantités; laver, éplucher et couper les légumes en morceaux réguliers.",
-            "2. Faire chauffer l’huile dans une poêle ou une cocotte et faire revenir l’oignon 3 minutes.",
-            "3. Ajouter la protéine principale et la faire dorer; ajouter les légumes et les aromates puis cuire 6 à 8 minutes en remuant.",
-            "4. Ajouter la sauce ou le liquide prévu et poursuivre la cuisson 10 à 20 minutes selon la taille des morceaux, jusqu’à cuisson complète.",
-            "5. Goûter, rectifier l’assaisonnement et servir chaud avec l’accompagnement indiqué dans la fiche."
+            "1. Laver les tomates, le concombre et le poivron; couper en morceaux. Retirer la peau et les graines du melon puis couper la chair en dés.",
+            "2. Mixer les tomates, le melon, le concombre, le poivron, l’huile, le vinaigre et l’eau froide jusqu’à obtenir une texture lisse.",
+            "3. Saler, poivrer et réfrigérer au moins 1 heure pour servir bien frais.",
+            "4. Faire griller les tranches de pain 2 à 3 minutes et tartiner de chèvre frais.",
+            "5. Ajouter le basilic ciselé et servir les tartines avec le gaspacho frais."
           ]
         }
       ],
       "source": "52 MENUS",
       "blurb": "Une soirée fraîche et légère après le burger du midi ❤️ Ingrédients (4 personnes)",
       "timePrep": "15 min",
-      "timeCook": "0 min",
+      "timeCook": "3 min",
       "servings": "4 personnes"
     },
     {
@@ -53149,7 +53200,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage ! (édition de la semaine 1).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53194,7 +53245,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin. (édition de la semaine 2).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53239,7 +53290,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition ! (édition de la semaine 3).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53284,7 +53335,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end. (édition de la semaine 4).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53329,7 +53380,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Dernier contrôle du frigo avant le week-end : une base, quelques légumes et une protéine déjà cuite peuvent devenir un déjeuner royal. (édition de la semaine 5).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53374,7 +53425,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Les restes ont droit à leur rappel ! On vérifie la conservation, on assemble ce qui reste et on évite le gaspillage sans s'ajouter une corvée. (édition de la semaine 6).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53419,7 +53470,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage ! (édition de la semaine 7).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53464,7 +53515,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin. (édition de la semaine 8).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53509,7 +53560,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition ! (édition de la semaine 9).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53554,7 +53605,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end. (édition de la semaine 10).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53599,7 +53650,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Dernier contrôle du frigo avant le week-end : une base, quelques légumes et une protéine déjà cuite peuvent devenir un déjeuner royal. (édition de la semaine 11).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53644,7 +53695,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Les restes ont droit à leur rappel ! On vérifie la conservation, on assemble ce qui reste et on évite le gaspillage sans s'ajouter une corvée. (édition de la semaine 12).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53689,7 +53740,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage ! (édition de la semaine 13).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53734,7 +53785,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin. (édition de la semaine 14).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53779,7 +53830,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition ! (édition de la semaine 15).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53824,7 +53875,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end. (édition de la semaine 16).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53869,7 +53920,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Dernier contrôle du frigo avant le week-end : une base, quelques légumes et une protéine déjà cuite peuvent devenir un déjeuner royal. (édition de la semaine 17).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53914,7 +53965,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Les restes ont droit à leur rappel ! On vérifie la conservation, on assemble ce qui reste et on évite le gaspillage sans s'ajouter une corvée. (édition de la semaine 18).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -53959,7 +54010,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage ! (édition de la semaine 19).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54004,7 +54055,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin. (édition de la semaine 20).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54049,7 +54100,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition ! (édition de la semaine 21).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54094,7 +54145,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end. (édition de la semaine 22).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54139,7 +54190,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Dernier contrôle du frigo avant le week-end : une base, quelques légumes et une protéine déjà cuite peuvent devenir un déjeuner royal. (édition de la semaine 23).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54184,7 +54235,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Les restes ont droit à leur rappel ! On vérifie la conservation, on assemble ce qui reste et on évite le gaspillage sans s'ajouter une corvée. (édition de la semaine 24).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54229,7 +54280,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage ! (édition de la semaine 25).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54274,7 +54325,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin. (édition de la semaine 26).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54319,7 +54370,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition ! (édition de la semaine 27).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54364,7 +54415,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end. (édition de la semaine 28).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54409,7 +54460,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Dernier contrôle du frigo avant le week-end : une base, quelques légumes et une protéine déjà cuite peuvent devenir un déjeuner royal. (édition de la semaine 29).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54454,7 +54505,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Les restes ont droit à leur rappel ! On vérifie la conservation, on assemble ce qui reste et on évite le gaspillage sans s'ajouter une corvée. (édition de la semaine 30).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54499,7 +54550,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage ! (édition de la semaine 31).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54544,7 +54595,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin. (édition de la semaine 32).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54589,7 +54640,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition ! (édition de la semaine 33).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54634,7 +54685,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end. (édition de la semaine 34).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54679,7 +54730,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Dernier contrôle du frigo avant le week-end : une base, quelques légumes et une protéine déjà cuite peuvent devenir un déjeuner royal. (édition de la semaine 35).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54724,7 +54775,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Les restes ont droit à leur rappel ! On vérifie la conservation, on assemble ce qui reste et on évite le gaspillage sans s'ajouter une corvée. (édition de la semaine 36).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54769,7 +54820,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage ! (édition de la semaine 37).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54814,7 +54865,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin. (édition de la semaine 38).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54859,7 +54910,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition ! (édition de la semaine 39).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54904,7 +54955,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end. (édition de la semaine 40).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54949,7 +55000,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Dernier contrôle du frigo avant le week-end : une base, quelques légumes et une protéine déjà cuite peuvent devenir un déjeuner royal. (édition de la semaine 41).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -54994,7 +55045,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Les restes ont droit à leur rappel ! On vérifie la conservation, on assemble ce qui reste et on évite le gaspillage sans s'ajouter une corvée. (édition de la semaine 42).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -55039,7 +55090,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage ! (édition de la semaine 43).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -55084,7 +55135,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin. (édition de la semaine 44).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -55129,7 +55180,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition ! (édition de la semaine 45).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -55174,7 +55225,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end. (édition de la semaine 46).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -55219,7 +55270,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Dernier contrôle du frigo avant le week-end : une base, quelques légumes et une protéine déjà cuite peuvent devenir un déjeuner royal. (édition de la semaine 47).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -55264,7 +55315,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Les restes ont droit à leur rappel ! On vérifie la conservation, on assemble ce qui reste et on évite le gaspillage sans s'ajouter une corvée. (édition de la semaine 48).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -55309,7 +55360,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage !",
+      "blurb": "Le frigo fait son casting : les légumes, les féculents et une protéine déjà cuits montent sur scène. On improvise, on goûte, on applaudit le zéro gaspillage ! (édition de la semaine 49).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -55354,7 +55405,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin.",
+      "blurb": "Opération sauvetage : on rassemble les restes encore bien conservés, on ajoute une touche d'herbes et on transforme tout ça en déjeuner malin. (édition de la semaine 50).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -55399,7 +55450,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition !",
+      "blurb": "Mission du midi : donner une seconde vie aux petites boîtes oubliées. Le chef du jour, c'est votre imagination — et le frigo paie l'addition ! (édition de la semaine 51).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -55444,7 +55495,7 @@
       "timePrep": "10 min",
       "timeCook": "8 min",
       "servings": "4 personnes",
-      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end.",
+      "blurb": "Le vendredi, pas de recette rigide : on assemble les restes sûrs, on réchauffe bien et on libère de la place pour le week-end. (édition de la semaine 52).",
       "sections": [
         {
           "title": "🛒 Ingrédients",
@@ -57412,8 +57463,8 @@
       "week": 20,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🥣 Velouté et tartine",
-      "recipeId": "cco-slot-20-samedi-soir"
+      "name": "🍕 Pizza maison trois fromages",
+      "recipeId": "cco-pizza-trois-fromages"
     },
     {
       "week": 20,
@@ -58805,43 +58856,43 @@
       "week": 35,
       "day": "LUNDI",
       "meal": "Midi",
-      "name": "🥗 Assiette complète de saison",
-      "recipeId": "cco-slot-35-lundi-midi"
+      "name": "Poulet paprika, courgettes rôties et riz basmati",
+      "recipeId": "r-2d1e6933e4"
     },
     {
       "week": 35,
       "day": "LUNDI",
       "meal": "Soir",
-      "name": "🥣 Velouté et tartine",
-      "recipeId": "cco-slot-35-lundi-soir"
+      "name": "Velouté de courgettes au fromage frais",
+      "recipeId": "r-b17bf4bbeb"
     },
     {
       "week": 35,
       "day": "MARDI",
       "meal": "Midi",
-      "name": "🥗 Assiette complète de saison",
-      "recipeId": "cco-slot-35-mardi-midi"
+      "name": "Cabillaud à la sauce tomate provençale",
+      "recipeId": "r-7ac321af8c"
     },
     {
       "week": 35,
       "day": "MARDI",
       "meal": "Soir",
-      "name": "🥣 Velouté et tartine",
-      "recipeId": "cco-slot-35-mardi-soir"
+      "name": "Grande salade repas, sauce yaourt-moutarde",
+      "recipeId": "r-63e8770e3f"
     },
     {
       "week": 35,
       "day": "MERCREDI",
       "meal": "Midi",
-      "name": "🥗 Assiette complète de saison",
-      "recipeId": "cco-slot-35-mercredi-midi"
+      "name": "Steak haché façon bistrot, haricots verts et champignons",
+      "recipeId": "r-a373d67eb6"
     },
     {
       "week": 35,
       "day": "MERCREDI",
       "meal": "Soir",
-      "name": "🥣 Velouté et tartine",
-      "recipeId": "cco-slot-35-mercredi-soir"
+      "name": "Omelette aux courgettes, tomates cerises et chèvre",
+      "recipeId": "r-08eeb4212a"
     },
     {
       "week": 35,
