@@ -45156,17 +45156,19 @@
       "id": "test-vide-frigo-s1",
       "name": "🍱 Opération Vide-Frigo ! — assiette de restes et crudités",
       "ingredients": [
-        "Restes de poulet ou légumes cuits du batchcooking",
-        "Riz ou pommes de terre déjà cuits",
-        "Salade verte ou crudités disponibles",
-        "2 cuillères à soupe de yaourt nature",
-        "Citron, moutarde, poivre"
+        "200 g de restes de poulet cuit ou 2 œufs",
+        "250 g de riz ou pommes de terre déjà cuits",
+        "200 g de crudités ou légumes cuits",
+        "60 g de yaourt nature",
+        "1 c. à café de moutarde",
+        "1 c. à soupe de jus de citron",
+        "Poivre et herbes fraîches"
       ],
       "steps": [
-        "Sortir les restes cuits de la semaine et vérifier leur conservation.",
-        "Assembler les légumes, la protéine et le féculent déjà cuits dans une assiette.",
-        "Mélanger le yaourt, le citron, une pointe de moutarde et le poivre pour faire une sauce minute.",
-        "Si les restes sont insuffisants, les transformer en gratin express avec un peu de fromage et passer au four 10 à 15 minutes."
+        "Laver et préparer les crudités. Vérifier que les restes ont été refroidis rapidement et conservés au réfrigérateur; écarter tout aliment douteux.",
+        "Couper les restes en morceaux. Si nécessaire, réchauffer séparément le poulet et le féculent jusqu’à ce qu’ils soient bien chauds à cœur.",
+        "Mélanger le yaourt, la moutarde, le jus de citron, le poivre et les herbes pour obtenir une sauce minute.",
+        "Composer deux bols avec les restes, les légumes et la sauce. Si les restes ne suffisent pas, compléter avec un œuf dur ou une crudité supplémentaire."
       ],
       "robot": [],
       "notes": [
@@ -45174,9 +45176,20 @@
       ],
       "source": "Création ciblée — test semaines 1 et 2",
       "timePrep": "10 min",
-      "timeCook": "15 min",
-      "servings": "2",
-      "blurb": "🍱 Mission du midi : sauver les trois carottes solitaires et le riz d’hier. On assemble uniquement des restes correctement conservés — zéro gaspillage, maximum de panache !"
+      "timeCook": "5 min",
+      "servings": "2 personnes",
+      "blurb": "Le repas malin qui transforme les petits restes en assiette chic. Le frigo a parlé : ce soir, c’est lui le chef !",
+      "sections": [
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Laver et préparer les crudités. Vérifier que les restes ont été refroidis rapidement et conservés au réfrigérateur; écarter tout aliment douteux.",
+            "2. Couper les restes en morceaux. Si nécessaire, réchauffer séparément le poulet et le féculent jusqu’à ce qu’ils soient bien chauds à cœur.",
+            "3. Mélanger le yaourt, la moutarde, le jus de citron, le poivre et les herbes pour obtenir une sauce minute.",
+            "4. Composer deux bols avec les restes, les légumes et la sauce. Si les restes ne suffisent pas, compléter avec un œuf dur ou une crudité supplémentaire."
+          ]
+        }
+      ]
     },
     {
       "id": "test-pizza-s1",
@@ -45235,17 +45248,20 @@
       "id": "test-vide-frigo-s2",
       "name": "🍱 Opération Vide-Frigo ! — bol chaud ou gratin minute",
       "ingredients": [
-        "Restes de légumes cuits de la semaine",
-        "Restes de riz, pommes de terre ou pâtes",
-        "Restes de viande, poisson ou 2 œufs",
-        "Un peu de fromage râpé (facultatif)",
-        "Herbes, poivre"
+        "250 g de légumes cuits restants",
+        "250 g de riz, pâtes ou pommes de terre déjà cuits",
+        "150 g de viande ou poisson cuits, ou 2 œufs",
+        "40 g de fromage râpé (facultatif)",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café d’herbes de Provence",
+        "Poivre"
       ],
       "steps": [
-        "Réunir les restes correctement conservés et les couper en morceaux si nécessaire.",
-        "Pour un bol chaud, réchauffer séparément puis assembler avec des herbes et du poivre.",
-        "Pour un gratin, mélanger les restes dans un plat, ajouter un peu de fromage et enfourner 10 à 15 minutes à 200 °C.",
-        "Ne pas utiliser un reste qui a été mal refroidi ou conservé trop longtemps."
+        "Préchauffer le four à 200 °C si vous choisissez la version gratin. Vérifier que tous les restes ont été conservés correctement.",
+        "Couper les restes en morceaux réguliers et les répartir dans deux bols ou un petit plat à gratin.",
+        "Version bol : réchauffer les éléments cuits jusqu’à ce qu’ils soient bien chauds à cœur, puis ajouter les herbes et l’huile.",
+        "Version gratin : mélanger les restes, répartir le fromage et cuire 12 à 15 minutes à 200 °C, jusqu’à ce que le dessus soit doré et l’intérieur chaud.",
+        "Servir immédiatement. Ne jamais réutiliser un reste dont l’odeur, l’aspect ou la conservation est douteux."
       ],
       "robot": [],
       "notes": [
@@ -45254,8 +45270,20 @@
       "source": "Création ciblée — test semaines 1 et 2",
       "timePrep": "10 min",
       "timeCook": "15 min",
-      "servings": "2",
-      "blurb": "🍱 Le frigo fait son casting : les légumes, le riz et la protéine disponibles montent sur scène. Bol chaud ou gratin minute, mais jamais un reste à la conservation douteuse !"
+      "servings": "2 personnes",
+      "blurb": "Opération sauvetage du frigo : les restes passent en mode vedette, et personne ne pose de questions !",
+      "sections": [
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 200 °C si vous choisissez la version gratin. Vérifier que tous les restes ont été conservés correctement.",
+            "2. Couper les restes en morceaux réguliers et les répartir dans deux bols ou un petit plat à gratin.",
+            "3. Version bol : réchauffer les éléments cuits jusqu’à ce qu’ils soient bien chauds à cœur, puis ajouter les herbes et l’huile.",
+            "4. Version gratin : mélanger les restes, répartir le fromage et cuire 12 à 15 minutes à 200 °C, jusqu’à ce que le dessus soit doré et l’intérieur chaud.",
+            "5. Servir immédiatement. Ne jamais réutiliser un reste dont l’odeur, l’aspect ou la conservation est douteux."
+          ]
+        }
+      ]
     },
     {
       "id": "test-pizza-s2",
@@ -45689,6 +45717,89 @@
           ]
         }
       ]
+    },
+    {
+      "id": "test-diner-festive-s1",
+      "name": "🥘 Gratin convivial de poulet, tomates et mozzarella",
+      "blurb": "Le dîner qui fait son petit effet sans vous bloquer en cuisine.",
+      "ingredients": [
+        "300 g de poulet déjà cuit",
+        "300 g de pommes de terre déjà cuites",
+        "250 g de tomates concassées",
+        "125 g de mozzarella",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café d’herbes de Provence",
+        "Poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C. Huiler légèrement un petit plat à gratin.",
+        "Couper le poulet et les pommes de terre en morceaux de taille similaire, puis les répartir dans le plat.",
+        "Verser les tomates concassées, ajouter les herbes et le poivre, puis mélanger délicatement.",
+        "Égoutter la mozzarella, la couper en tranches et la répartir sur le dessus.",
+        "Enfourner 20 à 25 minutes, jusqu’à ce que le gratin soit chaud à cœur et le fromage doré. Servir avec une salade verte."
+      ],
+      "timePrep": "10 min",
+      "timeCook": "25 min",
+      "robot": [],
+      "notes": [
+        "Vérifier que les préparations cuites ont été correctement conservées."
+      ],
+      "sections": [
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 200 °C. Huiler légèrement un petit plat à gratin.",
+            "2. Couper le poulet et les pommes de terre en morceaux de taille similaire, puis les répartir dans le plat.",
+            "3. Verser les tomates concassées, ajouter les herbes et le poivre, puis mélanger délicatement.",
+            "4. Égoutter la mozzarella, la couper en tranches et la répartir sur le dessus.",
+            "5. Enfourner 20 à 25 minutes, jusqu’à ce que le gratin soit chaud à cœur et le fromage doré. Servir avec une salade verte."
+          ]
+        }
+      ],
+      "source": "Cuisine Chic Ouf — création maison",
+      "servings": "2 personnes"
+    },
+    {
+      "id": "test-diner-festive-s2",
+      "name": "🌮 Quesadillas dorées au poulet, légumes et fromage",
+      "blurb": "Une soirée conviviale à partager : chacun garnit sa part, zéro chichi, effet garanti.",
+      "ingredients": [
+        "4 tortillas de blé moyennes",
+        "200 g de poulet cuit",
+        "150 g de légumes rôtis cuits",
+        "100 g de fromage râpé",
+        "80 g de yaourt nature",
+        "1 c. à café de jus de citron",
+        "1 c. à café de paprika doux",
+        "1 c. à café d’huile d’olive"
+      ],
+      "steps": [
+        "Couper le poulet cuit et les légumes rôtis en petits morceaux.",
+        "Mélanger le yaourt, le jus de citron et le paprika pour préparer une sauce fraîche.",
+        "Répartir le poulet, les légumes et le fromage sur la moitié de chaque tortilla, puis replier.",
+        "Faire chauffer une poêle antiadhésive avec l’huile. Dorer les tortillas 2 à 3 minutes de chaque côté à feu moyen, jusqu’à ce que le fromage soit fondu et la garniture chaude.",
+        "Couper chaque quesadilla en triangles et servir avec la sauce au yaourt."
+      ],
+      "timePrep": "10 min",
+      "timeCook": "10 min",
+      "robot": [],
+      "notes": [
+        "Vérifier que les préparations cuites ont été correctement conservées."
+      ],
+      "sections": [
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Couper le poulet cuit et les légumes rôtis en petits morceaux.",
+            "2. Mélanger le yaourt, le jus de citron et le paprika pour préparer une sauce fraîche.",
+            "3. Répartir le poulet, les légumes et le fromage sur la moitié de chaque tortilla, puis replier.",
+            "4. Faire chauffer une poêle antiadhésive avec l’huile. Dorer les tortillas 2 à 3 minutes de chaque côté à feu moyen, jusqu’à ce que le fromage soit fondu et la garniture chaude.",
+            "5. Couper chaque quesadilla en triangles et servir avec la sauce au yaourt."
+          ]
+        }
+      ],
+      "source": "Cuisine Chic Ouf — création maison",
+      "servings": "2 personnes"
     }
   ],
   "plan": [
@@ -45773,8 +45884,8 @@
       "week": 1,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🥪 Croques dorés jambon, tomate et mozzarella",
-      "recipeId": "test-croques-s1"
+      "name": "🥘 Gratin convivial de poulet, tomates et mozzarella",
+      "recipeId": "test-diner-festive-s1"
     },
     {
       "week": 1,
@@ -45871,8 +45982,8 @@
       "week": 2,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🥪 Croques gratinés aux légumes rôtis et fromage",
-      "recipeId": "test-croques-s2"
+      "name": "🌮 Quesadillas dorées au poulet, légumes et fromage",
+      "recipeId": "test-diner-festive-s2"
     },
     {
       "week": 2,
