@@ -1,0 +1,4 @@
+:HL["/Dans-mon-assiette/_next/static/chunks/0f52-yk7w3nji.css","style"]
+:HL["/Dans-mon-assiette/_next/static/media/03bda585a99c6450-s.p.32sris142tqlb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Dans-mon-assiette/_next/static/media/5c285b27cdda1fe8-s.p.2_mbdogr7ni8i.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"fiche","param":null,"prefetchHints":4192,"slots":{"children":{"name":"id","param":{"type":"d","key":"r-0d88134e0e","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"fdEMkuWsI_cwlwd2eTuDA"}

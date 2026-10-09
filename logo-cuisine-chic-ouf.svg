@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="72" fill="#F9F9F7"/>
+<text x="256" y="91" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="43" font-weight="700" letter-spacing="7" fill="#17212B">CUISINE CHIC</text>
+<g fill="none" stroke="#17212B" stroke-width="17" stroke-linecap="round" stroke-linejoin="round">
+<path d="M72 139v61c0 28 17 44 36 49v102"/>
+<path d="M87 139v54M103 139v54M119 139v54"/>
+<path d="M440 126c-21 23-35 58-35 89v126"/>
+<path d="M440 126l-34 54"/>
+<circle cx="256" cy="259" r="103"/>
+</g>
+<g fill="#17212B">
+<ellipse cx="222" cy="241" rx="16" ry="25"/>
+<path d="M285 226q28-24 48 0" fill="none" stroke="#17212B" stroke-width="14" stroke-linecap="round"/>
+<path d="M190 294q39 48 94 0" fill="none" stroke="#17212B" stroke-width="14" stroke-linecap="round"/>
+</g>
+<path d="M267 292q12-32 30-18c16 13-2 31-25 38" fill="#FF4D52"/>
+<text x="256" y="433" text-anchor="middle" font-family="Arial Rounded MT Bold,Arial,sans-serif" font-size="104" font-weight="900" font-style="italic" fill="#FF4D52">OUF!</text>
+<path d="M87 407l-30-12M425 407l30-12" stroke="#FF4D52" stroke-width="11" stroke-linecap="round"/>
+</svg>

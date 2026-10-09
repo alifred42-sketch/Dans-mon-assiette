@@ -1,0 +1,40 @@
+1:"$Sreact.fragment"
+2:I[22016,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js","/Dans-mon-assiette/_next/static/chunks/3u0pqk7bvfayg.js"],""]
+3:I[71560,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js","/Dans-mon-assiette/_next/static/chunks/3u0pqk7bvfayg.js"],"RecipeList"]
+4:I[97367,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[97367,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"ViewportBoundary"]
+a:I[97367,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"MetadataBoundary"]
+8:X
+18:X
+18:C
+0:{"buildId":"fdEMkuWsI_cwlwd2eTuDA","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-5","children":[["$","$L2",null,{"href":"/recettes","className":"text-sm text-primary underline underline-offset-4","children":"← Carnet"}],["$","div",null,{"children":[["$","h1",null,{"className":"font-heading text-3xl","children":"Automne"}],["$","p",null,{"className":"mt-1 text-sm text-muted-foreground","children":"Plats réconfortants de saison."}]]}],["$","$L3",null,{"items":[{"id":"r-0e5be70f69","name":"🍲 Velouté butternut, carottes & St Môret","lines":["courge butternut","carottes","oignon","pomme de terre","St Môret","curry doux","muscade","poivre","\"Velouté de potiron\"","1 tranche de pain complet grillé","Velouté de potiron"]},{"id":"r-94157150e2","name":"🥘 Gratin de courgettes jambon fromage","lines":["courgettes","jambon","œufs","crème légère","fromage râpé","muscade","poivre","ail","\"Gratin de courgettes\"","Déjà intégré 😍","Gratin de courgettes"]},{"id":"r-2cf7843ce5","name":"🥩 Sauté de veau aux champignons","lines":["veau","champignons","carottes","oignons","thym","laurier","\"Sauté de veau\"","riz","pommes de terre vapeur","Sauté de veau"]},{"id":"r-505f3338a3","name":"🍚 Risotto champignons parmesan","lines":["riz arborio","champignons","parmesan","bouillon","oignon","poivre","persil","\"Risotto champignons\"","🐟 saumon","🍗 poulet","🥒 courgettes","Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons.","Risotto champignons","Risotto aux champignons","Risotto"]},{"id":"r-19ce31994f","name":"🐟 Saumon poireaux crème citron","lines":["saumon","poireaux","crème légère","citron","aneth","poivre","\"Fondue de poireaux\"","Fondue de poireaux"]},{"id":"r-777fb77d40","name":"🥚 Œufs cocotte champignons","lines":["œufs","champignons","crème légère","fromage râpé","ciboulette","poivre","pain complet grillé","\"Œufs cocotte\"","Œufs cocotte"]},{"id":"r-50e9f84517","name":"🍛 RECETTE 191 — Chili con carne doux","lines":["🔥 Cuisson : 45 min","💪 Satiété : 💪 Très rassasiant","500 g de bœuf haché","Haricots rouges (selon goût)","Tomates concassées","Carottes","Poivron","Oignon","🌶️ Paprika fumé","🟡 Cumin","🌶️ Piment doux (facultatif)","🧄 Ail","🌿 Coriandre","1. Faire revenir la viande.","2. Ajouter légumes et épices.","3. Laisser mijoter.","Riz","Salade","❌ Non avec riz","✅ Possible :","30 g de cheddar râpé","ou feta émiettée","➡️ Version poulet ou légumes.","bœuf haché","tomates","haricots rouges","poivrons","piment doux","20 g de cheddar ou mozzarella.","Avec patate douce.","Chili con carne"]},{"id":"r-0d88134e0e","name":"🥧 Quiche poireaux saumon","lines":["pâte brisée","œufs","poireaux","saumon fumé","fromage frais","aneth","poivre","\"Quiche\"","Quiche"]},{"id":"r-89467af8af","name":"🍗 Poulet moutarde champignons","lines":["poulet","champignons","moutarde","crème légère","thym","poivre","\"Poulet à la moutarde\"","Poulet à la moutarde"]},{"id":"r-32efaae5de","name":"🥔 Tartiflette revisitée légère","lines":["pommes de terre","oignons","jambon","reblochon (portion raisonnable)","salade verte","\"Tartiflette\"","Tartiflette"]}]}]]}],[["$","script","script-0",{"src":"/Dans-mon-assiette/_next/static/chunks/3u0pqk7bvfayg.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#8FA89B"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"CUISINE CHIC OUF !"}],["$","meta","1",{"name":"description","content":"Pas de panique, on mange quoi ce soir ? 52 semaines de menus, du batchcooking simple et vos listes de courses automatisées."}],"$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13"]}]}]}],"$L14"]}],"isPartial":"$@15","staleTime":"$8","varyParams":null},{"rsc":"$L16","isPartial":"$@17","staleTime":"$8","varyParams":"$18"},{"rsc":"$L19","isPartial":"$@1a","staleTime":"$8","varyParams":"$18"},{"rsc":"$L1b","isPartial":"$@1c","staleTime":"$8","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@1d","rootVaryParams":null,"needsRuntimeRequest":"$@1e"}
+1f:I[27201,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"IconMark"]
+20:I[39756,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"default"]
+21:I[37457,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"default"]
+22:I[25373,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"RegisterSW"]
+23:I[138,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"Shell"]
+:HL["/Dans-mon-assiette/_next/static/chunks/0f52-yk7w3nji.css","style"]
+6:null
+b:["$","link","2",{"rel":"manifest","href":"/Dans-mon-assiette/manifest.json"}]
+c:["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}]
+d:["$","meta","4",{"name":"apple-mobile-web-app-title","content":"CUISINE CHIC OUF !"}]
+e:["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"default"}]
+f:["$","link","6",{"rel":"icon","href":"/Dans-mon-assiette/icon.svg","type":"image/svg+xml"}]
+10:["$","link","7",{"rel":"icon","href":"/Dans-mon-assiette/icon-192.png","sizes":"192x192","type":"image/png"}]
+11:["$","link","8",{"rel":"icon","href":"/Dans-mon-assiette/icon-512.png","sizes":"512x512","type":"image/png"}]
+12:["$","link","9",{"rel":"apple-touch-icon","href":"/Dans-mon-assiette/apple-touch-icon.png","sizes":"180x180","type":"image/png"}]
+13:["$","$L1f","10",{}]
+14:["$","meta",null,{"name":"next-size-adjust","content":""}]
+16:["$","$1","c",{"children":[null,["$","$L20",null,{"parallelRouterKey":"children","template":["$","$L21",null,{}]}]]}]
+19:["$","$1","c",{"children":[null,["$","$L20",null,{"parallelRouterKey":"children","template":["$","$L21",null,{}]}]]}]
+1b:["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Dans-mon-assiette/_next/static/chunks/0f52-yk7w3nji.css","precedence":"next"}],["$","script","script-0",{"src":"/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js","async":true}]],["$","html",null,{"lang":"fr","className":"dm_sans_dffaa2c9-module__wX8OqW__variable fraunces_3b78efc7-module__C2CVjG__variable h-full antialiased","children":["$","body",null,{"className":"min-h-full bg-background font-sans text-foreground","children":["$","$5",null,{"fallback":["$","div",null,{"className":"p-6 text-sm text-muted-foreground","children":"Chargement…"}],"children":[["$","$L22",null,{}],["$","$L23",null,{"children":["$","$L20",null,{"parallelRouterKey":"children","template":["$","$L21",null,{}],"notFound":[["$","div",null,{"className":"space-y-3 py-10 text-center","children":[["$","h1",null,{"className":"font-heading text-2xl","children":"Page introuvable"}],["$","p",null,{"className":"text-sm text-muted-foreground","children":"Cette fiche ou cette page n’existe pas."}],["$","$L2",null,{"href":"/","className":"inline-block text-primary underline underline-offset-4","children":"Retour à la semaine"}]]}],[]]}]}]]}]}]}]]}]
+8:300
+1e:true
+8:C
+1d:0
+15:"$undefined"
+17:"$undefined"
+1a:"$undefined"
+1c:"$undefined"
+7:"$undefined"

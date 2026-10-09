@@ -1,0 +1,25 @@
+1:"$Sreact.fragment"
+2:I[22016,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],""]
+3:I[97367,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+8:I[97367,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"ViewportBoundary"]
+9:I[97367,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"MetadataBoundary"]
+a:I[27201,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"IconMark"]
+c:I[39756,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"default"]
+d:I[37457,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"default"]
+10:I[25373,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"RegisterSW"]
+11:I[138,["/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js"],"Shell"]
+:HL["/Dans-mon-assiette/_next/static/chunks/0f52-yk7w3nji.css","style"]
+7:X
+f:X
+f:C
+0:{"buildId":"fdEMkuWsI_cwlwd2eTuDA","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-3 py-10 text-center","children":[["$","h1",null,{"className":"font-heading text-2xl","children":"Page introuvable"}],["$","p",null,{"className":"text-sm text-muted-foreground","children":"Cette fiche ou cette page n’existe pas."}],["$","$L2",null,{"href":"/","className":"inline-block text-primary underline underline-offset-4","children":"Retour à la semaine"}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#8FA89B"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"CUISINE CHIC OUF !"}],["$","meta","1",{"name":"description","content":"Pas de panique, on mange quoi ce soir ? 52 semaines de menus, du batchcooking simple et vos listes de courses automatisées."}],["$","link","2",{"rel":"manifest","href":"/Dans-mon-assiette/manifest.json"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-title","content":"CUISINE CHIC OUF !"}],["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","link","6",{"rel":"icon","href":"/Dans-mon-assiette/icon.svg","type":"image/svg+xml"}],["$","link","7",{"rel":"icon","href":"/Dans-mon-assiette/icon-192.png","sizes":"192x192","type":"image/png"}],["$","link","8",{"rel":"icon","href":"/Dans-mon-assiette/icon-512.png","sizes":"512x512","type":"image/png"}],["$","link","9",{"rel":"apple-touch-icon","href":"/Dans-mon-assiette/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","$La","10",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":"$@b","staleTime":"$7","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@e","staleTime":"$7","varyParams":"$f"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Dans-mon-assiette/_next/static/chunks/0f52-yk7w3nji.css","precedence":"next"}],["$","script","script-0",{"src":"/Dans-mon-assiette/_next/static/chunks/2xxpyx7ko4e5s.js","async":true}]],["$","html",null,{"lang":"fr","className":"dm_sans_dffaa2c9-module__wX8OqW__variable fraunces_3b78efc7-module__C2CVjG__variable h-full antialiased","children":["$","body",null,{"className":"min-h-full bg-background font-sans text-foreground","children":["$","$4",null,{"fallback":["$","div",null,{"className":"p-6 text-sm text-muted-foreground","children":"Chargement…"}],"children":[["$","$L10",null,{}],["$","$L11",null,{"children":["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}],"notFound":[["$","div",null,{"className":"space-y-3 py-10 text-center","children":[["$","h1",null,{"className":"font-heading text-2xl","children":"Page introuvable"}],["$","p",null,{"className":"text-sm text-muted-foreground","children":"Cette fiche ou cette page n’existe pas."}],["$","$L2",null,{"href":"/","className":"inline-block text-primary underline underline-offset-4","children":"Retour à la semaine"}]]}],[]]}]}]]}]}]}]]}],"isPartial":"$@12","staleTime":"$7","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@13","rootVaryParams":null,"needsRuntimeRequest":"$@14"}
+5:null
+7:300
+14:true
+7:C
+13:0
+b:"$undefined"
+e:"$undefined"
+12:"$undefined"
+6:"$undefined"
