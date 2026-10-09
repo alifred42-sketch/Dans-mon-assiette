@@ -28,7 +28,17 @@ function isJunk(line: string): boolean {
   return false;
 }
 
-function canonicalIngredient(raw: string): string {\n  const value = fold(raw).replace(/\\b(patates|pdt)\\b/g, "pomme de terre").replace(/\\b(pommes de terre|pommes de terres)\\b/g, "pomme de terre").replace(/\\btomates? cerises?\\b/g, "tomate cerise").replace(/\\boignons? jaunes?\\b/g, "oignon").replace(/\\bcreme liquide|creme legere|creme epaisse\\b/g, "creme fraiche").replace(/\\bhuile d olive\\b/g, "huile olive").replace(/\\bail frais\\b/g, "ail");\n  return value.replace(/\\s+/g, " ").trim();\n}\n\nfunction cleanName(raw: string): string {
+function canonicalIngredient(raw: string): string {
+  return fold(raw)
+    .replace(/\b(patates|pdt|pommes de terres?)\b/g, "pomme de terre")
+    .replace(/\btomates? cerises?\b/g, "tomate cerise")
+    .replace(/\boignons? jaunes?\b/g, "oignon")
+    .replace(/\bcreme (liquide|legere|epaisse)\b/g, "creme fraiche")
+    .replace(/\bhuile d olive\b/g, "huile olive")
+    .replace(/\bail frais\b/g, "ail")
+    .replace(/\s+/g, " ")
+    .trim();
+}\n\nfunction cleanName(raw: string): string {
   return stripDecor(raw)
     .replace(/^[^\p{L}\p{N}]+/u, "")
     .replace(/\s*\([^)]*\)\s*$/g, "")
