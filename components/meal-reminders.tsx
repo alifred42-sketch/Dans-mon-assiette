@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { BASE_PATH } from "@/lib/base-path";
 
 const reminders = [
   { day: 0, hour: 10, minute: 0, title: "👩‍🍳 C'est l'heure du Batchcooking !", body: "Enfilez votre tablier et allumez votre robot..." },
@@ -35,7 +36,7 @@ export function MealReminders() {
         if (!active || Notification.permission !== "granted") return;
         try {
           const registration = await navigator.serviceWorker?.getRegistration();
-          if (registration) await registration.showNotification(next.title, { body: next.body, icon: "/icon-192.png", badge: "/icon-192.png", tag: "cuisine-chic-ouf-" + next.day, data: { url: "/semaine" } });
+          if (registration) await registration.showNotification(next.title, { body: next.body, icon: `${BASE_PATH}/icon-192.png`, badge: `${BASE_PATH}/icon-192.png`, tag: "cuisine-chic-ouf-" + next.day, data: { url: `${BASE_PATH}/semaine` } });
           else new Notification(next.title, { body: next.body });
         } catch { /* notification unavailable on this browser */ }
         schedule();
