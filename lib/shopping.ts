@@ -158,7 +158,7 @@ function prettyName(names: string[]): string {
   return name.charAt(0).toLocaleUpperCase("fr") + name.slice(1);
 }
 
-export function shoppingForWeek(week: number): ShoppingItem[] {
+export function shoppingForWeek(week: number, servingsByRecipe: Record<string, number> = {}): ShoppingItem[] {
   const official = (carnet.courses || []).filter((row) => row.week === week);
   const aisleByName = new Map<string, string>();
   for (const row of official) {
@@ -183,7 +183,7 @@ export function shoppingForWeek(week: number): ShoppingItem[] {
   }
 
   function add(parsed: Parsed, recipeName: string) {
-    const key = fold(parsed.name);
+    const key = fold(parsed.name).replace(/creme liquide|creme legere/g, "creme fraiche");
     if (!key) return;
     const cur = bag.get(key) || { names: [], recipes: [], parts: [] };
     if (!cur.names.includes(parsed.name)) cur.names.push(parsed.name);
@@ -196,8 +196,9 @@ export function shoppingForWeek(week: number): ShoppingItem[] {
     const recipe = getRecipe(slot.recipeId);
     if (!recipe) continue;
     const foodSection = /ingr|épice|epice|légume|viande|fromage|sauce|appareil|pain|féculent|feculent|dessus|assais/i;
+    const factor = (servingsByRecipe[recipe.id] || 4) / (Number.parseInt(recipe.servings || "4", 10) || 4);
     const lines = [
-      ...(recipe.ingredients || []),
+      ...(recipe.ingredients || []).map((line) => factor === 1 ? line : line.replace(/^(.*?:\s*|)(\d+(?:[.,]\d+)?)(?=\s*(?:g|kg|ml|cl|l)\b)/i, (_m, prefix, raw) => prefix + String(Math.round(Number(String(raw).replace(",", ".")) * factor * 100) / 100).replace(".", ","))),
       ...(recipe.sections || [])
         .filter((section) => foodSection.test(section.title || ""))
         .flatMap((section) => section.lines),
