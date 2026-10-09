@@ -292,7 +292,12 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
       .filter(Boolean),
   );
   for (const row of official) {
-    if (plannedNames.has(fold(row.dish))) continue;
+    const dishKey = fold(row.dish);
+    const alreadyCovered = [...plannedNames].some((name) =>
+      name === dishKey ||
+      (Math.min(name.length, dishKey.length) >= 16 && (name.includes(dishKey) || dishKey.includes(name))),
+    );
+    if (alreadyCovered) continue;
     const parsed = parseLine(row.ingredient);
     if (!parsed) continue;
     add(parsed, row.dish);
