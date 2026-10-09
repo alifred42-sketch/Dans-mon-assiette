@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { FicheBack } from "@/components/fiche-back";
 import { CookingWakeLock } from "@/components/cooking-wake-lock";
+import { RecipeTools } from "@/components/recipe-tools";
 import { carnet, getCollections, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 
 export function generateStaticParams() {
@@ -24,6 +25,7 @@ export default async function FichePage({
   const sections = (recipe.sections || []).filter((sec) => sec.title || sec.lines.length);
   const ings = recipe.ingredients.filter((line) => line.trim());
   const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
+  const alternatives = carnet.recipes.filter((r) => r.id !== recipe.id && /omelette|pâtes au thon|salade repas|express|fatigué/i.test(r.name)).slice(0,3).map((r) => ({ id: r.id, name: r.name }));
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
     .filter(Boolean)
     .join(" · ");
@@ -45,6 +47,8 @@ export default async function FichePage({
           </p>
         )}
       </header>
+
+      <RecipeTools ingredients={shopIngs} alternatives={alternatives} />
 
       {sections.length > 0 ? (
         sections.map((sec, si) => (
