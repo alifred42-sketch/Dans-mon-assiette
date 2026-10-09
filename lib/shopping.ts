@@ -160,10 +160,19 @@ function formatQty(
 ): string | undefined {
   const measured = parts.filter((part) => part.amount != null);
   if (measured.length > 0) {
-    const units = new Set(measured.map((part) => part.unit || ""));
+    const normalized = measured.map((part) => {
+      const unit = part.unit || "";
+      if (unit === "kg") return { amount: (part.amount || 0) * 1000, unit: "g" };
+      if (unit === "cl") return { amount: (part.amount || 0) * 10, unit: "ml" };
+      if (unit === "l") return { amount: (part.amount || 0) * 1000, unit: "ml" };
+      return { amount: part.amount || 0, unit };
+    });
+    const units = new Set(normalized.map((part) => part.unit));
     if (units.size === 1) {
-      const unit = [...units][0];
-      const sum = measured.reduce((acc, part) => acc + (part.amount || 0), 0);
+      let unit = [...units][0];
+      let sum = normalized.reduce((acc, part) => acc + part.amount, 0);
+      if (unit === "g" && sum >= 1000) { sum /= 1000; unit = "kg"; }
+      if (unit === "ml" && sum >= 1000) { sum /= 1000; unit = "l"; }
       const core = `${formatNumber(sum)}${unit ? ` ${unit}` : ""}`;
       if (measured.length === parts.length) return core;
       return `${core} + autres plats`;
