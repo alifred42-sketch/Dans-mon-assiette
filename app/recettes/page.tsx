@@ -22,7 +22,7 @@ export default async function RecettesPage({ searchParams }: { searchParams: Pro
   const selectedCollection = allCollections.find((col) => col.slug === slugByFilter[filter] && col.recipeIds.length > 0);
   const selectedIds = selectedCollection ? new Set(selectedCollection.recipeIds) : null;
   const fallbackFilter = (recipe: (typeof carnet.recipes)[number]) => {
-    const hay = [recipe.name, recipe.blurb || "", ...recipeLines(recipe)].join(" ").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLocaleLowerCase("fr");
+    const hay = [recipe.name, recipe.blurb || "", ...recipeLines(recipe)].join(" ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("fr");
     switch (filter) {
       case "sauces": return /sauce|vinaigrette|pesto|coulis|mayonnaise|beurre compose/.test(hay);
       case "marinades": return /marinade|mariner/.test(hay);
