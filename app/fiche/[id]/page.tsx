@@ -32,7 +32,7 @@ export default async function FichePage({
     const cleaned = cleanMatch(line);
     return sauceRecipes.filter((candidate) => { const name = cleanMatch(candidate.name); return cleaned.includes(name) || (cleaned.length >= 6 && name.includes(cleaned)); }).sort((a, b) => b.name.length - a.name.length)[0];
   }
-  const ingredientTargets = Object.fromEntries(shopIngs.map((line, index) => { const target = findSauceRecipe(line); return target ? [index, { id: target.id, name: target.name }] : null; }).filter((value): value is [string, { id: string; name: string }] => value !== null));
+  const ingredientTargets = Object.fromEntries(shopIngs.map((line, index) => { const target = findSauceRecipe(line); return target ? [index, { id: target.id, name: target.name }] : null; }).filter((value): value is [number, { id: string; name: string }] => value !== null));
   function linkedInstruction(line: string) {
     const target = findSauceRecipe(line);
     if (!target) return line;
