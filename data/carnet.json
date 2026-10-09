@@ -45800,6 +45800,1166 @@
       ],
       "source": "Cuisine Chic Ouf — création maison",
       "servings": "2 personnes"
+    },
+    {
+      "id": "cco-pizza-mediterranee",
+      "name": "🍕 Pizza maison méditerranéenne",
+      "ingredients": [
+        "1 pâte à pizza (environ 260 g)",
+        "200 g de coulis de tomate",
+        "150 g de mozzarella",
+        "1 courgette",
+        "150 g de tomates cerises",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café d’origan",
+        "Poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 220 °C en chaleur tournante.",
+        "Étaler la pâte sur une plaque couverte de papier cuisson et répartir le coulis en laissant 1 cm de bord.",
+        "Laver la courgette et les tomates; couper la courgette en fines demi-rondelles et les tomates en deux.",
+        "Répartir les légumes, la mozzarella égouttée, l’huile, l’origan et le poivre.",
+        "Cuire 12 à 16 minutes, jusqu’à ce que la pâte soit dorée et le fromage fondu."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "15 min",
+      "timeCook": "12–16 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 pâte à pizza (environ 260 g)",
+            "200 g de coulis de tomate",
+            "150 g de mozzarella",
+            "1 courgette",
+            "150 g de tomates cerises",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à café d’origan",
+            "Poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 220 °C en chaleur tournante.",
+            "2. Étaler la pâte sur une plaque couverte de papier cuisson et répartir le coulis en laissant 1 cm de bord.",
+            "3. Laver la courgette et les tomates; couper la courgette en fines demi-rondelles et les tomates en deux.",
+            "4. Répartir les légumes, la mozzarella égouttée, l’huile, l’origan et le poivre.",
+            "5. Cuire 12 à 16 minutes, jusqu’à ce que la pâte soit dorée et le fromage fondu."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-pizza-jambon-champignons",
+      "name": "🍕 Pizza maison jambon-champignons",
+      "ingredients": [
+        "1 pâte à pizza (environ 260 g)",
+        "180 g de coulis de tomate",
+        "150 g de mozzarella",
+        "120 g de jambon blanc",
+        "150 g de champignons",
+        "1 c. à café d’origan",
+        "Poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 220 °C.",
+        "Étaler la pâte sur une plaque et la napper de coulis de tomate.",
+        "Nettoyer les champignons et les émincer; couper le jambon en lanières.",
+        "Répartir le jambon, les champignons, la mozzarella et l’origan.",
+        "Cuire 12 à 16 minutes; vérifier que la pâte est bien cuite dessous."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "15 min",
+      "timeCook": "12–16 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 pâte à pizza (environ 260 g)",
+            "180 g de coulis de tomate",
+            "150 g de mozzarella",
+            "120 g de jambon blanc",
+            "150 g de champignons",
+            "1 c. à café d’origan",
+            "Poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 220 °C.",
+            "2. Étaler la pâte sur une plaque et la napper de coulis de tomate.",
+            "3. Nettoyer les champignons et les émincer; couper le jambon en lanières.",
+            "4. Répartir le jambon, les champignons, la mozzarella et l’origan.",
+            "5. Cuire 12 à 16 minutes; vérifier que la pâte est bien cuite dessous."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-pizza-trois-fromages",
+      "name": "🍕 Pizza maison trois fromages",
+      "ingredients": [
+        "1 pâte à pizza (environ 260 g)",
+        "150 g de coulis de tomate",
+        "100 g de mozzarella",
+        "60 g de chèvre",
+        "40 g d’emmental râpé",
+        "1 c. à café d’origan",
+        "Poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 220 °C.",
+        "Étaler la pâte et étaler le coulis en couche fine.",
+        "Égoutter la mozzarella et la couper en morceaux; couper le chèvre en rondelles.",
+        "Répartir les trois fromages et l’origan sur la pâte.",
+        "Cuire 12 à 16 minutes, jusqu’à ce que le fromage soit fondu et la pâte dorée."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "10 min",
+      "timeCook": "12–16 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 pâte à pizza (environ 260 g)",
+            "150 g de coulis de tomate",
+            "100 g de mozzarella",
+            "60 g de chèvre",
+            "40 g d’emmental râpé",
+            "1 c. à café d’origan",
+            "Poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 220 °C.",
+            "2. Étaler la pâte et étaler le coulis en couche fine.",
+            "3. Égoutter la mozzarella et la couper en morceaux; couper le chèvre en rondelles.",
+            "4. Répartir les trois fromages et l’origan sur la pâte.",
+            "5. Cuire 12 à 16 minutes, jusqu’à ce que le fromage soit fondu et la pâte dorée."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-pizza-poulet-bbq",
+      "name": "🍕 Pizza maison poulet barbecue",
+      "ingredients": [
+        "1 pâte à pizza (environ 260 g)",
+        "150 g de coulis de tomate",
+        "120 g de poulet déjà cuit",
+        "120 g de mozzarella",
+        "1 petit oignon rouge",
+        "2 c. à soupe de sauce barbecue",
+        "Poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 220 °C.",
+        "Étaler la pâte, répartir le coulis et déposer le poulet cuit coupé en petits morceaux.",
+        "Émincer finement l’oignon et égoutter la mozzarella.",
+        "Répartir l’oignon, la mozzarella et la sauce barbecue en petits filets.",
+        "Cuire 12 à 16 minutes. Le poulet doit être bien chaud à cœur."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "15 min",
+      "timeCook": "12–16 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 pâte à pizza (environ 260 g)",
+            "150 g de coulis de tomate",
+            "120 g de poulet déjà cuit",
+            "120 g de mozzarella",
+            "1 petit oignon rouge",
+            "2 c. à soupe de sauce barbecue",
+            "Poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 220 °C.",
+            "2. Étaler la pâte, répartir le coulis et déposer le poulet cuit coupé en petits morceaux.",
+            "3. Émincer finement l’oignon et égoutter la mozzarella.",
+            "4. Répartir l’oignon, la mozzarella et la sauce barbecue en petits filets.",
+            "5. Cuire 12 à 16 minutes. Le poulet doit être bien chaud à cœur."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-burger-bistrot",
+      "name": "🍔 Burger maison façon bistrot",
+      "ingredients": [
+        "4 pains à burger",
+        "4 steaks hachés de bœuf (environ 100 g chacun)",
+        "4 tranches de cheddar",
+        "1 tomate",
+        "1 petit oignon rouge",
+        "4 feuilles de salade",
+        "4 c. à café de moutarde ou sauce burger",
+        "500 g de pommes de terre",
+        "1 c. à soupe d’huile d’olive",
+        "Paprika, sel et poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 210 °C. Laver les pommes de terre et les couper en quartiers réguliers.",
+        "Mélanger les quartiers avec l’huile, le paprika, le sel et le poivre; étaler sur une plaque et cuire 30 à 35 minutes en retournant à mi-cuisson.",
+        "Laver la tomate et la couper en rondelles; émincer l’oignon et laver la salade.",
+        "Cuire les steaks dans une poêle chaude 3 à 5 minutes par face selon l’épaisseur et la cuisson souhaitée; déposer le cheddar en fin de cuisson.",
+        "Réchauffer les pains 2 minutes au four, tartiner la base de sauce puis monter les burgers avec salade, tomate, oignon et steak. Servir avec les frites."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "20 min",
+      "timeCook": "30–35 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 pains à burger",
+            "4 steaks hachés de bœuf (environ 100 g chacun)",
+            "4 tranches de cheddar",
+            "1 tomate",
+            "1 petit oignon rouge",
+            "4 feuilles de salade",
+            "4 c. à café de moutarde ou sauce burger",
+            "500 g de pommes de terre",
+            "1 c. à soupe d’huile d’olive",
+            "Paprika, sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 210 °C. Laver les pommes de terre et les couper en quartiers réguliers.",
+            "2. Mélanger les quartiers avec l’huile, le paprika, le sel et le poivre; étaler sur une plaque et cuire 30 à 35 minutes en retournant à mi-cuisson.",
+            "3. Laver la tomate et la couper en rondelles; émincer l’oignon et laver la salade.",
+            "4. Cuire les steaks dans une poêle chaude 3 à 5 minutes par face selon l’épaisseur et la cuisson souhaitée; déposer le cheddar en fin de cuisson.",
+            "5. Réchauffer les pains 2 minutes au four, tartiner la base de sauce puis monter les burgers avec salade, tomate, oignon et steak. Servir avec les frites."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-burger-poulet",
+      "name": "🍔 Burger de poulet croustillant au four",
+      "ingredients": [
+        "4 pains à burger",
+        "4 petits filets de poulet (environ 120 g chacun)",
+        "1 œuf",
+        "60 g de chapelure",
+        "4 feuilles de salade",
+        "1 tomate",
+        "4 c. à soupe de yaourt nature",
+        "1 c. à café de paprika",
+        "1 c. à soupe d’huile",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 210 °C et huiler légèrement une plaque.",
+        "Battre l’œuf dans une assiette; mélanger la chapelure avec le paprika, le sel et le poivre.",
+        "Passer les filets de poulet dans l’œuf puis dans la chapelure et les déposer sur la plaque. Cuire 20 à 25 minutes en les retournant à mi-cuisson; le centre doit atteindre 74 °C.",
+        "Mélanger le yaourt avec une pincée de sel et de poivre pour préparer une sauce rapide.",
+        "Laver la salade et la tomate, réchauffer les pains puis assembler les burgers avec le poulet et la sauce."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "15 min",
+      "timeCook": "20–25 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 pains à burger",
+            "4 petits filets de poulet (environ 120 g chacun)",
+            "1 œuf",
+            "60 g de chapelure",
+            "4 feuilles de salade",
+            "1 tomate",
+            "4 c. à soupe de yaourt nature",
+            "1 c. à café de paprika",
+            "1 c. à soupe d’huile",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 210 °C et huiler légèrement une plaque.",
+            "2. Battre l’œuf dans une assiette; mélanger la chapelure avec le paprika, le sel et le poivre.",
+            "3. Passer les filets de poulet dans l’œuf puis dans la chapelure et les déposer sur la plaque. Cuire 20 à 25 minutes en les retournant à mi-cuisson; le centre doit atteindre 74 °C.",
+            "4. Mélanger le yaourt avec une pincée de sel et de poivre pour préparer une sauce rapide.",
+            "5. Laver la salade et la tomate, réchauffer les pains puis assembler les burgers avec le poulet et la sauce."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-burger-montagnard",
+      "name": "🍔 Burger maison façon montagnarde",
+      "ingredients": [
+        "4 pains à burger",
+        "4 steaks hachés de bœuf (environ 100 g chacun)",
+        "4 tranches de raclette",
+        "150 g de champignons",
+        "1 oignon",
+        "4 feuilles de salade",
+        "1 c. à café d’huile",
+        "Poivre"
+      ],
+      "steps": [
+        "Nettoyer les champignons et émincer les champignons et l’oignon.",
+        "Faire chauffer l’huile dans une poêle et cuire les champignons et l’oignon 7 à 9 minutes, jusqu’à ce que leur eau soit évaporée.",
+        "Dans une autre poêle, cuire les steaks 3 à 5 minutes par face selon l’épaisseur. Poser la raclette dessus pendant la dernière minute et couvrir.",
+        "Réchauffer les pains coupés en deux pendant 2 minutes.",
+        "Garnir chaque pain de salade, steak au fromage et poêlée de champignons. Servir chaud."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "15 min",
+      "timeCook": "15 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 pains à burger",
+            "4 steaks hachés de bœuf (environ 100 g chacun)",
+            "4 tranches de raclette",
+            "150 g de champignons",
+            "1 oignon",
+            "4 feuilles de salade",
+            "1 c. à café d’huile",
+            "Poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Nettoyer les champignons et émincer les champignons et l’oignon.",
+            "2. Faire chauffer l’huile dans une poêle et cuire les champignons et l’oignon 7 à 9 minutes, jusqu’à ce que leur eau soit évaporée.",
+            "3. Dans une autre poêle, cuire les steaks 3 à 5 minutes par face selon l’épaisseur. Poser la raclette dessus pendant la dernière minute et couvrir.",
+            "4. Réchauffer les pains coupés en deux pendant 2 minutes.",
+            "5. Garnir chaque pain de salade, steak au fromage et poêlée de champignons. Servir chaud."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-burger-italien",
+      "name": "🍔 Burger italien tomate-mozzarella",
+      "ingredients": [
+        "4 pains à burger",
+        "4 steaks hachés de bœuf (environ 100 g chacun)",
+        "1 boule de mozzarella (125 g)",
+        "2 tomates",
+        "4 feuilles de roquette",
+        "2 c. à soupe de pesto",
+        "Poivre"
+      ],
+      "steps": [
+        "Laver les tomates et les couper en rondelles; égoutter la mozzarella et la trancher.",
+        "Cuire les steaks dans une poêle chaude 3 à 5 minutes par face selon l’épaisseur.",
+        "Poser la mozzarella sur les steaks pendant la dernière minute de cuisson et couvrir pour la faire fondre légèrement.",
+        "Réchauffer les pains 2 minutes et étaler un peu de pesto sur chaque base.",
+        "Assembler avec le steak, les rondelles de tomate et la roquette. Servir sans attendre."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "10 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 pains à burger",
+            "4 steaks hachés de bœuf (environ 100 g chacun)",
+            "1 boule de mozzarella (125 g)",
+            "2 tomates",
+            "4 feuilles de roquette",
+            "2 c. à soupe de pesto",
+            "Poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Laver les tomates et les couper en rondelles; égoutter la mozzarella et la trancher.",
+            "2. Cuire les steaks dans une poêle chaude 3 à 5 minutes par face selon l’épaisseur.",
+            "3. Poser la mozzarella sur les steaks pendant la dernière minute de cuisson et couvrir pour la faire fondre légèrement.",
+            "4. Réchauffer les pains 2 minutes et étaler un peu de pesto sur chaque base.",
+            "5. Assembler avec le steak, les rondelles de tomate et la roquette. Servir sans attendre."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-tacos-poulet",
+      "name": "🌮 Tacos maison poulet-poivrons",
+      "ingredients": [
+        "4 grandes tortillas de blé",
+        "500 g de poulet en lanières",
+        "2 poivrons",
+        "1 oignon",
+        "100 g de cheddar râpé",
+        "4 c. à soupe de yaourt nature",
+        "1 c. à café de paprika",
+        "1 c. à café de cumin",
+        "1 c. à soupe d’huile",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Émincer l’oignon et les poivrons; couper le poulet en lanières régulières.",
+        "Faire chauffer l’huile dans une grande poêle, ajouter le poulet, le paprika, le cumin, le sel et le poivre, puis cuire 6 à 8 minutes.",
+        "Ajouter les poivrons et l’oignon et poursuivre 8 à 10 minutes, jusqu’à ce que le poulet soit cuit à cœur et les légumes tendres.",
+        "Réchauffer les tortillas selon les indications du paquet.",
+        "Garnir chaque tortilla de poulet et légumes, ajouter le yaourt et le cheddar, puis replier et servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "15 min",
+      "timeCook": "15–18 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 grandes tortillas de blé",
+            "500 g de poulet en lanières",
+            "2 poivrons",
+            "1 oignon",
+            "100 g de cheddar râpé",
+            "4 c. à soupe de yaourt nature",
+            "1 c. à café de paprika",
+            "1 c. à café de cumin",
+            "1 c. à soupe d’huile",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincer l’oignon et les poivrons; couper le poulet en lanières régulières.",
+            "2. Faire chauffer l’huile dans une grande poêle, ajouter le poulet, le paprika, le cumin, le sel et le poivre, puis cuire 6 à 8 minutes.",
+            "3. Ajouter les poivrons et l’oignon et poursuivre 8 à 10 minutes, jusqu’à ce que le poulet soit cuit à cœur et les légumes tendres.",
+            "4. Réchauffer les tortillas selon les indications du paquet.",
+            "5. Garnir chaque tortilla de poulet et légumes, ajouter le yaourt et le cheddar, puis replier et servir."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-tacos-boeuf",
+      "name": "🌮 Tacos maison bœuf épicé",
+      "ingredients": [
+        "4 grandes tortillas de blé",
+        "400 g de bœuf haché",
+        "1 oignon",
+        "1 poivron rouge",
+        "200 g de tomates concassées",
+        "1 c. à café de cumin",
+        "1 c. à café de paprika",
+        "100 g de cheddar râpé",
+        "1 c. à soupe d’huile"
+      ],
+      "steps": [
+        "Émincer l’oignon et couper le poivron en petits dés.",
+        "Faire chauffer l’huile dans une poêle et faire revenir l’oignon et le poivron 4 minutes.",
+        "Ajouter le bœuf haché, le cumin et le paprika; cuire 6 à 8 minutes en émiettant la viande.",
+        "Ajouter les tomates concassées et laisser réduire 8 minutes à feu moyen. La viande doit être cuite à cœur.",
+        "Réchauffer les tortillas, répartir la garniture et le cheddar, puis servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "10 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 grandes tortillas de blé",
+            "400 g de bœuf haché",
+            "1 oignon",
+            "1 poivron rouge",
+            "200 g de tomates concassées",
+            "1 c. à café de cumin",
+            "1 c. à café de paprika",
+            "100 g de cheddar râpé",
+            "1 c. à soupe d’huile"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincer l’oignon et couper le poivron en petits dés.",
+            "2. Faire chauffer l’huile dans une poêle et faire revenir l’oignon et le poivron 4 minutes.",
+            "3. Ajouter le bœuf haché, le cumin et le paprika; cuire 6 à 8 minutes en émiettant la viande.",
+            "4. Ajouter les tomates concassées et laisser réduire 8 minutes à feu moyen. La viande doit être cuite à cœur.",
+            "5. Réchauffer les tortillas, répartir la garniture et le cheddar, puis servir."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-tacos-poisson",
+      "name": "🌮 Tacos de poisson citron-cumin",
+      "ingredients": [
+        "4 grandes tortillas de blé",
+        "500 g de filets de colin ou cabillaud",
+        "1 citron",
+        "1 c. à café de cumin",
+        "1 c. à soupe d’huile d’olive",
+        "150 g de chou rouge émincé",
+        "1 avocat",
+        "100 g de yaourt nature",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C.",
+        "Déposer le poisson dans un plat, arroser d’huile et de jus de citron, puis assaisonner avec le cumin, le sel et le poivre.",
+        "Cuire 12 à 15 minutes selon l’épaisseur, jusqu’à ce que le poisson se détache facilement en flocons.",
+        "Écraser l’avocat et le mélanger au yaourt avec un peu de citron pour obtenir une sauce.",
+        "Réchauffer les tortillas et garnir de chou rouge, poisson émietté et sauce avocat."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "15 min",
+      "timeCook": "12–15 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 grandes tortillas de blé",
+            "500 g de filets de colin ou cabillaud",
+            "1 citron",
+            "1 c. à café de cumin",
+            "1 c. à soupe d’huile d’olive",
+            "150 g de chou rouge émincé",
+            "1 avocat",
+            "100 g de yaourt nature",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 200 °C.",
+            "2. Déposer le poisson dans un plat, arroser d’huile et de jus de citron, puis assaisonner avec le cumin, le sel et le poivre.",
+            "3. Cuire 12 à 15 minutes selon l’épaisseur, jusqu’à ce que le poisson se détache facilement en flocons.",
+            "4. Écraser l’avocat et le mélanger au yaourt avec un peu de citron pour obtenir une sauce.",
+            "5. Réchauffer les tortillas et garnir de chou rouge, poisson émietté et sauce avocat."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-tacos-veggie",
+      "name": "🌮 Tacos végétariens haricots-maïs",
+      "ingredients": [
+        "4 grandes tortillas de blé",
+        "1 boîte de haricots rouges (environ 240 g égouttés)",
+        "150 g de maïs égoutté",
+        "1 poivron rouge",
+        "1 oignon",
+        "200 g de tomates concassées",
+        "1 c. à café de cumin",
+        "1 c. à café de paprika",
+        "1 c. à soupe d’huile",
+        "100 g de cheddar râpé"
+      ],
+      "steps": [
+        "Rincer et égoutter les haricots rouges et le maïs.",
+        "Émincer l’oignon et couper le poivron en dés.",
+        "Faire chauffer l’huile et cuire l’oignon et le poivron 5 minutes.",
+        "Ajouter les haricots, le maïs, les tomates, le cumin et le paprika. Laisser mijoter 12 à 15 minutes en remuant.",
+        "Réchauffer les tortillas, répartir la garniture et le cheddar, puis servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "10 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 grandes tortillas de blé",
+            "1 boîte de haricots rouges (environ 240 g égouttés)",
+            "150 g de maïs égoutté",
+            "1 poivron rouge",
+            "1 oignon",
+            "200 g de tomates concassées",
+            "1 c. à café de cumin",
+            "1 c. à café de paprika",
+            "1 c. à soupe d’huile",
+            "100 g de cheddar râpé"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Rincer et égoutter les haricots rouges et le maïs.",
+            "2. Émincer l’oignon et couper le poivron en dés.",
+            "3. Faire chauffer l’huile et cuire l’oignon et le poivron 5 minutes.",
+            "4. Ajouter les haricots, le maïs, les tomates, le cumin et le paprika. Laisser mijoter 12 à 15 minutes en remuant.",
+            "5. Réchauffer les tortillas, répartir la garniture et le cheddar, puis servir."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-veloute-potimarron",
+      "name": "🥣 Velouté de potimarron et carotte",
+      "ingredients": [
+        "800 g de potimarron épépiné",
+        "2 carottes (environ 200 g)",
+        "1 pomme de terre (environ 180 g)",
+        "1 oignon",
+        "700 ml de bouillon de légumes",
+        "100 ml de crème légère",
+        "1 c. à soupe d’huile d’olive",
+        "Sel, poivre et noix de muscade"
+      ],
+      "steps": [
+        "Éplucher l’oignon, les carottes et la pomme de terre. Retirer les graines du potimarron et couper la chair en cubes.",
+        "Faire revenir l’oignon dans l’huile 3 minutes dans une grande casserole.",
+        "Ajouter les légumes et le bouillon; porter à frémissement puis cuire 20 à 25 minutes, jusqu’à ce que tous les morceaux soient tendres.",
+        "Mixer soigneusement jusqu’à obtenir un velouté lisse. Ajouter la crème, la muscade, le sel et le poivre.",
+        "Réchauffer 2 minutes à feu doux sans faire bouillir, puis servir."
+      ],
+      "robot": [
+        "Hacher l’oignon 5 sec/vitesse 5. Racler les parois, ajouter l’huile et faire revenir 3 min/120 °C/vitesse 1.",
+        "Ajouter les légumes en cubes et le bouillon. Cuire 22 min/100 °C/vitesse 1.",
+        "Mixer progressivement 30 à 60 sec/vitesse 6 à 8, en augmentant doucement. Ajouter la crème et assaisonner. Ne pas dépasser la capacité maximale du bol."
+      ],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "15 min",
+      "timeCook": "25–30 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "800 g de potimarron épépiné",
+            "2 carottes (environ 200 g)",
+            "1 pomme de terre (environ 180 g)",
+            "1 oignon",
+            "700 ml de bouillon de légumes",
+            "100 ml de crème légère",
+            "1 c. à soupe d’huile d’olive",
+            "Sel, poivre et noix de muscade"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Éplucher l’oignon, les carottes et la pomme de terre. Retirer les graines du potimarron et couper la chair en cubes.",
+            "2. Faire revenir l’oignon dans l’huile 3 minutes dans une grande casserole.",
+            "3. Ajouter les légumes et le bouillon; porter à frémissement puis cuire 20 à 25 minutes, jusqu’à ce que tous les morceaux soient tendres.",
+            "4. Mixer soigneusement jusqu’à obtenir un velouté lisse. Ajouter la crème, la muscade, le sel et le poivre.",
+            "5. Réchauffer 2 minutes à feu doux sans faire bouillir, puis servir."
+          ]
+        },
+        {
+          "title": "🤖 Option Monsieur Cuisine",
+          "lines": [
+            "Hacher l’oignon 5 sec/vitesse 5. Racler les parois, ajouter l’huile et faire revenir 3 min/120 °C/vitesse 1.",
+            "Ajouter les légumes en cubes et le bouillon. Cuire 22 min/100 °C/vitesse 1.",
+            "Mixer progressivement 30 à 60 sec/vitesse 6 à 8, en augmentant doucement. Ajouter la crème et assaisonner. Ne pas dépasser la capacité maximale du bol."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-veloute-poireaux",
+      "name": "🥣 Velouté poireaux-pomme de terre",
+      "ingredients": [
+        "3 poireaux (environ 450 g)",
+        "400 g de pommes de terre",
+        "1 oignon",
+        "750 ml de bouillon de légumes",
+        "100 ml de lait ou crème légère",
+        "1 c. à soupe d’huile d’olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Laver soigneusement les poireaux et les émincer. Éplucher les pommes de terre et les couper en cubes.",
+        "Faire revenir l’oignon émincé dans l’huile 3 minutes.",
+        "Ajouter les poireaux, les pommes de terre et le bouillon. Porter à ébullition puis cuire 22 à 25 minutes à petits frémissements.",
+        "Mixer jusqu’à obtenir une texture lisse; incorporer le lait ou la crème.",
+        "Saler, poivrer et servir chaud."
+      ],
+      "robot": [
+        "Hacher l’oignon 5 sec/vitesse 5 puis faire revenir avec l’huile 3 min/120 °C/vitesse 1.",
+        "Ajouter poireaux, pommes de terre et bouillon. Cuire 23 min/100 °C/vitesse 1.",
+        "Mixer progressivement 30 à 60 sec/vitesse 6 à 8. Ajouter le lait ou la crème et assaisonner."
+      ],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "12 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "3 poireaux (environ 450 g)",
+            "400 g de pommes de terre",
+            "1 oignon",
+            "750 ml de bouillon de légumes",
+            "100 ml de lait ou crème légère",
+            "1 c. à soupe d’huile d’olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Laver soigneusement les poireaux et les émincer. Éplucher les pommes de terre et les couper en cubes.",
+            "2. Faire revenir l’oignon émincé dans l’huile 3 minutes.",
+            "3. Ajouter les poireaux, les pommes de terre et le bouillon. Porter à ébullition puis cuire 22 à 25 minutes à petits frémissements.",
+            "4. Mixer jusqu’à obtenir une texture lisse; incorporer le lait ou la crème.",
+            "5. Saler, poivrer et servir chaud."
+          ]
+        },
+        {
+          "title": "🤖 Option Monsieur Cuisine",
+          "lines": [
+            "Hacher l’oignon 5 sec/vitesse 5 puis faire revenir avec l’huile 3 min/120 °C/vitesse 1.",
+            "Ajouter poireaux, pommes de terre et bouillon. Cuire 23 min/100 °C/vitesse 1.",
+            "Mixer progressivement 30 à 60 sec/vitesse 6 à 8. Ajouter le lait ou la crème et assaisonner."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-veloute-carotte-poireau",
+      "name": "🥣 Velouté printanier carotte-poireau",
+      "ingredients": [
+        "4 carottes (environ 350 g)",
+        "2 poireaux (environ 300 g)",
+        "1 petite pomme de terre",
+        "1 oignon",
+        "750 ml de bouillon de légumes",
+        "1 c. à soupe d’huile d’olive",
+        "2 c. à soupe de fromage frais (facultatif)",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Laver les poireaux et les carottes; éplucher la pomme de terre et l’oignon.",
+        "Couper tous les légumes en morceaux de taille similaire.",
+        "Faire revenir l’oignon dans l’huile 3 minutes, puis ajouter les légumes et le bouillon.",
+        "Cuire 20 à 25 minutes à frémissement, jusqu’à ce que les carottes soient tendres.",
+        "Mixer, ajouter le fromage frais si souhaité, puis saler et poivrer."
+      ],
+      "robot": [
+        "Hacher l’oignon 5 sec/vitesse 5 puis faire revenir 3 min/120 °C/vitesse 1 avec l’huile.",
+        "Ajouter les légumes coupés et le bouillon. Cuire 22 min/100 °C/vitesse 1.",
+        "Mixer progressivement 30 à 60 sec/vitesse 6 à 8. Ajouter le fromage frais si utilisé."
+      ],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "12 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 carottes (environ 350 g)",
+            "2 poireaux (environ 300 g)",
+            "1 petite pomme de terre",
+            "1 oignon",
+            "750 ml de bouillon de légumes",
+            "1 c. à soupe d’huile d’olive",
+            "2 c. à soupe de fromage frais (facultatif)",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Laver les poireaux et les carottes; éplucher la pomme de terre et l’oignon.",
+            "2. Couper tous les légumes en morceaux de taille similaire.",
+            "3. Faire revenir l’oignon dans l’huile 3 minutes, puis ajouter les légumes et le bouillon.",
+            "4. Cuire 20 à 25 minutes à frémissement, jusqu’à ce que les carottes soient tendres.",
+            "5. Mixer, ajouter le fromage frais si souhaité, puis saler et poivrer."
+          ]
+        },
+        {
+          "title": "🤖 Option Monsieur Cuisine",
+          "lines": [
+            "Hacher l’oignon 5 sec/vitesse 5 puis faire revenir 3 min/120 °C/vitesse 1 avec l’huile.",
+            "Ajouter les légumes coupés et le bouillon. Cuire 22 min/100 °C/vitesse 1.",
+            "Mixer progressivement 30 à 60 sec/vitesse 6 à 8. Ajouter le fromage frais si utilisé."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-veloute-courgette-basilic",
+      "name": "🥣 Velouté doux courgette-basilic",
+      "ingredients": [
+        "700 g de courgettes",
+        "1 pomme de terre (environ 180 g)",
+        "1 oignon",
+        "650 ml de bouillon de légumes",
+        "8 feuilles de basilic",
+        "80 g de fromage frais",
+        "1 c. à soupe d’huile d’olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Laver les courgettes et les couper en dés. Éplucher la pomme de terre et l’oignon.",
+        "Faire revenir l’oignon dans l’huile 3 minutes dans une casserole.",
+        "Ajouter les courgettes, la pomme de terre et le bouillon. Cuire 18 à 22 minutes, jusqu’à ce que les légumes soient tendres.",
+        "Mixer avec le fromage frais et le basilic jusqu’à obtenir une texture lisse.",
+        "Goûter, saler et poivrer. Servir chaud ou laisser refroidir rapidement puis réfrigérer pour une version fraîche."
+      ],
+      "robot": [
+        "Hacher l’oignon 5 sec/vitesse 5 puis faire revenir 3 min/120 °C/vitesse 1.",
+        "Ajouter courgettes, pomme de terre et bouillon. Cuire 20 min/100 °C/vitesse 1.",
+        "Ajouter le fromage frais et le basilic puis mixer progressivement 30 à 60 sec/vitesse 6 à 8."
+      ],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "10 min",
+      "timeCook": "22 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "700 g de courgettes",
+            "1 pomme de terre (environ 180 g)",
+            "1 oignon",
+            "650 ml de bouillon de légumes",
+            "8 feuilles de basilic",
+            "80 g de fromage frais",
+            "1 c. à soupe d’huile d’olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Laver les courgettes et les couper en dés. Éplucher la pomme de terre et l’oignon.",
+            "2. Faire revenir l’oignon dans l’huile 3 minutes dans une casserole.",
+            "3. Ajouter les courgettes, la pomme de terre et le bouillon. Cuire 18 à 22 minutes, jusqu’à ce que les légumes soient tendres.",
+            "4. Mixer avec le fromage frais et le basilic jusqu’à obtenir une texture lisse.",
+            "5. Goûter, saler et poivrer. Servir chaud ou laisser refroidir rapidement puis réfrigérer pour une version fraîche."
+          ]
+        },
+        {
+          "title": "🤖 Option Monsieur Cuisine",
+          "lines": [
+            "Hacher l’oignon 5 sec/vitesse 5 puis faire revenir 3 min/120 °C/vitesse 1.",
+            "Ajouter courgettes, pomme de terre et bouillon. Cuire 20 min/100 °C/vitesse 1.",
+            "Ajouter le fromage frais et le basilic puis mixer progressivement 30 à 60 sec/vitesse 6 à 8."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-gaspacho-andalou",
+      "name": "🍅 Gaspacho andalou frais",
+      "ingredients": [
+        "700 g de tomates mûres",
+        "1/2 concombre (environ 150 g)",
+        "1/2 poivron rouge",
+        "1/2 petit oignon rouge",
+        "1 petite gousse d’ail",
+        "2 c. à soupe d’huile d’olive",
+        "1 c. à soupe de vinaigre de vin",
+        "100 ml d’eau froide",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Laver les tomates, le concombre et le poivron. Couper en morceaux; éplucher l’oignon et l’ail.",
+        "Mettre les légumes dans un blender avec l’huile, le vinaigre et l’eau froide.",
+        "Mixer 1 à 2 minutes jusqu’à obtenir une texture homogène. Ajouter un peu d’eau si le gaspacho est trop épais.",
+        "Saler, poivrer et goûter; ajuster le vinaigre selon l’acidité des tomates.",
+        "Réfrigérer au moins 1 heure avant de servir très frais."
+      ],
+      "robot": [
+        "Mettre les légumes coupés dans le bol et mixer 30 sec/vitesse 6 puis 30 sec/vitesse 8.",
+        "Ajouter huile, vinaigre, eau, sel et poivre. Mixer encore 30 sec/vitesse 8. Réfrigérer au moins 1 h."
+      ],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "15 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "700 g de tomates mûres",
+            "1/2 concombre (environ 150 g)",
+            "1/2 poivron rouge",
+            "1/2 petit oignon rouge",
+            "1 petite gousse d’ail",
+            "2 c. à soupe d’huile d’olive",
+            "1 c. à soupe de vinaigre de vin",
+            "100 ml d’eau froide",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Laver les tomates, le concombre et le poivron. Couper en morceaux; éplucher l’oignon et l’ail.",
+            "2. Mettre les légumes dans un blender avec l’huile, le vinaigre et l’eau froide.",
+            "3. Mixer 1 à 2 minutes jusqu’à obtenir une texture homogène. Ajouter un peu d’eau si le gaspacho est trop épais.",
+            "4. Saler, poivrer et goûter; ajuster le vinaigre selon l’acidité des tomates.",
+            "5. Réfrigérer au moins 1 heure avant de servir très frais."
+          ]
+        },
+        {
+          "title": "🤖 Option Monsieur Cuisine",
+          "lines": [
+            "Mettre les légumes coupés dans le bol et mixer 30 sec/vitesse 6 puis 30 sec/vitesse 8.",
+            "Ajouter huile, vinaigre, eau, sel et poivre. Mixer encore 30 sec/vitesse 8. Réfrigérer au moins 1 h."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-gaspacho-concombre",
+      "name": "🥒 Gaspacho concombre-menthe",
+      "ingredients": [
+        "2 concombres (environ 700 g)",
+        "150 g de yaourt nature",
+        "1/2 citron",
+        "8 feuilles de menthe",
+        "1 petite gousse d’ail",
+        "2 c. à soupe d’huile d’olive",
+        "100 ml d’eau froide",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Laver les concombres; les éplucher partiellement si la peau est épaisse puis les couper en morceaux.",
+        "Mettre les concombres, le yaourt, le jus de citron, la menthe, l’ail, l’huile et l’eau dans un blender.",
+        "Mixer jusqu’à obtenir une texture lisse. Ajouter un peu d’eau si nécessaire.",
+        "Saler, poivrer et rectifier le citron.",
+        "Réfrigérer au moins 1 heure et servir bien frais."
+      ],
+      "robot": [
+        "Mettre tous les ingrédients dans le bol et mixer 30 sec/vitesse 6 puis 30 sec/vitesse 8.",
+        "Goûter et rectifier l’assaisonnement. Réfrigérer au moins 1 h avant de servir."
+      ],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "10 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 concombres (environ 700 g)",
+            "150 g de yaourt nature",
+            "1/2 citron",
+            "8 feuilles de menthe",
+            "1 petite gousse d’ail",
+            "2 c. à soupe d’huile d’olive",
+            "100 ml d’eau froide",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Laver les concombres; les éplucher partiellement si la peau est épaisse puis les couper en morceaux.",
+            "2. Mettre les concombres, le yaourt, le jus de citron, la menthe, l’ail, l’huile et l’eau dans un blender.",
+            "3. Mixer jusqu’à obtenir une texture lisse. Ajouter un peu d’eau si nécessaire.",
+            "4. Saler, poivrer et rectifier le citron.",
+            "5. Réfrigérer au moins 1 heure et servir bien frais."
+          ]
+        },
+        {
+          "title": "🤖 Option Monsieur Cuisine",
+          "lines": [
+            "Mettre tous les ingrédients dans le bol et mixer 30 sec/vitesse 6 puis 30 sec/vitesse 8.",
+            "Goûter et rectifier l’assaisonnement. Réfrigérer au moins 1 h avant de servir."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-veloute-courge-chataigne",
+      "name": "🥣 Velouté de courge et châtaignes",
+      "ingredients": [
+        "800 g de courge butternut",
+        "150 g de châtaignes cuites",
+        "1 oignon",
+        "700 ml de bouillon de légumes",
+        "100 ml de crème légère",
+        "1 c. à soupe d’huile d’olive",
+        "Sel, poivre et muscade"
+      ],
+      "steps": [
+        "Éplucher la courge et retirer les graines; couper la chair en cubes. Émincer l’oignon.",
+        "Faire revenir l’oignon dans l’huile 3 minutes.",
+        "Ajouter la courge et le bouillon. Cuire 20 à 25 minutes jusqu’à ce que la courge soit tendre.",
+        "Ajouter les châtaignes et cuire encore 3 minutes.",
+        "Mixer finement, incorporer la crème et la muscade, puis saler et poivrer."
+      ],
+      "robot": [
+        "Hacher l’oignon 5 sec/vitesse 5 puis faire revenir 3 min/120 °C/vitesse 1.",
+        "Ajouter la courge et le bouillon. Cuire 22 min/100 °C/vitesse 1; ajouter les châtaignes 3 min avant la fin.",
+        "Mixer progressivement 30 à 60 sec/vitesse 6 à 8, puis ajouter la crème."
+      ],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "15 min",
+      "timeCook": "28 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "800 g de courge butternut",
+            "150 g de châtaignes cuites",
+            "1 oignon",
+            "700 ml de bouillon de légumes",
+            "100 ml de crème légère",
+            "1 c. à soupe d’huile d’olive",
+            "Sel, poivre et muscade"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Éplucher la courge et retirer les graines; couper la chair en cubes. Émincer l’oignon.",
+            "2. Faire revenir l’oignon dans l’huile 3 minutes.",
+            "3. Ajouter la courge et le bouillon. Cuire 20 à 25 minutes jusqu’à ce que la courge soit tendre.",
+            "4. Ajouter les châtaignes et cuire encore 3 minutes.",
+            "5. Mixer finement, incorporer la crème et la muscade, puis saler et poivrer."
+          ]
+        },
+        {
+          "title": "🤖 Option Monsieur Cuisine",
+          "lines": [
+            "Hacher l’oignon 5 sec/vitesse 5 puis faire revenir 3 min/120 °C/vitesse 1.",
+            "Ajouter la courge et le bouillon. Cuire 22 min/100 °C/vitesse 1; ajouter les châtaignes 3 min avant la fin.",
+            "Mixer progressivement 30 à 60 sec/vitesse 6 à 8, puis ajouter la crème."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cco-veloute-carotte-lentilles",
+      "name": "🥣 Velouté carotte-lentilles corail",
+      "ingredients": [
+        "500 g de carottes",
+        "120 g de lentilles corail rincées",
+        "1 oignon",
+        "800 ml de bouillon de légumes",
+        "1 c. à café de cumin doux",
+        "1 c. à soupe d’huile d’olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Éplucher les carottes et l’oignon puis couper les carottes en rondelles.",
+        "Faire revenir l’oignon dans l’huile 3 minutes avec le cumin.",
+        "Ajouter les carottes, les lentilles rincées et le bouillon.",
+        "Cuire à petits frémissements 20 à 25 minutes, jusqu’à ce que les lentilles et les carottes soient très tendres.",
+        "Mixer jusqu’à obtenir une texture lisse; saler et poivrer."
+      ],
+      "robot": [
+        "Hacher l’oignon 5 sec/vitesse 5 puis faire revenir 3 min/120 °C/vitesse 1 avec l’huile et le cumin.",
+        "Ajouter carottes, lentilles rincées et bouillon. Cuire 23 min/100 °C/vitesse 1.",
+        "Mixer progressivement 30 à 60 sec/vitesse 6 à 8 et rectifier l’assaisonnement."
+      ],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — recette maison",
+      "timePrep": "10 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "blurb": "Une fiche complète, pensée pour cuisiner simplement et se régaler sans charge mentale.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 g de carottes",
+            "120 g de lentilles corail rincées",
+            "1 oignon",
+            "800 ml de bouillon de légumes",
+            "1 c. à café de cumin doux",
+            "1 c. à soupe d’huile d’olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Éplucher les carottes et l’oignon puis couper les carottes en rondelles.",
+            "2. Faire revenir l’oignon dans l’huile 3 minutes avec le cumin.",
+            "3. Ajouter les carottes, les lentilles rincées et le bouillon.",
+            "4. Cuire à petits frémissements 20 à 25 minutes, jusqu’à ce que les lentilles et les carottes soient très tendres.",
+            "5. Mixer jusqu’à obtenir une texture lisse; saler et poivrer."
+          ]
+        },
+        {
+          "title": "🤖 Option Monsieur Cuisine",
+          "lines": [
+            "Hacher l’oignon 5 sec/vitesse 5 puis faire revenir 3 min/120 °C/vitesse 1 avec l’huile et le cumin.",
+            "Ajouter carottes, lentilles rincées et bouillon. Cuire 23 min/100 °C/vitesse 1.",
+            "Mixer progressivement 30 à 60 sec/vitesse 6 à 8 et rectifier l’assaisonnement."
+          ]
+        }
+      ]
     }
   ],
   "plan": [
@@ -91273,7 +92433,9 @@
         "r-16b9a93f41",
         "r-4c3c676c65",
         "r-291b2944c5",
-        "r-fa4268ac37"
+        "r-fa4268ac37",
+        "cco-gaspacho-andalou",
+        "cco-gaspacho-concombre"
       ]
     },
     {
@@ -91290,7 +92452,9 @@
         "r-50e9f84517",
         "r-0d88134e0e",
         "r-89467af8af",
-        "r-32efaae5de"
+        "r-32efaae5de",
+        "cco-veloute-courge-chataigne",
+        "cco-veloute-carotte-lentilles"
       ]
     },
     {
@@ -91310,7 +92474,9 @@
         "r-45b814e25e",
         "r-ae5fd0a220",
         "r-30a78971c9",
-        "r-505f3338a3"
+        "r-505f3338a3",
+        "cco-veloute-potimarron",
+        "cco-veloute-poireaux"
       ]
     },
     {
@@ -91329,7 +92495,9 @@
         "r-2e9d82d053",
         "r-4f567f7e1f",
         "r-0c8602c079",
-        "r-af6f91eb76"
+        "r-af6f91eb76",
+        "cco-veloute-carotte-poireau",
+        "cco-veloute-courgette-basilic"
       ]
     },
     {
