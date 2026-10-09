@@ -21,8 +21,6 @@ export default async function RecettesPage({ searchParams }: { searchParams: Pro
   };
   const selectedCollection = allCollections.find((col) => col.slug === slugByFilter[filter] && col.recipeIds.length > 0);
   const selectedIds = selectedCollection ? new Set(selectedCollection.recipeIds) : null;
-  const month = new Date().getMonth() + 1;
-  const seasonal = month >= 3 && month <= 5 ? "printemps" : month >= 6 && month <= 8 ? "ete" : month >= 9 && month <= 11 ? "automne" : "hiver";
   const fallbackFilter = (recipe: (typeof carnet.recipes)[number]) => {
     const hay = [recipe.name, recipe.blurb || "", ...recipeLines(recipe)].join(" ").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLocaleLowerCase("fr");
     switch (filter) {
@@ -34,10 +32,10 @@ export default async function RecettesPage({ searchParams }: { searchParams: Pro
       case "mr-cuisine": return recipe.robot.length > 0;
       case "apero": return /aperitif|apero|verrine|tartinade|tapenade|toast/.test(hay);
       case "recevoir": return /invites|recevoir|festif|convivial|famille|repas de fete/.test(hay);
-      case "printemps": return selectedIds ? false : /asperge|petit pois|radis|fraise|artichaut/.test(hay) || seasonal === "printemps";
-      case "ete": return /tomate|courgette|aubergine|melon|peche|barbecue|salade fraiche/.test(hay) || seasonal === "ete";
-      case "automne": return /potimarron|courge|champignon|chataigne|pomme|poire|poireau/.test(hay) || seasonal === "automne";
-      case "hiver": return /chou|endive|poireau|carotte|navet|veloute|soupe chaude/.test(hay) || seasonal === "hiver";
+      case "printemps": return selectedIds ? false : /asperge|petit pois|radis|fraise|artichaut/.test(hay);
+      case "ete": return /tomate|courgette|aubergine|melon|peche|barbecue|salade fraiche/.test(hay);
+      case "automne": return /potimarron|courge|champignon|chataigne|pomme|poire|poireau/.test(hay);
+      case "hiver": return /chou|endive|poireau|carotte|navet|veloute|soupe chaude/.test(hay);
       case "bonus": return recipe.notes.length > 0 || /astuce|variante|bonus|anti gaspi/.test(hay);
       default: return true;
     }
