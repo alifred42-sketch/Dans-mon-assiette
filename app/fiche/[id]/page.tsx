@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { FicheBack } from "@/components/fiche-back";
+import { CookingWakeLock } from "@/components/cooking-wake-lock";
 import { carnet, getCollections, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 
 export function generateStaticParams() {
@@ -28,6 +29,7 @@ export default async function FichePage({
     .join(" · ");
   return (
     <article className="space-y-6">
+      <CookingWakeLock />
       <FicheBack fromCol={fromCol ? { slug: fromCol.slug, name: fromCol.name } : undefined} />
       <header className="space-y-2">
         <h1 className="font-heading text-3xl leading-tight">{recipe.name}</h1>
