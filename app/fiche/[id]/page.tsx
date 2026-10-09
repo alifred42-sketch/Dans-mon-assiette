@@ -88,7 +88,7 @@ export default async function FichePage({
             {recipe.steps.length > 0 ? (
               <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
                 {recipe.steps.map((step, i) => (
-                  <li key={`step-${i}`}>{step}</li>
+                  <li key={`step-${i}`}>{linkedInstruction(step)}</li>
                 ))}
               </ol>
             ) : (
@@ -102,7 +102,7 @@ export default async function FichePage({
               <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
               <ul className="mt-2 space-y-1 text-sm">
                 {recipe.robot.map((line, i) => (
-                  <li key={`robot-${i}`}>{line}</li>
+                  <li key={`robot-${i}`}>{linkedInstruction(line)}</li>
                 ))}
               </ul>
             </section>
