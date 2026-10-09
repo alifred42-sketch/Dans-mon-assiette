@@ -26,7 +26,7 @@ export default async function FichePage({
   const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
   const quickIds = ["r-c1ed1606a4", "r-c27d71faed", "r-50f64b1080"];
   const alternatives = quickIds.map((quickId) => carnet.recipes.find((r) => r.id === quickId)).filter((r): r is NonNullable<typeof r> => !!r).slice(0,3).map((r) => ({ id: r.id, name: r.name }));
-  const sauceRecipes = carnet.recipes.filter((candidate) => /sauce|marinade|vinaigrette|pesto|coulis/i.test(candidate.name));
+  const sauceRecipes = carnet.recipes.filter((candidate) => { const name = cleanMatch(candidate.name); return /(^|\\s)(sauce|marinade|vinaigrette|pesto|coulis)\\b/.test(name) && !/poulet|cabillaud|saumon|steak|boulettes|colin|merguez|ravioles|paupiettes|wrap/.test(name); });
   function cleanMatch(value: string) { return value.toLocaleLowerCase("fr").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim(); }
   function findSauceRecipe(line: string) {
     const cleaned = cleanMatch(line);
