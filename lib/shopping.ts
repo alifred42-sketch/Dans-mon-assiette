@@ -47,6 +47,16 @@ function canonicalIngredient(raw: string): string {
     .trim();
 }
 
+function scaleIngredientLine(line: string, factor: number): string {
+  if (!Number.isFinite(factor) || factor <= 0 || factor === 1) return line;
+  return line.replace(/^(\\s*(?:[^:]{1,40}:\\s*)?)(\\d+(?:[.,]\\d+)?)(?=\\s|$)/, (whole, prefix: string, raw: string) => {
+    const value = Number(raw.replace(",", "."));
+    if (!Number.isFinite(value) || value <= 0 || value > 1000) return whole;
+    const scaled = Math.round(value * factor * 100) / 100;
+    return prefix + String(scaled).replace(".", ",");
+  });
+}
+
 function num(raw: string): number {
   return Number(raw.replace(",", "."));
 }
@@ -211,7 +221,7 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
       ...(recipe.ingredients || []).map((line) => factor === 1 ? line : line.replace(/^(.*?:\s*|)(\d+(?:[.,]\d+)?)(?=\s*(?:g|kg|ml|cl|l)\b)/i, (_m, prefix, raw) => prefix + String(Math.round(Number(String(raw).replace(",", ".")) * factor * 100) / 100).replace(".", ","))),
       ...(recipe.sections || [])
         .filter((section) => foodSection.test(section.title || ""))
-        .flatMap((section) => section.lines),
+        .flatMap((section) => section.lines.map((line) => scaleIngredientLine(line, factor))),
     ];
     const seen = new Set<string>();
     for (const line of lines) {
