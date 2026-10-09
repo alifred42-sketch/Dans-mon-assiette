@@ -218,7 +218,7 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
     const recipe = getRecipe(slot.recipeId);
     if (!recipe) continue;
     const foodSection = /ingr|épice|epice|légume|viande|fromage|sauce|appareil|pain|féculent|feculent|dessus|assais/i;
-    const factor = (servingsByRecipe[recipe.id] || 4) / (Number.parseInt(recipe.servings || "4", 10) || 4);
+    const baseServings = Number.parseInt(recipe.servings || "4", 10) || 4;\n    const factor = (servingsByRecipe[recipe.id] || baseServings) / baseServings;
     const lines = [
       ...(recipe.ingredients || []).map((line) => scaleIngredientLine(line, factor)),
       ...(recipe.sections || [])
