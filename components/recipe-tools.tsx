@@ -7,8 +7,9 @@ type Alternative = { id: string; name: string };
 type IngredientTarget = { id: string; name: string };
 function scaleLine(line: string, factor: number) {
   if (factor === 1) return line;
-  return line.replace(/\d+(?:[.,]\d+)?/g, (match) => {
-    const n = Number(match.replace(",", "."));
+  return line.replace(/\d+(?:[.,]\d+)?(?:\/\d+(?:[.,]\d+)?)?/g, (match) => {
+    const fraction = match.split("/");
+    const n = fraction.length === 2 ? Number(fraction[0].replace(",", ".")) / Number(fraction[1].replace(",", ".")) : Number(match.replace(",", "."));
     if (!Number.isFinite(n) || n <= 0 || n > 1000) return match;
     const scaled = Math.round(n * factor * 100) / 100;
     return String(scaled).replace(".", ",");
