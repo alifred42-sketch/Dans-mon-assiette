@@ -21,7 +21,7 @@ export default function BatchPage() {
   }
   const prep = take(/organisation|organisation|préparation|preparation|découpe|decoupe|laver|éplucher|eplucher|planche/i);
   const oven = take(/four|rôtir|rotir|gratin|cuisson au four|légumes rôtis|legumes rotis/i);
-  const robot = take(/robot|mr cuisine|monsieur cuisine|vitesse|mixage|cuisson vapeur/i);
+  const robot = take(/robot|mr cuisine|monsieur cuisine|vitesse|mixage|cuisson vapeur|cuissons? simultanées?/i);
   const storage = take(/conservation|congél|congel|frigo|réfrigér|refriger/i);
   const assembly = take(/assemblage|jour j|montage|finition|servir/i);
   const general = allItems.filter((item) => !assigned.has(item.id));
