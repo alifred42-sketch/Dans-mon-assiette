@@ -58,8 +58,9 @@ function cleanName(raw: string): string {
 
 function scaleIngredientLine(line: string, factor: number): string {
   if (!Number.isFinite(factor) || factor <= 0 || factor === 1) return line;
-  return line.replace(/^(\s*(?:[^:]{1,40}:\s*)?)(\d+(?:[.,]\d+)?)(?=\s|$)/, (whole, prefix: string, raw: string) => {
-    const value = Number(raw.replace(",", "."));
+  return line.replace(/^(\s*(?:[^:]{1,40}:\s*)?)(\d+(?:[.,]\d+)?(?:\/\d+(?:[.,]\d+)?)?)(?=\s|$)/, (whole, prefix: string, raw: string) => {
+    const fraction = raw.split("/");
+    const value = fraction.length === 2 ? Number(fraction[0].replace(",", ".")) / Number(fraction[1].replace(",", ".")) : Number(raw.replace(",", "."));
     if (!Number.isFinite(value) || value <= 0 || value > 1000) return whole;
     const scaled = Math.round(value * factor * 100) / 100;
     return prefix + String(scaled).replace(".", ",");
@@ -67,7 +68,8 @@ function scaleIngredientLine(line: string, factor: number): string {
 }
 
 function num(raw: string): number {
-  return Number(raw.replace(",", "."));
+  const fraction = raw.split("/");
+  return fraction.length === 2 ? Number(fraction[0].replace(",", ".")) / Number(fraction[1].replace(",", ".")) : Number(raw.replace(",", "."));
 }
 
 function normUnit(raw: string): string {
@@ -103,7 +105,7 @@ function parseLine(raw: string): Parsed | null {
   }
 
   const de = t.match(
-    /^(\d+(?:[.,]\d+)?)\s*(g|kg|ml|cl|l|c\.\s*à\s*(?:s\.|c\.|soupe|café)|càs|cac|cs|cc|tranche[s]?|gousse[s]?)\s+(?:de\s+|d['’])?(.+)$/i,
+    /^(\d+(?:[.,]\d+)?(?:\/\d+(?:[.,]\d+)?)?)\s*(g|kg|ml|cl|l|c\.\s*à\s*(?:s\.|c\.|soupe|café)|càs|cac|cs|cc|tranche[s]?|gousse[s]?)\s+(?:de\s+|d['’])?(.+)$/i,
   );
   if (de) {
     return {
@@ -114,7 +116,7 @@ function parseLine(raw: string): Parsed | null {
     };
   }
 
-  const lead = t.match(/^(\d+(?:[.,]\d+)?)\s+(.+)$/);
+  const lead = t.match(/^(\d+(?:[.,]\d+)?(?:\/\d+(?:[.,]\d+)?)?)\s+(.+)$/);
   if (lead) {
     const rest = lead[2];
     const paren = rest.match(/^(.+?)\s*\((.+)\)$/);
@@ -133,7 +135,7 @@ function parseLine(raw: string): Parsed | null {
 }
 
 function parseQtyHead(qtyPart: string): { amount?: number; unit?: string } {
-  const m = qtyPart.match(/^(\d+(?:[.,]\d+)?)\s*(g|kg|ml|cl|l|c\.\s*à\s*(?:s\.|c\.|soupe|café)|càs|cac|cs|cc|tranche[s]?|gousse[s]?)?\b/i);
+  const m = qtyPart.match(/^(\d+(?:[.,]\d+)?(?:\/\d+(?:[.,]\d+)?)?)\s*(g|kg|ml|cl|l|c\.\s*à\s*(?:s\.|c\.|soupe|café)|càs|cac|cs|cc|tranche[s]?|gousse[s]?)?\b/i);
   if (!m) return {};
   return { amount: num(m[1]), unit: m[2] ? normUnit(m[2]) : undefined };
 }
