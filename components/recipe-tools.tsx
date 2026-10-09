@@ -32,10 +32,10 @@ export function RecipeTools({ recipeId, ingredients, alternatives }: { recipeId:
         </div>
       </div>
       <p className="text-xs text-[#6B6B67]">Quantités indicatives calculées à partir d’une base de 4 personnes.</p>
-      <details>
-        <summary className="cursor-pointer text-sm font-semibold text-[#2B2B2B]">Voir les ingrédients adaptés à {servings} personne{servings>1?"s":""}</summary>
-        <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">{scaled.map((line,i)=><li key={i}>{line}</li>)}</ul>
-      </details>
+      <div className="space-y-2">
+        <h3 className="font-heading text-lg font-semibold text-[#2B2B2B]">🛒 Ingrédients pour {servings} personne{servings > 1 ? "s" : ""}</h3>
+        <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed">{scaled.map((line,i)=><li key={i}>{line}</li>)}</ul>
+      </div>
       <button type="button" onClick={() => setShowSos(v => !v)} className="rounded-xl border border-[#E9E9E4] px-3 py-2 text-sm font-semibold text-[#1A1A1A]">😴 SOS Flemme — 3 idées rapides</button>
       {showSos && <div className="grid gap-2 sm:grid-cols-3">{alternatives.slice(0,3).map(a=><Link key={a.id} href={"/fiche/"+a.id} className="rounded-xl bg-[#EADAEC] p-3 text-sm font-semibold text-[#1A1A1A]">{a.name}</Link>)}</div>}
     </section>
