@@ -11,8 +11,10 @@ export default function WeekPage() {
   const search = useSearchParams();
   const requestedWeek = search.get("w");
   const [currentWeek, setCurrentWeek] = useState(1);
+  const [weekday, setWeekday] = useState(1);
   useEffect(() => {
     const now = new Date();
+    setWeekday(now.getDay());
     const monday = new Date(now.getFullYear(), 0, 1);
     const day = (now.getDay() + 6) % 7;
     const thisMonday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - day);
@@ -40,6 +42,10 @@ export default function WeekPage() {
         )}
       </div>
       <InstallApp />
+      {weekday === 1 ? <aside className="rounded-2xl border border-[#8FA89B]/30 bg-[#8FA89B]/15 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">Bon début de semaine ! Vos repas sont prêts à être assemblés, vous avez géré.</aside> : null}
+      {weekday === 3 ? <aside className="rounded-2xl border border-[#8FA89B]/30 bg-[#8FA89B]/15 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">Déjà le milieu de la semaine ! Une petite baisse d'énergie ? N'oubliez pas notre bouton SOS Flemme si besoin. 😉</aside> : null}
+      {weekday === 5 ? <aside className="rounded-2xl border border-[#D98A6C]/30 bg-[#F3C6B1]/35 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">C'est vendredi ! Rangez les tupperwares du batchcooking, place à la cuisine plaisir !</aside> : null}
+      {weekday === 6 ? <aside className="rounded-2xl border border-[#D98A6C]/30 bg-[#F3C6B1]/35 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">Week-end en mode Cuisine Chic Ouf : on se fait plaisir sans se prendre la tête.</aside> : null}
       <WeekPicker week={week} path="/semaine" />
       {breakfast && breakfast.lines.length > 0 ? (
         <section className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
