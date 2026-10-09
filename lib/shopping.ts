@@ -38,7 +38,9 @@ function canonicalIngredient(raw: string): string {
     .replace(/\bail frais\b/g, "ail")
     .replace(/\s+/g, " ")
     .trim();
-}\n\nfunction cleanName(raw: string): string {
+}
+
+function cleanName(raw: string): string {
   return stripDecor(raw)
     .replace(/^[^\p{L}\p{N}]+/u, "")
     .replace(/\s*\([^)]*\)\s*$/g, "")
