@@ -788,51 +788,68 @@
     },
     {
       "id": "r-9f72f3e182",
-      "name": "🥣 RECETTE 012 — Soupe maison légumes & tartine complète",
+      "name": "Soupe d’automne aux poireaux, carottes et pommes de terre, tartines complètes",
       "ingredients": [
-        "Courgettes",
-        "Carottes",
-        "Poireaux",
-        "Oignons",
-        "Pommes de terre",
-        "Pain complet",
-        "Fromage frais"
+        "3 poireaux",
+        "4 carottes",
+        "3 pommes de terre moyennes",
+        "1 oignon",
+        "1,2 l de bouillon de légumes",
+        "4 tranches de pain complet",
+        "100 g de fromage frais",
+        "1 c. à soupe d’huile d’olive",
+        "Sel et poivre"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "En octobre, privilégier les poireaux, carottes, pommes de terre et oignons pour une soupe de saison. Laver soigneusement les poireaux et couper tous les légumes en morceaux.",
+        "Dans une grande casserole, faire revenir l’oignon dans l’huile 3 minutes. Ajouter les autres légumes et le bouillon.",
+        "Porter à ébullition, puis laisser frémir à couvert 25 à 30 minutes, jusqu’à ce que les légumes soient tendres.",
+        "Mixer jusqu’à obtenir un velouté lisse. Ajouter de l’eau chaude si nécessaire, puis rectifier l’assaisonnement.",
+        "Faire griller le pain complet, tartiner de fromage frais et servir avec la soupe chaude."
       ],
-      "robot": [],
+      "robot": [
+        "Monsieur Cuisine : hacher l’oignon 5 s / vitesse 6 et racler. Ajouter l’huile, faire revenir 3 min / 120 °C / vitesse 1. Ajouter légumes en dés et bouillon sans dépasser la capacité maximale; cuire 25 à 30 min / 100 °C / vitesse 1. Mixer progressivement 30 à 60 s / vitesse 5 à 8 après vérification de la température et du manuel."
+      ],
       "notes": [
         "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
       ],
       "sections": [
         {
-          "title": "Selon saison :",
+          "title": "🛒 Ingrédients",
           "lines": [
-            "Courgettes",
-            "Carottes",
-            "Poireaux",
-            "Oignons",
-            "Pommes de terre"
+            "3 poireaux",
+            "4 carottes",
+            "3 pommes de terre moyennes",
+            "1 oignon",
+            "1,2 l de bouillon de légumes",
+            "4 tranches de pain complet",
+            "100 g de fromage frais",
+            "1 c. à soupe d’huile d’olive",
+            "Sel et poivre"
           ]
         },
         {
-          "title": "Accompagnement :",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "Pain complet",
-            "Fromage frais",
-            "✅ Parfaite pour ce type de recette"
+            "1. En octobre, privilégier les poireaux, carottes, pommes de terre et oignons pour une soupe de saison. Laver soigneusement les poireaux et couper tous les légumes en morceaux.",
+            "2. Dans une grande casserole, faire revenir l’oignon dans l’huile 3 minutes. Ajouter les autres légumes et le bouillon.",
+            "3. Porter à ébullition, puis laisser frémir à couvert 25 à 30 minutes, jusqu’à ce que les légumes soient tendres.",
+            "4. Mixer jusqu’à obtenir un velouté lisse. Ajouter de l’eau chaude si nécessaire, puis rectifier l’assaisonnement.",
+            "5. Faire griller le pain complet, tartiner de fromage frais et servir avec la soupe chaude."
+          ]
+        },
+        {
+          "title": "🤖 Monsieur Cuisine Smart",
+          "lines": [
+            "Monsieur Cuisine : hacher l’oignon 5 s / vitesse 6 et racler. Ajouter l’huile, faire revenir 3 min / 120 °C / vitesse 1. Ajouter légumes en dés et bouillon sans dépasser la capacité maximale; cuire 25 à 30 min / 100 °C / vitesse 1. Mixer progressivement 30 à 60 s / vitesse 5 à 8 après vérification de la température et du manuel."
           ]
         }
       ],
       "source": "200 RECETTE",
       "timePrep": "15 min",
-      "timeCook": null,
-      "servings": null,
-      "blurb": "🏷️ Catégorie : 🥣 Soupes"
+      "timeCook": "30 min",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-e99302c7e8",
@@ -981,25 +998,28 @@
     },
     {
       "id": "r-4a83bb2c6f",
-      "name": "🍗 RECETTE 015 — Poulet aux courgettes façon méditerranéenne",
+      "name": "Poulet aux courgettes façon provençale",
       "ingredients": [
-        "Blancs de poulet",
-        "Courgettes",
-        "Tomates concassées",
-        "Oignon",
-        "Ail",
-        "Basilic",
-        "Paprika",
-        "Huile d’olive"
+        "600 g de blancs de poulet",
+        "3 courgettes",
+        "400 g de tomates concassées",
+        "1 oignon",
+        "2 gousses d’ail",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café de paprika",
+        "1 c. à café d’herbes de Provence",
+        "Sel et poivre",
+        "240 g de riz complet cru pour accompagner"
       ],
       "steps": [
-        "🤖 Monsieur Cuisine Smart : ✅ Adaptable",
-        "Faire revenir le poulet.",
-        "Ajouter les légumes.",
-        "Laisser mijoter doucement."
+        "Couper le poulet en cubes. Laver les courgettes et les couper en demi-rondelles; émincer l’oignon et hacher l’ail.",
+        "Faire chauffer l’huile dans une sauteuse et faire dorer le poulet 4 à 5 minutes.",
+        "Ajouter l’oignon, l’ail, le paprika et les herbes; mélanger une minute.",
+        "Ajouter les courgettes et les tomates concassées. Couvrir et laisser mijoter 18 à 20 minutes, jusqu’à ce que le poulet soit cuit à cœur.",
+        "Pendant ce temps, cuire le riz complet selon les indications du paquet. Rectifier l’assaisonnement et servir."
       ],
       "robot": [
-        "Poulet aux légumes"
+        "Monsieur Cuisine : hacher oignon et ail 5 s / vitesse 6, racler, ajouter huile et faire revenir 3 min / 120 °C / vitesse 1. Ajouter poulet en cubes, faire revenir 5 min / 120 °C / vitesse inversée douce si disponible. Ajouter courgettes, tomates et aromates, cuire 18 à 20 min / 100 °C / vitesse inversée douce. Vérifier la cuisson et respecter la capacité du bol."
       ],
       "notes": [
         "🍚 Riz complet",
@@ -1007,52 +1027,42 @@
       ],
       "sections": [
         {
-          "title": "⏱️ Préparation : 15 min",
-          "lines": [
-            "🔥 Cuisson : 25 min",
-            "🤖 Monsieur Cuisine Smart : ✅ Adaptable"
-          ]
-        },
-        {
           "title": "🛒 Ingrédients",
           "lines": [
-            "Blancs de poulet",
-            "Courgettes",
-            "Tomates concassées",
-            "Oignon",
-            "Ail",
-            "Basilic",
-            "Paprika",
-            "Huile d’olive"
+            "600 g de blancs de poulet",
+            "3 courgettes",
+            "400 g de tomates concassées",
+            "1 oignon",
+            "2 gousses d’ail",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à café de paprika",
+            "1 c. à café d’herbes de Provence",
+            "Sel et poivre",
+            "240 g de riz complet cru pour accompagner"
           ]
         },
         {
           "title": "👩‍🍳 Préparation",
           "lines": [
-            "1. Faire revenir le poulet.",
-            "2. Ajouter les légumes.",
-            "3. Laisser mijoter doucement."
+            "1. Couper le poulet en cubes. Laver les courgettes et les couper en demi-rondelles; émincer l’oignon et hacher l’ail.",
+            "2. Faire chauffer l’huile dans une sauteuse et faire dorer le poulet 4 à 5 minutes.",
+            "3. Ajouter l’oignon, l’ail, le paprika et les herbes; mélanger une minute.",
+            "4. Ajouter les courgettes et les tomates concassées. Couvrir et laisser mijoter 18 à 20 minutes, jusqu’à ce que le poulet soit cuit à cœur.",
+            "5. Pendant ce temps, cuire le riz complet selon les indications du paquet. Rectifier l’assaisonnement et servir."
           ]
         },
         {
-          "title": "🥄 Accompagnement :",
+          "title": "🤖 Monsieur Cuisine Smart",
           "lines": [
-            "🍚 Riz complet",
-            "🥔 Pommes de terre vapeur"
-          ]
-        },
-        {
-          "title": "💡 Astuce :",
-          "lines": [
-            "Très pratique en préparation d’avance, il est encore meilleur réchauffé."
+            "Monsieur Cuisine : hacher oignon et ail 5 s / vitesse 6, racler, ajouter huile et faire revenir 3 min / 120 °C / vitesse 1. Ajouter poulet en cubes, faire revenir 5 min / 120 °C / vitesse inversée douce si disponible. Ajouter courgettes, tomates et aromates, cuire 18 à 20 min / 100 °C / vitesse inversée douce. Vérifier la cuisson et respecter la capacité du bol."
           ]
         }
       ],
       "source": "200 RECETTE",
       "timePrep": "15 min",
       "timeCook": "25 min",
-      "servings": null,
-      "blurb": "🏷️ Catégorie : 🍗 Poulet"
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-1aceae48da",
@@ -4858,19 +4868,25 @@
     },
     {
       "id": "r-08fd2e4a38",
-      "name": "🥗 RECETTE 072 — Assiette fraîcheur œufs, crudités & pommes de terre",
+      "name": "Assiette fraîcheur aux œufs, crudités et pommes de terre",
       "ingredients": [
-        "Œufs durs",
-        "Pommes de terre vapeur",
-        "Tomates",
-        "Concombre",
-        "Carottes râpées",
-        "Salade"
+        "600 g de pommes de terre",
+        "4 œufs",
+        "3 tomates",
+        "1 concombre",
+        "3 carottes",
+        "1 salade verte",
+        "2 c. à soupe d’huile d’olive",
+        "1 c. à soupe de moutarde",
+        "1 citron",
+        "Sel et poivre"
       ],
       "steps": [
-        "Assembler les ingrédients préparés à l’avance.",
-        "Une assiette complète sans passer du temps en cuisine.",
-        "🍱 BATCH COOKING — SEMAINE \"FOUR & LÉGUMES\""
+        "Laver les pommes de terre et les cuire dans une casserole d’eau frémissante 20 à 25 minutes selon leur taille, jusqu’à ce qu’elles soient tendres. Égoutter et laisser tiédir.",
+        "Cuire les œufs 9 à 10 minutes dans l’eau frémissante, refroidir, écaler et couper en quartiers.",
+        "Laver la salade, les tomates et le concombre. Râper les carottes et couper les crudités.",
+        "Mélanger l’huile, la moutarde, le jus de citron, le sel et le poivre pour préparer une vinaigrette.",
+        "Répartir pommes de terre, œufs et crudités dans les assiettes; ajouter la vinaigrette au moment de servir."
       ],
       "robot": [],
       "notes": [
@@ -4889,66 +4905,36 @@
       ],
       "sections": [
         {
-          "title": "⏱️ Préparation : 15 min",
-          "lines": [
-            "🍱 BATCH cooking : ✅ Oui"
-          ]
-        },
-        {
           "title": "🛒 Ingrédients",
           "lines": [
-            "Œufs durs",
-            "Pommes de terre vapeur",
-            "Tomates",
-            "Concombre",
-            "Carottes râpées",
-            "Salade"
-          ]
-        },
-        {
-          "title": "🥣 Sauce associée :",
-          "lines": [
-            "➡️ Vinaigrette légère moutarde citron 🔗"
+            "600 g de pommes de terre",
+            "4 œufs",
+            "3 tomates",
+            "1 concombre",
+            "3 carottes",
+            "1 salade verte",
+            "2 c. à soupe d’huile d’olive",
+            "1 c. à soupe de moutarde",
+            "1 citron",
+            "Sel et poivre"
           ]
         },
         {
           "title": "👩‍🍳 Préparation",
           "lines": [
-            "Assembler les ingrédients préparés à l’avance."
-          ]
-        },
-        {
-          "title": "💡 Astuce :",
-          "lines": [
-            "Une assiette complète sans passer du temps en cuisine.",
-            "🍱 BATCH COOKING — SEMAINE \"FOUR & LÉGUMES\""
-          ]
-        },
-        {
-          "title": "Préparer :",
-          "lines": [
-            "✅ Poulet provençal",
-            "✅ Légumes rôtis",
-            "✅ Pommes de terre vapeur",
-            "✅ Œufs durs",
-            "✅ Sauce skyr citron"
-          ]
-        },
-        {
-          "title": "Permet :",
-          "lines": [
-            "➡️ 🍗 Poulet chaud",
-            "➡️ 🌯 Wraps",
-            "➡️ 🥗 Salades",
-            "➡️ 🥔 Pommes de terre garnies"
+            "1. Laver les pommes de terre et les cuire dans une casserole d’eau frémissante 20 à 25 minutes selon leur taille, jusqu’à ce qu’elles soient tendres. Égoutter et laisser tiédir.",
+            "2. Cuire les œufs 9 à 10 minutes dans l’eau frémissante, refroidir, écaler et couper en quartiers.",
+            "3. Laver la salade, les tomates et le concombre. Râper les carottes et couper les crudités.",
+            "4. Mélanger l’huile, la moutarde, le jus de citron, le sel et le poivre pour préparer une vinaigrette.",
+            "5. Répartir pommes de terre, œufs et crudités dans les assiettes; ajouter la vinaigrette au moment de servir."
           ]
         }
       ],
       "source": "200 RECETTE",
       "timePrep": "15 min",
-      "timeCook": null,
-      "servings": null,
-      "blurb": "🏷️ Catégorie : 🌞 Repas été"
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-1fa9d156b4",
@@ -6062,20 +6048,25 @@
     },
     {
       "id": "r-b5d84e8dfe",
-      "name": "🍗 RECETTE 089 — Poulet rôti, légumes fondants & sauce champignons légère",
+      "name": "Poulet rôti, légumes fondants et sauce champignons légère",
       "ingredients": [
-        "Cuisses ou blancs de poulet",
-        "Champignons",
-        "Carottes",
-        "Courgettes",
-        "Oignons",
-        "Thym",
-        "Ail"
+        "4 cuisses de poulet ou 4 blancs (environ 700 g)",
+        "300 g de champignons de Paris",
+        "4 carottes",
+        "2 courgettes",
+        "2 oignons",
+        "2 gousses d’ail",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café de thym",
+        "150 ml de crème légère",
+        "Sel et poivre"
       ],
       "steps": [
-        "Mettre le poulet et les légumes au four.",
-        "Préparer la sauce avec les champignons.",
-        "Servir ensemble."
+        "Préchauffer le four à 200 °C. Éplucher les carottes et les couper en bâtonnets; couper les courgettes et les oignons en morceaux.",
+        "Déposer le poulet et les légumes (sauf les champignons destinés à la sauce) dans un plat. Ajouter l’huile, l’ail, le thym, le sel et le poivre; mélanger les légumes.",
+        "Enfourner 35 à 45 minutes selon les morceaux, en retournant les légumes à mi-cuisson. Vérifier que le poulet est cuit à cœur.",
+        "Pendant ce temps, émincer les champignons et les faire revenir 6 à 8 minutes dans une poêle antiadhésive.",
+        "Ajouter la crème, poivrer et laisser réduire 2 à 3 minutes. Servir avec le poulet et les légumes rôtis."
       ],
       "robot": [],
       "notes": [
@@ -6086,52 +6077,36 @@
       ],
       "sections": [
         {
-          "title": "⏱️ Préparation : 15 min",
-          "lines": [
-            "🔥 Cuisson : 45 min",
-            "🍱 BATCH cooking : ✅ Oui"
-          ]
-        },
-        {
           "title": "🛒 Ingrédients",
           "lines": [
-            "Cuisses ou blancs de poulet",
-            "Champignons",
-            "Carottes",
-            "Courgettes",
-            "Oignons",
-            "Thym",
-            "Ail"
-          ]
-        },
-        {
-          "title": "🥣 Sauce associée :",
-          "lines": [
-            "➡️ Sauce champignons légère 🔗"
+            "4 cuisses de poulet ou 4 blancs (environ 700 g)",
+            "300 g de champignons de Paris",
+            "4 carottes",
+            "2 courgettes",
+            "2 oignons",
+            "2 gousses d’ail",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à café de thym",
+            "150 ml de crème légère",
+            "Sel et poivre"
           ]
         },
         {
           "title": "👩‍🍳 Préparation",
           "lines": [
-            "1. Mettre le poulet et les légumes au four.",
-            "2. Préparer la sauce avec les champignons.",
-            "3. Servir ensemble."
-          ]
-        },
-        {
-          "title": "Les restes peuvent servir pour :",
-          "lines": [
-            "🌯 wraps",
-            "🥗 salades",
-            "🍝 pâtes"
+            "1. Préchauffer le four à 200 °C. Éplucher les carottes et les couper en bâtonnets; couper les courgettes et les oignons en morceaux.",
+            "2. Déposer le poulet et les légumes (sauf les champignons destinés à la sauce) dans un plat. Ajouter l’huile, l’ail, le thym, le sel et le poivre; mélanger les légumes.",
+            "3. Enfourner 35 à 45 minutes selon les morceaux, en retournant les légumes à mi-cuisson. Vérifier que le poulet est cuit à cœur.",
+            "4. Pendant ce temps, émincer les champignons et les faire revenir 6 à 8 minutes dans une poêle antiadhésive.",
+            "5. Ajouter la crème, poivrer et laisser réduire 2 à 3 minutes. Servir avec le poulet et les légumes rôtis."
           ]
         }
       ],
       "source": "200 RECETTE",
       "timePrep": "15 min",
       "timeCook": "45 min",
-      "servings": null,
-      "blurb": "🏷️ Catégorie : 🍗 Cuisine familiale"
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-c2861ee706",
@@ -9605,24 +9580,25 @@
     },
     {
       "id": "r-fd1caa9287",
-      "name": "🥗 RECETTE 143 — Salade de riz au saumon fumé",
+      "name": "Saumon citronné et riz aux herbes",
       "ingredients": [
-        "Riz complet",
-        "Saumon fumé",
-        "Concombre",
-        "Tomates",
-        "Maïs (facultatif)",
-        "Ciboulette"
+        "4 pavés de saumon (environ 600 g)",
+        "240 g de riz basmati cru",
+        "1 citron",
+        "1 c. à soupe d’huile d’olive",
+        "1 gousse d’ail",
+        "1 c. à soupe de ciboulette ciselée",
+        "Sel et poivre",
+        "200 g de haricots verts en accompagnement (facultatif)"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Rincer le riz et le cuire dans une casserole d’eau bouillante salée selon les indications du paquet, généralement 10 à 12 minutes.",
+        "Préchauffer le four à 190 °C. Déposer les pavés de saumon dans un plat, arroser d’huile et de jus de citron, ajouter l’ail haché, le sel et le poivre.",
+        "Enfourner 12 à 15 minutes selon l’épaisseur, jusqu’à ce que le saumon soit opaque et se détache facilement à la fourchette.",
+        "Si souhaité, cuire les haricots verts à l’eau bouillante 8 à 10 minutes puis égoutter.",
+        "Parsemer le saumon de ciboulette et servir avec le riz et les légumes."
       ],
-      "robot": [
-        "Fondue de poireaux"
-      ],
+      "robot": [],
       "notes": [
         "➡️ Sauce citron-ciboulette 🔗",
         "💡 Se prépare parfaitement la veille.",
@@ -9630,35 +9606,34 @@
       ],
       "sections": [
         {
-          "title": "⏱️ Préparation : 15 min",
-          "lines": [
-            "🍱 Lunch box : ✅"
-          ]
-        },
-        {
           "title": "🛒 Ingrédients",
           "lines": [
-            "Riz complet",
-            "Saumon fumé",
-            "Concombre",
-            "Tomates",
-            "Maïs (facultatif)",
-            "Ciboulette"
+            "4 pavés de saumon (environ 600 g)",
+            "240 g de riz basmati cru",
+            "1 citron",
+            "1 c. à soupe d’huile d’olive",
+            "1 gousse d’ail",
+            "1 c. à soupe de ciboulette ciselée",
+            "Sel et poivre",
+            "200 g de haricots verts en accompagnement (facultatif)"
           ]
         },
         {
-          "title": "🥣 Sauce associée",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "➡️ Sauce citron-ciboulette 🔗",
-            "💡 Se prépare parfaitement la veille."
+            "1. Rincer le riz et le cuire dans une casserole d’eau bouillante salée selon les indications du paquet, généralement 10 à 12 minutes.",
+            "2. Préchauffer le four à 190 °C. Déposer les pavés de saumon dans un plat, arroser d’huile et de jus de citron, ajouter l’ail haché, le sel et le poivre.",
+            "3. Enfourner 12 à 15 minutes selon l’épaisseur, jusqu’à ce que le saumon soit opaque et se détache facilement à la fourchette.",
+            "4. Si souhaité, cuire les haricots verts à l’eau bouillante 8 à 10 minutes puis égoutter.",
+            "5. Parsemer le saumon de ciboulette et servir avec le riz et les légumes."
           ]
         }
       ],
       "source": "200 RECETTE",
-      "timePrep": "15 min",
-      "timeCook": null,
-      "servings": null,
-      "blurb": "🏷️ Catégorie : 🥗 Salades complètes"
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-0c10d7a1eb",
@@ -11447,28 +11422,32 @@
     },
     {
       "id": "r-ee748aed00",
-      "name": "🧆 RECETTE 166 — Boulettes de bœuf sauce tomate italienne",
+      "name": "Boulettes de bœuf sauce tomate italienne",
       "ingredients": [
         "500 g de bœuf haché",
         "1 œuf",
-        "Chapelure",
-        "Tomates concassées",
-        "Oignon",
-        "Carotte râpée",
-        "🌿 Basilic",
-        "🌿 Origan",
-        "🧄 Ail",
-        "⚫ Poivre",
-        "Pâtes classiques (portion adaptée)",
-        "Riz",
-        "Courgettes"
+        "40 g de chapelure",
+        "800 g de tomates concassées",
+        "1 oignon",
+        "1 carotte",
+        "2 gousses d’ail",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café d’origan",
+        "1 c. à café de basilic séché",
+        "Sel et poivre",
+        "400 g de pâtes sèches pour servir",
+        "30 g de parmesan (facultatif)"
       ],
       "steps": [
-        "Ajouter la sauce tomate.",
-        "Laisser mijoter."
+        "Râper la carotte, émincer l’oignon et hacher l’ail.",
+        "Mélanger le bœuf, l’œuf, la chapelure, la moitié de l’ail, le sel et le poivre. Former 16 petites boulettes.",
+        "Faire chauffer l’huile dans une sauteuse et faire dorer les boulettes sur plusieurs faces pendant 5 à 7 minutes.",
+        "Ajouter l’oignon, la carotte et le reste d’ail; cuire 3 minutes. Ajouter les tomates, l’origan et le basilic.",
+        "Couvrir partiellement et laisser mijoter 20 à 25 minutes, jusqu’à cuisson complète des boulettes. Pendant ce temps, cuire les pâtes selon le paquet.",
+        "Servir avec les pâtes et le parmesan si souhaité."
       ],
       "robot": [
-        "Boulettes de viande"
+        "Monsieur Cuisine : hacher oignon, carotte et ail 5 s / vitesse 5, racler. Mélanger le bœuf avec œuf, chapelure et assaisonnement à la main, puis former les boulettes. Faire revenir les aromates 3 min / 120 °C / vitesse 1; ajouter tomates et aromates et cuire 20 min / 100 °C / vitesse 1. Ajouter les boulettes dans le panier vapeur ou cuire séparément jusqu’à cuisson complète; ne pas les écraser dans le bol."
       ],
       "notes": [
         "20 g de parmesan",
@@ -11479,80 +11458,46 @@
       ],
       "sections": [
         {
-          "title": "⏱️ Préparation : 20 min",
-          "lines": [
-            "🔥 Cuisson : 30 min"
-          ]
-        },
-        {
-          "title": "❄️ Congélation : ✅",
-          "lines": [
-            "⭐ Difficulté : ★★☆",
-            "❤️ Niveau plaisir : 🍽️ Familial"
-          ]
-        },
-        {
           "title": "🛒 Ingrédients",
           "lines": [
             "500 g de bœuf haché",
             "1 œuf",
-            "Chapelure",
-            "Tomates concassées",
-            "Oignon",
-            "Carotte râpée"
-          ]
-        },
-        {
-          "title": "🧂 Épices & aromates",
-          "lines": [
-            "🌿 Basilic",
-            "🌿 Origan",
-            "🧄 Ail",
-            "⚫ Poivre"
+            "40 g de chapelure",
+            "800 g de tomates concassées",
+            "1 oignon",
+            "1 carotte",
+            "2 gousses d’ail",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à café d’origan",
+            "1 c. à café de basilic séché",
+            "Sel et poivre",
+            "400 g de pâtes sèches pour servir",
+            "30 g de parmesan (facultatif)"
           ]
         },
         {
           "title": "👩‍🍳 Préparation",
           "lines": [
-            "1. Former les boulettes.",
-            "2. Les faire dorer.",
-            "3. Ajouter la sauce tomate.",
-            "4. Laisser mijoter."
+            "1. Râper la carotte, émincer l’oignon et hacher l’ail.",
+            "2. Mélanger le bœuf, l’œuf, la chapelure, la moitié de l’ail, le sel et le poivre. Former 16 petites boulettes.",
+            "3. Faire chauffer l’huile dans une sauteuse et faire dorer les boulettes sur plusieurs faces pendant 5 à 7 minutes.",
+            "4. Ajouter l’oignon, la carotte et le reste d’ail; cuire 3 minutes. Ajouter les tomates, l’origan et le basilic.",
+            "5. Couvrir partiellement et laisser mijoter 20 à 25 minutes, jusqu’à cuisson complète des boulettes. Pendant ce temps, cuire les pâtes selon le paquet.",
+            "6. Servir avec les pâtes et le parmesan si souhaité."
           ]
         },
         {
-          "title": "🍝 Avec :",
+          "title": "🤖 Monsieur Cuisine Smart",
           "lines": [
-            "Pâtes classiques (portion adaptée)",
-            "Riz",
-            "Courgettes"
-          ]
-        },
-        {
-          "title": "🍞 🥖 Pain :",
-          "lines": [
-            "❌ Non avec pâtes"
-          ]
-        },
-        {
-          "title": "✅ Oui possible :",
-          "lines": [
-            "20 g de parmesan",
-            "ou mozzarella"
-          ]
-        },
-        {
-          "title": "🔄 Variante :",
-          "lines": [
-            "➡️ Boulettes de volaille ou version orientale avec cumin."
+            "Monsieur Cuisine : hacher oignon, carotte et ail 5 s / vitesse 5, racler. Mélanger le bœuf avec œuf, chapelure et assaisonnement à la main, puis former les boulettes. Faire revenir les aromates 3 min / 120 °C / vitesse 1; ajouter tomates et aromates et cuire 20 min / 100 °C / vitesse 1. Ajouter les boulettes dans le panier vapeur ou cuire séparément jusqu’à cuisson complète; ne pas les écraser dans le bol."
           ]
         }
       ],
       "source": "200 RECETTE",
       "timePrep": "20 min",
       "timeCook": "30 min",
-      "servings": null,
-      "blurb": "🏷️ Catégorie : 🇮🇹 Cuisine italienne"
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-131fda95c8",
@@ -11644,32 +11589,21 @@
     },
     {
       "id": "r-bd28f91212",
-      "name": "🍲 RECETTE 169 — Bœuf bourguignon familial revisité",
+      "name": "Assiette assemblée du batchcooking : bœuf mijoté et légumes",
       "ingredients": [
-        "1 kg de bœuf à mijoter",
-        "4 carottes",
-        "250 g de champignons",
-        "2 oignons",
-        "1 bouquet garni",
-        "Bouillon de bœuf",
-        "Vin rouge (facultatif selon préférence)",
-        "🌿 Thym",
-        "🌿 Laurier",
-        "🧄 Ail",
-        "⚫ Poivre",
-        "🌿 Persil frais",
-        "🥔 Pommes de terre vapeur",
-        "🥕 Légumes verts"
+        "600 g de bœuf bourguignon déjà cuit et correctement conservé",
+        "600 g de pommes de terre vapeur déjà cuites",
+        "400 g de carottes ou légumes verts cuits",
+        "1 c. à soupe de persil frais",
+        "Poivre"
       ],
       "steps": [
-        "Faire dorer la viande.",
-        "Ajouter les légumes.",
-        "Ajouter le bouillon et les aromates.",
-        "Laisser mijoter doucement."
+        "Vérifier la date et la conservation du bœuf mijoté et des accompagnements; ne pas utiliser de reste douteux.",
+        "Réchauffer le bœuf dans une casserole à feu doux avec un peu de sauce, jusqu’à ce qu’il soit bien chaud à cœur.",
+        "Réchauffer les pommes de terre et les légumes séparément, à la vapeur ou au micro-ondes dans un récipient adapté.",
+        "Dresser les assiettes, napper de sauce et parsemer de persil. Si le bœuf n’a pas été préparé en avance, prévoir une cuisson mijotée d’environ 2 heures et ne pas le considérer comme une recette d’assemblage express."
       ],
-      "robot": [
-        "Bœuf bourguignon"
-      ],
+      "robot": [],
       "notes": [
         "30 g de Comté",
         "ou St Môret",
@@ -11688,78 +11622,30 @@
       ],
       "sections": [
         {
-          "title": "⏱️ Préparation : 25 min",
+          "title": "🛒 Ingrédients",
           "lines": [
-            "🔥 Cuisson : 2 h (idéal cocotte)"
-          ]
-        },
-        {
-          "title": "❄️ Congélation : ✅",
-          "lines": [
-            "💪 Satiété : 💪 Très rassasiant",
-            "❤️ Plaisir : ❤️ Plat familial",
-            "🛒 Ingrédients (6 personnes)",
-            "1 kg de bœuf à mijoter",
-            "4 carottes",
-            "250 g de champignons",
-            "2 oignons",
-            "1 bouquet garni",
-            "Bouillon de bœuf",
-            "Vin rouge (facultatif selon préférence)"
-          ]
-        },
-        {
-          "title": "🧂 Épices & aromates",
-          "lines": [
-            "🌿 Thym",
-            "🌿 Laurier",
-            "🧄 Ail",
-            "⚫ Poivre",
-            "🌿 Persil frais"
+            "600 g de bœuf bourguignon déjà cuit et correctement conservé",
+            "600 g de pommes de terre vapeur déjà cuites",
+            "400 g de carottes ou légumes verts cuits",
+            "1 c. à soupe de persil frais",
+            "Poivre"
           ]
         },
         {
           "title": "👩‍🍳 Préparation",
           "lines": [
-            "1. Faire dorer la viande.",
-            "2. Ajouter les légumes.",
-            "3. Ajouter le bouillon et les aromates.",
-            "4. Laisser mijoter doucement."
-          ]
-        },
-        {
-          "title": "🍽️ Avec :",
-          "lines": [
-            "🥔 Pommes de terre vapeur",
-            "🥕 Légumes verts"
-          ]
-        },
-        {
-          "title": "🍞 🥖 Pain :",
-          "lines": [
-            "❌ Pas nécessaire avec pommes de terre"
-          ]
-        },
-        {
-          "title": "✅ Si envie après un repas léger :",
-          "lines": [
-            "30 g de Comté",
-            "ou St Môret"
-          ]
-        },
-        {
-          "title": "🔄 Variantes :",
-          "lines": [
-            "Remplacer les pommes de terre par des carottes supplémentaires",
-            "Ajouter des poireaux"
+            "1. Vérifier la date et la conservation du bœuf mijoté et des accompagnements; ne pas utiliser de reste douteux.",
+            "2. Réchauffer le bœuf dans une casserole à feu doux avec un peu de sauce, jusqu’à ce qu’il soit bien chaud à cœur.",
+            "3. Réchauffer les pommes de terre et les légumes séparément, à la vapeur ou au micro-ondes dans un récipient adapté.",
+            "4. Dresser les assiettes, napper de sauce et parsemer de persil. Si le bœuf n’a pas été préparé en avance, prévoir une cuisson mijotée d’environ 2 heures et ne pas le considérer comme une recette d’assemblage express."
           ]
         }
       ],
       "source": "200 RECETTE",
-      "timePrep": "25 min",
-      "timeCook": "2 h (idéal cocotte)",
-      "servings": null,
-      "blurb": "🏷️ Catégorie : 🇫🇷 Plat mijoté"
+      "timePrep": "10 min",
+      "timeCook": "15 min (réchauffage)",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-ce9fcc721e",
@@ -12422,24 +12308,25 @@
     },
     {
       "id": "r-4b1467579a",
-      "name": "🍝 RECETTE 177 — Ravioles gratinées courgettes & mozzarella",
+      "name": "Courgettes gratinées au chèvre",
       "ingredients": [
-        "4 plaques de ravioles du commerce",
-        "2 courgettes",
-        "1 boule de mozzarella",
-        "Sauce tomate",
-        "🌿 Basilic",
-        "🌿 Origan",
-        "🧄 Ail",
-        "⚫ Poivre"
+        "4 courgettes moyennes",
+        "1 oignon",
+        "200 g de chèvre frais",
+        "100 g de crème légère",
+        "40 g de parmesan râpé",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café d’herbes de Provence",
+        "Sel et poivre"
       ],
       "steps": [
-        "Faire revenir les courgettes.",
-        "Alterner ravioles, sauce tomate et mozzarella."
+        "Préchauffer le four à 200 °C. Laver les courgettes et les couper en rondelles d’environ 5 mm; émincer l’oignon.",
+        "Faire chauffer l’huile dans une poêle et faire revenir l’oignon et les courgettes 8 à 10 minutes pour leur faire perdre un peu d’eau.",
+        "Mélanger le chèvre frais et la crème dans un bol. Assaisonner avec les herbes, le sel et le poivre.",
+        "Répartir les courgettes dans un plat à gratin, napper du mélange au chèvre et parsemer de parmesan.",
+        "Enfourner 15 à 20 minutes, jusqu’à ce que le dessus soit doré et que les courgettes soient tendres."
       ],
-      "robot": [
-        "Gratin de courgettes"
-      ],
+      "robot": [],
       "notes": [
         "Ricotta",
         "Saumon-poireaux",
@@ -12447,66 +12334,34 @@
       ],
       "sections": [
         {
-          "title": "⏱️ Préparation : 10 min",
-          "lines": [
-            "🔥 Cuisson : 20 min",
-            "🍱 Repas express : ✅",
-            "💪 Satiété : 🍽️ Normal",
-            "❤️ Plaisir : 🍽️ Familial"
-          ]
-        },
-        {
           "title": "🛒 Ingrédients",
           "lines": [
-            "4 plaques de ravioles du commerce",
-            "2 courgettes",
-            "1 boule de mozzarella",
-            "Sauce tomate"
-          ]
-        },
-        {
-          "title": "🧂 Épices & aromates",
-          "lines": [
-            "🌿 Basilic",
-            "🌿 Origan",
-            "🧄 Ail",
-            "⚫ Poivre"
+            "4 courgettes moyennes",
+            "1 oignon",
+            "200 g de chèvre frais",
+            "100 g de crème légère",
+            "40 g de parmesan râpé",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à café d’herbes de Provence",
+            "Sel et poivre"
           ]
         },
         {
           "title": "👩‍🍳 Préparation",
           "lines": [
-            "1. Faire revenir les courgettes.",
-            "2. Alterner ravioles, sauce tomate et mozzarella.",
-            "3. Gratiner."
-          ]
-        },
-        {
-          "title": "🍞 🥖 Pain :",
-          "lines": [
-            "❌ Non"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "⚪ Déjà présent"
-          ]
-        },
-        {
-          "title": "🔄 Variantes :",
-          "lines": [
-            "Ricotta",
-            "Saumon-poireaux",
-            "Champignons"
+            "1. Préchauffer le four à 200 °C. Laver les courgettes et les couper en rondelles d’environ 5 mm; émincer l’oignon.",
+            "2. Faire chauffer l’huile dans une poêle et faire revenir l’oignon et les courgettes 8 à 10 minutes pour leur faire perdre un peu d’eau.",
+            "3. Mélanger le chèvre frais et la crème dans un bol. Assaisonner avec les herbes, le sel et le poivre.",
+            "4. Répartir les courgettes dans un plat à gratin, napper du mélange au chèvre et parsemer de parmesan.",
+            "5. Enfourner 15 à 20 minutes, jusqu’à ce que le dessus soit doré et que les courgettes soient tendres."
           ]
         }
       ],
       "source": "200 RECETTE",
-      "timePrep": "10 min",
-      "timeCook": "20 min",
-      "servings": null,
-      "blurb": "🏷️ Catégorie : 🇮🇹 Italie / Rapide"
+      "timePrep": "15 min",
+      "timeCook": "30 min",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-3366e1335d",
@@ -14830,25 +14685,25 @@
     },
     {
       "id": "r-b17bf4bbeb",
-      "name": "🍲 Velouté courgettes St Môret",
+      "name": "Velouté de courgettes au fromage frais",
       "ingredients": [
-        "courgettes",
-        "1 pomme de terre",
-        "oignon",
-        "bouillon",
-        "St Môret",
-        "curry doux",
-        "poivre",
-        "basilic"
+        "800 g de courgettes",
+        "1 pomme de terre moyenne (environ 180 g)",
+        "1 oignon",
+        "700 ml de bouillon de légumes",
+        "100 g de fromage frais type St Môret",
+        "1 c. à café de curry doux (facultatif)",
+        "Sel et poivre",
+        "Quelques feuilles de basilic"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Laver les courgettes, éplucher la pomme de terre et l’oignon, puis couper tous les légumes en dés d’environ 2 cm.",
+        "Mettre les légumes et le bouillon dans une grande casserole. Porter à frémissement puis couvrir et cuire 20 à 25 minutes, jusqu’à ce que les légumes soient tendres.",
+        "Mixer jusqu’à obtenir une texture lisse. Ajouter le fromage frais et le curry si souhaité, puis mixer de nouveau.",
+        "Goûter, saler et poivrer. Ajouter le basilic ciselé et servir chaud."
       ],
       "robot": [
-        "Velouté de courgettes"
+        "Monsieur Cuisine : mettre les légumes coupés et le bouillon dans le bol, cuire environ 20 à 25 min / 100 °C / vitesse 1. Attendre que la préparation ne soit plus bouillante, puis mixer progressivement 30 à 60 s / vitesse 5 à 8. Ajouter le fromage frais et mélanger 15 s / vitesse 3. Respecter la capacité maximale du bol et le manuel du modèle."
       ],
       "notes": [
         "chèvre frais",
@@ -14860,38 +14715,37 @@
         {
           "title": "🛒 Ingrédients",
           "lines": [
-            "courgettes",
-            "1 pomme de terre",
-            "oignon",
-            "bouillon",
-            "St Môret"
+            "800 g de courgettes",
+            "1 pomme de terre moyenne (environ 180 g)",
+            "1 oignon",
+            "700 ml de bouillon de légumes",
+            "100 g de fromage frais type St Môret",
+            "1 c. à café de curry doux (facultatif)",
+            "Sel et poivre",
+            "Quelques feuilles de basilic"
           ]
         },
         {
-          "title": "🌿 Épices :",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "curry doux",
-            "poivre",
-            "basilic"
+            "1. Laver les courgettes, éplucher la pomme de terre et l’oignon, puis couper tous les légumes en dés d’environ 2 cm.",
+            "2. Mettre les légumes et le bouillon dans une grande casserole. Porter à frémissement puis couvrir et cuire 20 à 25 minutes, jusqu’à ce que les légumes soient tendres.",
+            "3. Mixer jusqu’à obtenir une texture lisse. Ajouter le fromage frais et le curry si souhaité, puis mixer de nouveau.",
+            "4. Goûter, saler et poivrer. Ajouter le basilic ciselé et servir chaud."
           ]
         },
         {
-          "title": "🤖 Recherche robot :",
+          "title": "🤖 Monsieur Cuisine Smart",
           "lines": [
-            "\"Velouté de courgettes\""
-          ]
-        },
-        {
-          "title": "Remplacer St Môret par :",
-          "lines": [
-            "chèvre frais",
-            "ricotta",
-            "fromage blanc"
+            "Monsieur Cuisine : mettre les légumes coupés et le bouillon dans le bol, cuire environ 20 à 25 min / 100 °C / vitesse 1. Attendre que la préparation ne soit plus bouillante, puis mixer progressivement 30 à 60 s / vitesse 5 à 8. Ajouter le fromage frais et mélanger 15 s / vitesse 3. Respecter la capacité maximale du bol et le manuel du modèle."
           ]
         }
       ],
       "source": "BDD_MrCuisine",
-      "blurb": "⭐ Une de tes recettes parfaites été/hiver"
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives).",
+      "timePrep": "10 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes"
     },
     {
       "id": "r-7715637c6c",
@@ -15073,26 +14927,27 @@
     },
     {
       "id": "r-505f3338a3",
-      "name": "🍚 Risotto champignons parmesan",
+      "name": "Risotto aux champignons et parmesan",
       "ingredients": [
-        "riz arborio",
-        "champignons",
-        "parmesan",
-        "bouillon",
-        "oignon",
-        "poivre",
-        "persil"
+        "320 g de riz arborio",
+        "400 g de champignons de Paris",
+        "1 oignon",
+        "1,1 l de bouillon chaud",
+        "100 ml de vin blanc (facultatif)",
+        "60 g de parmesan râpé",
+        "1 c. à soupe d’huile d’olive",
+        "20 g de beurre",
+        "Poivre et persil frais"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Nettoyer les champignons et les couper en lamelles. Émincer l’oignon et garder le bouillon chaud.",
+        "Dans une sauteuse, faire revenir l’oignon dans l’huile et le beurre 2 minutes. Ajouter les champignons et cuire 5 minutes.",
+        "Ajouter le riz et remuer 1 à 2 minutes jusqu’à ce que les grains deviennent nacrés. Verser le vin blanc si utilisé et laisser évaporer.",
+        "Ajouter le bouillon chaud progressivement, une louche à la fois, en remuant souvent. Cuire environ 18 à 20 minutes, jusqu’à ce que le riz soit crémeux et tendre.",
+        "Hors du feu, incorporer le parmesan et le persil. Poivrer, goûter et servir immédiatement."
       ],
       "robot": [
-        "Risotto champignons",
-        "Risotto aux champignons",
-        "Risotto"
+        "Monsieur Cuisine : hacher l’oignon 5 s / vitesse 6, racler. Ajouter huile et faire revenir 3 min / 120 °C / vitesse 1. Ajouter riz, faire nacrer 2 min / 100 °C / vitesse 1 inversée si disponible. Ajouter les champignons et le bouillon chaud, cuire environ 18 à 20 min / 100 °C / vitesse 1 inversée; contrôler la cuisson et ajouter un peu de bouillon si nécessaire. Incorporer parmesan et persil en fin de cuisson."
       ],
       "notes": [
         "🐟 saumon",
@@ -15104,37 +14959,39 @@
         {
           "title": "🛒 Ingrédients",
           "lines": [
-            "riz arborio",
-            "champignons",
-            "parmesan",
-            "bouillon",
-            "oignon"
+            "320 g de riz arborio",
+            "400 g de champignons de Paris",
+            "1 oignon",
+            "1,1 l de bouillon chaud",
+            "100 ml de vin blanc (facultatif)",
+            "60 g de parmesan râpé",
+            "1 c. à soupe d’huile d’olive",
+            "20 g de beurre",
+            "Poivre et persil frais"
           ]
         },
         {
-          "title": "🌿 Épices :",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "poivre",
-            "persil"
+            "1. Nettoyer les champignons et les couper en lamelles. Émincer l’oignon et garder le bouillon chaud.",
+            "2. Dans une sauteuse, faire revenir l’oignon dans l’huile et le beurre 2 minutes. Ajouter les champignons et cuire 5 minutes.",
+            "3. Ajouter le riz et remuer 1 à 2 minutes jusqu’à ce que les grains deviennent nacrés. Verser le vin blanc si utilisé et laisser évaporer.",
+            "4. Ajouter le bouillon chaud progressivement, une louche à la fois, en remuant souvent. Cuire environ 18 à 20 minutes, jusqu’à ce que le riz soit crémeux et tendre.",
+            "5. Hors du feu, incorporer le parmesan et le persil. Poivrer, goûter et servir immédiatement."
           ]
         },
         {
-          "title": "🤖 Recherche :",
+          "title": "🤖 Monsieur Cuisine Smart",
           "lines": [
-            "\"Risotto champignons\""
-          ]
-        },
-        {
-          "title": "🔄 Variantes :",
-          "lines": [
-            "🐟 saumon",
-            "🍗 poulet",
-            "🥒 courgettes"
+            "Monsieur Cuisine : hacher l’oignon 5 s / vitesse 6, racler. Ajouter huile et faire revenir 3 min / 120 °C / vitesse 1. Ajouter riz, faire nacrer 2 min / 100 °C / vitesse 1 inversée si disponible. Ajouter les champignons et le bouillon chaud, cuire environ 18 à 20 min / 100 °C / vitesse 1 inversée; contrôler la cuisson et ajouter un peu de bouillon si nécessaire. Incorporer parmesan et persil en fin de cuisson."
           ]
         }
       ],
       "source": "BDD_MrCuisine",
-      "blurb": "(Je garde ton amour du risotto ❤️)"
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives).",
+      "timePrep": "10 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes"
     },
     {
       "id": "r-9b996df25a",
@@ -16379,24 +16236,28 @@
     },
     {
       "id": "r-7ac321af8c",
-      "name": "🐟 Cabillaud sauce tomate méditerranéenne",
+      "name": "Cabillaud à la sauce tomate provençale",
       "ingredients": [
-        "cabillaud",
-        "tomates",
-        "courgettes",
-        "olives (facultatif)",
-        "basilic",
-        "ail",
-        "origan"
+        "4 dos de cabillaud (environ 600 g)",
+        "400 g de tomates concassées",
+        "1 courgette",
+        "1 oignon",
+        "2 gousses d’ail",
+        "1 c. à soupe d’huile d’olive",
+        "40 g d’olives noires dénoyautées (facultatif)",
+        "1 c. à café d’origan",
+        "Quelques feuilles de basilic",
+        "Sel et poivre"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Émincer l’oignon, hacher l’ail et couper la courgette en petits dés.",
+        "Faire chauffer l’huile dans une sauteuse. Faire revenir l’oignon et la courgette 5 minutes, en remuant.",
+        "Ajouter l’ail, les tomates concassées, l’origan, le sel et le poivre. Laisser mijoter à couvert 10 minutes.",
+        "Déposer le cabillaud dans la sauce. Couvrir et cuire doucement 8 à 10 minutes selon l’épaisseur, jusqu’à ce que le poisson se détache facilement et soit opaque à cœur.",
+        "Ajouter les olives et le basilic ciselé. Servir immédiatement, idéalement avec du riz ou des pommes de terre vapeur."
       ],
       "robot": [
-        "Poisson sauce tomate"
+        "La sauce peut être préparée au Monsieur Cuisine : hacher l’oignon et l’ail 5 s / vitesse 6, racler, ajouter huile et courgette 5 min / 120 °C / vitesse 1, puis tomates et aromates 10 min / 100 °C / vitesse 1. Cuire le cabillaud séparément à la vapeur ou à la poêle et vérifier sa cuisson."
       ],
       "notes": [
         "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
@@ -16405,28 +16266,40 @@
         {
           "title": "🛒 Ingrédients",
           "lines": [
-            "cabillaud",
-            "tomates",
-            "courgettes",
-            "olives (facultatif)"
+            "4 dos de cabillaud (environ 600 g)",
+            "400 g de tomates concassées",
+            "1 courgette",
+            "1 oignon",
+            "2 gousses d’ail",
+            "1 c. à soupe d’huile d’olive",
+            "40 g d’olives noires dénoyautées (facultatif)",
+            "1 c. à café d’origan",
+            "Quelques feuilles de basilic",
+            "Sel et poivre"
           ]
         },
         {
-          "title": "🌿 Épices :",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "basilic",
-            "ail",
-            "origan"
+            "1. Émincer l’oignon, hacher l’ail et couper la courgette en petits dés.",
+            "2. Faire chauffer l’huile dans une sauteuse. Faire revenir l’oignon et la courgette 5 minutes, en remuant.",
+            "3. Ajouter l’ail, les tomates concassées, l’origan, le sel et le poivre. Laisser mijoter à couvert 10 minutes.",
+            "4. Déposer le cabillaud dans la sauce. Couvrir et cuire doucement 8 à 10 minutes selon l’épaisseur, jusqu’à ce que le poisson se détache facilement et soit opaque à cœur.",
+            "5. Ajouter les olives et le basilic ciselé. Servir immédiatement, idéalement avec du riz ou des pommes de terre vapeur."
           ]
         },
         {
-          "title": "🤖 Recherche :",
+          "title": "🤖 Monsieur Cuisine Smart",
           "lines": [
-            "\"Poisson sauce tomate\""
+            "La sauce peut être préparée au Monsieur Cuisine : hacher l’oignon et l’ail 5 s / vitesse 6, racler, ajouter huile et courgette 5 min / 120 °C / vitesse 1, puis tomates et aromates 10 min / 100 °C / vitesse 1. Cuire le cabillaud séparément à la vapeur ou à la poêle et vérifier sa cuisson."
           ]
         }
       ],
-      "source": "BDD_MrCuisine"
+      "source": "BDD_MrCuisine",
+      "timePrep": "10 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-cac89622a2",
@@ -16734,24 +16607,26 @@
     },
     {
       "id": "r-089cee7987",
-      "name": "🥕 Velouté carottes coco curry",
+      "name": "Velouté de carottes, lait de coco et curry",
       "ingredients": [
-        "carottes",
-        "lait de coco",
-        "oignon",
-        "bouillon",
-        "curry",
-        "curcuma",
-        "gingembre"
+        "800 g de carottes",
+        "1 oignon",
+        "700 ml de bouillon de légumes",
+        "200 ml de lait de coco",
+        "1 c. à café de curry doux",
+        "1/2 c. à café de curcuma",
+        "1 petit morceau de gingembre (facultatif)",
+        "Sel et poivre"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Éplucher les carottes et les couper en rondelles. Émincer l’oignon et râper finement le gingembre si utilisé.",
+        "Mettre les carottes, l’oignon, le bouillon, le curry et le curcuma dans une casserole. Porter à ébullition puis cuire à couvert 25 minutes.",
+        "Vérifier que les carottes sont tendres, puis mixer soigneusement.",
+        "Ajouter le lait de coco, réchauffer 2 minutes sans faire bouillir fortement, puis saler et poivrer.",
+        "Servir chaud avec une tartine complète si souhaité."
       ],
       "robot": [
-        "Velouté de carottes"
+        "Monsieur Cuisine : hacher l’oignon 5 s / vitesse 6 et racler. Ajouter carottes, bouillon et épices; cuire 25 min / 100 °C / vitesse 1. Mixer progressivement 30 à 60 s / vitesse 5 à 8. Ajouter le lait de coco et mélanger 20 s / vitesse 3. Vérifier la capacité du bol et le manuel."
       ],
       "notes": [
         "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
@@ -16760,28 +16635,38 @@
         {
           "title": "🛒 Ingrédients",
           "lines": [
-            "carottes",
-            "lait de coco",
-            "oignon",
-            "bouillon"
+            "800 g de carottes",
+            "1 oignon",
+            "700 ml de bouillon de légumes",
+            "200 ml de lait de coco",
+            "1 c. à café de curry doux",
+            "1/2 c. à café de curcuma",
+            "1 petit morceau de gingembre (facultatif)",
+            "Sel et poivre"
           ]
         },
         {
-          "title": "🌿 Épices :",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "curry",
-            "curcuma",
-            "gingembre"
+            "1. Éplucher les carottes et les couper en rondelles. Émincer l’oignon et râper finement le gingembre si utilisé.",
+            "2. Mettre les carottes, l’oignon, le bouillon, le curry et le curcuma dans une casserole. Porter à ébullition puis cuire à couvert 25 minutes.",
+            "3. Vérifier que les carottes sont tendres, puis mixer soigneusement.",
+            "4. Ajouter le lait de coco, réchauffer 2 minutes sans faire bouillir fortement, puis saler et poivrer.",
+            "5. Servir chaud avec une tartine complète si souhaité."
           ]
         },
         {
-          "title": "🤖 Recherche :",
+          "title": "🤖 Monsieur Cuisine Smart",
           "lines": [
-            "\"Velouté de carottes\""
+            "Monsieur Cuisine : hacher l’oignon 5 s / vitesse 6 et racler. Ajouter carottes, bouillon et épices; cuire 25 min / 100 °C / vitesse 1. Mixer progressivement 30 à 60 s / vitesse 5 à 8. Ajouter le lait de coco et mélanger 20 s / vitesse 3. Vérifier la capacité du bol et le manuel."
           ]
         }
       ],
-      "source": "BDD_MrCuisine"
+      "source": "BDD_MrCuisine",
+      "timePrep": "10 min",
+      "timeCook": "30 min",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-2ca8d6a24c",
@@ -18841,41 +18726,29 @@
     },
     {
       "id": "r-2d1e6933e4",
-      "name": "🇫🇷 Poulet Paprika Méditerranéen",
+      "name": "Poulet paprika, courgettes rôties et riz basmati",
       "ingredients": [
-        "2 blancs de poulet (environ 300 g)",
-        "2 courgettes (environ 500 g)",
-        "1 oignon",
-        "2 gousses d'ail",
-        "Riz basmati cru : 120 g",
-        "(60 g par personne)",
-        "Le repas contient déjà du riz.",
-        "2 c. à café paprika fumé",
-        "1 c. à café paprika doux",
-        "1 c. à café herbes de Provence",
-        "ail",
-        "poivre",
-        "sel",
-        "1 c. à soupe d'huile d'olive",
-        "100 g fromage blanc 0–3 %",
-        "1 c. à café moutarde",
-        "jus d'un demi-citron",
-        "paprika fumé",
-        "ciboulette",
-        "Mélanger le tout.",
-        "Servir froid."
+        "600 g de blancs de poulet",
+        "4 courgettes moyennes (environ 1 kg)",
+        "2 oignons",
+        "2 gousses d’ail",
+        "240 g de riz basmati cru",
+        "2 c. à soupe d’huile d’olive",
+        "2 c. à café de paprika fumé",
+        "1 c. à café de paprika doux",
+        "2 c. à café d’herbes de Provence",
+        "Sel et poivre"
       ],
       "steps": [
-        "Couper les courgettes en morceaux.",
-        "Émincer l'oignon.",
-        "Faire revenir le poulet dans l'huile d'olive.",
-        "Ajouter les épices.",
-        "Ajouter les courgettes.",
-        "Cuire environ 15 minutes.",
-        "cuire le riz."
+        "Préchauffer le four à 200 °C. Laver les courgettes et les couper en demi-rondelles; émincer les oignons et hacher l’ail.",
+        "Déposer les courgettes et les oignons sur une plaque. Ajouter 1 c. à soupe d’huile, la moitié du paprika, les herbes, du sel et du poivre. Mélanger et enfourner 25 à 30 minutes en remuant à mi-cuisson.",
+        "Pendant ce temps, rincer le riz. Le cuire dans une casserole d’eau bouillante salée selon le temps indiqué sur le paquet, généralement 10 à 12 minutes, puis égoutter.",
+        "Couper le poulet en morceaux. Dans une grande poêle, chauffer le reste d’huile et faire dorer le poulet 3 à 4 minutes.",
+        "Ajouter l’ail, le paprika restant, saler et poivrer. Poursuivre la cuisson 6 à 8 minutes, jusqu’à ce que le poulet soit cuit à cœur.",
+        "Servir le poulet avec les courgettes rôties et le riz. Vérifier que la volaille est bien cuite avant de servir."
       ],
       "robot": [
-        "Cuisson du riz"
+        "Riz : suivre le programme de cuisson du riz de votre Monsieur Cuisine et les quantités d’eau indiquées dans le manuel. Pour le poulet, utiliser une poêle afin de conserver une belle coloration; ne pas supposer un programme automatique non vérifié."
       ],
       "notes": [
         "riz complet",
@@ -18913,169 +18786,43 @@
       ],
       "sections": [
         {
-          "title": "🥩 Viande",
-          "lines": [
-            "2 blancs de poulet (environ 300 g)"
-          ]
-        },
-        {
-          "title": "🥒 Légumes",
-          "lines": [
-            "2 courgettes (environ 500 g)",
-            "1 oignon",
-            "2 gousses d'ail"
-          ]
-        },
-        {
-          "title": "🍚 Féculent",
-          "lines": [
-            "Riz basmati cru : 120 g",
-            "(60 g par personne)"
-          ]
-        },
-        {
-          "title": "➡️ Remplacement :",
-          "lines": [
-            "riz complet",
-            "pommes de terre vapeur (250 g/personne)"
-          ]
-        },
-        {
-          "title": "🧀 Fromage",
-          "lines": [
-            "❌ Aucun fromage dans cette recette."
-          ]
-        },
-        {
-          "title": "💡 Tu peux ajouter :",
-          "lines": [
-            "✅ 30 g de chèvre frais",
-            "OU",
-            "✅ 20 g de feta",
-            "si tu souhaites un repas plus gourmand."
-          ]
-        },
-        {
-          "title": "🍞 Pain",
-          "lines": [
-            "❌ Pas de pain.",
-            "Le repas contient déjà du riz."
-          ]
-        },
-        {
-          "title": "🌿 Épices",
-          "lines": [
-            "2 c. à café paprika fumé",
-            "1 c. à café paprika doux",
-            "1 c. à café herbes de Provence",
-            "ail",
-            "poivre",
-            "sel",
-            "1 c. à soupe d'huile d'olive"
-          ]
-        },
-        {
           "title": "🛒 Ingrédients",
           "lines": [
-            "100 g fromage blanc 0–3 %",
-            "1 c. à café moutarde",
-            "jus d'un demi-citron",
-            "paprika fumé",
-            "ciboulette",
-            "Mélanger le tout.",
-            "Servir froid."
+            "600 g de blancs de poulet",
+            "4 courgettes moyennes (environ 1 kg)",
+            "2 oignons",
+            "2 gousses d’ail",
+            "240 g de riz basmati cru",
+            "2 c. à soupe d’huile d’olive",
+            "2 c. à café de paprika fumé",
+            "1 c. à café de paprika doux",
+            "2 c. à café d’herbes de Provence",
+            "Sel et poivre"
           ]
         },
         {
           "title": "👩‍🍳 Préparation",
           "lines": [
-            "Étape 1",
-            "Couper les courgettes en morceaux.",
-            "Émincer l'oignon.",
-            "Étape 2",
-            "Faire revenir le poulet dans l'huile d'olive.",
-            "Ajouter les épices.",
-            "Étape 3",
-            "Ajouter les courgettes.",
-            "Cuire environ 15 minutes.",
-            "Étape 4",
-            "Pendant ce temps,",
-            "cuire le riz."
+            "1. Préchauffer le four à 200 °C. Laver les courgettes et les couper en demi-rondelles; émincer les oignons et hacher l’ail.",
+            "2. Déposer les courgettes et les oignons sur une plaque. Ajouter 1 c. à soupe d’huile, la moitié du paprika, les herbes, du sel et du poivre. Mélanger et enfourner 25 à 30 minutes en remuant à mi-cuisson.",
+            "3. Pendant ce temps, rincer le riz. Le cuire dans une casserole d’eau bouillante salée selon le temps indiqué sur le paquet, généralement 10 à 12 minutes, puis égoutter.",
+            "4. Couper le poulet en morceaux. Dans une grande poêle, chauffer le reste d’huile et faire dorer le poulet 3 à 4 minutes.",
+            "5. Ajouter l’ail, le paprika restant, saler et poivrer. Poursuivre la cuisson 6 à 8 minutes, jusqu’à ce que le poulet soit cuit à cœur.",
+            "6. Servir le poulet avec les courgettes rôties et le riz. Vérifier que la volaille est bien cuite avant de servir."
           ]
         },
         {
-          "title": "🤖 MR CUISINE Smart",
-          "lines": []
-        },
-        {
-          "title": "Programme :",
+          "title": "🤖 Monsieur Cuisine Smart",
           "lines": [
-            "Cuisson du riz",
-            "Étape 5"
-          ]
-        },
-        {
-          "title": "Servir :",
-          "lines": [
-            "🍗 poulet",
-            "🥒 courgettes",
-            "🍚 riz"
-          ]
-        },
-        {
-          "title": "🤖 Version MR CUISINE Smart",
-          "lines": [
-            "✔ Cuisson du riz",
-            "✔ Possibilité de cuire les courgettes à la vapeur puis de les faire revenir rapidement avec les épices."
-          ]
-        },
-        {
-          "title": "🍱 BATCH Cooking",
-          "lines": [
-            "Peut être préparé 2 à 3 jours à l'avance.",
-            "À conserver dans une boîte hermétique.",
-            "Se réchauffe très bien."
-          ]
-        },
-        {
-          "title": "❄️ Congélation",
-          "lines": [
-            "✅ Oui",
-            "Le poulet et les courgettes se congèlent très bien.",
-            "La sauce est à préparer le jour du repas."
-          ]
-        },
-        {
-          "title": "🔄 Remplacements",
-          "lines": [
-            "Si je n'ai pas...",
-            "Poulet",
-            "Courgettes",
-            "Riz",
-            "Fromage blanc",
-            "Paprika fumé",
-            "🥗 Accompagnements possibles",
-            "✅ Salade verte",
-            "✅ Concombre",
-            "✅ Tomates"
-          ]
-        },
-        {
-          "title": "🍎 Dessert conseillé",
-          "lines": [
-            "Compote sans sucre ajouté",
-            "ou",
-            "Yaourt chèvre",
-            "ou",
-            "Quelques fruits rouges"
+            "Riz : suivre le programme de cuisson du riz de votre Monsieur Cuisine et les quantités d’eau indiquées dans le manuel. Pour le poulet, utiliser une poêle afin de conserver une belle coloration; ne pas supposer un programme automatique non vérifié."
           ]
         }
       ],
       "source": "200 RECETTE",
-      "blurb": "🍽️ Difficulté : ⭐ Temps de préparation : 15 min",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives).",
       "timePrep": "15 min",
-      "timeCook": "25 min",
-      "servings": "2 personnes"
+      "timeCook": "30 min",
+      "servings": "4 personnes"
     },
     {
       "id": "r-6a536a8796",
@@ -23883,26 +23630,28 @@
     },
     {
       "id": "r-08eeb4212a",
-      "name": "🍳 Omelette complète courgettes, tomates & chèvre",
+      "name": "Omelette aux courgettes, tomates cerises et chèvre",
       "ingredients": [
-        "œufs : 6",
-        "courgettes : 2",
-        "tomates cerises",
-        "oignon",
-        "salade verte",
-        "paprika doux : 1 c. à café",
-        "herbes de Provence : 1 c. à café",
-        "poivre",
-        "➡️ chèvre frais 30 g/personne"
+        "8 œufs",
+        "2 courgettes moyennes",
+        "200 g de tomates cerises",
+        "1 oignon",
+        "120 g de chèvre frais",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café de paprika doux",
+        "1 c. à café d’herbes de Provence",
+        "Sel et poivre",
+        "1 salade verte pour accompagner"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Laver les courgettes et les tomates. Couper les courgettes en petits dés, les tomates en deux et émincer l’oignon.",
+        "Faire chauffer l’huile dans une grande poêle. Faire revenir l’oignon et les courgettes 7 à 8 minutes jusqu’à ce qu’ils soient tendres.",
+        "Ajouter les tomates et cuire 2 minutes. Battre les œufs avec le paprika, les herbes, le sel et le poivre.",
+        "Verser les œufs dans la poêle. Cuire à feu doux 5 à 7 minutes; répartir le chèvre émietté, couvrir et poursuivre jusqu’à ce que les œufs soient pris.",
+        "Servir chaud avec la salade lavée et essorée."
       ],
       "robot": [
-        "Découpe légumes"
+        "Utiliser le Monsieur Cuisine pour émincer l’oignon et les courgettes uniquement si le résultat en petits morceaux convient; cuire l’omelette à la poêle pour maîtriser sa texture."
       ],
       "notes": [
         "fromage blanc",
@@ -23913,52 +23662,42 @@
       ],
       "sections": [
         {
-          "title": "🛒 Ingrédients :",
+          "title": "🛒 Ingrédients",
           "lines": [
-            "œufs : 6",
-            "courgettes : 2",
-            "tomates cerises",
-            "oignon",
-            "salade verte"
+            "8 œufs",
+            "2 courgettes moyennes",
+            "200 g de tomates cerises",
+            "1 oignon",
+            "120 g de chèvre frais",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à café de paprika doux",
+            "1 c. à café d’herbes de Provence",
+            "Sel et poivre",
+            "1 salade verte pour accompagner"
           ]
         },
         {
-          "title": "🥣 Accompagnement frais :",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "fromage blanc",
-            "ciboulette",
-            "citron"
+            "1. Laver les courgettes et les tomates. Couper les courgettes en petits dés, les tomates en deux et émincer l’oignon.",
+            "2. Faire chauffer l’huile dans une grande poêle. Faire revenir l’oignon et les courgettes 7 à 8 minutes jusqu’à ce qu’ils soient tendres.",
+            "3. Ajouter les tomates et cuire 2 minutes. Battre les œufs avec le paprika, les herbes, le sel et le poivre.",
+            "4. Verser les œufs dans la poêle. Cuire à feu doux 5 à 7 minutes; répartir le chèvre émietté, couvrir et poursuivre jusqu’à ce que les œufs soient pris.",
+            "5. Servir chaud avec la salade lavée et essorée."
           ]
         },
         {
-          "title": "🌿 Épices :",
+          "title": "🤖 Monsieur Cuisine Smart",
           "lines": [
-            "paprika doux : 1 c. à café",
-            "herbes de Provence : 1 c. à café",
-            "poivre"
-          ]
-        },
-        {
-          "title": "🤖 MR CUISINE Smart :",
-          "lines": [
-            "✅ Découpe légumes"
-          ]
-        },
-        {
-          "title": "✅ Oui possible :",
-          "lines": [
-            "➡️ 1 tranche complète/personne"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "➡️ chèvre frais 30 g/personne"
+            "Utiliser le Monsieur Cuisine pour émincer l’oignon et les courgettes uniquement si le résultat en petits morceaux convient; cuire l’omelette à la poêle pour maîtriser sa texture."
           ]
         }
       ],
       "source": "Express",
-      "blurb": "Un repas rapide et protéiné ❤️"
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives).",
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "4 personnes"
     },
     {
       "id": "r-87a5bd22ce",
@@ -28329,21 +28068,23 @@
     },
     {
       "id": "r-a373d67eb6",
-      "name": "🥩 Steak haché façon bistrot",
+      "name": "Steak haché façon bistrot, haricots verts et champignons",
       "ingredients": [
-        "steak haché",
-        "haricots verts",
-        "champignons à la crème légère",
-        "poivre",
-        "persil",
-        "ail",
-        "30 g après repas possible ❤️"
+        "4 steaks hachés (environ 125 g chacun)",
+        "600 g de haricots verts frais ou surgelés",
+        "300 g de champignons de Paris",
+        "150 ml de crème légère",
+        "1 gousse d’ail",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à soupe de persil haché",
+        "Sel et poivre"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Si les haricots sont frais, équeuter et rincer. Les cuire 10 à 12 minutes à l’eau bouillante salée ou jusqu’à la tendreté souhaitée, puis égoutter.",
+        "Nettoyer les champignons et les couper en lamelles. Hacher l’ail.",
+        "Faire chauffer l’huile dans une poêle. Faire revenir les champignons 5 à 7 minutes jusqu’à évaporation de leur eau; ajouter l’ail puis la crème et laisser réduire 2 minutes.",
+        "Dans une autre poêle chaude, cuire les steaks selon l’épaisseur et la cuisson désirée; retourner une fois. Pour une cuisson sûre, suivre les recommandations de cuisson des viandes hachées.",
+        "Réchauffer les haricots si nécessaire, parsemer de persil et servir avec les steaks et les champignons à la crème."
       ],
       "robot": [],
       "notes": [
@@ -28351,54 +28092,56 @@
       ],
       "sections": [
         {
-          "title": "⏱️ 15 minutes",
-          "lines": []
-        },
-        {
-          "title": "Avec :",
+          "title": "🛒 Ingrédients",
           "lines": [
-            "steak haché",
-            "haricots verts",
-            "champignons à la crème légère"
+            "4 steaks hachés (environ 125 g chacun)",
+            "600 g de haricots verts frais ou surgelés",
+            "300 g de champignons de Paris",
+            "150 ml de crème légère",
+            "1 gousse d’ail",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à soupe de persil haché",
+            "Sel et poivre"
           ]
         },
         {
-          "title": "🌿 Épices :",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "poivre",
-            "persil",
-            "ail"
-          ]
-        },
-        {
-          "title": "🧀 Fromage :",
-          "lines": [
-            "30 g après repas possible ❤️"
+            "1. Si les haricots sont frais, équeuter et rincer. Les cuire 10 à 12 minutes à l’eau bouillante salée ou jusqu’à la tendreté souhaitée, puis égoutter.",
+            "2. Nettoyer les champignons et les couper en lamelles. Hacher l’ail.",
+            "3. Faire chauffer l’huile dans une poêle. Faire revenir les champignons 5 à 7 minutes jusqu’à évaporation de leur eau; ajouter l’ail puis la crème et laisser réduire 2 minutes.",
+            "4. Dans une autre poêle chaude, cuire les steaks selon l’épaisseur et la cuisson désirée; retourner une fois. Pour une cuisson sûre, suivre les recommandations de cuisson des viandes hachées.",
+            "5. Réchauffer les haricots si nécessaire, parsemer de persil et servir avec les steaks et les champignons à la crème."
           ]
         }
       ],
-      "source": "JE SUIS FATIGUEE"
+      "source": "JE SUIS FATIGUEE",
+      "timePrep": "10 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-63e8770e3f",
-      "name": "🥗 Grande salade repas \"je n’ai rien envie de faire\"",
+      "name": "Grande salade repas, sauce yaourt-moutarde",
       "ingredients": [
-        "salade verte",
-        "tomates",
-        "œufs",
-        "thon",
-        "mozzarella",
-        "quelques noix",
-        "moutarde",
-        "citron",
-        "huile d’olive",
-        "1 tranche complet"
+        "1 grande salade verte",
+        "3 tomates",
+        "4 œufs",
+        "1 boîte de thon au naturel (environ 140 g égoutté)",
+        "125 g de mozzarella",
+        "30 g de noix",
+        "1 c. à soupe de moutarde",
+        "1 citron",
+        "3 c. à soupe d’huile d’olive",
+        "4 tranches de pain complet",
+        "Sel et poivre"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Cuire les œufs 9 à 10 minutes dans l’eau frémissante. Les refroidir sous l’eau froide, les écaler et les couper en quartiers.",
+        "Laver et essorer la salade. Couper les tomates et la mozzarella en morceaux; égoutter le thon.",
+        "Dans un bol, mélanger la moutarde, 1 à 2 c. à soupe de jus de citron, l’huile d’olive, le sel et le poivre. Ajouter une cuillère d’eau si la sauce est trop épaisse.",
+        "Répartir salade, tomates, thon, mozzarella, œufs et noix dans quatre assiettes. Napper de sauce et servir avec le pain complet."
       ],
       "robot": [],
       "notes": [
@@ -28406,32 +28149,36 @@
       ],
       "sections": [
         {
-          "title": "Dans le saladier :",
+          "title": "🛒 Ingrédients",
           "lines": [
-            "salade verte",
-            "tomates",
-            "œufs",
-            "thon",
-            "mozzarella",
-            "quelques noix"
+            "1 grande salade verte",
+            "3 tomates",
+            "4 œufs",
+            "1 boîte de thon au naturel (environ 140 g égoutté)",
+            "125 g de mozzarella",
+            "30 g de noix",
+            "1 c. à soupe de moutarde",
+            "1 citron",
+            "3 c. à soupe d’huile d’olive",
+            "4 tranches de pain complet",
+            "Sel et poivre"
           ]
         },
         {
-          "title": "🥣 🌿 Sauce :",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "moutarde",
-            "citron",
-            "huile d’olive"
-          ]
-        },
-        {
-          "title": "🍞 🥖 Pain :",
-          "lines": [
-            "✅ 1 tranche complet"
+            "1. Cuire les œufs 9 à 10 minutes dans l’eau frémissante. Les refroidir sous l’eau froide, les écaler et les couper en quartiers.",
+            "2. Laver et essorer la salade. Couper les tomates et la mozzarella en morceaux; égoutter le thon.",
+            "3. Dans un bol, mélanger la moutarde, 1 à 2 c. à soupe de jus de citron, l’huile d’olive, le sel et le poivre. Ajouter une cuillère d’eau si la sauce est trop épaisse.",
+            "4. Répartir salade, tomates, thon, mozzarella, œufs et noix dans quatre assiettes. Napper de sauce et servir avec le pain complet."
           ]
         }
       ],
-      "source": "JE SUIS FATIGUEE"
+      "source": "JE SUIS FATIGUEE",
+      "timePrep": "15 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-f39050adb8",
@@ -37357,21 +37104,27 @@
     },
     {
       "id": "r-03088ad201",
-      "name": "🍝 Bolognaise maison",
+      "name": "Bolognaise maison aux légumes",
       "ingredients": [
-        "bœuf haché",
-        "tomates",
-        "carottes",
-        "oignons"
+        "500 g de bœuf haché",
+        "800 g de tomates concassées",
+        "2 carottes",
+        "2 oignons",
+        "2 gousses d’ail",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café d’origan",
+        "Sel et poivre",
+        "400 g de pâtes sèches pour servir"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Éplucher et couper les carottes en petits dés. Émincer les oignons et hacher l’ail.",
+        "Faire chauffer l’huile dans une grande sauteuse. Faire revenir les oignons et les carottes 5 à 6 minutes.",
+        "Ajouter le bœuf haché et le faire dorer 5 minutes en l’émiettant à la spatule.",
+        "Ajouter l’ail, les tomates, l’origan, le sel et le poivre. Couvrir partiellement et laisser mijoter 25 à 30 minutes en remuant de temps en temps.",
+        "Cuire les pâtes dans une casserole d’eau bouillante salée selon le temps du paquet. Égoutter et servir avec la sauce."
       ],
       "robot": [
-        "Sauce bolognaise"
+        "Monsieur Cuisine : hacher les légumes 5 s / vitesse 5 et racler les parois. Ajouter huile et légumes, faire revenir 5 min / 120 °C / vitesse 1. Ajouter la viande et cuire 5 min / 120 °C / vitesse inversée si disponible, puis tomates et aromates; mijoter 25 min / 100 °C / vitesse inversée douce. Vérifier la cuisson de la viande et ne pas dépasser la capacité du bol."
       ],
       "notes": [
         "Faire double quantité → congeler une portion.",
@@ -37379,41 +37132,92 @@
       ],
       "sections": [
         {
-          "title": "🤖 MR CUISINE :",
+          "title": "🛒 Ingrédients",
           "lines": [
-            "\"Sauce bolognaise\""
+            "500 g de bœuf haché",
+            "800 g de tomates concassées",
+            "2 carottes",
+            "2 oignons",
+            "2 gousses d’ail",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à café d’origan",
+            "Sel et poivre",
+            "400 g de pâtes sèches pour servir"
           ]
         },
         {
-          "title": "💡 Astuce :",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "Faire double quantité → congeler une portion."
+            "1. Éplucher et couper les carottes en petits dés. Émincer les oignons et hacher l’ail.",
+            "2. Faire chauffer l’huile dans une grande sauteuse. Faire revenir les oignons et les carottes 5 à 6 minutes.",
+            "3. Ajouter le bœuf haché et le faire dorer 5 minutes en l’émiettant à la spatule.",
+            "4. Ajouter l’ail, les tomates, l’origan, le sel et le poivre. Couvrir partiellement et laisser mijoter 25 à 30 minutes en remuant de temps en temps.",
+            "5. Cuire les pâtes dans une casserole d’eau bouillante salée selon le temps du paquet. Égoutter et servir avec la sauce."
+          ]
+        },
+        {
+          "title": "🤖 Monsieur Cuisine Smart",
+          "lines": [
+            "Monsieur Cuisine : hacher les légumes 5 s / vitesse 5 et racler les parois. Ajouter huile et légumes, faire revenir 5 min / 120 °C / vitesse 1. Ajouter la viande et cuire 5 min / 120 °C / vitesse inversée si disponible, puis tomates et aromates; mijoter 25 min / 100 °C / vitesse inversée douce. Vérifier la cuisson de la viande et ne pas dépasser la capacité du bol."
           ]
         }
       ],
       "source": "52 MENUS",
-      "blurb": "pâtes"
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives).",
+      "timePrep": "15 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes"
     },
     {
       "id": "r-43e1f116de",
-      "name": "🥗 Restes + crudités",
+      "name": "Assiette de restes et crudités",
       "ingredients": [
-        "salade",
-        "tomates",
-        "œuf dur"
+        "250 g de restes de légumes cuits ou crus disponibles",
+        "2 œufs",
+        "2 tomates",
+        "1 poignée de salade verte",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café de vinaigre ou de jus de citron",
+        "Sel et poivre"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Vérifier que les restes ont été refroidis et conservés correctement; ne pas utiliser un aliment dont la conservation est douteuse.",
+        "Si les œufs ne sont pas déjà cuits, les cuire 9 à 10 minutes dans l’eau frémissante, puis les refroidir et les écaler.",
+        "Laver la salade et les tomates. Couper les tomates et préparer les restes en portions faciles à manger.",
+        "Mélanger l’huile, le vinaigre ou le citron, le sel et le poivre. Composer les assiettes avec les légumes, les œufs et les restes disponibles."
       ],
       "robot": [],
       "notes": [
         "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
       ],
-      "sections": [],
-      "source": "52 MENUS"
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "250 g de restes de légumes cuits ou crus disponibles",
+            "2 œufs",
+            "2 tomates",
+            "1 poignée de salade verte",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à café de vinaigre ou de jus de citron",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Vérifier que les restes ont été refroidis et conservés correctement; ne pas utiliser un aliment dont la conservation est douteuse.",
+            "2. Si les œufs ne sont pas déjà cuits, les cuire 9 à 10 minutes dans l’eau frémissante, puis les refroidir et les écaler.",
+            "3. Laver la salade et les tomates. Couper les tomates et préparer les restes en portions faciles à manger.",
+            "4. Mélanger l’huile, le vinaigre ou le citron, le sel et le poivre. Composer les assiettes avec les légumes, les œufs et les restes disponibles."
+          ]
+        }
+      ],
+      "source": "52 MENUS",
+      "timePrep": "10 min",
+      "timeCook": "10 min",
+      "servings": "2 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-dc1f699ff9",
@@ -37448,19 +37252,23 @@
     },
     {
       "id": "r-878168efa1",
-      "name": "🥚 Salade complète œufs & maquereaux",
+      "name": "Salade complète aux œufs et maquereaux",
       "ingredients": [
-        "salade",
-        "tomates",
-        "œufs durs",
-        "maquereaux",
-        "concombre"
+        "1 grande salade verte",
+        "3 tomates",
+        "1 concombre",
+        "4 œufs",
+        "2 boîtes de maquereaux au naturel (environ 250 g égoutté)",
+        "2 c. à soupe d’huile d’olive",
+        "1 c. à soupe de vinaigre",
+        "1 c. à café de moutarde",
+        "Sel et poivre"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Cuire les œufs 9 à 10 minutes dans l’eau frémissante, les refroidir, les écaler et les couper en quartiers.",
+        "Laver et essorer la salade. Couper les tomates et le concombre en morceaux.",
+        "Égoutter les maquereaux et les séparer délicatement en morceaux.",
+        "Mélanger l’huile, le vinaigre, la moutarde, le sel et le poivre. Répartir la salade, les crudités, les œufs et le maquereau dans quatre assiettes, puis assaisonner."
       ],
       "robot": [],
       "notes": [
@@ -37468,17 +37276,34 @@
       ],
       "sections": [
         {
-          "title": "Composition :",
+          "title": "🛒 Ingrédients",
           "lines": [
-            "salade",
-            "tomates",
-            "œufs durs",
-            "maquereaux",
-            "concombre"
+            "1 grande salade verte",
+            "3 tomates",
+            "1 concombre",
+            "4 œufs",
+            "2 boîtes de maquereaux au naturel (environ 250 g égoutté)",
+            "2 c. à soupe d’huile d’olive",
+            "1 c. à soupe de vinaigre",
+            "1 c. à café de moutarde",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Cuire les œufs 9 à 10 minutes dans l’eau frémissante, les refroidir, les écaler et les couper en quartiers.",
+            "2. Laver et essorer la salade. Couper les tomates et le concombre en morceaux.",
+            "3. Égoutter les maquereaux et les séparer délicatement en morceaux.",
+            "4. Mélanger l’huile, le vinaigre, la moutarde, le sel et le poivre. Répartir la salade, les crudités, les œufs et le maquereau dans quatre assiettes, puis assaisonner."
           ]
         }
       ],
-      "source": "52 MENUS"
+      "source": "52 MENUS",
+      "timePrep": "15 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-0f5bcbbf3c",
@@ -37518,56 +37343,70 @@
     },
     {
       "id": "r-31f2803315",
-      "name": "🥣 Soupe maison + tartine",
+      "name": "Velouté de poireaux, pommes de terre et carottes, tartine complète",
       "ingredients": [
-        "poireaux",
-        "pommes de terre",
-        "carottes",
-        "St Môret",
-        "jambon ou saumon fumé",
-        "Courgettes",
-        "Oignons",
-        "Pain complet",
-        "Fromage frais",
-        "🥗 salades",
-        "🍈 melon/mozzarella",
-        "🐟 poissons froids",
-        "🍔 Sauce burger légère",
-        "🍔 burgers maison",
-        "🌯 wraps",
-        "🥚 omelettes",
-        "🥕 légumes"
+        "3 poireaux",
+        "3 pommes de terre moyennes",
+        "3 carottes",
+        "1 oignon",
+        "1,1 l de bouillon de légumes",
+        "100 g de fromage frais",
+        "4 tranches de pain complet",
+        "4 tranches de jambon ou 120 g de saumon fumé (facultatif)",
+        "1 c. à soupe d’huile d’olive",
+        "Sel et poivre"
       ],
       "steps": [
-        "Préparer et laver les ingrédients. Éplucher et couper les légumes si nécessaire.",
-        "Faire cuire les ingrédients qui demandent le plus de temps (féculents, légumes ou viande/poisson) selon leur nature.",
-        "Assembler les ingrédients, ajouter l’assaisonnement ou la sauce indiquée dans la liste.",
-        "Vérifier la cuisson, rectifier l’assaisonnement et servir chaud ou froid selon le plat."
+        "Laver soigneusement les poireaux et les couper en rondelles. Éplucher les pommes de terre, les carottes et l’oignon, puis couper en morceaux.",
+        "Faire revenir l’oignon dans l’huile 3 minutes dans une grande casserole. Ajouter les légumes et le bouillon.",
+        "Porter à ébullition puis cuire à couvert 25 à 30 minutes, jusqu’à ce que les légumes soient tendres.",
+        "Mixer jusqu’à obtenir un velouté lisse. Incorporer le fromage frais, saler et poivrer.",
+        "Faire griller le pain complet et garnir de jambon ou de saumon fumé si souhaité. Servir avec la soupe chaude."
       ],
       "robot": [
-        "Velouté de légumes"
+        "Monsieur Cuisine : hacher l’oignon 5 s / vitesse 6 et racler. Ajouter huile, faire revenir 3 min / 120 °C / vitesse 1. Ajouter légumes coupés et bouillon sans dépasser la capacité maximale, cuire 25 à 30 min / 100 °C / vitesse 1. Mixer progressivement 30 à 60 s / vitesse 5 à 8 après vérification de la température et du manuel. Incorporer le fromage frais 15 s / vitesse 3."
       ],
       "notes": [
         "Étapes complétées lors de l’audit test des semaines 1 et 2 : adapter les cuissons aux ingrédients exacts et vérifier la cuisson à cœur des viandes et poissons."
       ],
       "sections": [
         {
-          "title": "Soupe :",
+          "title": "🛒 Ingrédients",
           "lines": [
-            "poireaux",
-            "pommes de terre",
-            "carottes"
+            "3 poireaux",
+            "3 pommes de terre moyennes",
+            "3 carottes",
+            "1 oignon",
+            "1,1 l de bouillon de légumes",
+            "100 g de fromage frais",
+            "4 tranches de pain complet",
+            "4 tranches de jambon ou 120 g de saumon fumé (facultatif)",
+            "1 c. à soupe d’huile d’olive",
+            "Sel et poivre"
           ]
         },
         {
-          "title": "Tartine :",
+          "title": "👩‍🍳 Préparation",
           "lines": [
-            "St Môret",
-            "jambon ou saumon fumé"
+            "1. Laver soigneusement les poireaux et les couper en rondelles. Éplucher les pommes de terre, les carottes et l’oignon, puis couper en morceaux.",
+            "2. Faire revenir l’oignon dans l’huile 3 minutes dans une grande casserole. Ajouter les légumes et le bouillon.",
+            "3. Porter à ébullition puis cuire à couvert 25 à 30 minutes, jusqu’à ce que les légumes soient tendres.",
+            "4. Mixer jusqu’à obtenir un velouté lisse. Incorporer le fromage frais, saler et poivrer.",
+            "5. Faire griller le pain complet et garnir de jambon ou de saumon fumé si souhaité. Servir avec la soupe chaude."
+          ]
+        },
+        {
+          "title": "🤖 Monsieur Cuisine Smart",
+          "lines": [
+            "Monsieur Cuisine : hacher l’oignon 5 s / vitesse 6 et racler. Ajouter huile, faire revenir 3 min / 120 °C / vitesse 1. Ajouter légumes coupés et bouillon sans dépasser la capacité maximale, cuire 25 à 30 min / 100 °C / vitesse 1. Mixer progressivement 30 à 60 s / vitesse 5 à 8 après vérification de la température et du manuel. Incorporer le fromage frais 15 s / vitesse 3."
           ]
         }
       ],
-      "source": "52 MENUS"
+      "source": "52 MENUS",
+      "timePrep": "15 min",
+      "timeCook": "30 min",
+      "servings": "4 personnes",
+      "blurb": "Recette complète pour 4 personnes (adapter les quantités avec le sélecteur de convives)."
     },
     {
       "id": "r-dc46a25693",
@@ -45473,6 +45312,151 @@
       "timeCook": "15 min",
       "servings": "2",
       "blurb": "Repas plaisir simple du samedi."
+    },
+    {
+      "id": "test-croques-s1",
+      "name": "🥪 Croques dorés jambon, tomate et mozzarella",
+      "ingredients": [
+        "8 tranches de pain de mie complet",
+        "4 tranches de jambon",
+        "2 tomates",
+        "150 g de mozzarella",
+        "1 c. à café d’origan",
+        "Poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C.",
+        "Couper les tomates en fines rondelles et égoutter la mozzarella avant de la trancher.",
+        "Garnir quatre tranches de pain avec le jambon, la tomate, la mozzarella, l’origan et le poivre; refermer avec les quatre autres tranches.",
+        "Déposer sur une plaque et enfourner 10 à 12 minutes, en retournant à mi-cuisson si souhaité, jusqu’à ce que le pain soit doré et le fromage fondu.",
+        "Servir avec une salade verte ou des crudités."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — création maison",
+      "timePrep": "10 min",
+      "timeCook": "12 min",
+      "servings": "4 personnes",
+      "blurb": "Repas convivial du samedi soir, facile à partager.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches de pain de mie complet",
+            "4 tranches de jambon",
+            "2 tomates",
+            "150 g de mozzarella",
+            "1 c. à café d’origan",
+            "Poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 200 °C.",
+            "2. Couper les tomates en fines rondelles et égoutter la mozzarella avant de la trancher.",
+            "3. Garnir quatre tranches de pain avec le jambon, la tomate, la mozzarella, l’origan et le poivre; refermer avec les quatre autres tranches.",
+            "4. Déposer sur une plaque et enfourner 10 à 12 minutes, en retournant à mi-cuisson si souhaité, jusqu’à ce que le pain soit doré et le fromage fondu.",
+            "5. Servir avec une salade verte ou des crudités."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-croques-s2",
+      "name": "🥪 Croques gratinés aux légumes rôtis et fromage",
+      "ingredients": [
+        "8 tranches de pain complet",
+        "200 g de légumes rôtis restants",
+        "4 tranches de jambon ou de dinde",
+        "150 g de mozzarella ou d’emmental râpé",
+        "2 c. à soupe de crème légère",
+        "Poivre et herbes de Provence"
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C.",
+        "Mélanger les légumes rôtis avec la crème légère, le poivre et les herbes.",
+        "Répartir les légumes et le jambon sur quatre tranches de pain, ajouter le fromage et fermer avec les autres tranches.",
+        "Déposer sur une plaque et cuire 10 à 12 minutes, jusqu’à ce que le pain soit doré et le fromage fondu.",
+        "Servir chaud avec une salade ou des crudités."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — création maison",
+      "timePrep": "10 min",
+      "timeCook": "12 min",
+      "servings": "4 personnes",
+      "blurb": "Dîner festif anti-gaspillage du samedi soir.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches de pain complet",
+            "200 g de légumes rôtis restants",
+            "4 tranches de jambon ou de dinde",
+            "150 g de mozzarella ou d’emmental râpé",
+            "2 c. à soupe de crème légère",
+            "Poivre et herbes de Provence"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Préchauffer le four à 200 °C.",
+            "2. Mélanger les légumes rôtis avec la crème légère, le poivre et les herbes.",
+            "3. Répartir les légumes et le jambon sur quatre tranches de pain, ajouter le fromage et fermer avec les autres tranches.",
+            "4. Déposer sur une plaque et cuire 10 à 12 minutes, jusqu’à ce que le pain soit doré et le fromage fondu.",
+            "5. Servir chaud avec une salade ou des crudités."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-assiette-batch-s2",
+      "name": "🥘 Assiette assemblée du batchcooking",
+      "ingredients": [
+        "600 g de préparation protéinée cuite et conservée correctement",
+        "600 g de féculent déjà cuit (riz ou pommes de terre)",
+        "400 g de légumes cuits ou crus de saison",
+        "1 c. à soupe d’huile d’olive ou de sauce maison",
+        "Herbes fraîches, sel et poivre"
+      ],
+      "steps": [
+        "Vérifier la conservation des préparations et écarter tout reste douteux.",
+        "Réchauffer la protéine et le féculent séparément jusqu’à ce qu’ils soient bien chauds à cœur.",
+        "Ajouter les légumes : réchauffer les légumes cuits ou laver et découper les crudités fraîches.",
+        "Assaisonner avec l’huile ou une sauce maison, goûter puis rectifier l’assaisonnement.",
+        "Dresser les assiettes; ajouter les herbes fraîches juste avant de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — création maison",
+      "timePrep": "10 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "blurb": "Vraie recette d’assemblage à adapter aux bases préparées le dimanche.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g de préparation protéinée cuite et conservée correctement",
+            "600 g de féculent déjà cuit (riz ou pommes de terre)",
+            "400 g de légumes cuits ou crus de saison",
+            "1 c. à soupe d’huile d’olive ou de sauce maison",
+            "Herbes fraîches, sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Vérifier la conservation des préparations et écarter tout reste douteux.",
+            "2. Réchauffer la protéine et le féculent séparément jusqu’à ce qu’ils soient bien chauds à cœur.",
+            "3. Ajouter les légumes : réchauffer les légumes cuits ou laver et découper les crudités fraîches.",
+            "4. Assaisonner avec l’huile ou une sauce maison, goûter puis rectifier l’assaisonnement.",
+            "5. Dresser les assiettes; ajouter les herbes fraîches juste avant de servir."
+          ]
+        }
+      ]
     }
   ],
   "plan": [
@@ -45557,8 +45541,8 @@
       "week": 1,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🍕 Pizza ou croques express",
-      "recipeId": "test-pizza-s1"
+      "name": "🥪 Croques dorés jambon, tomate et mozzarella",
+      "recipeId": "test-croques-s1"
     },
     {
       "week": 1,
@@ -45655,15 +45639,15 @@
       "week": 2,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🍕 Pizza express aux boulettes et légumes",
-      "recipeId": "test-pizza-s2"
+      "name": "🥪 Croques gratinés aux légumes rôtis et fromage",
+      "recipeId": "test-croques-s2"
     },
     {
       "week": 2,
       "day": "DIMANCHE",
       "meal": "Midi",
       "name": "🥘 Assiette assemblée du batchcooking",
-      "recipeId": "r-bd28f91212"
+      "recipeId": "test-assiette-batch-s2"
     },
     {
       "week": 2,
@@ -69475,87 +69459,77 @@
     },
     {
       "week": 1,
-      "text": "DIMANCHE — Batchcooking (environ 1 h 45)",
+      "text": "DIMANCHE — ORGANISATION : BATCHCOOKING (environ 1 h 45)",
       "type": "Organisation"
     },
     {
       "week": 1,
-      "text": "ÉTAPE 1 — DÉCOUPES : laver et couper les courgettes, carottes, poivrons et oignons. Réserver les légumes crus séparément. Préparer ail et herbes.",
+      "text": "ÉTAPE 1 — DÉCOUPES GLOBALES : laver et couper les courgettes, carottes, poivrons et oignons. Préparer l’ail et les herbes. Répartir les légumes par recette dans des bols distincts; garder la viande crue séparée des légumes prêts à manger.",
       "type": "Découpes"
     },
     {
       "week": 1,
-      "text": "🤖 Option Robot [Monsieur Cuisine] : hacher l’oignon et l’ail 5 s / vitesse 6. Racler les parois. Pour les autres légumes, utiliser le robot uniquement si le résultat en morceaux convient à la recette.",
-      "type": "Robot"
-    },
-    {
-      "week": 1,
-      "text": "ÉTAPE 2 — FOUR D’AFFILÉE : préchauffer à 200 °C. Enfourner une plaque de légumes huilés et assaisonnés 25 à 30 min. Ajouter les légumes destinés aux autres repas sur la même plaque si l’espace le permet, en séparant les zones.",
+      "text": "ÉTAPE 2 — FOUR OPTIMISÉ : préchauffer à 200 °C. Étaler les légumes destinés à rôtir sur une plaque avec un peu d’huile et les aromates; cuire 25 à 30 min en remuant à mi-cuisson. Ajouter une seconde plaque si nécessaire plutôt que de surcharger.",
       "type": "Four"
     },
     {
       "week": 1,
-      "text": "ÉTAPE 3 — CUISSONS SIMULTANÉES : cuire le riz pendant que le four tourne; préparer le velouté dans une casserole ou au robot; cuire la sauce bolognaise en quantité double si les ingrédients sont prévus.",
+      "text": "ÉTAPE 3 — CUISSONS SIMULTANÉES : lancer le riz pendant que le four tourne; préparer le velouté à la casserole ou au Monsieur Cuisine; préparer la sauce bolognaise en quantité double si tous les ingrédients sont prévus.",
       "type": "Cuissons simultanées"
     },
     {
       "week": 1,
-      "text": "🤖 Option Robot [Monsieur Cuisine] — velouté : cuire les légumes avec le bouillon environ 20 min / 100 °C / vitesse 1, puis mixer progressivement 30 à 60 s / vitesse 5 à 8 selon la texture et les consignes de l’appareil. Pour les morceaux à préserver, activer la vitesse inversée si disponible sur le modèle; vérifier le manuel du Monsieur Cuisine et ne jamais dépasser les capacités du bol.",
+      "text": "🤖 MONSIEUR CUISINE — HACHAGE : hacher l’oignon et l’ail 5 s / vitesse 6, racler les parois. Pour le velouté, cuire légumes et bouillon environ 20 à 25 min / 100 °C / vitesse 1 puis mixer progressivement 30 à 60 s / vitesse 5 à 8. Respecter la capacité du bol et le manuel.",
       "type": "Robot"
     },
     {
       "week": 1,
-      "text": "REFROIDISSEMENT & CONSERVATION : répartir dans des contenants peu profonds, refroidir rapidement et réfrigérer. Garder seulement les portions prévues pour les prochains jours; congeler rapidement le surplus destiné à plus tard.",
+      "text": "🧺 CONSERVATION AU FRAIS & AU CONGÉLATEUR ❄️ : répartir les préparations en boîtes peu profondes, refroidir rapidement puis réfrigérer. Garder au frais uniquement les portions prévues pour les prochains jours; congeler rapidement les portions prévues plus tard et étiqueter avec le nom et la date.",
       "type": "Conservation"
     },
     {
       "week": 1,
-      "text": "DIMANCHE — Repas : assembler le poulet/légumes déjà cuits avec du riz; le soir, servir le velouté préparé et une tartine complète si souhaité.",
+      "text": "🍽️ ASSEMBLAGE JOUR J : lundi, poulet paprika + légumes rôtis + riz; mardi, cabillaud avec sauce tomate fraîchement cuite; mercredi, omelette et salade; jeudi, bolognaise avec pâtes; vendredi midi, vide-frigo avec les restes sûrs; vendredi soir, pizza express; samedi, burgers puis croques; dimanche soir, soupe et tartine.",
       "type": "Assemblage"
     },
     {
       "week": 2,
-      "text": "DIMANCHE — Batchcooking (environ 1 h 45)",
+      "text": "DIMANCHE — ORGANISATION : BATCHCOOKING (environ 1 h 45)",
       "type": "Organisation"
     },
     {
       "week": 2,
-      "text": "ÉTAPE 1 — DÉCOUPES : couper carottes, courgettes, tomates et oignons; laver la salade; préparer les ingrédients de la sauce tomate. Garder la viande crue séparée des légumes prêts à consommer.",
+      "text": "ÉTAPE 1 — DÉCOUPES GLOBALES : couper carottes, courgettes, tomates et oignons. Laver et essorer la salade séparément. Préparer les aromates de la sauce tomate; ne jamais mélanger les planches ou ustensiles ayant touché la viande crue avec les aliments prêts à manger sans lavage complet.",
       "type": "Découpes"
     },
     {
       "week": 2,
-      "text": "🤖 Option Robot [Monsieur Cuisine] : hacher oignon et ail 5 s / vitesse 6; racler les parois. Ne pas mettre les légumes destinés à la salade dans le bol ayant contenu de la viande crue sans lavage complet.",
-      "type": "Robot"
-    },
-    {
-      "week": 2,
-      "text": "ÉTAPE 2 — FOUR D’AFFILÉE : cuire les légumes sur une plaque à 200 °C pendant 25 à 30 min, en remuant à mi-cuisson. Les légumes peuvent servir aux assiettes assemblées et à la pizza du vendredi.",
+      "text": "ÉTAPE 2 — FOUR OPTIMISÉ : cuire les légumes sur une plaque à 200 °C pendant 25 à 30 min, en remuant à mi-cuisson. Ne pas surcharger la plaque; séparer les légumes si leurs temps de cuisson diffèrent.",
       "type": "Four"
     },
     {
       "week": 2,
-      "text": "ÉTAPE 3 — CUISSONS SIMULTANÉES : préparer le riz, cuire les œufs durs, faire mijoter la sauce tomate et préparer le velouté carottes-coco pendant la cuisson au four.",
+      "text": "ÉTAPE 3 — CUISSONS SIMULTANÉES : cuire le riz, cuire les œufs durs, préparer la sauce tomate et lancer le velouté de carottes-coco pendant que le four fonctionne.",
       "type": "Cuissons simultanées"
     },
     {
       "week": 2,
-      "text": "🤖 Option Robot [Monsieur Cuisine] — sauce tomate : hacher les aromates 5 s / vitesse 6; ajouter les ingrédients et mijoter environ 20 min / 100 °C / vitesse 1, avec le bouchon selon le manuel et la texture souhaitée. Pour les morceaux à préserver, activer la vitesse inversée si disponible sur le modèle; vérifier le manuel du Monsieur Cuisine et ne jamais dépasser les capacités du bol.",
+      "text": "🤖 MONSIEUR CUISINE — SAUCE TOMATE : hacher oignon et ail 5 s / vitesse 6, racler; ajouter huile et faire revenir 3 min / 120 °C / vitesse 1; ajouter tomates et aromates, mijoter environ 20 min / 100 °C / vitesse 1. Pour les boulettes, les façonner à la main et les cuire jusqu’à cuisson complète; vérifier le manuel et la capacité du bol.",
       "type": "Robot"
     },
     {
       "week": 2,
-      "text": "🤖 Option Robot [Monsieur Cuisine] — velouté : cuire les carottes, l’oignon et le bouillon environ 20 à 25 min / 100 °C / vitesse 1; ajouter le lait de coco puis mixer progressivement 30 à 60 s / vitesse 5 à 8.",
+      "text": "🤖 MONSIEUR CUISINE — VELOUTÉ : cuire carottes, oignon et bouillon environ 20 à 25 min / 100 °C / vitesse 1; mixer progressivement 30 à 60 s / vitesse 5 à 8, puis ajouter le lait de coco et mélanger 20 s / vitesse 3. Respecter les capacités et les consignes de sécurité du modèle.",
       "type": "Robot"
     },
     {
       "week": 2,
-      "text": "REFROIDISSEMENT & CONSERVATION : conserver les préparations en boîtes propres et datées; réfrigérer rapidement les portions à consommer sous quelques jours et congeler le surplus adapté.",
+      "text": "🧺 CONSERVATION AU FRAIS & AU CONGÉLATEUR ❄️ : placer les préparations dans des contenants propres et peu profonds, refroidir rapidement, réfrigérer les portions prévues prochainement et congeler le surplus adapté. Étiqueter chaque boîte avec son contenu et sa date; décongeler au réfrigérateur.",
       "type": "Conservation"
     },
     {
       "week": 2,
-      "text": "DIMANCHE — Repas : assembler le bœuf bourguignon déjà préparé avec les légumes/féculents; le soir, servir le velouté et une tartine. Adapter l’intitulé du velouté à la saison réelle.",
+      "text": "🍽️ ASSEMBLAGE JOUR J : lundi, poulet provençal + riz; mardi, saumon citronné + riz; mercredi, boulettes sauce tomate; jeudi, risotto préparé au dernier moment avec les ingrédients mesurés; vendredi midi, vide-frigo; vendredi soir, pizza aux boulettes et légumes; samedi, burgers puis croques; dimanche, assiette assemblée et velouté.",
       "type": "Assemblage"
     }
   ],
