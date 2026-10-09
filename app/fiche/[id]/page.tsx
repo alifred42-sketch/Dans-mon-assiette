@@ -37,7 +37,7 @@ export default async function FichePage({
       return cleaned.length >= 6 && name.includes(cleaned);
     }).sort((a, b) => a.name.length - b.name.length)[0];
   }
-  const ingredientTargets = Object.fromEntries(shopIngs.map((line, index) => { const target = findSauceRecipe(line); return target ? [index, { id: target.id, name: target.name }] : null; }).filter((value): value is [number, { id: string; name: string }] => value !== null));
+  const ingredientTargets = shopIngs.reduce<Record<number, { id: string; name: string }>>((targets, line, index) => { const target = findSauceRecipe(line); if (target) targets[index] = { id: target.id, name: target.name }; return targets; }, {});
   function linkedInstruction(line: string) {
     const target = findSauceRecipe(line);
     if (!target) return line;
