@@ -2512,81 +2512,56 @@
     },
     {
       "id": "r-3ff1d4abc1",
-      "name": "🍅 RECETTE 037 — Sauce tomate maison légère",
+      "name": "Sauce tomate maison légère",
       "ingredients": [
-        "Tomates concassées",
-        "Oignon",
-        "Ail",
-        "Carotte (pour adoucir)",
-        "Basilic",
-        "Origan",
-        "Poivre"
+        "800 g de tomates concassées",
+        "1 oignon",
+        "2 gousses d’ail",
+        "1 carotte râpée",
+        "1 c. à soupe d’huile d’olive",
+        "1 c. à café d’origan",
+        "Quelques feuilles de basilic",
+        "Sel et poivre"
       ],
       "steps": [
-        "🤖 Monsieur Cuisine Smart : ✅ Idéal",
-        "Faire revenir l’oignon.",
-        "Ajouter tous les ingrédients.",
-        "Laisser mijoter.",
-        "Mixer si besoin."
+        "Émincer l’oignon, hacher l’ail et râper la carotte.",
+        "Faire chauffer l’huile dans une casserole et faire revenir l’oignon et la carotte 5 minutes.",
+        "Ajouter l’ail, les tomates, l’origan, le sel et le poivre.",
+        "Laisser mijoter à feu doux 25 à 30 minutes en remuant de temps en temps.",
+        "Ajouter le basilic ciselé, goûter et rectifier l’assaisonnement. Mixer si une texture lisse est souhaitée."
       ],
       "robot": [],
-      "notes": [
-        "🍝 Pâtes",
-        "🍅 Lasagnes",
-        "🍗 Poulet mijoté",
-        "🥘 Chili",
-        "Faire plusieurs pots et congeler en portions."
-      ],
+      "notes": [],
       "sections": [
-        {
-          "title": "⏱️ Préparation : 10 min",
-          "lines": [
-            "🔥 Cuisson : 30 min",
-            "🤖 Monsieur Cuisine Smart : ✅ Idéal"
-          ]
-        },
         {
           "title": "🛒 Ingrédients",
           "lines": [
-            "Tomates concassées",
-            "Oignon",
-            "Ail",
-            "Carotte (pour adoucir)",
-            "Basilic",
-            "Origan",
-            "Poivre"
+            "800 g de tomates concassées",
+            "1 oignon",
+            "2 gousses d’ail",
+            "1 carotte râpée",
+            "1 c. à soupe d’huile d’olive",
+            "1 c. à café d’origan",
+            "Quelques feuilles de basilic",
+            "Sel et poivre"
           ]
         },
         {
           "title": "👩‍🍳 Préparation",
           "lines": [
-            "1. Faire revenir l’oignon.",
-            "2. Ajouter tous les ingrédients.",
-            "3. Laisser mijoter.",
-            "4. Mixer si besoin."
-          ]
-        },
-        {
-          "title": "🍽️ Utilisations :",
-          "lines": [
-            "🍝 Pâtes",
-            "🍅 Lasagnes",
-            "🍗 Poulet mijoté",
-            "🥘 Chili"
-          ]
-        },
-        {
-          "title": "💡 Astuce :",
-          "lines": [
-            "Faire plusieurs pots et congeler en portions."
+            "1. Émincer l’oignon, hacher l’ail et râper la carotte.",
+            "2. Faire chauffer l’huile dans une casserole et faire revenir l’oignon et la carotte 5 minutes.",
+            "3. Ajouter l’ail, les tomates, l’origan, le sel et le poivre.",
+            "4. Laisser mijoter à feu doux 25 à 30 minutes en remuant de temps en temps.",
+            "5. Ajouter le basilic ciselé, goûter et rectifier l’assaisonnement. Mixer si une texture lisse est souhaitée."
           ]
         }
       ],
-      "source": "200 RECETTE",
+      "source": "Cuisine Chic Ouf — fiche sauce maison",
       "timePrep": "10 min",
       "timeCook": "30 min",
-      "servings": "Faire plusieurs pots et congeler en portions.",
-      "blurb": "🏷️ Catégorie : 🥣 SAUCES & bases cuisine"
+      "servings": "4 personnes",
+      "blurb": "Sauce maison simple, avec des quantités précises pour 4 personnes."
     },
     {
       "id": "r-7c7db17fc6",
@@ -4928,6 +4903,12 @@
             "4. Mélanger l’huile, la moutarde, le jus de citron, le sel et le poivre pour préparer une vinaigrette.",
             "5. Répartir pommes de terre, œufs et crudités dans les assiettes; ajouter la vinaigrette au moment de servir."
           ]
+        },
+        {
+          "title": "🥣 Sauce associée",
+          "lines": [
+            "Vinaigrette légère moutarde-citron"
+          ]
         }
       ],
       "source": "200 RECETTE",
@@ -6099,6 +6080,12 @@
             "3. Enfourner 35 à 45 minutes selon les morceaux, en retournant les légumes à mi-cuisson. Vérifier que le poulet est cuit à cœur.",
             "4. Pendant ce temps, émincer les champignons et les faire revenir 6 à 8 minutes dans une poêle antiadhésive.",
             "5. Ajouter la crème, poivrer et laisser réduire 2 à 3 minutes. Servir avec le poulet et les légumes rôtis."
+          ]
+        },
+        {
+          "title": "🥣 Sauce associée",
+          "lines": [
+            "Sauce champignons légère"
           ]
         }
       ],
@@ -9626,6 +9613,12 @@
             "3. Enfourner 12 à 15 minutes selon l’épaisseur, jusqu’à ce que le saumon soit opaque et se détache facilement à la fourchette.",
             "4. Si souhaité, cuire les haricots verts à l’eau bouillante 8 à 10 minutes puis égoutter.",
             "5. Parsemer le saumon de ciboulette et servir avec le riz et les légumes."
+          ]
+        },
+        {
+          "title": "🥣 Sauce associée",
+          "lines": [
+            "Sauce citron-ciboulette au skyr"
           ]
         }
       ],
@@ -28172,6 +28165,12 @@
             "3. Dans un bol, mélanger la moutarde, 1 à 2 c. à soupe de jus de citron, l’huile d’olive, le sel et le poivre. Ajouter une cuillère d’eau si la sauce est trop épaisse.",
             "4. Répartir salade, tomates, thon, mozzarella, œufs et noix dans quatre assiettes. Napper de sauce et servir avec le pain complet."
           ]
+        },
+        {
+          "title": "🥣 Sauce associée",
+          "lines": [
+            "Sauce yaourt-moutarde aux herbes"
+          ]
         }
       ],
       "source": "JE SUIS FATIGUEE",
@@ -45501,6 +45500,192 @@
             "3. Réchauffer les légumes rôtis au four à 180 °C pendant 8 à 10 minutes ou dans une poêle.",
             "4. Dresser les assiettes, ajouter l’huile ou la sauce maison et parsemer d’herbes.",
             "5. Servir immédiatement; remettre rapidement au frais les portions non servies plutôt que de les laisser à température ambiante."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-sauce-champignons",
+      "name": "Sauce champignons légère",
+      "ingredients": [
+        "300 g de champignons de Paris",
+        "1 échalote",
+        "1 c. à café d’huile d’olive",
+        "100 ml de bouillon de légumes",
+        "150 ml de crème légère",
+        "1 c. à café de thym",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Nettoyer les champignons et les couper en lamelles. Émincer l’échalote.",
+        "Faire chauffer l’huile dans une poêle et faire revenir l’échalote 2 minutes.",
+        "Ajouter les champignons et cuire 6 à 8 minutes, jusqu’à évaporation de leur eau.",
+        "Verser le bouillon et laisser réduire 3 minutes. Ajouter la crème et le thym, puis mijoter 2 à 3 minutes.",
+        "Saler, poivrer et servir chaud avec la viande ou les légumes."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — fiche sauce maison",
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "4 personnes",
+      "blurb": "Sauce maison simple, avec des quantités précises pour 4 personnes.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "300 g de champignons de Paris",
+            "1 échalote",
+            "1 c. à café d’huile d’olive",
+            "100 ml de bouillon de légumes",
+            "150 ml de crème légère",
+            "1 c. à café de thym",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Nettoyer les champignons et les couper en lamelles. Émincer l’échalote.",
+            "2. Faire chauffer l’huile dans une poêle et faire revenir l’échalote 2 minutes.",
+            "3. Ajouter les champignons et cuire 6 à 8 minutes, jusqu’à évaporation de leur eau.",
+            "4. Verser le bouillon et laisser réduire 3 minutes. Ajouter la crème et le thym, puis mijoter 2 à 3 minutes.",
+            "5. Saler, poivrer et servir chaud avec la viande ou les légumes."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-sauce-citron-ciboulette",
+      "name": "Sauce citron-ciboulette au skyr",
+      "ingredients": [
+        "150 g de skyr nature",
+        "Le jus de 1/2 citron",
+        "1 c. à café de moutarde douce",
+        "1 c. à soupe de ciboulette ciselée",
+        "1 c. à soupe d’eau (si nécessaire)",
+        "Poivre et une petite pincée de sel"
+      ],
+      "steps": [
+        "Verser le skyr dans un bol et incorporer la moutarde.",
+        "Ajouter le jus de citron et la ciboulette ciselée.",
+        "Détendre avec un peu d’eau si la sauce est trop épaisse.",
+        "Poivrer, saler légèrement et laisser reposer 10 minutes au frais avant de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — fiche sauce maison",
+      "timePrep": "5 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "Sauce maison simple, avec des quantités précises pour 4 personnes.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150 g de skyr nature",
+            "Le jus de 1/2 citron",
+            "1 c. à café de moutarde douce",
+            "1 c. à soupe de ciboulette ciselée",
+            "1 c. à soupe d’eau (si nécessaire)",
+            "Poivre et une petite pincée de sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Verser le skyr dans un bol et incorporer la moutarde.",
+            "2. Ajouter le jus de citron et la ciboulette ciselée.",
+            "3. Détendre avec un peu d’eau si la sauce est trop épaisse.",
+            "4. Poivrer, saler légèrement et laisser reposer 10 minutes au frais avant de servir."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-vinaigrette-moutarde-citron",
+      "name": "Vinaigrette légère moutarde-citron",
+      "ingredients": [
+        "2 c. à soupe de moutarde",
+        "Le jus de 1 citron",
+        "4 c. à soupe d’huile d’olive",
+        "2 c. à soupe d’eau",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Mélanger la moutarde et le jus de citron dans un petit bol.",
+        "Verser l’huile en fouettant pour émulsionner.",
+        "Ajouter l’eau, saler et poivrer; mélanger de nouveau.",
+        "Goûter et ajuster le citron ou l’eau selon l’acidité souhaitée."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — fiche sauce maison",
+      "timePrep": "5 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "Sauce maison simple, avec des quantités précises pour 4 personnes.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 c. à soupe de moutarde",
+            "Le jus de 1 citron",
+            "4 c. à soupe d’huile d’olive",
+            "2 c. à soupe d’eau",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Mélanger la moutarde et le jus de citron dans un petit bol.",
+            "2. Verser l’huile en fouettant pour émulsionner.",
+            "3. Ajouter l’eau, saler et poivrer; mélanger de nouveau.",
+            "4. Goûter et ajuster le citron ou l’eau selon l’acidité souhaitée."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test-sauce-yaourt-moutarde",
+      "name": "Sauce yaourt-moutarde aux herbes",
+      "ingredients": [
+        "150 g de yaourt nature ou de skyr",
+        "1 c. à café de moutarde",
+        "Le jus de 1/2 citron",
+        "1 c. à soupe de ciboulette ou de persil ciselé",
+        "Poivre et une petite pincée de sel"
+      ],
+      "steps": [
+        "Mélanger le yaourt et la moutarde dans un bol.",
+        "Ajouter le jus de citron et les herbes ciselées.",
+        "Poivrer, saler légèrement puis laisser reposer 5 à 10 minutes au frais."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — fiche sauce maison",
+      "timePrep": "5 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "Sauce maison simple, avec des quantités précises pour 4 personnes.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150 g de yaourt nature ou de skyr",
+            "1 c. à café de moutarde",
+            "Le jus de 1/2 citron",
+            "1 c. à soupe de ciboulette ou de persil ciselé",
+            "Poivre et une petite pincée de sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Mélanger le yaourt et la moutarde dans un bol.",
+            "2. Ajouter le jus de citron et les herbes ciselées.",
+            "3. Poivrer, saler légèrement puis laisser reposer 5 à 10 minutes au frais."
           ]
         }
       ]
@@ -90850,7 +91035,12 @@
         "r-08d99317f5",
         "r-68d1f430fd",
         "r-0b46f44a1f",
-        "r-35f255bf02"
+        "r-35f255bf02",
+        "test-sauce-champignons",
+        "test-sauce-citron-ciboulette",
+        "test-vinaigrette-moutarde-citron",
+        "test-sauce-yaourt-moutarde",
+        "r-3ff1d4abc1"
       ]
     },
     {
