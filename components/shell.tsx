@@ -39,7 +39,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             const href = `${item.href}${item.href === "/recettes" ? "" : weekQuery}`;
             const active =
               item.href === "/semaine"
-                ? pathname === "/"
+                ? pathname === "/" || pathname === "/semaine"
                 : item.href === "/recettes"
                   ? pathname.startsWith("/recettes") || pathname.startsWith("/carnet") || pathname.startsWith("/fiche")
                   : pathname.startsWith(item.href);
