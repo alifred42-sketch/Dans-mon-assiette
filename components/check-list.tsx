@@ -58,46 +58,27 @@ export function CheckList({
   }
 
   const remaining = items.filter((item) => !checked[item.id]).length;
-  let lastGroup: string | undefined;
   const sortedItems = [...items].sort((a, b) => Number(!!checked[a.id]) - Number(!!checked[b.id]) || (a.group || "").localeCompare(b.group || "", "fr") || a.title.localeCompare(b.title, "fr"));
+  const pending = sortedItems.filter((item) => !checked[item.id]);
+  const doneItems = sortedItems.filter((item) => !!checked[item.id]);
+  const renderGroup = (rows: CheckItem[]) => {
+    let lastGroup: string | undefined;
+    return rows.map((item) => {
+      const done = !!checked[item.id];
+      const showGroup = item.group && item.group !== lastGroup;
+      lastGroup = item.group;
+      return (
+        <li key={item.id} className={done ? "opacity-50 transition-opacity" : "bg-[#8FA89B]/10 transition-colors"}>
+          {showGroup ? <p className="bg-[#E6DFD3] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-[#2B2B2B]">{item.group}</p> : null}
+          <label className="flex cursor-pointer items-start gap-3 px-4 py-4 [touch-action:manipulation]">
+            <input type="checkbox" className="mt-1 size-7 shrink-0 accent-[#8FA89B]" checked={done} onChange={() => toggle(item.id)} />
+            <span className={done ? "text-muted-foreground" : "text-[#668775]"}>
+              <span className="block font-medium leading-snug">{item.title}</span>
+              {item.detail ? <span className="mt-1 block text-xs text-muted-foreground no-underline">{item.detail}</span> : null}
+            </span>
+          </label>
+        </li>
+      );
+    });
+  };
 
-  return (
-    <div className="space-y-3" data-ready={ready ? "true" : "false"}>
-      <p className="text-sm text-muted-foreground">
-        {items.length} lignes · {ready ? remaining : items.length} encore à faire.
-      </p>
-      <ul className="divide-y overflow-hidden rounded-2xl bg-card ring-1 ring-foreground/10">
-        {sortedItems.map((item) => {
-          const done = !!checked[item.id];
-          const showGroup = item.group && item.group !== lastGroup;
-          lastGroup = item.group;
-          return (
-            <li key={item.id} className={done ? "opacity-45 transition-opacity" : "bg-[#8FA89B]/10 transition-colors"}>
-              {showGroup ? (
-                <p className="bg-[#E6DFD3] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-[#1A1A1A]">
-                  {item.group}
-                </p>
-              ) : null}
-              <label className="flex cursor-pointer items-start gap-3 px-4 py-4 [touch-action:manipulation]">
-                <input
-                  type="checkbox"
-                  className="peer mt-1 size-7 shrink-0 accent-[#8FA89B]"
-                  checked={done}
-                  onChange={() => toggle(item.id)}
-                />
-                <span className={done ? "text-muted-foreground" : "text-[#8FA89B]"}>
-                  <span className="block font-medium leading-snug">{item.title}</span>
-                  {item.detail ? (
-                    <span className="mt-1 block text-xs text-muted-foreground no-underline">
-                      {item.detail}
-                    </span>
-                  ) : null}
-                </span>
-              </label>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-}
