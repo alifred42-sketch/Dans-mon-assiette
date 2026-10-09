@@ -284,12 +284,18 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
       }
     }
   }
-  if (bag.size === 0) {
-    for (const row of official) {
-      const parsed = parseLine(row.ingredient);
-      if (!parsed) continue;
-      add(parsed, row.dish);
-    }
+  // Compléter avec les anciennes lignes de courses uniquement pour les repas non liés à une fiche.
+  const plannedNames = new Set(
+    weekPlan(week)
+      .filter((slot) => Boolean(getRecipe(slot.recipeId)))
+      .flatMap((slot) => [fold(slot.name || ""), fold(getRecipe(slot.recipeId)?.name || "")])
+      .filter(Boolean),
+  );
+  for (const row of official) {
+    if (plannedNames.has(fold(row.dish))) continue;
+    const parsed = parseLine(row.ingredient);
+    if (!parsed) continue;
+    add(parsed, row.dish);
   }
 
   return [...bag.entries()]
