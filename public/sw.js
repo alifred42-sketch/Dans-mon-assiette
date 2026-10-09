@@ -1,4 +1,4 @@
-const CACHE = "assiette-v5";
+const CACHE = "assiette-v6";
 const SCOPE = self.registration.scope;
 const PRECACHE = [
   "./",
@@ -66,6 +66,18 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(() => cached);
       return cached || fetched;
+    }),
+  );
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  const target = new URL(event.notification.data?.url || "./", self.registration.scope).href;
+  event.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((clients) => {
+      const existing = clients.find((client) => client.url === target);
+      if (existing && "focus" in existing) return existing.focus();
+      return self.clients.openWindow(target);
     }),
   );
 });
