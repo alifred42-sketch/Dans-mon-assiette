@@ -50519,371 +50519,6 @@
   ],
   "batch": [
     {
-      "week": 1,
-      "text": "⏱️ Temps de préparation : environ 2 heures",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "🤖 À préparer avec le MR CUISINE Smart",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Velouté courgettes – St Môret (4 à 6 portions)",
-      "type": "Recette"
-    },
-    {
-      "week": 1,
-      "text": "Lundi soir",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Dimanche soir (si surplus)",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Conservation : 3 jours",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Congélation : Oui",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Sauce bolognaise (double quantité)",
-      "type": "Recette"
-    },
-    {
-      "week": 1,
-      "text": "Préparer directement 2 portions.",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Jeudi midi",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "1 portion au congélateur",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Chili con carne",
-      "type": "Recette"
-    },
-    {
-      "week": 1,
-      "text": "Préparer tout le plat.",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Conservation :",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "3 jours",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Congélation :",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Oui",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Fondue de poireaux",
-      "type": "Recette"
-    },
-    {
-      "week": 1,
-      "text": "Pour le saumon du vendredi.",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Conservation :",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "3 jours",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Rillettes de thon",
-      "type": "Recette"
-    },
-    {
-      "week": 1,
-      "text": "Pour vendredi soir.",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Conservation :",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "2 jours",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "🔥 Au four",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Grande plaque :",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "courgettes",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "carottes",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "poivrons",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "oignons",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Servira :",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "lundi",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "dimanche",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "🍚 Cuissons d'avance",
-      "type": "Recette"
-    },
-    {
-      "week": 1,
-      "text": "riz basmati",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "pommes de terre vapeur",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "œufs durs (8)",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "❄️ Congeler",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Bolognaise",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Chili",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "Soupe",
-      "type": "Préparation"
-    },
-    {
-      "week": 1,
-      "text": "🍱 ONGLET 9 – BATCH COOKING",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "⏱️ Temps : 2 h",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "🤖 MR CUISINE",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Velouté carottes curry",
-      "type": "Recette"
-    },
-    {
-      "week": 2,
-      "text": "Conservation :",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "3 jours",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Fondue de poireaux",
-      "type": "Recette"
-    },
-    {
-      "week": 2,
-      "text": "Pour mardi midi.",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Sauce tomate maison",
-      "type": "Recette"
-    },
-    {
-      "week": 2,
-      "text": "Pour :",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "boulettes",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "chili futur",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Faire double quantité.",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Boulettes de bœuf",
-      "type": "Recette"
-    },
-    {
-      "week": 2,
-      "text": "Préparer toutes les boulettes.",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Congeler la moitié.",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Rillettes de thon",
-      "type": "Recette"
-    },
-    {
-      "week": 2,
-      "text": "Vendredi soir.",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "🔥 Four",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Faire rôtir :",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "courgettes",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "tomates",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "carottes",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "oignons",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Servira pour plusieurs repas.",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Préparer",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Œufs durs",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Riz",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Laver salade",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "Couper concombre",
-      "type": "Préparation"
-    },
-    {
-      "week": 2,
-      "text": "🍱 ONGLET 9 – BATCH COOKING",
-      "type": "Préparation"
-    },
-    {
       "week": 3,
       "text": "🤖 MR CUISINE",
       "type": "Préparation"
@@ -69837,6 +69472,91 @@
       "week": 46,
       "text": "Cuisson vapeur possible des légumes",
       "type": "Recette"
+    },
+    {
+      "week": 1,
+      "text": "DIMANCHE — Batchcooking (environ 1 h 45)",
+      "type": "Organisation"
+    },
+    {
+      "week": 1,
+      "text": "ÉTAPE 1 — DÉCOUPES : laver et couper les courgettes, carottes, poivrons et oignons. Réserver les légumes crus séparément. Préparer ail et herbes.",
+      "type": "Découpes"
+    },
+    {
+      "week": 1,
+      "text": "🤖 Option Robot [Monsieur Cuisine] : hacher l’oignon et l’ail 5 s / vitesse 6. Racler les parois. Pour les autres légumes, utiliser le robot uniquement si le résultat en morceaux convient à la recette.",
+      "type": "Robot"
+    },
+    {
+      "week": 1,
+      "text": "ÉTAPE 2 — FOUR D’AFFILÉE : préchauffer à 200 °C. Enfourner une plaque de légumes huilés et assaisonnés 25 à 30 min. Ajouter les légumes destinés aux autres repas sur la même plaque si l’espace le permet, en séparant les zones.",
+      "type": "Four"
+    },
+    {
+      "week": 1,
+      "text": "ÉTAPE 3 — CUISSONS SIMULTANÉES : cuire le riz pendant que le four tourne; préparer le velouté dans une casserole ou au robot; cuire la sauce bolognaise en quantité double si les ingrédients sont prévus.",
+      "type": "Cuissons simultanées"
+    },
+    {
+      "week": 1,
+      "text": "🤖 Option Robot [Monsieur Cuisine] — velouté : cuire les légumes avec le bouillon environ 20 min / 100 °C / vitesse 1, puis mixer progressivement 30 à 60 s / vitesse 5 à 8 selon la texture et les consignes de l’appareil.",
+      "type": "Robot"
+    },
+    {
+      "week": 1,
+      "text": "REFROIDISSEMENT & CONSERVATION : répartir dans des contenants peu profonds, refroidir rapidement et réfrigérer. Garder seulement les portions prévues pour les prochains jours; congeler rapidement le surplus destiné à plus tard.",
+      "type": "Conservation"
+    },
+    {
+      "week": 1,
+      "text": "DIMANCHE — Repas : assembler le poulet/légumes déjà cuits avec du riz; le soir, servir le velouté préparé et une tartine complète si souhaité.",
+      "type": "Assemblage"
+    },
+    {
+      "week": 2,
+      "text": "DIMANCHE — Batchcooking (environ 1 h 45)",
+      "type": "Organisation"
+    },
+    {
+      "week": 2,
+      "text": "ÉTAPE 1 — DÉCOUPES : couper carottes, courgettes, tomates et oignons; laver la salade; préparer les ingrédients de la sauce tomate. Garder la viande crue séparée des légumes prêts à consommer.",
+      "type": "Découpes"
+    },
+    {
+      "week": 2,
+      "text": "🤖 Option Robot [Monsieur Cuisine] : hacher oignon et ail 5 s / vitesse 6; racler les parois. Ne pas mettre les légumes destinés à la salade dans le bol ayant contenu de la viande crue sans lavage complet.",
+      "type": "Robot"
+    },
+    {
+      "week": 2,
+      "text": "ÉTAPE 2 — FOUR D’AFFILÉE : cuire les légumes sur une plaque à 200 °C pendant 25 à 30 min, en remuant à mi-cuisson. Les légumes peuvent servir aux assiettes assemblées et à la pizza du vendredi.",
+      "type": "Four"
+    },
+    {
+      "week": 2,
+      "text": "ÉTAPE 3 — CUISSONS SIMULTANÉES : préparer le riz, cuire les œufs durs, faire mijoter la sauce tomate et préparer le velouté carottes-coco pendant la cuisson au four.",
+      "type": "Cuissons simultanées"
+    },
+    {
+      "week": 2,
+      "text": "🤖 Option Robot [Monsieur Cuisine] — sauce tomate : hacher les aromates 5 s / vitesse 6; ajouter les ingrédients et mijoter environ 20 min / 100 °C / vitesse 1, avec le bouchon selon le manuel et la texture souhaitée.",
+      "type": "Robot"
+    },
+    {
+      "week": 2,
+      "text": "🤖 Option Robot [Monsieur Cuisine] — velouté : cuire les carottes, l’oignon et le bouillon environ 20 à 25 min / 100 °C / vitesse 1; ajouter le lait de coco puis mixer progressivement 30 à 60 s / vitesse 5 à 8.",
+      "type": "Robot"
+    },
+    {
+      "week": 2,
+      "text": "REFROIDISSEMENT & CONSERVATION : conserver les préparations en boîtes propres et datées; réfrigérer rapidement les portions à consommer sous quelques jours et congeler le surplus adapté.",
+      "type": "Conservation"
+    },
+    {
+      "week": 2,
+      "text": "DIMANCHE — Repas : assembler le bœuf bourguignon déjà préparé avec les légumes/féculents; le soir, servir le velouté et une tartine. Adapter l’intitulé du velouté à la saison réelle.",
+      "type": "Assemblage"
     }
   ],
   "courses": [
