@@ -149,7 +149,7 @@ function guessAisle(name: string): string {
     return "🥛 Frais";
   }
   if (
-    /courgette|tomate|carotte|oignon|poireau|salade|citron|poivron|concombre|champignon|pomme de terre|ail|basilic|persil|melon|avocat|radis|haricot vert/.test(
+    /courgette|tomate|carotte|oignon|poireau|salade|citron|poivron|concombre|champignon|pomme de terre|patate|\\bpdt\\b|ail|basilic|persil|melon|avocat|radis|haricot vert/.test(
       f,
     )
   ) {
