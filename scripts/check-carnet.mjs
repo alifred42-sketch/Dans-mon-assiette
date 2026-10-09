@@ -11,7 +11,6 @@ const weekOf = (week) => data.plan.filter((slot) => slot.week === week);
 for (let week = 1; week <= 52; week += 1) {
   const slots = weekOf(week);
   if (slots.length !== 14) errors.push(`Semaine ${week}: ${slots.length} repas au lieu de 14.`);
-  const days = new Set(slots.map((slot) => slot.day));
   for (const day of ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"]) {
     for (const meal of ["Midi", "Soir"]) {
       if (!slots.some((slot) => slot.day === day && slot.meal === meal)) errors.push(`Semaine ${week}: repas manquant — ${day} ${meal}.`);
@@ -24,6 +23,8 @@ for (let week = 1; week <= 52; week += 1) {
   if (!fridayLunch?.name?.includes("Opération Vide-Frigo")) errors.push(`Semaine ${week}: le vendredi midi doit être « 🍱 Opération Vide-Frigo ! ».`);
   const fridayDinner = slots.find((slot) => slot.day === "VENDREDI" && slot.meal === "Soir");
   if (!/burger|pizza|tacos|quesadilla|croque|wrap|hot.?dog|kebab|nugget/i.test(fridayDinner?.name || "")) warnings.push(`Semaine ${week}: repas plaisir du vendredi soir à vérifier — ${fridayDinner?.name || "absent"}.`);
+  const saturdayMeals = slots.filter((slot) => slot.day === "SAMEDI");
+  if (!saturdayMeals.some((slot) => /burger|pizza|tacos|quesadilla|croque|wrap|hot.?dog|kebab|nugget|gratin convivial|repas festif/i.test(slot.name || ""))) warnings.push(`Semaine ${week}: aucun repas festif clairement identifié le samedi.`);
   const batch = data.batch.filter((item) => item.week === week);
   const stages = [
     ["découpe", /découpe|decoupe/i],
