@@ -28,7 +28,7 @@ function isJunk(line: string): boolean {
   return false;
 }
 
-function cleanName(raw: string): string {
+function canonicalIngredient(raw: string): string {\n  const value = fold(raw).replace(/\\b(patates|pdt)\\b/g, "pomme de terre").replace(/\\b(pommes de terre|pommes de terres)\\b/g, "pomme de terre").replace(/\\btomates? cerises?\\b/g, "tomate cerise").replace(/\\boignons? jaunes?\\b/g, "oignon").replace(/\\bcreme liquide|creme legere|creme epaisse\\b/g, "creme fraiche").replace(/\\bhuile d olive\\b/g, "huile olive").replace(/\\bail frais\\b/g, "ail");\n  return value.replace(/\\s+/g, " ").trim();\n}\n\nfunction cleanName(raw: string): string {
   return stripDecor(raw)
     .replace(/^[^\p{L}\p{N}]+/u, "")
     .replace(/\s*\([^)]*\)\s*$/g, "")
@@ -162,7 +162,7 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
   const official = (carnet.courses || []).filter((row) => row.week === week);
   const aisleByName = new Map<string, string>();
   for (const row of official) {
-    const key = fold(row.ingredient);
+    const key = canonicalIngredient(row.ingredient);
     if (key && !aisleByName.has(key)) aisleByName.set(key, row.aisle);
   }
 
@@ -183,7 +183,7 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
   }
 
   function add(parsed: Parsed, recipeName: string) {
-    const key = fold(parsed.name).replace(/creme liquide|creme legere/g, "creme fraiche");
+    const key = canonicalIngredient(parsed.name);
     if (!key) return;
     const cur = bag.get(key) || { names: [], recipes: [], parts: [] };
     if (!cur.names.includes(parsed.name)) cur.names.push(parsed.name);
