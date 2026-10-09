@@ -13,7 +13,7 @@ const categories = [
   ["Apéro", "#FCD5CE", "/recettes?filter=apero"],
   ["Recevoir", "#D0DBCE", "/recettes?filter=recevoir"],
   ["Je suis fatigué", "#EADAEC", "/recettes?filter=tired"],
-  ["Bonus", "#E8ECEF", "/carnet"],
+  ["Bonus", "#E8ECEF", "/recettes?filter=bonus"],
   ["Mr Cuisine", "#E5E7EB", "/recettes?filter=mr-cuisine"],
   ["Printemps", "#E2F0D9", "/recettes?filter=printemps"],
   ["Été", "#FCE4B5", "/recettes?filter=ete"],
