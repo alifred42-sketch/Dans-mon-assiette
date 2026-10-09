@@ -204,7 +204,7 @@ function prettyName(names: string[]): string {
 
 function findLinkedSauce(line: string) {
   const cleaned = fold(line);
-  const sauces = carnet.recipes.filter((candidate) => /sauce|marinade|vinaigrette|pesto|coulis/i.test(candidate.name));
+  const sauces = carnet.recipes.filter((candidate) => { const name = fold(candidate.name); return /(^|\s)(sauce|marinade|vinaigrette|pesto|coulis)\b/.test(name) && !/poulet|cabillaud|saumon|steak|boulettes|colin|merguez|ravioles|paupiettes|wrap/.test(name); });
   const exact = sauces.filter((candidate) => cleaned.includes(fold(candidate.name))).sort((a, b) => b.name.length - a.name.length)[0];
   if (exact) return exact;
   return sauces.filter((candidate) => {
