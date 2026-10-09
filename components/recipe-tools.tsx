@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Alternative = { id: string; name: string };
 function scaleLine(line: string, factor: number) {
@@ -14,10 +14,12 @@ function scaleLine(line: string, factor: number) {
   });
 }
 
-export function RecipeTools({ ingredients, alternatives }: { ingredients: string[]; alternatives: Alternative[] }) {
-  const [servings, setServings] = useState(2);
+export function RecipeTools({ recipeId, ingredients, alternatives }: { recipeId: string; ingredients: string[]; alternatives: Alternative[] }) {
+  const [servings, setServings] = useState(4);
+  useEffect(() => { try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; if (saved[recipeId]) setServings(saved[recipeId]); } catch {} }, [recipeId]);
+  useEffect(() => { try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; saved[recipeId] = servings; localStorage.setItem("assiette-recipe-servings", JSON.stringify(saved)); window.dispatchEvent(new CustomEvent("assiette-servings-change")); } catch {} }, [recipeId, servings]);
   const [showSos, setShowSos] = useState(false);
-  const scaled = useMemo(() => ingredients.map((line) => scaleLine(line, servings / 2)), [ingredients, servings]);
+  const scaled = useMemo(() => ingredients.map((line) => scaleLine(line, servings / 4)), [ingredients, servings]);
   return (
     <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -28,7 +30,7 @@ export function RecipeTools({ ingredients, alternatives }: { ingredients: string
           <button type="button" aria-label="Ajouter une personne" onClick={() => setServings(n => Math.min(20,n+1))} className="size-9 rounded-full bg-[#8FA89B] text-lg font-bold text-white">+</button>
         </div>
       </div>
-      <p className="text-xs text-[#6B6B67]">Quantités indicatives calculées à partir d’une base de 2 personnes.</p>
+      <p className="text-xs text-[#6B6B67]">Quantités indicatives calculées à partir d’une base de 4 personnes.</p>
       <details>
         <summary className="cursor-pointer text-sm font-semibold text-[#2B2B2B]">Voir les ingrédients adaptés à {servings} personne{servings>1?"s":""}</summary>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">{scaled.map((line,i)=><li key={i}>{line}</li>)}</ul>
