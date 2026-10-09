@@ -45457,6 +45457,53 @@
           ]
         }
       ]
+    },
+    {
+      "id": "test-assiette-batch-s1",
+      "name": "🍗 Assiette assemblée du batchcooking",
+      "ingredients": [
+        "600 g de poulet cuit et correctement conservé",
+        "600 g de riz cuit",
+        "500 g de courgettes ou autres légumes rôtis",
+        "1 c. à soupe d’huile d’olive ou de sauce maison",
+        "Herbes de Provence, sel et poivre"
+      ],
+      "steps": [
+        "Vérifier la conservation du poulet, du riz et des légumes; ne pas utiliser de reste dont la conservation est douteuse.",
+        "Réchauffer le poulet et le riz séparément jusqu’à ce qu’ils soient bien chauds à cœur.",
+        "Réchauffer les légumes rôtis au four à 180 °C pendant 8 à 10 minutes ou dans une poêle.",
+        "Dresser les assiettes, ajouter l’huile ou la sauce maison et parsemer d’herbes.",
+        "Servir immédiatement; remettre rapidement au frais les portions non servies plutôt que de les laisser à température ambiante."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Cuisine Chic Ouf — création maison",
+      "timePrep": "10 min",
+      "timeCook": "10 min (réchauffage)",
+      "servings": "4 personnes",
+      "blurb": "Une vraie assiette d’assemblage qui réutilise les bases préparées le dimanche.",
+      "sections": [
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g de poulet cuit et correctement conservé",
+            "600 g de riz cuit",
+            "500 g de courgettes ou autres légumes rôtis",
+            "1 c. à soupe d’huile d’olive ou de sauce maison",
+            "Herbes de Provence, sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Vérifier la conservation du poulet, du riz et des légumes; ne pas utiliser de reste dont la conservation est douteuse.",
+            "2. Réchauffer le poulet et le riz séparément jusqu’à ce qu’ils soient bien chauds à cœur.",
+            "3. Réchauffer les légumes rôtis au four à 180 °C pendant 8 à 10 minutes ou dans une poêle.",
+            "4. Dresser les assiettes, ajouter l’huile ou la sauce maison et parsemer d’herbes.",
+            "5. Servir immédiatement; remettre rapidement au frais les portions non servies plutôt que de les laisser à température ambiante."
+          ]
+        }
+      ]
     }
   ],
   "plan": [
@@ -45549,7 +45596,7 @@
       "day": "DIMANCHE",
       "meal": "Midi",
       "name": "🍗 Assiette assemblée du batchcooking",
-      "recipeId": "r-b5d84e8dfe"
+      "recipeId": "test-assiette-batch-s1"
     },
     {
       "week": 1,
