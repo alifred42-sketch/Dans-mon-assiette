@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { FicheBack } from "@/components/fiche-back";
 import { CookingWakeLock } from "@/components/cooking-wake-lock";
 import { RecipeTools } from "@/components/recipe-tools";
@@ -27,6 +28,13 @@ export default async function FichePage({
   const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
   const quickIds = ["r-c1ed1606a4", "r-c27d71faed", "r-50f64b1080"];
   const alternatives = quickIds.map((quickId) => carnet.recipes.find((r) => r.id === quickId)).filter((r): r is NonNullable<typeof r> => !!r).slice(0,3).map((r) => ({ id: r.id, name: r.name }));
+  const sauceRecipes = carnet.recipes.filter((candidate) => /sauce|marinade|vinaigrette|pesto|coulis/i.test(candidate.name));
+  function linkedInstruction(line: string) {
+    const normalized = line.toLocaleLowerCase("fr");
+    const target = sauceRecipes.find((candidate) => normalized.includes(candidate.name.toLocaleLowerCase("fr")));
+    if (!target) return line;
+    return <><span>{line.slice(0, normalized.indexOf(target.name.toLocaleLowerCase("fr")))}</span><Link href={`/fiche/${target.id}`} className="font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">{line.slice(normalized.indexOf(target.name.toLocaleLowerCase("fr")), normalized.indexOf(target.name.toLocaleLowerCase("fr")) + target.name.length)}</Link><span>{line.slice(normalized.indexOf(target.name.toLocaleLowerCase("fr")) + target.name.length)}</span></>;
+  }
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
     .filter(Boolean)
     .join(" · ");
