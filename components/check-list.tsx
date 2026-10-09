@@ -59,6 +59,7 @@ export function CheckList({
 
   const remaining = items.filter((item) => !checked[item.id]).length;
   let lastGroup: string | undefined;
+  const sortedItems = [...items].sort((a, b) => Number(!!checked[a.id]) - Number(!!checked[b.id]) || (a.group || "").localeCompare(b.group || "", "fr"));
 
   return (
     <div className="space-y-3" data-ready={ready ? "true" : "false"}>
@@ -66,21 +67,21 @@ export function CheckList({
         {items.length} lignes · {ready ? remaining : items.length} encore à faire.
       </p>
       <ul className="divide-y overflow-hidden rounded-2xl bg-card ring-1 ring-foreground/10">
-        {items.map((item) => {
+        {sortedItems.map((item) => {
           const done = !!checked[item.id];
           const showGroup = item.group && item.group !== lastGroup;
           lastGroup = item.group;
           return (
-            <li key={item.id}>
+            <li key={item.id} className={done ? "opacity-45 transition-opacity" : "bg-[#8FA89B]/10 transition-colors"}>
               {showGroup ? (
-                <p className="bg-muted/80 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                <p className="bg-[#E6DFD3] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-[#1A1A1A]">
                   {item.group}
                 </p>
               ) : null}
               <label className="flex cursor-pointer items-start gap-3 px-4 py-4 [touch-action:manipulation]">
                 <input
                   type="checkbox"
-                  className="peer mt-1 size-7 shrink-0 accent-[oklch(0.42_0.06_130)]"
+                  className="peer mt-1 size-7 shrink-0 accent-[#8FA89B]"
                   checked={done}
                   onChange={() => toggle(item.id)}
                 />
