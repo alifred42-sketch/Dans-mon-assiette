@@ -50,6 +50,7 @@ export default async function FichePage({
     <article className="space-y-6">
       <CookingWakeLock />
       <header className="space-y-2">
+        {recipe.image ? <img src={recipe.image} alt={recipe.imageAlt || recipe.name} className="aspect-[16/9] w-full rounded-2xl object-cover shadow-sm" /> : null}
         <h1 className="font-heading text-3xl leading-tight">{recipe.name}</h1>
         {recipe.blurb ? <p className="text-sm leading-relaxed text-muted-foreground">{recipe.blurb}</p> : null}
         {menuNames.some((n) => n !== recipe.name) && (
