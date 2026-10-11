@@ -7,12 +7,21 @@ import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, getRecipe, seasonLabel, w
 import { InstallApp } from "@/components/install-app";
 import { MealReminders } from "@/components/meal-reminders";
 import { WeekPicker } from "@/components/week-picker";
+import { SwitchMeal } from "@/components/switch-meal";
 
 export default function WeekPage() {
   const search = useSearchParams();
   const requestedWeek = search.get("w");
   const [currentWeek, setCurrentWeek] = useState(1);
   const [weekday, setWeekday] = useState(1);
+  const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
+  useEffect(() => {
+    const refresh = () => { try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); } };
+    refresh();
+    window.addEventListener("storage", refresh);
+    window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
+    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); };
+  }, []);
   useEffect(() => {
     const now = new Date();
     setWeekday(now.getDay());
@@ -29,7 +38,7 @@ export default function WeekPage() {
   const mondayDate = (() => { const now = new Date(); const d = new Date(now.getFullYear(), 0, 4); d.setDate(d.getDate() - ((d.getDay() + 6) % 7) + (week - 1) * 7); return d; })();
   const sundayDate = new Date(mondayDate); sundayDate.setDate(mondayDate.getDate() + 6);
   const dateRange = `${mondayDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long" })} au ${sundayDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long" })}`;
-  const slots = weekPlan(week);
+  const slots = weekPlan(week, recipeOverrides);
   const breakfast = breakfastForWeek(week);
 
   return (
@@ -66,8 +75,8 @@ export default function WeekPage() {
           return (
             <section key={day} className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
               <h2 className="mb-2 font-heading text-lg">{DAY_LABEL[day]}</h2>
-              <MealRow week={week} label="Midi" slot={midi} />
-              <MealRow week={week} label="Soir" slot={soir} />
+              <MealRow week={week} day={day} meal="Midi" label="Midi" slot={midi} />
+              <MealRow week={week} day={day} meal="Soir" label="Soir" slot={soir} />
             </section>
           );
         })}
@@ -93,10 +102,14 @@ export default function WeekPage() {
 function MealRow({
   week,
   label,
+  day,
+  meal,
   slot,
 }: {
   week: number;
   label: string;
+  day: string;
+  meal: string;
   slot?: { name: string; recipeId: string | null };
 }) {
   const recipe = getRecipe(slot?.recipeId);
@@ -114,6 +127,7 @@ function MealRow({
       ) : (
         <p className="mt-1 text-base">{name}</p>
       )}
+      {slot ? <SwitchMeal slot={{ week, day, meal, name, recipeId: slot.recipeId }} /> : null}
     </div>
   );
 }
