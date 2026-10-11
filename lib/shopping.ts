@@ -217,7 +217,7 @@ function findLinkedSauce(line: string) {
   }).sort((a, b) => a.name.length - b.name.length)[0];
 }
 
-export function shoppingForWeek(week: number, servingsByRecipe: Record<string, number> = {}): ShoppingItem[] {
+export function shoppingForWeek(week: number, servingsByRecipe: Record<string, number> = {}, overrides: Record<string, string> = {}): ShoppingItem[] {
   const official = (carnet.courses || []).filter((row) => row.week === week);
   const aisleByName = new Map<string, string>();
   for (const row of official) {
@@ -251,7 +251,7 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
     bag.set(key, cur);
   }
 
-  for (const slot of weekPlan(week)) {
+  for (const slot of weekPlan(week, overrides)) {
     const recipe = getRecipe(slot.recipeId);
     if (!recipe) continue;
     const foodSection = /ingr|épice|epice|légume|viande|fromage|sauce|appareil|pain|féculent|feculent|dessus|assais/i;
