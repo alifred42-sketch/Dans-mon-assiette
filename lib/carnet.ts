@@ -77,8 +77,8 @@ function seasonalScore(recipe: Recipe, season: Season): number {
   return SEASON_TERMS[season].reduce((score, term) => score + (text.includes(normalizedSeasonText(term)) ? 1 : 0), 0);
 }
 
-export function weekPlan(week: number): PlanSlot[] {
-  const slots = carnet.plan.filter((p) => p.week === week);
+export function weekPlan(week: number, overrides: Record<string, string> = {}): PlanSlot[] {
+  const slots = carnet.plan.filter((p) => p.week === week).map((slot) => { const id = overrides[`${slot.week}|${slot.day}|${slot.meal}`]; const recipe = id ? recipesById.get(id) : undefined; return recipe ? { ...slot, recipeId: recipe.id, name: recipe.name } : slot; });
   const season = seasonForWeek(week);
   const used = new Set<string>();
   return slots.map((slot) => {
