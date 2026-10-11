@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { matchingLines, matchesQuery } from "@/lib/search";
 
-export type RecipeListItem = {
+const COLLECTION_COLORS: Record<string, string> = {\n  recettes: "#8FA89B", recettes: "#8FA89B", batchcooking: "#D98A6C", courses: "#E6DFD3", sauces: "#F4EAD4", marinades: "#EAD5C3", epices: "#F2D4C9", express: "#FAD2CB", apero: "#FCD5CE", invites: "#D0DBCE", fatiguee: "#EADAEC", bonus: "#E8ECEF", mrcuisine: "#E5E7EB", printemps: "#E2F0D9", ete: "#FCE4B5", automne: "#F3C6B1", hiver: "#E1EDF2",\n};\n\nexport type RecipeListItem = {
   id: string;
   name: string;
   lines?: string[];
@@ -64,9 +64,9 @@ export function RecipeList({
             <Link
               key={col.slug}
               href={`/carnet/${col.slug}`}
-              className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10"
+              style={{ backgroundColor: COLLECTION_COLORS[col.slug] || "#E8ECEF", boxShadow: "0 3px 10px rgba(26,26,26,0.08)" }}\n              className="rounded-2xl p-4 text-[#1A1A1A] ring-1 ring-black/5 transition-shadow hover:shadow-md"
             >
-              <p className="font-heading text-lg leading-tight">{col.name}</p>
+              <p className="font-heading text-lg font-semibold leading-tight text-[#1A1A1A]">{col.name}</p>
               <p className="mt-1 text-xs text-muted-foreground">{col.count} fiches</p>
             </Link>
           ))}
