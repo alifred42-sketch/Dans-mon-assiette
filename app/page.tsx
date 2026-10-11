@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { BASE_PATH } from "@/lib/base-path";
 
 const categories = [
   ["Recettes", "#8FA89B", "/recettes"],
-  ["Batchcooking", "#D98A6C", "/batch?w=1"],
-  ["Courses", "#E6DFD3", "/courses?w=1"],
+  ["Batchcooking", "#D98A6C", "/batch"],
+  ["Courses", "#E6DFD3", "/courses"],
   ["Sauces", "#F4EAD4", "/recettes?filter=sauces"],
   ["Marinades", "#EAD5C3", "/recettes?filter=marinades"],
   ["Épices", "#F2D4C9", "/recettes?filter=epices"],
@@ -22,7 +23,23 @@ const categories = [
   ["Hiver", "#E1EDF2", "/recettes?filter=hiver"],
 ];
 
+function getCurrentWeek() {
+  const now = new Date();
+  const monday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  monday.setDate(monday.getDate() - ((monday.getDay() + 6) % 7));
+  const jan4 = new Date(now.getFullYear(), 0, 4);
+  const firstMonday = new Date(now.getFullYear(), 0, 4 - ((jan4.getDay() + 6) % 7));
+  const week = Math.floor((monday.getTime() - firstMonday.getTime()) / 604800000) + 1;
+  return Math.min(52, Math.max(1, week));
+}
+
 export default function HomePage() {
+  const [currentWeek, setCurrentWeek] = useState(1);
+
+  useEffect(() => {
+    setCurrentWeek(getCurrentWeek());
+  }, []);
+
   return (
     <main className="min-h-dvh bg-[#F9F9F7]">
       <div className="mx-auto flex w-full max-w-3xl flex-col items-center px-5 py-8 pb-14 text-center sm:px-8">
@@ -37,7 +54,7 @@ export default function HomePage() {
         </section>
 
         <Link
-          href="/semaine?w=1"
+          href={`/semaine?w=${currentWeek}`}
           className="mt-8 inline-flex min-h-16 w-full max-w-md items-center justify-center rounded-[22px] bg-[#8FA89B] px-7 text-lg font-extrabold text-white shadow-sm transition hover:brightness-95 active:scale-[0.99]"
         >
           Sauver ma semaine !
@@ -49,16 +66,21 @@ export default function HomePage() {
             <p className="mt-1 text-sm text-[#6B6B67]">Choisissez votre envie du moment.</p>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {categories.map(([label, color, href]) => (
-              <Link
-                key={label}
-                href={href}
-                style={{ backgroundColor: color }}
-                className="flex min-h-24 items-center justify-center rounded-2xl px-3 py-4 text-center text-sm font-bold text-[#2B2B2B] shadow-[0_1px_2px_rgba(43,43,43,0.05)] transition hover:-translate-y-0.5"
-              >
-                {label}
-              </Link>
-            ))}
+            {categories.map(([label, color, href]) => {
+              const destination = href.startsWith("/batch") || href.startsWith("/courses")
+                ? `${href}?w=${currentWeek}`
+                : href;
+              return (
+                <Link
+                  key={label}
+                  href={destination}
+                  style={{ backgroundColor: color }}
+                  className="flex min-h-24 items-center justify-center rounded-2xl px-3 py-4 text-center text-sm font-bold text-[#1A1A1A] shadow-[0_4px_12px_rgba(43,43,43,0.09)] transition hover:-translate-y-0.5"
+                >
+                  {label}
+                </Link>
+              );
+            })}
           </div>
         </section>
       </div>
