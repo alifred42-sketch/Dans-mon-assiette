@@ -30,11 +30,10 @@ function isJunk(line: string): boolean {
 
 function canonicalIngredient(raw: string): string {
   return fold(raw)
-    .replace(/\b(patates?|pdt|pommes de terres?|pommes terres?|pommes de terre)\b/g, "pomme de terre")
+    .replace(/\b(patates?|pdt|pommes? de terres?|pommes? terres?)\b/g, "pomme de terre")
     .replace(/\btomates? cerises?\b/g, "tomate cerise")
-    .replace(/\bsel et poivre\b/g, "sel poivre")
-    .replace(/\bsel\b/g, "sel poivre")
-    .replace(/\bpoivre\b/g, "sel poivre")
+    .replace(/\bsel\b/g, "sel")
+    .replace(/\bpoivre\b/g, "poivre")
     .replace(/\boignons? (jaunes?|blancs?|rouges?)\b/g, "oignon")
     .replace(/\bcreme(?: fraiche)?(?: liquide| legere| epaisse| entiere| semi epaisse| fleurette)?\b/g, "creme")
     .replace(/\bhuile (d )?olive\b/g, "huile olive")
