@@ -58,7 +58,7 @@ const SEASON_TERMS: Record<Season, string[]> = {
 };
 
 function normalizedSeasonText(value: string): string {
-  return value.toLocaleLowerCase("fr").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "");
+  return value.toLocaleLowerCase("fr").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
 function isCompleteRecipe(recipe: Recipe): boolean {
