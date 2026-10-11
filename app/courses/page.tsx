@@ -10,14 +10,16 @@ export default function CoursesPage() {
   const search = useSearchParams();
   const week = clampWeek(search.get("w"));
   const [servingsByRecipe, setServingsByRecipe] = useState<Record<string, number>>({});
+  const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
   useEffect(() => {
-    const refresh = () => { try { setServingsByRecipe(JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}")); } catch { setServingsByRecipe({}); } };
+    const refresh = () => { try { setServingsByRecipe(JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}")); } catch { setServingsByRecipe({}); } try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); } };
     refresh();
     window.addEventListener("storage", refresh);
     window.addEventListener("assiette-servings-change", refresh);
-    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("assiette-servings-change", refresh); };
+    window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
+    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("assiette-servings-change", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); };
   }, []);
-  const items = shoppingForWeek(week, servingsByRecipe).map((item) => ({
+  const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides).map((item) => ({
     id: `${item.aisle}|${item.label}`,
     title: item.label,
     detail: item.recipes.join(" · "),
