@@ -16,6 +16,8 @@ export type Recipe = {
   timePrep?: string;
   timeCook?: string;
   servings?: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export type PlanSlot = {
