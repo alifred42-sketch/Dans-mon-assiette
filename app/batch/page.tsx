@@ -49,22 +49,22 @@ export default function BatchPage() {
         <ul className="list-disc space-y-1 pl-5 text-sm">{changedPlan.map((slot, i) => <li key={`${slot.day}-${slot.meal}-${i}`}><strong>{slot.day.charAt(0) + slot.day.slice(1).toLowerCase()} · {slot.meal} :</strong> {getRecipe(slot.recipeId)?.name || slot.name}</li>)}</ul>
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🗓️ ORGANISATION : DIMANCHE BATCH</h2>
-        <p className="text-sm leading-relaxed text-muted-foreground">Préparez les contenants, sortez les ingrédients de la semaine et lisez les fiches avant de démarrer. Les quantités et réglages du robot doivent suivre les fiches de chaque recette.</p>
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">Étape 1 — Préparer le poste et les ingrédients</h2>
+        <p className="text-sm leading-relaxed text-muted-foreground">Lisez les fiches, sortez les ingrédients et les contenants, lavez les légumes puis regroupez les découpes. Préparez les plaques et préchauffez le four seulement quand vous connaissez les températures requises. Gardez séparés le cru et le cuit.</p>
         {prep.length ? <CheckList storageKey={`assiette-batch-prep-${week}`} items={prep} /> : <ol className="list-decimal space-y-2 pl-5 text-sm"><li>Lire les recettes prévues et regrouper les ingrédients par préparation.</li><li>Laver, éplucher et découper les légumes; séparer les ingrédients crus des aliments cuits.</li><li>Étiqueter les boîtes avec le nom du plat et le jour prévu.</li></ol>}
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🔥 Étape 2 — Optimiser le four</h2>
-        <p className="text-sm text-muted-foreground">Regroupez les préparations compatibles sur une même fournée; respectez la température et le temps propres à chaque recette.</p>
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🔥 Étape 2 — Lancer les cuissons longues au four</h2>
+        <p className="text-sm text-muted-foreground">Commencez par les légumes rôtis, gratins et autres cuissons longues. Regroupez sur une même fournée uniquement les plats compatibles en température et en durée; gardez un minuteur par préparation.</p>
         {oven.length ? <CheckList storageKey={`assiette-batch-oven-${week}`} items={oven} /> : <p className="text-sm">Aucune consigne de four détaillée n’est enregistrée pour cette semaine.</p>}
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Étape 3 — Cuissons simultanées au Monsieur Cuisine</h2>
-        <p className="text-sm text-muted-foreground">Suivez les durées, températures, vitesses et accessoires indiqués sur la fiche de chaque recette; ne transposez pas un réglage d’un plat à un autre.</p>
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Étape 3 — Utiliser le Monsieur Cuisine pendant le four</h2>
+        <p className="text-sm text-muted-foreground">Pendant que le four tourne, préparez au Monsieur Cuisine les sauces, soupes, céréales ou autres préparations compatibles. Enchaînez les recettes du plus propre au plus salissant si cela convient, et suivez exactement les quantités, durées, températures, vitesses et accessoires de chaque fiche. Ne lancez pas deux cuissons simultanées qui exigent votre surveillance au même moment.</p>
         {robot.length ? <CheckList storageKey={`assiette-batch-robot-${week}`} items={robot} /> : <p className="text-sm">Aucun réglage Monsieur Cuisine dédié n’est enregistré dans le batch de cette semaine.</p>}
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🧺 Conservation au frais & au congélateur ❄️</h2>
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">Étape 4 — Refroidir, portionner et conserver</h2>
         <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed">
           <li><strong>Au réfrigérateur :</strong> laissez refroidir rapidement, rangez dans des boîtes propres et fermées, puis placez au frais sans laisser longtemps à température ambiante.</li>
           <li><strong>Au congélateur ❄️ :</strong> congelez en portions adaptées, étiquetez avec le nom et la date, et décongelez au réfrigérateur.</li>
@@ -73,9 +73,9 @@ export default function BatchPage() {
         {storage.length ? <CheckList storageKey={`assiette-batch-storage-${week}`} items={storage} /> : null}
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🍽️ Assemblage de la semaine — Jour J</h2>
-        <p className="text-sm leading-relaxed text-muted-foreground">Le jour du repas, assemblez les bases préparées, ajoutez les éléments frais au dernier moment et réchauffez seulement la portion nécessaire. Vérifiez la fiche du plat pour les finitions.</p>
-        {assembly.length ? <CheckList storageKey={`assiette-batch-assembly-${week}`} items={assembly} /> : <ol className="list-decimal space-y-2 pl-5 text-sm"><li><strong>Lundi à mardi :</strong> utiliser en priorité les préparations réfrigérées prévues pour ces jours.</li><li><strong>Mercredi à vendredi :</strong> compléter avec les portions congelées si la recette s’y prête, puis décongeler au réfrigérateur.</li><li>Ajouter herbes, sauces et garnitures fraîches au moment de servir.</li></ol>}
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">Étape 5 — Assemblage au moment du repas</h2>
+        <p className="text-sm leading-relaxed text-muted-foreground">Étape 5 — Finir et assembler au moment du repas. Gardez les herbes, salades, garnitures fragiles et sauces à ajouter séparément. Réchauffez uniquement la portion nécessaire et vérifiez la fiche pour les finitions.</p>
+        {assembly.length ? <CheckList storageKey={`assiette-batch-assembly-${week}`} items={assembly} /> : <ol className="list-decimal space-y-2 pl-5 text-sm"><li><strong>En début de semaine :</strong> utiliser les préparations réfrigérées prévues pour les premiers jours.</li><li><strong>Pour la suite :</strong> congeler rapidement les portions qui ne seront pas consommées dans les délais adaptés, puis les décongeler au réfrigérateur.<li>Ajouter herbes, sauces et garnitures fraîches au moment de servir.</li></ol>}
       </section>
       {general.length ? <section className="space-y-2"><h2 className="font-heading text-lg font-bold">Autres tâches notées dans le carnet</h2><CheckList storageKey={`assiette-batch-general-${week}`} items={general} /></section> : null}
       {allItems.length === 0 ? <p className="rounded-2xl bg-[#8FA89B]/10 p-4 text-sm text-[#466653]">Le carnet ne contient pas encore de tâches détaillées pour cette semaine. Utilisez le plan ci-dessus comme trame, et reportez les réglages précis depuis les fiches recettes.</p> : null}
