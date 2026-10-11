@@ -43,10 +43,21 @@ export default function RecettesPage() {
       default: return true;
     }
   };
-  const recipes = carnet.recipes
+  const matchingRecipes = carnet.recipes
     .filter((recipe) => !filter || (selectedIds ? selectedIds.has(recipe.id) : fallbackFilter(recipe)))
-    .sort((a, b) => a.name.localeCompare(b.name, "fr"))
-    .map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
+    .filter((recipe) => filter !== "tired" || (
+      recipe.ingredients.filter((line) => line.trim() && !/^ingr[ée]dients à prévoir/i.test(line)).length >= 2 &&
+      recipe.steps.filter((line) => line.trim()).length >= 2
+    ))
+    .sort((a, b) => a.name.localeCompare(b.name, "fr"));
+
+  // Le SOS propose 5 recettes complètes par jour, avec une sélection qui tourne automatiquement.
+  const dailyOffset = Math.floor(Date.now() / 86400000) % Math.max(1, matchingRecipes.length);
+  const dailyRecipes = filter === "tired" && matchingRecipes.length > 5
+    ? [...matchingRecipes.slice(dailyOffset), ...matchingRecipes.slice(0, dailyOffset)].slice(0, 5)
+    : matchingRecipes;
+
+  const recipes = dailyRecipes.map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
 
   return (
     <div className="space-y-6">
