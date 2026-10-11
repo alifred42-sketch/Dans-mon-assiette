@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BASE_PATH } from "@/lib/base-path";
+import { InstallApp } from "@/components/install-app";
 
 const categories = [
   ["Recettes", "#8FA89B", "/recettes"],
@@ -95,6 +96,7 @@ export default function HomePage() {
             })}
           </div>
         </section>
+        <div className="mt-8 w-full max-w-md text-left"><InstallApp /></div>
       </div>
     </main>
   );
