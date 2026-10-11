@@ -60,6 +60,18 @@ export default function HomePage() {
           Sauver ma semaine !
         </Link>
 
+        <Link
+          href="/recettes?filter=tired"
+          className="mt-5 flex w-full max-w-md items-center gap-4 rounded-2xl border border-[#EADAEC] bg-[#EADAEC] px-5 py-4 text-left text-[#1A1A1A] shadow-[0_4px_12px_rgba(43,43,43,0.09)] transition hover:-translate-y-0.5"
+        >
+          <span aria-hidden="true" className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-white/70 text-2xl">🆘</span>
+          <span>
+            <span className="block text-base font-bold">SOS : j’ai pas le goût !</span>
+            <span className="mt-1 block text-sm font-medium">Je suis fatigué ? Trouvons une recette simple, sans prise de tête.</span>
+          </span>
+          <span aria-hidden="true" className="ml-auto text-xl font-bold">›</span>
+        </Link>
+
         <section className="mt-12 w-full">
           <div className="mb-5 text-left">
             <h2 className="text-2xl font-extrabold text-[#2B2B2B]">Tout est là pour vous simplifier la vie</h2>
