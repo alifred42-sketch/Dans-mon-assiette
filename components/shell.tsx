@@ -25,11 +25,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-dvh flex-col bg-[#F9F9F7]">
-      {showSplash ? <div className={`splash-screen fixed inset-0 z-[100] flex flex-col items-center justify-center gap-6 bg-[#F9F9F7] px-6 py-8 text-center ${showSplash ? "splash-screen-visible" : "splash-screen-hidden"}`} role="status" aria-label="Cuisine Chic Ouf, chargement"><img src={`${BASE_PATH}/logo-cuisine-chic-ouf.svg`} alt="Logo officiel CUISINE CHIC OUF !" className="h-auto w-[min(78vw,520px)] max-w-full object-contain" /><p className="max-w-xl text-base font-normal leading-7 text-[#2B2B2B] sm:text-xl sm:leading-8">Pas de panique, on mange quoi ce soir ? 52 semaines de menus, du batchcooking simple et vos listes de courses automatisées. Cuisinez chic, respirez... OUF !</p></div> : null}
+      {showSplash ? <div className={`splash-screen fixed inset-0 z-[100] flex flex-col items-center justify-center gap-6 bg-[#F9F9F7] px-6 py-8 text-center ${showSplash ? "splash-screen-visible" : "splash-screen-hidden"}`} role="status" aria-label="Cuisine Chic Ouf, chargement"><img src={`${BASE_PATH}/logo-cuisine-chic-ouf.svg`} alt="Logo officiel CUISINE CHIC OUF !" className="block h-auto w-[min(86vw,560px)] max-w-full shrink-0 object-contain drop-shadow-[0_5px_14px_rgba(43,43,43,0.08)]" loading="eager" fetchPriority="high" /><p className="max-w-xl text-base font-normal leading-7 text-[#2B2B2B] sm:text-xl sm:leading-8">Pas de panique, on mange quoi ce soir ? 52 semaines de menus, du batchcooking simple et vos listes de courses automatisées. Cuisinez chic, respirez... OUF !</p></div> : null}
       <header className="sticky top-0 z-40 border-b border-[#E9E9E4] bg-[#F9F9F7]/95 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-3xl items-center justify-center px-4">
           <Link href="/" aria-label="CUISINE CHIC OUF !">
-            <img src={`${BASE_PATH}/logo-cuisine-chic-ouf.svg`} alt="Logo officiel CUISINE CHIC OUF !" className="h-auto w-[min(42vw,220px)] max-w-full object-contain" />
+            <img src={`${BASE_PATH}/logo-cuisine-chic-ouf.svg`} alt="Logo officiel CUISINE CHIC OUF !" className="block h-auto w-[min(54vw,260px)] max-w-full object-contain drop-shadow-[0_2px_6px_rgba(43,43,43,0.07)]" loading="eager" fetchPriority="high" />
           </Link>
         </div>
       </header>
