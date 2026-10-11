@@ -1,8 +1,9 @@
+"use client";
+
 import { carnet, getCollections } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 import { useSearchParams } from "next/navigation";
-"use client";
 
 const FILTER_LABELS: Record<string, string> = {
   sauces: "Sauces", marinades: "Marinades", epices: "Épices & aromates",
