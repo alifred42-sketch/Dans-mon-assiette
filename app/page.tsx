@@ -44,7 +44,7 @@ export default function HomePage() {
   return (
     <main className="min-h-dvh bg-[#F9F9F7]">
       <div className="mx-auto flex w-full max-w-3xl flex-col items-center px-5 py-8 pb-14 text-center sm:px-8">
-        <img src={`${BASE_PATH}/logo-cuisine-chic-ouf.svg`} alt="CUISINE CHIC OUF !" className="h-auto w-full max-w-[260px] sm:max-w-[310px] drop-shadow-[0_5px_12px_rgba(43,43,43,0.08)]" />
+        <img src={`${BASE_PATH}/logo-cuisine-chic-ouf.svg`} alt="CUISINE CHIC OUF !" className="block h-auto w-[min(82vw,340px)] max-w-full shrink-0 object-contain drop-shadow-[0_5px_12px_rgba(43,43,43,0.10)]" loading="eager" fetchPriority="high" />
         <section className="mt-7 max-w-2xl">
           <h1 className="text-4xl font-black tracking-tight text-[#2B2B2B] sm:text-6xl">CUISINE CHIC OUF !</h1>
           <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[#555551] sm:text-lg sm:leading-8">
