@@ -1,7 +1,8 @@
 import data from "@/data/carnet.json";
+import { trendRecipes } from "@/data/recettes-tendances";
 import type { Breakfast, Carnet, Collection, PlanSlot, Recipe } from "./types";
 
-export const carnet = data as Carnet;
+export const carnet = { ...data, recipes: [...data.recipes, ...trendRecipes] } as Carnet;
 
 export const DAYS = [
   "LUNDI",
