@@ -79,24 +79,27 @@ function seasonalScore(recipe: Recipe, season: Season): number {
 }
 
 export function weekPlan(week: number, overrides: Record<string, string> = {}): PlanSlot[] {
-  const slots = carnet.plan.filter((p) => p.week === week).map((slot) => { const id = overrides[`${slot.week}|${slot.day}|${slot.meal}`]; const recipe = id ? recipesById.get(id) : undefined; return recipe ? { ...slot, recipeId: recipe.id, name: recipe.name } : slot; });
+  const slots = carnet.plan.filter((p) => p.week === week).map((slot) => {
+    const id = overrides[`${slot.week}|${slot.day}|${slot.meal}`];
+    const recipe = id ? recipesById.get(id) : undefined;
+    return recipe ? { ...slot, recipeId: recipe.id, name: recipe.name } : slot;
+  });
   const season = seasonForWeek(week);
   const used = new Set<string>();
   return slots.map((slot) => {
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
+    const currentComplete = current ? isCompleteRecipe(current) : false;
     const currentScore = current ? seasonalScore(current, season) : 0;
-    // On conserve une recette déjà adaptée à la saison ; sinon on cherche une fiche complète
-    // et pertinente parmi les recettes existantes, sans créer de recette ni de faux contenu.
-    if (current && currentScore > 0) {
+    if (current && currentComplete && currentScore > 0 && !used.has(current.id)) {
       used.add(current.id);
-      return slot;
+      return { ...slot, name: current.name };
     }
-    const alternatives = carnet.recipes
+    const completeAlternatives = carnet.recipes
+      .filter((recipe) => isCompleteRecipe(recipe) && !used.has(recipe.id) && recipe.id !== current?.id)
       .map((recipe) => ({ recipe, score: seasonalScore(recipe, season) }))
-      .filter(({ recipe, score }) => score > 0 && !used.has(recipe.id) && recipe.id !== current?.id)
       .sort((a, b) => b.score - a.score || a.recipe.name.localeCompare(b.recipe.name, "fr"));
-    const replacement = alternatives[0]?.recipe;
-    if (!replacement || (currentScore > 0 && currentScore >= alternatives[0].score)) {
+    const replacement = completeAlternatives.find((item) => item.score > 0)?.recipe || completeAlternatives[0]?.recipe;
+    if (!replacement) {
       if (current) used.add(current.id);
       return slot;
     }
