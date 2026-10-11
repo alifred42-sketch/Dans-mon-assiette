@@ -15,10 +15,10 @@ const heading = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Dans mon assiette",
-  description: "Les 52 semaines d’Aline : choisir la semaine, ouvrir une fiche, recalculer les courses.",
+  title: "CUISINE CHIC OUF !",
+  description: "Pas de panique, on mange quoi ce soir ? 52 semaines de menus, du batchcooking simple et vos listes de courses automatisées.",
   manifest: `${BASE_PATH}/manifest.json`,
-  appleWebApp: { capable: true, title: "Dans mon assiette", statusBarStyle: "default" },
+  appleWebApp: { capable: true, title: "CUISINE CHIC OUF !", statusBarStyle: "default" },
   icons: {
     icon: [
       { url: `${BASE_PATH}/icon.svg`, type: "image/svg+xml" },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#4a5a3a",
+  themeColor: "#8FA89B",
   width: "device-width",
   initialScale: 1,
 };

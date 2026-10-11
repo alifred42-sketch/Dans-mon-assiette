@@ -1,14 +1,14 @@
 {
   "id": "/Dans-mon-assiette/",
-  "name": "Dans mon assiette",
-  "short_name": "Assiette",
-  "description": "Les 52 semaines d’Aline : fiches, courses et batch.",
+  "name": "CUISINE CHIC OUF !",
+  "short_name": "CHIC OUF",
+  "description": "52 semaines de menus, batchcooking simple et listes de courses automatisées.",
   "start_url": "/Dans-mon-assiette/",
   "scope": "/Dans-mon-assiette/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#f6f1e6",
-  "theme_color": "#4a5a3a",
+  "background_color": "#F9F9F7",
+  "theme_color": "#8FA89B",
   "lang": "fr",
   "icons": [
     {

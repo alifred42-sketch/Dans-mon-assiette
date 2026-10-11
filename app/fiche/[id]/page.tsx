@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
-import { FicheBack } from "@/components/fiche-back";
-import { carnet, getCollections, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
+import Link from "next/link";
+import { CookingWakeLock } from "@/components/cooking-wake-lock";
+import { RecipeTools } from "@/components/recipe-tools";
+import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 
 export function generateStaticParams() {
   return carnet.recipes.map((recipe) => ({ id: recipe.id }));
@@ -19,16 +21,34 @@ export default async function FichePage({
     ...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.name)),
   ];
   const weeks = [...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.week))];
-  const fromCol = getCollections().find((col) => col.recipeIds.includes(recipe.id));
-  const sections = (recipe.sections || []).filter((sec) => sec.title || sec.lines.length);
+  const sections = (recipe.sections || []).filter((sec) => (sec.title || sec.lines.length) && !/ingr[eé]dients?|viande|légumes?|féculents?|fromage|épices?|aromates|pain|composition|dans le saladier|avec\b|accompagnement|selon saison|soupe\s*:|tartine\s*:/i.test(sec.title || ""));
   const ings = recipe.ingredients.filter((line) => line.trim());
   const shopIngs = ings.filter((line) => !isPlaceholderIngredient(line));
+  const quickIds = ["r-c1ed1606a4", "r-c27d71faed", "r-50f64b1080"];
+  const alternatives = quickIds.map((quickId) => carnet.recipes.find((r) => r.id === quickId)).filter((r): r is NonNullable<typeof r> => !!r).slice(0,3).map((r) => ({ id: r.id, name: r.name }));
+  const sauceRecipes = carnet.recipes.filter((candidate) => { const name = cleanMatch(candidate.name); return /(^|\s)(sauce|marinade|vinaigrette|pesto|coulis)\b/.test(name) && !/poulet|cabillaud|saumon|steak|boulettes|colin|merguez|ravioles|paupiettes|wrap/.test(name); });
+  function cleanMatch(value: string) { return value.toLocaleLowerCase("fr").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim(); }
+  function findSauceRecipe(line: string) {
+    const cleaned = cleanMatch(line);
+    const exact = sauceRecipes.filter((candidate) => cleaned.includes(cleanMatch(candidate.name))).sort((a, b) => b.name.length - a.name.length)[0];
+    if (exact) return exact;
+    return sauceRecipes.filter((candidate) => {
+      const name = cleanMatch(candidate.name);
+      return cleaned.length >= 6 && name.includes(cleaned);
+    }).sort((a, b) => a.name.length - b.name.length)[0];
+  }
+  const ingredientTargets = shopIngs.reduce<Record<number, { id: string; name: string }>>((targets, line, index) => { const target = findSauceRecipe(line); if (target) targets[index] = { id: target.id, name: target.name }; return targets; }, {});
+  function linkedInstruction(line: string) {
+    const target = findSauceRecipe(line);
+    if (!target) return line;
+    return <Link href={"/fiche/" + target.id} className="font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">{line}</Link>;
+  }
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
     .filter(Boolean)
     .join(" · ");
   return (
     <article className="space-y-6">
-      <FicheBack fromCol={fromCol ? { slug: fromCol.slug, name: fromCol.name } : undefined} />
+      <CookingWakeLock />
       <header className="space-y-2">
         <h1 className="font-heading text-3xl leading-tight">{recipe.name}</h1>
         {recipe.blurb ? <p className="text-sm leading-relaxed text-muted-foreground">{recipe.blurb}</p> : null}
@@ -44,6 +64,8 @@ export default async function FichePage({
         )}
       </header>
 
+      <RecipeTools recipeId={recipe.id} ingredients={shopIngs} alternatives={alternatives} baseServings={Number.parseInt(recipe.servings || "4", 10) || 4} ingredientTargets={ingredientTargets} />
+
       {sections.length > 0 ? (
         sections.map((sec, si) => (
           <section key={`${si}-${sec.title}`}>
@@ -52,7 +74,7 @@ export default async function FichePage({
               <ul className="mt-2 divide-y">
                 {sec.lines.map((line, li) => (
                   <li key={`${si}-${li}`} className="py-2 text-sm leading-relaxed">
-                    {line}
+                    {linkedInstruction(line)}
                   </li>
                 ))}
               </ul>
@@ -62,25 +84,11 @@ export default async function FichePage({
       ) : (
         <>
           <section>
-            <h2 className="font-heading text-xl">🛒 Ingrédients</h2>
-            {ings.length === 0 ? (
-              <p className="mt-2 text-sm text-muted-foreground">Pas de liste dans cette fiche.</p>
-            ) : (
-              <ul className="mt-2 divide-y">
-                {ings.map((line, i) => (
-                  <li key={`ing-${i}`} className="py-2 text-sm leading-relaxed">
-                    {line}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
-          <section>
             <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
             {recipe.steps.length > 0 ? (
               <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
                 {recipe.steps.map((step, i) => (
-                  <li key={`step-${i}`}>{step}</li>
+                  <li key={`step-${i}`}>{linkedInstruction(step)}</li>
                 ))}
               </ol>
             ) : (
@@ -94,7 +102,7 @@ export default async function FichePage({
               <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
               <ul className="mt-2 space-y-1 text-sm">
                 {recipe.robot.map((line, i) => (
-                  <li key={`robot-${i}`}>{line}</li>
+                  <li key={`robot-${i}`}>{linkedInstruction(line)}</li>
                 ))}
               </ul>
             </section>
@@ -102,6 +110,22 @@ export default async function FichePage({
         </>
       )}
 
+      {sections.length > 0 && recipe.steps.length > 0 && !sections.some((sec) => /préparation|preparation|étapes|etapes|instructions/i.test(sec.title)) ? (
+        <section>
+          <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
+          <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+            {recipe.steps.map((step, i) => <li key={`step-extra-${i}`}>{linkedInstruction(step)}</li>)}
+          </ol>
+        </section>
+      ) : null}
+      {sections.length > 0 && recipe.robot.length > 0 && !sections.some((sec) => /mr cuisine|robot/i.test(sec.title)) ? (
+        <section>
+          <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
+          <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+            {recipe.robot.map((line, i) => <li key={`robot-extra-${i}`}>{linkedInstruction(line)}</li>)}
+          </ol>
+        </section>
+      ) : null}
       {ings.length > 0 && shopIngs.length === 0 && (
         <p className="text-xs text-muted-foreground">Rien de cette fiche n’est ajouté aux courses.</p>
       )}
