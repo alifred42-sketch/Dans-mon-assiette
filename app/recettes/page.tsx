@@ -1,6 +1,8 @@
 import { carnet, getCollections } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
+import { useSearchParams } from "next/navigation";
+"use client";
 
 const FILTER_LABELS: Record<string, string> = {
   sauces: "Sauces", marinades: "Marinades", epices: "Épices & aromates",
@@ -9,9 +11,9 @@ const FILTER_LABELS: Record<string, string> = {
   automne: "Automne", hiver: "Hiver", bonus: "Bonus du carnet",
 };
 
-export default async function RecettesPage({ searchParams }: { searchParams: Promise<{ filter?: string }> }) {
-  const params = await searchParams;
-  const filter = params.filter || "";
+export default function RecettesPage() {
+  const searchParams = useSearchParams();
+  const filter = searchParams.get("filter") || "";
   const allCollections = getCollections();
   const collections = allCollections.filter((col) => col.recipeIds.length > 0).map((col) => ({ slug: col.slug, name: col.name, count: col.recipeIds.length }));
   const slugByFilter: Record<string, string> = {
