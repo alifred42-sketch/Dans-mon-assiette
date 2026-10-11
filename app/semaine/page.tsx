@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, getRecipe, weekPlan } from "@/lib/carnet";
+import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, getRecipe, seasonLabel, weekPlan } from "@/lib/carnet";
 import { InstallApp } from "@/components/install-app";
 import { MealReminders } from "@/components/meal-reminders";
 import { WeekPicker } from "@/components/week-picker";
@@ -35,7 +35,7 @@ export default function WeekPage() {
   return (
     <div className="space-y-5">
       <div>
-        <h1 className="font-heading text-3xl leading-tight">Semaine du {dateRange}</h1>
+        <h1 className="font-heading text-3xl leading-tight">Semaine du {dateRange}</h1>\n        <p className="mt-2 inline-flex rounded-full bg-[#F3C6B1] px-3 py-1 text-sm font-semibold text-[#1A1A1A]">Menus de saison : {seasonLabel(week)}</p>
         {breakfast?.title ? (
           <p className="mt-1 text-sm text-muted-foreground">{breakfast.title.replace(/^SEMAINE \d+\s+[—–-]\s+/i, "")}</p>
         ) : (
