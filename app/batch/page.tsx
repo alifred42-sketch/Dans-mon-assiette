@@ -1,7 +1,8 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { batchForWeek, clampWeek } from "@/lib/carnet";
+import { useEffect, useState } from "react";
+import { batchForWeek, clampWeek, getRecipe, weekPlan } from "@/lib/carnet";
 import { CheckList, type CheckItem } from "@/components/check-list";
 import { WeekPicker } from "@/components/week-picker";
 
@@ -12,6 +13,15 @@ function matches(item: CheckItem, pattern: RegExp) {
 export default function BatchPage() {
   const search = useSearchParams();
   const week = clampWeek(search.get("w"));
+  const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
+  useEffect(() => {
+    const refresh = () => { try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); } };
+    refresh();
+    window.addEventListener("storage", refresh);
+    window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
+    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); };
+  }, []);
+  const changedPlan = weekPlan(week, recipeOverrides);
   const allItems = batchForWeek(week);
   const assigned = new Set<string>();
   function take(pattern: RegExp) {
@@ -33,6 +43,11 @@ export default function BatchPage() {
         <p className="mt-1 text-sm text-muted-foreground">Organisation du dimanche pour alléger les repas de la semaine {week}.</p>
       </div>
       <WeekPicker week={week} path="/batch" />
+      <section className="space-y-2 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+        <h2 className="font-heading text-lg font-extrabold text-[#2B2B2B]">🍽️ Recettes prévues pour cette semaine</h2>
+        <p className="text-sm text-muted-foreground">Cette liste suit les recettes que vous avez choisies dans le menu.</p>
+        <ul className="list-disc space-y-1 pl-5 text-sm">{changedPlan.map((slot, i) => <li key={`${slot.day}-${slot.meal}-${i}`}><strong>{slot.day.charAt(0) + slot.day.slice(1).toLowerCase()} · {slot.meal} :</strong> {getRecipe(slot.recipeId)?.name || slot.name}</li>)}</ul>
+      </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🗓️ ORGANISATION : DIMANCHE BATCH</h2>
         <p className="text-sm leading-relaxed text-muted-foreground">Préparez les contenants, sortez les ingrédients de la semaine et lisez les fiches avant de démarrer. Les quantités et réglages du robot doivent suivre les fiches de chaque recette.</p>
