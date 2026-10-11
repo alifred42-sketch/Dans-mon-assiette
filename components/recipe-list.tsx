@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { matchingLines, matchesQuery } from "@/lib/search";
 
-const COLLECTION_COLORS: Record<string, string> = {\n  recettes: "#8FA89B", recettes: "#8FA89B", batchcooking: "#D98A6C", courses: "#E6DFD3", sauces: "#F4EAD4", marinades: "#EAD5C3", epices: "#F2D4C9", express: "#FAD2CB", apero: "#FCD5CE", invites: "#D0DBCE", fatiguee: "#EADAEC", bonus: "#E8ECEF", mrcuisine: "#E5E7EB", printemps: "#E2F0D9", ete: "#FCE4B5", automne: "#F3C6B1", hiver: "#E1EDF2",\n};\n\nexport type RecipeListItem = {
+const COLLECTION_COLORS: Record<string, string> = {\n  recettes: "#8FA89B", batchcooking: "#D98A6C", courses: "#E6DFD3", sauces: "#F4EAD4", marinades: "#EAD5C3", epices: "#F2D4C9", express: "#FAD2CB", apero: "#FCD5CE", invites: "#D0DBCE", fatiguee: "#EADAEC", bonus: "#E8ECEF", mrcuisine: "#E5E7EB", printemps: "#E2F0D9", ete: "#FCE4B5", automne: "#F3C6B1", hiver: "#E1EDF2",\n};\n\nexport type RecipeListItem = {
   id: string;
   name: string;
   lines?: string[];
