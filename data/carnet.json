@@ -56156,8 +56156,8 @@
       "week": 3,
       "day": "JEUDI",
       "meal": "Soir",
-      "name": "🧀 Tartine chaude chèvre tomate",
-      "recipeId": "r-d3bd7726ab"
+      "name": "🥚 Œufs cocotte poireaux chèvre",
+      "recipeId": "r-48999379ec"
     },
     {
       "week": 3,
@@ -56513,8 +56513,8 @@
       "week": 7,
       "day": "MARDI",
       "meal": "Midi",
-      "name": "🐟 Papillote de saumon aux légumes",
-      "recipeId": "r-85cce941ee"
+      "name": "🐟 Saumon poireaux crème citron",
+      "recipeId": "r-19ce31994f"
     },
     {
       "week": 7,
@@ -56709,8 +56709,8 @@
       "week": 9,
       "day": "MARDI",
       "meal": "Midi",
-      "name": "🍛 Curry doux de poulet coco",
-      "recipeId": "r-fa22488bd2"
+      "name": "🍛 RECETTE 191 — Chili con carne doux",
+      "recipeId": "r-50e9f84517"
     },
     {
       "week": 9,
@@ -56744,8 +56744,8 @@
       "week": 9,
       "day": "JEUDI",
       "meal": "Soir",
-      "name": "🥚 Omelette mexicaine",
-      "recipeId": "r-4f91a29513"
+      "name": "🥚 Œufs cocotte champignons",
+      "recipeId": "r-777fb77d40"
     },
     {
       "week": 9,
@@ -56919,8 +56919,8 @@
       "week": 11,
       "day": "MERCREDI",
       "meal": "Midi",
-      "name": "🍛 Curry doux de poulet aux légumes",
-      "recipeId": "r-1fa9d156b4"
+      "name": "🍲 Blanquette de poulet légère",
+      "recipeId": "r-21c5d3d2ba"
     },
     {
       "week": 11,
@@ -57311,8 +57311,8 @@
       "week": 15,
       "day": "MERCREDI",
       "meal": "Midi",
-      "name": "🍛 Curry de poulet coco doux",
-      "recipeId": "r-fa22488bd2"
+      "name": "🥣 Velouté doux courgette-basilic",
+      "recipeId": "cco-veloute-courgette-basilic"
     },
     {
       "week": 15,
@@ -58459,8 +58459,8 @@
       "week": 27,
       "day": "LUNDI",
       "meal": "Midi",
-      "name": "🍗 Sauté de poulet façon basquaise",
-      "recipeId": "r-7c7db17fc6"
+      "name": "🥗 RECETTE 059 — Salade façon niçoise revisitée",
+      "recipeId": "r-c450588386"
     },
     {
       "week": 27,
@@ -58935,8 +58935,8 @@
       "week": 31,
       "day": "DIMANCHE",
       "meal": "Midi",
-      "name": "🍗 Poulet rôti façon grand-mère & légumes du jardin",
-      "recipeId": "r-94dd4ec92d"
+      "name": "🥗 RECETTE 059 — Salade façon niçoise revisitée",
+      "recipeId": "r-c450588386"
     },
     {
       "week": 31,
@@ -59152,8 +59152,8 @@
       "week": 34,
       "day": "LUNDI",
       "meal": "Soir",
-      "name": "🥗 Salade fraîche poulet citron & légumes croquants",
-      "recipeId": "r-85fc3629ae"
+      "name": "🍤 Salade crevettes avocat citron",
+      "recipeId": "r-be651a77eb"
     },
     {
       "week": 34,
@@ -59355,8 +59355,8 @@
       "week": 36,
       "day": "MARDI",
       "meal": "Midi",
-      "name": "🍗 Poulet aux olives, citron confit & légumes",
-      "recipeId": "r-1aff7d1098"
+      "name": "🍤 Salade crevettes avocat citron",
+      "recipeId": "r-be651a77eb"
     },
     {
       "week": 36,
@@ -59663,8 +59663,8 @@
       "week": 39,
       "day": "MERCREDI",
       "meal": "Midi",
-      "name": "🍱 Bowl saumon teriyaki maison",
-      "recipeId": "r-c3947a1435"
+      "name": "🐟 Saumon poireaux crème citron",
+      "recipeId": "r-19ce31994f"
     },
     {
       "week": 39,
@@ -60594,8 +60594,8 @@
       "week": 48,
       "day": "SAMEDI",
       "meal": "Soir",
-      "name": "🥗 Poke bowl façon saumon & légumes croquants",
-      "recipeId": "r-c3947a1435"
+      "name": "🐟 Saumon poireaux crème citron",
+      "recipeId": "r-19ce31994f"
     },
     {
       "week": 48,
@@ -60846,8 +60846,8 @@
       "week": 51,
       "day": "MERCREDI",
       "meal": "Soir",
-      "name": "🥣 Velouté de légumes verts & tartines de maquereaux",
-      "recipeId": "r-3e02890fd4"
+      "name": "🥣 Velouté carotte-lentilles corail",
+      "recipeId": "cco-veloute-carotte-lentilles"
     },
     {
       "week": 51,
@@ -61043,7 +61043,7 @@
     {
       "week": 1,
       "type": "Assemblage Jour J",
-      "text": "Étape 8 — 🍱 Vendredi : faire l’inventaire des restes cuits sûrs pour l’Opération Vide-Frigo. Le soir et le samedi, profiter du repas plaisir 🍕 Pizza maison méditerranéenne; ne jamais réutiliser un aliment dont la conservation est douteuse."
+      "text": "Étape 8 — 🍱 Vendredi : faire l’inventaire des restes cuits sûrs pour l’Opération Vide-Frigo. Le soir et le samedi, prévoir les repas du week-end à partir des plats sélectionnés; ne jamais réutiliser un aliment dont la conservation est douteuse."
     },
     {
       "week": 2,
@@ -61523,7 +61523,7 @@
     {
       "week": 13,
       "type": "Assemblage Jour J",
-      "text": "Étape 8 — 🍱 Vendredi : faire l’inventaire des restes cuits sûrs pour l’Opération Vide-Frigo. Le soir et le samedi, profiter du repas plaisir 🍕 Pizza maison méditerranéenne; ne jamais réutiliser un aliment dont la conservation est douteuse."
+      "text": "Étape 8 — 🍱 Vendredi : faire l’inventaire des restes cuits sûrs pour l’Opération Vide-Frigo. Le soir et le samedi, prévoir les repas du week-end à partir des plats sélectionnés; ne jamais réutiliser un aliment dont la conservation est douteuse."
     },
     {
       "week": 14,
@@ -62003,7 +62003,7 @@
     {
       "week": 25,
       "type": "Assemblage Jour J",
-      "text": "Étape 8 — 🍱 Vendredi : faire l’inventaire des restes cuits sûrs pour l’Opération Vide-Frigo. Le soir et le samedi, profiter du repas plaisir 🍕 Pizza maison méditerranéenne; ne jamais réutiliser un aliment dont la conservation est douteuse."
+      "text": "Étape 8 — 🍱 Vendredi : faire l’inventaire des restes cuits sûrs pour l’Opération Vide-Frigo. Le soir et le samedi, prévoir les repas du week-end à partir des plats sélectionnés; ne jamais réutiliser un aliment dont la conservation est douteuse."
     },
     {
       "week": 26,
@@ -62483,7 +62483,7 @@
     {
       "week": 37,
       "type": "Assemblage Jour J",
-      "text": "Étape 8 — 🍱 Vendredi : faire l’inventaire des restes cuits sûrs pour l’Opération Vide-Frigo. Le soir et le samedi, profiter du repas plaisir 🍕 Pizza maison méditerranéenne; ne jamais réutiliser un aliment dont la conservation est douteuse."
+      "text": "Étape 8 — 🍱 Vendredi : faire l’inventaire des restes cuits sûrs pour l’Opération Vide-Frigo. Le soir et le samedi, prévoir les repas du week-end à partir des plats sélectionnés; ne jamais réutiliser un aliment dont la conservation est douteuse."
     },
     {
       "week": 38,
@@ -62963,7 +62963,7 @@
     {
       "week": 49,
       "type": "Assemblage Jour J",
-      "text": "Étape 8 — 🍱 Vendredi : faire l’inventaire des restes cuits sûrs pour l’Opération Vide-Frigo. Le soir et le samedi, profiter du repas plaisir 🍕 Pizza maison méditerranéenne; ne jamais réutiliser un aliment dont la conservation est douteuse."
+      "text": "Étape 8 — 🍱 Vendredi : faire l’inventaire des restes cuits sûrs pour l’Opération Vide-Frigo. Le soir et le samedi, prévoir les repas du week-end à partir des plats sélectionnés; ne jamais réutiliser un aliment dont la conservation est douteuse."
     },
     {
       "week": 50,
