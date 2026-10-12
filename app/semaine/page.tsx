@@ -52,13 +52,7 @@ export default function WeekPage() {
         )}
       </div>
       <InstallApp />
-      <section className="rounded-2xl border border-[#EADAEC] bg-[#EADAEC]/65 p-4 shadow-[0_4px_12px_rgba(43,43,43,0.07)]">
-        <p className="text-base font-bold text-[#1A1A1A]">🆘 SOS : pas le goût de cuisiner ?</p>
-        <p className="mt-1 text-sm leading-6 text-[#2B2B2B]">Fatigué(e) ou en manque d’envie ? Pas de panique : trouve une idée simple et rapide avec les recettes faciles.</p>
-        <Link href="/recettes?filter=tired" className="mt-3 inline-flex min-h-11 items-center justify-center rounded-xl bg-[#8FA89B] px-4 py-2 text-sm font-bold text-[#1A1A1A] shadow-[0_3px_8px_rgba(43,43,43,0.12)] transition hover:brightness-95">
-          Je suis fatigué(e) — trouver une idée
-        </Link>
-      </section>
+
       {weekday === 1 ? <aside className="rounded-2xl border border-[#8FA89B]/30 bg-[#8FA89B]/15 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">Bon début de semaine ! Vos repas sont prêts à être assemblés, vous avez géré.</aside> : null}
       {weekday === 3 ? <aside className="rounded-2xl border border-[#8FA89B]/30 bg-[#8FA89B]/15 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">Déjà le milieu de la semaine ! Une petite baisse d'énergie ? N'oubliez pas notre bouton SOS Flemme si besoin. 😉</aside> : null}
       {weekday === 5 ? <aside className="rounded-2xl border border-[#D98A6C]/30 bg-[#F3C6B1]/35 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">C'est vendredi ! Rangez les tupperwares du batchcooking, place à la cuisine plaisir !</aside> : null}
@@ -75,6 +69,21 @@ export default function WeekPage() {
           </ul>
         </section>
       ) : null}
+      <section className="rounded-2xl border border-[#EADAEC] bg-[#EADAEC]/65 p-4 shadow-[0_4px_12px_rgba(43,43,43,0.07)]">
+        <p className="text-base font-bold text-[#1A1A1A]">🆘 SOS Flemme : 3 idées quand on n’a pas envie de cuisiner</p>
+        <p className="mt-1 text-sm leading-6 text-[#2B2B2B]">Des solutions à portée de main, juste avant le planning de la semaine.</p>
+        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <Link href="/recettes?filter=express" className="flex min-h-16 items-center justify-center rounded-2xl bg-[#FAD2CB] px-3 py-3 text-center text-sm font-semibold text-[#1A1A1A] shadow-[0_3px_9px_rgba(43,43,43,0.10)] transition hover:-translate-y-0.5">
+            ⚡ Express
+          </Link>
+          <Link href="/recettes?filter=tired" className="flex min-h-16 items-center justify-center rounded-2xl bg-[#EADAEC] px-3 py-3 text-center text-sm font-semibold text-[#1A1A1A] shadow-[0_3px_9px_rgba(43,43,43,0.10)] transition hover:-translate-y-0.5">
+            😮‍💨 Je suis fatigué(e)
+          </Link>
+          <Link href="/recettes?filter=easy" className="flex min-h-16 items-center justify-center rounded-2xl bg-[#D0DBCE] px-3 py-3 text-center text-sm font-semibold text-[#1A1A1A] shadow-[0_3px_9px_rgba(43,43,43,0.10)] transition hover:-translate-y-0.5">
+            🍽️ Repas tout simple
+          </Link>
+        </div>
+      </section>
       <div className="space-y-3">
         {DAYS.map((day) => {
           const midi = slots.find((s) => s.day === day && s.meal === "Midi");
