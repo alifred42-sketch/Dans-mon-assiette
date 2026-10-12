@@ -1,5 +1,6 @@
-import { displayRecipe } from "@/lib/recipe-display";
 "use client";
+
+import { displayRecipe } from "@/lib/recipe-display";
 
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -123,7 +124,7 @@ export default function BatchPage() {
         <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">Étape 5 — Assemblage au moment du repas</h2>
         {changedPlan.some((slot) => { const item = getRecipe(slot.recipeId); return item ? displayRecipe(item).name !== item.name : false; }) ? <p className="rounded-xl bg-[#F4EAD4] p-3 text-sm text-[#2B2B2B]"><strong>Assemblage Jour J :</strong> cuire les pâtes fraîches dans une grande casserole d’eau bouillante salée selon le temps indiqué sur le paquet, puis les mélanger à la sauce chaude juste avant de servir.</p> : null}
         <p className="text-sm leading-relaxed text-muted-foreground">Étape 5 — Finir et assembler au moment du repas. Gardez les herbes, salades, garnitures fragiles et sauces à ajouter séparément. Réchauffez uniquement la portion nécessaire et vérifiez la fiche pour les finitions.</p>
-        {assembly.length ? <CheckList storageKey={`assiette-batch-assembly-${week}`} items={assembly} /> : <ol className="list-decimal space-y-2 pl-5 text-sm"><li><strong>En début de semaine :</strong> utiliser les préparations réfrigérées prévues pour les premiers jours.</li><li><strong>Pour la suite :</strong> congeler rapidement les portions qui ne seront pas consommées dans les délais adaptés, puis les décongeler au réfrigérateur.<li>Ajouter herbes, sauces et garnitures fraîches au moment de servir.</li></ol>}
+        {assembly.length ? <CheckList storageKey={`assiette-batch-assembly-${week}`} items={assembly} /> : <ol className="list-decimal space-y-2 pl-5 text-sm"><li><strong>En début de semaine :</strong> utiliser les préparations réfrigérées prévues pour les premiers jours.</li><li><strong>Pour la suite :</strong> congeler rapidement les portions qui ne seront pas consommées dans les délais adaptés, puis les décongeler au réfrigérateur.</li><li>Ajouter herbes, sauces et garnitures fraîches au moment de servir.</li></ol>}
       </section>
       {general.length ? <section className="space-y-2"><h2 className="font-heading text-lg font-bold">Autres tâches notées dans le carnet</h2><CheckList storageKey={`assiette-batch-general-${week}`} items={general} /></section> : null}
       {allItems.length === 0 ? <p className="rounded-2xl bg-[#8FA89B]/10 p-4 text-sm text-[#466653]">Le carnet ne contient pas encore de tâches détaillées pour cette semaine. Utilisez le plan ci-dessus comme trame, et reportez les réglages précis depuis les fiches recettes.</p> : null}
