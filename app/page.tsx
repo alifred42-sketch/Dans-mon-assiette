@@ -36,10 +36,25 @@ function getCurrentWeek() {
 
 export default function HomePage() {
   const [currentWeek, setCurrentWeek] = useState(1);
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
     setCurrentWeek(getCurrentWeek());
+    const splashTimer = window.setTimeout(() => setShowSplash(false), 3000);
+    return () => window.clearTimeout(splashTimer);
   }, []);
+
+  if (showSplash) {
+    return (
+      <main className="flex min-h-dvh animate-[fadeIn_500ms_ease-out] flex-col items-center justify-center bg-[#F9F9F7] px-6 text-center">
+        <img src={`${BASE_PATH}/logo-cuisine-chic-ouf.svg`} alt="CUISINE CHIC OUF !" className="block h-auto w-[min(82vw,380px)] max-w-full shrink-0 object-contain drop-shadow-[0_5px_12px_rgba(43,43,43,0.10)]" loading="eager" fetchPriority="high" />
+        <p className="mt-6 max-w-xl text-base font-normal leading-7 text-[#2B2B2B] sm:text-lg sm:leading-8">
+          Pas de panique, on mange quoi ce soir ? 52 semaines de menus, du batchcooking simple et vos listes de courses automatisées. Cuisinez chic, respirez... OUF !
+        </p>
+        <style jsx global>{`@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }`}</style>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-dvh bg-[#F9F9F7]">
@@ -47,11 +62,7 @@ export default function HomePage() {
         <img src={`${BASE_PATH}/logo-cuisine-chic-ouf.svg`} alt="CUISINE CHIC OUF !" className="block h-auto w-[min(82vw,340px)] max-w-full shrink-0 object-contain drop-shadow-[0_5px_12px_rgba(43,43,43,0.10)]" loading="eager" fetchPriority="high" />
         <section className="mt-7 max-w-2xl">
           <h1 className="text-4xl font-black tracking-tight text-[#2B2B2B] sm:text-6xl">CUISINE CHIC OUF !</h1>
-          <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[#555551] sm:text-lg sm:leading-8">
-            
-            52 semaines de menus, du batchcooking simple et vos listes de courses automatisées.<br />
-            <span className="font-semibold text-[#2B2B2B]">Cuisinez chic, respirez... OUF !</span>
-          </p>
+
         </section>
 
         <Link
