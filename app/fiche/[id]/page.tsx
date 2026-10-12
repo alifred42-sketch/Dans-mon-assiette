@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CookingWakeLock } from "@/components/cooking-wake-lock";
 import { RecipeTools } from "@/components/recipe-tools";
 import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
+import { displayRecipe } from "@/lib/recipe-display";
 
 export function generateStaticParams() {
   return carnet.recipes.map((recipe) => ({ id: recipe.id }));
@@ -14,8 +15,9 @@ export default async function FichePage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const recipe = getRecipe(id);
-  if (!recipe) notFound();
+  const originalRecipe = getRecipe(id);
+  if (!originalRecipe) notFound();
+  const recipe = displayRecipe(originalRecipe);
 
   const menuNames = [
     ...new Set(carnet.plan.filter((p) => p.recipeId === recipe.id).map((p) => p.name)),
