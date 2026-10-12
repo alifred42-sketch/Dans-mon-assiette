@@ -1,5 +1,6 @@
 import { carnet, getRecipe, isPlaceholderIngredient, weekPlan } from "./carnet";
 import type { ShoppingItem } from "./carnet";
+import { displayRecipe, resolveVagueIngredient } from "./recipe-display";
 
 function fold(value: string): string {
   return value
@@ -262,8 +263,9 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
   }
 
   for (const slot of weekPlan(week, overrides)) {
-    const recipe = getRecipe(slot.recipeId);
-    if (!recipe) continue;
+    const sourceRecipe = getRecipe(slot.recipeId);
+    if (!sourceRecipe) continue;
+    const recipe = displayRecipe(sourceRecipe);
     const foodSection = /ingr|épice|epice|légume|viande|fromage|sauce|appareil|pain|féculent|feculent|dessus|assais/i;
     const baseServings = Number.parseInt(recipe.servings || "4", 10) || 4;
     const selectedServings = servingsByRecipe[recipe.id] || baseServings;
@@ -272,7 +274,7 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
     const sectionLines = (recipe.sections || [])
       .filter((section) => foodSection.test(section.title || ""))
       .flatMap((section) => section.lines);
-    const rawLines = [...(recipe.ingredients || []), ...sectionLines];
+    const rawLines = [...(recipe.ingredients || []), ...sectionLines].map(resolveVagueIngredient);
     const lines = rawLines
       .filter((line) => {
         const related = findLinkedSauce(line);
