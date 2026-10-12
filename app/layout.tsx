@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
 import { Providers } from "./providers";
+import { SplashGate } from "@/components/splash-gate";
 import { BASE_PATH } from "@/lib/base-path";
 import "./globals.css";
 
@@ -39,7 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${sans.variable} ${heading.variable} h-full antialiased`}>
       <body className="min-h-full bg-background font-sans text-foreground">
-        <Providers>{children}</Providers>
+        <Providers><SplashGate>{children}</SplashGate></Providers>
       </body>
     </html>
   );
