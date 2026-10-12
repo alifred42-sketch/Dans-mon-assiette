@@ -48,7 +48,7 @@ export default function HomePage() {
         <section className="mt-7 max-w-2xl">
           <h1 className="text-4xl font-black tracking-tight text-[#2B2B2B] sm:text-6xl">CUISINE CHIC OUF !</h1>
           <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[#555551] sm:text-lg sm:leading-8">
-            Pas de panique, on mange quoi ce soir ?<br />
+            
             52 semaines de menus, du batchcooking simple et vos listes de courses automatisées.<br />
             <span className="font-semibold text-[#2B2B2B]">Cuisinez chic, respirez... OUF !</span>
           </p>
