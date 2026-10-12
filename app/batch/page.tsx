@@ -1,3 +1,4 @@
+import { displayRecipe } from "@/lib/recipe-display";
 "use client";
 
 import { useSearchParams } from "next/navigation";
@@ -52,7 +53,8 @@ export default function BatchPage() {
         <h2 className="font-heading text-xl font-extrabold text-[#1A1A1A]">📖 Les recettes, étape par étape</h2>
         <p className="text-sm leading-relaxed text-[#2B2B2B]">Retrouvez ici les ingrédients et les étapes de chaque repas prévu. Cette liste suit automatiquement les recettes sélectionnées dans votre menu, y compris après un remplacement.</p>
         {changedPlan.map((slot, i) => {
-          const recipe = getRecipe(slot.recipeId);
+          const sourceRecipe = getRecipe(slot.recipeId);
+          const recipe = sourceRecipe ? displayRecipe(sourceRecipe) : undefined;
           if (!recipe) return (
             <div key={`batch-recipe-missing-${slot.day}-${slot.meal}-${i}`} className="rounded-xl bg-white p-3">
               <h3 className="font-bold text-[#1A1A1A]">{slot.day.charAt(0) + slot.day.slice(1).toLowerCase()} · {slot.meal} — {slot.name}</h3>
