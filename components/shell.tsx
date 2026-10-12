@@ -18,8 +18,22 @@ const NAV = [
 export function Shell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const search = useSearchParams();
-  const [showSplash, setShowSplash] = useState(true);
-  useEffect(() => { setShowSplash(true); const timer = window.setTimeout(() => setShowSplash(false), 3000); return () => window.clearTimeout(timer); }, []);
+  const [showSplash, setShowSplash] = useState(false);
+  useEffect(() => {
+    // Affiche le splash uniquement lors de la toute première ouverture sur cet appareil.
+    // La clé persistante empêche son retour lors des navigations et des visites suivantes.
+    try {
+      const seen = window.localStorage.getItem("cuisine-chic-ouf-splash-seen");
+      if (seen) return;
+      window.localStorage.setItem("cuisine-chic-ouf-splash-seen", "1");
+      setShowSplash(true);
+      const timer = window.setTimeout(() => setShowSplash(false), 3000);
+      return () => window.clearTimeout(timer);
+    } catch {
+      // Si le stockage est indisponible, ne bloque jamais la navigation avec le splash.
+      setShowSplash(false);
+    }
+  }, []);
   const week = search.get("w");
   const weekQuery = week ? `?w=${week}` : "";
 
