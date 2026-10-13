@@ -33,10 +33,10 @@ const FILTER_LABELS: Record<string, string> = {
 function durationMinutes(value?: string): number | null {
   if (!value?.trim()) return null;
   const normalized = value.toLocaleLowerCase("fr");
-  const hours = normalized.match(/(\\d+)\\s*(?:h|heure)/);
-  const minutes = normalized.match(/(\\d+)\\s*(?:min|minute)/);
+  const hours = normalized.match(/(\d+)\s*(?:h|heure)/);
+  const minutes = normalized.match(/(\d+)\s*(?:min|minute)/);
   if (hours || minutes) return (hours ? Number(hours[1]) * 60 : 0) + (minutes ? Number(minutes[1]) : 0);
-  const numeric = normalized.match(/^\\s*(\\d+)\\s*$/);
+  const numeric = normalized.match(/^\s*(\d+)\s*$/);
   return numeric ? Number(numeric[1]) : null;
 }
 
