@@ -4,6 +4,7 @@ import { carnet, getCollections } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 
 const CATEGORY_COPY: Record<string, string> = {
   "": "Inspirez, cliquez... cuisinez chic ! Vos bons petits plats de la semaine à portée de main.",
@@ -29,7 +30,18 @@ const FILTER_LABELS: Record<string, string> = {
   automne: "Automne", hiver: "Hiver", bonus: "Bonus du carnet",
 };
 
+function durationMinutes(value?: string): number | null {
+  if (!value?.trim()) return null;
+  const normalized = value.toLocaleLowerCase("fr");
+  const hours = normalized.match(/(\\d+)\\s*(?:h|heure)/);
+  const minutes = normalized.match(/(\\d+)\\s*(?:min|minute)/);
+  if (hours || minutes) return (hours ? Number(hours[1]) * 60 : 0) + (minutes ? Number(minutes[1]) : 0);
+  const numeric = normalized.match(/^\\s*(\\d+)\\s*$/);
+  return numeric ? Number(numeric[1]) : null;
+}
+
 export default function RecettesPage() {
+  const [maxDuration, setMaxDuration] = useState<number | null>(null);
   const searchParams = useSearchParams();
   const filter = searchParams.get("filter") || "";
   const allCollections = getCollections();
@@ -74,7 +86,14 @@ export default function RecettesPage() {
     ? [...matchingRecipes.slice(dailyOffset), ...matchingRecipes.slice(0, dailyOffset)].slice(0, 5)
     : matchingRecipes;
 
-  const recipes = dailyRecipes.map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
+  const timeFilteredRecipes = maxDuration === null
+    ? dailyRecipes
+    : dailyRecipes.filter((recipe) => {
+        const prep = durationMinutes(recipe.timePrep);
+        const cook = durationMinutes(recipe.timeCook);
+        return prep !== null && cook !== null && prep + cook <= maxDuration;
+      });
+  const recipes = timeFilteredRecipes.map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
 
   return (
     <div className="space-y-6">
@@ -83,7 +102,24 @@ export default function RecettesPage() {
         <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">{CATEGORY_COPY[filter] || CATEGORY_COPY[""]}</p>
         <p className="mt-1 text-xs text-muted-foreground">{filter ? `${recipes.length} résultat(s) dans cette sélection.` : "Tape un plat ou un ingrédient pour retrouver une fiche."}</p>
       </div>
+      <div className="flex flex-wrap items-center gap-2">
+        {[15, 30, 45].map((minutes) => {
+          const active = maxDuration === minutes;
+          return (
+            <button
+              key={minutes}
+              type="button"
+              aria-pressed={active}
+              onClick={() => setMaxDuration(active ? null : minutes)}
+              className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-semibold shadow-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8FA89B] ${active ? "border-[#8FA89B] bg-[#8FA89B] text-[#1A1A1A] shadow-inner" : "border-[#D8D8D0] bg-[#F9F9F7] text-[#1A1A1A] shadow-[0_2px_5px_rgba(26,26,26,0.07)] hover:border-[#8FA89B]"}`}
+            >
+              <span aria-hidden="true">⏱️</span> {minutes} min
+            </button>
+          );
+        })}
+      </div>
       {filter ? <a href="/recettes" className="inline-flex rounded-xl bg-[#8FA89B]/15 px-3 py-2 text-sm font-semibold text-[#668775]">Voir toutes les recettes</a> : null}
+      {maxDuration !== null ? <p className="text-xs text-muted-foreground">{recipes.length} recette(s) en {maxDuration} minutes maximum. Clique à nouveau sur le filtre actif pour tout afficher.</p> : null}
       <RecipeList items={recipes} collections={filter ? undefined : collections} />
     </div>
   );
