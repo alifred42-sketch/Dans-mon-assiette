@@ -159,7 +159,7 @@ export default function BatchPage() {
         <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🔥 {BATCH_GUIDES.oven.title}</h2>
         <p className="text-sm text-muted-foreground">{BATCH_GUIDES.oven.intro}</p>
         {ovenGuides.length ? <CheckList storageKey={`assiette-batch-oven-guides-${week}`} items={ovenGuides} /> : <p className="text-sm">Aucune recette sélectionnée ne mentionne de cuisson au four dans sa fiche. Ne lancez pas de cuisson au four sans consigne adaptée.</p>}
-        {oven.length ? <CheckList storageKey={`assiette-batch-oven-${week}`} items={withTargets(oven, ovenDetails.map(({ slot }) => slot))} /> : null}
+        {oven.length ? <CheckList storageKey={`assiette-batch-oven-${week}`} items={withTargets(oven, ovenDetails.length ? ovenDetails.map(({ slot }) => slot) : changedPlan)} /> : null}
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 {BATCH_GUIDES.robot.title}</h2>
