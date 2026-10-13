@@ -262,7 +262,10 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
     bag.set(key, cur);
   }
 
-  for (const slot of weekPlan(week, overrides)) {
+  const activePlan = weekPlan(week, overrides);
+  const activeDishNames = new Set(activePlan.map((slot) => fold(slot.name)).filter(Boolean));
+
+  for (const slot of activePlan) {
     const sourceRecipe = getRecipe(slot.recipeId);
     if (!sourceRecipe) continue;
     const recipe = displayRecipe(sourceRecipe);
@@ -307,6 +310,9 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
   }
   // Compléter avec les lignes historiques qui manquent aux fiches, sans doubler les quantités déjà calculées.
   for (const row of official) {
+    // Les lignes historiques ne complètent que les plats encore présents au planning.
+    // Après un remplacement, les ingrédients de l’ancien plat ne doivent pas réapparaître.
+    if (!activeDishNames.has(fold(row.dish))) continue;
     const parsed = parseLine(row.ingredient);
     if (!parsed) continue;
     const key = canonicalIngredient(parsed.name);
