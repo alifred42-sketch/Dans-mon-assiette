@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BASE_PATH } from "@/lib/base-path";
 import { InstallApp } from "@/components/install-app";
-import { UtensilsCrossed, CookingPot, ShoppingCart, Droplets, Sprout, Sparkles, Timer, Martini, PartyPopper, BatteryLow, Bot, Flower2, Sun, Leaf, Snowflake } from "lucide-react";
+import { UtensilsCrossed, CookingPot, ShoppingCart, Droplets, Sprout, Sparkles, Timer, Martini, PartyPopper, BatteryLow, Bot, Flower2, Sun, Leaf, Snowflake, type LucideIcon } from "lucide-react";
 
-const categories = [
+const categories: [string, string, string, LucideIcon][] = [
   ["Recettes", "#8FA89B", "/recettes", UtensilsCrossed],
   ["Batchcooking", "#D98A6C", "/batch", CookingPot],
   ["Courses", "#E6DFD3", "/courses", ShoppingCart],
