@@ -5,6 +5,23 @@ import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 import { useSearchParams } from "next/navigation";
 
+const CATEGORY_COPY: Record<string, string> = {
+  "": "Inspirez, cliquez... cuisinez chic ! Vos bons petits plats de la semaine à portée de main.",
+  sauces: "Le secret des grands chefs est dans la sauce. Des textures onctueuses et des saveurs intenses pour sublimer vos assiettes.",
+  marinades: "Donnez du relief à vos viandes, poissons et légumes. Du temps pour infuser les saveurs, du peps à la dégustation !",
+  epices: "Voyagez depuis votre cuisine. Le dosage parfait pour réveiller vos plats sans jamais vous brûler le palais.",
+  express: "Moins de 15 minutes entre le placard et l'assiette. Rapide, efficace et terriblement gourmand.",
+  apero: "Planches chics, tartinades express et gressins maison. Le rendez-vous convivial qui ouvre l'appétit sans prise de tête.",
+  recevoir: "Mettez les petits plats dans les grands sans y laisser votre calme. Vos invités vont être bluffés, et vous aussi !",
+  tired: "Alerte rouge à la flemme !🚨 Zéro courage ? Voici nos jokers du placard ultra-réconfortants prêts avec 3 ingrédients.",
+  "mr-cuisine": "Votre robot s'occupe de tout. Lisez la consigne universelle, lancez les paramètres, et allez vous reposer.",
+  bonus: "Le petit plus Cuisine Chic Ouf. Granola maison, astuces de conservation et petits secrets de chefs pour vous faciliter la vie.",
+  printemps: "Le retour des légumes croquants, des herbes fraîches et de la légèreté. La cuisine se réveille avec le soleil !",
+  ete: "Gaspachos glacés, salades colorées et grillades parfumées. Une cuisine fraîche et ensoleillée à savourer à l'ombre.",
+  automne: "Les premiers champignons, les courges dorées et les douces odeurs de mijotés. Une cuisine cocooning et réconfortante.",
+  hiver: "Veloutés brûlants, gratins dorés et plats conviviaux au coin du feu. Le réconfort absolu au cœur de la saison froide.",
+};
+
 const FILTER_LABELS: Record<string, string> = {
   sauces: "Sauces", marinades: "Marinades", epices: "Épices & aromates",
   express: "Recettes express", tired: "Je suis fatigué — idées faciles", "mr-cuisine": "Compatibles Mr Cuisine",
@@ -63,9 +80,8 @@ export default function RecettesPage() {
     <div className="space-y-6">
       <div>
         <h1 className="font-heading text-3xl">{FILTER_LABELS[filter] || "Carnet de recettes"}</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          {filter ? `Sélection du carnet « ${FILTER_LABELS[filter] || filter} ». ${recipes.length} résultat(s).` : "Tape un plat ou un ingrédient : seules les fiches qui correspondent restent, avec les lignes du carnet."}
-        </p>
+        <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">{CATEGORY_COPY[filter] || CATEGORY_COPY[""]}</p>
+        <p className="mt-1 text-xs text-muted-foreground">{filter ? `${recipes.length} résultat(s) dans cette sélection.` : "Tape un plat ou un ingrédient pour retrouver une fiche."}</p>
       </div>
       {filter ? <a href="/recettes" className="inline-flex rounded-xl bg-[#8FA89B]/15 px-3 py-2 text-sm font-semibold text-[#668775]">Voir toutes les recettes</a> : null}
       <RecipeList items={recipes} collections={filter ? undefined : collections} />
