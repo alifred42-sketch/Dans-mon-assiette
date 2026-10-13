@@ -133,7 +133,7 @@ export default function BatchPage() {
                 <h4 className="text-sm font-bold text-[#1A1A1A]">Préparation</h4>
                 {recipe.steps.length ? (
                   <ol className="mt-1 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-[#2B2B2B]">
-                    {recipe.steps.map((step, j) => <li key={`step-${recipe.id}-${j}`}>{step}</li>)}
+                    {recipe.steps.map((step, j) => <li key={`step-${recipe.id}-${j}`}>{step} <em>(pour {recipe.name} du {dayName(slot.day)} {slot.meal.toLowerCase()})</em></li>)}
                   </ol>
                 ) : <p className="mt-1 text-sm text-[#555551]">Étapes de préparation non renseignées dans la fiche.</p>}
               </div>
@@ -141,7 +141,7 @@ export default function BatchPage() {
                 <div className="mt-3 rounded-lg bg-[#E5E7EB]/70 p-3">
                   <h4 className="text-sm font-bold text-[#1A1A1A]">🤖 Monsieur Cuisine</h4>
                   <ol className="mt-1 list-decimal space-y-1 pl-5 text-sm text-[#2B2B2B]">
-                    {recipe.robot.map((step, j) => <li key={`robot-${recipe.id}-${j}`}>{step}</li>)}
+                    {recipe.robot.map((step, j) => <li key={`robot-${recipe.id}-${j}`}>{step} <em>(pour {recipe.name} du {dayName(slot.day)} {slot.meal.toLowerCase()})</em></li>)}
                   </ol>
                 </div>
               ) : null}
