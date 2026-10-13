@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCollection, getCollections, recipesForCollection } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
