@@ -46,17 +46,16 @@ export function SwitchMeal({ slot, onChanged }: Props) {
   }
 
   return (
-    <div className="mt-1">
+    <div className="inline-flex items-center">
       <button
         type="button"
         onClick={replaceMeal}
         disabled={busy}
         aria-label={`Remplacer automatiquement le repas ${slot.meal} du ${slot.day.toLocaleLowerCase("fr")}`}
         title="Remplacer par une autre recette complète de saison"
-        className="inline-flex min-h-8 items-center gap-1.5 rounded-lg px-2 py-1 text-xs font-medium text-[#668775] transition hover:bg-[#8FA89B]/15 hover:text-[#466653] disabled:opacity-50"
+        className="inline-flex size-7 items-center justify-center rounded-lg text-[#668775] transition hover:bg-[#8FA89B]/15 hover:text-[#466653] disabled:opacity-50"
       >
         <Repeat2 aria-hidden="true" className="size-4" />
-        <span>Changer</span>
       </button>
       {message ? <p role="status" className="mt-1 text-xs text-[#555551]">{message}</p> : null}
     </div>
