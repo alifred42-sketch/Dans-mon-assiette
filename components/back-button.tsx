@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
 
 export function BackButton() {
   const pathname = usePathname();
