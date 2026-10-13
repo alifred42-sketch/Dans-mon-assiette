@@ -51,7 +51,7 @@ export function CheckList({ storageKey, items }: { storageKey: string; items: Ch
             <input type="checkbox" className="mt-1 size-7 shrink-0 accent-[#8FA89B]" checked={done} onChange={() => toggle(item.id)} />
             <span className={done ? "text-muted-foreground" : "text-[#668775]"}>
               <span className="block font-medium leading-snug">{item.title}</span>
-              {item.target ? <em className="mt-1 block text-xs font-normal not-italic text-[#555551]">{item.target}</em> : null}
+              {item.target ? <em className="mt-1 block text-xs font-normal italic text-[#555551]">{item.target}</em> : null}
               {item.detail ? <span className="mt-1 block text-xs text-muted-foreground no-underline">{item.detail}</span> : null}
             </span>
           </label>
