@@ -58,6 +58,54 @@ const SEASON_TERMS: Record<Season, string[]> = {
   automne: ["automne", "potimarron", "courge", "champignon", "chataigne", "pomme", "poire", "raisin", "patate douce", "carotte", "poireau", "lentille", "mijote"],
 };
 
+function isMealRecipe(recipe: Recipe): boolean {
+  return !/^(sauce|marinade|vinaigrette|pesto|coulis|mélange d'épices|melange d'epices|épices|epices|granola|confiture|compote|sirop|boisson|cocktail|tartinade|dip\b|crackers|gressins|biscuits apéritifs)/i.test(recipe.name.trim());
+}
+
+function durationMinutes(value?: string): number | null {
+  if (!value) return null;
+  const match = value.match(/(\d+)\s*(?:h|heure)/i);
+  const hours = match ? Number(match[1]) : 0;
+  const mins = value.match(/(\d+)\s*(?:min|minute)/i);
+  if (!match && !mins) {
+    const numeric = value.match(/\d+/);
+    return numeric ? Number(numeric[0]) : null;
+  }
+  return hours * 60 + (mins ? Number(mins[1]) : 0);
+}
+
+/** Sélectionne une recette complète, distincte des autres repas de la semaine et marquée par des indices de saison. */
+export function seasonalReplacement(
+  week: number,
+  currentRecipeId: string | null,
+  excludedIds: ReadonlySet<string> = new Set<string>(),
+): Recipe | undefined {
+  const season = seasonForWeek(week);
+  const current = getRecipe(currentRecipeId);
+  const currentDuration = current
+    ? [durationMinutes(current.timePrep), durationMinutes(current.timeCook)].reduce<number>((sum, n) => sum + (n || 0), 0)
+    : 0;
+  return carnet.recipes
+    .filter((recipe) =>
+      recipe.id !== currentRecipeId &&
+      !excludedIds.has(recipe.id) &&
+      isCompleteRecipe(recipe) &&
+      isMealRecipe(recipe) &&
+      seasonalScore(recipe, season) > 0
+    )
+    .map((recipe) => {
+      const score = seasonalScore(recipe, season);
+      const duration = [durationMinutes(recipe.timePrep), durationMinutes(recipe.timeCook)].reduce<number>((sum, n) => sum + (n || 0), 0);
+      const durationDifference = currentDuration && duration ? Math.abs(currentDuration - duration) : 0;
+      return { recipe, score, durationDifference };
+    })
+    .sort((a, b) =>
+      b.score - a.score ||
+      a.durationDifference - b.durationDifference ||
+      a.recipe.name.localeCompare(b.recipe.name, "fr")
+    )[0]?.recipe;
+}
+
 function normalizedSeasonText(value: string): string {
   return value.toLocaleLowerCase("fr").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
