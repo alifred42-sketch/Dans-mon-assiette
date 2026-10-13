@@ -42,7 +42,7 @@ export default function BatchPage() {
     <div className="space-y-5">
       <div>
         <h1 className="font-heading text-3xl">Batchcooking</h1>
-        <p className="mt-1 text-sm text-muted-foreground">Organisation du dimanche pour alléger les repas de la semaine {week}.</p>
+        <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">Enfilez votre tablier, allumez les feux (ou votre robot). 2 heures de cuisine le dimanche pour 7 jours de liberté.</p>
       </div>
       <WeekPicker week={week} path="/batch" />
       <section className="space-y-2 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
