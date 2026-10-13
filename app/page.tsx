@@ -4,24 +4,25 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BASE_PATH } from "@/lib/base-path";
 import { InstallApp } from "@/components/install-app";
+import { UtensilsCrossed, CookingPot, ShoppingCart, Droplets, Sprout, Sparkles, Timer, Martini, PartyPopper, BatteryLow, Bot, Flower2, Sun, Leaf, Snowflake } from "lucide-react";
 
 const categories = [
-  ["Recettes", "#8FA89B", "/recettes"],
-  ["Batchcooking", "#D98A6C", "/batch"],
-  ["Courses", "#E6DFD3", "/courses"],
-  ["Sauces", "#F4EAD4", "/recettes?filter=sauces"],
-  ["Marinades", "#EAD5C3", "/recettes?filter=marinades"],
-  ["Épices", "#F2D4C9", "/recettes?filter=epices"],
-  ["Express", "#FAD2CB", "/recettes?filter=express"],
-  ["Apéro", "#FCD5CE", "/recettes?filter=apero"],
-  ["Recevoir", "#D0DBCE", "/recettes?filter=recevoir"],
-  ["Je suis fatigué", "#EADAEC", "/recettes?filter=tired"],
-  ["Bonus", "#E8ECEF", "/recettes?filter=bonus"],
-  ["Mr Cuisine", "#E5E7EB", "/recettes?filter=mr-cuisine"],
-  ["Printemps", "#E2F0D9", "/recettes?filter=printemps"],
-  ["Été", "#FCE4B5", "/recettes?filter=ete"],
-  ["Automne", "#F3C6B1", "/recettes?filter=automne"],
-  ["Hiver", "#E1EDF2", "/recettes?filter=hiver"],
+  ["Recettes", "#8FA89B", "/recettes", UtensilsCrossed],
+  ["Batchcooking", "#D98A6C", "/batch", CookingPot],
+  ["Courses", "#E6DFD3", "/courses", ShoppingCart],
+  ["Sauces", "#F4EAD4", "/recettes?filter=sauces", Droplets],
+  ["Marinades", "#EAD5C3", "/recettes?filter=marinades", Sprout],
+  ["Épices", "#F2D4C9", "/recettes?filter=epices", Sparkles],
+  ["Express", "#FAD2CB", "/recettes?filter=express", Timer],
+  ["Apéro", "#FCD5CE", "/recettes?filter=apero", Martini],
+  ["Recevoir", "#D0DBCE", "/recettes?filter=recevoir", PartyPopper],
+  ["Je suis fatigué", "#EADAEC", "/recettes?filter=tired", BatteryLow],
+  ["Bonus", "#E8ECEF", "/recettes?filter=bonus", Sparkles],
+  ["Mr Cuisine", "#E5E7EB", "/recettes?filter=mr-cuisine", Bot],
+  ["Printemps", "#E2F0D9", "/recettes?filter=printemps", Flower2],
+  ["Été", "#FCE4B5", "/recettes?filter=ete", Sun],
+  ["Automne", "#F3C6B1", "/recettes?filter=automne", Leaf],
+  ["Hiver", "#E1EDF2", "/recettes?filter=hiver", Snowflake],
 ];
 
 function getCurrentWeek() {
@@ -90,7 +91,7 @@ export default function HomePage() {
             <p className="mt-1 text-sm text-[#6B6B67]">Choisissez votre envie du moment.</p>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {categories.map(([label, color, href]) => {
+            {categories.map(([label, color, href, Icon]) => {
               const destination = href.startsWith("/batch") || href.startsWith("/courses")
                 ? `${href}?w=${currentWeek}`
                 : href;
@@ -101,7 +102,7 @@ export default function HomePage() {
                   style={{ backgroundColor: color }}
                   className="flex min-h-24 items-center justify-center rounded-2xl px-3 py-4 text-center text-sm font-bold text-[#1A1A1A] shadow-[0_4px_12px_rgba(43,43,43,0.09)] transition hover:-translate-y-0.5"
                 >
-                  {label}
+                  <span className="flex flex-col items-center gap-2"><Icon aria-hidden="true" className="size-6 stroke-[1.6]" />{label}</span>
                 </Link>
               );
             })}
