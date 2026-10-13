@@ -30,10 +30,8 @@ export default function CoursesPage() {
     <div className="space-y-5">
       <div>
         <h1 className="font-heading text-3xl">Courses</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Semaine {week}. Les quantités viennent des fiches, additionnées sur la
-          semaine. S’il n’y a pas de grammage, le tableur n’en avait pas.
-        </p>
+        <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">Votre panier trié par rayons automatiquement. Cochez ce que vous avez, le reste remonte en vert. Vos courses en 3 minutes chrono !</p>
+        <p className="mt-1 text-xs text-muted-foreground">Semaine {week} · quantités regroupées à partir des fiches recettes.</p>
       </div>
       <WeekPicker week={week} path="/courses" />
       <CheckList storageKey={`assiette-courses-${week}`} items={items} />
