@@ -132,7 +132,7 @@ function MealRow({
   const name = slot?.name || "Repas non indiqué";
   return (
     <div className="border-t border-border/60 py-3 first:border-t-0 first:pt-0">
-      <p className="text-xs uppercase tracking-wide text-muted-foreground">{label}</p>
+      <div className="flex items-center gap-1.5"><p className="text-xs uppercase tracking-wide text-muted-foreground">{label}</p>{slot ? <SwitchMeal slot={{ week, day, meal, name, recipeId: slot.recipeId }} /> : null}</div>
       {recipe ? (
         <Link
           href={`/fiche/${recipe.id}?w=${week}`}
@@ -143,7 +143,6 @@ function MealRow({
       ) : (
         <p className="mt-1 text-base">{name}</p>
       )}
-      {slot ? <SwitchMeal slot={{ week, day, meal, name, recipeId: slot.recipeId }} /> : null}
     </div>
   );
 }
