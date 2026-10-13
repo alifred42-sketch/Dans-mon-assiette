@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CookingWakeLock } from "@/components/cooking-wake-lock";
+import { ListenStep } from "@/components/listen-step";
 import { RecipeTools } from "@/components/recipe-tools";
 import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 import { displayRecipe } from "@/lib/recipe-display";
@@ -91,7 +92,7 @@ export default async function FichePage({
             {recipe.steps.length > 0 ? (
               <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
                 {recipe.steps.map((step, i) => (
-                  <li key={`step-${i}`}>{linkedInstruction(step)}</li>
+                  <li key={`step-${i}`}>{linkedInstruction(step)}<ListenStep text={step} /></li>
                 ))}
               </ol>
             ) : (
@@ -117,7 +118,7 @@ export default async function FichePage({
         <section>
           <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
           <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
-            {recipe.steps.map((step, i) => <li key={`step-extra-${i}`}>{linkedInstruction(step)}</li>)}
+            {recipe.steps.map((step, i) => <li key={`step-extra-${i}`}>{linkedInstruction(step)}<ListenStep text={step} /></li>)}
           </ol>
         </section>
       ) : null}
