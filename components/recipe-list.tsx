@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { matchingLines, matchesQuery } from "@/lib/search";
+import { UtensilsCrossed, CookingPot, ShoppingCart, Droplets, Sprout, Sparkles, Timer, Martini, PartyPopper, BatteryLow, Bot, Flower2, Sun, Leaf, Snowflake, type LucideIcon } from "lucide-react";
+
+const COLLECTION_ICONS: Record<string, LucideIcon> = { recettes: UtensilsCrossed, batchcooking: CookingPot, courses: ShoppingCart, sauces: Droplets, marinades: Sprout, epices: Sparkles, express: Timer, apero: Martini, invites: PartyPopper, fatiguee: BatteryLow, bonus: Sparkles, mrcuisine: Bot, printemps: Flower2, ete: Sun, automne: Leaf, hiver: Snowflake };
 
 const COLLECTION_COLORS: Record<string, string> = {
   recettes: "#8FA89B", batchcooking: "#D98A6C", courses: "#E6DFD3", sauces: "#F4EAD4", marinades: "#EAD5C3", epices: "#F2D4C9", express: "#FAD2CB", apero: "#FCD5CE", invites: "#D0DBCE", fatiguee: "#EADAEC", bonus: "#E8ECEF", mrcuisine: "#E5E7EB", printemps: "#E2F0D9", ete: "#FCE4B5", automne: "#F3C6B1", hiver: "#E1EDF2",
@@ -64,17 +67,21 @@ export function RecipeList({
 
       {!query && collections && collections.length > 0 ? (
         <div className="grid grid-cols-2 gap-3">
-          {collections.map((col) => (
+          {collections.map((col) => {
+            const Icon = COLLECTION_ICONS[col.slug] || UtensilsCrossed;
+            return (
             <Link
               key={col.slug}
               href={`/carnet/${col.slug}`}
               style={{ backgroundColor: COLLECTION_COLORS[col.slug] || "#E8ECEF", boxShadow: "0 3px 10px rgba(26,26,26,0.08)" }}
               className="rounded-2xl p-4 text-[#1A1A1A] ring-1 ring-black/5 transition-shadow hover:shadow-md"
             >
+              <span className="mb-3 flex size-10 items-center justify-center rounded-xl bg-white/55"><Icon aria-hidden="true" className="size-6 stroke-[1.6]" /></span>
               <p className="font-heading text-lg font-semibold leading-tight text-[#1A1A1A]">{col.name}</p>
               <p className="mt-1 text-xs text-muted-foreground">{col.count} fiches</p>
             </Link>
-          ))}
+          );
+          })}
         </div>
       ) : null}
 
