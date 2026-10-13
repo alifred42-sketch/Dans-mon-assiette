@@ -63,21 +63,21 @@ export default function BatchPage() {
     recipe && /four|gratin|rôtir|rotir|plaque de cuisson|cuisson au four|180 ?°|200 ?°/i.test([recipe.name, ...recipe.steps].join(" "))
   );
   const ovenGuides = ovenDetails.map(({ slot, recipe }) => ({
-    id: `oven-guide-${slot.day}-${slot.meal}-${slot.recipe?.id || slot.recipeId}`,
+    id: `oven-guide-${slot.day}-${slot.meal}-${recipe?.id || slot.recipeId}`,
     title: BATCH_GUIDES.oven.action,
     detail: recipe?.steps.find((step) => /four|gratin|rôtir|rotir|plaque|°/i.test(step)) || undefined,
     target: targetText([slot]),
     group: "Optimisation du four",
   }));
   const robotGuides = recipeDetails.map(({ slot, recipe }) => ({
-    id: `robot-guide-${slot.day}-${slot.meal}-${slot.recipe?.id || slot.recipeId}`,
+    id: `robot-guide-${slot.day}-${slot.meal}-${recipe?.id || slot.recipeId}`,
     title: recipe?.robot?.length ? "Peser les ingrédients, installer l’accessoire indiqué et suivre les réglages ci-dessous." : BATCH_GUIDES.robot.fallback,
     detail: recipe?.robot?.length ? recipe.robot.join(" → ") : undefined,
     target: targetText([slot]),
     group: "Cuissons simultanées",
   }));
   const storageGuides = recipeDetails.map(({ slot, recipe }) => ({
-    id: `storage-guide-${slot.day}-${slot.meal}-${slot.recipe?.id || slot.recipeId}`,
+    id: `storage-guide-${slot.day}-${slot.meal}-${recipe?.id || slot.recipeId}`,
     title: /lundi|mardi|mercredi/i.test(slot.day) ? BATCH_GUIDES.storage.fridge : BATCH_GUIDES.storage.freezer,
     target: targetText([slot]),
     group: "Conservation",
