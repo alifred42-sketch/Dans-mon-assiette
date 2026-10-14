@@ -43,7 +43,7 @@ export default function BatchPage() {
     const recipe = getRecipe(slot.recipeId);
     return `${recipe?.name || slot.name} du ${dayName(slot.day)} ${slot.meal.toLowerCase()}`;
   };
-  const targetText = (slots: typeof changedPlan) => `(pour ${slots.map(targetName).join("; ")})`;
+  const targetText = (slots: typeof changedPlan) => `[Pour ${slots.map(targetName).join("; ")}]`;
   const recipeDetails = changedPlan.map((slot) => {
     const source = getRecipe(slot.recipeId);
     return { slot, recipe: source ? displayRecipe(source) : undefined };
@@ -71,20 +71,20 @@ export default function BatchPage() {
   }));
   const robotGuides = recipeDetails.map(({ slot, recipe }) => ({
     id: `robot-guide-${slot.day}-${slot.meal}-${recipe?.id || slot.recipeId}`,
-    title: recipe?.robot?.length ? "Peser les ingrédients, installer l’accessoire indiqué et suivre les réglages ci-dessous." : BATCH_GUIDES.robot.fallback,
-    detail: recipe?.robot?.length ? recipe.robot.join(" → ") : undefined,
+    title: recipe?.robot?.length ? "PESER LES INGRÉDIENTS, INSTALLER L’ACCESSOIRE ET SUIVRE LES RÉGLAGES." : BATCH_GUIDES.robot.fallback.toUpperCase(),
+    detail: recipe?.robot?.length ? recipe.robot.join(" → ").toUpperCase() : undefined,
     target: targetText([slot]),
-    group: "Cuissons simultanées",
+    group: "Dans mon Monsieur Cuisine",
   }));
   const storageGuides = recipeDetails.map(({ slot, recipe }) => ({
     id: `storage-guide-${slot.day}-${slot.meal}-${recipe?.id || slot.recipeId}`,
-    title: /lundi|mardi|mercredi/i.test(slot.day) ? BATCH_GUIDES.storage.fridge : BATCH_GUIDES.storage.freezer,
+    title: `${dayName(slot.day)} — ${getRecipe(slot.recipeId)?.name || slot.name} : ${/lundi|mardi|mercredi/i.test(slot.day) ? "BOÎTE HERMÉTIQUE AU RÉFRIGÉRATEUR" : "BAC ÉTIQUETÉ AU CONGÉLATEUR"}`,
     target: targetText([slot]),
-    group: "Conservation",
+    group: `${String(["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"].indexOf(dayName(slot.day)) + 1).padStart(2, "0")} ${dayName(slot.day)}`,
   }));
   const assemblyGuides = recipeDetails.map(({ slot }) => ({
     id: `assembly-guide-${slot.day}-${slot.meal}-${slot.recipeId}`,
-    title: BATCH_GUIDES.assembly.action,
+    title: "RÉCHAUFFER LA PORTION. ASSEMBLER. AJOUTER LES HERBES, SAUCE OU GARNITURE AU DERNIER MOMENT.",
     target: targetText([slot]),
     group: "Assemblage Jour J",
   }));
@@ -150,31 +150,31 @@ export default function BatchPage() {
         })}
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">{BATCH_GUIDES.prep.title}</h2>
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🔪 Le mode découpe</h2>
         <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.prep.intro}</p>
         <CheckList storageKey={`assiette-batch-prep-guides-${week}`} items={prepGuides} />
         {prep.length ? <CheckList storageKey={`assiette-batch-prep-${week}`} items={withTargets(prep, changedPlan)} /> : null}
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🔥 {BATCH_GUIDES.oven.title}</h2>
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Le mode cuisson — Au Four / Sur le feu</h2>
         <p className="text-sm text-muted-foreground">{BATCH_GUIDES.oven.intro}</p>
         {ovenGuides.length ? <CheckList storageKey={`assiette-batch-oven-guides-${week}`} items={ovenGuides} /> : <p className="text-sm">Aucune recette sélectionnée ne mentionne de cuisson au four dans sa fiche. Ne lancez pas de cuisson au four sans consigne adaptée.</p>}
         {oven.length ? <CheckList storageKey={`assiette-batch-oven-${week}`} items={withTargets(oven, ovenDetails.length ? ovenDetails.map(({ slot }) => slot) : changedPlan)} /> : null}
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 {BATCH_GUIDES.robot.title}</h2>
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Le mode cuisson — Dans mon Monsieur Cuisine</h2>
         <p className="text-sm text-muted-foreground">{BATCH_GUIDES.robot.intro}</p>
         <CheckList storageKey={`assiette-batch-robot-guides-${week}`} items={robotGuides} />
         {robot.length ? <CheckList storageKey={`assiette-batch-robot-${week}`} items={withTargets(robot, changedPlan)} /> : null}
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">{BATCH_GUIDES.storage.title}</h2>
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">📦 Le mode stockage</h2>
         <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.storage.intro}</p>
         <CheckList storageKey={`assiette-batch-storage-guides-${week}`} items={storageGuides} />
         {storage.length ? <CheckList storageKey={`assiette-batch-storage-${week}`} items={withTargets(storage, changedPlan)} /> : null}
       </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">{BATCH_GUIDES.assembly.title}</h2>
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🍽️ Au moment de servir (le jour J)</h2>
         {changedPlan.some((slot) => { const item = getRecipe(slot.recipeId); return item ? displayRecipe(item).name !== item.name : false; }) ? <p className="rounded-xl bg-[#F4EAD4] p-3 text-sm text-[#2B2B2B]"><strong>Assemblage Jour J :</strong> cuire les pâtes fraîches dans une grande casserole d’eau bouillante salée selon le temps indiqué sur le paquet, puis les mélanger à la sauce chaude juste avant de servir.</p> : null}
         <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.assembly.intro}</p>
         <CheckList storageKey={`assiette-batch-assembly-guides-${week}`} items={assemblyGuides} />
