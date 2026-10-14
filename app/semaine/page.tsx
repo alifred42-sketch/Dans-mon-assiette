@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, getRecipe, seasonLabel, weekPlan } from "@/lib/carnet";
+import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, currentIsoWeek, getRecipe, seasonLabel, weekPlan } from "@/lib/carnet";
 import { InstallApp } from "@/components/install-app";
 import { MealReminders } from "@/components/meal-reminders";
 import { WeekPicker } from "@/components/week-picker";
@@ -12,7 +12,7 @@ import { SwitchMeal } from "@/components/switch-meal";
 export default function WeekPage() {
   const search = useSearchParams();
   const requestedWeek = search.get("w");
-  const [currentWeek, setCurrentWeek] = useState(1);
+  const [currentWeek] = useState(() => currentIsoWeek());
   const [weekday, setWeekday] = useState(1);
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
   useEffect(() => {
@@ -23,16 +23,7 @@ export default function WeekPage() {
     return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); };
   }, []);
   useEffect(() => {
-    const now = new Date();
-    setWeekday(now.getDay());
-    const monday = new Date(now.getFullYear(), 0, 1);
-    const day = (now.getDay() + 6) % 7;
-    const thisMonday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - day);
-    const jan4 = new Date(now.getFullYear(), 0, 4);
-    const jan4Day = (jan4.getDay() + 6) % 7;
-    const firstMonday = new Date(now.getFullYear(), 0, 4 - jan4Day);
-    const isoWeek = Math.floor((thisMonday.getTime() - firstMonday.getTime()) / 604800000) + 1;
-    setCurrentWeek(Math.min(52, Math.max(1, isoWeek)));
+    setWeekday(new Date().getDay());
   }, []);
   const week = requestedWeek ? clampWeek(requestedWeek) : currentWeek;
   const mondayDate = (() => { const now = new Date(); const d = new Date(now.getFullYear(), 0, 4); d.setDate(d.getDate() - ((d.getDay() + 6) % 7) + (week - 1) * 7); return d; })();
