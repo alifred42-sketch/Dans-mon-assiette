@@ -12,7 +12,7 @@ function currentIsoWeek() {
   const day = thursday.getUTCDay() || 7;
   thursday.setUTCDate(thursday.getUTCDate() + 4 - day);
   const yearStart = new Date(Date.UTC(thursday.getUTCFullYear(), 0, 1));
-  return Math.min(52, Math.max(1, Math.ceil((((thursday.getTime() - yearStart.getTime()) / 86400000) + 1) / 7));
+  return Math.min(52, Math.max(1, Math.ceil((((thursday.getTime() - yearStart.getTime()) / 86400000) + 1) / 7)));
 }
 import { batchForWeek, clampWeek, getRecipe, weekPlan } from "@/lib/carnet";
 import { CheckList, type CheckItem } from "@/components/check-list";
