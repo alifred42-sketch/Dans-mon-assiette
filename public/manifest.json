@@ -1,10 +1,10 @@
 {
-  "id": "/Dans-mon-assiette/",
+  "id": "/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design/",
   "name": "CUISINE CHIC OUF !",
   "short_name": "CHIC OUF",
   "description": "52 semaines de menus, batchcooking simple et listes de courses automatisées.",
-  "start_url": "/Dans-mon-assiette/",
-  "scope": "/Dans-mon-assiette/",
+  "start_url": "/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design/",
+  "scope": "/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#F9F9F7",
@@ -12,19 +12,19 @@
   "lang": "fr",
   "icons": [
     {
-      "src": "/Dans-mon-assiette/icon-192.png",
+      "src": "/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/Dans-mon-assiette/icon-512.png",
+      "src": "/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/Dans-mon-assiette/icon-maskable-512.png",
+      "src": "/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

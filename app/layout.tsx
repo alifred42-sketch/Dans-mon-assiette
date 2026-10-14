@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   appleWebApp: { capable: true, title: "CUISINE CHIC OUF !", statusBarStyle: "default" },
   icons: {
     icon: [
-      { url: `${BASE_PATH}/icon.svg`, type: "image/svg+xml" },
       { url: `${BASE_PATH}/icon-192.png`, sizes: "192x192", type: "image/png" },
       { url: `${BASE_PATH}/icon-512.png`, sizes: "512x512", type: "image/png" },
     ],
