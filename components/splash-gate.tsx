@@ -16,7 +16,7 @@ export function SplashGate({ children }: { children: React.ReactNode }) {
         const timer = window.setTimeout(() => {
           localStorage.setItem(STORAGE_KEY, "1");
           setShowSplash(false);
-        }, 3000);
+        }, 5000);
         setReady(true);
         return () => window.clearTimeout(timer);
       }
