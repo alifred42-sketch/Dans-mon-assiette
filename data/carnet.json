@@ -57243,6 +57243,270 @@
       "blurb": "Dessert n°50 du Grand Livre de Noël.",
       "fete": "noel",
       "sous_fete": "desserts"
+    },
+    {
+      "id": "halloween-apero-01",
+      "numero": 1,
+      "name": "Les Saucisses Momies",
+      "ingredients": [
+        "12 saucisses de Strasbourg",
+        "1 pâte feuilletée rectangulaire",
+        "1 jaune d'œuf",
+        "Quelques gouttes de moutarde"
+      ],
+      "steps": [
+        "Préchauffez le four à 180°C. Déroulez la pâte feuilletée et coupez-y de fines lanières d'environ 5 mm de large.",
+        "Enroulez les lanières de pâte autour de chaque saucisse pour imiter les bandes d'une momie, en laissant un espace libre près de l'une des extrémités pour figurer le visage.",
+        "Déposez les momies sur une plaque recouverte de papier cuisson et badigeonnez la pâte de jaune d'œuf.",
+        "Enfournez pour 15 minutes jusqu'à ce que la pâte soit bien dorée. À la sortie du four, laissez tiédir et formez les yeux à l'aide de petites pointes de moutarde."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Grimoire d’Halloween — page 2",
+      "timePrep": "15 min",
+      "timeCook": "15 min",
+      "servings": "6 personnes",
+      "blurb": "Apéritif n°1 du Grand Grimoire d’Halloween.",
+      "fete": "halloween",
+      "sous_fete": "aperos"
+    },
+    {
+      "id": "halloween-apero-02",
+      "numero": 2,
+      "name": "Les Pizzas Araignées Miniatures",
+      "ingredients": [
+        "1 pâte à pizza",
+        "150 g de coulis de tomate",
+        "150 g de mozzarella râpée",
+        "20 olives noires dénoyautées",
+        "1 cuillère à café d'origan"
+      ],
+      "steps": [
+        "Préchauffez le four à 210°C. Déroulez la pâte à pizza et découpez des mini-disques à l'aide d'un emporte-pièce ou d'un verre.",
+        "Étalez une cuillère à soupe de coulis de tomate sur chaque mini-pizza, parsemez de mozzarella râpée et saupoudrez d'origan.",
+        "Pour créer les araignées : coupez une olive en deux dans le sens de la longueur pour faire le corps. Coupez d'autres olives en fines lamelles pour former les 8 petites pattes.",
+        "Assemblez une araignée au centre de chaque mini-pizza. Enfournez pour 10 à 12 minutes jusqu'à ce que le fromage soit bien fondu."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Grimoire d’Halloween — page 3",
+      "timePrep": "20 min",
+      "timeCook": "12 min",
+      "servings": "6 personnes",
+      "blurb": "Apéritif n°2 du Grand Grimoire d’Halloween.",
+      "fete": "halloween",
+      "sous_fete": "aperos"
+    },
+    {
+      "id": "halloween-apero-03",
+      "numero": 3,
+      "name": "La Couronne \"Sapin-Araignée\" au Pesto",
+      "ingredients": [
+        "2 pâtes feuilletées rondes",
+        "1 pot de pesto vert ou rouge",
+        "1 jaune d'œuf",
+        "Olives noires"
+      ],
+      "steps": [
+        "Préchauffez le four à 190°C. Étalez la première pâte feuilletée sur une plaque de cuisson.",
+        "Nappez la pâte de pesto en laissant 1 cm sur les bords. Recouvrez avec la deuxième pâte feuilletée.",
+        "Posez un petit verre au centre. Découpez des lanières du centre vers l'extérieur (environ 16 ou 24 branches). Torsadez chaque lanière sur elle-même.",
+        "Retirez le verre, dorez au jaune d'œuf et décorez le centre avec des éclats d'olives noires formant une toile d'araignée. Enfournez 20 minutes."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Grimoire d’Halloween — page 3",
+      "timePrep": "15 min",
+      "timeCook": "20 min",
+      "servings": "6 personnes",
+      "blurb": "Apéritif n°3 du Grand Grimoire d’Halloween.",
+      "fete": "halloween",
+      "sous_fete": "aperos"
+    },
+    {
+      "id": "halloween-apero-04",
+      "numero": 4,
+      "name": "Les Mini Croque-Monsieur Citrouilles",
+      "ingredients": [
+        "8 tranches de pain de mie",
+        "4 tranches de cheddar orange",
+        "2 tranches de jambon",
+        "20 g de beurre"
+      ],
+      "steps": [
+        "À l'aide d'un emporte-pièce ou au couteau, découpez les tranches de pain de mie en forme de citrouille ronde. Dans la moitié des tranches, évidez des yeux et une bouche triangulaire.",
+        "Sur les tranches de base non évidées, étalez un peu de beurre, déposez un morceau de jambon et une tranche de cheddar orange bien visible.",
+        "Refermez avec la face évidée « Jack-o'-lantern ».",
+        "Passez au four à 180°C pendant 8 à 10 minutes jusqu'à ce que le fromage commence à fondre à travers les trous."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Grimoire d’Halloween — page 4",
+      "timePrep": "15 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "blurb": "Apéritif n°4 du Grand Grimoire d’Halloween.",
+      "fete": "halloween",
+      "sous_fete": "aperos"
+    },
+    {
+      "id": "halloween-apero-05",
+      "numero": 5,
+      "name": "Le Fromage Frais Citrouille aux Crackers",
+      "ingredients": [
+        "300 g de fromage frais (type Saint-Moret)",
+        "100 g de cheddar râpé fin",
+        "1 cuillère à café de paprika",
+        "1 biscuit salé type bretzel pour la tige",
+        "Crackers pour le service"
+      ],
+      "steps": [
+        "Dans un saladier, mélangez vigoureusement le fromage frais et le cheddar râpé. Salez légèrement si nécessaire.",
+        "Déposez le mélange sur du film étirable, fermez-le en formant une boule. Enroulez de la ficelle de cuisine tout autour de la boule pour former les rainures de la citrouille.",
+        "Placez au frais pendant au moins 2 heures pour raffermir le tout.",
+        "Retirez délicatement la ficelle et le film. Roulez la boule dans le paprika pour lui donner sa couleur orange. Plantez le bretzel au sommet pour faire la tige et servez avec des crackers."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Grimoire d’Halloween — page 4",
+      "timePrep": "20 min",
+      "timeCook": "Sans cuisson — repos : 2 h",
+      "servings": "6 personnes",
+      "blurb": "Apéritif n°5 du Grand Grimoire d’Halloween.",
+      "fete": "halloween",
+      "sous_fete": "aperos"
+    },
+    {
+      "id": "halloween-apero-06",
+      "numero": 6,
+      "name": "Les Doigts de Sorcière Sablés",
+      "ingredients": [
+        "250 g de farine",
+        "100 g de beurre mou",
+        "100 g de sucre",
+        "1 œuf",
+        "1 pincée de sel",
+        "20 amandes entières",
+        "Un peu de confiture de fraise ou framboise"
+      ],
+      "steps": [
+        "Mélangez la farine, le sucre et le sel. Ajoutez le beurre mou en morceaux et l'œuf. Malaxez jusqu'à obtenir une pâte homogène. Laissez reposer 30 min au frais.",
+        "Formez de petits boudins de la taille de vos doigts. Marquez les plis des phalanges en faisant de petites entailles au couteau.",
+        "À l'une des extrémités, déposez un point de confiture et pressez fortement une amande entière pour figurer l'ongle.",
+        "Enfournez à 180°C pendant 12 à 15 minutes. Laissez refroidir ; rajoutez un peu de confiture rouge à la base du doigt pour l'effet « sanglant »."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Grimoire d’Halloween — page 5",
+      "timePrep": "25 min",
+      "timeCook": "15 min",
+      "servings": "6 personnes",
+      "blurb": "Apéritif n°6 du Grand Grimoire d’Halloween.",
+      "fete": "halloween",
+      "sous_fete": "aperos"
+    },
+    {
+      "id": "halloween-apero-07",
+      "numero": 7,
+      "name": "Les Momies Gourmandes au Chocolat",
+      "ingredients": [
+        "4 barres de chocolat (type Mars ou Snickers) ou carrés de chocolat noir allongés",
+        "1 rouleau de pâte feuilletée",
+        "1 œuf pour la dorure"
+      ],
+      "steps": [
+        "Découpez la pâte feuilletée en très fines bandelettes.",
+        "Enroulez les bandelettes de pâte autour des barres chocolatées de façon désordonnée pour créer le look de momie.",
+        "Badigeonnez de dorure à l'œuf et posez sur une plaque.",
+        "Faites cuire à 180°C pendant 10 à 12 minutes. Laissez refroidir avant de déguster pour que le chocolat figé ne brûle pas."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Grimoire d’Halloween — page 5",
+      "timePrep": "15 min",
+      "timeCook": "12 min",
+      "servings": "4 personnes",
+      "blurb": "Apéritif n°7 du Grand Grimoire d’Halloween.",
+      "fete": "halloween",
+      "sous_fete": "aperos"
+    },
+    {
+      "id": "halloween-apero-08",
+      "numero": 8,
+      "name": "La Couronne de Pavlova Ensanglantée",
+      "ingredients": [
+        "4 blancs d'œufs",
+        "200 g de sucre blanc",
+        "20 cl de crème liquide entière 30 %",
+        "150 g de framboises fraîches",
+        "100 g de coulis de framboise"
+      ],
+      "steps": [
+        "Montez les blancs en neige ferme en incorporant le sucre en trois fois jusqu'à obtenir une meringue brillante.",
+        "Sur un papier cuisson, formez une grande couronne avec la meringue. Enfournez à 100°C pendant 1 h 15. Laissez refroidir complètement.",
+        "Montez la crème fraîche en chantilly bien ferme.",
+        "Garnissez le dessus de la meringue de chantilly, disposez les framboises et versez le coulis de manière irrégulière pour donner un effet de coulures de sang."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Grimoire d’Halloween — page 6",
+      "timePrep": "30 min",
+      "timeCook": "1 h 15",
+      "servings": "8 personnes",
+      "blurb": "Apéritif n°8 du Grand Grimoire d’Halloween.",
+      "fete": "halloween",
+      "sous_fete": "aperos"
+    },
+    {
+      "id": "halloween-apero-09",
+      "numero": 9,
+      "name": "Le Gâteau Cimetière aux Oréos",
+      "ingredients": [
+        "1 base de gâteau au chocolat (type brownie)",
+        "1 paquet de biscuits Oréo",
+        "5 à 6 biscuits de forme ovale (type Langues de chat)",
+        "50 g de chocolat noir fondu"
+      ],
+      "steps": [
+        "Préparez ou démoulez votre gâteau au chocolat dans un plat rectangulaire.",
+        "Ouvrez les Oréos, retirez la crème blanche et mixez finement les biscuits noirs pour obtenir une poudre semblable à de la terre fraîche. Éparpillez-la sur tout le gâteau.",
+        "À l'aide d'un cure-dent et du chocolat noir fondu, écrivez « RIP » sur les langues de chat pour créer les pierres tombales.",
+        "Plantez verticalement les langues de chat dans le gâteau pour dresser votre cimetière gourmand."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Grimoire d’Halloween — page 6",
+      "timePrep": "20 min",
+      "timeCook": "25 min",
+      "servings": "8 personnes",
+      "blurb": "Apéritif n°9 du Grand Grimoire d’Halloween.",
+      "fete": "halloween",
+      "sous_fete": "aperos"
+    },
+    {
+      "id": "halloween-apero-10",
+      "numero": 10,
+      "name": "Les Fantômes Moelleux en Meringue",
+      "ingredients": [
+        "3 blancs d'œufs",
+        "150 g de sucre",
+        "30 g de pépites de chocolat noir fondues"
+      ],
+      "steps": [
+        "Montez les blancs d'œufs en neige très ferme. Ajoutez le sucre petit à petit sans cesser de battre jusqu'à consistance de bec d'oiseau.",
+        "Mettez la meringue dans une poche munie d'une douille lisse et large.",
+        "Pochez des petits cônes en hauteur en trois pressions dégressives sur une plaque tapissée de papier de cuisson pour former des spectres.",
+        "Faites cuire au four préchauffé à 100°C pendant 1 heure. Laissez refroidir. Dessinez les yeux et la bouche béante à l'aide du chocolat fondu appliqué au cure-dent."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Grimoire d’Halloween — page 7",
+      "timePrep": "20 min",
+      "timeCook": "1 h",
+      "servings": "6 personnes",
+      "blurb": "Apéritif n°10 du Grand Grimoire d’Halloween.",
+      "fete": "halloween",
+      "sous_fete": "aperos"
     }
   ],
   "plan": [
