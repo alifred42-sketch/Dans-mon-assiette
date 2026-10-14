@@ -49,7 +49,7 @@ export default function HomePage() {
   if (showSplash) {
     return (
       <main className="flex min-h-dvh animate-[fadeIn_500ms_ease-out] flex-col items-center justify-center bg-[#F9F9F7] px-6 text-center">
-        <img src={`${BASE_PATH}/logo-cuisine-chic-ouf.png`} alt="CUISINE CHIC OUF !" className="block h-auto w-[min(82vw,380px)] max-w-full shrink-0 object-contain drop-shadow-[0_5px_12px_rgba(43,43,43,0.10)]" loading="eager" fetchPriority="high" />
+        <img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v2.png`} alt="CUISINE CHIC OUF !" className="block h-auto w-[min(82vw,380px)] max-w-full shrink-0 object-contain drop-shadow-[0_5px_12px_rgba(43,43,43,0.10)]" loading="eager" fetchPriority="high" />
         <p className="mt-6 max-w-xl text-base font-normal leading-7 text-[#2B2B2B] sm:text-lg sm:leading-8">
           Pas de panique, on mange quoi ce soir ? 52 semaines de menus, du batchcooking simple et vos listes de courses automatisées. Cuisinez chic, respirez... OUF !
         </p>
@@ -61,7 +61,7 @@ export default function HomePage() {
   return (
     <main className="min-h-dvh bg-[#F9F9F7]">
       <div className="mx-auto flex w-full max-w-3xl flex-col items-center px-5 py-8 pb-14 text-center sm:px-8">
-        <img src={`${BASE_PATH}/logo-cuisine-chic-ouf.png`} alt="CUISINE CHIC OUF !" className="block h-auto w-[min(82vw,340px)] max-w-full shrink-0 object-contain drop-shadow-[0_5px_12px_rgba(43,43,43,0.10)]" loading="eager" fetchPriority="high" />
+        <img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v2.png`} alt="CUISINE CHIC OUF !" className="block h-auto w-[min(82vw,340px)] max-w-full shrink-0 object-contain drop-shadow-[0_5px_12px_rgba(43,43,43,0.10)]" loading="eager" fetchPriority="high" />
         <section className="mt-7 max-w-2xl">
           <h1 className="text-4xl font-black tracking-tight text-[#2B2B2B] sm:text-6xl">CUISINE CHIC OUF !</h1>
 
