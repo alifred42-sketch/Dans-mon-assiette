@@ -47,7 +47,7 @@ export function FetesNavigation({ showBack = false }: { showBack?: boolean }) {
   const [activeBook, setActiveBook] = useState<BookId | null>(null);
   const [activeSub, setActiveSub] = useState<string | null>(null);
   const selectedBook = BOOKS.find((book) => book.id === activeBook);
-  const selectedRecipes = activeBook && activeSub ? carnet.recipes.filter((recipe) => recipe.fete === activeBook && recipe.sous_fete === activeSub) : [];
+  const selectedRecipes = activeBook && activeSub ? carnet.recipes.filter((recipe) => recipe.fete === activeBook && recipe.sous_fete === (activeBook === "noel" && activeSub === "plats-principaux" ? "plats" : activeSub)) : [];
 
   return (
     <section className="space-y-5">
