@@ -174,6 +174,15 @@ export function recipesForCollection(slug: string): Recipe[] {
   return col.recipeIds.map((id) => recipesById.get(id)).filter((r): r is Recipe => !!r);
 }
 
+export function currentIsoWeek(): number {
+  const date = new Date();
+  const thursday = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const day = thursday.getUTCDay() || 7;
+  thursday.setUTCDate(thursday.getUTCDate() + 4 - day);
+  const yearStart = new Date(Date.UTC(thursday.getUTCFullYear(), 0, 1));
+  return Math.min(52, Math.max(1, Math.ceil((((thursday.getTime() - yearStart.getTime()) / 86400000) + 1) / 7)));
+}
+
 export function clampWeek(raw: string | undefined | null): number {
   const n = Number(raw);
   if (!Number.isFinite(n)) return 1;
