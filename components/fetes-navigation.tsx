@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { BackButton } from "@/components/back-button";
+import { carnet } from "@/lib/carnet";
+import { recipeLines } from "@/lib/search";
+import { RecipeList } from "@/components/recipe-list";
 
 const BOOKS = [
   {
@@ -44,6 +47,7 @@ export function FetesNavigation({ showBack = false }: { showBack?: boolean }) {
   const [activeBook, setActiveBook] = useState<BookId | null>(null);
   const [activeSub, setActiveSub] = useState<string | null>(null);
   const selectedBook = BOOKS.find((book) => book.id === activeBook);
+  const selectedRecipes = activeBook && activeSub ? carnet.recipes.filter((recipe) => recipe.fete === activeBook && recipe.sous_fete === activeSub) : [];
 
   return (
     <section className="space-y-5">
@@ -95,11 +99,16 @@ export function FetesNavigation({ showBack = false }: { showBack?: boolean }) {
               );
             })}
           </div>
-          {activeSub ? (
+          {activeSub ? (selectedRecipes.length > 0 ? (
+            <div className="space-y-3" aria-live="polite">
+              <h3 className="font-heading text-lg text-[#1A1A1A]">{selectedRecipes.length} recette(s) dans cette rubrique</h3>
+              <RecipeList items={selectedRecipes.map((recipe) => ({ id: recipe.id, name: `${String(recipe.numero || "").padStart(2, "0")}. ${recipe.name}`, lines: recipeLines(recipe) }))} />
+            </div>
+          ) : (
             <p className="rounded-2xl border border-[#E3DCD4] bg-[#F9F9F7] px-4 py-3 text-sm text-[#1A1A1A]" role="status">
-              Cette rubrique est prête à accueillir vos futurs PDF. Aucune recette n'a été ajoutée.
+              Cette rubrique est prête à accueillir ses recettes.
             </p>
-          ) : null}
+          )) : null}
         </div>
       ) : null}
     </section>

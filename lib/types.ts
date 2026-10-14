@@ -18,6 +18,9 @@ export type Recipe = {
   servings?: string;
   image?: string;
   imageAlt?: string;
+  fete?: string;
+  sous_fete?: string;
+  numero?: number;
 };
 
 export type PlanSlot = {

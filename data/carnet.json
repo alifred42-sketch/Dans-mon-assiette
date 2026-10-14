@@ -55904,6 +55904,462 @@
           ]
         }
       ]
+    },
+    {
+      "id": "noel-entree-01",
+      "numero": 1,
+      "name": "Velouté de Potimarron aux Éclats de Châtaignes",
+      "ingredients": [
+        "1 potimarron (environ 1 kg)",
+        "1 oignon",
+        "100g de châtaignes cuites sous vide",
+        "20 cl de crème liquide entière",
+        "1 c. à soupe d'huile d'olive",
+        "Sel, poivre, muscade"
+      ],
+      "steps": [
+        "Lavez le potimarron, videz les graines et coupez-le en cubes avec la peau. Émincez l'oignon.",
+        "Faites revenir l'oignon dans l'huile d'olive. Ajoutez le potimarron, couvrez d'eau, salez et poivrez. Mijotez 25 min.",
+        "Mixez finement avec la crème et une pincée de muscade.",
+        "Faites griller les châtaignes concassées 2 min à la poêle et parsemez sur le velouté chaud dans des verrines."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 2",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°1 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-02",
+      "numero": 2,
+      "name": "Saumon Gravlax à l'Aneth",
+      "ingredients": [
+        "1 filet de saumon ultra-frais de 800g (avec peau)",
+        "100g de gros sel",
+        "80g de sucre en poudre",
+        "1 bouquet d'aneth fraîche",
+        "1 c. à soupe de baies roses"
+      ],
+      "steps": [
+        "Mélangez le gros sel, le sucre et les baies roses concassées.",
+        "Déposez le saumon côté peau dans un plat creux. Recouvrez la chair du mélange puis d'aneth ciselée.",
+        "Filmez au contact, posez un poids dessus et laissez mariner au frais pendant 24h à 36h.",
+        "Rincez abondamment le saumon à l'eau froide, séchez-le et coupez-le en fines tranches."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 2-3",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°2 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-03",
+      "numero": 3,
+      "name": "Tatin d'Échalotes au Vinaigre Balsamique",
+      "ingredients": [
+        "500g d'échalotes",
+        "1 pâte feuilletée",
+        "30g de beurre",
+        "2 c. à soupe de vinaigre balsamique",
+        "2 c. à soupe de sucre roux",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Pelez les échalotes et coupez-les en deux dans la longueur.",
+        "Faites-les fondre dans une poêle avec le beurre pendant 10 min. Ajoutez le sucre et le vinaigre pour caraméliser.",
+        "Disposez les échalotes au fond d'un moule à manqué, versez le sirop de cuisson, puis recouvrez avec la pâte feuilletée en rentrant les bords.",
+        "Enfournez 25 min à 200°C. Attendez 5 min avant de démouler à l'envers."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 3",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°3 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-04",
+      "numero": 4,
+      "name": "Tartare de Saint-Jacques aux Agrumes",
+      "ingredients": [
+        "18 noix de Saint-Jacques sans corail",
+        "1 orange bio et 1 citron vert",
+        "1/2 grenade",
+        "3 c. à soupe d'huile d'olive",
+        "Aneth fraîche, sel, poivre blanc"
+      ],
+      "steps": [
+        "Coupez les Saint-Jacques en petits dés réguliers.",
+        "Prélevez les zestes et le jus de la moitié du citron vert et de l'orange. Récupérez les grains de grenade.",
+        "Mélangez les dés de Saint-Jacques avec l'huile d'olive, les jus, les zestes, du sel et du poivre.",
+        "Dressez dans des cercles, décorez de grains de grenade et d'aneth. Servez immédiatement très frais."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 3-4",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°4 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-05",
+      "numero": 5,
+      "name": "Cappuccino de Cèpes à l'Écume de Foie Gras",
+      "ingredients": [
+        "400g de cèpes (frais ou surgelés)",
+        "1 échalote",
+        "80g de foie gras de canard cuit",
+        "40 cl de crème liquide entière",
+        "20g de beurre, sel, poivre"
+      ],
+      "steps": [
+        "Faites revenir l'échalote et les cèpes émincés dans le beurre pendant 10 min.",
+        "Ajoutez 20 cl de crème, salez, poivrez et mixez longuement pour obtenir un velouté très lisse. Versez en verrines.",
+        "Faites chauffer les 20 cl de crème restants avec le foie gras en morceaux jusqu'à ce qu'il soit fondu. Émulsionnez au mixeur plongeant pour créer une écume.",
+        "Déposez délicatement l'écume de foie gras sur le velouté de cèpes chaud et servez."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 4",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°5 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-06",
+      "numero": 6,
+      "name": "Couronne Feuilletée au Pesto et Parmesan",
+      "ingredients": [
+        "2 pâtes feuilletées rondes",
+        "1 pot de pesto verde (190g)",
+        "50g de parmesan râpé",
+        "1 jaune d'œuf",
+        "Graines de sésame"
+      ],
+      "steps": [
+        "Étalez une première pâte, tartinez-la de pesto et saupoudrez de parmesan.",
+        "Recouvrez avec la deuxième pâte. Posez un verre au centre, puis coupez des bandes du centre vers l'extérieur.",
+        "Torsadez chaque bande sur elle-même. Retirez le verre.",
+        "Dorez au jaune d'œuf, parsemez de sésame et enfournez 20 min à 190°C."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 4-5",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°6 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-07",
+      "numero": 7,
+      "name": "Tarte Fine au Boudin Blanc et Pommes",
+      "ingredients": [
+        "1 pâte feuilletée",
+        "3 boudins blancs",
+        "3 pommes de type Golden",
+        "20g de beurre",
+        "1 c. à soupe de miel, sel, poivre"
+      ],
+      "steps": [
+        "Épluchez les pommes et coupez-les en fines lamelles. Faites-les dorer à la poêle dans le beurre pendant 5 min avec le miel.",
+        "Retirez la peau des boudins blancs et coupez-les en rondelles.",
+        "Déroulez la pâte feuilletée sur une plaque. Disposez les pommes en rosace puis intercalez les rondelles de boudin blanc.",
+        "Salez, poivrez et enfournez 20 min à 200°C jusqu'à ce que la pâte soit bien croustillante."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 5",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°7 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-08",
+      "numero": 8,
+      "name": "Feuilletés Étoilés au Confit d'Oignons et Chèvre",
+      "ingredients": [
+        "1 pâte feuilletée",
+        "150g de confit d'oignons",
+        "1 bûche de fromage de chèvre",
+        "1 jaune d'œuf, herbes de Provence"
+      ],
+      "steps": [
+        "À l'aide d'un emporte-pièce, découpez des étoiles dans la pâte feuilletée (nombre pair).",
+        "Sur la moitié des étoiles, déposez une cuillère de confit d'oignons et une rondelle de chèvre.",
+        "Recouvrez avec une deuxième étoile en pâte et soudez les bords avec un peu d'eau.",
+        "Dorez au jaune d'œuf, saupoudrez d'herbes de Provence et cuisez 15 min à 200°C."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 5-6",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°8 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-09",
+      "numero": 9,
+      "name": "Verrines d'Avocat à la Truite Fumée",
+      "ingredients": [
+        "3 avocats mûrs",
+        "150g de lanières de truite fumée",
+        "1 citron vert (jus)",
+        "2 c. à soupe de crème fraîche épaisse",
+        "Aneth, sel, piment d'Espelette"
+      ],
+      "steps": [
+        "Mixez la chair des avocats avec le jus de citron vert, la crème fraîche, du sel et une pincée de piment d'Espelette pour obtenir une crème lisse.",
+        "Répartissez cette mousse d'avocat au fond de 6 verrines.",
+        "Disposez harmonieusement les lanières de truite fumée par-dessus.",
+        "Décorez d'un brin d'aneth et réservez au frais jusqu'au moment de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 6",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°9 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-10",
+      "numero": 10,
+      "name": "Velouté de Châtaignes au Bacon Croustillant",
+      "ingredients": [
+        "500g de châtaignes cuites au naturel",
+        "1 pomme de terre",
+        "1 blanc de poireau",
+        "6 tranches de bacon",
+        "15 cl de crème liquide, 20g de beurre, sel, poivre"
+      ],
+      "steps": [
+        "Émincez le poireau et coupez la pomme de terre en dés. Faites-les suer dans le beurre.",
+        "Ajoutez les châtaignes (gardez-en quelques-unes pour le décor) et couvrez d'un litre d'eau. Cuisez 20 min.",
+        "Pendant ce temps, faites griller les tranches de bacon à sec dans une poêle jusqu'à ce qu'elles soient croustillantes.",
+        "Mixez le velouté avec la crème, ajustez l'assaisonnement et servez garni de bacon et d'éclats de châtaignes."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 6-7",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°10 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-11",
+      "numero": 11,
+      "name": "Foie Gras Poêlé aux Pommes Festives",
+      "ingredients": [
+        "1 lobe de foie gras cru de 500g coupé en 6 tranches épaisses",
+        "3 pommes acidulées (Granny Smith ou Reine des Reinettes)",
+        "20g de beurre",
+        "1 c. à soupe de vinaigre de cidre",
+        "Fleur de sel, poivre du moulin"
+      ],
+      "steps": [
+        "Épluchez les pommes et coupez-les en quartiers. Faites-les dorer au beurre dans une poêle jusqu'à ce qu'elles soient tendres.",
+        "Chauffez une poêle à blanc. Saisissez les tranches de foie gras encore très fraîches 1 min 30 de chaque côté.",
+        "Retirez le foie gras, essuyez l'excès de gras de la poêle et déglacez immédiatement avec le vinaigre de cidre.",
+        "Dressez les pommes, déposez l'escalope de foie gras, nappez de jus déglacé, de fleur de sel et de poivre."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 7",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°11 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-12",
+      "numero": 12,
+      "name": "Huîtres Chaudes Sabayon au Champagne",
+      "ingredients": [
+        "24 huîtres creuses N°3",
+        "3 jaunes d'œufs",
+        "10 cl de Champagne ou vin blanc pétillant",
+        "Gros sel (pour caler les huîtres)",
+        "Poivre blanc"
+      ],
+      "steps": [
+        "Ouvrez les huîtres, détachez-les de leur coquille et filtrez leur eau. Remettez les huîtres dans leurs coquilles lavées.",
+        "Dans un cul-de-poule au bain-marie, fouettez les jaunes d'œufs avec le Champagne et 2 cuillères à soupe d'eau d'huître filtrée jusqu'à obtenir un sabayon mousseux et épais.",
+        "Préchauffez le gril du four. Répartissez le sabayon sur chaque huître.",
+        "Calez les huîtres sur un lit de gros sel et passez sous le gril 2 à 3 min pour dorer. Servez immédiatement."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 7-8",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°12 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-13",
+      "numero": 13,
+      "name": "Gambas Flambées au Pastis et Crème d'Ail",
+      "ingredients": [
+        "24 belles gambas crues",
+        "3 gousses d'ail",
+        "5 cl de Pastis",
+        "20 cl de crème liquide entière",
+        "1 c. à soupe d'huile d'olive, sel, poivre"
+      ],
+      "steps": [
+        "Hachez finement les gousses d'ail.",
+        "Faites sauter les gambas dans l'huile d'olive bien chaude 2 min de chaque côté jusqu'à ce qu'elles deviennent roses. Ajouter l'ail.",
+        "Versez le Pastis et flambez immédiatement hors du feu en prenant les précautions nécessaires.",
+        "Ajoutez la crème liquide, salez, poivrez et laissez réduire 2 min à feu doux avant de servir bien chaud."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 8",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°13 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-14",
+      "numero": 14,
+      "name": "Carpaccio de Saint-Jacques à l'Huile de Truffe",
+      "ingredients": [
+        "18 noix de Saint-Jacques ultra-fraîches",
+        "2 c. à soupe d'huile de truffe blanche",
+        "1 c. à soupe de jus de citron",
+        "Fleur de sel, baies roses"
+      ],
+      "steps": [
+        "Placez les Saint-Jacques 15 min au congélateur pour faciliter la découpe.",
+        "À l'aide d'un couteau bien aiguisé, tranchez-les finement en lamelles.",
+        "Disposez les lamelles en rosace directement sur les assiettes de service.",
+        "Badigeonnez au pinceau d'huile de truffe et de jus de citron. Parsemez de fleur de sel et de baies roses écrasées."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 8-9",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°14 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-15",
+      "numero": 15,
+      "name": "Profiteroles Salées au Saumon Fumé et Fromage Frais",
+      "ingredients": [
+        "18 choux vides (du commerce ou maison)",
+        "150g de saumon fumé (ou truite fumée)",
+        "200g de fromage frais à tartiner (type Saint-Morêt)",
+        "Ciboulette fraîche, aneth, poivre"
+      ],
+      "steps": [
+        "Mélangez le fromage frais avec la ciboulette ciselée et un peu de poivre.",
+        "Découpez le saumon fumé en petits morceaux et incorporez-le délicatement au fromage.",
+        "Coupez le chapeau des choux à l'aide d'un couteau à pain.",
+        "Garnissez les choux de farce à l'aide d'une poche à douille ou d'une petite cuillère, puis replacez les chapeaux."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 9",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°15 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-16",
+      "numero": 16,
+      "name": "Terrine de Canard Maison Facile",
+      "ingredients": [
+        "400g de filet de canard (sans peau)",
+        "300g de gorge de porc",
+        "200g de lardons",
+        "1 œuf",
+        "2 cl de Cognac, sel, poivre, thym"
+      ],
+      "steps": [
+        "Passez au hachoir la viande de canard, la gorge de porc et les lardons.",
+        "Mélangez intimement la viande hachée avec l'œuf, le Cognac, 12g de sel et 3g de poivre.",
+        "Tassez la préparation dans une terrine. Déposez une branche de thym sur le dessus.",
+        "Faites cuire au bain-marie dans un four préchauffé à 160°C pendant 1h30. Laissez refroidir et placez 48h au frais avant de déguster."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 9-10",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "8 personnes",
+      "blurb": "Entrée n°16 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
+    },
+    {
+      "id": "noel-entree-17",
+      "numero": 17,
+      "name": "Pruneaux au Lard et Fromage de Brebis",
+      "ingredients": [
+        "18 grands pruneaux dénoyautés",
+        "9 tranches de poitrine fumée fine",
+        "50g de fromage de brebis des Pyrénées (Ossau-Iraty)"
+      ],
+      "steps": [
+        "Coupez le fromage de brebis en 18 petits bâtonnets.",
+        "Insérez un bâtonnet de fromage à l'intérieur de chaque pruneau.",
+        "Coupez les tranches de poitrine fumée en deux. Enroulez une demi-tranche autour de chaque pruneau et fixez avec un pic en bois.",
+        "Passez sous le gril du four pendant 5 à 7 min en retournant à mi-cuisson pour faire croustiller le lard. Servir chaud."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 10",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Entrée n°17 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "entrees"
     }
   ],
   "plan": [
