@@ -114,11 +114,6 @@ export default function BatchPage() {
         <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">Enfilez votre tablier, allumez les feux (ou votre robot). 2 heures de cuisine le dimanche pour 7 jours de liberté.</p>
       </div>
       <WeekPicker week={week} path="/batch" />
-      <section className="space-y-2 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-lg font-extrabold text-[#2B2B2B]">🍽️ Recettes prévues pour cette semaine</h2>
-        <p className="text-sm text-muted-foreground">Cette liste suit les recettes que vous avez choisies dans le menu.</p>
-        <ul className="list-disc space-y-1 pl-5 text-sm">{changedPlan.map((slot, i) => <li key={`${slot.day}-${slot.meal}-${i}`}><strong>{slot.day.charAt(0) + slot.day.slice(1).toLowerCase()} · {slot.meal} :</strong> {getRecipe(slot.recipeId)?.name || slot.name}</li>)}</ul>
-      </section>
       <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🔪 Le mode découpe</h2>
         <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.prep.intro}</p>
@@ -195,6 +190,11 @@ export default function BatchPage() {
             </article>
           );
         })}
+      </section>
+      <section className="space-y-2 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+        <h2 className="font-heading text-lg font-extrabold text-[#2B2B2B]">🍽️ Recettes prévues pour cette semaine</h2>
+        <p className="text-sm text-muted-foreground">Cette liste suit les recettes que vous avez choisies dans le menu.</p>
+        <ul className="list-disc space-y-1 pl-5 text-sm">{changedPlan.map((slot, i) => <li key={`${slot.day}-${slot.meal}-${i}`}><strong>{slot.day.charAt(0) + slot.day.slice(1).toLowerCase()} · {slot.meal} :</strong> {getRecipe(slot.recipeId)?.name || slot.name}</li>)}</ul>
       </section>
       {general.length ? <section className="space-y-2"><h2 className="font-heading text-lg font-bold">Autres tâches notées dans le carnet</h2><CheckList storageKey={`assiette-batch-general-${week}`} items={general} /></section> : null}
       {allItems.length === 0 ? <p className="rounded-2xl bg-[#8FA89B]/10 p-4 text-sm text-[#466653]">Le carnet ne contient pas encore de tâches détaillées pour cette semaine. Utilisez le plan ci-dessus comme trame, et reportez les réglages précis depuis les fiches recettes.</p> : null}
