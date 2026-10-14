@@ -114,31 +114,42 @@ export default function BatchPage() {
         <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">Enfilez votre tablier, allumez les feux (ou votre robot). 2 heures de cuisine le dimanche pour 7 jours de liberté.</p>
       </div>
       <WeekPicker week={week} path="/batch" />
-      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+      <section className="rounded-2xl border-2 border-[#8FA89B] bg-[#F4F7F2] p-4 shadow-sm">
+        <h2 className="font-heading text-xl font-extrabold text-[#1A1A1A]">✅ Votre batchcooking structuré</h2>
+        <p className="mt-1 text-sm leading-relaxed text-[#2B2B2B]">Les 5 étapes demandées sont prêtes pour la semaine {week}. Ouvrez directement le mode dont vous avez besoin :</p>
+        <div className="mt-3 grid grid-cols-2 gap-2 text-sm font-bold sm:grid-cols-5">
+          <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-decoupe">🔪 Découpe</a>
+          <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-cuisson-four">🔥 Four / feu</a>
+          <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-cuisson-robot">🤖 Robot</a>
+          <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-stockage">📦 Stockage</a>
+          <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-jour-j">🍽️ Jour J</a>
+        </div>
+      </section>
+      <section id="mode-decoupe" className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🔪 Le mode découpe</h2>
         <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.prep.intro}</p>
         <CheckList storageKey={`assiette-batch-prep-guides-${week}`} items={prepGuides} />
         {prep.length ? <CheckList storageKey={`assiette-batch-prep-${week}`} items={withTargets(prep, changedPlan)} /> : null}
       </section>
-      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+      <section id="mode-cuisson-four" className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Le mode cuisson — Au Four / Sur le feu</h2>
         <p className="text-sm text-muted-foreground">{BATCH_GUIDES.oven.intro}</p>
         {ovenGuides.length ? <CheckList storageKey={`assiette-batch-oven-guides-${week}`} items={ovenGuides} /> : <p className="text-sm">Aucune recette sélectionnée ne mentionne de cuisson au four dans sa fiche. Ne lancez pas de cuisson au four sans consigne adaptée.</p>}
         {oven.length ? <CheckList storageKey={`assiette-batch-oven-${week}`} items={withTargets(oven, ovenDetails.length ? ovenDetails.map(({ slot }) => slot) : changedPlan)} /> : null}
       </section>
-      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+      <section id="mode-cuisson-robot" className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Le mode cuisson — Dans mon Monsieur Cuisine</h2>
         <p className="text-sm text-muted-foreground">{BATCH_GUIDES.robot.intro}</p>
         <CheckList storageKey={`assiette-batch-robot-guides-${week}`} items={robotGuides} />
         {robot.length ? <CheckList storageKey={`assiette-batch-robot-${week}`} items={withTargets(robot, changedPlan)} /> : null}
       </section>
-      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+      <section id="mode-stockage" className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">📦 Le mode stockage</h2>
         <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.storage.intro}</p>
         <CheckList storageKey={`assiette-batch-storage-guides-${week}`} items={storageGuides} />
         {storage.length ? <CheckList storageKey={`assiette-batch-storage-${week}`} items={withTargets(storage, changedPlan)} /> : null}
       </section>
-      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+      <section id="mode-jour-j" className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🍽️ Au moment de servir (le jour J)</h2>
         {changedPlan.some((slot) => { const item = getRecipe(slot.recipeId); return item ? displayRecipe(item).name !== item.name : false; }) ? <p className="rounded-xl bg-[#F4EAD4] p-3 text-sm text-[#2B2B2B]"><strong>Assemblage Jour J :</strong> cuire les pâtes fraîches dans une grande casserole d’eau bouillante salée selon le temps indiqué sur le paquet, puis les mélanger à la sauce chaude juste avant de servir.</p> : null}
         <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.assembly.intro}</p>
