@@ -1,2 +1,2 @@
 :HL["/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design/_next/static/chunks/3vgaev_vzy5_w.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"0eFXywInOQNLHwlJS_-3b"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"Io4LhtuR1n9r0KO4zDVMJ"}
