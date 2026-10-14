@@ -39,6 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${sans.variable} ${heading.variable} h-full antialiased`}>
       <body className="min-h-full bg-background font-sans text-foreground">
+        <script dangerouslySetInnerHTML={{ __html: `(() => { try { const key = "assiette-cache-reset-v1"; if (sessionStorage.getItem(key)) return; sessionStorage.setItem(key, "1"); Promise.all([navigator.serviceWorker?.getRegistrations?.().then((rs) => Promise.all(rs.map((r) => r.unregister()))), caches?.keys?.().then((ks) => Promise.all(ks.map((k) => caches.delete(k))))]).then(() => location.reload()); } catch {} })();` }} />
         <Providers><SplashGate>{children}</SplashGate></Providers>
       </body>
     </html>
