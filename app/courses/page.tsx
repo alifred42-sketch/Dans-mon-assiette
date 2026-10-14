@@ -2,13 +2,14 @@
 
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { clampWeek, shoppingForWeek } from "@/lib/carnet";
+import { clampWeek, currentIsoWeek, shoppingForWeek } from "@/lib/carnet";
 import { CheckList } from "@/components/check-list";
 import { WeekPicker } from "@/components/week-picker";
 
 export default function CoursesPage() {
   const search = useSearchParams();
-  const week = clampWeek(search.get("w"));
+  const requestedWeek = search.get("w");
+  const week = requestedWeek ? clampWeek(requestedWeek) : currentIsoWeek();
   const [servingsByRecipe, setServingsByRecipe] = useState<Record<string, number>>({});
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
   useEffect(() => {
