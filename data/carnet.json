@@ -56819,6 +56819,430 @@
       "blurb": "Plat principal n°34 du Grand Livre de Noël.",
       "fete": "noel",
       "sous_fete": "plats"
+    },
+    {
+      "id": "noel-dessert-35",
+      "numero": 35,
+      "name": "Cake de Noël Moelleux aux Épices et Agrumes",
+      "ingredients": [
+        "250g de farine",
+        "150g de miel liquide",
+        "50g de sucre en poudre",
+        "100g de beurre",
+        "10 cl de lait, 1 sachet de levure chimique",
+        "2 c. à café d'épices à pain d'épices, zeste d'orange bio"
+      ],
+      "steps": [
+        "Faites chauffer doucement le lait, le miel et le beurre dans une casserole.",
+        "Dans un saladier, mélangez la farine, la levure, le sucre, le zeste d'orange et les épices.",
+        "Incorporez progressivement les liquides aux poudres en fouettant bien.",
+        "Versez dans un moule à cake beurré et faites cuire 50 min au four à 160°C."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 21",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°35 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-36",
+      "numero": 36,
+      "name": "Bûche Roulée Forêt-Noire",
+      "ingredients": [
+        "4 œufs, 100g de sucre, 70g de farine, 30g de cacao en poudre",
+        "30 cl de crème liquide entière (très froide)",
+        "150g de cerises au sirop (griottines)",
+        "50g de copeaux de chocolat noir"
+      ],
+      "steps": [
+        "Montez les blancs d'œufs en neige. Battez les jaunes avec le sucre, ajoutez la farine et le cacao, puis les blancs délicatement. Étalez sur une plaque et cuisez 10 min à 180°C.",
+        "Démoulez le biscuit chaud sur un torchon humide, roulez-le immédiatement dedans et laissez refroidir.",
+        "Montez la crème en chantilly ferme. Déroulez le biscuit, étalez les 2/3 de la chantilly et parsemez de cerises égouttées.",
+        "Roulez à nouveau la bûche. Recouvrez du reste de chantilly et décorez avec les copeaux de chocolat."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 21-22",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°36 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-37",
+      "numero": 37,
+      "name": "Poires Pochées au Vin Rouge et Épices",
+      "ingredients": [
+        "6 poires fermes (type Conférence)",
+        "75 cl de vin rouge",
+        "100g de sucre en poudre",
+        "1 bâton de cannelle, 1 étoile de badiane",
+        "1 zeste d'orange"
+      ],
+      "steps": [
+        "Dans une casserole, portez à ébullition le vin rouge avec le sucre, la cannelle, la badiane et le zeste d'orange.",
+        "Pelez les poires en gardant la queue et coupez légèrement la base pour qu'elles tiennent debout.",
+        "Plongez les poires dans le vin frémissant, couvrez et laissez cuire pendant 25 min. Elles doivent être tendres.",
+        "Retirez les poires. Faites réduire le vin de moitié à feu vif pour obtenir un sirop nappant. Servez les poires arrosées de sirop frais ou tiède."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 22",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°37 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-38",
+      "numero": 38,
+      "name": "Pavlova en Couronne de Noël aux Fruits Rouges",
+      "ingredients": [
+        "4 blancs d'œufs",
+        "200g de sucre extra-fin",
+        "1 c. à café de vinaigre blanc, 1 c. à café de maïzena",
+        "25 cl de crème liquide entière très froide",
+        "300g de fruits rouges mélangés (framboises, grenades, groseilles)"
+      ],
+      "steps": [
+        "Montez les blancs en neige ferme. Ajoutez le sucre petit à petit tout en fouettant, puis incorporez la maïzena et le vinaigre. La meringue doit être brillante et former un « bec d'oiseau ».",
+        "Sur une plaque recouverte de papier cuisson, dessinez un grand cercle et étalez la meringue à la poche à douille en forme de couronne.",
+        "Faites cuire 1h15 au four préchauffé à 100°C. Laissez refroidir complètement dans le four éteint.",
+        "Montez la crème en chantilly (sans sucre ou très peu), étalez-la sur la couronne de meringue et décorez généreusement de fruits rouges."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 22-23",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "8 personnes",
+      "blurb": "Dessert n°38 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-39",
+      "numero": 39,
+      "name": "Moelleux Coulants au Chocolat et Cœur Spéculoos",
+      "ingredients": [
+        "100g de chocolat noir",
+        "80g de beurre",
+        "2 œufs",
+        "50g de sucre, 30g de farine",
+        "6 c. à café de pâte de spéculoos"
+      ],
+      "steps": [
+        "Placez les cuillères de pâte de spéculoos sur du papier cuisson au congélateur pendant 30 min pour former des cœurs solides.",
+        "Faites fondre le chocolat noir avec le beurre au bain-marie ou au micro-ondes.",
+        "Fouettez les œufs avec le sucre, ajoutez la farine, puis incorporez le chocolat fondu.",
+        "Remplissez des moules individuels beurrés aux 2/3. Enfoncez un cœur de spéculoos gelé au centre de chaque moule. Enfournez à 210°C pendant 8 à 10 min. Servez chaud."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 23",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°39 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-40",
+      "numero": 40,
+      "name": "Bûche Glacée Express Café et Caramel",
+      "ingredients": [
+        "500 ml de glace au café",
+        "500 ml de glace au caramel au beurre salé",
+        "10 biscuits de type Speculoos émiettés",
+        "4 c. à soupe de coulis de caramel liquide"
+      ],
+      "steps": [
+        "Sortez les glaces 10 min avant pour les assouplir légèrement.",
+        "Tapissez un moule à cake de film étirable en laissant dépasser les bords.",
+        "Étalez la glace au caramel au fond du moule, parsemez de brisures de spéculoos et d'un filet de caramel. Ajoutez la glace au café par-dessus en lissant bien.",
+        "Rabattez le film et placez au congélateur au moins 4 heures. Démoulez et décorez de spéculoos avant de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 23-24",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°40 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-41",
+      "numero": 41,
+      "name": "Bûche Simplissime Chocolat et Orange",
+      "ingredients": [
+        "4 œufs, 100g de sucre, 100g de farine",
+        "200g de chocolat noir de couverture",
+        "20 cl de crème liquide entière",
+        "Le zeste d'une orange bio"
+      ],
+      "steps": [
+        "Réalisez un biscuit génoise classique : battez les jaunes d'œufs avec le sucre, ajoutez la farine puis les blancs montés en neige. Étalez sur une plaque et cuisez 10 min à 180°C. Roulez dans un torchon humide.",
+        "Préparez la ganache : faites chauffer la crème liquide avec le zeste d'orange, puis versez-la bien chaude sur le chocolat noir cassé en morceaux. Mélangez pour lisser la ganache. Laissez tiédir.",
+        "Déroulez le biscuit, étalez la moitié de la ganache au chocolat, puis roulez de nouveau.",
+        "Nappez l'extérieur de la bûche avec le reste de ganache et créez des stries à la fourchette pour imiter le bois."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 24-25",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°41 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-42",
+      "numero": 42,
+      "name": "Sablés Traditionnels à la Cannelle de Noël",
+      "ingredients": [
+        "250g de farine",
+        "125g de beurre mou",
+        "100g de sucre en poudre",
+        "1 œuf",
+        "2 c. à café de cannelle en poudre, 1 pincée de sel"
+      ],
+      "steps": [
+        "Mélangez la farine, le sucre, la cannelle et le sel dans un grand récipient. Ajoutez le beurre mou en morceaux et sablez du bout des doigts.",
+        "Incorporez l'œuf et ramassez la pâte pour former une boule homogène. Enveloppez de film et placez 30 min au frais.",
+        "Étalez la pâte sur 4 mm d'épaisseur et découpez des formes festives à l'aide d'emporte-pièces (étoiles, sapins).",
+        "Déposez sur une plaque de cuisson et enfournez pour 10 à 12 min à 180°C. Les sablés doivent être légèrement dorés."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 24-25",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°42 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-43",
+      "numero": 43,
+      "name": "Truffes Fondantes au Chocolat Noir",
+      "ingredients": [
+        "250g de bon chocolat noir (60-70% de cacao)",
+        "10 cl de crème liquide entière",
+        "30g de beurre",
+        "50g de cacao en poudre non sucré (type Van Houten)"
+      ],
+      "steps": [
+        "Hachez le chocolat noir. Faites bouillir la crème liquide, puis versez-la en trois fois sur le chocolat en remuant énergiquement au centre pour créer une émulsion.",
+        "Ajoutez le beurre en dés dans la ganache encore chaude et mélangez jusqu'à parfaite fusion. Placez au frais pendant au moins 3 heures.",
+        "Prélevez des petites portions de ganache ferme à l'aide d'une petite cuillère.",
+        "Roulez-les rapidement entre vos mains pour former des boules, puis passez-les dans le cacao en poudre étalé dans une assiette creuse."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 25",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°43 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-44",
+      "numero": 44,
+      "name": "Carpaccio d'Ananas à la Vanille et Anis Étoilé",
+      "ingredients": [
+        "1 bel ananas mûr à point",
+        "100g de sucre, 20 cl d'eau",
+        "1 gousse de vanille",
+        "2 étoiles de badiane (anis étoilé)"
+      ],
+      "steps": [
+        "Dans une casserole, préparez un sirop en portant à ébullition l'eau, le sucre, la gousse de vanille fendue et grattée ainsi que la badiane. Laissez frémir 10 min puis refroidir.",
+        "Pelez l'ananas à vif en retirant bien tous les « yeux ».",
+        "À l'aide d'un couteau très aiguisé ou d'une mandoline, tranchez l'ananas en rondelles extrêmement fines.",
+        "Disposez les tranches dans un grand plat creux, versez le sirop infusé par-dessus et laissez mariner au frais 2 heures avant de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 26",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°44 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-45",
+      "numero": 45,
+      "name": "Salade d'Oranges de Noël Fleur d'Oranger et Cannelle",
+      "ingredients": [
+        "6 belles oranges douces (type naveline ou sanguine)",
+        "2 c. à soupe d'eau de fleur d'oranger",
+        "2 c. à soupe de miel liquide",
+        "1 c. à café de cannelle en poudre",
+        "Quelques feuilles de menthe fraîche"
+      ],
+      "steps": [
+        "Pelez les oranges à vif en enlevant toute la peau blanche amère.",
+        "Coupez-les en fines rondelles horizontales et disposez-les harmonieusement dans un plat de service plat.",
+        "Dans un bol, mélangez le miel et l'eau de fleur d'oranger. Versez ce mélange sur les oranges.",
+        "Saupoudrez légèrement de cannelle et parsemez de menthe fraîche ciselée. Laissez reposer 30 min au frais."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 26-27",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°45 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-46",
+      "numero": 46,
+      "name": "Crèmes Brûlées au Foie Gras (Version Festive Entremets)",
+      "ingredients": [
+        "100g de foie gras de canard cuit",
+        "4 jaunes d'œufs",
+        "20 cl de crème liquide entière",
+        "20 cl de lait demi-écrémé",
+        "Sucre cassonade (pour la caramélisation), sel, poivre"
+      ],
+      "steps": [
+        "Préchauffez le four à 100°C. Mixez ensemble le foie gras, les jaunes d'œufs, la crème liquide et le lait jusqu'à l'obtention d'un liquide soyeux. Salez et poivrez.",
+        "Répartissez la préparation dans 6 ramequins à crème brûlée plats.",
+        "Faites cuire au four pendant 45 minutes. La crème doit être prise mais encore légèrement tremblotante au centre. Laissez refroidir et mettez au frais 3h.",
+        "Au moment de servir, saupoudrez de cassonade et caramélisez au chalumeau de cuisine."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 27-28",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°46 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-47",
+      "numero": 47,
+      "name": "Panna Cotta de Noël au Pain d'Épices",
+      "ingredients": [
+        "50 cl de crème liquide entière",
+        "3 tranches de pain d'épices",
+        "50g de sucre en poudre",
+        "3 feuilles de gélatine (6g)"
+      ],
+      "steps": [
+        "Faites ramollir les feuilles de gélatine dans un grand bol d'eau froide.",
+        "Dans une casserole, faites chauffer la crème avec le sucre et les tranches de pain d'épices coupées en dés. Portez à ébullition puis mixez finement hors du feu pour dissoudre le pain d'épices.",
+        "Essorez la gélatine et incorporez-la dans la crème bien chaude en remuant au fouet.",
+        "Versez dans 6 verrines et réservez au réfrigérateur pendant au moins 4 heures pour que la panna cotta fige."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 27",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°47 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-48",
+      "numero": 48,
+      "name": "Profiteroles de Noël Glacées au Marron et Chocolat Chaud",
+      "ingredients": [
+        "18 choux vides (du pâtissier ou maison)",
+        "500 ml de glace aux marrons (ou vanille)",
+        "150g de chocolat noir de cuisine",
+        "15 cl de crème liquide, amandes effilées torréfiées"
+      ],
+      "steps": [
+        "Ouvrez les choux en deux horizontalement avec un couteau à dents.",
+        "Garnissez chaque chou d'une belle boule de glace au marron juste avant le dessert. Disposez 3 choux par assiette.",
+        "Préparez la sauce : faites fondre le chocolat noir cassé en morceaux avec la crème liquide à feu doux pour obtenir un coulis fluide et brillant.",
+        "Nappez généreusement les choux de chocolat chaud fondant et parsemez d'amandes effilées grillées. Servez aussitôt."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 27-28",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°48 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-49",
+      "numero": 49,
+      "name": "Tiramisu Festif aux Marrons Glacés et Amaretto",
+      "ingredients": [
+        "250g de mascarpone, 3 œufs",
+        "70g de sucre, 200g de crème de marrons",
+        "18 biscuits à la cuillère, 1 tasse de café fort",
+        "2 c. à soupe d'Amaretto (liqueur d'amande)",
+        "4 marrons glacés en morceaux, cacao en poudre"
+      ],
+      "steps": [
+        "Séparez les blancs des jaunes d'œufs. Battez les jaunes avec le sucre, puis ajoutez le mascarpone et la crème de marrons. Fouettez bien. Montez les blancs en neige et incorporez-les délicatement.",
+        "Mélangez le café fort refroidi et l'Amaretto dans une assiette creuse.",
+        "Trempez rapidement les biscuits dans le café et tapissez le fond d'un plat ou de 6 verrines.",
+        "Ajoutez une couche de crème, jetez des éclats de marrons glacés, remettez des biscuits et terminez par la crème. Laissez au frais 6h et saupoudrez de cacao avant de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — pages 28-29",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°49 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
+    },
+    {
+      "id": "noel-dessert-50",
+      "numero": 50,
+      "name": "Mendiants au Chocolat et Fruits Secs Scintillants",
+      "ingredients": [
+        "200g de bon chocolat (noir, au lait ou blanc selon vos goûts)",
+        "Mélange de fruits secs : amandes, noisettes, pistaches non salées",
+        "Fruits confits ou séchés : raisins secs, écorces d'oranges, canneberges"
+      ],
+      "steps": [
+        "Faites fondre doucement les 2/3 du chocolat au bain-marie, puis retirez du feu et ajoutez le tiers restant en remuant bien pour le faire fondre (technique simplifiée de tempérage).",
+        "Sur une plaque recouverte de papier cuisson, déposez des petites cuillères de chocolat fondu et étalez-les en disques réguliers de 4-5 cm de diamètre.",
+        "Avant que le chocolat ne fige, déposez délicatement sur chaque disque un morceau de chaque fruit sec ou confit (ex. : une noisette, une pistache, un raisin, une lamelle d'orange).",
+        "Laissez durcir complètement à température ambiante dans une pièce fraîche pendant 1 heure avant de décoller les mendiants."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Mon Grand Livre de Noël — page 29",
+      "timePrep": "Non précisé dans le PDF",
+      "timeCook": "Non précisé dans le PDF",
+      "servings": "6 personnes",
+      "blurb": "Dessert n°50 du Grand Livre de Noël.",
+      "fete": "noel",
+      "sous_fete": "desserts"
     }
   ],
   "plan": [
