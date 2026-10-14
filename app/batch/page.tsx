@@ -25,7 +25,10 @@ function matches(item: CheckItem, pattern: RegExp) {
 export default function BatchPage() {
   const search = useSearchParams();
   const requestedWeek = search.get("w");
-  const week = clampWeek(requestedWeek ?? String(currentIsoWeek()));
+  const [week, setWeek] = useState(() => clampWeek(requestedWeek ?? String(currentIsoWeek())));
+  useEffect(() => {
+    setWeek(clampWeek(requestedWeek ?? String(currentIsoWeek())));
+  }, [requestedWeek]);
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
   useEffect(() => {
     const refresh = () => { try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); } };
