@@ -23,6 +23,7 @@ const categories: [string, string, string, LucideIcon][] = [
   ["Été", "#FCE4B5", "/recettes?filter=ete", Sun],
   ["Automne", "#F3C6B1", "/recettes?filter=automne", Leaf],
   ["Hiver", "#E1EDF2", "/recettes?filter=hiver", Snowflake],
+  ["🎉 Fêtes", "#FAD2CB", "/fetes", PartyPopper],
 ];
 
 function getCurrentWeek() {
