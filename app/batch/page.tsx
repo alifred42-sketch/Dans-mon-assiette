@@ -119,6 +119,37 @@ export default function BatchPage() {
         <p className="text-sm text-muted-foreground">Cette liste suit les recettes que vous avez choisies dans le menu.</p>
         <ul className="list-disc space-y-1 pl-5 text-sm">{changedPlan.map((slot, i) => <li key={`${slot.day}-${slot.meal}-${i}`}><strong>{slot.day.charAt(0) + slot.day.slice(1).toLowerCase()} · {slot.meal} :</strong> {getRecipe(slot.recipeId)?.name || slot.name}</li>)}</ul>
       </section>
+      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🔪 Le mode découpe</h2>
+        <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.prep.intro}</p>
+        <CheckList storageKey={`assiette-batch-prep-guides-${week}`} items={prepGuides} />
+        {prep.length ? <CheckList storageKey={`assiette-batch-prep-${week}`} items={withTargets(prep, changedPlan)} /> : null}
+      </section>
+      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Le mode cuisson — Au Four / Sur le feu</h2>
+        <p className="text-sm text-muted-foreground">{BATCH_GUIDES.oven.intro}</p>
+        {ovenGuides.length ? <CheckList storageKey={`assiette-batch-oven-guides-${week}`} items={ovenGuides} /> : <p className="text-sm">Aucune recette sélectionnée ne mentionne de cuisson au four dans sa fiche. Ne lancez pas de cuisson au four sans consigne adaptée.</p>}
+        {oven.length ? <CheckList storageKey={`assiette-batch-oven-${week}`} items={withTargets(oven, ovenDetails.length ? ovenDetails.map(({ slot }) => slot) : changedPlan)} /> : null}
+      </section>
+      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Le mode cuisson — Dans mon Monsieur Cuisine</h2>
+        <p className="text-sm text-muted-foreground">{BATCH_GUIDES.robot.intro}</p>
+        <CheckList storageKey={`assiette-batch-robot-guides-${week}`} items={robotGuides} />
+        {robot.length ? <CheckList storageKey={`assiette-batch-robot-${week}`} items={withTargets(robot, changedPlan)} /> : null}
+      </section>
+      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">📦 Le mode stockage</h2>
+        <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.storage.intro}</p>
+        <CheckList storageKey={`assiette-batch-storage-guides-${week}`} items={storageGuides} />
+        {storage.length ? <CheckList storageKey={`assiette-batch-storage-${week}`} items={withTargets(storage, changedPlan)} /> : null}
+      </section>
+      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🍽️ Au moment de servir (le jour J)</h2>
+        {changedPlan.some((slot) => { const item = getRecipe(slot.recipeId); return item ? displayRecipe(item).name !== item.name : false; }) ? <p className="rounded-xl bg-[#F4EAD4] p-3 text-sm text-[#2B2B2B]"><strong>Assemblage Jour J :</strong> cuire les pâtes fraîches dans une grande casserole d’eau bouillante salée selon le temps indiqué sur le paquet, puis les mélanger à la sauce chaude juste avant de servir.</p> : null}
+        <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.assembly.intro}</p>
+        <CheckList storageKey={`assiette-batch-assembly-guides-${week}`} items={assemblyGuides} />
+        {assembly.length ? <CheckList storageKey={`assiette-batch-assembly-${week}`} items={withTargets(assembly, changedPlan)} /> : null}
+      </section>
       <section className="space-y-4 rounded-2xl border border-[#8FA89B]/40 bg-[#8FA89B]/10 p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#1A1A1A]">📖 Les recettes, étape par étape</h2>
         <p className="text-sm leading-relaxed text-[#2B2B2B]">Retrouvez ici les ingrédients et les étapes de chaque repas prévu. Cette liste suit automatiquement les recettes sélectionnées dans votre menu, y compris après un remplacement.</p>
@@ -164,37 +195,6 @@ export default function BatchPage() {
             </article>
           );
         })}
-      </section>
-      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🔪 Le mode découpe</h2>
-        <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.prep.intro}</p>
-        <CheckList storageKey={`assiette-batch-prep-guides-${week}`} items={prepGuides} />
-        {prep.length ? <CheckList storageKey={`assiette-batch-prep-${week}`} items={withTargets(prep, changedPlan)} /> : null}
-      </section>
-      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Le mode cuisson — Au Four / Sur le feu</h2>
-        <p className="text-sm text-muted-foreground">{BATCH_GUIDES.oven.intro}</p>
-        {ovenGuides.length ? <CheckList storageKey={`assiette-batch-oven-guides-${week}`} items={ovenGuides} /> : <p className="text-sm">Aucune recette sélectionnée ne mentionne de cuisson au four dans sa fiche. Ne lancez pas de cuisson au four sans consigne adaptée.</p>}
-        {oven.length ? <CheckList storageKey={`assiette-batch-oven-${week}`} items={withTargets(oven, ovenDetails.length ? ovenDetails.map(({ slot }) => slot) : changedPlan)} /> : null}
-      </section>
-      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Le mode cuisson — Dans mon Monsieur Cuisine</h2>
-        <p className="text-sm text-muted-foreground">{BATCH_GUIDES.robot.intro}</p>
-        <CheckList storageKey={`assiette-batch-robot-guides-${week}`} items={robotGuides} />
-        {robot.length ? <CheckList storageKey={`assiette-batch-robot-${week}`} items={withTargets(robot, changedPlan)} /> : null}
-      </section>
-      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">📦 Le mode stockage</h2>
-        <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.storage.intro}</p>
-        <CheckList storageKey={`assiette-batch-storage-guides-${week}`} items={storageGuides} />
-        {storage.length ? <CheckList storageKey={`assiette-batch-storage-${week}`} items={withTargets(storage, changedPlan)} /> : null}
-      </section>
-      <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🍽️ Au moment de servir (le jour J)</h2>
-        {changedPlan.some((slot) => { const item = getRecipe(slot.recipeId); return item ? displayRecipe(item).name !== item.name : false; }) ? <p className="rounded-xl bg-[#F4EAD4] p-3 text-sm text-[#2B2B2B]"><strong>Assemblage Jour J :</strong> cuire les pâtes fraîches dans une grande casserole d’eau bouillante salée selon le temps indiqué sur le paquet, puis les mélanger à la sauce chaude juste avant de servir.</p> : null}
-        <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.assembly.intro}</p>
-        <CheckList storageKey={`assiette-batch-assembly-guides-${week}`} items={assemblyGuides} />
-        {assembly.length ? <CheckList storageKey={`assiette-batch-assembly-${week}`} items={withTargets(assembly, changedPlan)} /> : null}
       </section>
       {general.length ? <section className="space-y-2"><h2 className="font-heading text-lg font-bold">Autres tâches notées dans le carnet</h2><CheckList storageKey={`assiette-batch-general-${week}`} items={general} /></section> : null}
       {allItems.length === 0 ? <p className="rounded-2xl bg-[#8FA89B]/10 p-4 text-sm text-[#466653]">Le carnet ne contient pas encore de tâches détaillées pour cette semaine. Utilisez le plan ci-dessus comme trame, et reportez les réglages précis depuis les fiches recettes.</p> : null}
