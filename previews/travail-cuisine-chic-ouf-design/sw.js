@@ -1,4 +1,4 @@
-const CACHE = "assiette-v13";
+const CACHE = "assiette-v12";
 const SCOPE = self.registration.scope;
 const PRECACHE = [
   "./",
@@ -38,7 +38,6 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
-  if (url.pathname.endsWith("/sw.js")) return;
 
   if (request.mode === "navigate") {
     event.respondWith(
