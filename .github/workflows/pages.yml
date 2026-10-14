@@ -20,10 +20,12 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /Dans-mon-assiette
+          NEXT_PUBLIC_BASE_PATH: ${{ github.ref == 'refs/heads/main' && '/Dans-mon-assiette' || '/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design' }}
       - uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/travail-cuisine-chic-ouf-design'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          force_orphan: true
+          destination_dir: ${{ github.ref == 'refs/heads/main' && '' || 'previews/travail-cuisine-chic-ouf-design' }}
+          keep_files: true
+          force_orphan: false
