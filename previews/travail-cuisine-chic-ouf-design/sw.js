@@ -1,4 +1,4 @@
-const CACHE = "assiette-v7";
+const CACHE = "assiette-v8";
 const SCOPE = self.registration.scope;
 const PRECACHE = [
   "./",
@@ -11,7 +11,7 @@ const PRECACHE = [
   "./icon-maskable-512.png",
   "./apple-touch-icon.png",
   "./icon.svg",
-  "./logo-cuisine-chic-ouf-v2.png",
+  "./logo-cuisine-chic-ouf-v3.png",
 ].map((path) => new URL(path, SCOPE).href);
 
 self.addEventListener("install", (event) => {
