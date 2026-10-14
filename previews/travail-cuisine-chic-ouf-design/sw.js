@@ -11,7 +11,7 @@ const PRECACHE = [
   "./icon-maskable-512.png",
   "./apple-touch-icon.png",
   "./icon.svg",
-  "./logo-cuisine-chic-ouf.png",
+  "./logo-cuisine-chic-ouf-v2.png",
 ].map((path) => new URL(path, SCOPE).href);
 
 self.addEventListener("install", (event) => {
