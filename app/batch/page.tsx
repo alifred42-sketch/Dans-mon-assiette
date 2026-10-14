@@ -76,18 +76,21 @@ export default function BatchPage() {
     target: targetText([slot]),
     group: "Dans mon Monsieur Cuisine",
   }));
-  const storageGuides = recipeDetails.map(({ slot, recipe }) => ({
+  const storageGuides = recipeDetails.filter(({ slot }) => ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"].includes(dayName(slot.day))).map(({ slot, recipe }) => ({
     id: `storage-guide-${slot.day}-${slot.meal}-${recipe?.id || slot.recipeId}`,
     title: `${dayName(slot.day)} — ${getRecipe(slot.recipeId)?.name || slot.name} : ${/lundi|mardi|mercredi/i.test(slot.day) ? "BOÎTE HERMÉTIQUE AU RÉFRIGÉRATEUR" : "BAC ÉTIQUETÉ AU CONGÉLATEUR"}`,
     target: targetText([slot]),
     group: `${String(["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"].indexOf(dayName(slot.day)) + 1).padStart(2, "0")} ${dayName(slot.day)}`,
   }));
-  const assemblyGuides = recipeDetails.map(({ slot }) => ({
-    id: `assembly-guide-${slot.day}-${slot.meal}-${slot.recipeId}`,
-    title: "RÉCHAUFFER LA PORTION. ASSEMBLER. AJOUTER LES HERBES, SAUCE OU GARNITURE AU DERNIER MOMENT.",
-    target: targetText([slot]),
-    group: "Assemblage Jour J",
-  }));
+  const assemblyGuides = Array.from(new Set(changedPlan.map((slot) => slot.day))).map((day) => {
+    const daySlots = changedPlan.filter((slot) => slot.day === day);
+    return {
+      id: `assembly-guide-${day}`,
+      title: "RÉCHAUFFER LA PORTION. ASSEMBLER. AJOUTER LES HERBES, SAUCE OU GARNITURE AU DERNIER MOMENT.",
+      target: targetText(daySlots),
+      group: dayName(day),
+    };
+  });
   const withTargets = (items: CheckItem[], slots: typeof changedPlan): CheckItem[] =>
     items.map((item) => ({ ...item, target: targetText(slots) }));
 
