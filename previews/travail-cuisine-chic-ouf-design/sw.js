@@ -1,4 +1,4 @@
-const CACHE = "assiette-v11";
+const CACHE = "assiette-v12";
 const SCOPE = self.registration.scope;
 const PRECACHE = [
   "./",
