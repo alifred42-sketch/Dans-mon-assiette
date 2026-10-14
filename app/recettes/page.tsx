@@ -5,6 +5,7 @@ import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
+import { FetesNavigation } from "@/components/fetes-navigation";
 
 const CATEGORY_COPY: Record<string, string> = {
   "": "Inspirez, cliquez... cuisinez chic ! Vos bons petits plats de la semaine à portée de main.",
@@ -97,6 +98,7 @@ export default function RecettesPage() {
 
   return (
     <div className="space-y-6">
+      <FetesNavigation showBack />
       <div>
         <h1 className="font-heading text-3xl">{FILTER_LABELS[filter] || "Carnet de recettes"}</h1>
         <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">{CATEGORY_COPY[filter] || CATEGORY_COPY[""]}</p>
