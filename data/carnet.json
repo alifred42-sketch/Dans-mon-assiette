@@ -85105,5 +85105,93 @@
       "title": "SEMAINE 52 — RECETTES PLAISIR ÉQUILIBRÉ 🌍",
       "lines": []
     }
-  ]
+  ],
+  "fete": [
+    "noel",
+    "halloween",
+    "fetes-annee"
+  ],
+  "sous_fete": [
+    "entrees",
+    "plats-principaux",
+    "desserts",
+    "aperos-terrifiants",
+    "plats-express",
+    "atelier-monstres",
+    "potions-cocktails",
+    "hiver",
+    "printemps",
+    "ete-convivialite",
+    "automne-sylvestre"
+  ],
+  "fetesArchitecture": {
+    "tags": {
+      "fete": "fete",
+      "sous_fete": "sous_fete"
+    },
+    "grandsLivres": [
+      {
+        "id": "noel",
+        "label": "🎄 Grand Livre de Noël",
+        "sousFetes": [
+          {
+            "id": "entrees",
+            "label": "🥗 Entrées"
+          },
+          {
+            "id": "plats-principaux",
+            "label": "🍽️ Plats Principaux"
+          },
+          {
+            "id": "desserts",
+            "label": "🍰 Desserts"
+          }
+        ]
+      },
+      {
+        "id": "halloween",
+        "label": "🎃 Grimoire d'Halloween",
+        "sousFetes": [
+          {
+            "id": "aperos-terrifiants",
+            "label": "🥂 Apéros Terrifiants"
+          },
+          {
+            "id": "plats-express",
+            "label": "⚡ Plats Express"
+          },
+          {
+            "id": "atelier-monstres",
+            "label": "🧙‍♀️ Atelier P'tits Monstres"
+          },
+          {
+            "id": "potions-cocktails",
+            "label": "🧪 Potions & Cocktails"
+          }
+        ]
+      },
+      {
+        "id": "fetes-annee",
+        "label": "🥳 Fêtes de l'Année",
+        "sousFetes": [
+          {
+            "id": "hiver",
+            "label": "❄️ Fêtes d'Hiver"
+          },
+          {
+            "id": "printemps",
+            "label": "🌸 Fêtes de Printemps"
+          },
+          {
+            "id": "ete-convivialite",
+            "label": "☀️ Été & Convivialité"
+          },
+          {
+            "id": "automne-sylvestre",
+            "label": "🍂 Automne & Sylvestre"
+          }
+        ]
+      }
+    ]
+  }
 }
