@@ -58301,6 +58301,320 @@
       "fete": "fetes_annee",
       "sous_fete": "hiver",
       "blurb": "hiver"
+    },
+    {
+      "id": "veg-ah-001",
+      "name": "Velouté de potimarron rôti au four & châtaignes",
+      "ingredients": [
+        "1 potimarron moyen",
+        "1 oignon",
+        "2 gousses d’ail",
+        "150 g de châtaignes cuites",
+        "20 cl de crème liquide",
+        "1 L de bouillon de légumes",
+        "Huile d’olive",
+        "Sel",
+        "Poivre",
+        "Muscade"
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C. Couper le potimarron en morceaux (garder la peau s’il est bio).",
+        "Déposer sur une plaque avec l’oignon émincé et l’ail, un filet d’huile d’olive, du sel et du poivre. Rôtir 25 min.",
+        "Transférer dans une marmite avec le bouillon chaud et laisser mijoter 5 min.",
+        "Mixer avec la crème et une pincée de muscade. Servir chaud avec les châtaignes concassées."
+      ],
+      "robot": [],
+      "notes": [
+        "Budget indiqué dans le livre : petit budget."
+      ],
+      "source": "Grand Livre de la Cuisine Végétarienne d’Automne-Hiver — recette 1",
+      "timeCook": "30 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-002",
+      "name": "Soupe à l’oignon traditionnelle & toast gratiné",
+      "ingredients": [
+        "5 grands oignons jaunes",
+        "30 g de beurre",
+        "1 c. à soupe de farine",
+        "15 cl de vin blanc sec",
+        "1 L de bouillon de légumes",
+        "1 baguette",
+        "100 g de gruyère râpé",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Émincer finement les oignons.",
+        "Les faire fondre dans une cocotte avec le beurre pendant 20 min à feu doux, jusqu’à caramélisation.",
+        "Saupoudrer de farine, mélanger, puis déglacer au vin blanc et laisser réduire.",
+        "Ajouter le bouillon chaud, couvrir et laisser mijoter 20 min.",
+        "Verser dans des bols allant au four. Ajouter des tranches de baguette grillées, couvrir de gruyère et faire gratiner sous le gril."
+      ],
+      "robot": [],
+      "notes": [
+        "Pour une version végétarienne, le livre propose un bouillon végétal ou de légumes ; le bouillon de légumes est retenu ici.",
+        "Budget indiqué dans le livre : petit budget."
+      ],
+      "source": "Grand Livre de la Cuisine Végétarienne d’Automne-Hiver — recette 2",
+      "timeCook": "40 min de cuisson, hors gratinage",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-003",
+      "name": "Cappuccino de cèpes & émulsion de noisettes",
+      "ingredients": [
+        "400 g de cèpes frais ou surgelés",
+        "2 échalotes",
+        "20 g de beurre",
+        "75 cl de bouillon de légumes",
+        "20 cl de crème liquide entière",
+        "2 c. à soupe d’huile de noisette",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Faire revenir les échalotes émincées et les cèpes coupés en morceaux dans le beurre pendant 10 min.",
+        "Ajouter le bouillon, saler, poivrer et laisser mijoter 15 min. Mixer jusqu’à obtenir un velouté lisse.",
+        "Dans un bol bien froid, monter la crème en chantilly souple avec l’huile de noisette, du sel et du poivre.",
+        "Servir le velouté chaud dans des tasses et déposer l’émulsion de noisette dessus."
+      ],
+      "robot": [],
+      "notes": [
+        "Budget indiqué dans le livre : budget normal."
+      ],
+      "source": "Grand Livre de la Cuisine Végétarienne d’Automne-Hiver — recette 3",
+      "timeCook": "25 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-004",
+      "name": "Bourguignon de champignons bruns & carottes",
+      "ingredients": [
+        "600 g de champignons de Paris bruns",
+        "4 carottes",
+        "1 oignon",
+        "2 gousses d’ail",
+        "50 cl de vin rouge corsé",
+        "50 cl de bouillon de légumes",
+        "2 c. à soupe de concentré de tomate",
+        "2 c. à soupe de farine",
+        "Huile",
+        "Thym",
+        "Laurier",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Couper les champignons en deux et les carottes en rondelles.",
+        "Faire revenir l’oignon émincé et l’ail dans un filet d’huile, puis ajouter les champignons et les carottes.",
+        "Saupoudrer de farine et mélanger. Ajouter le concentré de tomate, le vin rouge et le bouillon.",
+        "Ajouter le thym et le laurier. Couvrir et laisser mijoter à feu doux 45 min, jusqu’à ce que la sauce nappe les légumes."
+      ],
+      "robot": [],
+      "notes": [
+        "Budget indiqué dans le livre : petit budget."
+      ],
+      "source": "Grand Livre de la Cuisine Végétarienne d’Automne-Hiver — recette 4",
+      "timeCook": "45 min de mijotage, hors préparation",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-005",
+      "name": "Butternut farcie au quinoa, chèvre frais & cranberries",
+      "ingredients": [
+        "2 courges butternut moyennes",
+        "150 g de quinoa",
+        "100 g de chèvre frais",
+        "50 g de cranberries séchées",
+        "30 g de cerneaux de noix",
+        "Huile d’olive",
+        "Sel",
+        "Poivre",
+        "Miel"
+      ],
+      "steps": [
+        "Couper les butternuts en deux dans la longueur et retirer les graines. Quadriller la chair au couteau.",
+        "Arroser d’huile d’olive, saler, poivrer et enfourner à 200 °C pendant 40 min, jusqu’à ce que la chair soit tendre.",
+        "Cuire le quinoa. Le mélanger avec le chèvre frais, les cranberries et les noix concassées.",
+        "Évider légèrement la courge et mélanger la chair au quinoa. Garnir les demi-courges, ajouter un filet de miel et enfourner 10 min de plus."
+      ],
+      "robot": [],
+      "notes": [
+        "Budget indiqué dans le livre : budget normal."
+      ],
+      "source": "Grand Livre de la Cuisine Végétarienne d’Automne-Hiver — recette 5",
+      "timeCook": "50 min au four, hors cuisson du quinoa",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-006",
+      "name": "Curry de patates douces, lentilles corail & lait de coco",
+      "ingredients": [
+        "2 grandes patates douces",
+        "150 g de lentilles corail",
+        "1 oignon",
+        "400 ml de lait de coco",
+        "400 g de tomates concassées",
+        "2 c. à soupe de pâte de curry jaune",
+        "Huile d’olive",
+        "Sel",
+        "Poivre",
+        "Coriandre"
+      ],
+      "steps": [
+        "Éplucher les patates douces et les couper en petits cubes.",
+        "Faire revenir l’oignon émincé avec la pâte de curry dans un filet d’huile d’olive.",
+        "Ajouter les patates douces, les lentilles corail rincées, les tomates concassées et le lait de coco.",
+        "Saler, poivrer, couvrir et laisser mijoter à feu doux 25 min en remuant régulièrement, jusqu’à ce que les légumes soient fondants."
+      ],
+      "robot": [],
+      "notes": [
+        "Budget indiqué dans le livre : petit budget."
+      ],
+      "source": "Grand Livre de la Cuisine Végétarienne d’Automne-Hiver — recette 6",
+      "timeCook": "25 min de mijotage",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-007",
+      "name": "Lasagnes d’automne au potiron & épinards",
+      "ingredients": [
+        "12 plaques de lasagnes",
+        "600 g de chair de potiron",
+        "300 g d’épinards frais",
+        "1 oignon",
+        "50 cl de lait",
+        "40 g de beurre",
+        "40 g de farine",
+        "100 g de parmesan râpé",
+        "Huile",
+        "Sel",
+        "Poivre",
+        "Muscade"
+      ],
+      "steps": [
+        "Cuire le potiron à la vapeur puis l’écraser en purée lisse. Assaisonner avec sel, poivre et muscade.",
+        "Faire tomber les épinards dans une poêle avec l’oignon émincé et un filet d’huile.",
+        "Préparer une béchamel avec le beurre, la farine et le lait.",
+        "Dans un plat, alterner purée de potiron, épinards, plaques de lasagnes et béchamel. Terminer par la béchamel et le parmesan.",
+        "Enfourner 35 min à 180 °C."
+      ],
+      "robot": [],
+      "notes": [
+        "Budget indiqué dans le livre : budget normal."
+      ],
+      "source": "Grand Livre de la Cuisine Végétarienne d’Automne-Hiver — recette 7",
+      "timeCook": "35 min au four, hors cuisson du potiron et béchamel",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-008",
+      "name": "Gratin dauphinois traditionnel au fromage",
+      "ingredients": [
+        "1 kg de pommes de terre à chair ferme",
+        "1 gousse d’ail",
+        "40 cl de crème liquide entière",
+        "40 cl de lait entier",
+        "100 g de fromage râpé (facultatif)",
+        "Sel",
+        "Poivre",
+        "Muscade"
+      ],
+      "steps": [
+        "Éplucher les pommes de terre et les couper en fines rondelles sans les rincer.",
+        "Frotter un plat à gratin avec la gousse d’ail coupée en deux.",
+        "Faire chauffer le lait, la crème, le sel, le poivre et la muscade. Ajouter les pommes de terre et précuire 10 min.",
+        "Verser dans le plat, ajouter le fromage si souhaité et enfourner 50 min à 160 °C."
+      ],
+      "robot": [],
+      "notes": [
+        "Le fromage râpé est facultatif dans le livre.",
+        "Budget indiqué dans le livre : petit budget."
+      ],
+      "source": "Grand Livre de la Cuisine Végétarienne d’Automne-Hiver — recette 8",
+      "timeCook": "60 min de cuisson, dont 50 min au four",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-009",
+      "name": "Risotto crémeux aux poireaux & éclats de noix",
+      "ingredients": [
+        "300 g de riz Arborio",
+        "2 blancs de poireaux",
+        "1 oignon",
+        "10 cl de vin blanc sec",
+        "1,2 L de bouillon de légumes chaud",
+        "50 g de parmesan",
+        "30 g de beurre",
+        "40 g de noix concassées",
+        "Huile",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Émincer les poireaux et l’oignon. Les faire fondre dans une sauteuse avec un filet d’huile pendant 10 min.",
+        "Ajouter le riz et mélanger jusqu’à ce qu’il devienne translucide.",
+        "Déglacer au vin blanc et laisser évaporer entièrement.",
+        "Ajouter le bouillon chaud louche par louche, en attendant que le riz absorbe le liquide avant d’en rajouter, environ 20 min.",
+        "En fin de cuisson, incorporer le beurre, le parmesan et les noix concassées."
+      ],
+      "robot": [],
+      "notes": [
+        "Budget indiqué dans le livre : petit budget."
+      ],
+      "source": "Grand Livre de la Cuisine Végétarienne d’Automne-Hiver — recette 9",
+      "timeCook": "30 min environ",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-010",
+      "name": "Tartiflette végétarienne au reblochon & tofu fumé",
+      "ingredients": [
+        "1 kg de pommes de terre",
+        "1 reblochon fermier",
+        "200 g de tofu fumé",
+        "2 oignons",
+        "2 c. à soupe de crème fraîche",
+        "10 cl de vin blanc sec",
+        "Beurre",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Faire cuire les pommes de terre à l’eau, les éplucher puis les couper en rondelles.",
+        "Couper le tofu fumé en petits dés. Le faire revenir avec les oignons émincés et un morceau de beurre pendant 10 min. Déglacer au vin blanc.",
+        "Dans un plat à gratin, disposer la moitié des pommes de terre, le mélange oignons-tofu puis le reste des pommes de terre. Ajouter la crème fraîche.",
+        "Couper le reblochon en deux dans l’épaisseur et le déposer croûte vers le haut. Enfourner 25 min à 200 °C."
+      ],
+      "robot": [],
+      "notes": [
+        "Budget indiqué dans le livre : budget normal."
+      ],
+      "source": "Grand Livre de la Cuisine Végétarienne d’Automne-Hiver — recette 10",
+      "timeCook": "35 min de cuisson indiquée, hors cuisson des pommes de terre",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
     }
   ],
   "plan": [
