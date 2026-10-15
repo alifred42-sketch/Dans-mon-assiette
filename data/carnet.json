@@ -57561,8 +57561,9 @@
     },
     {
       "id": "halloween-express-13",
-      "numero": "Le Guacamole du Monstre Vomissant",
-      "name": [
+      "numero": 13,
+      "name": "Le Guacamole du Monstre Vomissant",
+      "ingredients": [
         "3 avocats bien mûrs",
         "1/2 oignon",
         "1 tomate",
@@ -57571,51 +57572,53 @@
         "1 poivron orange entier",
         "1 paquet de chips tortillas (nachos)"
       ],
-      "ingredients": [
+      "steps": [
         "Écrasez la chair des avocats à la fourchette. Ajoutez l’oignon et la tomate coupés en tout petits dés, le jus de citron vert et le sel. Mélangez bien.",
         "Prenez le poivron orange, découpez le chapeau et videz-le. Sculptez des yeux méchants et une grande bouche ouverte au couteau.",
         "Placez le poivron sculpté au milieu d’un grand plateau de service.",
         "Faites couler le guacamole depuis l’intérieur de la bouche du poivron vers l’extérieur sur le plat pour donner l’illusion qu’il vomit. Entourez de chips tortillas."
       ],
-      "steps": "15 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "6 personnes",
-      "servings": "express",
+      "source": "Le Grand Grimoire d’Halloween — page 9",
+      "timePrep": "15 min",
+      "timeCook": "Sans cuisson",
+      "servings": "6 personnes",
       "fete": "halloween",
-      "sous_fete": "Plat express n°13 du Grimoire d’Halloween."
+      "sous_fete": "express",
+      "blurb": "Plat express n°13 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-express-14",
-      "numero": "Les Mini-Balais Feuilletés Salés",
-      "name": [
+      "numero": 14,
+      "name": "Les Mini-Balais Feuilletés Salés",
+      "ingredients": [
         "1 rouleau de pâte feuilletée",
         "15 gressins fins",
         "1 œuf pour la dorure",
         "Graines de sésame noir"
       ],
-      "ingredients": [
+      "steps": [
         "Coupez des rectangles de pâte feuilletée de 5 x 3 cm. Taillez des franges sur les 2/3 inférieurs de chaque rectangle.",
         "Enroulez la partie non coupée autour de la pointe d’un gressin.",
         "Dorez la pâte à l’œuf et parsemez de graines de sésame noir.",
         "Faites cuire à 200°C pendant 10 à 12 minutes pour faire gonfler et dorer le balai."
       ],
-      "steps": "15 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "12 min",
-      "timeCook": "4 personnes",
-      "servings": "express",
+      "source": "Le Grand Grimoire d’Halloween — page 9",
+      "timePrep": "15 min",
+      "timeCook": "12 min",
+      "servings": "4 personnes",
       "fete": "halloween",
-      "sous_fete": "Plat express n°14 du Grimoire d’Halloween."
+      "sous_fete": "express",
+      "blurb": "Plat express n°14 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-express-15",
-      "numero": "Les Poivrons Jack-O’-Lantern Farcis",
-      "name": [
+      "numero": 15,
+      "name": "Les Poivrons Jack-O’-Lantern Farcis",
+      "ingredients": [
         "4 gros poivrons orange stables",
         "400 g de viande hachée (bœuf)",
         "150 g de riz cuit",
@@ -57625,373 +57628,388 @@
         "Poivre",
         "Huile d’olive"
       ],
-      "ingredients": [
+      "steps": [
         "Lavez les poivrons. Découpez le chapeau et retirez les graines intérieures délicatement. À l’aide d’un petit couteau pointu, sculptez un visage de citrouille d’Halloween sur un côté de chaque poivron.",
         "Dans une poêle, faites revenir l’oignon émincé avec l’huile d’olive, ajoutez la viande hachée et saisissez-la. Incorporez le coulis de tomate et le riz cuit. Assaisonnez.",
         "Remplissez généreusement chaque poivron sculpté avec cette farce.",
         "Replacez les chapeaux sur les poivrons, déposez-les dans un plat avec un fond d’eau et enfournez à 180°C pendant 35 minutes."
       ],
-      "steps": "20 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "35 min",
-      "timeCook": "4 personnes",
-      "servings": "express",
+      "source": "Le Grand Grimoire d’Halloween — page 10",
+      "timePrep": "20 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
       "fete": "halloween",
-      "sous_fete": "Plat express n°15 du Grimoire d’Halloween."
+      "sous_fete": "express",
+      "blurb": "Plat express n°15 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-express-16",
-      "numero": "Les Bananes Fantômes Express",
-      "name": [
+      "numero": 16,
+      "name": "Les Bananes Fantômes Express",
+      "ingredients": [
         "4 bananes mûres mais fermes",
         "24 pépites de chocolat noir de tailles différentes"
       ],
-      "ingredients": [
+      "steps": [
         "Épluchez les bananes et coupez-les en deux au milieu de leur longueur.",
         "Posez les demi-bananes verticalement sur leur base coupée sur un plat de présentation.",
         "Prenez les petites pépites de chocolat : enfoncez-en deux pour faire les yeux du fantôme (pointe vers l’intérieur).",
         "Prenez une pépite de chocolat légèrement plus grosse et enfoncez-la juste en dessous pour créer la bouche bée. Servez immédiatement."
       ],
-      "steps": "10 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "4 personnes",
-      "servings": "express",
+      "source": "Le Grand Grimoire d’Halloween — page 10",
+      "timePrep": "10 min",
+      "timeCook": "Sans cuisson",
+      "servings": "4 personnes",
       "fete": "halloween",
-      "sous_fete": "Plat express n°16 du Grimoire d’Halloween."
+      "sous_fete": "express",
+      "blurb": "Plat express n°16 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-express-17",
-      "numero": "Les Clous de Cercueil Chocolat-Spéculoos",
-      "name": [
+      "numero": 17,
+      "name": "Les Clous de Cercueil Chocolat-Spéculoos",
+      "ingredients": [
         "12 biscuits rectangulaires (type spéculoos ou petits-beurre)",
         "150 g de chocolat noir",
         "50 g de chocolat blanc"
       ],
-      "ingredients": [
+      "steps": [
         "À l’aide d’un couteau dentelé, taillez légèrement les coins supérieurs des biscuits pour leur donner une forme hexagonale évoquant un cercueil.",
         "Faites fondre le chocolat noir au bain-marie et enrobez totalement chaque biscuit taillé. Laissez figer sur du papier sulfurisé.",
         "Faites fondre le chocolat blanc, transvasez-le dans un petit cornet en papier ou utilisez un cure-dent.",
         "Dessinez une croix ou écrivez l’inscription « RIP » sur le dessus de chaque cercueil en chocolat noir durci."
       ],
-      "steps": "20 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "6 personnes",
-      "servings": "express",
+      "source": "Le Grand Grimoire d’Halloween — page 11",
+      "timePrep": "20 min",
+      "timeCook": "Sans cuisson",
+      "servings": "6 personnes",
       "fete": "halloween",
-      "sous_fete": "Plat express n°17 du Grimoire d’Halloween."
+      "sous_fete": "express",
+      "blurb": "Plat express n°17 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-express-18",
-      "numero": "Les Pommes Dentier de Vampire",
-      "name": [
+      "numero": 18,
+      "name": "Les Pommes Dentier de Vampire",
+      "ingredients": [
         "2 pommes rouges",
         "4 cuillères à soupe de beurre de cacahuète (ou pâte à tartiner)",
         "50 g de mini-guimauves blanches"
       ],
-      "ingredients": [
+      "steps": [
         "Lavez et coupez les pommes en quatre quartiers, puis recoupez chaque quartier en deux pour obtenir des tranches épaisses.",
         "Tartinez généreusement un côté de deux tranches de pomme avec du beurre de cacahuète.",
         "Alignez une rangée de mini-guimauves sur le beurre de cacahuète d’une des tranches pour former les dents blanches.",
         "Posez la deuxième tranche de pomme tartinée par-dessus pour refermer la bouche, le beurre de cacahuète servant de colle pour maintenir le dentier."
       ],
-      "steps": "15 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "4 personnes",
-      "servings": "express",
+      "source": "Le Grand Grimoire d’Halloween — page 11",
+      "timePrep": "15 min",
+      "timeCook": "Sans cuisson",
+      "servings": "4 personnes",
       "fete": "halloween",
-      "sous_fete": "Plat express n°18 du Grimoire d’Halloween."
+      "sous_fete": "express",
+      "blurb": "Plat express n°18 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-express-19",
-      "numero": "Le Punch Sanguin aux Mains de Glace",
-      "name": [
+      "numero": 19,
+      "name": "Le Punch Sanguin aux Mains de Glace",
+      "ingredients": [
         "1 L de jus de canneberge (cranberry)",
         "500 ml de jus d’orange",
         "500 ml de limonade",
         "2 gants en plastique propres (sans poudre)",
         "Sirop de grenadine"
       ],
-      "ingredients": [
+      "steps": [
         "Remplissez les gants en plastique d’eau, nouez fermement la base et placez-les à plat au congélateur pendant au moins 6 heures pour obtenir des mains de glace solides.",
         "Dans un grand saladier (le chaudron), mélangez le jus de canneberge, le jus d’orange et la limonade bien frais.",
         "Au moment de servir, découpez délicatement les gants en plastique avec des ciseaux pour démouler les mains de glace et déposez-les au centre du punch."
       ],
-      "steps": "15 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Congélation : 6 h",
-      "timeCook": "10 personnes",
-      "servings": "express",
+      "source": "Le Grand Grimoire d’Halloween — page 12",
+      "timePrep": "15 min",
+      "timeCook": "Congélation : 6 h",
+      "servings": "10 personnes",
       "fete": "halloween",
-      "sous_fete": "Plat express n°19 du Grimoire d’Halloween."
+      "sous_fete": "express",
+      "blurb": "Plat express n°19 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-express-20",
-      "numero": "Les Cervelles en Mousse de Fraise",
-      "name": [
+      "numero": 20,
+      "name": "Les Cervelles en Mousse de Fraise",
+      "ingredients": [
         "200 g de fraises",
         "200 g de fromage blanc",
         "2 cuillères à soupe de sucre",
         "100 g de coulis de fruits rouges épais"
       ],
-      "ingredients": [
+      "steps": [
         "Mixez les fraises avec le sucre et incorporez délicatement le fromage blanc pour obtenir une texture homogène. Répartissez au fond de 4 coupelles.",
         "Mettez le coulis de fruits rouges bien rouge dans une poche à douille munie d’une ouverture très fine.",
         "Pochez le coulis sur la mousse en formant des zigzags serrés, séparés en deux par une ligne centrale, afin de reproduire la forme des deux hémisphères d’une cervelle.",
         "Réfrigérez avant de servir."
       ],
-      "steps": "20 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Repos : 1 h",
-      "timeCook": "4 personnes",
-      "servings": "express",
+      "source": "Le Grand Grimoire d’Halloween — page 12",
+      "timePrep": "20 min",
+      "timeCook": "Repos : 1 h",
+      "servings": "4 personnes",
       "fete": "halloween",
-      "sous_fete": "Plat express n°20 du Grimoire d’Halloween."
+      "sous_fete": "express",
+      "blurb": "Plat express n°20 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-atelier-21",
-      "numero": "Mini-Pizzas Momies Express",
-      "name": [
+      "numero": 21,
+      "name": "Mini-Pizzas Momies Express",
+      "ingredients": [
         "4 petits pains (type muffins anglais ou tranches de baguette)",
         "100 g de sauce tomate",
         "4 tranches de fromage type emmental",
         "Olives noires tranchées"
       ],
-      "ingredients": [
+      "steps": [
         "Coupez les petits pains en deux. Laissez les enfants étaler la sauce tomate sur chaque face.",
         "Découpez le fromage en fines lamelles. Demandez aux enfants de croiser les lamelles de fromage sur la sauce tomate pour former les bandes de la momie.",
         "Ajoutez deux rondelles d’olives noires pour faire les yeux qui dépassent.",
         "Passez sous le gril du four pendant 5 à 8 minutes jusqu’à ce que le fromage soit fondu mais conserve sa forme de bande."
       ],
-      "steps": "15 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "8 min",
-      "timeCook": "4 personnes",
-      "servings": "atelier",
+      "source": "Le Grand Grimoire d’Halloween — page 13",
+      "timePrep": "15 min",
+      "timeCook": "8 min",
+      "servings": "4 personnes",
       "fete": "halloween",
-      "sous_fete": "Atelier n°21 du Grimoire d’Halloween."
+      "sous_fete": "atelier",
+      "blurb": "Atelier n°21 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-atelier-22",
-      "numero": "Les Toasts Araignées d’Automne",
-      "name": [
+      "numero": 22,
+      "name": "Les Toasts Araignées d’Automne",
+      "ingredients": [
         "4 tranches de pain grillé",
         "100 g de fromage à tartiner",
         "12 olives noires dénoyautées"
       ],
-      "ingredients": [
+      "steps": [
         "Faites griller les tranches de pain. Laissez les enfants tartiner généreusement le fromage frais.",
         "Coupez la moitié des olives en deux pour le corps des araignées. L’autre moitié doit être coupée en fines lamelles.",
         "Les enfants placent le corps de l’araignée au milieu du toast, puis ajoutent les lamelles tout autour pour figurer les pattes."
       ],
-      "steps": "15 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "4 personnes",
-      "servings": "atelier",
+      "source": "Le Grand Grimoire d’Halloween — page 13",
+      "timePrep": "15 min",
+      "timeCook": "Sans cuisson",
+      "servings": "4 personnes",
       "fete": "halloween",
-      "sous_fete": "Atelier n°22 du Grimoire d’Halloween."
+      "sous_fete": "atelier",
+      "blurb": "Atelier n°22 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-atelier-23",
-      "numero": "Les Cookies Araignées Rigolos",
-      "name": [
+      "numero": 23,
+      "name": "Les Cookies Araignées Rigolos",
+      "ingredients": [
         "12 cookies tout prêts (ou faits maison)",
         "12 chocolats ronds (type Maltesers)",
         "50 g de chocolat noir fondu"
       ],
-      "ingredients": [
+      "steps": [
         "Déposez les cookies sur un plat. Mettez un point de chocolat fondu au centre de chaque cookie et collez-y un chocolat rond pour faire le corps de l’araignée.",
         "Avec une poche à douille très fine ou un cure-dent, laissez les enfants dessiner 8 pattes de part et d’autre du chocolat rond en partant vers les bords du cookie.",
         "Faites deux petits points blancs et noirs sur le chocolat rond pour donner un regard rigolo à l’araignée."
       ],
-      "steps": "20 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "10 min",
-      "timeCook": "6 personnes",
-      "servings": "atelier",
+      "source": "Le Grand Grimoire d’Halloween — page 14",
+      "timePrep": "20 min",
+      "timeCook": "10 min",
+      "servings": "6 personnes",
       "fete": "halloween",
-      "sous_fete": "Atelier n°23 du Grimoire d’Halloween."
+      "sous_fete": "atelier",
+      "blurb": "Atelier n°23 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-atelier-24",
-      "numero": "Les Monstres \"Babybel\" Effrayants",
-      "name": [
+      "numero": 24,
+      "name": "Les Monstres \"Babybel\" Effrayants",
+      "ingredients": [
         "6 fromages Mini Babybel",
         "Quelques pépites de chocolat ou petits morceaux d’olives noires"
       ],
-      "ingredients": [
+      "steps": [
         "Retirez la bande d’ouverture centrale de la cire rouge du Babybel, mais conservez les deux calottes de cire supérieure et inférieure.",
         "À l’aide d’un petit couteau (opération réalisée par l’adulte), découpez des dents pointues en zigzag dans la cire rouge restante pour ouvrir la bouche du monstre sur le fromage blanc.",
         "Les enfants collent des petits morceaux d’olives sur la cire supérieure pour former un, deux ou trois yeux de monstres extraterrestres."
       ],
-      "steps": "15 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "6 personnes",
-      "servings": "atelier",
+      "source": "Le Grand Grimoire d’Halloween — page 14",
+      "timePrep": "15 min",
+      "timeCook": "Sans cuisson",
+      "servings": "6 personnes",
       "fete": "halloween",
-      "sous_fete": "Atelier n°24 du Grimoire d’Halloween."
+      "sous_fete": "atelier",
+      "blurb": "Atelier n°24 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-atelier-25",
-      "numero": "Les Chapeaux de Sorcière Sablés",
-      "name": [
+      "numero": 25,
+      "name": "Les Chapeaux de Sorcière Sablés",
+      "ingredients": [
         "12 biscuits ronds sablés",
         "12 cônes en chocolat (type cônes fourrés ou biscuits pointus)",
         "50 g de glaçage royal coloré en orange (sucre glace + eau + colorant)"
       ],
-      "ingredients": [
+      "steps": [
         "Posez les biscuits ronds à plat sur une table. Les enfants étalent un cercle de glaçage orange au centre du biscuit.",
         "Placez le cône en chocolat bien verticalement au milieu du glaçage orange.",
         "En pressant un peu, le glaçage va déborder légèrement sur les côtés pour former le ruban orange du chapeau de la sorcière. Laissez sécher 15 minutes."
       ],
-      "steps": "20 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "6 personnes",
-      "servings": "atelier",
+      "source": "Le Grand Grimoire d’Halloween — page 15",
+      "timePrep": "20 min",
+      "timeCook": "Sans cuisson",
+      "servings": "6 personnes",
       "fete": "halloween",
-      "sous_fete": "Atelier n°25 du Grimoire d’Halloween."
+      "sous_fete": "atelier",
+      "blurb": "Atelier n°25 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-atelier-26",
-      "numero": "Le Balai de Sorcière Croustillant",
-      "name": [
+      "numero": 26,
+      "name": "Le Balai de Sorcière Croustillant",
+      "ingredients": [
         "10 bâtonnets salés",
         "5 ficello ou tranches de fromage effilochables",
         "Brins de ciboulette"
       ],
-      "ingredients": [
+      "steps": [
         "Coupez les bâtonnets de fromage en deux. Laissez les enfants effilocher le bas du fromage sans détacher le haut.",
         "Plantez le bâtonnet de bretzel dans la partie non effilochée du fromage.",
         "Aidez les enfants à nouer un brin de ciboulette pour maintenir le tout bien en place."
       ],
-      "steps": "10 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "4 personnes",
-      "servings": "atelier",
+      "source": "Le Grand Grimoire d’Halloween — page 15",
+      "timePrep": "10 min",
+      "timeCook": "Sans cuisson",
+      "servings": "4 personnes",
       "fete": "halloween",
-      "sous_fete": "Atelier n°26 du Grimoire d’Halloween."
+      "sous_fete": "atelier",
+      "blurb": "Atelier n°26 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-atelier-27",
-      "numero": "Les Citrouilles Mandarines",
-      "name": [
+      "numero": 27,
+      "name": "Les Citrouilles Mandarines",
+      "ingredients": [
         "6 mandarines ou clémentines",
         "1 branche de céleri vert"
       ],
-      "ingredients": [
+      "steps": [
         "Demandez aux enfants d’éplucher soigneusement les mandarines en veillant à ne pas séparer les quartiers.",
         "Pendant ce temps, l’adulte coupe de petits morceaux de branche de céleri d’environ 2 cm de long pour faire les tiges.",
         "Les enfants insèrent délicatement le morceau de céleri au sommet de la mandarine épluchée."
       ],
-      "steps": "10 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "4 personnes",
-      "servings": "atelier",
+      "source": "Le Grand Grimoire d’Halloween — page 16",
+      "timePrep": "10 min",
+      "timeCook": "Sans cuisson",
+      "servings": "4 personnes",
       "fete": "halloween",
-      "sous_fete": "Atelier n°27 du Grimoire d’Halloween."
+      "sous_fete": "atelier",
+      "blurb": "Atelier n°27 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-atelier-28",
-      "numero": "Les Marshmallows Fantômes",
-      "name": [
+      "numero": 28,
+      "name": "Les Marshmallows Fantômes",
+      "ingredients": [
         "18 grands marshmallows blancs",
         "Pics en bois",
         "50 g de chocolat noir fondu"
       ],
-      "ingredients": [
+      "steps": [
         "Piquez chaque guimauve sur un bâtonnet en bois.",
         "À l’aide d’un pinceau fin ou d’un cure-dent trempé dans le chocolat fondu, laissez les enfants dessiner des yeux ronds et des bouches hurlantes sur les marshmallows.",
         "Plantez les pics dans un support pour un effet de vol de fantômes sur votre buffet."
       ],
-      "steps": "15 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "6 personnes",
-      "servings": "atelier",
+      "source": "Le Grand Grimoire d’Halloween — page 16",
+      "timePrep": "15 min",
+      "timeCook": "Sans cuisson",
+      "servings": "6 personnes",
       "fete": "halloween",
-      "sous_fete": "Atelier n°28 du Grimoire d’Halloween."
+      "sous_fete": "atelier",
+      "blurb": "Atelier n°28 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-atelier-29",
-      "numero": "Hiboux Croustillants en Riz Soufflé",
-      "name": [
+      "numero": 29,
+      "name": "Hiboux Croustillants en Riz Soufflé",
+      "ingredients": [
         "100 g de chamallows",
         "30 g de beurre",
         "120 g de riz soufflé au chocolat",
         "Mini-smarties pour les yeux"
       ],
-      "ingredients": [
+      "steps": [
         "Faites fondre le beurre et les chamallows à la casserole à feu doux. Hors du feu, ajoutez le riz soufflé et mélangez bien.",
         "Laissez tiédir. Humidifiez les mains des enfants et demandez-leur de former des boules légèrement ovales.",
         "Ajoutez deux smarties jaunes pour faire les grands yeux du hibou et un smartie orange vertical pour le bec. Laissez durcir."
       ],
-      "steps": "20 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "5 min",
-      "timeCook": "6 personnes",
-      "servings": "atelier",
+      "source": "Le Grand Grimoire d’Halloween — page 17",
+      "timePrep": "20 min",
+      "timeCook": "5 min",
+      "servings": "6 personnes",
       "fete": "halloween",
-      "sous_fete": "Atelier n°29 du Grimoire d’Halloween."
+      "sous_fete": "atelier",
+      "blurb": "Atelier n°29 du Grimoire d’Halloween."
     },
     {
       "id": "halloween-atelier-30",
-      "numero": "La Potion Magique des Sorcières",
-      "name": [
+      "numero": 30,
+      "name": "La Potion Magique des Sorcières",
+      "ingredients": [
         "1 L de limonade bien fraîche",
         "10 cl de sirop de grenadine",
         "Bonbons en forme de vers de terre ou d’yeux"
       ],
-      "ingredients": [
+      "steps": [
         "Versez la limonade dans des verres transparents. Placez quelques bonbons gluants sur les bords ou dedans.",
         "Donnez aux enfants une petite pipette ou versez très délicatement une cuillère à soupe de grenadine au centre de chaque verre.",
         "La grenadine, plus lourde, descend au fond en créant des volutes de sang spectaculaires. Effet magique garanti !"
       ],
-      "steps": "5 min",
       "robot": [],
       "notes": [],
-      "source": "Le Grand Grimoire d’Halloween — pages NaN",
-      "timePrep": "Sans cuisson",
-      "timeCook": "4 personnes",
-      "servings": "atelier",
+      "source": "Le Grand Grimoire d’Halloween — page 17",
+      "timePrep": "5 min",
+      "timeCook": "Sans cuisson",
+      "servings": "4 personnes",
       "fete": "halloween",
-      "sous_fete": "Atelier n°30 du Grimoire d’Halloween."
+      "sous_fete": "atelier",
+      "blurb": "Atelier n°30 du Grimoire d’Halloween."
     }
   ],
   "plan": [
