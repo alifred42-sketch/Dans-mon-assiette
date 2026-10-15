@@ -3,6 +3,7 @@
 import { carnet, getCollections } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
+import { VegetarianNavigation } from "@/components/vegetarian-navigation";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
@@ -27,7 +28,7 @@ const FILTER_LABELS: Record<string, string> = {
   sauces: "Sauces", marinades: "Marinades", epices: "Épices & aromates",
   express: "Recettes express", tired: "Je suis fatigué — idées faciles", "mr-cuisine": "Compatibles Mr Cuisine",
   apero: "Apéritifs", recevoir: "Pour recevoir", printemps: "Printemps", ete: "Été",
-  automne: "Automne", hiver: "Hiver", bonus: "Bonus du carnet",
+  automne: "Automne", hiver: "Hiver", bonus: "Bonus du carnet", vegetarien: "🥦 Végétarien",
 };
 
 function durationMinutes(value?: string): number | null {
@@ -94,6 +95,8 @@ export default function RecettesPage() {
         return prep !== null && cook !== null && prep + cook <= maxDuration;
       });
   const recipes = timeFilteredRecipes.map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
+
+  if (filter === "vegetarien") return <VegetarianNavigation showBack />;
 
   return (
     <div className="space-y-6">

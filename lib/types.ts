@@ -20,6 +20,8 @@ export type Recipe = {
   imageAlt?: string;
   fete?: string;
   sous_fete?: string;
+  regime?: string;
+  sous_regime?: string;
   numero?: number;
 };
 

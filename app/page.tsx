@@ -23,6 +23,7 @@ const categories: [string, string, string, LucideIcon][] = [
   ["Été", "#FCE4B5", "/recettes?filter=ete", Sun],
   ["Automne", "#F3C6B1", "/recettes?filter=automne", Leaf],
   ["Hiver", "#E1EDF2", "/recettes?filter=hiver", Snowflake],
+  ["🥦 Végétarien", "#E2F0D9", "/vegetarien", Sprout],
   ["🎉 Fêtes", "#FAD2CB", "/fetes", PartyPopper],
 ];
 
@@ -87,7 +88,7 @@ export default function HomePage() {
                   key={label}
                   href={destination}
                   style={{ backgroundColor: color }}
-                  className="flex min-h-24 items-center justify-center rounded-2xl px-3 py-4 text-center text-sm font-bold text-[#1A1A1A] shadow-[0_4px_12px_rgba(43,43,43,0.09)] transition hover:-translate-y-0.5"
+                  className={`flex min-h-24 items-center justify-center rounded-2xl px-3 py-4 text-center text-sm ${label === "🥦 Végétarien" ? "font-semibold" : "font-bold"} text-[#1A1A1A] shadow-[0_4px_12px_rgba(43,43,43,0.09)] transition hover:-translate-y-0.5`}
                 >
                   <span className="flex flex-col items-center gap-2"><Icon aria-hidden="true" className="size-6 stroke-[1.6]" />{label}</span>
                 </Link>
