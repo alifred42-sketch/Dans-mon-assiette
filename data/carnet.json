@@ -58010,6 +58010,290 @@
       "fete": "halloween",
       "sous_fete": "atelier",
       "blurb": "Atelier n°30 du Grimoire d’Halloween."
+    },
+    {
+      "id": "fetes-hiver-tech-crepes",
+      "numero": 0,
+      "name": "Fiche Technique : Les Crêpes Traditionnelles et Inratables",
+      "ingredients": [
+        "250 g de farine de blé",
+        "4 gros œufs",
+        "50 cl de lait entier (ou demi-écrémé)",
+        "50 g de beurre doux fondu",
+        "1 cuillère à soupe de sucre en poudre",
+        "1 pincée de sel",
+        "1 cuillère à soupe de rhum ou d’extrait de vanille (optionnel)"
+      ],
+      "steps": [
+        "Dans un grand saladier, versez la farine, le sucre et le sel. Formez un puits au centre.",
+        "Cassez les œufs au milieu et commencez à mélanger doucement à l’aide d’un fouet en incorporant progressivement la farine.",
+        "Versez le lait petit à petit tout en fouettant énergiquement pour éviter la formation de grumeaux.",
+        "Ajoutez le beurre fondu et le parfum choisi, puis mélangez jusqu’à obtenir une pâte bien lisse et fluide.",
+        "Laissez reposer la pâte à température ambiante pendant 30 minutes sous un torchon propre.",
+        "Faites chauffer une poêle à crêpe légèrement huilée. Versez une louche de pâte, étalez-la bien et faites cuire environ 1 à 2 minutes par face jusqu’à coloration dorée."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Livre des Fêtes de l’Année — page 2",
+      "timePrep": "15 min",
+      "timeCook": "Repos : 30 min",
+      "servings": "20 crêpes",
+      "blurb": "Fiche technique des Fêtes d’Hiver.",
+      "fete": "fetes_annee",
+      "sous_fete": "hiver"
+    },
+    {
+      "id": "fetes-hiver-01",
+      "numero": 1,
+      "name": "Le Gâteau de Crêpes Suprême au Chocolat & Praliné",
+      "ingredients": [
+        "20 crêpes cuites (recette technique ci-dessus)",
+        "200 g de chocolat noir",
+        "150 g de pâte de praliné",
+        "20 cl de crème liquide entière",
+        "50 g de noisettes concassées"
+      ],
+      "steps": [
+        "Faites fondre le chocolat avec la crème liquide au bain-marie. Hors du feu, incorporez la pâte de praliné pour obtenir une ganache onctueuse. Laissez tiédir légèrement.",
+        "Posez une première crêpe sur le plat de service. Étalez une fine couche de ganache chocolat-praliné.",
+        "Superposez une deuxième crêpe et répétez l’opération jusqu’à épuisement des crêpes.",
+        "Nappez la dernière crêpe avec le reste de ganache et parsemez de noisettes concassées torréfiées.",
+        "Placez au frais pendant au moins 2 heures avant de découper en parts comme un gâteau."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Livre des Fêtes de l’Année — page 3",
+      "timePrep": "45 min",
+      "timeCook": "Repos : 2 h",
+      "servings": "6 à 8 personnes",
+      "blurb": "Fête d’Hiver n°1.",
+      "fete": "fetes_annee",
+      "sous_fete": "hiver"
+    },
+    {
+      "id": "fetes-hiver-02",
+      "numero": 2,
+      "name": "Les Crêpes \"Cereal\" Miniatures au Sirop d’Érable",
+      "ingredients": [
+        "1 portion de pâte à crêpes fluide",
+        "30 g de beurre",
+        "Sirop d’érable",
+        "Fruits frais (baies) pour le service"
+      ],
+      "steps": [
+        "Versez la pâte à crêpes dans une bouteille à sauce à embout fin ou une poche à douille coupée très finement.",
+        "Faites chauffer une grande poêle antiadhésive avec un peu de beurre.",
+        "Pochez des dizaines de mini-gouttes de pâte de la taille d’une pièce de monnaie.",
+        "Laissez cuire 1 minute, puis retournez-les délicatement à l’aide d’une spatule. Laissez dorer 30 secondes.",
+        "Servez chaud dans un bol, arrosé de sirop d’érable et accompagné de quelques baies fraîches."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Livre des Fêtes de l’Année — page 3",
+      "timePrep": "20 min",
+      "timeCook": "1 min + 30 sec par fournée",
+      "servings": "4 personnes",
+      "blurb": "Fête d’Hiver n°2.",
+      "fete": "fetes_annee",
+      "sous_fete": "hiver"
+    },
+    {
+      "id": "fetes-hiver-03",
+      "numero": "Les Tresses Feuilletées Cœur à la Fraise",
+      "name": [
+        "1 pâte feuilletée rectangulaire",
+        "150 g de confiture ou compotée de fraises dense",
+        "1 jaune d’œuf pour la dorure",
+        "Sucre glace"
+      ],
+      "ingredients": [
+        "Préchauffez le four à 190°C. Déroulez la pâte feuilletée et découpez-y des rectangles de 10 x 15 cm.",
+        "Étalez de la confiture sur la bande centrale de chaque rectangle.",
+        "Découpez des franges horizontales de 1 cm sur les côtés gauches et droits restés libres.",
+        "Repliez alternativement les franges sur la confiture pour former une tresse. Soudez bien les extrémités en forme de pointe ou de cœur.",
+        "Badigeonnez de jaune d’œuf dilué dans un peu d’eau. Enfournez pour 15 à 20 minutes jusqu’à ce que la pâte soit bien dorée. Saupoudrez de sucre glace."
+      ],
+      "steps": "25 min",
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Livre des Fêtes de l’Année — page Fête d’Hiver n°3.",
+      "timePrep": "15 à 20 min",
+      "timeCook": "4 personnes",
+      "servings": 4,
+      "fete": "fetes_annee",
+      "sous_fete": "hiver"
+    },
+    {
+      "id": "fetes-hiver-04",
+      "numero": "Les Fondants Coulants Chocolat Blanc \"Red Velvet\"",
+      "name": [
+        "100 g de chocolat blanc",
+        "60 g de beurre",
+        "2 œufs",
+        "40 g de sucre",
+        "50 g de farine",
+        "Colorant alimentaire rouge naturel"
+      ],
+      "ingredients": [
+        "Préchauffez votre four à 200°C. Faites fondre le chocolat blanc et le beurre ensemble au bain-marie.",
+        "Dans un bol, battez les œufs avec le sucre jusqu’à ce que le mélange blanchisse. Ajoutez la farine.",
+        "Incorporez le chocolat fondu et ajoutez quelques gouttes de colorant rouge pour obtenir une pâte d’une couleur pourpre éclatante.",
+        "Versez la pâte dans des ramequins préalablement beurrés et farinés.",
+        "Enfournez pour 10 à 12 minutes maximum. Les bords doivent être cuits et le centre encore bien tremblotant. Servez immédiatement."
+      ],
+      "steps": "20 min",
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Livre des Fêtes de l’Année — page Fête d’Hiver n°4.",
+      "timePrep": "10 à 12 min",
+      "timeCook": "4 personnes",
+      "servings": 4,
+      "fete": "fetes_annee",
+      "sous_fete": "hiver"
+    },
+    {
+      "id": "fetes-hiver-05",
+      "numero": "La Pasta d’Amore à la Betterave & Burrata",
+      "name": [
+        "200 g de pâtes (type Rigatoni ou Tagliatelles)",
+        "1 betterave cuite",
+        "1 burrata crémeuse",
+        "1 gousse d’ail",
+        "2 cuillères à soupe d’huile d’olive",
+        "Quelques cerneaux de noix",
+        "Sel et poivre"
+      ],
+      "ingredients": [
+        "Faites cuire les pâtes dans une grande casserole d’eau bouillante salée en suivant les instructions pour une cuisson al dente.",
+        "Pendant ce temps, mixez la betterave cuite avec l’ail, l’huile d’olive, du sel et du poivre jusqu’à l’obtention d’une crème lisse fuchsia.",
+        "Égouttez les pâtes en réservant une louche d’eau de cuisson. Renvoyez les pâtes dans la casserole, ajoutez la crème de betterave et mélangez sur feu doux en ajoutant un peu d’eau de cuisson si nécessaire.",
+        "Dressez les pâtes bien roses dans les assiettes, déposez la moitié d’une burrata au centre de chaque assiette et parsemez d’éclats de noix."
+      ],
+      "steps": "20 min",
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Livre des Fêtes de l’Année — page Fête d’Hiver n°5.",
+      "timePrep": "Selon cuisson des pâtes",
+      "timeCook": "2 personnes",
+      "servings": 5,
+      "fete": "fetes_annee",
+      "sous_fete": "hiver"
+    },
+    {
+      "id": "fetes-hiver-06",
+      "numero": "Les Beignets Express sans repos à la Ricotta",
+      "name": [
+        "250 g de ricotta",
+        "2 œufs",
+        "150 g de farine",
+        "50 g de sucre",
+        "1 sachet de levure chimique",
+        "Le zeste d’un citron bio",
+        "Huile de friture",
+        "Sucre glace"
+      ],
+      "ingredients": [
+        "Dans un saladier, fouettez la ricotta avec les œufs et le sucre jusqu’à obtention d’une consistance homogène.",
+        "Ajoutez la farine, la levure chimique et le zeste de citron. Mélangez rapidement pour obtenir une pâte épaisse.",
+        "Faites chauffer l’huile de friture à 170°C.",
+        "À l’aide de deux petites cuillères, formez des petites boules de pâte et plongez-les délicatement dans l’huile chaude.",
+        "Laissez frire 3 à 4 minutes en les retournant régulièrement jusqu’à ce qu’elles soient bien dorées et gonflées. Égouttez sur du papier absorbant et saupoudrez de sucre glace."
+      ],
+      "steps": "15 min",
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Livre des Fêtes de l’Année — page Fête d’Hiver n°6.",
+      "timePrep": "3 à 4 min par fournée",
+      "timeCook": "6 personnes",
+      "servings": 5,
+      "fete": "fetes_annee",
+      "sous_fete": "hiver"
+    },
+    {
+      "id": "fetes-hiver-07",
+      "numero": "Les Churros légers au four",
+      "name": [
+        "250 ml d’eau",
+        "60 g de beurre",
+        "2 cuillères à soupe de sucre",
+        "1 pincée de sel",
+        "150 g de farine",
+        "2 œufs",
+        "Cannelle et sucre fin pour l’enrobage"
+      ],
+      "ingredients": [
+        "Préchauffez le four à 200°C et tapissez une plaque de papier cuisson.",
+        "Dans une casserole, portez à ébullition l’eau, le beurre, le sucre et le sel. Hors du feu, ajoutez la farine d’un coup et remuez vigoureusement jusqu’à ce que la pâte se détache des parois.",
+        "Laissez tiédir 2 minutes, puis incorporez les œufs un par un en mélangeant bien après chaque ajout.",
+        "Mettez la pâte dans une poche munie d’une douille cannelée. Pochez des bâtonnets de 10 cm sur la plaque.",
+        "Enfournez pour 15 à 20 minutes jusqu’à ce qu’ils soient bien dorés. À la sortie du four, roulez-les immédiatement dans le mélange sucre et cannelle."
+      ],
+      "steps": "25 min",
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Livre des Fêtes de l’Année — page Fête d’Hiver n°7.",
+      "timePrep": "15 à 20 min",
+      "timeCook": "4 personnes",
+      "servings": 6,
+      "fete": "fetes_annee",
+      "sous_fete": "hiver"
+    },
+    {
+      "id": "fetes-hiver-08",
+      "numero": "La Galette des Rois Inversée au Spéculoos",
+      "name": [
+        "2 pâtes feuilletées de qualité",
+        "100 g de poudre d’amandes",
+        "80 g de beurre mou",
+        "80 g de sucre",
+        "2 œufs",
+        "3 grosses cuillères à soupe de pâte de spéculoos",
+        "1 jaune d’œuf pour la dorure",
+        "1 fève"
+      ],
+      "ingredients": [
+        "Dans un bol, préparez la crème : battez le beurre mou et le sucre, ajoutez les œufs, la poudre d’amandes et la pâte de spéculoos fondue. Mélangez bien.",
+        "Déroulez la première pâte feuilletée sur une plaque de cuisson. Étalez la crème au spéculoos au centre en laissant une bordure de 2 cm libre. Glissez la fève.",
+        "Humidifiez la bordure à l’eau, puis déposez la seconde pâte feuilletée par-dessus. Soudez fermement les bords en les chiquetant avec le dos d’un couteau.",
+        "Badigeonnez la surface de jaune d’œuf, dessinez des motifs à la pointe du couteau et percez un petit trou au centre pour la vapeur.",
+        "Enfournez à 195°C pendant 25 à 30 minutes jusqu’à ce qu’elle soit bien développée et dorée."
+      ],
+      "steps": "40 min",
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Livre des Fêtes de l’Année — page Fête d’Hiver n°8.",
+      "timePrep": "25 à 30 min",
+      "timeCook": "6 à 8 personnes",
+      "servings": 6,
+      "fete": "fetes_annee",
+      "sous_fete": "hiver"
+    },
+    {
+      "id": "fetes-hiver-09",
+      "numero": "Les Crêpes Suzette Express aux Mandarines",
+      "name": [
+        "8 crêpes prêtes",
+        "Le jus de 3 mandarines",
+        "Le zeste d’une mandarine",
+        "50 g de beurre",
+        "40 g de sucre",
+        "4 cl de Grand Marnier ou Cointreau (optionnel)"
+      ],
+      "ingredients": [
+        "Dans une grande poêle, faites fondre le beurre avec le sucre jusqu’à l’obtention d’un début de caramel clair.",
+        "Versez le jus de mandarine et ajoutez les zestes. Laissez bouillir et réduire 2 minutes pour obtenir un sirop sirupeux.",
+        "Pliez les crêpes en quatre (en triangle) et déposez-les dans la poêle pour qu’elles s’imbibent bien du jus de mandarine chaud sur chaque face.",
+        "Arrosez avec la liqueur, faites chauffer quelques secondes et enflammez délicatement si vous souhaitez les flamber (optionnel). Servez chaud immédiatement."
+      ],
+      "steps": "15 min",
+      "robot": [],
+      "notes": [],
+      "source": "Le Grand Livre des Fêtes de l’Année — page Fête d’Hiver n°9.",
+      "timePrep": "2 min + réchauffage",
+      "timeCook": "4 personnes",
+      "servings": 7,
+      "fete": "fetes_annee",
+      "sous_fete": "hiver"
     }
   ],
   "plan": [
