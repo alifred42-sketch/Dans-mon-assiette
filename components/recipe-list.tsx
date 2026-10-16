@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect } from "react";
+import { Heart } from "lucide-react";
 import { useMemo, useState } from "react";
 import { matchingLines, matchesQuery } from "@/lib/search";
 import { UtensilsCrossed, CookingPot, ShoppingCart, Droplets, Sprout, Sparkles, Timer, Martini, PartyPopper, BatteryLow, Bot, Flower2, Sun, Leaf, Snowflake, type LucideIcon } from "lucide-react";
@@ -27,6 +29,9 @@ export function RecipeList({
   collections?: { slug: string; name: string; count: number }[];
 }) {
   const [q, setQ] = useState("");
+  const [favorites, setFavorites] = useState<string[]>([]);
+  useEffect(() => { try { setFavorites(JSON.parse(localStorage.getItem("cuisine-chic-ouf-favorites") || "[]")); } catch { setFavorites([]); } }, []);
+  function toggleFavorite(id: string) { const next = favorites.includes(id) ? favorites.filter(value => value !== id) : [...favorites, id]; setFavorites(next); try { localStorage.setItem("cuisine-chic-ouf-favorites", JSON.stringify(next)); } catch {} }
   const query = q.trim();
   const filtered = useMemo(() => {
     return items
@@ -99,20 +104,12 @@ export function RecipeList({
         ) : (
           <ul className="space-y-3">
             {filtered.map(({ item, hits }) => (
-              <li key={`${item.id}-${query}`}>
-                <Link
-                  href={week ? `/fiche/${item.id}?w=${week}` : `/fiche/${item.id}`}
-                  className="block rounded-2xl bg-card px-4 py-4 ring-1 ring-foreground/10"
-                >
+              <li key={`${item.id}-${query}`} className="flex items-start gap-2 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
+                <Link href={week ? `/fiche/${item.id}?w=${week}` : `/fiche/${item.id}`} className="min-w-0 flex-1 rounded-xl px-1 py-1">
                   <p className="text-base leading-snug">{item.name}</p>
-                  {hits.length > 0 ? (
-                    <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                      {hits.slice(0, 8).map((line, index) => (
-                        <li key={`${item.id}-hit-${index}`}>• {line}</li>
-                      ))}
-                    </ul>
-                  ) : null}
+                  {hits.length > 0 ? <ul className="mt-2 space-y-1 text-sm text-muted-foreground">{hits.slice(0, 8).map((line, index) => <li key={`${item.id}-hit-${index}`}>• {line}</li>)}</ul> : null}
                 </Link>
+                <button type="button" aria-label={favorites.includes(item.id) ? "Retirer des favoris" : "Ajouter aux favoris"} aria-pressed={favorites.includes(item.id)} onClick={() => toggleFavorite(item.id)} className={`flex size-10 shrink-0 items-center justify-center rounded-xl transition ${favorites.includes(item.id) ? "bg-[#8FA89B]/20 text-[#D97878]" : "bg-[#F9F9F7] text-[#777773]"}`}><Heart className="size-5" fill={favorites.includes(item.id) ? "currentColor" : "none"} /></button>
               </li>
             ))}
           </ul>

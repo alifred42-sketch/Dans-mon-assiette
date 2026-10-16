@@ -5,10 +5,11 @@ import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 import { VeganNavigation } from "@/components/vegan-navigation";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const CATEGORY_COPY: Record<string, string> = {
   "": "Inspirez, cliquez... cuisinez chic ! Vos bons petits plats de la semaine à portée de main.",
+  favoris: "Toutes les recettes que vous avez marquées d’un cœur.",
   sauces: "Le secret des grands chefs est dans la sauce. Des textures onctueuses et des saveurs intenses pour sublimer vos assiettes.",
   marinades: "Donnez du relief à vos viandes, poissons et légumes. Du temps pour infuser les saveurs, du peps à la dégustation !",
   epices: "Voyagez depuis votre cuisine. Le dosage parfait pour réveiller vos plats sans jamais vous brûler le palais.",
@@ -25,7 +26,7 @@ const CATEGORY_COPY: Record<string, string> = {
 };
 
 const FILTER_LABELS: Record<string, string> = {
-  sauces: "Sauces", marinades: "Marinades", epices: "Épices & aromates",
+  sauces: "Sauces", marinades: "Marinades", epices: "Épices & aromates", favoris: "Mes recettes favorites",
   express: "Recettes express", tired: "Je suis fatigué — idées faciles", "mr-cuisine": "Compatibles Mr Cuisine",
   apero: "Apéritifs", recevoir: "Pour recevoir", printemps: "Printemps", ete: "Été",
   automne: "Automne", hiver: "Hiver", bonus: "Bonus du carnet", vegetarien: "🥦 Végétarien",
@@ -43,6 +44,8 @@ function durationMinutes(value?: string): number | null {
 
 export default function RecettesPage() {
   const [maxDuration, setMaxDuration] = useState<number | null>(null);
+  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
+  useEffect(() => { try { setFavoriteIds(JSON.parse(localStorage.getItem("cuisine-chic-ouf-favorites") || "[]")); } catch { setFavoriteIds([]); } }, [filter]);
   const searchParams = useSearchParams();
   const filter = searchParams.get("filter") || "";
   const allCollections = getCollections();
@@ -74,7 +77,7 @@ export default function RecettesPage() {
     }
   };
   const matchingRecipes = carnet.recipes
-    .filter((recipe) => !filter || (selectedIds ? selectedIds.has(recipe.id) : fallbackFilter(recipe)))
+    .filter((recipe) => (filter === "favoris" ? favoriteIds.includes(recipe.id) : (!filter || (selectedIds ? selectedIds.has(recipe.id) : fallbackFilter(recipe)))) )
     .filter((recipe) => filter !== "tired" || (
       recipe.ingredients.filter((line) => line.trim() && !/^ingr[ée]dients à prévoir/i.test(line)).length >= 2 &&
       recipe.steps.filter((line) => line.trim()).length >= 2

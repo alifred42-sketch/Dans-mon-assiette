@@ -19,7 +19,18 @@ function scaleLine(line: string, factor: number) {
 export function RecipeTools({ recipeId, ingredients, alternatives, baseServings = 4, ingredientTargets = {} }: { recipeId: string; ingredients: string[]; alternatives: Alternative[]; baseServings?: number; ingredientTargets?: Record<number, IngredientTarget> }) {
   const [servings, setServings] = useState(baseServings);
   const [ready, setReady] = useState(false);
-  useEffect(() => { try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; if (saved[recipeId]) setServings(saved[recipeId]); else setServings(baseServings); } catch {} setReady(true); }, [recipeId, baseServings]);
+  useEffect(() => {
+    const refresh = () => {
+      try {
+        const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>;
+        const household = Number(localStorage.getItem("assiette-household-servings") || baseServings);
+        setServings(saved[recipeId] || (Number.isFinite(household) ? household : baseServings));
+      } catch { setServings(baseServings); }
+    };
+    refresh(); setReady(true);
+    window.addEventListener("assiette-servings-change", refresh);
+    return () => window.removeEventListener("assiette-servings-change", refresh);
+  }, [recipeId, baseServings]);
   useEffect(() => { if (!ready) return; try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; saved[recipeId] = servings; localStorage.setItem("assiette-recipe-servings", JSON.stringify(saved)); window.dispatchEvent(new CustomEvent("assiette-servings-change")); } catch {} }, [recipeId, servings, ready]);
   const [showSos, setShowSos] = useState(false);
   const scaled = useMemo(() => ingredients.map((line) => scaleLine(line, servings / baseServings)), [ingredients, servings]);

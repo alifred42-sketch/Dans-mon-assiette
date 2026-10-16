@@ -22,12 +22,14 @@ export default function BatchPage() {
     setWeek(clampWeek(requestedWeek ?? String(currentIsoWeek())));
   }, [requestedWeek]);
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
+  const [robotPriority, setRobotPriority] = useState(false);
   useEffect(() => {
-    const refresh = () => { try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); } };
+    const refresh = () => { try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); } try { setRobotPriority(Boolean(JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}").robot)); } catch { setRobotPriority(false); } };
     refresh();
     window.addEventListener("storage", refresh);
     window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
-    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); };
+    window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
+    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
   }, []);
   const changedPlan = weekPlan(week, recipeOverrides);
   const allItems = batchForWeek(week);
@@ -106,6 +108,7 @@ export default function BatchPage() {
         <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">Enfilez votre tablier, allumez les feux (ou votre robot). 2 heures de cuisine le dimanche pour 7 jours de liberté.</p>
       </div>
       <WeekPicker week={week} path="/batch" />
+      {robotPriority ? <a href="#mode-cuisson-robot" className="flex items-center gap-3 rounded-2xl border-2 border-[#8FA89B] bg-[#8FA89B]/20 p-4 text-sm font-extrabold text-[#1A1A1A] shadow-[3px_4px_10px_rgba(26,26,26,0.08)]">🤖 Robot Monsieur Cuisine activé — consignes robot en priorité <span className="ml-auto">↓</span></a> : null}
       <section className="rounded-2xl border-2 border-[#8FA89B] bg-[#F4F7F2] p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#1A1A1A]">✅ Votre batchcooking structuré</h2>
         <p className="mt-1 text-sm leading-relaxed text-[#2B2B2B]">Les 5 étapes demandées sont prêtes pour la semaine {week}. Ouvrez directement le mode dont vous avez besoin :</p>
