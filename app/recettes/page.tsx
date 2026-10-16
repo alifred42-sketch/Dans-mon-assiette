@@ -3,7 +3,7 @@
 import { carnet, getCollections } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
-import { VegetarianNavigation } from "@/components/vegetarian-navigation";
+import { VeganNavigation } from "@/components/vegan-navigation";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
@@ -96,7 +96,7 @@ export default function RecettesPage() {
       });
   const recipes = timeFilteredRecipes.map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
 
-  if (filter === "vegetarien") return <VegetarianNavigation showBack />;
+  if (filter === "vegan") return <VeganNavigation showBack />;
 
   return (
     <div className="space-y-6">
