@@ -61591,6 +61591,1273 @@
       "servings": "4 personnes",
       "regime": "vegetarien",
       "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-express-pdf-001",
+      "name": "Salade Tiède de Pois Chiches au Cumin et Feta Mousseuse",
+      "ingredients": [
+        "800 g de pois chiches cuits",
+        "2 c. à soupe d'huile d'olive",
+        "150 g de feta",
+        "1 c. à soupe de jus de citron",
+        "2 poignées d'épinards frais",
+        "Sel et poivre",
+        "1 c. à café de cumin"
+      ],
+      "steps": [
+        "Rincez et égouttez les pois chiches.",
+        "Dans une poêle, faites chauffer l'huile avec le cumin 30 secondes. Ajoutez les pois chiches et faites sauter à feu vif 3 à 4 minutes.",
+        "Pendant ce temps, coupez la feta en dés et lavez les épinards.",
+        "Hors du feu, ajoutez les épinards et le jus de citron dans la poêle. Parsemez de feta et servez chaud."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 1",
+      "timePrep": "5 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-002",
+      "name": "Bowl d'Hiver Express Lentilles, Avocat et Chèvre Frais",
+      "ingredients": [
+        "500 g de lentilles vertes cuites",
+        "2 c. à soupe d'huile de noix",
+        "2 avocats bien mûrs",
+        "1 c. à soupe de vinaigre de cidre",
+        "150 g de chèvre frais",
+        "Sel et poivre",
+        "40 g de cerneaux de noix"
+      ],
+      "steps": [
+        "Rincez et égouttez les lentilles cuites. Répartissez-les au fond de 4 bols.",
+        "Coupez les avocats en deux, prélevez la chair et coupez-la en lamelles. Disposez-les sur les lentilles.",
+        "Émiettez le chèvre frais de manière égale dans chaque bowl.",
+        "Parsemez d'éclats de noix.",
+        "Émulsionnez l'huile, le vinaigre, le sel et le poivre, puis arrosez les bols avant de servir. 1 <PARSED TEXT FOR PAGE: 2 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 2",
+      "timePrep": "7 min",
+      "timeCook": "Aucune",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-011",
+      "name": "Salade Express de Lentilles Tièdes au Cumin et Fromage de Brebis",
+      "ingredients": [
+        "500 g de lentilles vertes cuites",
+        "2 c. à soupe d'huile d'olive",
+        "1 oignon rouge",
+        "1 c. à soupe de jus de citron",
+        "150 g de fromage de brebis",
+        "Sel et poivre",
+        "1 c. à café de cumin"
+      ],
+      "steps": [
+        "Rincez et égouttez les lentilles. Émincez finement l'oignon rouge.",
+        "Dans une poêle, faites chauffer l'huile avec le cumin et l'oignon rouge pendant 2 minutes à feu vif.",
+        "Ajoutez les lentilles et faites sauter pendant 2 minutes pour bien réchauffer l'ensemble.",
+        "Retirez du feu, versez le jus de citron, salez et poivrez.",
+        "Répartissez dans les assiettes et ajoutez les dés de fromage juste avant de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 11",
+      "timePrep": "4 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-012",
+      "name": "Couscous Express d'Hiver aux Pois Chiches et Raisins Secs",
+      "ingredients": [
+        "250 g de semoule de blé moyenne",
+        "1 c. à café d'épices à couscous",
+        "250 ml de bouillon de légumes chaud",
+        "15 g de beurre",
+        "250 g de pois chiches cuits",
+        "Sel et poivre",
+        "40 g de raisins secs"
+      ],
+      "steps": [
+        "Mettez la semoule, les raisins et les épices dans un saladier. Salez et poivrez.",
+        "Versez le bouillon brûlant par-dessus, couvrez avec une assiette et laissez gonfler 5 minutes.",
+        "Pendant ce temps, rincez et réchauffez les pois chiches (micro-ondes ou casserole).",
+        "Ajoutez le beurre dans la semoule et égrainez à la fourchette.",
+        "Incorporez les pois chiches chauds et servez aussitôt. 2 <PARSED TEXT FOR PAGE: 3 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 12",
+      "timePrep": "5 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-021",
+      "name": "Bowl Chaud d'Hiver au Tofu Fumé, Semoule et Noisettes",
+      "ingredients": [
+        "250 g de semoule de blé rapide",
+        "40 g de noisettes décortiquées",
+        "250 ml de bouillon de légumes brûlant",
+        "2 c. à soupe d'huile d'olive",
+        "250 g de tofu fumé",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Versez la semoule dans un saladier avec une pincée de sel et une cuillère d'huile. Versez le bouillon brûlant, couvrez et laissez gonfler 5 minutes.",
+        "Coupez le tofu en dés et concassez grossièrement les noisettes.",
+        "Faites chauffer le reste d'huile dans une poêle. Faites sauter le tofu et les noisettes 3 à 4 minutes jusqu'à ce que ce soit croustillant.",
+        "Égrainez la semoule à la fourchette, répartissez dans des bols et surmontez du tofu et des noisettes."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 21",
+      "timePrep": "4 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-022",
+      "name": "Salade Tiède de Haricots Rouges au Cumin et Fromage de Chèvre",
+      "ingredients": [
+        "500 g de haricots rouges cuits",
+        "2 c. à soupe d'huile d'olive",
+        "1 oignon rouge",
+        "1 c. à soupe de jus de citron",
+        "120 g de chèvre frais",
+        "Sel et poivre",
+        "1 c. à café de cumin"
+      ],
+      "steps": [
+        "Rincez et égouttez les haricots rouges. Émincez finement l'oignon.",
+        "Faites chauffer l'huile avec le cumin et l'oignon pendant 2 minutes à feu vif.",
+        "Ajoutez les haricots rouges et laissez-les chauffer 2 minutes en remuant délicatement.",
+        "Retirez du feu, ajoutez le citron, le sel et le poivre.",
+        "Dressez dans les assiettes et parsemez de morceaux de chèvre frais. 3 <PARSED TEXT FOR PAGE: 4 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 22",
+      "timePrep": "5 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-031",
+      "name": "Bouillon Express d'Hiver au Tofu, Gingembre et Vermicelles",
+      "ingredients": [
+        "150 g de vermicelles de riz",
+        "3 c. à soupe de sauce soja",
+        "400 g de tofu nature",
+        "2 cm de gingembre frais râpé",
+        "1.2 L de bouillon de légumes",
+        "2 poignées d'épinards frais"
+      ],
+      "steps": [
+        "Coupez le tofu en petits dés.",
+        "Dans une casserole, portez à ébullition le bouillon de légumes, la sauce soja et le gingembre râpé.",
+        "Ajoutez les dés de tofu et les vermicelles de riz. Coupez immédiatement le feu.",
+        "Couvrez et laissez reposer 3 minutes pour que les vermicelles cuisent.",
+        "Ajoutez les épinards, mélangez et servez bien chaud."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 31",
+      "timePrep": "3 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-032",
+      "name": "Bowl minute de Couscous, Pois Chiches et Cannelle",
+      "ingredients": [
+        "250 g de semoule de blé moyenne",
+        "0.5 c. à café de cannelle",
+        "250 ml de bouillon de légumes brûlant",
+        "1 c. à soupe d'huile d'olive",
+        "400 g de pois chiches cuits",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Mélangez la semoule, la cannelle et l'huile dans un saladier.",
+        "Versez le bouillon brûlant, couvrez hermétiquement et laissez gonfler 5 minutes.",
+        "Rincez, égouttez et réchauffez les pois chiches pendant 2 minutes.",
+        "Égrainez la semoule parfumée à l'aide d'une fourchette.",
+        "Incorporez les pois chiches chauds, assaisonnez et servez. 4 <PARSED TEXT FOR PAGE: 5 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 32",
+      "timePrep": "4 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-041",
+      "name": "Bowl de Sarrasin Express au Fromage de Chèvre Chaud et Noix",
+      "ingredients": [
+        "4 sachets de sarrasin précuit",
+        "2 c. à soupe d'huile d'olive",
+        "150 g de chèvre frais",
+        "1 c. à soupe de miel",
+        "50 g de cerneaux de noix",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Faites réchauffer les sachets de sarrasin au micro-ondes ou dans l'eau bouillante pendant 2 minutes selon les instructions.",
+        "Répartissez le sarrasin chaud dans 4 bols.",
+        "Ajoutez des morceaux de chèvre frais directement dessus pour qu'ils s'assouplissent.",
+        "Parsemez de cerneaux de noix grossièrement concassés.",
+        "Arrosez d'huile d'olive et d'un filet de miel. Poivrez et servez aussitôt."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 41",
+      "timePrep": "3 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-042",
+      "name": "Velouté express de Pois Cassés et Crème de Coco",
+      "ingredients": [
+        "2 bocaux de purée de pois cassés",
+        "1 c. à café de cumin",
+        "200 ml de lait de coco",
+        "Sel et poivre",
+        "400 ml de bouillon de légumes"
+      ],
+      "steps": [
+        "Dans une casserole, mélangez la purée de pois cassés avec le bouillon de légumes et le lait de coco.",
+        "Ajoutez le cumin en poudre.",
+        "Portez le tout à ébullition à feu vif pendant 5 minutes en remuant régulièrement avec un fouet pour homogénéiser la texture.",
+        "Ajustez le sel et le poivre, puis servez bien chaud. 5 <PARSED TEXT FOR PAGE: 6 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 42",
+      "timePrep": "2 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-003",
+      "name": "Shakshuka Express aux Œufs et Pois Chiches",
+      "ingredients": [
+        "600 g de coulis de tomate (passata)",
+        "1 c. à café de cumin",
+        "250 g de pois chiches cuits",
+        "1 c. à soupe d'huile d'olive",
+        "4 gros œufs frais",
+        "Sel, poivre et persil",
+        "1 c. à café de paprika doux"
+      ],
+      "steps": [
+        "Dans une grande sauteuse, faites chauffer l'huile avec le paprika et le cumin pendant 30 secondes.",
+        "Versez la passata et les pois chiches rincés. Portez à petits bouillons à feu vif pendant 3 minutes. Salez et poivrez.",
+        "Creusez 4 petits puits dans la sauce et cassez un œuf dans chacun.",
+        "Couvrez et laissez cuire 3 à 4 minutes jusqu'à ce que le blanc soit pris. Parsemez de persil et servez."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 3",
+      "timePrep": "3 min",
+      "timeCook": "7 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-004",
+      "name": "Poêlée de Tofu Fumé Express aux Champignons et Persillade",
+      "ingredients": [
+        "400 g de tofu fumé",
+        "1/2 bouquet de persil plat",
+        "500 g de champignons de Paris émincés",
+        "2 c. à soupe d'huile d'olive",
+        "2 gousses d'ail",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Coupez le tofu en petits dés. Hachez l'ail et ciselez le persil.",
+        "Faites chauffer l'huile dans une poêle à feu vif. Faites sauter le tofu pendant 2 minutes.",
+        "Ajoutez les champignons et faites cuire 3 à 4 minutes à feu vif jusqu'à évaporation de l'eau.",
+        "Réduisez le feu, intégrez l'ail et le persil. Mélangez 1 minute, poivrez et servez. 6 <PARSED TEXT FOR PAGE: 7 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 4",
+      "timePrep": "4 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-005",
+      "name": "Curry Express de Haricots Blancs au Lait de Coco",
+      "ingredients": [
+        "800 g de haricots blancs cuits",
+        "1 poignée d'épinards frais",
+        "400 ml de lait de coco en conserve",
+        "1 c. à soupe d'huile de tournesol",
+        "1.5 c. à soupe de curry en poudre",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Rincez et égouttez les haricots blancs.",
+        "Dans une sauteuse, faites chauffer l'huile avec le curry pendant 30 secondes.",
+        "Versez le lait de coco et les haricots. Portez à ébullition et laissez mijoter 4 minutes à feu vif.",
+        "Ajoutez les épinards à la dernière minute. Mélangez 1 minute pour les faire fondre, puis servez."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 5",
+      "timePrep": "3 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-013",
+      "name": "Wok Express de Nouilles Instantanées aux Pousses d'Épinards",
+      "ingredients": [
+        "4 blocs de nouilles instantanées",
+        "1 c. à soupe d'huile de sésame",
+        "200 g de pousses d'épinards frais",
+        "1 gousse d'ail hachée",
+        "3 c. à soupe de sauce soja",
+        "1 c. à soupe de graines de sésame"
+      ],
+      "steps": [
+        "Plongez les nouilles dans de l'eau bouillante pendant 3 minutes, puis égouttez-les.",
+        "Faites chauffer l'huile de sésame dans un wok. Faites revenir l'ail pendant 30 secondes.",
+        "Jetez les épinards et laissez-les réduire 1 à 2 minutes en remuant.",
+        "Ajoutez les nouilles et la sauce soja, puis faites sauter le tout à feu vif pendant 2 minutes. Parsemez de sésame."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 13",
+      "timePrep": "3 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-014",
+      "name": "Poêlée Express de Tofu Fumé, Crème et Haricots Verts",
+      "ingredients": [
+        "300 g de tofu fumé",
+        "1 c. à soupe de moutarde fine",
+        "400 g de haricots verts en boîte",
+        "15 g de beurre",
+        "20 cl de crème fraîche liquide",
+        "Poivre"
+      ],
+      "steps": [
+        "Coupez le tofu en dés. Égouttez les haricots verts.",
+        "Faites fondre le beurre dans une poêle et faites-y sauter le tofu pendant 3 minutes.",
+        "Ajoutez les haricots verts et prolongez la cuisson de 2 minutes.",
+        "Mélangez la crème et la moutarde, puis versez le tout dans la poêle.",
+        "Laissez frémir 1 à 2 minutes, poivrez et servez. 7 <PARSED TEXT FOR PAGE: 8 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 14",
+      "timePrep": "3 min",
+      "timeCook": "7 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-015",
+      "name": "Curry Express de Pois Chiches à la Tomate en 8 Minutes",
+      "ingredients": [
+        "500 g de pois chiches cuits",
+        "1 c. à soupe d'huile d'olive",
+        "400 g de pulpe de tomates",
+        "Sel et poivre",
+        "1.5 c. à soupe de curry en poudre"
+      ],
+      "steps": [
+        "Rincez et égouttez les pois chiches.",
+        "Faites chauffer l'huile avec le curry pendant 30 secondes dans une sauteuse.",
+        "Ajoutez les pois chiches et mélangez bien pendant 1 minute.",
+        "Versez la pulpe de tomates, salez, poivrez et laissez bouillonner à feu vif 3 à 4 minutes sans couvercle."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 15",
+      "timePrep": "3 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-023",
+      "name": "Ragoût Flash de Pois Chiches à la Tomate et Épinards",
+      "ingredients": [
+        "500 g de pois chiches cuits",
+        "1 c. à café d'ail en poudre",
+        "400 g de coulis de tomate (passata)",
+        "1 c. à soupe d'huile d'olive",
+        "150 g de pousses d'épinards",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Rincez les pois chiches. Dans une sauteuse, chauffez l'huile avec l'ail en poudre 30 secondes.",
+        "Ajoutez le coulis de tomate et les pois chiches. Laissez réduire à feu vif pendant 4 minutes.",
+        "Incorporez les épinards frais directement dans la sauce chaude.",
+        "Mélangez 1 à 2 minutes jusqu'à ce que les épinards fondent, puis servez. 8 <PARSED TEXT FOR PAGE: 9 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 23",
+      "timePrep": "3 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-024",
+      "name": "Omelette d'Hiver Express au Comté et Poivre Noir",
+      "ingredients": [
+        "8 œufs frais",
+        "20 g de beurre",
+        "80 g de Comté râpé",
+        "Sel et poivre noir",
+        "2 c. à soupe de crème liquide"
+      ],
+      "steps": [
+        "Battez les œufs avec la crème liquide et le sel pendant 1 minute.",
+        "Intégrez la moitié du Comté râpé dans le mélange.",
+        "Faites fondre le beurre dans une poêle à feu vif. Versez les œufs.",
+        "Laissez cuire 3 minutes en ramenant les bords vers le centre.",
+        "Saupoudrez le reste de Comté, repliez l'omelette en deux et poivrez généreusement avant de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 24",
+      "timePrep": "3 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-025",
+      "name": "Poêlée Express de Tofu Fumé aux Épices Tex-Mex",
+      "ingredients": [
+        "400 g de tofu fumé",
+        "2 c. à soupe d'huile de tournesol",
+        "150 g de maïs en conserve",
+        "Sel et poivre",
+        "1 c. à café d'épices Tex-Mex"
+      ],
+      "steps": [
+        "Coupez le tofu fumé en dés. Égouttez le maïs.",
+        "Faites chauffer l'huile dans une poêle à feu vif et faites y sauter le tofu 3 minutes.",
+        "Ajoutez le maïs et saupoudrez les épices Tex-Mex.",
+        "Mélangez bien et poursuivez la cuisson pendant 2 à 3 minutes à feu moyen."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 25",
+      "timePrep": "3 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-033",
+      "name": "Curry Express de Pois Chiches au Lait de Coco et Curry Rouge",
+      "ingredients": [
+        "500 g de pois chiches cuits",
+        "1 poignée d'épinards frais",
+        "400 ml de lait de coco en conserve",
+        "1 c. à soupe d'huile",
+        "1 c. à soupe de pâte de curry rouge",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Rincez et égouttez les pois chiches."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 33",
+      "timePrep": "3 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-034",
+      "name": "Poêlée Flash de Gnocchis au Tofu Fumé et Crème de Parmesan",
+      "ingredients": [
+        "600 g de gnocchis frais (à poêler)",
+        "40 g de parmesan râpé",
+        "200 g de tofu fumé",
+        "15 g de beurre",
+        "15 cl de crème fraîche liquide",
+        "Poivre noir"
+      ],
+      "steps": [
+        "Coupez le tofu fumé en petits dés.",
+        "Faites fondre le beurre dans une poêle à feu vif. Ajoutez les gnocchis et le tofu.",
+        "Faites sauter pendant 5 minutes en remuant très souvent pour dorer le tout.",
+        "Baissez le feu, versez la crème liquide et saupoudrez le parmesan.",
+        "Mélangez 1 minute pour lier la sauce et poivrez avant de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 34",
+      "timePrep": "3 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-035",
+      "name": "Œufs au Plat d'Hiver sur Fondue de Tomates Express",
+      "ingredients": [
+        "8 œufs frais",
+        "1 c. à soupe d'huile d'olive",
+        "500 g de coulis de tomate (passata)",
+        "Sel et poivre",
+        "1 c. à café de paprika doux"
+      ],
+      "steps": [
+        "Dans une grande poêle, faites chauffer l'huile avec le paprika pendant 30 secondes.",
+        "Ajoutez le coulis de tomate, salez, poivrez et laissez frémir à feu vif pendant 2 minutes.",
+        "Baissez à feu moyen et cassez les œufs délicatement en les espaçant.",
+        "Couvrez la poêle et laissez cuire 3 à 4 minutes jusqu'à ce que le blanc soit figé."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 35",
+      "timePrep": "2 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-043",
+      "name": "Poêlée de Tofu et Poireaux Express au Sésame",
+      "ingredients": [
+        "400 g de tofu ferme",
+        "1 c. à soupe d'huile de sésame",
+        "2 poireaux émincés très finement",
+        "1 c. à soupe de graines de sésame",
+        "2 c. à soupe de sauce soja"
+      ],
+      "steps": [
+        "Coupez le tofu en petits dés.",
+        "Faites chauffer l'huile de sésame dans une poêle à feu vif. Ajoutez l'émincé de poireaux et faites sauter pendant 3 minutes.",
+        "Ajoutez les dés de tofu et poursuivez la cuisson pendant 2 minutes.",
+        "Versez la sauce soja, remuez bien pendant 1 minute, puis parsemez de graines de sésame avant de couper le feu. 10 <PARSED TEXT FOR PAGE: 11 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 43",
+      "timePrep": "4 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-044",
+      "name": "Chili Express de Haricots Rouges au Maïs",
+      "ingredients": [
+        "500 g de haricots rouges cuits",
+        "1 c. à café d'épices chili",
+        "150 g de maïs en conserve",
+        "1 c. à soupe d'huile d'olive",
+        "400 g de pulpe de tomates",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Dans une sauteuse, faites chauffer l'huile d'olive avec les épices chili pendant 30 secondes.",
+        "Ajoutez les haricots rouges et le maïs préalablement rincés et égouttés.",
+        "Versez la pulpe de tomates, salez et poivrez.",
+        "Laissez mijoter à feu vif sans couvercle pendant 5 minutes pour concentrer la sauce, puis servez bien chaud."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 44",
+      "timePrep": "3 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-006",
+      "name": "Gnocchis Poêlés Flash au Parmesan et Beurre de Sauge",
+      "ingredients": [
+        "600 g de gnocchis de pommes de terre",
+        "10 feuilles de sauge fraîche frais • 50 g de parmesan râpé",
+        "40 g de beurre",
+        "Poivre noir"
+      ],
+      "steps": [
+        "Faites fondre le beurre à feu moyen dans une poêle.",
+        "Ajoutez les feuilles de sauge et laissez-les crépiter 1 minute pour aromatiser le beurre.",
+        "Versez les gnocchis frais directement. Montez à feu vif et faites sauter 5 minutes en remuant régulièrement.",
+        "Coupez le feu, saupoudrez de parmesan, poivrez et servez chaud. 11 <PARSED TEXT FOR PAGE: 12 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 6",
+      "timePrep": "2 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-007",
+      "name": "Tortellinis Frais à la Crème de Gorgonzola Rapide",
+      "ingredients": [
+        "500 g de tortellinis frais",
+        "15 cl de crème fraîche liquide",
+        "120 g de Gorgonzola crémeux",
+        "Poivre noir"
+      ],
+      "steps": [
+        "Faites cuire les tortellinis dans de l'eau bouillante salée pendant 3 minutes (ou selon le paquet).",
+        "Pendant ce temps, chauffez la crème liquide et le Gorgonzola en dés à feu doux dans une petite casserole pendant 3 minutes. Poivrez.",
+        "Égouttez les tortellinis.",
+        "Mélangez délicatement les pâtes avec la crème de Gorgonzola pendant 30 secondes et servez aussitôt."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 7",
+      "timePrep": "2 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-016",
+      "name": "Gnocchis Flash à la Tomate et Tomme de Montagne",
+      "ingredients": [
+        "600 g de gnocchis frais (à poêler)",
+        "20 g de beurre",
+        "300 g de coulis de tomate (passata)",
+        "Sel et poivre",
+        "100 g de Tomme de montagne râpée"
+      ],
+      "steps": [
+        "Faites fondre le beurre dans une poêle à feu vif. Ajoutez les gnocchis et dorez-les 4 à 5 minutes.",
+        "Baissez le feu, versez le coulis de tomate, salez et poivrez. Laissez mijoter 1 minute.",
+        "Parsemez la Tomme de montagne sur toute la surface.",
+        "Couvrez la poêle pendant 1 minute pour laisser le fromage fondre totalement, puis servez. 12 <PARSED TEXT FOR PAGE: 13 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 16",
+      "timePrep": "2 min",
+      "timeCook": "7 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-017",
+      "name": "Pâtes Express au Pesto de Noix d'Hiver",
+      "ingredients": [
+        "400 g de pâtes fraîches",
+        "1 gousse d'ail pelée",
+        "60 g de cerneaux de noix",
+        "6 cl d'huile d'olive",
+        "40 g de parmesan râpé",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Portez de l'eau salée à ébullition.",
+        "Préparez le pesto : mixez les noix, le parmesan, l'ail et l'huile d'olive par impulsions. Salez et poivrez.",
+        "Faites cuire les pâtes fraîches pendant 3 minutes dans l'eau bouillante.",
+        "Mélangez le pesto avec 2 cuillères à soupe d'eau de cuisson des pâtes.",
+        "Égouttez les pâtes, incorporez le pesto et servez."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 17",
+      "timePrep": "5 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-026",
+      "name": "Gnocchis Poêlés Flash au Fromage Frais et Herbes",
+      "ingredients": [
+        "600 g de gnocchis de pommes de terre",
+        "5 cl de lait demi-écrémé frais • 20 g de beurre",
+        "150 g de fromage à tartiner aux herbes",
+        "Poivre du moulin"
+      ],
+      "steps": [
+        "Faites fondre le beurre dans une grande poêle à feu vif.",
+        "Ajoutez les gnocchis et faites dorer pendant 4 à 5 minutes en remuant fréquemment.",
+        "Baissez au minimum, ajoutez le fromage à tartiner et le lait.",
+        "Mélangez pendant 1 minute pour enrober les gnocchis d'une sauce crémeuse, poivrez et servez. 13 <PARSED TEXT FOR PAGE: 14 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 26",
+      "timePrep": "2 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-027",
+      "name": "Pâtes Fraîches Express à la Crème de Parmesan",
+      "ingredients": [
+        "500 g de pâtes fraîches",
+        "1 pincée de noix de muscade",
+        "20 cl de crème fraîche liquide",
+        "Sel et poivre noir",
+        "60 g de parmesan râpé"
+      ],
+      "steps": [
+        "Faites cuire les pâtes fraîches pendant 3 minutes dans de l'eau salée bouillante.",
+        "Pendant ce temps, chauffez la crème avec la muscade, le sel et le poivre dans une petite casserole. Ajoutez le parmesan hors du feu.",
+        "Égouttez les pâtes."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 27",
+      "timePrep": "3 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-036",
+      "name": "Tagliatelles Flash au Fromage Frais à l'Ail et Fines Herbes",
+      "ingredients": [
+        "500 g de tagliatelles fraîches",
+        "5 cl de lait",
+        "150 g de fromage à tartiner ail et herbes",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Faites cuire les tagliatelles fraîches pendant 3 minutes dans de l'eau bouillante salée.",
+        "Pendant ce temps, mélangez le fromage à tartiner et le lait à feu doux dans une petite casserole pour lisser la sauce. Poivrez.",
+        "Égouttez les pâtes en gardant une cuillère à soupe d'eau de cuisson.",
+        "Mélangez les pâtes, la sauce fromagère et l'eau de cuisson pendant 30 secondes, puis servez. 14 <PARSED TEXT FOR PAGE: 15 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 36",
+      "timePrep": "3 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-037",
+      "name": "Penne Express au Pesto de Tomates Séchées et Feta",
+      "ingredients": [
+        "400 g de pâtes Penne (cuisson rapide)",
+        "1 c. à soupe d'huile d'olive",
+        "4 c. à soupe de pesto rosso",
+        "Poivre",
+        "100 g de feta"
+      ],
+      "steps": [
+        "Faites cuire les Penne dans de l'eau bouillante salée (choisissez des pâtes à cuisson 5-6 min).",
+        "Pendant ce temps, émiettez la feta dans un bol.",
+        "Égouttez les pâtes et remettez-les dans la casserole chaude.",
+        "Ajoutez le pesto rosso et l'huile d'olive, mélangez à feu doux pendant 30 secondes.",
+        "Servez immédiatement parsemé de feta et de poivre."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 37",
+      "timePrep": "3 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-045",
+      "name": "Nouilles Express à la Crème de Cacahuète",
+      "ingredients": [
+        "400 g de nouilles fraîches (cuisson rapide)",
+        "1 c. à soupe de sirop d'érable",
+        "3 c. à soupe de beurre de cacahuète",
+        "5 cl d'eau chaude des pâtes",
+        "2 c. à soupe de sauce soja"
+      ],
+      "steps": [
+        "Faites cuire les nouilles selon les instructions du paquet (généralement 3 minutes).",
+        "Dans un bol, délayez le beurre de cacahuète avec la sauce soja, le sirop d'érable et l'eau chaude des pâtes pour obtenir une sauce nappante.",
+        "Égouttez les nouilles.",
+        "Mélangez immédiatement les nouilles chaudes avec la sauce à la cacahuète et servez de suite. 15 <PARSED TEXT FOR PAGE: 16 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 45",
+      "timePrep": "3 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-046",
+      "name": "Gnocchis Poêlés Express à la Crème de Tomates Séchées",
+      "ingredients": [
+        "600 g de gnocchis frais (à poêler)",
+        "20 g de beurre",
+        "3 c. à soupe de pesto de tomates séchées",
+        "Poivre noir",
+        "10 cl de crème liquide"
+      ],
+      "steps": [
+        "Faites fondre le beurre dans une poêle à feu vif. Ajoutez les gnocchis et faites les dorer 4 minutes.",
+        "Baissez le feu, versez la crème liquide et le pesto de tomates séchées directement dans la poêle.",
+        "Mélangez bien le tout à feu doux pendant 1 à 2 minutes pour enrober les gnocchis, poivrez et servez."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 46",
+      "timePrep": "2 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-008",
+      "name": "Tartines d'Hiver Avocat, Chèvre et Miel (Grilled Cheese)",
+      "ingredients": [
+        "4 grandes tranches de pain",
+        "2 c. à soupe de miel",
+        "150 g de chèvre en bûche",
+        "20 g de beurre",
+        "2 avocats mûrs",
+        "Poivre"
+      ],
+      "steps": [
+        "Écrasez la chair des avocats à la fourchette directement sur les tranches de pain. Poivrez.",
+        "Coupez le chèvre en tranches et disposez-les sur l'avocat. Arrosez d'un filet de miel.",
+        "Faites fondre le beurre dans une grande poêle à feu moyen et déposez-y les tartines.",
+        "Couvrez la poêle et laissez cuire 4 minutes jusqu'à ce que le pain soit croustillant et le fromage fondant. 16 <PARSED TEXT FOR PAGE: 17 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 8",
+      "timePrep": "4 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-009",
+      "name": "Quesadillas Express aux Haricots Rouges et Cheddar Fondant",
+      "ingredients": [
+        "4 tortillas de blé (wraps)",
+        "1 c. à café d'épices mexicaines",
+        "250 g de haricots rouges cuits",
+        "Huile de tournesol",
+        "150 g de cheddar râpé"
+      ],
+      "steps": [
+        "Écrasez grossièrement les haricots rouges à la fourchette avec les épices mexicaines.",
+        "Étalez cette préparation sur une moitié de chaque tortilla, puis saupoudrez de cheddar râpé.",
+        "Pliez les tortillas en deux pour former des demi-lunes.",
+        "Faites-les dorer dans une poêle légèrement huilée à feu moyen pendant 2 à 3 minutes de chaque côté en pressant avec une spatule."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 9",
+      "timePrep": "4 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-010",
+      "name": "Croque-Monsieur d’Hiver au Brie et Pommes Vertes",
+      "ingredients": [
+        "8 tranches de pain de mie",
+        "20 g de beurre mou",
+        "150 g de fromage de Brie",
+        "Poivre",
+        "1 pomme verte (Granny Smith)"
+      ],
+      "steps": [
+        "Lavez la pomme et coupez-la en lamelles très fines. Coupez le Brie en tranches.",
+        "Tartinez de beurre une seule face des 8 tranches de pain de mie.",
+        "Sur la face non beurrée de 4 tranches, déposez les pommes et le Brie. Poivrez.",
+        "Refermez les croques avec le côté beurré vers l'extérieur. Faites dorer à la poêle 2 minutes de chaque côté."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 10",
+      "timePrep": "5 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-018",
+      "name": "Quesadillas Express au Pesto et Fromage Coulant",
+      "ingredients": [
+        "4 tortillas de blé",
+        "150 g de mozzarella râpée",
+        "4 c. à soupe de pesto",
+        "Huile de tournesol"
+      ],
+      "steps": [
+        "Étalez une cuillère à soupe de pesto sur la moitié de chaque tortilla de blé.",
+        "Saupoudrez généreusement la mozzarella par-dessus le pesto."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 18",
+      "timePrep": "3 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-019",
+      "name": "Tartines d'Hiver au Chèvre, Pommes et Miel",
+      "ingredients": [
+        "4 tranches de pain de campagne",
+        "2 c. à soupe de miel",
+        "150 g de chèvre en bûche",
+        "15 g de beurre",
+        "1 pomme (Golden)",
+        "Poivre"
+      ],
+      "steps": [
+        "Coupez la pomme en lamelles très fines et le chèvre en tranches.",
+        "Disposez les pommes puis le chèvre sur les tranches de pain. Arrosez de miel et poivrez.",
+        "Faites fondre le beurre à feu moyen dans une poêle, déposez les tartines et couvrez.",
+        "Laissez cuire 4 minutes jusqu'à ce que le fromage coule et servez chaud."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 19",
+      "timePrep": "5 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-020",
+      "name": "Panini Express au Cantal et Beurre d'Ail à la Poêle",
+      "ingredients": [
+        "4 petits pains à panini",
+        "0.5 c. à café d'ail en poudre",
+        "150 g de Cantal en tranches",
+        "Poivre",
+        "20 g de beurre mou"
+      ],
+      "steps": [
+        "Mélangez le beurre mou avec l'ail en poudre.",
+        "Ouvrez les pains et tartinez l'intérieur d'une fine couche de beurre d'ail."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 20",
+      "timePrep": "4 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-028",
+      "name": "Quesadillas Express au Cheddar et Maïs",
+      "ingredients": [
+        "4 tortillas de blé",
+        "150 g de maïs en conserve",
+        "150 g de cheddar râpé",
+        "Huile de tournesol"
+      ],
+      "steps": [
+        "Égouttez le maïs.",
+        "Sur la moitié de chaque tortilla, déposez une couche de cheddar, puis du maïs et un peu de cheddar à nouveau.",
+        "Pliez en deux pour former des demi-lunes.",
+        "Faites chauffer les quesadillas dans une poêle légèrement huilée 2 à 3 minutes de chaque côté en appuyant avec une spatule jusqu'à ce que le fromage fonde. 18 <PARSED TEXT FOR PAGE: 19 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 28",
+      "timePrep": "4 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-029",
+      "name": "Tartines d'Hiver au Fromage de Brie et Canneberges Séchées",
+      "ingredients": [
+        "4 tranches de pain de campagne",
+        "15 g de beurre",
+        "150 g de fromage de Brie",
+        "Poivre",
+        "30 g de canneberges séchées"
+      ],
+      "steps": [
+        "Coupez le Brie en tranches d'un centimètre.",
+        "Répartissez le Brie sur les pains, parsemez de canneberges et poivrez.",
+        "Faites fondre le beurre à feu moyen dans une grande poêle. Déposez les tartines.",
+        "Couvrez immédiatement et laissez cuire 4 minutes jusqu'à ce que le Brie devienne coulant."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 29",
+      "timePrep": "4 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-030",
+      "name": "Croque-Monsieur Végétarien Express à la Mozzarella et Pesto",
+      "ingredients": [
+        "8 tranches de pain de mie",
+        "20 g de beurre mou",
+        "250 g de mozzarella en boules",
+        "Poivre",
+        "4 c. à soupe de pesto de basilic"
+      ],
+      "steps": [
+        "Coupez la mozzarella en tranches et épongez-les légèrement.",
+        "Tartinez de pesto une face de 4 tranches de pain. Ajoutez la mozzarella et poivrez.",
+        "Refermez les croques, puis beurrez les faces extérieures avec le beurre mou.",
+        "Faites cuire dans une poêle à sec à feu moyen pendant 2 minutes de chaque côté en pressant avec une spatule."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 30",
+      "timePrep": "4 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-038",
+      "name": "Quesadillas Croustillantes au Pesto Rouge et Mozzarella",
+      "ingredients": [
+        "4 tortillas de blé",
+        "250 g de mozzarella en boules",
+        "4 c. à soupe de pesto rouge",
+        "Huile de tournesol"
+      ],
+      "steps": [
+        "Coupez la mozzarella en fines tranches.",
+        "Étalez une cuillère de pesto rouge sur une moitié de chaque tortilla.",
+        "Disposez la mozzarella par-dessus.",
+        "Pliez les tortillas en deux. Faites dorer dans une poêle huilée 2 à 3 minutes de chaque côté en pressant fermement. 19 <PARSED TEXT FOR PAGE: 20 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 38",
+      "timePrep": "3 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-039",
+      "name": "Tartines d'Hiver Chou-Fleur Râpé, Crème et Comté",
+      "ingredients": [
+        "4 tranches de pain de campagne",
+        "80 g de Comté râpé",
+        "1/4 de chou-fleur frais",
+        "15 g de beurre, sel et poivre",
+        "4 c. à soupe de crème fraîche épaisse"
+      ],
+      "steps": [
+        "Râpez à cru les bouquets de chou-fleur pour obtenir une texture de semoule fine.",
+        "Mélangez cette semoule de chou-fleur avec la crème fraîche, du sel et du poivre.",
+        "Étalez le mélange sur les tranches de pain et saupoudrez de Comté râpé.",
+        "Faites fondre le beurre dans une poêle à feu moyen, déposez les tartines et couvrez pendant 4 minutes jusqu'à ce que le fromage soit fondu."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 39",
+      "timePrep": "5 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-040",
+      "name": "Croque-Monsieur express au Fromage à Raclette et Oignons Rouges",
+      "ingredients": [
+        "8 tranches de pain de mie",
+        "20 g de beurre mou",
+        "8 tranches de fromage à raclette",
+        "Poivre",
+        "1 petit oignon rouge"
+      ],
+      "steps": [
+        "Émincez l'oignon rouge en rondelles ultra-fines.",
+        "Déposez 2 tranches de fromage à raclette et quelques rondelles d'oignon sur 4 tranches de pain de mie. Poivrez.",
+        "Refermez les croques, étalez le beurre mou sur l'extérieur du pain.",
+        "Faites dorer à la poêle à feu moyen 2 à 3 minutes de chaque côté en pressant avec une spatule. 20 <PARSED TEXT FOR PAGE: 21 / 22>"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 40",
+      "timePrep": "4 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-047",
+      "name": "Tartines Express de Chèvre au Thon Végétal",
+      "ingredients": [
+        "4 grandes tranches de pain",
+        "1 c. à soupe d'huile d'olive",
+        "1 bocal de substitut de thon végétal",
+        "Poivre noir",
+        "150 g de fromage de chèvre frais"
+      ],
+      "steps": [
+        "Tartinez généreusement le chèvre frais sur les 4 tranches de pain de campagne.",
+        "Émiettez le thon végétal par-dessus de manière uniforme.",
+        "Donnez un bon tour de moulin à poivre et arrosez d'un mince filet d'huile d'olive.",
+        "Passez les tartines à la poêle à couvert pendant 3 minutes pour les tiédir avant de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 47",
+      "timePrep": "4 min",
+      "timeCook": "3 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-048",
+      "name": "Wraps express Houmous et Épinards",
+      "ingredients": [
+        "4 grandes tortillas de blé",
+        "100 g de pousses d'épinards frais",
+        "1 pot de houmous nature",
+        "100 g de feta émiettée"
+      ],
+      "steps": [
+        "Étalez deux cuillères à soupe de houmous sur toute la surface de chaque tortilla.",
+        "Répartissez les pousses d'épinards préalablement lavées.",
+        "Parsemez de feta émiettée sur le dessus.",
+        "Roulez les wraps serrés, coupez-les en deux et servez de suite."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 48",
+      "timePrep": "5 min",
+      "timeCook": "Aucune",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-049",
+      "name": "Tartines de Ricotta d'Hiver aux Figues Sèches et Miel",
+      "ingredients": [
+        "4 grandes tranches de pain grillé",
+        "2 c. à soupe de miel liquide",
+        "250 g de Ricotta",
+        "Poivre du moulin",
+        "6 figues sèches moelleuses"
+      ],
+      "steps": [
+        "Faites griller les tranches de pain.",
+        "Étalez une généreuse couche de ricotta fraîche sur chaque tranche.",
+        "Coupez les figues sèches en fines lamelles et disposez-les sur la ricotta."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 49",
+      "timePrep": "5 min",
+      "timeCook": "Aucune",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
+    },
+    {
+      "id": "veg-express-pdf-050",
+      "name": "Tartines de Raclette Express au Tofu Fumé",
+      "ingredients": [
+        "4 grandes tranches de pain",
+        "100 g de tofu fumé en lamelles",
+        "4 tranches de fromage à raclette",
+        "15 g de beurre"
+      ],
+      "steps": [
+        "Disposez les lamelles de tofu fumé sur les tranches de pain."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes Express — recette 50",
+      "timePrep": "3 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "express"
     }
   ],
   "plan": [
