@@ -58615,6 +58615,1528 @@
       "servings": "4 personnes",
       "regime": "vegetarien",
       "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-pe-001",
+      "name": "Salade de lentilles vertes aux fraises et feta",
+      "ingredients": [
+        "300 g de lentilles vertes (crues)",
+        "300 g de fraises fraîches",
+        "160 g de fromage feta",
+        "2 poignées de épinards frais",
+        "4 c. à soupe d'huile d'olive",
+        "2 c. à soupe de vinaigre balsamique",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Rince les lentilles et fais-les cuire dans 3 fois leur volume d'eau bouillante pendant 20 à 25 minutes. Égoutte-les et laisse-les refroidir.",
+        "Lave les fraises, équeute-les et coupe-les en quatre.",
+        "Dans un grand saladier, prépare la vinaigrette en émulsionnant l'huile d'olive, le vinaigre balsamique, le sel et le poivre.",
+        "Ajoute les lentilles refroidies, les pousses d'épinards et les morceaux de fraises. Mélange délicatement.",
+        "Émiette la feta sur le dessus juste avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Une association surprenante, fraîche et croquante."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 1",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-002",
+      "name": "Risotto printanier aux asperges vertes et petits pois",
+      "ingredients": [
+        "300 g de riz Arborio (spécial risotto)",
+        "2 bottes d'asperges vertes",
+        "200 g de petits pois frais (ou surgelés)",
+        "2 échalotes",
+        "100 ml de vin blanc sec",
+        "1000 ml de bouillon de légumes chaud",
+        "60 g de parmesan râpé",
+        "2 c. à soupe d'huile d'olive",
+        "2 noixs de beurre"
+      ],
+      "steps": [
+        "Lave les asperges, coupe les extrémités dures et taille les tiges en rondelles en gardant les pointes entières. Fais-les blanchir 3 minutes dans l'eau bouillante avec les petits pois, puis plonge-les dans l'eau glacée. Égoutte.",
+        "Fais revenir l'échalote émincée dans une casserole avec l'huile d'olive. Ajoute le riz et remue jusqu'à ce qu'il devienne translucide.",
+        "Verse le vin blanc et laisse-le s'évaporer complètement.",
+        "Ajoute le bouillon de légumes louche après louche, en attendant que le liquide soit absorbé avant d'en remettre, tout en remuant régulièrement (environ 18 minutes).",
+        "À la dernière louche, intègre les asperges et les petits pois.",
+        "Hors du feu, ajoute le beurre et le parmesan. Couvre 2 minutes avant de servir bien crémeux."
+      ],
+      "robot": [],
+      "notes": [
+        "Un grand classique crémeux et parfumé."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 2",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-003",
+      "name": "Gaspacho de tomates et poivrons jaunes au basilic",
+      "ingredients": [
+        "8 tomates bien mûres",
+        "2 poivrons jaune",
+        "1 concombre",
+        "2 petite gousse d'ail",
+        "4 c. à soupe d'huile d'olive",
+        "2 c. à soupe de vinaigre de xérès",
+        "12 basilic frais",
+        "sel",
+        "piment d'Espelette"
+      ],
+      "steps": [
+        "Lave tous les légumes. Épépine le poivron et coupe-le en morceaux. Pèle le concombre et coupe-le grossièrement. Coupe les tomates en quartiers.",
+        "Place tous les légumes dans le bol d'un mixeur avec la gousse d'ail dégermée.",
+        "Ajoute l'huile d'olive, le vinaigre de xérès et les feuilles de basilic.",
+        "Mixe à pleine puissance jusqu'à obtenir une texture parfaitement lisse. Si le gaspacho est trop épais, ajoute un petit filet d'eau glacée.",
+        "Assaisonne avec le sel et une pincée de piment d'Espelette.",
+        "Réserve au réfrigérateur au moins 2 heures avant de servir très frais."
+      ],
+      "robot": [],
+      "notes": [
+        "La soupe froide incontournable de l'été.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 3",
+      "timePrep": "15 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-004",
+      "name": "Tarte fine aux courgettes, chèvre frais et menthe",
+      "ingredients": [
+        "2 pâte feuilletée",
+        "4 courgettes bien fermes",
+        "300 g de fromage de chèvre frais",
+        "2 c. à soupe de miel toutes fleurs",
+        "Quelques menthe fraîche",
+        "2 c. à soupe d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffe le four à 200°C. Déroule la pâte feuilletée sur une plaque de cuisson recouverte de papier sulfurisé. Pique le fond avec une fourchette.",
+        "Dans un bol, écrase le chèvre frais à la fourchette avec la moitié de la menthe ciselée, un filet d'huile d'olive, du sel et du poivre. Étale cette préparation sur la pâte en laissant un bord de 1 cm.",
+        "Lave les courgettes et coupe-les en très fines rondelles (à la mandoline si possible).",
+        "Dispose les rondelles de courgettes sur le fromage en les faisant se chevaucher.",
+        "Arrose d'un filet d'huile d'olive et enfourne pour 20 à 25 minutes, jusqu'à ce que les bords soient dorés.",
+        "À la sortie du four, verse un filet de miel et parsème du reste de menthe fraîche ciselée."
+      ],
+      "robot": [],
+      "notes": [
+        "Légère, croustillante et parfumée."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 4",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-005",
+      "name": "Wraps de crudités, houmous et avocat",
+      "ingredients": [
+        "8 galettes de blé ou de maïs (tortillas)",
+        "300 g de houmous (nature ou au cumin)",
+        "2 avocats mûr",
+        "2 carottes",
+        "1 poivron rouge",
+        "100 g de feta émiettée",
+        "2 poignées de jeunes pousses de salade",
+        "Jus de 1 citron"
+      ],
+      "steps": [
+        "Pèle la carotte et râpe-la grossièrement. Lave le poivron rouge et coupe-le en fines lamelles.",
+        "Coupe l'avocat en deux, retire le noyau, prélève la chair et coupe-la en tranches. Arrose-les immédiatement de jus de citron pour éviter qu'elles ne noircissent.",
+        "Étale une bonne couche de houmous sur chaque tortilla.",
+        "Répartis au centre la salade, la carotte râpée, les lamelles de poivron, l'avocat et la feta émiettée.",
+        "Rabats les bords inférieurs puis roule fermement les wraps sur eux-mêmes. Coupe-les en deux en biais avant de déguster."
+      ],
+      "robot": [],
+      "notes": [
+        "Le déjeuner nomade parfait pour les pique-niques."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 5",
+      "timePrep": "15 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-006",
+      "name": "Courgettes farcies au quinoa, tomates séchées et pignons",
+      "ingredients": [
+        "4 courgettes rondes",
+        "160 g de quinoa",
+        "12 morceaux de tomates séchées à l'huile",
+        "40 g de pignons de pin",
+        "100 g de fromage de brebis (type feta)",
+        "2 gousses d'ail",
+        "Huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffe le four à 180°C. Rince le quinoa et fais-le cuire dans de l'eau bouillante salée selon les instructions du paquet. Égoutte.",
+        "Lave les courgettes rondes. Coupe le chapeau et évide délicatement l'intérieur. Hache grossièrement la chair récupérée.",
+        "Fais dorer les pignons à sec dans une poêle pendant 2 minutes. Réserve.",
+        "Dans la même poêle, fais revenir l'ail émincé et la chair de courgette avec un filet d'huile d'olive pendant 5 minutes.",
+        "Dans un saladier, mélange le quinoa, la chair de courgette cuite, les tomates séchées en dés, les pignons et le fromage en morceaux. Assaisonne.",
+        "Remplis les courgettes évidées avec cette farce, remets les chapeaux et dépose-les dans un plat allant au four avec un fond d'eau. Enfourne pour 35 minutes."
+      ],
+      "robot": [],
+      "notes": [
+        "Un plat chaud-froid léger et rassasiant."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 6",
+      "timePrep": "20 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-007",
+      "name": "Salade de pastèque, feta et menthe fraîche",
+      "ingredients": [
+        "800 g de chair de pastèque (sans pépins)",
+        "200 g de feta",
+        "1 oignon rouge",
+        "20 menthe fraîche",
+        "4 c. à soupe d'huile d'olive",
+        "2 c. à soupe de jus de citron frais",
+        "Fleur de sel et poivre noir"
+      ],
+      "steps": [
+        "Coupe la chair de la pastèque en cubes réguliers d'environ 2 cm.",
+        "Coupe la feta en cubes de taille similaire ou émiette-la grossièrement.",
+        "Émince l'oignon rouge en très fines lamelles.",
+        "Dans un grand plat de service, dispose les cubes de pastèque, l'oignon rouge et la feta.",
+        "Cisèle finement les feuilles de menthe et parsème-les sur la salade.",
+        "Arrose le tout avec l'huile d'olive et le jus de citron. Ajoute une pincée de fleur de sel et du poivre. Sers frais."
+      ],
+      "robot": [],
+      "notes": [
+        "L'incontournable rafraîchissement des journées de canicule."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 7",
+      "timePrep": "15 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-008",
+      "name": "Pâtes d'été aux tomates cerises confites et burrata",
+      "ingredients": [
+        "400 g de pâtes (Pennette ou Spaghetti)",
+        "500 g de tomates cerises multicolores",
+        "2 belle boule de Burrata (300 g)",
+        "4 gousses d'ail",
+        "6 c. à soupe d'huile d'olive",
+        "2 c. à café de sucre roux",
+        "Basilic frais",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffe le four à 200°C. Lave les tomates cerises et dépose-les entières dans un plat allant au four avec les gousses d'ail en chemise.",
+        "Arrose avec l'huile d'olive, saupoudre de sucre, de sel et de poivre. Enfourne pour 20 minutes.",
+        "Pendant ce temps, fais cuire les pâtes al dente. Égoutte-les en réservant une louche d'eau de cuisson.",
+        "Mélange les pâtes directement dans le plat avec les tomates confites, le jus rendu et l'ail écrasé (sans la peau). Ajoute un peu d'eau de cuisson si nécessaire.",
+        "Sers dans des assiettes creuses, dépose la moitié de la burrata sur chaque assiette et décore de basilic."
+      ],
+      "robot": [],
+      "notes": [
+        "Simple, réconfortant et ultra gourmand."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 8",
+      "timePrep": "10 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-009",
+      "name": "Brochettes de tofu mariné au citron vert et légumes d'été",
+      "ingredients": [
+        "400 g de tofu ferme",
+        "2 poivrons vert",
+        "1 oignon rouge",
+        "16 tomates cerises",
+        "2 citrons vert (jus et zeste)",
+        "4 c. à soupe de sauce soja",
+        "2 c. à soupe de sirop d'érable",
+        "2 c. à soupe d'huile de sésame",
+        "gingembre"
+      ],
+      "steps": [
+        "Presse le tofu dans un essuie-tout pour retirer l'excès d'eau, puis coupe-le en cubes.",
+        "Mélange tous les ingrédients de la marinade. Ajoute le tofu et laisse mariner au frais pendant 30 minutes.",
+        "Lave le poivron et coupe-le en carrés. Coupe l'oignon rouge en gros morceaux effeuillés.",
+        "Monte les brochettes sur des pics en bois en alternant tofu, poivron, oignon et tomates cerises.",
+        "Fais cuire à la plancha ou à la poêle pendant 10 à 12 minutes en retournant régulièrement."
+      ],
+      "robot": [],
+      "notes": [
+        "Idéal pour vos barbecues ou planchas d'été.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 9",
+      "timePrep": "15 min",
+      "timeCook": "12 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-010",
+      "name": "Tartine de crème d'avocat, radis croquants et œufs pochés",
+      "ingredients": [
+        "4 grandes tranches de pain de campagne au levain",
+        "2 avocats mûr",
+        "8 radiss roses",
+        "4 œufs frais",
+        "2 c. à café de graines de sésame",
+        "Le jus de 1 citron",
+        "Sel",
+        "poivre",
+        "et un filet de vinaigre blanc"
+      ],
+      "steps": [
+        "Écrase la chair de l'avocat à la fourchette avec le jus de citron, du sel et du poivre.",
+        "Lave les radis et coupe-les en très fines rondelles. Fais griller les tranches de pain.",
+        "Fais pocher les œufs dans une eau frémissante vinaigrée pendant 3 minutes, puis sors-les avec une écumoire.",
+        "Étale la crème d'avocat sur les pains grillés chauds.",
+        "Dispose les rondelles de radis, puis dépose un œuf poché sur chaque tartine. Parsme de graines."
+      ],
+      "robot": [],
+      "notes": [
+        "Un brunch ou un dîner rapide plein de fraîcheur."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 10",
+      "timePrep": "15 min",
+      "timeCook": "3 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-011",
+      "name": "Taboulé de quinoa à la menthe, grenade et concombre",
+      "ingredients": [
+        "240 g de quinoa",
+        "1 concombre",
+        "1 grenade (les grains)",
+        "2 gros bouquet de menthe fraîche",
+        "1 bouquet de persil plat",
+        "Le jus de 2 citrons jaune",
+        "6 c. à soupe d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Fais cuire le quinoa pendant 12 minutes. Laisse-le refroidir complètement.",
+        "Lave le concombre et coupe-le en tout petits dés. Égraines la grenade.",
+        "Hache très finement la menthe et le persil plat.",
+        "Dans un saladier, prépare l'assaisonnement avec le jus de citron, l'huile d'olive, le sel et le poivre.",
+        "Mélange le tout et réserve au frais au moins 1 heure avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Une variante ultra-fraîche et croquante du taboulé traditionnel.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 11",
+      "timePrep": "15 min",
+      "timeCook": "12 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-012",
+      "name": "Curry de pois chiches aux épinards et lait de coco",
+      "ingredients": [
+        "500 g de pois chiches cuits",
+        "300 g de épinards frais",
+        "400 ml de lait de coco",
+        "2 boîtes de tomates concassées",
+        "2 oignons jaune",
+        "2 gousses d'ail",
+        "2 c. à soupe de curry en poudre",
+        "2 c. à soupe d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Fais revenir l'oignon et l'ail émincés dans l'huile d'olive pendant 3 minutes.",
+        "Ajoute le curry en poudre et remue pendant 1 minute.",
+        "Verse les tomates concassées et les pois chiches rincés. Laisse mijoter 10 minutes.",
+        "Ajoute le lait de coco et poursuis la cuisson 5 minutes.",
+        "Intègre les pousses d'épinards. Remue 2 minutes jusqu'à ce qu'ils flétrissent et sers avec du riz."
+      ],
+      "robot": [],
+      "notes": [
+        "Un plat chaud mais léger, parfait pour les soirées de printemps."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 12",
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-013",
+      "name": "Salade de melon, mozzarella di bufala et jambon végétal",
+      "ingredients": [
+        "2 melon mûr à point",
+        "2 belle boule de Mozzarella di Bufala (250 g)",
+        "8 tranches de jambon végétal",
+        "2 poignées de roquette",
+        "4 c. à soupe d'huile d'olive",
+        "2 c. à soupe de crème de vinaigre balsamique",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Prélève des billes ou dés de melon. Déchire la mozzarella en morceaux à la main.",
+        "Dans deux assiettes, dépose un lit de roquette.",
+        "Répartis les billes de melon, la mozzarella et dispose les tranches de jambon végétal chiffonnées.",
+        "Arrose d'huile d'olive et de vinaigre balsamique. Termine par le poivre et le sel."
+      ],
+      "robot": [],
+      "notes": [
+        "L'indispensable duo sucré-salé estival revisité."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 13",
+      "timePrep": "15 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-014",
+      "name": "Gnocchis poêlés aux courgettes et pesto de pistaches",
+      "ingredients": [
+        "600 g de gnocchis de pommes de terre frais",
+        "2 courgettes",
+        "100 g de pistaches décortiquées",
+        "2 poignées de basilic frais",
+        "50 g de parmesan râpé",
+        "8 c. à soupe d'huile d'olive",
+        "2 noixs de beurre",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Mixe les pistaches, le basilic, le parmesan et 3 cuillères d'huile d'olive pour faire le pesto.",
+        "Coupe la courgette en fines demi-rondelles et fais-les sauter 5 minutes à la poêle. Réserve- les.",
+        "Dans la même poêle, fais dorer les gnocchis directement dans le beurre fondu pendant 5 à 7 minutes.",
+        "Remets les courgettes, coupe le feu, ajoute le pesto et mélange bien."
+      ],
+      "robot": [],
+      "notes": [
+        "Un plat rapide et follement gourmand."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 14",
+      "timePrep": "15 min",
+      "timeCook": "12 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-015",
+      "name": "Soupe glacée de concombre à l'aneth et yaourt grec",
+      "ingredients": [
+        "2 concombres",
+        "4 yaourts grecs nature",
+        "1 gousse d'ail",
+        "1 bouquet d'aneth fraîche",
+        "Jus de 1 citron jaune",
+        "2 c. à soupe d'huile d'olive",
+        "Sel et poivre noir"
+      ],
+      "steps": [
+        "Pèle le concombre, épépine-le et coupe-le en morceaux.",
+        "Place le concombre dans le blender avec les yaourts grecs, l'ail dégermé, le citron et l'huile d'olive.",
+        "Mixe jusqu'à obtention d'une consistance parfaitement lisse.",
+        "Ajoute l'aneth effeuillée, sale, poivre, puis mixe une dernière seconde.",
+        "Laisse reposer au moins 2 heures au réfrigérateur avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Un shot de fraîcheur absolue pour les midis ensoleillés.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 15",
+      "timePrep": "10 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-016",
+      "name": "Poivrons cornes de bœuf farcis à la ricotta et herbes fraîches",
+      "ingredients": [
+        "4 poivrons longs (type corne de bœuf)",
+        "400 g de fromage ricotta",
+        "60 g de parmesan râpé",
+        "2 œufs",
+        "2 c. à soupe de ciboulette",
+        "2 c. à soupe de persil",
+        "Huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffe le four à 190°C. Lave les poivrons, coupe le chapeau et retire les graines sans les casser.",
+        "Dans un bol, mélange la ricotta, le parmesan, l'œuf, la ciboulette et le persil. Sale et poivre.",
+        "Garnis l'intérieur des poivrons avec cette farce. Repositionne les chapeaux.",
+        "Dispose dans un plat, arrose d'huile d'olive et enfourne pour 30 à 35 minutes."
+      ],
+      "robot": [],
+      "notes": [
+        "Une recette méditerranéenne fondante et parfumée."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 16",
+      "timePrep": "15 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-017",
+      "name": "Salade de pois gourmands, radis et avocat, sauce moutarde",
+      "ingredients": [
+        "300 g de pois gourmands frais",
+        "12 radis roses",
+        "2 avocats mûr",
+        "2 poignées de graines de courge",
+        "2 c. à café de moutarde à l'ancienne",
+        "4 c. à soupe d'huile",
+        "2 c. à soupe de vinaigre de cidre"
+      ],
+      "steps": [
+        "Fais cuire les pois gourmands 3 minutes dans l'eau bouillante. Plonge-les dans l'eau glacée et égoutte.",
+        "Coupe les radis en fines rondelles et l'avocat en dés. Fais griller les graines de courge à sec 2 minutes.",
+        "Prépare la vinaigrette dans un saladier en mélangeant les ingrédients de la sauce.",
+        "Ajoute les pois gourmands, les radis, l'avocat et parseme de graines de courge."
+      ],
+      "robot": [],
+      "notes": [
+        "Le grand croquant du printemps dans l'assiette."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 17",
+      "timePrep": "15 min",
+      "timeCook": "3 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-018",
+      "name": "Quesadillas estivales au maïs, haricots noirs et cheddar",
+      "ingredients": [
+        "8 tortillas de blé",
+        "200 g de haricots noirs en conserve",
+        "160 g de maïs doux",
+        "200 g de cheddar râpé",
+        "1 poivron rouge en petits dés",
+        "Quelques feuilles de coriandre"
+      ],
+      "steps": [
+        "Dans un bol, mélange les haricots noirs, le maïs, le poivron rouge et la coriandre ciselée.",
+        "Pose deux tortillas à plat, répartis la moitié du cheddar, le mélange de légumes, puis le reste de cheddar.",
+        "Recouvre avec les deux autres tortillas pour fermer.",
+        "Fais cuire à sec dans une poêle environ 3 minutes de chaque côté jusqu'à ce que le fromage soit fondu. Coupe en triangles."
+      ],
+      "robot": [],
+      "notes": [
+        "Un repas express, chaud et réconfortant d'inspiration mexicaine."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 18",
+      "timePrep": "10 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-019",
+      "name": "Rouleaux de printemps croquants au tofu fumé et mangue",
+      "ingredients": [
+        "12 galettes de riz",
+        "200 g de tofu fumé",
+        "1 mangue ferme",
+        "2 carottes",
+        "1 concombre",
+        "Quelques feuilles de menthe et de coriandre"
+      ],
+      "steps": [
+        "Coupe le tofu, la mangue, la carotte et le concombre en fins bâtonnets d'environ 7 cm.",
+        "Trempe une galette de riz dans l'eau tiède pour la ramollir, puis pose-la à plat.",
+        "Dépose les herbes et les bâtonnets au centre de la galette.",
+        "Rabats le bord inférieur, les deux côtés, puis roule fermement vers le haut. Répète l'opération."
+      ],
+      "robot": [],
+      "notes": [
+        "Une recette asiatique fraîche, fruitée et colorée."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 19",
+      "timePrep": "20 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-020",
+      "name": "Frittata aux artichauts, tomates séchées et chèvre",
+      "ingredients": [
+        "8 gros œufs",
+        "8 cœurs d'artichauts (en conserve)",
+        "10 morceaux de tomates séchées à l'huile",
+        "100 g de bûche de chèvre",
+        "4 c. à soupe de lait",
+        "2 c. à café d'huile d'olive",
+        "Sel",
+        "poivre et herbes de Provence"
+      ],
+      "steps": [
+        "Préchauffe le four à 180°C. Bats les œufs avec le lait, le sel, le poivre et les herbes de Provence.",
+        "Dans un moule ou poêle huilée, dispose les cœurs d'artichauts coupés en deux et les tomates séchées en lanières.",
+        "Verse les œufs battus par-dessus, puis répartis les morceaux de chèvre.",
+        "Enfourne pour 15 à 20 minutes jusqu'à ce que les œufs soient bien pris."
+      ],
+      "robot": [],
+      "notes": [
+        "Une délicieuse omelette épaisse cuite au four, idéale tiède ou froide."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 20",
+      "timePrep": "10 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-021",
+      "name": "Salade Caprese revisitée aux pêches jaunes et burrata",
+      "ingredients": [
+        "4 pêches jaunes fermes",
+        "2 belle boule de burrata (300 g)",
+        "2 poignées de roquette",
+        "40 g de pignons de pin",
+        "4 c. à soupe d'huile d'olive",
+        "2 c. à soupe de crème de vinaigre balsamique",
+        "Basilic frais",
+        "fleur de sel"
+      ],
+      "steps": [
+        "Lave et coupe les pêches en quartiers. Fais dorer les pignons à sec 2 minutes.",
+        "Dresse un lit de roquette dans un plat et dispose les quartiers de pêches.",
+        "Place la burrata au centre et déchire délicatement le dessus pour ouvrir le cœur crémeux.",
+        "Parsme de pignons et de basilic. Arrose d'huile d'olive, de vinaigre balsamique, de fleur de sel et de poivre."
+      ],
+      "robot": [],
+      "notes": [
+        "Une alternative fruitée et incroyablement juteuse à la salade tomate-mozza."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 21",
+      "timePrep": "10 min",
+      "timeCook": "2 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-022",
+      "name": "Socca niçoise aux légumes grillés et herbes de Provence",
+      "ingredients": [
+        "200 g de farine de pois chiches",
+        "500 ml d'eau tiède",
+        "4 c. à soupe d'huile d'olive",
+        "2 filet",
+        "1 poivron rouge",
+        "1 courgette",
+        "2 c. à café d'herbes de Provence",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Mélange la farine, l'eau, 2 c. à soupe d'huile d'olive et du sel. Laisse reposer 30 minutes.",
+        "Fais revenir le poivron et la courgette coupés en petits dés avec un filet d'huile et les herbes de Provence pendant 8 minutes.",
+        "Préchauffe le four en mode gril avec le moule dedans. Verse la pâte dans le moule chaud huilé, répartis les légumes.",
+        "Enfourne tout en haut du four pendant 8 à 10 minutes jusqu'à ce que ce soit croustillant."
+      ],
+      "robot": [],
+      "notes": [
+        "Une galette de farine de pois chiches croustillante, naturellement sans gluten.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 22",
+      "timePrep": "15 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-023",
+      "name": "Tartare de tomates multicolores, mangue et coriandre",
+      "ingredients": [
+        "600 g de tomates anciennes variées",
+        "1 mangue bien mûre",
+        "1 oignon rouge",
+        "Le jus de 1 citron vert",
+        "4 c. à soupe d'huile d'olive",
+        "8 branches de coriandre fraîche",
+        "Fleur de sel et piment d'Espelette"
+      ],
+      "steps": [
+        "Épépine les tomates et coupe la chair en petits dés réguliers. Fais de même avec la mangue épluchée.",
+        "Émince l'oignon rouge très finement et hache la coriandre.",
+        "Mélange le tout délicatement dans un bol avec l'huile d'olive, le jus de citron vert, le sel et le piment d'Espelette.",
+        "Dresse à l'aide d'un emporte-pièce et sers très frais."
+      ],
+      "robot": [],
+      "notes": [
+        "Une entrée ultra-fraîche, chic et colorée."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 23",
+      "timePrep": "15 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-024",
+      "name": "Pâtes au pesto de courgettes crues et amandes effilées",
+      "ingredients": [
+        "400 g de pâtes (Fusilli ou Trofie)",
+        "2 courgettes fraîche",
+        "60 g d'amandes entières",
+        "20 g d'amandes effilées",
+        "2 poignées de basilic",
+        "40 g de parmesan",
+        "6 c. à soupe d'huile d'olive",
+        "1 gousse d'ail",
+        "sel"
+      ],
+      "steps": [
+        "Fais cuire les pâtes. Pendant ce temps, mixe la courgette en morceaux, les amandes entières, le basilic, l'ail, le parmesan et l'huile d'olive.",
+        "Fais dorer les amandes effilées à sec dans une poêle pendant 1 à 2 minutes.",
+        "Égoutte les pâtes en gardant 2 cuillères à soupe d'eau de cuisson.",
+        "Mélange les pâtes chaudes avec le pesto cru et l'eau de cuisson. Parsme d'amandes effilées."
+      ],
+      "robot": [],
+      "notes": [
+        "Une sauce onctueuse, crue et légère pour napper vos pâtes d'été."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 24",
+      "timePrep": "10 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-025",
+      "name": "Buddha Bowl d'été : patates douces, pois chiches et tahini",
+      "ingredients": [
+        "2 grosse patate douce",
+        "300 g de pois chiches cuits",
+        "2 poignées de chou rouge émincé",
+        "1 avocat",
+        "2 poignées de jeunes pousses",
+        "2 c. à café de paprika",
+        "4 c. à soupe de tahini",
+        "jus de 1 citron",
+        "4 c. à soupe d'eau"
+      ],
+      "steps": [
+        "Préchauffe le four à 200°C. Coupe la patate douce en dés. Rince les pois chiches.",
+        "Enfourne les dés de patate douce et pois chiches enrobés d'huile, paprika et sel pendant 25 minutes.",
+        "Prépare la sauce en mélangeant le tahini, le jus de citron, l'eau tiède et le sel jusqu'à obtenir une crème lisse.",
+        "Dans deux grands bols, répartis les pousses, le chou rouge, l'avocat en lamelles, puis la patate douce et pois chiches rôtis. Nappe de sauce."
+      ],
+      "robot": [],
+      "notes": [
+        "Un bol complet, équilibré et plein de textures différentes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 25",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-026",
+      "name": "Saltimbocca de tofu au pesto et tomates séchées",
+      "ingredients": [
+        "400 g de tofu ferme (en 8 tranches)",
+        "8 c. à café de pesto",
+        "8 morceaux de tomates séchées",
+        "16 feuilles de sauge fraîche",
+        "2 c. à soupe de farine",
+        "4 c. à soupe d'huile d'olive",
+        "100 ml de vin blanc sec",
+        "Sel"
+      ],
+      "steps": [
+        "Sur chaque tranche de tofu essuyée, étale une cuillère de pesto, dépose une tomate séchée et deux feuilles de sauge.",
+        "Sécurise le tout avec un cure-dent. Passe la face inférieure du tofu dans la farine.",
+        "Fais cuire dans une poêle chaude côté fariné (3 min) puis côté sauge (2 min).",
+        "Verse le vin blanc pour déglacer la poêle, laisse réduire 1 minute et sers chaud nappé de sauce."
+      ],
+      "robot": [],
+      "notes": [
+        "Une interprétation végétale et ultra parfumée de la spécialité romaine."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 26",
+      "timePrep": "10 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-027",
+      "name": "Tian de légumes d'été traditionnels au thym",
+      "ingredients": [
+        "2 courgettes",
+        "2 longue aubergine fine",
+        "4 tomates allongées",
+        "2 gousses d'ail",
+        "6 c. à soupe d'huile d'olive",
+        "Quelques branches de thym frais",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffe le four à 180°C. Frotte le plat avec l'ail coupé, puis hache le reste au fond.",
+        "Lave et coupe les légumes en rondelles de 5 mm d'épaisseur.",
+        "Range les rondelles à la verticale en les alternant serrées (courgette, aubergine, tomate).",
+        "Sale, poivre, parsme de thym et arrose copieusement d'huile d'olive. Enfourne pour 50 à 60 minutes."
+      ],
+      "robot": [],
+      "notes": [
+        "Le grand classique provençal fondant qui accompagne vos soirées."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 27",
+      "timePrep": "15 min",
+      "timeCook": "60 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-028",
+      "name": "Gaspacho vert au melon, concombre et menthe",
+      "ingredients": [
+        "1 melon vert (type Galia)",
+        "1 concombre",
+        "1 poivron vert",
+        "20 menthe fraîche",
+        "2 c. à soupe de jus de citron vert",
+        "2 c. à soupe d'huile d'olive",
+        "2 pincée de sel",
+        "poivre"
+      ],
+      "steps": [
+        "Pèle le concombre et épépine-le. Retire la peau et graines du melon. Épépine le poivron.",
+        "Coupe le tout en morceaux et dépose-les dans le blender avec la menthe, le citron vert et l'huile d'olive.",
+        "Mixe longuement jusqu'à obtenir un velouté fluide.",
+        "Ajoute du sel et du poivre. Réserve au réfrigérateur pendant 2 heures avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Un autre gaspacho original, sucré-salé et d'une fraîcheur éclatante.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 28",
+      "timePrep": "10 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-029",
+      "name": "Salade de haricots blancs, poivrons rôtis et câpres",
+      "ingredients": [
+        "500 g de haricots blancs cuits",
+        "2 poivrons rouge rôti (en bocal à l'huile)",
+        "2 c. à soupe de câpres",
+        "1 oignon rouge émincé",
+        "2 c. à soupe de persil plat",
+        "6 c. à soupe d'huile",
+        "2 c. à soupe de vinaigre de xérès",
+        "1 c. à café de paprika fumé"
+      ],
+      "steps": [
+        "Coupe le poivron rouge rôti en lanières fines.",
+        "Prépare la vinaigrette au fond du saladier avec l'huile, le vinaigre, le paprika fumé et le sel. Ajoute l'oignon.",
+        "Intègre les haricots blancs rincés, les lanières de poivron et les câpres égouttées.",
+        "Mélange délicatement et saupoudre de persil plat."
+      ],
+      "robot": [],
+      "notes": [
+        "Une salade d'inspiration espagnole, riche en protéines et pleine de peps."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 29",
+      "timePrep": "10 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-030",
+      "name": "Mini-burgers d'été aux galettes de lentilles corail et feta",
+      "ingredients": [
+        "8 mini pains à burger",
+        "200 g de lentilles corail (crues)",
+        "1 oignon",
+        "2 c. à café de cumin",
+        "2 c. à soupe de farine",
+        "2 tomates en rondelles",
+        "100 g de feta tranchée fin",
+        "Salade"
+      ],
+      "steps": [
+        "Fais cuire les lentilles corail 10 minutes. Égoutte-les très longuement en pressant.",
+        "Mixe grossièrement les lentilles avec l'oignon, le cumin, la farine, le sel et le poivre pour former 4 galettes.",
+        "Fais dorer les galettes à la poêle avec de l'huile d'olive 3 à 4 minutes de chaque côté.",
+        "Fais griller les pains, puis assemble avec de la sauce, de la salade, une galette chaude, la feta et la tomate."
+      ],
+      "robot": [],
+      "notes": [
+        "Une alternative végétarienne gourmande pour les soirées décontractées."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 30",
+      "timePrep": "20 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-031",
+      "name": "Salade croquante de fenouil, orange et olives noires",
+      "ingredients": [
+        "2 gros bulbe de fenouil",
+        "2 oranges      • 20 olives noires à la grecque",
+        "4 c. à soupe d'huile d'olive",
+        "2 c. à soupe de jus de citron",
+        "Fleur de sel et poivre noir"
+      ],
+      "steps": [
+        "Émince le fenouil le plus finement possible à la mandoline.",
+        "Pèle l'orange à vif et coupe-la en rondelles fines ou en suprêmes. Récupère le jus.",
+        "Prépare la sauce avec l'huile d'olive, le jus de citron, le jus d'orange récupéré, la fleur de sel et le poivre.",
+        "Mélange le fenouil, l'orange et les olives. Arrose de vinaigrette et laisse reposer 10 minutes au frais."
+      ],
+      "robot": [],
+      "notes": [
+        "Un classique sicilien rafraîchissant, anisé et acidulé.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 31",
+      "timePrep": "15 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-032",
+      "name": "Brochettes de falafels et légumes d'été, sauce blanche",
+      "ingredients": [
+        "16 falafels de pois chiches",
+        "1 courgette",
+        "16 tomates cerises",
+        "1 oignon rouge",
+        "2 yaourt nature",
+        "2 c. à café de jus de citron",
+        "1 gousse d'ail",
+        "8 feuilles de menthe"
+      ],
+      "steps": [
+        "Mélange le yaourt, le jus de citron, l'ail pressé et la menthe ciselée pour faire la sauce blanche. Réserve au frais.",
+        "Coupe la courgette en rondelles épaisses et l'oignon en gros morceaux. Fais-les précuire 3 minutes à la poêle.",
+        "Monte les brochettes sur des pics en bois en alternant tomate, oignon, falafel et courgette.",
+        "Passe sous le gril du four pendant 5 à 7 minutes en les retournant à mi-cuisson. Sers avec la sauce."
+      ],
+      "robot": [],
+      "notes": [
+        "Une présentation ludique et estivale pour un grand classique du Moyen-Orient.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 32",
+      "timePrep": "15 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-033",
+      "name": "Carpaccio de betteraves bicolores à la feta et aux noix",
+      "ingredients": [
+        "2 betterave rouge cuite",
+        "2 betterave jaune cuite",
+        "120 g de feta",
+        "40 g de cerneaux de noix",
+        "4 c. à soupe d'huile de noix",
+        "2 c. à soupe de vinaigre de cidre",
+        "Ciboulette",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Coupe les betteraves en très fines rondelles.",
+        "Dispose les rondelles sur un plat en les faisant se chevaucher et en alternant les couleurs.",
+        "Émiette la feta et parsme les cerneaux de noix concassés sur le dessus.",
+        "Arrose uniformément avec l'huile de noix mélangée au vinaigre de cidre, au sel et au poivre. Parsme de ciboulette."
+      ],
+      "robot": [],
+      "notes": [
+        "Une entrée graphique, fraîche, terreuse et acidulée."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 33",
+      "timePrep": "15 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-034",
+      "name": "Clafoutis salé aux tomates cerises, chèvre et herbes de Provence",
+      "ingredients": [
+        "400 g de tomates cerises",
+        "4 gros œufs",
+        "300 ml de lait",
+        "80 g de farine de blé",
+        "100 g de bûche de chèvre",
+        "2 c. à café d'herbes de Provence",
+        "2 noixs de beurre",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffe le four à 180°C. Beurre un plat et répartis les tomates cerises entières au fond.",
+        "Fouette les œufs avec la farine, puis verse le lait petit à petit. Ajoute les herbes de Provence, le sel et le poivre.",
+        "Verse cette pâte sur les tomates cerises.",
+        "Coupe le chèvre en petits morceaux et répartis-les sur la surface. Enfourne pour 30 à 35 minutes."
+      ],
+      "robot": [],
+      "notes": [
+        "Une texture fondante et réconfortante à déguster tiède ou froide."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 34",
+      "timePrep": "10 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-035",
+      "name": "Salade de riz noir (Venere) à l'avocat, mangue et edamame",
+      "ingredients": [
+        "240 g de riz noir Venere",
+        "1 mangue",
+        "1 avocat",
+        "160 g d'edamame cuits",
+        "2 c. à soupe de graines de sésame",
+        "4 c. à soupe d'huile de sésame",
+        "2 c. à soupe de jus de citron vert",
+        "2 c. à soupe de sauce soja"
+      ],
+      "steps": [
+        "Fais cuire le riz noir environ 30 à 35 minutes. Égoutte-le et laisse-le refroidir complètement.",
+        "Coupe la chair de la mangue et de l'avocat en petits dés réguliers.",
+        "Mélange l'huile de sésame, le jus de citron vert et la sauce soja pour préparer l'assaisonnement.",
+        "Mélange le riz, la mangue, l'avocat, les edamame et la sauce. Saupoudre de sésame."
+      ],
+      "robot": [],
+      "notes": [
+        "Un plat unique chic, exotique et riche en nutriments."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 35",
+      "timePrep": "15 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-036",
+      "name": "Polenta grillée aux champignons de Paris et persillade",
+      "ingredients": [
+        "200 g de polenta instantanée",
+        "800 ml de bouillon de légumes",
+        "400 g de champignons de Paris",
+        "2 gousses d'ail",
+        "6 branches de persil plat",
+        "4 c. à soupe d'huile d'olive",
+        "2 noixs de beurre",
+        "sel"
+      ],
+      "steps": [
+        "Cuire la polenta dans le bouillon bouillant pendant 3 à 5 minutes. Étale-la sur du papier sulfurisé sur 1,5 cm d'épaisseur. Laisse figer puis coupe en carrés.",
+        "Fais sauter les champignons émincés dans le beurre avec l'ail haché et le persil ciselé pendant 8 minutes.",
+        "Fais griller les carrés de polenta à la poêle dans l'huile d'olive 3 à 4 minutes de chaque côté.",
+        "Dresse les carrés croustillants et dépose la persillade de champignons bien chaude dessus."
+      ],
+      "robot": [],
+      "notes": [
+        "Une recette croustillante dehors et moelleuse dedans."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 36",
+      "timePrep": "15 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-037",
+      "name": "Soupe froide de poivrons rouges rôtis au mascarpone",
+      "ingredients": [
+        "4 poivrons rouges",
+        "2 oignons jaune",
+        "2 gousses d'ail",
+        "2 c. à soupe bombée de mascarpone",
+        "2 c. à soupe d'huile d'olive",
+        "600 ml de bouillon de légumes",
+        "piment d'Espelette"
+      ],
+      "steps": [
+        "Fais rôtir les poivrons coupés en deux au four sous le gril jusqu'à ce que la peau noircisse. Pèle-les.",
+        "Fais revenir l'oignon et l'ail émincés dans l'huile d'olive. Ajoute la chair des poivrons et le bouillon. Mijote 10 minutes.",
+        "Retire du feu, ajoute le mascarpone, le sel et une pincée de piment d'Espelette.",
+        "Mixe longuement jusqu'à obtenir un velouté lisse et place au frais 2 heures."
+      ],
+      "robot": [],
+      "notes": [
+        "Une texture veloutée et doucement sucrée pour les soirées d'été.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 37",
+      "timePrep": "15 min",
+      "timeCook": "15 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-038",
+      "name": "Salade de pâtes grecque (Style Horiatiki)",
+      "ingredients": [
+        "300 g de pâtes courtes",
+        "20 tomates cerises",
+        "1 concombre",
+        "160 g de feta",
+        "20 olives de Kalamata",
+        "1 oignon rouge émincé",
+        "6 c. à soupe d'huile d'olive",
+        "2 c. à soupe de vinaigre de vin",
+        "origan"
+      ],
+      "steps": [
+        "Fais cuire les pâtes al dente. Égoutte-les, refroidis-les et place-les dans un saladier.",
+        "Coupe les tomates cerises en deux et le concombre en demi-rondelles.",
+        "Ajoute les légumes, l'oignon et les olives dans le saladier avec les pâtes.",
+        "Assaisonne avec l'huile, le vinaigre, l'origan, le sel et le poivre. Ajoute la feta en dés sur le dessus."
+      ],
+      "robot": [],
+      "notes": [
+        "Le goût des vacances dans une salade de pâtes fraîche et complète."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 38",
+      "timePrep": "15 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-039",
+      "name": "Poêlée de gnocchis au pesto rouge et ricotta",
+      "ingredients": [
+        "600 g de gnocchis frais",
+        "6 c. à soupe de pesto rouge",
+        "160 g de ricotta fraîche",
+        "2 poignées de pignons de pin",
+        "2 c. à soupe d'huile d'olive",
+        "Quelques basilic frais"
+      ],
+      "steps": [
+        "Fais dorer les pignons à sec pendant 2 minutes. Réserve-les.",
+        "Fais sauter les gnocchis directement dans la poêle avec l'huile d'olive pendant 6 à 8 minutes.",
+        "Baisse le feu, ajoute le pesto rouge et mélange bien pendant 1 minute.",
+        "Sers les gnocchis chauds, dépose des quenelles de ricotta fraîche, puis parsme de pignons et de basilic."
+      ],
+      "robot": [],
+      "notes": [
+        "Un repas express, gourmand et intensément parfumé."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 39",
+      "timePrep": "10 min",
+      "timeCook": "8 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-040",
+      "name": "Gaspacho de melon au gingembre et menthe fraîche",
+      "ingredients": [
+        "2 beau melon mûr",
+        "2 cm de racine de gingembre frais",
+        "20 menthe fraîche",
+        "Le jus de 1 citron jaune",
+        "2 pincée de sel marin"
+      ],
+      "steps": [
+        "Prélève la chair du melon et coupe-la en morceaux. Râpe le gingembre frais.",
+        "Mets le melon, le gingembre, les feuilles de menthe et le jus de citron dans le blender.",
+        "Mixe à pleine puissance jusqu'à obtenir une texture parfaitement liquide et mousseuse.",
+        "Ajoute une pincée de sel. Réserve au frais au moins 2 heures avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Une alternative fruitée et légèrement piquante, parfaite en entrée légère.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 40",
+      "timePrep": "10 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-041",
+      "name": "Salade d'orzo aux courgettes grillées, menthe et pignons",
+      "ingredients": [
+        "300 g de pâtes orzo",
+        "2 courgettes moyenne",
+        "40 g de pignons de pin",
+        "20 menthe fraîche",
+        "100 g de feta émiettée",
+        "4 c. à soupe d'huile d'olive",
+        "Le jus de 1 citron",
+        "sel"
+      ],
+      "steps": [
+        "Fais cuire l'orzo, égoutte et refroidis-le sous l'eau froide.",
+        "Coupe la courgette en fines rondelles et fais-les griller à la poêle avec un peu d'huile d'olive. Laisse tiédir.",
+        "Fais griller les pignons à sec pendant 2 minutes.",
+        "Mélange l'orzo, les courgettes, la menthe ciselée, les pignons, la feta, le reste d'huile d'olive et le jus de citron. Sale et poivre."
+      ],
+      "robot": [],
+      "notes": [
+        "Une salade de pâtes fraîches en forme de grains de riz, légère et parfumée."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 41",
+      "timePrep": "15 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-042",
+      "name": "Tacos mexicains aux haricots rouges et guacamole maison",
+      "ingredients": [
+        "8 petites tortillas",
+        "2 boîtes de haricots rouges (500 g égouttés)",
+        "2 c. à café d'épices à tacos",
+        "2 avocats mûr",
+        "Le jus de 1 citron vert",
+        "1 oignon rouge émincé",
+        "2 tomates en dés",
+        "coriandre"
+      ],
+      "steps": [
+        "Fais chauffer les haricots rouges rincés avec les épices et 2 cuillères d'eau pendant 5 minutes. Écrase-les grossièrement.",
+        "Écrase l'avocat avec le jus de citron vert, du sel et de la coriandre hachée pour faire le guacamole.",
+        "Fais chauffer rapidement les tortillas à sec dans une poêle.",
+        "Garnis chaque tortilla de haricots rouges, de guacamole, de dés de tomates, d'oignon rouge et de coriandre."
+      ],
+      "robot": [],
+      "notes": [
+        "Un repas festif, coloré et plein de saveurs."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 42",
+      "timePrep": "15 min",
+      "timeCook": "5 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-043",
+      "name": "Salade de pois chiches au concombre, tomates et sumac",
+      "ingredients": [
+        "500 g de pois chiches cuits",
+        "1 concombre",
+        "4 tomates fermes",
+        "1 oignon rouge",
+        "2 c. à café de sumac",
+        "4 c. à soupe d'huile d'olive",
+        "Le jus de 1 citron",
+        "sel"
+      ],
+      "steps": [
+        "Coupe le concombre et les tomates en dés. Émince finement l'oignon rouge.",
+        "Dans un saladier, mélange les pois chiches, le concombre, les tomates et l'oignon.",
+        "Ajoute l'huile d'olive, le jus de citron, le sumac, le sel et le poivre.",
+        "Mélange bien et réserve au réfrigérateur pendant 30 minutes avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Une salade croquante d'inspiration libanaise."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 43",
+      "timePrep": "15 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-044",
+      "name": "Tartine de chèvre chaud aux figues fraîches et miel",
+      "ingredients": [
+        "4 grandes tranches de pain de campagne",
+        "2 bûche de fromage de chèvre",
+        "4 figues fraîches mûres",
+        "4 c. à café de miel liquide",
+        "2 poignées de mesclun",
+        "2 filet d'huile d'olive"
+      ],
+      "steps": [
+        "Préchauffe le four en mode gril (200°C). Dépose le pain sur une plaque et arrose d'un filet d'huile d'olive.",
+        "Répartis les rondelles de chèvre sur les tranches de pain.",
+        "Lave les figues, coupe-les en quatre et dépose les morceaux sur le fromage.",
+        "Nappe de miel et enfourne pour 8 à 10 minutes jusqu'à ce que ce soit doré. Sers avec le mesclun."
+      ],
+      "robot": [],
+      "notes": [
+        "Le parfait accord sucré-salé de la fin de l'été."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 44",
+      "timePrep": "10 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-045",
+      "name": "Bowl de nouilles de riz au tofu croustillant et cacahuètes",
+      "ingredients": [
+        "240 g de nouilles de riz épaisses",
+        "400 g de tofu ferme",
+        "2 c. à soupe de fécule de maïs",
+        "2 carottes en julienne",
+        "40 g de cacahuètes concassées",
+        "4 c. à soja",
+        "2 c. à sésame",
+        "2 c. à café de sirop d'érable"
+      ],
+      "steps": [
+        "Fais cuire les nouilles, rince-les à l'eau froide et réserve.",
+        "Coupe le tofu en cubes, enrobe-les de fécule de maïs et fais-les griller à la poêle 6 minutes jusqu'à ce qu'ils soient croustillants.",
+        "Mélange les ingrédients de la sauce dans un petit bol.",
+        "Répartis les nouilles, la julienne de carotte et le tofu dans deux bols. Arrose de sauce et parseme de cacahuètes."
+      ],
+      "robot": [],
+      "notes": [
+        "Un plat asiatique froid, complet et gourmand."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 45",
+      "timePrep": "15 min",
+      "timeCook": "6 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-046",
+      "name": "Carpaccio de courgettes jaunes au citron et parmesan",
+      "ingredients": [
+        "2 courgettes jaune bien ferme",
+        "60 g de copeaux de parmesan",
+        "Jus de 1 citron jaune",
+        "4 c. à soupe d'huile d'olive",
+        "Basilic frais",
+        "fleur de sel",
+        "poivre rose"
+      ],
+      "steps": [
+        "À la mandoline, taille de très fines lamelles de courgette dans le sens de la longueur.",
+        "Dispose les lamelles harmonieusement à plat sur un grand plat de service.",
+        "Arrose uniformément avec le jus de citron et l'huile d'olive.",
+        "Parsme de copeaux de parmesan, de basilic ciselé, de fleur de sel et de baies roses. Laisse mariner 15 minutes au frais."
+      ],
+      "robot": [],
+      "notes": [
+        "Une entrée crue, fine, ultra-légère et élégante.",
+        "Prévoir le temps de repos ou de refroidissement indiqué dans les étapes."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 46",
+      "timePrep": "10 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-047",
+      "name": "One Pot Pasta d'été aux tomates, épinards et crème d'ail",
+      "ingredients": [
+        "360 g de pâtes (Linguine)",
+        "300 g de tomates cerises coupées en deux",
+        "200 g de épinards frais",
+        "2 gousses d'ail émincée",
+        "2 c. à soupe de fromage à la crème",
+        "900 ml de bouillon de légumes",
+        "huile"
+      ],
+      "steps": [
+        "Dans une grande casserole, dépose les pâtes crues, les tomates cerises, l'ail et l'huile d'olive.",
+        "Verse le bouillon de légumes chaud. Porte à ébullition et laisse cuire à feu moyen environ 10 minutes en remuant souvent.",
+        "En fin de cuisson, lorsque le liquide est presque absorbé, ajoute les pousses d'épinards et le fromage à la crème.",
+        "Remue pendant 2 minutes jusqu'à ce que la sauce soit bien crémeuse, puis sers."
+      ],
+      "robot": [],
+      "notes": [
+        "Toute la cuisson dans une seule casserole pour un minimum de vaisselle."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 47",
+      "timePrep": "10 min",
+      "timeCook": "12 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-048",
+      "name": "Salade de haricots verts, pêches grillées et burrata",
+      "ingredients": [
+        "400 g de haricots verts frais",
+        "2 pêches jaune ferme",
+        "2 belle boule de burrata (300 g)",
+        "2 c. à soupe d'huile d'olive",
+        "2 filet",
+        "2 c. à café de vinaigre balsamique",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Fais cuire les haricots verts 8 à 10 minutes. Plonge-les dans l'eau glacée et égoutte.",
+        "Coupe la pêche en quartiers et fais-les griller 2 minutes de chaque côté dans une poêle-gril avec un filet d'huile.",
+        "Dresse les haricots verts refroidis dans un plat et dispose les morceaux de pêches grillées dessus.",
+        "Place la burrata au centre, ouvre-la délicatement, puis assaisonne avec l'huile, le vinaigre balsamique, le sel et le poivre."
+      ],
+      "robot": [],
+      "notes": [
+        "Une entrée estivale raffinée associant le croquant et le fondant."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 48",
+      "timePrep": "15 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-049",
+      "name": "Tartine d'été au pesto, tomates confites et billes de mozza",
+      "ingredients": [
+        "4 tranches de pain de campagne grillées",
+        "4 c. à soupe de pesto de basilic",
+        "16 morceaux de tomates confites à l'huile",
+        "200 g de billes de mozzarella",
+        "Quelques feuilles de roquette",
+        "poivre"
+      ],
+      "steps": [
+        "Fais griller vos tranches de pain de campagne.",
+        "Étale une cuillère de pesto de basilic sur chaque tranche chaude.",
+        "Répartis les tomates confites en morceaux et les billes de mozzarella égouttées.",
+        "Ajoute quelques feuilles de roquette fraîche et termine par un tour de moulin de poivre noir."
+      ],
+      "robot": [],
+      "notes": [
+        "Le goût de la Méditerranée sur du pain croustillant."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 49",
+      "timePrep": "10 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-pe-050",
+      "name": "Smoothie bowl rafraîchissant aux fruits rouges et graines de chia",
+      "ingredients": [
+        "400 g de mélange de fruits rouges",
+        "2 bananes congelée en morceaux",
+        "200 ml de lait végétal",
+        "2 c. à soupe de graines de chia",
+        "fruits frais",
+        "granola",
+        "éclats de noix"
+      ],
+      "steps": [
+        "Dans le bol du blender, dépose les fruits rouges, les morceaux de banane et le lait végétal.",
+        "Mixe à pleine puissance pendant 1 à 2 minutes jusqu'à obtenir une texture très lisse et épaisse.",
+        "Verse la préparation dans deux bols.",
+        "Saupoudre les graines de chia sur le dessus, décore avec du granola et des fruits frais entiers. Déguste à la cuillère."
+      ],
+      "robot": [],
+      "notes": [
+        "Un petit-déjeuner ou dessert glacé et vitaminé pour les matins d'été."
+      ],
+      "source": "50 recettes végétariennes — Printemps / Été (PDF fourni), recette 50",
+      "timePrep": "10 min",
+      "timeCook": "0 min (sans cuisson)",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "printemps_ete"
     }
   ],
   "plan": [
