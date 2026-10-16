@@ -24,6 +24,7 @@ const categories: [string, string, string, LucideIcon][] = [
   ["Automne", "#F3C6B1", "/recettes?filter=automne", Leaf],
   ["Hiver", "#E1EDF2", "/recettes?filter=hiver", Snowflake],
   ["🥦 Végan", "#E2F0D9", "/vegan", Sprout],
+  ["🥦 Végétarien", "#D0DBCE", "/vegetarien", Sprout],
   ["🎉 Fêtes", "#FAD2CB", "/fetes", PartyPopper],
 ];
 
