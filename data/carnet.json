@@ -60137,6 +60137,1460 @@
       "servings": "4 personnes",
       "regime": "vegetarien",
       "sous_regime": "printemps_ete"
+    },
+    {
+      "id": "veg-ah-pdf-001",
+      "name": "Velouté de Potimarron aux Châtaignes et Éclats de Noisettes",
+      "ingredients": [
+        "1 potimarron moyen (1 kg)",
+        "200g de châtaignes cuites",
+        "1 oignon",
+        "1 gousse d'ail",
+        "750ml de bouillon de légumes",
+        "20cl de crème liquide",
+        "40g de noisettes",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre",
+        "muscade"
+      ],
+      "steps": [
+        "Émincez l'oignon, hachez l'ail, coupez le potimarron en dés avec la peau.",
+        "Faites revenir l'oignon et l'ail 3 min dans l'huile. Ajoutez le potimarron et les 3/4 des châtaignes.",
+        "Versez le bouillon chaud. Couvrez et mijotez 20 min.",
+        "Torréfiez les noisettes concassées à la poêle 2 min.",
+        "Mixez la soupe avec la crème, la muscade, le sel et le poivre. Servez avec le reste des châtaignes et noisettes."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 1",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-002",
+      "name": "Soupe-Repas de Lentilles Vertes, Poireaux et Carottes",
+      "ingredients": [
+        "200g de lentilles vertes",
+        "2 blancs de poireaux",
+        "3 carottes",
+        "1 oignon",
+        "1 branche de céleri",
+        "1.2L de bouillon de légumes",
+        "1 feuille de laurier",
+        "2 branches de thym",
+        "1 c.à.s d'huile",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Coupez les carottes en rondelles, émincez les poireaux, l'oignon et le céleri.",
+        "Sueriez l'oignon, le céleri et les poireaux 5 min dans la marmite huilée.",
+        "Ajoutez les lentilles rincées et les carottes.",
+        "Versez le bouillon, le thym, le laurier. Mijotez couvert pendant 30 min. Ajustez l'assaisonnement."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 2",
+      "timePrep": "15 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-003",
+      "name": "Crème de Panais aux Pommes et Éclats de Châtaignes",
+      "ingredients": [
+        "600g de panais",
+        "1 grosse pomme",
+        "1 oignon",
+        "750ml de bouillon de légumes",
+        "15cl de crème liquide",
+        "100g de châtaignes cuites",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Épluchez et coupez les panais et la pomme en dés. Émincez l'oignon.",
+        "Faites suer l'oignon 3 min dans l'huile, puis ajoutez les panais et la pomme pendant 2 min.",
+        "Versez le bouillon chaud, couvrez et mijotez 20 min.",
+        "Ajoutez la crème, salez, poivrez et mixez finement. Servez avec les châtaignes concassées."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 3",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-004",
+      "name": "Minestrone d'Hiver au Chou Vert et Haricots Blancs",
+      "ingredients": [
+        "1/4 de chou vert frisé",
+        "2 carottes",
+        "1 pomme de terre",
+        "400g de haricots blancs cuits",
+        "1 oignon",
+        "1 gousse d'ail",
+        "400g de pulpe de tomates",
+        "1.2L de bouillon de légumes",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre",
+        "parmesan"
+      ],
+      "steps": [
+        "Émincez le chou. Coupez les carottes et la pomme de terre en dés. Émincez l'oignon et l'ail.",
+        "Faites revenir l'oignon et l'ail 3 min dans l'huile. Ajoutez les légumes et laissez cuire 5 min.",
+        "Ajoutez les tomates et le bouillon. Cuisinez couvert pendant 25 min.",
+        "Incorporez les haricots blancs égouttés et poursuivez 10 min sans couvercle. Servez avec le parmesan."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 4",
+      "timePrep": "20 min",
+      "timeCook": "40 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-005",
+      "name": "Velouté Doux de Topinambours aux Éclats de Noisettes",
+      "ingredients": [
+        "600g de topinambours",
+        "2 pommes de terre",
+        "1 oignon",
+        "750ml de bouillon de légumes",
+        "15cl de crème liquide",
+        "30g de noisettes",
+        "1 c.à.s d'huile",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Épluchez et coupez les topinambours et pommes de terre en cubes. Émincez l'oignon.",
+        "Faites suer l'oignon 3 min, puis ajoutez les cubes de légumes pendant 2 min.",
+        "Ajoutez le bouillon. Cuisinez couvert pendant 20-25 min.",
+        "Torréfiez les noisettes à sec 2 min. Mixez le velouté avec la crème, salez, poivrez et servez avec les noisettes."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 5",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-006",
+      "name": "Velouté Crémeuse de Carottes au Cumin et Lait de Coco",
+      "ingredients": [
+        "800g de carottes",
+        "1 oignon",
+        "200ml de lait de coco",
+        "600ml de bouillon de légumes",
+        "1 c.à.c de cumin",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Épluchez les carottes et coupez-les en rondelles. Émincez l'oignon.",
+        "Faites revenir l'oignon 3 min avec le cumin dans l'huile. Ajoutez les carottes pendant 2 min.",
+        "Versez le bouillon de légumes. Cuisinez couvert pendant 20 min.",
+        "Ajoutez le lait de coco, assaisonnez et mixez jusqu'à obtention d'une texture soyeuse."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 6",
+      "timePrep": "10 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-007",
+      "name": "Chili Sin Carne Express aux Patates Douces",
+      "ingredients": [
+        "1 grosse patate douce (400g)",
+        "400g de haricots rouges cuits",
+        "150g de maïs",
+        "400g de tomates concassées",
+        "1 oignon rouge",
+        "1 gousse d'ail",
+        "1 c.à.c de cumin",
+        "1 c.à.c de paprika",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre",
+        "coriandre"
+      ],
+      "steps": [
+        "Coupez la patate douce en dés. Émincez l'oignon et l'ail.",
+        "Faites revenir l'oignon et l'ail 3 min avec les épices dans l'huile. Ajoutez les dés de patate douce.",
+        "Versez les tomates et 100ml d'eau. Mijotez couvert pendant 15-20 min.",
+        "Ajoutez les haricots et le maïs. Mijotez à découvert 10 min. Parsemez de coriandre avant de servir."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 7",
+      "timePrep": "15 min",
+      "timeCook": "30 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-008",
+      "name": "Curry de Pois Chiches, Épinards et Lait de Coco",
+      "ingredients": [
+        "400g de pois chiches cuits",
+        "200g d'épinards frais",
+        "400ml de lait de coco",
+        "400g de pulpe de tomate",
+        "1 oignon",
+        "2cm de gingembre",
+        "1.5 c.à.s de curry",
+        "1 c.à.s d'huile de coco",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Émincez l'oignon et râpez le gingembre. Rincez les pois chiches.",
+        "Faites revenir l'oignon et le gingembre 3 min dans l'huile. Saupoudrez le curry.",
+        "Ajoutez les tomates, le lait de coco et les pois chiches. Mijotez 10 min.",
+        "Incorporez les épinards pendant 2-3 min jusqu'à ce qu'ils retombent."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 8",
+      "timePrep": "10 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-009",
+      "name": "Bourguignon de Champignons de Paris et Carottes",
+      "ingredients": [
+        "600g de champignons de Paris",
+        "4 carottes",
+        "2 oignons",
+        "2 gousses d'ail",
+        "2 c.à.s de farine",
+        "300ml de vin rouge",
+        "300ml de bouillon de légumes",
+        "2 c.à.s de concentré de tomates",
+        "1 bouquet garni",
+        "2 c.à.s d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Coupez les champignons en deux, les carottes en sifflets. Émincez les oignons et l'ail.",
+        "Faites dorer les champignons 5 min dans une cocotte huilée, puis réservez-les.",
+        "Faites revenir les oignons et carottes 5 min. Ajoutez l'ail et le concentré de tomates. Saupoudrez la farine.",
+        "Déglacez avec le vin rouge, versez le bouillon, le bouquet garni et remettez les champignons. Mijotez couvert 30 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 9",
+      "timePrep": "20 min",
+      "timeCook": "40 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-010",
+      "name": "Tajine de Courge, Pruneaux et Amandes Effilées",
+      "ingredients": [
+        "800g de courge",
+        "150g de pruneaux",
+        "400g de pois chiches cuits",
+        "1 oignon",
+        "1 c.à.c de ras-el-hanout",
+        "400ml de bouillon de légumes",
+        "30g d'amandes effilées",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Coupez la courge en gros morceaux. Émincez l'oignon.",
+        "Faites revenir l'oignon 3 min dans l'huile avec les épices. Ajoutez la courge et les pruneaux.",
+        "Versez le bouillon. Cuisinez couvert pendant 20 min.",
+        "Ajoutez les pois chiches et réduisez le jus à découvert 10-15 min. Servez parsemé d'amandes grillées."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 10",
+      "timePrep": "15 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-011",
+      "name": "Lentilles Mijotées à la Tomate et Saucisses Végétales",
+      "ingredients": [
+        "250g de lentilles vertes",
+        "4 saucisses végétales",
+        "1 oignon",
+        "2 carottes",
+        "400g de tomates concassées",
+        "500ml de bouillon de légumes",
+        "1 feuille de laurier",
+        "1 c.à.s d'huile",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Émincez l'oignon, coupez les carottes en rondelles et les saucisses en tronçons.",
+        "Faites revenir l'oignon et les carottes 5 min dans l'huile, puis dorez les saucisses 2 min.",
+        "Ajoutez les lentilles, les tomates, le bouillon et le laurier.",
+        "Mijotez à feu doux pendant 30-35 min jusqu'à ce que les lentilles soient bien tendres."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 11",
+      "timePrep": "10 min",
+      "timeCook": "40 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-012",
+      "name": "Légumes-Racines Rôtis au Four, Miel et Romarin",
+      "ingredients": [
+        "3 carottes",
+        "2 panais",
+        "4 pommes de terre",
+        "1 betterave crue",
+        "2 c.à.s d'huile d'olive",
+        "1 c.à.s de miel",
+        "2 branches de romarin",
+        "fleur de sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffez le four à 200°C. Épluchez et coupez tous les légumes en quartiers ou bâtonnets.",
+        "Mélangez l'huile et le miel dans un bol, puis enrobez-en généreusement les légumes.",
+        "Étalez-les sur une plaque recouverte de papier cuisson, ajoutez le romarin, le sel et le poivre.",
+        "Enfournez 35-40 min en retournant à mi-cuisson jusqu'à ce qu'ils soient caramélisés."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 12",
+      "timePrep": "15 min",
+      "timeCook": "40 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-013",
+      "name": "Curry de Lentilles Corail et Butternut au Gingembre",
+      "ingredients": [
+        "200g de lentilles corail",
+        "400g de chair de butternut",
+        "1 oignon",
+        "400ml de lait de coco",
+        "1 c.à.s de pâte de curry jaune",
+        "1.5cm de gingembre",
+        "1 c.à.s d'huile",
+        "sel",
+        "poivre",
+        "coriandre"
+      ],
+      "steps": [
+        "Émincez l'oignon, râpez le gingembre et coupez la butternut en petits dés de 1cm.",
+        "Faites revenir l'oignon et le gingembre 2 min dans l'huile. Intégrez le curry.",
+        "Ajoutez la butternut, les lentilles corail rincées, le lait de coco et 200ml d'eau chaude.",
+        "Mijotez à feu doux 15-18 min. Rectifiez l'assaisonnement et parsemez de coriandre."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 13",
+      "timePrep": "15 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-014",
+      "name": "Pâtes à la Crème de Butternut et Sauge Crépitante",
+      "ingredients": [
+        "400g de pâtes",
+        "500g de chair de butternut",
+        "1 oignon",
+        "10cl de crème liquide",
+        "10 feuilles de sauge",
+        "20g de beurre",
+        "1 c.à.s d'huile d'olive",
+        "parmesan",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Coupez la butternut en dés, émincez l'oignon. Faites-les revenir dans l'huile 5 min. Ajoutez un verre d'eau, couvrez et",
+        "Faites cuire les pâtes en gardant une louche d'eau de cuisson.",
+        "Mixez la butternut avec la crème, le sel, le poivre et un peu d'eau des pâtes pour obtenir une sauce crémeuse.",
+        "Faites crépiter la sauge dans le beurre fondu 1-2 min. Servez les pâtes surmontées de sauge et parmesan."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 14",
+      "timePrep": "15 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-015",
+      "name": "Lasagnes Végétariennes aux Champignons et Épinards",
+      "ingredients": [
+        "8 plaques de lasagnes",
+        "350g de champignons mélangés",
+        "200g d'épinards",
+        "1 oignon",
+        "2 gousses d'ail",
+        "330ml de lait",
+        "27g de beurre",
+        "27g de farine",
+        "100g de mozzarella râpée",
+        "huile d'olive",
+        "sel",
+        "poivre",
+        "muscade"
+      ],
+      "steps": [
+        "Faites revenir les oignons, l'ail et les champignons 8 min. Ajoutez les épinards pour les faire réduire.",
+        "Préparez une béchamel avec le beurre, la farine et le lait. Assaisonnez de sel, poivre et muscade.",
+        "Dans un plat, alternez béchamel, plaques de lasagnes, légumes et mozzarella. Répétez sur 3 étages.",
+        "Terminez par de la béchamel et de la mozzarella, puis enfournez à 180°C pendant 35 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 15",
+      "timePrep": "25 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-016",
+      "name": "Risotto Crémeux aux Champignons des Bois et Huile de Truffe",
+      "ingredients": [
+        "300g de riz à risotto",
+        "400g de champignons frais",
+        "1 oignon",
+        "1 gousse d'ail",
+        "10cl de vin blanc sec",
+        "1L de bouillon de légumes",
+        "40g de parmesan",
+        "30g de beurre",
+        "2 c.à.s d'huile d'olive",
+        "huile de truffe",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Faites sauter les champignons avec l'ail et 1 c.à.s d'huile 7 min. Réservez.",
+        "Faites suer l'oignon dans le reste d'huile. Nacreze le riz 2 min. Versez le vin blanc et laissez évaporer.",
+        "Ajoutez le bouillon chaud louche par louche en remuant régulièrement pendant 18 min.",
+        "Incorporez les champignons à la fin. Hors du feu, ajoutez le beurre froid et le parmesan. Liez et servez avec un filet"
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 16",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-017",
+      "name": "Orzo façon Risotto au Potiron et Feta",
+      "ingredients": [
+        "300g d'orzo",
+        "400g de potiron râpé",
+        "1 oignon",
+        "800ml de bouillon de légumes",
+        "100g de feta",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre",
+        "persil"
+      ],
+      "steps": [
+        "Faites revenir l'oignon et le potiron 5 min dans la sauteuse huilée.",
+        "Ajoutez l'orzo sec, mélangez 1 min. Versez la moitié du bouillon chaud.",
+        "Mijotez en ajoutant le reste du bouillon au fur et à mesure (10-12 min).",
+        "Retirez du feu, poivrez et servez avec la feta émiettée et du persil."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 17",
+      "timePrep": "10 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-018",
+      "name": "Gnocchis Poêlés aux Pousses d'Épinards et Crème de Gorgonzola",
+      "ingredients": [
+        "500g de gnocchis frais",
+        "150g de pousses d'épinards",
+        "120g de Gorgonzola",
+        "15cl de crème liquide",
+        "15g de beurre",
+        "poivre"
+      ],
+      "steps": [
+        "Faites dorer les gnocchis directement dans le beurre fondu pendant 5-6 min à feu vif.",
+        "Faites fondre le Gorgonzola dans la crème à feu doux dans une autre casserole. Poivrez.",
+        "Ajoutez les épinards sur les gnocchis croustillants, laissez réduire 1 min.",
+        "Versez la crème de fromage sur les gnocchis, mélangez 1 min et servez chaud."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 18",
+      "timePrep": "5 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-019",
+      "name": "Cannellonis Végétariens à la Courge Butternut et Ricotta",
+      "ingredients": [
+        "12 tubes de cannellonis",
+        "600g de chair de butternut",
+        "250g de Ricotta",
+        "50g de parmesan",
+        "1 oignon",
+        "400g de coulis de tomate",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre",
+        "muscade"
+      ],
+      "steps": [
+        "Cuisez la butternut à la vapeur 15 min, puis écrasez-la en purée.",
+        "Faites revenir l'oignon dans l'huile 5 min. Mélangez avec la purée, la ricotta, la moitié du parmesan et les épices.",
+        "Garnissez les tubes de cannellonis avec cette farce.",
+        "Nappez le fond d'un plat de coulis de tomate, déposez les cannellonis, recouvrez du reste de tomate et de parmesan."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 19",
+      "timePrep": "25 min",
+      "timeCook": "30 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-020",
+      "name": "Coquillettes Gourmandes au Tofu Fumé, Crème et Comté",
+      "ingredients": [
+        "350g de coquillettes",
+        "200g de tofu fumé",
+        "20cl de crème liquide",
+        "80g de Comté râpé",
+        "10g de beurre",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Faites cuire les coquillettes à l'eau bouillante salée.",
+        "Pendant ce temps, coupez le tofu fumé en petits dés et faites-les dorer dans le beurre 5 min.",
+        "Versez la crème liquide sur le tofu, laissez chauffer 2 min et poivrez.",
+        "Mélangez les pâtes égouttées avec la crème au tofu et le Comté râpé sur feu très doux 1 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 20",
+      "timePrep": "5 min",
+      "timeCook": "12 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-021",
+      "name": "Polenta Crémeuse au Ragoût de Champignons et Persillade",
+      "ingredients": [
+        "200g de polenta rapide",
+        "800ml d'eau ou bouillon",
+        "500g de champignons mélangés",
+        "2 gousses d'ail",
+        "1/2 bouquet de persil",
+        "30g de beurre",
+        "3 c.à.s de crème fraîche",
+        "2 c.à.s d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Faites sauter les champignons à l'huile 8 min. En fin de cuisson, ajoutez l'ail, le persil, du sel et du poivre.",
+        "Portez l'eau à ébullition, versez la polenta en pluie et fouettez. Cuisez 3-5 min à feu doux.",
+        "Hors du feu, incorporez le beurre et la crème pour rendre la polenta très crémeuse.",
+        "Servez la polenta dans des assiettes creuses et déposez les champignons sur le dessus."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 21",
+      "timePrep": "15 min",
+      "timeCook": "15 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-022",
+      "name": "Gnocchis Rôtis au Four à la Tomate, Mozzarella et Pesto",
+      "ingredients": [
+        "500g de gnocchis frais",
+        "400g de tomates concassées",
+        "125g de mozzarella",
+        "2 c.à.s de pesto de basilic",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffez le four à 200°C. Versez les gnocchis crus directement dans un grand plat à gratin.",
+        "Ajoutez les tomates, l'huile, le sel et le poivre. Mélangez bien directement dans le plat.",
+        "Répartissez la mozzarella coupée en dés et des touches de pesto sur le dessus.",
+        "Enfournez 20 min jusqu'à ce que les gnocchis soient cuits et le fromage bien doré."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 22",
+      "timePrep": "10 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-023",
+      "name": "Rigatonis au Chou Kale et Sauce Crémeuse au Parmesan",
+      "ingredients": [
+        "400g de Rigatoni",
+        "150g de feuilles de chou kale",
+        "2 gousses d'ail",
+        "20cl de crème liquide",
+        "60g de parmesan",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre",
+        "piment d'Espelette"
+      ],
+      "steps": [
+        "Blanchissez les lanières de kale 3 min dans l'eau bouillante salée, puis rafraîchissez-les.",
+        "Cuisez les pâtes dans cette même eau. Conservez une louche d'eau de cuisson.",
+        "Faites revenir l'ail et le kale essoré 3 min à la poêle avec l'huile. Versez la crème et le parmesan.",
+        "Ajoutez les pâtes égouttées dans la sauce, liez le tout 1 min et servez chaud."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 23",
+      "timePrep": "15 min",
+      "timeCook": "15 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-024",
+      "name": "Gnocchis Poêlés à la Crème de Potimarron et Éclats de Gorgonzola",
+      "ingredients": [
+        "500g de gnocchis frais",
+        "300g de chair de potimarron",
+        "1 oignon rouge",
+        "10cl de crème liquide",
+        "80g de Gorgonzola",
+        "20g de beurre",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Cuisez le potimarron 12 min à la vapeur, puis mixez-le avec la crème, du sel et du poivre.",
+        "Faites revenir l'oignon rouge et les gnocchis crus dans le beurre et l'huile pendant 5-6 min.",
+        "Versez la crème de potimarron sur les gnocchis dorés et mélangez 1 min.",
+        "Servez chaud parsemé d'éclats de Gorgonzola."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 24",
+      "timePrep": "15 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-025",
+      "name": "Poêlée de Gnocchis au Pesto de Chou Kale et Graines de Tournesol",
+      "ingredients": [
+        "500g de gnocchis frais",
+        "100g de feuilles de chou kale",
+        "40g de parmesan",
+        "30g de graines de tournesol",
+        "1 gousse d'ail",
+        "5cl d'huile d'olive",
+        "15g de beurre",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Blanchissez le kale 2 min. Mixez-le avec le parmesan, le tournesol, l'ail, l'huile, le sel et le poivre.",
+        "Faites dorer les gnocchis frais dans la poêle avec le beurre pendant 5-6 min.",
+        "Baissez le feu, ajoutez 3 c.à.s de pesto de kale et 2 c.à.s d'eau chaude pour lier. Mélangez 1 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 25",
+      "timePrep": "15 min",
+      "timeCook": "10 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-026",
+      "name": "Gratin de Penne au Potimarron, Sauge et Chèvre Frais",
+      "ingredients": [
+        "300g de pâtes Penne",
+        "400g de chair de potimarron",
+        "150g de chèvre frais",
+        "15cl de crème liquide",
+        "6 feuilles de sauge",
+        "40g de fromage râpé",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Cuisez le potimarron 12 min. Mixez la moitié avec la crème et le chèvre. Gardez le reste en morceaux.",
+        "Cuisez les pâtes al dente. Préchauffez le fou à 200°C.",
+        "Mélangez les pâtes, la sauce, les morceaux de potimarron et la sauge ciselée.",
+        "Versez dans un plat, saupoudrez de fromage râpé et enfournez pour 15 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 26",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-027",
+      "name": "Gratin de Crozets aux Poireaux et Reblochon",
+      "ingredients": [
+        "250g de crozets",
+        "2 poireaux",
+        "1/2 Reblochon",
+        "20cl de crème fraîche épaisse",
+        "1 oignon",
+        "15g de beurre",
+        "sel",
+        "poivre",
+        "muscade"
+      ],
+      "steps": [
+        "Faites cuire les crozets 15 min à l'eau bouillante salée. Égouttez.",
+        "Faites revenir l'oignon et les poireaux émincés dans le beurre pendant 10 min.",
+        "Mélangez les crozets, les poireaux, la crème fraîche et la muscade.",
+        "Versez dans un plat, disposez les lamelles de Reblochon sur le dessus et enfournez 15 min à 200°C."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 27",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-028",
+      "name": "Gratin de Butternut au Parmesan et Crumble de Pain d'Épices",
+      "ingredients": [
+        "1 courge butternut (1.2 kg)",
+        "3 tranches de pain d'épices",
+        "50g de parmesan",
+        "20cl de crème liquide",
+        "30g de beurre froid",
+        "1 gousse d'ail",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Cuisez la butternut en cubes 15 min à la vapeur. Préchauffez le four à 180°C.",
+        "Préparez le crumble en sablant le pain d'épices émietté, le parmesan et le beurre froid.",
+        "Écrasez grossièrement la butternut dans le plat frotté à l'ail, incorporez la crème, salez, poivrez.",
+        "Répartissez le crumble sur le dessus et enfournez pour 20 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 28",
+      "timePrep": "20 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-029",
+      "name": "Tartiflette Végétarienne au Reblochon et Tofu Fumé",
+      "ingredients": [
+        "1kg de pommes de terre",
+        "200g de tofu fumé",
+        "2 gros oignons",
+        "1 Reblochon",
+        "3 c.à.s de crème fraîche épaisse",
+        "10cl de vin blanc",
+        "1 c.à.s d'huile",
+        "poivre"
+      ],
+      "steps": [
+        "Cuisez les pommes de terre en dés 15 min à l'eau. Préchauffez le four à 200°C.",
+        "Faites revenir les oignons émincés et le tofu fumé en dés 8 min à la poêle. Déglacez au vin blanc.",
+        "Mélangez les pommes de terre, le mélange oignons/tofu et la crème dans un plat. Poivrez.",
+        "Coupez le Reblochon en deux dans l'épaisseur, posez-le sur le dessus et enfournez pour 20 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 29",
+      "timePrep": "20 min",
+      "timeCook": "30 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-030",
+      "name": "Gratin de Chou-Fleur Léguer à la Crème de Moutarde",
+      "ingredients": [
+        "1 gros chou-fleur",
+        "25cl de crème liquide",
+        "2 c.à.s de moutarde douce",
+        "70g de fromage râpé",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Cuisez les bouquets de chou-fleur 10-12 min à la vapeur. Préchauffez le four à 200°C.",
+        "Mélangez la crème et la moutarde dans un bol, salez et poivrez.",
+        "Disposez le chou-fleur dans un plat à gratin, nappez de crème à la moutarde.",
+        "Saupoudrez de fromage râpé et enfournez pour 15 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 30",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-031",
+      "name": "Galettes de Pommes de Terre et Panais (Rösti d'Hiver)",
+      "ingredients": [
+        "400g de pommes de terre",
+        "300g de panais",
+        "1 œuf",
+        "2 c.à.s de farine",
+        "1 petit oignon",
+        "2 c.à.s d'huile de tournesol",
+        "sel",
+        "poivre",
+        "muscade"
+      ],
+      "steps": [
+        "Râpez les pommes de terre, le panais et l'oignon. Pressez-les fort dans un torchon propre.",
+        "Dans un saladier, mélangez les légumes pressés, l'œuf, la farine, la muscade, le sel et le poivre.",
+        "Formez des galettes de 1cm d'épaisseur dans une poêle avec l'huile chaude.",
+        "Laissez cuire à feu moyen 6-7 min de chaque côté jusqu'à ce qu'elles soient bien croustillantes."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 31",
+      "timePrep": "15 min",
+      "timeCook": "15 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-032",
+      "name": "Palets de Polenta Dorés aux Poireaux et Parmesan",
+      "ingredients": [
+        "150g de polenta précuite",
+        "600ml de lait",
+        "1 poireau",
+        "50g de parmesan",
+        "20g de beurre",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Faites revenir le poireau émincé dans le beurre pendant 10 min.",
+        "Portez le lait à ébullition, versez la polenta en pluie et faites épaissir 3 min en remuant.",
+        "Incorporez les poireaux et le parmesan. Étalez sur 1,5cm d'épaisseur et laissez figer 30 min.",
+        "Découpez des disques ou carrés et faites-les dorer à la poêle dans l'huile d'olive 3-4 min par face."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 32",
+      "timePrep": "15 min + 30 min de repos",
+      "timeCook": "15 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-033",
+      "name": "Crumble de Butternut, Chèvre et Noisettes",
+      "ingredients": [
+        "1 courge butternut",
+        "150g de bûche de chèvre",
+        "80g de farine",
+        "60g de beurre froid",
+        "40g de noisettes décortiquées",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Cuisez la butternut en dés 12-15 min. Préchauffez le four à 180°C.",
+        "Disposez la butternut et les morceaux de chèvre dans un plat. Salez et poivrez.",
+        "Sablez la farine, le beurre froid et les noisettes concassées du bout des doigts.",
+        "Répartissez le crumble sur les légumes et enfournez pour 25 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 33",
+      "timePrep": "20 min",
+      "timeCook": "40 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-034",
+      "name": "Hachis Parmentier Végétarien aux Lentilles et Écrasé de Courge",
+      "ingredients": [
+        "400g de lentilles cuites au naturel",
+        "1 oignon",
+        "1 carotte",
+        "2 c.à.s de concentré de tomates",
+        "500g de pommes de terre",
+        "500g de chair de potimarron",
+        "20g de beurre",
+        "10cl de lait",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre",
+        "chapelure"
+      ],
+      "steps": [
+        "Cuisez les pommes de terre et la courge 20 min, puis écrasez-les en purée avec le beurre et le lait.",
+        "Faites revenir l'oignon et la carotte en dés 7 min. Ajoutez les lentilles et le concentré de tomates.",
+        "Dans un plat, étalez le mélange de lentilles puis recouvrez avec la purée de courge.",
+        "Saupoudrez de chapelure et enfournez à 200°C pendant 15 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 34",
+      "timePrep": "20 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-035",
+      "name": "Gratin de Crozets aux Champignons, Poireaux et Comté",
+      "ingredients": [
+        "250g de crozets au sarrasin",
+        "250g de champignons de Paris",
+        "1 gros poireau",
+        "20cl de crème liquide",
+        "80g de Comté râpé",
+        "15g de beurre",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Cuisez les crozets 15 min. Faites revenir le poireau et les champignons émincés dans le beurre 10 min.",
+        "Préchauffez le four à 200°C. Mélangez les crozets, la poêlée, la crème et la moitié du Comté.",
+        "Versez le tout dans un plat à gratin, ajoutez le reste de Comté sur le dessus.",
+        "Enfournez pour 15 min jusqu'à ce que le gratin soit bien doré."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 35",
+      "timePrep": "15 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-036",
+      "name": "Choux de Bruxelles Rôtis au Four, Sirop d'Érable et Noix",
+      "ingredients": [
+        "600g de choux de Bruxelles",
+        "2 c.à.s d'huile d'olive",
+        "2 c.à.s de sirop d'érable",
+        "40g de cerneaux de noix",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffez le four à 200°C. Coupez la base des choux et coupez-les en deux.",
+        "Mélangez-les avec l'huile, le sirop d'érable, le sel et le poivre dans un saladier.",
+        "Étalez-les sur une plaque, face coupée vers le bas. Enfournez 20 min.",
+        "Ajoutez les noix concassées sur la plaque, mélangez et poursuivez la cuisson 5 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 36",
+      "timePrep": "10 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-037",
+      "name": "Gratin de Ravioles du Dauphiné aux Poireaux",
+      "ingredients": [
+        "1 paquet de ravioles (240g)",
+        "2 gros poireaux",
+        "20cl de crème fraîche épaisse",
+        "50g de Comté râpé",
+        "15g de beurre",
+        "sel",
+        "poivre",
+        "muscade"
+      ],
+      "steps": [
+        "Préchauffez le four à 190°C. Faites fondre les poireaux émincés dans le beurre 12-15 min.",
+        "Incorporez la crème fraîche, la muscade, le sel et le poivre à la fondue de poireaux.",
+        "Dans un plat, alternez les couches de poireaux à la crème et les plaques de ravioles.",
+        "Terminez par le fromage râpé et enfournez pour 15 à 20 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 37",
+      "timePrep": "15 min",
+      "timeCook": "20 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-038",
+      "name": "Courge Butternut Rôtie en \"Hasselback\" au Parmesan et Thym",
+      "ingredients": [
+        "1 belle courge butternut",
+        "2 c.à.s d'huile d'olive",
+        "40g de parmesan",
+        "1 gousse d'ail",
+        "branches de thym",
+        "fleur de sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffez le four à 200°C. Coupez la courge en deux, videz-la et épluchez la peau.",
+        "Faites des entailles transversales tous les 3-4mm sans couper la base.",
+        "Badigeonnez d'un mélange d'huile, ail, sel et poivre. Enfournez 35 min.",
+        "Saupoudrez de parmesan et de thym dans les fentes et remettez au four 10 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 38",
+      "timePrep": "15 min",
+      "timeCook": "45 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-039",
+      "name": "Tarte Fine aux Oignons Caramélisés, Pommes et Chèvre Frais",
+      "ingredients": [
+        "1 pâte feuilletée",
+        "3 gros oignons",
+        "1 pomme",
+        "150g de chèvre frais",
+        "1 c.à.s de miel",
+        "1 c.à.s d'huile d'olive",
+        "thym frais",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Faites fondre les oignons émincés dans l'huile 15 min. Ajoutez le miel en fin de cuisson.",
+        "Préchauffez le four à 200°C. Déroulez la pâte feuilletée et piquez le fond.",
+        "Étalez les oignons, disposez les lamelles de pomme très fines et émiettez le chèvre frais.",
+        "Parsemez de thym frais et enfournez pour 20 à 25 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 39",
+      "timePrep": "25 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-040",
+      "name": "Quiche d'Hiver aux Épinards, Roquefort et Noix",
+      "ingredients": [
+        "1 pâte brisée",
+        "270g d'épinards frais",
+        "70g de Roquefort",
+        "35g de cerneaux de noix",
+        "2 œufs",
+        "13cl de crème liquide",
+        "7cl de lait",
+        "7g de beurre",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffez le four à 180°C. Faites tomber les épinards dans le beurre 5 min, puis égouttez-les bien.",
+        "Fouettez les œufs, la crème, le lait, le poivre et un peu de sel.",
+        "Disposez les épinards au fond de la pâte, émiettez le Roquefort et ajoutez les morceaux de noix.",
+        "Versez l'appareil liquide par-dessus et enfournez pour 35 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 40",
+      "timePrep": "15 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-041",
+      "name": "Cake Salé au Potiron, Feta et Graines de Courge",
+      "ingredients": [
+        "135g de chair de potiron",
+        "100g de farine",
+        "2/3 de sachet de levure chimique",
+        "2 œufs",
+        "7cl de lait",
+        "3,5cl d'huile d'olive",
+        "65g de feta",
+        "20g de graines de courge",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Coupez le potiron en petits dés et faites-les précuire 8-10 min à la poêle. Préchauffez le four à 180°C.",
+        "Mélangez la farine et la levure dans un saladier. Fouettez les œufs, le lait et l'huile dans un autre bol.",
+        "Mélangez les deux préparations, puis incorporez le potiron, la feta en dés et les 2/3 des graines de courge.",
+        "Versez dans un moule à cake, déposez le reste des graines sur le dessus et enfournez 45 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 41",
+      "timePrep": "20 min",
+      "timeCook": "45 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-042",
+      "name": "Tarte Rustique aux Poireaux, Moutarde à l'Ancienne et Comté",
+      "ingredients": [
+        "1 pâte brisée",
+        "3 poireaux",
+        "2 c.à.s de moutarde à l'ancienne",
+        "80g de Comté râpé",
+        "15g de beurre",
+        "1 c.à.s de crème fraîche",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Faites fondre les poireaux émincés dans le beurre 15 min. Ajoutez la crème fraîche en fin de cuisson.",
+        "Préchauffez le four à 190°C. Déroulez la pâte brisée sur une plaque de cuisson.",
+        "Étalez la moutarde en laissant un bord de 4cm. Ajoutez les poireaux et saupoudrez de Comté.",
+        "Repliez les bords vides de la pâte vers le centre et enfournez pour 30 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 42",
+      "timePrep": "20 min",
+      "timeCook": "30 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-043",
+      "name": "Tarte au Chou Kale, Ricotta et Pignons de Pin",
+      "ingredients": [
+        "1 pâte feuilletée",
+        "150g de chou kale",
+        "250g de Ricotta",
+        "2 œufs",
+        "20g de pignons de pin",
+        "1 gousse d'ail",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre",
+        "piment d'Espelette"
+      ],
+      "steps": [
+        "Préchauffez le four à 190°C. Faites revenir l'ail et le chou kale en lanières dans l'huile pendant 6-8 min.",
+        "Fouettez la ricotta avec les œufs entiers, le sel, le poivre et le piment d'Espelette.",
+        "Incorporez le chou kale cuit à la ricotta, puis versez le tout sur la pâte feuilletée.",
+        "Parsemez de pignons de pin et enfournez pour 30 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 43",
+      "timePrep": "20 min",
+      "timeCook": "30 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-044",
+      "name": "Tourte Hivernale aux Pommes de Terre, Champignons et Cantal",
+      "ingredients": [
+        "2 pâtes feuilletées",
+        "300g de pommes de terre",
+        "200g de champignons de Paris",
+        "1 oignon",
+        "100g de Cantal",
+        "12cl de crème fraîche épaisse",
+        "1 jaune d'œuf",
+        "12g de beurre",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Précuisez les pommes de terre en fines rondelles 5 min à l'eau. Faites revenir l'oignon et les champignons 8 min.",
+        "Foncez un moule avec la première pâte. Alternez pommes de terre, champignons, crème et Cantal en lamelles.",
+        "Recouvrez avec la deuxième pâte. Soudez les bords et faites une cheminée au centre.",
+        "Dorez au jaune d'œuf et enfournez à 180°C pendant 40-45 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 44",
+      "timePrep": "25 min",
+      "timeCook": "45 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-045",
+      "name": "Tarte d'Hiver au Potimarron, Oignons Rouges et Feta",
+      "ingredients": [
+        "1 pâte brisée",
+        "400g de potimarron en tranches fines",
+        "1 gros oignon rouge",
+        "100g de feta",
+        "1 c.à.s d'huile d'olive",
+        "1 c.à.s de miel",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffez le four à 190°C. Foncez le moule avec la pâte.",
+        "Faites revenir l'oignon émincé et les tranches de potimarron dans l'huile et le miel pendant 10 min.",
+        "Disposez les légumes sur le fond de tarte, émiettez la feta par-dessus, poivrez et enfournez pour 25 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 45",
+      "timePrep": "20 min",
+      "timeCook": "35 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-046",
+      "name": "Clafoutis Salé aux Poireaux et Fromage de Chèvre",
+      "ingredients": [
+        "2 poireaux",
+        "3 œufs",
+        "20cl de lait",
+        "10cl de crème liquide",
+        "40g de farine",
+        "100g de bûche de chèvre",
+        "15g de beurre",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Faites revenir les poireaux émincés dans le beurre 12 min. Préchauffez le four à 180°C.",
+        "Fouettez les œufs avec la farine, puis ajoutez le lait et la crème petit à petit. Assaisonnez.",
+        "Répartissez les poireaux dans un plat beurré, versez l'appareil liquide et ajoutez les rondelles de chèvre.",
+        "Enfournez pour 30 min jusqu'à ce que le clafoutis soit bien doré."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 46",
+      "timePrep": "15 min",
+      "timeCook": "30 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-047",
+      "name": "Cake Moelleux aux Épinards, Ricotta et Pignons de Pin",
+      "ingredients": [
+        "135g d'épinards frais",
+        "165g de Ricotta",
+        "100g de farine",
+        "2/3 de sachet de levure chimique",
+        "2 œufs",
+        "3,5cl d'huile d'olive",
+        "20g de pignons de pin",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Faites tomber les épinards 3 min à sec, puis hachez-les. Préchauffez le four à 180°C.",
+        "Mélangez les œufs, la ricotta et l'huile d'olive dans un bol. Ajoutez la farine et la levure.",
+        "Incorporez les épinards et la moitié des pignons. Versez dans le moule.",
+        "Parsemez du reste de pignons et enfournez pour 45 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 47",
+      "timePrep": "15 min",
+      "timeCook": "45 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-048",
+      "name": "Tarte Fine aux Oignons Rouges, Figue Sèche et Fromage de Chèvre",
+      "ingredients": [
+        "1 pâte feuilletée",
+        "3 gros oignons rouges",
+        "4 figues sèches",
+        "120g de chèvre en bûche",
+        "1 c.à.s de vinaigre balsamique",
+        "1 c.à.s d'huile d'olive",
+        "1 c.à.s de miel",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Faites revenir les oignons émincés dans l'huile 12 min. Ajoutez le vinaigre et le miel pendant 3 min.",
+        "Préchauffez le four à 200°C. Déroulez la pâte et étalez la compotée d'oignons.",
+        "Répartissez les lamelles de figues sèches et les rondelles de chèvre. Enfournez pour 20 à 25 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 48",
+      "timePrep": "20 min",
+      "timeCook": "25 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-049",
+      "name": "Potimarron Farci au Quinoa, Champignons et Comté",
+      "ingredients": [
+        "1 beau potimarron",
+        "100g de quinoa sec",
+        "150g de champignons de Paris",
+        "1 oignon",
+        "70g de Comté râpé",
+        "1 c.à.s d'huile d'olive",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Préchauffez le four à 180°C. Coupez un chapeau au potimarron, videz les graines et enfournez-le 20 min.",
+        "Cuisez le quinoa à l'eau. Faites revenir l'oignon et les champignons émincés 8 min à la poêle.",
+        "Mélangez le quinoa, les champignons, l'oignon et la moitié du Comté.",
+        "Farcissez le potimarron pré-cuit, parsemez du reste de Comté et enfournez à nouveau pour 25-30 min."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 49",
+      "timePrep": "20 min",
+      "timeCook": "50 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "veg-ah-pdf-050",
+      "name": "Omelette d'Hiver aux Poireaux et Brie Coulant",
+      "ingredients": [
+        "10 œufs frais",
+        "2 blancs de poireaux",
+        "120g de Brie",
+        "30g de beurre",
+        "4 c.à.s de lait",
+        "sel",
+        "poivre"
+      ],
+      "steps": [
+        "Faites revenir le poireau en rondelles dans la moitié du beurre pendant 10 min.",
+        "Fouettez les œufs avec le lait, le sel et le poivre. Faites fondre le reste de beurre à feu moyen.",
+        "Versez les œufs. Ajoutez les poireaux cuits et les tranches de Brie sur une moitié de l'omelette.",
+        "Repliez l'omelette en deux, couvrez 1 à 2 min à feu très doux pour faire fondre le fromage et servez."
+      ],
+      "robot": [],
+      "notes": [],
+      "source": "50 Recettes Végétariennes — Automne / Hiver, recette 50",
+      "timePrep": "10 min",
+      "timeCook": "15 min",
+      "servings": "4 personnes",
+      "regime": "vegetarien",
+      "sous_regime": "automne_hiver"
     }
   ],
   "plan": [
