@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BASE_PATH } from "@/lib/base-path";
 import { InstallApp } from "@/components/install-app";
-import { UtensilsCrossed, CookingPot, ShoppingCart, Droplets, Sprout, Sparkles, Timer, Martini, PartyPopper, BatteryLow, Bot, Flower2, Sun, Leaf, Snowflake, type LucideIcon } from "lucide-react";
+import { UtensilsCrossed, CookingPot, ShoppingCart, Droplets, Sprout, Sparkles, Timer, Martini, PartyPopper, BatteryLow, Bot, Flower2, Sun, Leaf, Snowflake, GraduationCap, type LucideIcon } from "lucide-react";
 
 const categories: [string, string, string, LucideIcon][] = [
   ["Recettes", "#8FA89B", "/recettes", UtensilsCrossed],
@@ -25,6 +25,7 @@ const categories: [string, string, string, LucideIcon][] = [
   ["Hiver", "#E1EDF2", "/recettes?filter=hiver", Snowflake],
   ["🥦 Végan", "#E2F0D9", "/vegan", Sprout],
   ["🥦 Végétarien", "#D0DBCE", "/vegetarien", Sprout],
+  ["🎓 Étudiant & Petit Budget", "#E6DFD3", "/etudiant-petit-budget", GraduationCap],
   ["🎉 Fêtes", "#FAD2CB", "/fetes", PartyPopper],
 ];
 
