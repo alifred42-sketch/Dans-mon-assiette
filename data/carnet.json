@@ -63385,6 +63385,786 @@
       "robot": [],
       "notes": [],
       "source": "50 recettes végétariennes — Printemps / Été, recette 50"
+    },
+    {
+      "id": "vegan-pe-020",
+      "name": "Wraps croustillants aux crudités et houmous",
+      "ingredients": [
+        "4 grandes tortillas de blé ou de maïs",
+        "8 c. à soupe de houmous nature",
+        "2 carottes râpées",
+        "1 avocat coupé en tranches",
+        "2 poignées de jeunes pousses d’épinards",
+        "1/2 chou rouge finement émincé"
+      ],
+      "steps": [
+        "Étaler 2 c. à soupe de houmous sur chaque tortilla.",
+        "Répartir les pousses d’épinards, les carottes, le chou rouge et l’avocat au centre.",
+        "Rabattre les côtés puis rouler fermement les tortillas. Couper en deux en biais."
+      ],
+      "timeCook": "15 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 3"
+    },
+    {
+      "id": "vegan-pe-021",
+      "name": "Pâtes de printemps aux asperges vertes et citron",
+      "ingredients": [
+        "400 g de pâtes (penne ou spaghetti)",
+        "800 g d’asperges vertes",
+        "4 c. à soupe d’huile d’olive",
+        "Le zeste et le jus d’1 citron jaune bio",
+        "2 gousses d’ail émincées",
+        "Sel et poivre noir"
+      ],
+      "steps": [
+        "Couper les asperges en tronçons de 3 cm en gardant les pointes entières. Cuire les pâtes dans l’eau salée.",
+        "Faire revenir l’ail et les asperges dans l’huile 5 à 7 min.",
+        "Ajouter les pâtes égouttées, le citron et une louche d’eau de cuisson. Mélanger 1 min et poivrer."
+      ],
+      "timeCook": "10 min de préparation + 12 à 15 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 4"
+    },
+    {
+      "id": "vegan-pe-022",
+      "name": "Tartines d’avocat à la fraise et au vinaigre balsamique",
+      "ingredients": [
+        "8 tranches de pain de campagne ou de seigle",
+        "2 avocats mûrs",
+        "200 g de fraises fraîches",
+        "2 c. à café de crème de vinaigre balsamique",
+        "2 c. à soupe de graines de tournesol ou de sésame",
+        "Un filet de jus de citron",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Faire légèrement griller le pain.",
+        "Écraser l’avocat avec le jus de citron, le sel et le poivre.",
+        "Étaler sur les tartines, ajouter les fraises en rondelles, le balsamique et les graines."
+      ],
+      "timeCook": "10 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 5"
+    },
+    {
+      "id": "vegan-pe-023",
+      "name": "Poêlée de courgettes au lait de coco et curry",
+      "ingredients": [
+        "4 courgettes moyennes",
+        "300 ml de lait de coco léger",
+        "2 c. à café de curry doux",
+        "2 oignons jaunes émincés",
+        "2 c. à soupe d’huile de coco ou de tournesol",
+        "Quelques feuilles de coriandre fraîche",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Faire revenir les oignons dans l’huile 3 min.",
+        "Ajouter les courgettes en demi-lunes et le curry. Faire sauter 8 min.",
+        "Verser le lait de coco et laisser mijoter 5 min. Assaisonner et parsemer de coriandre. Servir avec du riz si souhaité."
+      ],
+      "timeCook": "10 min de préparation + 16 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 7"
+    },
+    {
+      "id": "vegan-pe-024",
+      "name": "Bowl estival au tofu grillé et aux pêches",
+      "ingredients": [
+        "400 g de tofu ferme",
+        "2 pêches ou nectarines",
+        "200 g d’edamames cuits et écossés",
+        "200 g de jeunes pousses de salade",
+        "2 c. à soupe de sauce soja ou tamari",
+        "2 c. à soupe de sirop d’érable",
+        "2 c. à soupe d’huile de sésame"
+      ],
+      "steps": [
+        "Mélanger la sauce soja et le sirop d’érable. Ajouter le tofu en cubes et laisser mariner 10 min.",
+        "Faire dorer le tofu dans l’huile de sésame 5 à 6 min. Réserver.",
+        "Saisir les quartiers de pêche 1 à 2 min par côté. Répartir salade, edamames, tofu et pêches dans quatre bols."
+      ],
+      "timeCook": "15 min de préparation + 10 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 8"
+    },
+    {
+      "id": "vegan-pe-025",
+      "name": "Rouleaux de printemps aux légumes croquants",
+      "ingredients": [
+        "12 galettes de riz",
+        "2 carottes en fins bâtonnets",
+        "1 concombre en fins bâtonnets",
+        "100 g de vermicelles de riz cuits et refroidis",
+        "Menthe et basilic thaï frais",
+        "4 c. à soupe de beurre de cacahuète",
+        "2 c. à soupe de sauce soja",
+        "2 c. à soupe d’eau tiède",
+        "Un filet de jus de citron"
+      ],
+      "steps": [
+        "Mélanger le beurre de cacahuète, la sauce soja, l’eau et le citron pour préparer la sauce.",
+        "Ramollir une galette de riz dans l’eau tiède. Déposer un peu de vermicelles, de carotte, de concombre et d’herbes.",
+        "Rabattre les côtés et rouler fermement. Répéter et servir avec la sauce cacahuète."
+      ],
+      "timeCook": "25 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 10"
+    },
+    {
+      "id": "vegan-pe-026",
+      "name": "Salade italienne de melon, concombre et menthe",
+      "ingredients": [
+        "1 melon",
+        "1 concombre",
+        "100 g d’olives noires dénoyautées",
+        "1 poignée de feuilles de menthe fraîche",
+        "4 c. à soupe d’huile d’olive",
+        "2 c. à soupe de vinaigre balsamique blanc ou de cidre",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Couper le melon en cubes et le concombre en rondelles.",
+        "Mélanger l’huile, le vinaigre, le sel et le poivre.",
+        "Ajouter les olives et la menthe, assaisonner et servir bien frais."
+      ],
+      "timeCook": "15 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 11"
+    },
+    {
+      "id": "vegan-pe-027",
+      "name": "Tartines de houmous aux betteraves et radis croquants",
+      "ingredients": [
+        "8 tranches de pain complet ou aux céréales",
+        "200 g de houmous",
+        "2 petites betteraves cuites",
+        "12 radis roses",
+        "2 poignées de pousses de luzerne ou de roquette",
+        "Un filet de jus de citron",
+        "Sel"
+      ],
+      "steps": [
+        "Faire légèrement toaster le pain.",
+        "Étaler le houmous sur les tartines.",
+        "Ajouter les betteraves en lamelles, les radis en rondelles et les pousses. Terminer par un filet de citron et un peu de sel."
+      ],
+      "timeCook": "10 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 12"
+    },
+    {
+      "id": "vegan-pe-028",
+      "name": "Crème froide d’avocat et de courgette sans cuisson",
+      "ingredients": [
+        "2 avocats mûrs",
+        "2 petites courgettes tendres",
+        "200 ml de crème de soja ou de coco légère",
+        "Le jus d’1 citron vert",
+        "2 gousses d’ail",
+        "8 à 10 feuilles de basilic",
+        "100 ml d’eau glacée environ",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Mettre les avocats, les courgettes crues en dés, la crème végétale, l’ail, le basilic et le citron dans le blender.",
+        "Mixer en ajoutant l’eau glacée petit à petit jusqu’à obtenir une crème lisse.",
+        "Assaisonner et réserver 30 min au frais avant de servir."
+      ],
+      "timeCook": "10 min de préparation + 30 min de repos au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 13"
+    },
+    {
+      "id": "vegan-pe-029",
+      "name": "Salade de lentilles vertes aux fraises et aux noix",
+      "ingredients": [
+        "300 g de lentilles vertes",
+        "200 g de fraises",
+        "80 g de cerneaux de noix",
+        "100 g de jeunes pousses d’épinards",
+        "4 c. à soupe d’huile de noix ou d’olive",
+        "2 c. à soupe de vinaigre de cidre",
+        "2 c. à café de moutarde douce",
+        "Sel"
+      ],
+      "steps": [
+        "Rincer les lentilles et les cuire 20 à 25 min dans trois fois leur volume d’eau non salée. Égoutter et laisser tiédir.",
+        "Émulsionner la moutarde, le vinaigre, l’huile et le sel.",
+        "Mélanger les lentilles et les épinards avec la vinaigrette. Ajouter délicatement les fraises et les noix juste avant de servir."
+      ],
+      "timeCook": "10 min de préparation + 20 à 25 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 14"
+    },
+    {
+      "id": "vegan-pe-030",
+      "name": "Taboulé de chou-fleur express",
+      "ingredients": [
+        "1 chou-fleur moyen (fleurettes seulement)",
+        "2 tomates",
+        "1/2 concombre",
+        "2 bouquets de persil plat",
+        "6 c. à soupe d’huile d’olive",
+        "Le jus de 2 gros citrons",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Mixer le chou-fleur par impulsions jusqu’à obtenir une texture de semoule.",
+        "Couper les tomates et le concombre en petits dés, puis hacher le persil.",
+        "Mélanger tous les ingrédients avec l’huile et le citron. Assaisonner et laisser reposer 1 h au frais."
+      ],
+      "timeCook": "15 min de préparation + 1 h de repos au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 16"
+    },
+    {
+      "id": "vegan-pe-031",
+      "name": "Salade de pâtes méditerranéenne au pesto de roquette",
+      "ingredients": [
+        "360 g de pâtes (fusilli ou penne)",
+        "200 g de tomates cerises",
+        "60 g de pignons de pin",
+        "100 g de roquette",
+        "2 gousses d’ail",
+        "60 g de cerneaux de noix ou de pignons",
+        "8 c. à soupe d’huile d’olive",
+        "2 c. à soupe de jus de citron",
+        "Sel"
+      ],
+      "steps": [
+        "Cuire les pâtes al dente, égoutter et rincer à l’eau froide.",
+        "Mixer la roquette, l’ail, les noix ou pignons, le citron, le sel et l’huile pour obtenir le pesto.",
+        "Mélanger les pâtes froides avec le pesto et les tomates. Parsemer de pignons torréfiés."
+      ],
+      "timeCook": "15 min de préparation + cuisson des pâtes",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 18"
+    },
+    {
+      "id": "vegan-pe-032",
+      "name": "Ceviche végétal de cœurs de palmier au citron vert",
+      "ingredients": [
+        "2 boîtes de cœurs de palmier (environ 800 g égouttés)",
+        "1 oignon rouge",
+        "2 poivrons rouges ou verts",
+        "2 avocats",
+        "Le jus de 4 citrons verts",
+        "1 poignée de coriandre fraîche",
+        "2 c. à soupe d’huile d’olive",
+        "Sel"
+      ],
+      "steps": [
+        "Égoutter et couper les cœurs de palmier en rondelles. Émincer l’oignon et couper les poivrons en petits dés.",
+        "Mélanger avec le jus de citron, l’huile et le sel. Laisser mariner 30 min au réfrigérateur.",
+        "Ajouter délicatement les dés d’avocat et la coriandre juste avant de servir."
+      ],
+      "timeCook": "15 min de préparation + 30 min de marinade au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 19"
+    },
+    {
+      "id": "vegan-pe-033",
+      "name": "Poivrons farcis au quinoa et tomates séchées",
+      "ingredients": [
+        "4 grands poivrons rouges ou jaunes",
+        "200 g de quinoa",
+        "12 tomates séchées à l’huile",
+        "2 c. à soupe de câpres",
+        "2 poignées de pignons de pin",
+        "2 c. à soupe d’huile d’olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 190 °C. Rincer le quinoa et le cuire environ 12 min dans deux fois son volume d’eau salée.",
+        "Couper les poivrons en deux dans la longueur et retirer les graines.",
+        "Mélanger le quinoa cuit avec les tomates séchées, les câpres et les pignons. Assaisonner et farcir les poivrons.",
+        "Arroser d’huile et enfourner environ 30 min, jusqu’à ce que les poivrons soient tendres."
+      ],
+      "timeCook": "15 min de préparation + 30 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 21"
+    },
+    {
+      "id": "vegan-pe-034",
+      "name": "Salade d’été de pastèque, menthe et feta végétale",
+      "ingredients": [
+        "800 g de pastèque sans pépins",
+        "200 g de feta végétale",
+        "1 oignon rouge",
+        "1 poignée de feuilles de menthe",
+        "4 c. à soupe d’huile d’olive",
+        "Un filet de jus de citron",
+        "Sel"
+      ],
+      "steps": [
+        "Couper la pastèque et la feta végétale en cubes. Émincer très finement l’oignon.",
+        "Répartir la pastèque dans un plat, ajouter la feta, l’oignon et la menthe.",
+        "Arroser d’huile et de citron, saler légèrement et servir immédiatement."
+      ],
+      "timeCook": "10 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 22"
+    },
+    {
+      "id": "vegan-pe-035",
+      "name": "Tartinade d’artichaut, amandes et basilic",
+      "ingredients": [
+        "2 boîtes de cœurs d’artichaut (environ 800 g égouttés)",
+        "80 g d’amandes",
+        "20 feuilles de basilic frais",
+        "2 gousses d’ail",
+        "4 c. à soupe d’huile d’olive",
+        "Le jus d’1 citron",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Faire torréfier les amandes à sec 2 min, puis laisser refroidir.",
+        "Mixer les artichauts, les amandes, le basilic, l’ail, le citron et l’huile.",
+        "Mixer par impulsions pour garder de la texture ou plus longtemps pour une crème lisse. Assaisonner et servir frais."
+      ],
+      "timeCook": "10 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 23"
+    },
+    {
+      "id": "vegan-pe-036",
+      "name": "Salade de tomates à l’huile de sésame et au gingembre",
+      "ingredients": [
+        "800 g de tomates anciennes",
+        "2 cm de gingembre frais",
+        "2 c. à soupe d’huile de sésame grillé",
+        "2 c. à soupe de sauce soja allégée",
+        "2 c. à soupe de graines de sésame",
+        "2 oignons verts (cébettes)"
+      ],
+      "steps": [
+        "Couper les tomates en tranches épaisses ou en quartiers et les disposer dans un plat.",
+        "Mélanger le gingembre râpé, la sauce soja et l’huile de sésame.",
+        "Verser sur les tomates et décorer de cébettes et de graines de sésame."
+      ],
+      "timeCook": "10 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 25"
+    },
+    {
+      "id": "vegan-pe-037",
+      "name": "Burgers de portobello grillés",
+      "ingredients": [
+        "4 gros champignons portobello",
+        "4 pains à burger végétaliens",
+        "2 tomates",
+        "2 poignées de roquette",
+        "4 c. à soupe d’huile d’olive",
+        "2 c. à soupe de vinaigre balsamique",
+        "2 gousses d’ail écrasées",
+        "Sel"
+      ],
+      "steps": [
+        "Mélanger l’huile, le vinaigre, l’ail et le sel. Badigeonner les champignons et laisser mariner 10 min.",
+        "Griller les champignons 4 à 5 min de chaque côté. Faire griller l’intérieur des pains.",
+        "Garnir chaque pain de roquette, d’un champignon et de rondelles de tomate."
+      ],
+      "timeCook": "15 min de préparation + 10 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 26"
+    },
+    {
+      "id": "vegan-pe-038",
+      "name": "Risotto de printemps aux petits pois et à la menthe",
+      "ingredients": [
+        "300 g de riz Arborio",
+        "300 g de petits pois frais ou surgelés",
+        "2 oignons blancs",
+        "1,2 l de bouillon de légumes chaud",
+        "2 c. à soupe d’huile d’olive",
+        "8 à 10 feuilles de menthe fraîche",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Faire revenir les oignons hachés dans l’huile 3 min sans les colorer.",
+        "Ajouter le riz et remuer 1 min. Verser le bouillon chaud louche par louche en remuant régulièrement.",
+        "Après 10 min, ajouter les petits pois. Cuire environ 18 min au total, puis ajouter la menthe, assaisonner et couvrir 2 min."
+      ],
+      "timeCook": "10 min de préparation + 18 à 20 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 27"
+    },
+    {
+      "id": "vegan-pe-039",
+      "name": "Salade de brocolis crus, pommes et canneberges",
+      "ingredients": [
+        "1 gros brocoli",
+        "1 pomme rouge",
+        "60 g de canneberges séchées",
+        "60 g de graines de tournesol",
+        "6 c. à soupe de yaourt de soja nature",
+        "2 c. à soupe de jus de citron",
+        "2 c. à café de sirop d’érable",
+        "Sel"
+      ],
+      "steps": [
+        "Détailler le brocoli en très petites fleurettes, laver et sécher.",
+        "Mélanger le brocoli, la pomme en dés, les canneberges et les graines de tournesol.",
+        "Mélanger le yaourt de soja, le citron, le sirop d’érable et le sel. Incorporer à la salade et réserver 20 min au frais."
+      ],
+      "timeCook": "15 min de préparation + 20 min de repos au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 28"
+    },
+    {
+      "id": "vegan-pe-040",
+      "name": "Tacos de courgettes et haricots noirs",
+      "ingredients": [
+        "8 petites tortillas de maïs",
+        "2 petites courgettes",
+        "400 g de haricots noirs cuits et égouttés",
+        "2 c. à café d’épices à tacos",
+        "2 c. à soupe d’huile",
+        "Coriandre fraîche",
+        "2 citrons verts",
+        "Sel"
+      ],
+      "steps": [
+        "Faire dorer les courgettes en petits dés dans l’huile 5 min à feu vif.",
+        "Ajouter les haricots noirs et les épices, puis cuire 3 min. Saler.",
+        "Réchauffer les tortillas à sec 30 secondes par côté. Garnir avec le mélange et servir avec coriandre et citron vert."
+      ],
+      "timeCook": "10 min de préparation + 8 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 29"
+    },
+    {
+      "id": "vegan-pe-041",
+      "name": "Soupe froide de concombre au yaourt végétal et à l’aneth",
+      "ingredients": [
+        "2 concombres",
+        "400 g de yaourt de coco nature non sucré ou de soja",
+        "2 gousses d’ail",
+        "1 bouquet d’aneth fraîche",
+        "2 c. à soupe d’huile d’olive",
+        "2 c. à soupe de jus de citron",
+        "Sel et poivre blanc"
+      ],
+      "steps": [
+        "Couper les concombres en morceaux et les placer dans le blender.",
+        "Ajouter le yaourt végétal, l’ail, le citron, l’huile et la moitié de l’aneth. Mixer jusqu’à obtenir une soupe homogène.",
+        "Assaisonner et réserver au frais au moins 2 h. Servir avec le reste d’aneth."
+      ],
+      "timeCook": "10 min de préparation + 2 h de repos au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 30"
+    },
+    {
+      "id": "vegan-pe-042",
+      "name": "Tartare d’avocat, poivron jaune et coriandre",
+      "ingredients": [
+        "4 avocats mûrs",
+        "1 poivron jaune",
+        "2 oignons nouveaux",
+        "Le jus de 2 citrons verts",
+        "2 c. à soupe d’huile d’avocat ou d’olive",
+        "Coriandre fraîche",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Couper les avocats et le poivron en petits dés. Verser immédiatement le jus de citron sur l’avocat.",
+        "Ajouter les oignons nouveaux émincés, l’huile et la coriandre ciselée.",
+        "Assaisonner, mélanger délicatement et servir frais, éventuellement moulé à l’emporte-pièce."
+      ],
+      "timeCook": "15 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 32"
+    },
+    {
+      "id": "vegan-pe-043",
+      "name": "Pâtes froides au pesto de tomates séchées",
+      "ingredients": [
+        "360 g de pâtes (penne ou fusilli)",
+        "200 g de tomates séchées à l’huile",
+        "60 g de pignons de pin",
+        "2 gousses d’ail",
+        "6 c. à soupe d’huile d’olive",
+        "1 poignée de basilic frais",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Cuire les pâtes dans l’eau salée, égoutter puis rincer à l’eau froide.",
+        "Mixer les tomates séchées, l’ail, les pignons, le basilic et l’huile pour obtenir un pesto.",
+        "Mélanger le pesto avec les pâtes froides. Décorer de basilic et servir."
+      ],
+      "timeCook": "15 min de préparation + cuisson des pâtes",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 33"
+    },
+    {
+      "id": "vegan-pe-044",
+      "name": "Gaspacho vert au concombre, kiwi et épinards",
+      "ingredients": [
+        "2 concombres",
+        "4 kiwis",
+        "2 grosses poignées de pousses d’épinards",
+        "Le jus d’1 citron jaune",
+        "2 c. à soupe d’huile d’olive",
+        "8 à 10 feuilles de menthe",
+        "Sel"
+      ],
+      "steps": [
+        "Mettre le concombre, les kiwis et les épinards dans le blender.",
+        "Ajouter le citron, l’huile, la menthe et une pincée de sel. Mixer 1 à 2 min jusqu’à obtenir une texture lisse.",
+        "Ajouter quelques glaçons si nécessaire et réserver au frais au moins 1 h."
+      ],
+      "timeCook": "10 min de préparation + 1 h de repos au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 34"
+    },
+    {
+      "id": "vegan-pe-045",
+      "name": "Curry de lentilles corail et tomates au lait de coco",
+      "ingredients": [
+        "240 g de lentilles corail rincées",
+        "2 boîtes de tomates concassées de 400 g",
+        "400 ml de lait de coco",
+        "2 oignons jaunes",
+        "2 c. à café de gingembre frais râpé",
+        "2 c. à café de curry ou de curcuma",
+        "2 c. à soupe d’huile",
+        "Sel"
+      ],
+      "steps": [
+        "Faire revenir les oignons émincés et le gingembre dans l’huile 3 min.",
+        "Ajouter le curry et mélanger quelques secondes.",
+        "Ajouter les lentilles, les tomates et le lait de coco. Couvrir et laisser mijoter 15 à 18 min jusqu’à ce que les lentilles soient tendres. Saler."
+      ],
+      "timeCook": "10 min de préparation + 18 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 35"
+    },
+    {
+      "id": "vegan-pe-046",
+      "name": "Carpaccio de courgettes au citron et aux pignons",
+      "ingredients": [
+        "4 petites courgettes fermes",
+        "Le zeste et le jus d’1 citron jaune bio",
+        "4 c. à soupe d’huile d’olive",
+        "40 g de pignons de pin",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Laver les courgettes et les couper en tranches très fines à la mandoline ou à l’éplucheur.",
+        "Disposer en rosace dans quatre assiettes.",
+        "Arroser de citron et d’huile, ajouter les zestes, saler, poivrer et parsemer de pignons torréfiés. Laisser reposer 10 min au frais."
+      ],
+      "timeCook": "15 min de préparation + 10 min de repos",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 36"
+    },
+    {
+      "id": "vegan-pe-047",
+      "name": "Taboulé vert aux petits pois, menthe et persil",
+      "ingredients": [
+        "200 g de semoule de blé moyenne",
+        "200 g de petits pois cuits et refroidis",
+        "1 botte de persil plat",
+        "1 botte de menthe fraîche",
+        "Le jus d’1 citron",
+        "6 c. à soupe d’huile d’olive",
+        "Sel"
+      ],
+      "steps": [
+        "Verser un volume égal d’eau bouillante salée sur la semoule, couvrir 5 min puis égrainer et laisser refroidir.",
+        "Ajouter les petits pois, le persil et la menthe hachés.",
+        "Assaisonner avec le citron, l’huile et le sel. Mélanger et réserver 1 h au frais."
+      ],
+      "timeCook": "15 min de préparation + 1 h de repos au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 37"
+    },
+    {
+      "id": "vegan-pe-048",
+      "name": "Quesadillas végétales aux haricots rouges et au maïs",
+      "ingredients": [
+        "8 tortillas de blé",
+        "400 g de haricots rouges cuits et égouttés",
+        "200 g de maïs égoutté",
+        "2 c. à café de cumin",
+        "8 c. à soupe de fromage végétal râpé (facultatif)",
+        "2 c. à soupe d’huile"
+      ],
+      "steps": [
+        "Écraser grossièrement les haricots avec le maïs et le cumin.",
+        "Répartir sur quatre tortillas, ajouter le fromage végétal si utilisé et recouvrir avec les tortillas restantes.",
+        "Faire dorer à la poêle huilée environ 3 min de chaque côté. Couper en triangles."
+      ],
+      "timeCook": "10 min de préparation + 12 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 38"
+    },
+    {
+      "id": "vegan-pe-049",
+      "name": "Salade de radis roses, pommes et aneth",
+      "ingredients": [
+        "2 bottes de radis roses",
+        "1 pomme verte",
+        "Quelques brins d’aneth fraîche",
+        "4 c. à soupe de yaourt de soja nature",
+        "2 c. à soupe de vinaigre de cidre",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Couper les radis en fines rondelles et la pomme en fins bâtonnets.",
+        "Mélanger le yaourt de soja, le vinaigre, le sel et le poivre.",
+        "Verser la sauce sur les légumes, ajouter l’aneth ciselée et servir immédiatement."
+      ],
+      "timeCook": "10 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 39"
+    },
+    {
+      "id": "vegan-pe-050",
+      "name": "Salade croquante de chou rouge, orange et sésame",
+      "ingredients": [
+        "1/2 chou rouge",
+        "2 oranges",
+        "4 c. à soupe de graines de sésame grillées",
+        "4 c. à soupe d’huile de sésame",
+        "2 c. à soupe de jus de citron",
+        "2 c. à café de sirop d’érable",
+        "Sel"
+      ],
+      "steps": [
+        "Émincer très finement le chou rouge et peler les oranges à vif pour prélever les suprêmes.",
+        "Mélanger l’huile de sésame, le citron, le sirop d’érable et le sel.",
+        "Verser la vinaigrette sur le chou et les oranges, mélanger puis parsemer de graines de sésame."
+      ],
+      "timeCook": "15 min de préparation",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 41"
     }
   ],
   "plan": [
