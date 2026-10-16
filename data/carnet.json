@@ -62858,6 +62858,533 @@
       "servings": "4 personnes",
       "regime": "vegetarien",
       "sous_regime": "express"
+    },
+    {
+      "id": "vegan-pe-001",
+      "name": "Gaspacho de tomates et poivrons jaunes au basilic",
+      "ingredients": [
+        "8 tomates bien mûres",
+        "2 poivrons jaunes",
+        "1 concombre",
+        "2 gousses d’ail",
+        "4 c. à soupe d’huile d’olive",
+        "2 c. à soupe de vinaigre de xérès",
+        "12 feuilles de basilic frais",
+        "Sel",
+        "Piment d’Espelette"
+      ],
+      "steps": [
+        "Laver les légumes. Épépiner les poivrons et couper les tomates, le concombre et les poivrons en morceaux.",
+        "Mettre les légumes et l’ail dégermé dans un blender. Ajouter l’huile, le vinaigre et le basilic.",
+        "Mixer jusqu’à obtenir une texture lisse. Ajouter un peu d’eau glacée si nécessaire.",
+        "Saler, ajouter une pincée de piment et réserver au réfrigérateur au moins 2 h avant de servir."
+      ],
+      "timeCook": "15 min de préparation, sans cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 3"
+    },
+    {
+      "id": "vegan-pe-002",
+      "name": "Brochettes de tofu mariné au citron vert et légumes d’été",
+      "ingredients": [
+        "400 g de tofu ferme",
+        "2 poivrons verts",
+        "1 oignon rouge",
+        "16 tomates cerises",
+        "Jus et zeste de 2 citrons verts",
+        "4 c. à soupe de sauce soja",
+        "2 c. à soupe de sirop d’érable",
+        "2 c. à soupe d’huile de sésame",
+        "Gingembre frais râpé, selon le goût"
+      ],
+      "steps": [
+        "Presser le tofu dans du papier absorbant, puis le couper en cubes.",
+        "Mélanger le jus et le zeste des citrons verts, la sauce soja, le sirop d’érable, l’huile de sésame et le gingembre. Ajouter le tofu et laisser mariner 30 min au frais.",
+        "Couper les poivrons en carrés et l’oignon en morceaux.",
+        "Monter les brochettes en alternant tofu, poivron, oignon et tomates cerises.",
+        "Cuire à la plancha ou à la poêle 10 à 12 min en retournant régulièrement."
+      ],
+      "timeCook": "15 min de préparation + 30 min de marinade + 10 à 12 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 9"
+    },
+    {
+      "id": "vegan-pe-003",
+      "name": "Taboulé de quinoa à la menthe, grenade et concombre",
+      "ingredients": [
+        "240 g de quinoa",
+        "1 concombre",
+        "Les grains d’1 grenade",
+        "2 grands bouquets de menthe fraîche",
+        "1 bouquet de persil plat",
+        "Le jus de 2 citrons",
+        "6 c. à soupe d’huile d’olive",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Cuire le quinoa selon les indications du paquet, puis le laisser refroidir complètement.",
+        "Couper le concombre en petits dés et récupérer les grains de grenade.",
+        "Hacher finement la menthe et le persil.",
+        "Mélanger le jus de citron, l’huile d’olive, le sel et le poivre.",
+        "Ajouter le quinoa, le concombre, la grenade et les herbes. Mélanger puis réserver 1 h au frais."
+      ],
+      "timeCook": "20 min de préparation + cuisson du quinoa + 1 h de repos au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 11"
+    },
+    {
+      "id": "vegan-pe-004",
+      "name": "Curry de pois chiches aux épinards et lait de coco",
+      "ingredients": [
+        "500 g de pois chiches cuits et égouttés",
+        "300 g de pousses d’épinards frais",
+        "400 ml de lait de coco",
+        "2 boîtes de tomates concassées",
+        "2 oignons jaunes",
+        "2 gousses d’ail",
+        "2 c. à soupe de curry en poudre",
+        "2 c. à soupe d’huile d’olive",
+        "250 g de riz cru pour accompagner",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Émincer les oignons et l’ail, puis les faire revenir dans l’huile 3 min.",
+        "Ajouter le curry et remuer 1 min.",
+        "Ajouter les tomates concassées et les pois chiches rincés. Laisser mijoter 10 min.",
+        "Verser le lait de coco et poursuivre la cuisson 5 min.",
+        "Ajouter les épinards et cuire 2 min jusqu’à ce qu’ils tombent. Saler, poivrer et servir avec le riz cuit séparément."
+      ],
+      "timeCook": "10 min de préparation + 20 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 12"
+    },
+    {
+      "id": "vegan-pe-005",
+      "name": "Salade de pois gourmands, radis et avocat, sauce moutarde",
+      "ingredients": [
+        "300 g de pois gourmands frais",
+        "12 radis roses",
+        "2 avocats mûrs",
+        "2 poignées de graines de courge",
+        "2 c. à café de moutarde à l’ancienne",
+        "4 c. à soupe d’huile d’olive",
+        "2 c. à soupe de vinaigre de cidre",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Cuire les pois gourmands 3 min dans l’eau bouillante, puis les plonger dans l’eau glacée et les égoutter.",
+        "Couper les radis en fines rondelles et les avocats en dés.",
+        "Faire griller les graines de courge à sec 2 min.",
+        "Mélanger la moutarde, l’huile, le vinaigre, le sel et le poivre.",
+        "Ajouter les pois gourmands, les radis et l’avocat. Mélanger délicatement et parsemer de graines."
+      ],
+      "timeCook": "15 min de préparation + 3 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 17"
+    },
+    {
+      "id": "vegan-pe-006",
+      "name": "Rouleaux de printemps au tofu fumé et à la mangue",
+      "ingredients": [
+        "12 galettes de riz",
+        "200 g de tofu fumé",
+        "1 mangue ferme",
+        "2 carottes",
+        "1 concombre",
+        "Quelques feuilles de menthe fraîche",
+        "Quelques feuilles de coriandre fraîche"
+      ],
+      "steps": [
+        "Couper le tofu, la mangue, les carottes et le concombre en fins bâtonnets.",
+        "Tremper une galette de riz dans de l’eau tiède pour l’assouplir, puis la déposer à plat.",
+        "Placer quelques feuilles d’herbes et des bâtonnets de garniture au centre.",
+        "Rabattre le bord inférieur, replier les côtés puis rouler fermement. Répéter avec les autres galettes."
+      ],
+      "timeCook": "25 min de préparation, sans cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 19"
+    },
+    {
+      "id": "vegan-pe-007",
+      "name": "Socca niçoise aux légumes grillés et herbes de Provence",
+      "ingredients": [
+        "200 g de farine de pois chiches",
+        "500 ml d’eau tiède",
+        "4 c. à soupe d’huile d’olive + un filet pour le moule",
+        "1 poivron rouge",
+        "1 petite courgette",
+        "2 c. à café d’herbes de Provence",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Mélanger la farine de pois chiches, l’eau, l’huile et le sel. Laisser reposer 30 min.",
+        "Couper le poivron et la courgette en petits dés, puis les faire revenir avec un filet d’huile et les herbes pendant 8 min.",
+        "Préchauffer le four en mode gril avec un plat peu profond à l’intérieur. Huiler le plat chaud et y verser la pâte.",
+        "Répartir les légumes et enfourner en haut du four 8 à 10 min, jusqu’à ce que la socca soit dorée et croustillante."
+      ],
+      "timeCook": "15 min de préparation + 30 min de repos + 16 à 18 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 22"
+    },
+    {
+      "id": "vegan-pe-008",
+      "name": "Tartare de tomates multicolores, mangue et coriandre",
+      "ingredients": [
+        "600 g de tomates anciennes variées",
+        "1 mangue bien mûre",
+        "1 oignon rouge",
+        "Le jus d’1 citron vert",
+        "4 c. à soupe d’huile d’olive",
+        "8 branches de coriandre fraîche",
+        "Fleur de sel",
+        "Piment d’Espelette"
+      ],
+      "steps": [
+        "Épépiner les tomates et couper leur chair en petits dés. Éplucher la mangue et la couper en dés.",
+        "Émincer finement l’oignon rouge et hacher la coriandre.",
+        "Mélanger délicatement les tomates, la mangue, l’oignon, la coriandre, l’huile et le jus de citron vert.",
+        "Assaisonner avec la fleur de sel et une pincée de piment. Dresser et servir très frais."
+      ],
+      "timeCook": "15 min de préparation, sans cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 23"
+    },
+    {
+      "id": "vegan-pe-009",
+      "name": "Buddha bowl d’été aux patates douces, pois chiches et tahini",
+      "ingredients": [
+        "2 grosses patates douces",
+        "300 g de pois chiches cuits et égouttés",
+        "2 poignées de chou rouge émincé",
+        "2 avocats",
+        "2 poignées de jeunes pousses",
+        "2 c. à café de paprika",
+        "2 c. à soupe d’huile d’olive",
+        "4 c. à soupe de tahini",
+        "Le jus d’1 citron",
+        "4 c. à soupe d’eau tiède",
+        "Sel"
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C. Couper les patates douces en dés et rincer les pois chiches.",
+        "Mélanger les dés de patate douce et les pois chiches avec l’huile, le paprika et le sel. Enfourner 25 min en remuant à mi-cuisson.",
+        "Mélanger le tahini, le jus de citron, l’eau tiède et une pincée de sel jusqu’à obtenir une sauce lisse.",
+        "Répartir les jeunes pousses et le chou dans quatre bols. Ajouter l’avocat en lamelles, les légumes rôtis et les pois chiches, puis napper de sauce."
+      ],
+      "timeCook": "15 min de préparation + 25 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 25"
+    },
+    {
+      "id": "vegan-pe-010",
+      "name": "Tian traditionnel de légumes d’été au thym",
+      "ingredients": [
+        "2 petites courgettes",
+        "2 aubergines longues et fines",
+        "4 tomates allongées",
+        "2 gousses d’ail",
+        "6 c. à soupe d’huile d’olive",
+        "Quelques branches de thym frais",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Préchauffer le four à 180 °C. Frotter un plat avec une gousse d’ail coupée, puis hacher le reste au fond du plat.",
+        "Laver les légumes et les couper en rondelles d’environ 5 mm.",
+        "Ranger les rondelles serrées en alternant courgette, aubergine et tomate.",
+        "Saler, poivrer, parsemer de thym et arroser d’huile d’olive.",
+        "Enfourner 50 à 60 min, jusqu’à ce que les légumes soient fondants."
+      ],
+      "timeCook": "15 min de préparation + 50 à 60 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 27"
+    },
+    {
+      "id": "vegan-pe-011",
+      "name": "Gaspacho vert au melon, concombre et menthe",
+      "ingredients": [
+        "1 melon vert",
+        "1 concombre",
+        "1 poivron vert",
+        "20 feuilles de menthe fraîche",
+        "2 c. à soupe de jus de citron vert",
+        "2 c. à soupe d’huile d’olive",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Peler le concombre, l’épépiner et couper la chair en morceaux. Retirer la peau et les graines du melon. Épépiner le poivron.",
+        "Mettre les légumes et le melon dans un blender avec la menthe, le jus de citron vert et l’huile d’olive.",
+        "Mixer jusqu’à obtenir un velouté fluide.",
+        "Saler, poivrer et réserver 2 h au réfrigérateur avant de servir."
+      ],
+      "timeCook": "15 min de préparation + 2 h de repos au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 28"
+    },
+    {
+      "id": "vegan-pe-012",
+      "name": "Salade de haricots blancs, poivrons rôtis et câpres",
+      "ingredients": [
+        "500 g de haricots blancs cuits et égouttés",
+        "2 poivrons rouges rôtis en bocal",
+        "2 c. à soupe de câpres",
+        "1 oignon rouge",
+        "2 c. à soupe de persil plat haché",
+        "6 c. à soupe d’huile d’olive",
+        "2 c. à soupe de vinaigre de xérès",
+        "1 c. à café de paprika fumé",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Couper les poivrons rôtis en fines lanières.",
+        "Mélanger l’huile, le vinaigre de xérès, le paprika fumé, le sel et le poivre dans un saladier. Ajouter l’oignon finement émincé.",
+        "Ajouter les haricots rincés et égouttés, les poivrons et les câpres égouttées.",
+        "Mélanger délicatement et parsemer de persil. Servir frais."
+      ],
+      "timeCook": "15 min de préparation, sans cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 29"
+    },
+    {
+      "id": "vegan-pe-013",
+      "name": "Salade croquante de fenouil, orange et olives noires",
+      "ingredients": [
+        "2 gros bulbes de fenouil",
+        "2 belles oranges",
+        "20 olives noires à la grecque",
+        "4 c. à soupe d’huile d’olive",
+        "2 c. à soupe de jus de citron",
+        "Fleur de sel",
+        "Poivre noir"
+      ],
+      "steps": [
+        "Émincer le fenouil très finement.",
+        "Peler les oranges à vif et les couper en rondelles ou en suprêmes. Récupérer le jus.",
+        "Mélanger l’huile d’olive, le jus de citron, le jus d’orange, la fleur de sel et le poivre.",
+        "Ajouter le fenouil et les olives, puis mélanger. Laisser reposer 10 min au frais avant de servir."
+      ],
+      "timeCook": "15 min de préparation + 10 min de repos",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 31"
+    },
+    {
+      "id": "vegan-pe-014",
+      "name": "Salade de riz noir à l’avocat, mangue et edamame",
+      "ingredients": [
+        "240 g de riz noir Venere",
+        "1 mangue",
+        "1 avocat",
+        "160 g d’edamame cuits",
+        "2 c. à soupe de graines de sésame",
+        "4 c. à soupe d’huile de sésame",
+        "2 c. à soupe de jus de citron vert",
+        "2 c. à soupe de sauce soja"
+      ],
+      "steps": [
+        "Cuire le riz noir dans l’eau selon les indications du paquet, environ 30 à 35 min. Égoutter et laisser refroidir complètement.",
+        "Couper la mangue et l’avocat en petits dés.",
+        "Mélanger l’huile de sésame, le jus de citron vert et la sauce soja.",
+        "Mélanger le riz refroidi, la mangue, l’avocat, les edamame et l’assaisonnement. Parsemer de graines de sésame."
+      ],
+      "timeCook": "10 min de préparation + 30 à 35 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 35"
+    },
+    {
+      "id": "vegan-pe-015",
+      "name": "Gaspacho de melon au gingembre et à la menthe",
+      "ingredients": [
+        "2 beaux melons mûrs",
+        "2 cm de gingembre frais",
+        "20 feuilles de menthe fraîche",
+        "Le jus d’1 citron",
+        "Sel marin"
+      ],
+      "steps": [
+        "Prélever la chair des melons et la couper en morceaux. Râper le gingembre.",
+        "Mettre le melon, le gingembre, la menthe et le jus de citron dans un blender.",
+        "Mixer jusqu’à obtenir une texture lisse et mousseuse.",
+        "Ajouter une pincée de sel et réserver au frais au moins 2 h avant de servir."
+      ],
+      "timeCook": "10 min de préparation + 2 h de repos au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 40"
+    },
+    {
+      "id": "vegan-pe-016",
+      "name": "Tacos aux haricots rouges et guacamole maison",
+      "ingredients": [
+        "8 petites tortillas",
+        "2 boîtes de haricots rouges (environ 500 g égouttés au total)",
+        "2 c. à café d’épices à tacos",
+        "2 avocats mûrs",
+        "Le jus d’1 citron vert",
+        "1 oignon rouge",
+        "2 tomates",
+        "Coriandre fraîche",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Rincer et égoutter les haricots rouges. Les faire chauffer avec les épices et 4 c. à soupe d’eau pendant 5 min, puis les écraser grossièrement.",
+        "Écraser les avocats avec le jus de citron vert, le sel, le poivre et la coriandre hachée pour préparer le guacamole.",
+        "Réchauffer les tortillas rapidement dans une poêle sèche.",
+        "Garnir les tortillas de haricots, de guacamole, de tomates en dés, d’oignon rouge émincé et de coriandre."
+      ],
+      "timeCook": "15 min de préparation + 5 min de cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 42"
+    },
+    {
+      "id": "vegan-pe-017",
+      "name": "Salade de pois chiches au concombre, tomates et sumac",
+      "ingredients": [
+        "500 g de pois chiches cuits et égouttés",
+        "1 concombre",
+        "4 tomates fermes",
+        "1 oignon rouge",
+        "2 c. à café de sumac",
+        "4 c. à soupe d’huile d’olive",
+        "Le jus d’1 citron",
+        "Sel",
+        "Poivre"
+      ],
+      "steps": [
+        "Couper le concombre et les tomates en dés. Émincer finement l’oignon rouge.",
+        "Mélanger les pois chiches rincés, le concombre, les tomates et l’oignon dans un saladier.",
+        "Ajouter l’huile d’olive, le jus de citron, le sumac, le sel et le poivre.",
+        "Mélanger puis réserver 30 min au réfrigérateur avant de servir."
+      ],
+      "timeCook": "15 min de préparation + 30 min de repos au frais",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 43"
+    },
+    {
+      "id": "vegan-pe-018",
+      "name": "Bowl de nouilles de riz au tofu croustillant et cacahuètes",
+      "ingredients": [
+        "240 g de nouilles de riz épaisses",
+        "400 g de tofu ferme",
+        "2 c. à soupe de fécule de maïs",
+        "2 carottes",
+        "40 g de cacahuètes concassées",
+        "4 c. à soupe de sauce soja",
+        "2 c. à soupe d’huile de sésame",
+        "2 c. à café de sirop d’érable"
+      ],
+      "steps": [
+        "Cuire les nouilles selon les indications du paquet, les rincer à l’eau froide et les égoutter.",
+        "Couper le tofu en cubes, l’enrober de fécule puis le faire dorer à la poêle environ 6 min, jusqu’à ce qu’il soit croustillant.",
+        "Mélanger la sauce soja, l’huile de sésame et le sirop d’érable.",
+        "Répartir les nouilles, les carottes coupées en julienne et le tofu dans quatre bols. Arroser de sauce et parsemer de cacahuètes."
+      ],
+      "timeCook": "15 min de préparation + cuisson des nouilles et 6 min pour le tofu",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 45"
+    },
+    {
+      "id": "vegan-pe-019",
+      "name": "Smoothie bowl aux fruits rouges et graines de chia",
+      "ingredients": [
+        "400 g de mélange de fruits rouges",
+        "2 bananes congelées en morceaux",
+        "200 ml de lait végétal",
+        "2 c. à soupe de graines de chia",
+        "Fruits frais pour le topping",
+        "Granola végétalien pour le topping",
+        "Éclats de noix pour le topping"
+      ],
+      "steps": [
+        "Mettre les fruits rouges, les bananes congelées et le lait végétal dans le blender.",
+        "Mixer 1 à 2 min jusqu’à obtenir une texture lisse et épaisse.",
+        "Répartir dans quatre bols.",
+        "Ajouter les graines de chia, puis décorer avec des fruits frais, du granola végétalien et des éclats de noix. Servir immédiatement."
+      ],
+      "timeCook": "10 min de préparation, sans cuisson",
+      "servings": "4 personnes",
+      "regime": "vegan",
+      "sous_regime": "printemps_ete",
+      "robot": [],
+      "notes": [],
+      "source": "50 recettes végétariennes — Printemps / Été, recette 50"
     }
   ],
   "plan": [
