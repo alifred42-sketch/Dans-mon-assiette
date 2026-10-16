@@ -45,7 +45,7 @@ function durationMinutes(value?: string): number | null {
 export default function RecettesPage() {
   const [maxDuration, setMaxDuration] = useState<number | null>(null);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
-  useEffect(() => { try { setFavoriteIds(JSON.parse(localStorage.getItem("cuisine-chic-ouf-favorites") || "[]")); } catch { setFavoriteIds([]); } }, [filter]);
+  useEffect(() => { try { setFavoriteIds(JSON.parse(localStorage.getItem("cuisine-chic-ouf-favorites") || "[]")); } catch { setFavoriteIds([]); } }, []);
   const searchParams = useSearchParams();
   const filter = searchParams.get("filter") || "";
   const allCollections = getCollections();
