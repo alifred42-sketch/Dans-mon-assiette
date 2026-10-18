@@ -63851,6 +63851,3282 @@
       "robot": [],
       "notes": [],
       "source": "RECETTES VEGAN - PRINTEMPS-ETE.pdf, recette 41"
+    },
+    {
+      "id": "veg-robot-001",
+      "name": "Velouté de Potimarron aux Châtaignes & Éclats de Noix",
+      "ingredients": [
+        "1 kg de potimarron évidé en morceaux",
+        "1 oignon coupé en deux",
+        "200g de châtaignes cuites sous vide",
+        "20 cl de crème liquide entière",
+        "600g d'eau",
+        "1 cube de bouillon de légumes",
+        "Noix concassées, sel, poivre, muscade"
+      ],
+      "steps": [
+        "Mettez l'oignon dans le bol. Hachez pendant 5 sec / Vitesse 5 .",
+        "Ajoutez le potimarron, l'eau, le bouillon, sel et poivre. Installez le gobelet. Cuisez pendant 20 min / 100°C / Vitesse 1 .",
+        "Ajoutez la moitié des châtaignes et la crème. Mixez de manière progressive pendant 1 min / Vitesse 4 à 8 .",
+        "Servez chaud parsemé du reste de châtaignes et de noix."
+      ],
+      "robot": [
+        "Mettez l'oignon dans le bol. Hachez pendant 5 sec / Vitesse 5 .",
+        "Ajoutez le potimarron, l'eau, le bouillon, sel et poivre. Installez le gobelet. Cuisez pendant 20 min / 100°C / Vitesse 1 .",
+        "Ajoutez la moitié des châtaignes et la crème. Mixez de manière progressive pendant 1 min / Vitesse 4 à 8 .",
+        "Servez chaud parsemé du reste de châtaignes et de noix."
+      ],
+      "notes": [
+        "Pour 4 à 6 personnes | Accessoires : Lames, Panier de cuisson, Gobelet doseur"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation",
+          "lines": [
+            "👥 Pour 4 à 6 personnes"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 kg de potimarron évidé en morceaux",
+            "1 oignon coupé en deux",
+            "200g de châtaignes cuites sous vide",
+            "20 cl de crème liquide entière",
+            "600g d'eau",
+            "1 cube de bouillon de légumes",
+            "Noix concassées, sel, poivre, muscade"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon dans le bol. Hachez pendant 5 sec / Vitesse 5 .",
+            "Ajoutez le potimarron, l'eau, le bouillon, sel et poivre. Installez le gobelet. Cuisez pendant 20 min / 100°C / Vitesse 1 .",
+            "Ajoutez la moitié des châtaignes et la crème. Mixez de manière progressive pendant 1 min / Vitesse 4 à 8 .",
+            "Servez chaud parsemé du reste de châtaignes et de noix."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 1",
+      "timePrep": "",
+      "timeCook": "",
+      "servings": "4 à 6 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-002",
+      "name": "Cappuccino Festif de Cèpes sous son Émulsion",
+      "ingredients": [
+        "400g de cèpes frais ou surgelés",
+        "1 échalote",
+        "20g de beurre",
+        "500g d'eau + 1 cube de bouillon",
+        "15 cl de crème liquide entière très froide",
+        "40g de parmesan râpé"
+      ],
+      "steps": [
+        "Hachez l'échalote dans le bol : 5 sec / Vitesse 5 . Raclez les parois.",
+        "Ajoutez le beurre et les cèpes. Faites rissoler : 5 min / 120°C / Sens Inverse / Vitesse 1 .",
+        "Versez l'eau et le bouillon. Cuisez : 15 min / 100°C / Vitesse 1 . Mixez : 1 min / Vitesse 8 . Réservez au chaud.",
+        "Lavez le bol à l'eau très froide. Insérez le fouet, versez la crème et le parmesan. Montez en émulsion : 2 min / Vitesse 4 . Servez le velouté surmonté de mousse."
+      ],
+      "robot": [
+        "Hachez l'échalote dans le bol : 5 sec / Vitesse 5 . Raclez les parois.",
+        "Ajoutez le beurre et les cèpes. Faites rissoler : 5 min / 120°C / Sens Inverse / Vitesse 1 .",
+        "Versez l'eau et le bouillon. Cuisez : 15 min / 100°C / Vitesse 1 . Mixez : 1 min / Vitesse 8 . Réservez au chaud.",
+        "Lavez le bol à l'eau très froide. Insérez le fouet, versez la crème et le parmesan. Montez en émulsion : 2 min / Vitesse 4 . Servez le velouté surmonté de mousse."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Lames, Fouet"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation",
+          "lines": [
+            "👥 Pour 4 personnes"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de cèpes frais ou surgelés",
+            "1 échalote",
+            "20g de beurre",
+            "500g d'eau + 1 cube de bouillon",
+            "15 cl de crème liquide entière très froide",
+            "40g de parmesan râpé"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'échalote dans le bol : 5 sec / Vitesse 5 . Raclez les parois.",
+            "Ajoutez le beurre et les cèpes. Faites rissoler : 5 min / 120°C / Sens Inverse / Vitesse 1 .",
+            "Versez l'eau et le bouillon. Cuisez : 15 min / 100°C / Vitesse 1 . Mixez : 1 min / Vitesse 8 . Réservez au chaud.",
+            "Lavez le bol à l'eau très froide. Insérez le fouet, versez la crème et le parmesan. Montez en émulsion : 2 min / Vitesse 4 . Servez le velouté surmonté de mousse."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 2",
+      "timePrep": "",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-003",
+      "name": "Rillettes Végétales de Lentilles Corail & Noix",
+      "ingredients": [
+        "150g de lentilles corail",
+        "400g d'eau",
+        "60g de cerneaux de noix",
+        "100g de fromage frais (type Saint-Morêt)",
+        "1 cuillère à café de cumin, sel, poivre"
+      ],
+      "steps": [
+        "Mettez les lentilles et l'eau dans le bol. Cuisez : 15 min / 100°C / Sens Inverse / Vitesse 1 . Égouttez et laissez refroidir.",
+        "Mettez les noix dans le bol sec. Hachez : 3 sec / Vitesse 6 .",
+        "Ajoutez les lentilles cuites, le fromage frais, le cumin, le sel et le poivre. Mixez : 20 sec / Vitesse 4 ou utilisez la fonction Turbo pour un fini lisse. Réservez 2h au frais."
+      ],
+      "robot": [
+        "Mettez les lentilles et l'eau dans le bol. Cuisez : 15 min / 100°C / Sens Inverse / Vitesse 1 . Égouttez et laissez refroidir.",
+        "Mettez les noix dans le bol sec. Hachez : 3 sec / Vitesse 6 .",
+        "Ajoutez les lentilles cuites, le fromage frais, le cumin, le sel et le poivre. Mixez : 20 sec / Vitesse 4 ou utilisez la fonction Turbo pour un fini lisse. Réservez 2h au frais."
+      ],
+      "notes": [
+        "Pour 6 personnes | Accessoires : Lames, Gobelet doseur"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation",
+          "lines": [
+            "👥 Pour 6 personnes"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150g de lentilles corail",
+            "400g d'eau",
+            "60g de cerneaux de noix",
+            "100g de fromage frais (type Saint-Morêt)",
+            "1 cuillère à café de cumin, sel, poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez les lentilles et l'eau dans le bol. Cuisez : 15 min / 100°C / Sens Inverse / Vitesse 1 . Égouttez et laissez refroidir.",
+            "Mettez les noix dans le bol sec. Hachez : 3 sec / Vitesse 6 .",
+            "Ajoutez les lentilles cuites, le fromage frais, le cumin, le sel et le poivre. Mixez : 20 sec / Vitesse 4 ou utilisez la fonction Turbo pour un fini lisse. Réservez 2h au frais."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 3",
+      "timePrep": "",
+      "timeCook": "",
+      "servings": "6 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-004",
+      "name": "Risotto Crémeux de Noël au Potiron & Châtaignes",
+      "ingredients": [
+        "320g de riz Arborio",
+        "200g de chair de potiron en petits dés",
+        "100g de châtaignes cuites en morceaux",
+        "1 oignon",
+        "60g de vin blanc sec",
+        "750g d'eau + 1 cube de bouillon de légumes",
+        "40g de parmesan, 20g de beurre"
+      ],
+      "steps": [
+        "Hachez l'oignon dans le bol : 5 sec / Vitesse 5 . Ajoutez le beurre : 3 min / 120°C / Vitesse 1 .",
+        "Ajoutez le riz : 3 min / 120°C / Sens Inverse / Vitesse 1 (sans gobelet).",
+        "Versez le vin blanc : 2 min / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les dés de potiron, l'eau et le cube de bouillon. Cuisez : 14 min / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les châtaignes, le parmesan et remuez à la spatule. Laissez reposer 2 min avant de servir."
+      ],
+      "robot": [
+        "Hachez l'oignon dans le bol : 5 sec / Vitesse 5 . Ajoutez le beurre : 3 min / 120°C / Vitesse 1 .",
+        "Ajoutez le riz : 3 min / 120°C / Sens Inverse / Vitesse 1 (sans gobelet).",
+        "Versez le vin blanc : 2 min / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les dés de potiron, l'eau et le cube de bouillon. Cuisez : 14 min / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les châtaignes, le parmesan et remuez à la spatule. Laissez reposer 2 min avant de servir."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Lames, Palette de mélange"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation",
+          "lines": [
+            "👥 Pour 4 personnes"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "320g de riz Arborio",
+            "200g de chair de potiron en petits dés",
+            "100g de châtaignes cuites en morceaux",
+            "1 oignon",
+            "60g de vin blanc sec",
+            "750g d'eau + 1 cube de bouillon de légumes",
+            "40g de parmesan, 20g de beurre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'oignon dans le bol : 5 sec / Vitesse 5 . Ajoutez le beurre : 3 min / 120°C / Vitesse 1 .",
+            "Ajoutez le riz : 3 min / 120°C / Sens Inverse / Vitesse 1 (sans gobelet).",
+            "Versez le vin blanc : 2 min / 100°C / Sens Inverse / Vitesse 1 .",
+            "Ajoutez les dés de potiron, l'eau et le cube de bouillon. Cuisez : 14 min / 100°C / Sens Inverse / Vitesse 1 .",
+            "Ajoutez les châtaignes, le parmesan et remuez à la spatule. Laissez reposer 2 min avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 4",
+      "timePrep": "",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-005",
+      "name": "Chili Sinuano Végétal aux Patates Douces",
+      "ingredients": [
+        "1 patate douce en dés, 1 boîte de haricots rouges, 1 oignon, 1 poivron, 400g",
+        "de pulpe de tomates, épices chili, sel, poivre."
+      ],
+      "steps": [
+        "tomate et les épices. Mijotez : 20 min / 95°C / Sens Inverse / Vitesse 1 . Ajoutez les haricots rouges 5 min avant la fin."
+      ],
+      "robot": [
+        "tomate et les épices. Mijotez : 20 min / 95°C / Sens Inverse / Vitesse 1 . Ajoutez les haricots rouges 5 min avant la fin."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Lames, Sens Inverse"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation",
+          "lines": [
+            "👥 Pour 4 personnes"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 patate douce en dés, 1 boîte de haricots rouges, 1 oignon, 1 poivron, 400g",
+            "de pulpe de tomates, épices chili, sel, poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "tomate et les épices. Mijotez : 20 min / 95°C / Sens Inverse / Vitesse 1 . Ajoutez les haricots rouges 5 min avant la fin."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 5",
+      "timePrep": "",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-006",
+      "name": "Dahl de Lentilles Corail au Lait de Coco & Épinards",
+      "ingredients": [
+        "200g de lentilles corail, 1 boîte de lait de coco (400ml), 200g d'eau, 1 oignon,",
+        "2 poignées d'épinards frais, 1 c.à.s de curry."
+      ],
+      "steps": [
+        "100°C / Sens Inverse / Vitesse 1 . Incorporez les épinards à la spatule en fin de cuisson."
+      ],
+      "robot": [
+        "100°C / Sens Inverse / Vitesse 1 . Incorporez les épinards à la spatule en fin de cuisson."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Lames, Sens Inverse"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation",
+          "lines": [
+            "👥 Pour 4 personnes"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de lentilles corail, 1 boîte de lait de coco (400ml), 200g d'eau, 1 oignon,",
+            "2 poignées d'épinards frais, 1 c.à.s de curry."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "100°C / Sens Inverse / Vitesse 1 . Incorporez les épinards à la spatule en fin de cuisson."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 6",
+      "timePrep": "",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-007",
+      "name": "Lasagnes d'Automne Potiron & Chèvre Frais",
+      "ingredients": [
+        "Plaques de lasagnes, 600g de purée de potiron, 200g de chèvre frais, 50g",
+        "de farine, 50g de beurre, 500g de lait, muscade."
+      ],
+      "steps": [
+        "8 min / 90°C / Vitesse 3 . Montez les lasagnes en alternant purée de potiron mixée au chèvre, plaques et béchamel. Enfournez 30 min à 180°C."
+      ],
+      "robot": [
+        "8 min / 90°C / Vitesse 3 . Montez les lasagnes en alternant purée de potiron mixée au chèvre, plaques et béchamel. Enfournez 30 min à 180°C."
+      ],
+      "notes": [
+        "Pour 6 personnes | Accessoires : Lames, Fouet pour béchamel"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation",
+          "lines": [
+            "👥 Pour 6 personnes"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "Plaques de lasagnes, 600g de purée de potiron, 200g de chèvre frais, 50g",
+            "de farine, 50g de beurre, 500g de lait, muscade."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "8 min / 90°C / Vitesse 3 . Montez les lasagnes en alternant purée de potiron mixée au chèvre, plaques et béchamel. Enfournez 30 min à 180°C."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 7",
+      "timePrep": "",
+      "timeCook": "",
+      "servings": "6 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-008",
+      "name": "Gnocchis Poêlés à la Crème Fluffy d'Avocat",
+      "ingredients": [
+        "500g de gnocchis, 2 avocats mûrs, 1 poignée d'épinards frais, jus d'un demi-",
+        "citron, un filet d'huile d'olive, sel, poivre."
+      ],
+      "steps": [
+        "énergiquement : 30 sec / Vitesse 7 pour obtenir une crème onctueuse. Poêlez les gnocchis à part et nappez de sauce verte."
+      ],
+      "robot": [
+        "énergiquement : 30 sec / Vitesse 7 pour obtenir une crème onctueuse. Poêlez les gnocchis à part et nappez de sauce verte."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Lames, Poêle externe"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation",
+          "lines": [
+            "👥 Pour 4 personnes"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500g de gnocchis, 2 avocats mûrs, 1 poignée d'épinards frais, jus d'un demi-",
+            "citron, un filet d'huile d'olive, sel, poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "énergiquement : 30 sec / Vitesse 7 pour obtenir une crème onctueuse. Poêlez les gnocchis à part et nappez de sauce verte."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 8",
+      "timePrep": "",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-009",
+      "name": "Pain d'Épices Moelleux Traditionnel aux Agrumes",
+      "ingredients": [
+        "250g de farine, 150g de miel, 50g de sucre, 100g de lait, 1 sachet de levure,",
+        "2 c.à.c d'épices à pain d'épices, zestes d'orange."
+      ],
+      "steps": [
+        "sucre, la levure, les épices et zestes. Mélangez avec le programme automatique Malaxer / 1 min 30 . Versez en moule et enfournez 45 min à 160°C."
+      ],
+      "robot": [
+        "sucre, la levure, les épices et zestes. Mélangez avec le programme automatique Malaxer / 1 min 30 . Versez en moule et enfournez 45 min à 160°C."
+      ],
+      "notes": [
+        "Pour 6-8 personnes | Accessoires : Lames, Programme Malaxer"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation",
+          "lines": [
+            "👥 Pour 6-8 personnes"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "250g de farine, 150g de miel, 50g de sucre, 100g de lait, 1 sachet de levure,",
+            "2 c.à.c d'épices à pain d'épices, zestes d'orange."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "sucre, la levure, les épices et zestes. Mélangez avec le programme automatique Malaxer / 1 min 30 . Versez en moule et enfournez 45 min à 160°C."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 9",
+      "timePrep": "",
+      "timeCook": "",
+      "servings": "6-8 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-010",
+      "name": "Truffes Fondantes au Chocolat Noir & Épices Douces",
+      "ingredients": [
+        "250g de chocolat noir 70%, 100g de crème liquide entière, 30g de beurre,",
+        "une pincée de cannelle, poudre de cacao."
+      ],
+      "steps": [
+        "Faites fondre : 4 min / 50°C / Vitesse 2 . Laissez durcir la pâte au frais pendant 2h, formez des boules et roulez-les dans le cacao. Index des Recettes 11 à 50 (Incluses dans l'édition intégrale) Chaque recette de l'index complet suit rigoureusement la configuration technique du robot Bouton / Réglage Principal N° & Titre de la Recette             Ingrédients Clés MC Smart",
+        "Gaspacho Vert Épicé              Concombre, avocat, piment, citron vert          Mixage / Vitesse 8 à 10",
+        "Tartinade Petits Pois & Petits pois frais, menthe, ricotta, citron      Hacher / 10 sec / Vitesse 6 Ricotta",
+        "Velouté Chou-Fleur & Brie        Chou-fleur, crème de brie, ail, bouillon        Cuisson / 100°C / Vitesse 1",
+        "Bourguignon de                   Champignons bruns, vin rouge, carottes,         Mijoter / Sens Inverse / Champignons                          oignons                                        95°C",
+        "Curry Patates Douces &           Patates douces, pois chiches, lait de           Sens Inverse / 100°C / Pois Chiches                         coco, curry                                    Vitesse 1 Seitan fumé, poireaux, navets, carottes,",
+        "Pot-au-Feu au Seitan Fumé                                                        Mijoter / 60 min / 95°C bouillon Macaronis, cheddar râpé, purée de",
+        "Mac and Cheese au Potiron                                                        Sauce / 90°C / Vitesse 3 potiron, lait Butternut, quinoa, chèvre, cranberries,",
+        "Butternut Farcie au Quinoa                                                       Hacher & Malaxer la farce amandes",
+        "Cannellonis Épinards-            Épinards frais, ricotta, parmesan, sauce Hacher Épinards / Vitesse 5 Ricotta                              tomate",
+        "Bolognese de Lentilles           Lentilles vertes, coulis de tomate,             Mijoter / 30 min / Sens Vertes                               oignons, céleri                                Inverse 21 à 30. Collection Hiver &          Panais, topinambours, betteraves, Cuisson Vapeur / Varoma Crèmes                               châtaignes, marrons 31 à 40. Collection Printemps &      Asperges, petits pois, aubergines, Turbo / Hachage Rapide Dips                                 poivrons rôtis 41 à 50. Desserts & Douceurs         Chocolat blanc, crème de marrons, purée Fouet / Vitesse 4 / Émulsion de Fêtes                             d'amande L'intégralité des 50 fiches recettes techniques détaillées est enregistrée dans la mémoire de stockage de ce fichier PDF."
+      ],
+      "robot": [
+        "Faites fondre : 4 min / 50°C / Vitesse 2 . Laissez durcir la pâte au frais pendant 2h, formez des boules et roulez-les dans le cacao. Index des Recettes 11 à 50 (Incluses dans l'édition intégrale) Chaque recette de l'index complet suit rigoureusement la configuration technique du robot Bouton / Réglage Principal N° & Titre de la Recette             Ingrédients Clés MC Smart",
+        "Gaspacho Vert Épicé              Concombre, avocat, piment, citron vert          Mixage / Vitesse 8 à 10",
+        "Tartinade Petits Pois & Petits pois frais, menthe, ricotta, citron      Hacher / 10 sec / Vitesse 6 Ricotta",
+        "Velouté Chou-Fleur & Brie        Chou-fleur, crème de brie, ail, bouillon        Cuisson / 100°C / Vitesse 1",
+        "Bourguignon de                   Champignons bruns, vin rouge, carottes,         Mijoter / Sens Inverse / Champignons                          oignons                                        95°C",
+        "Curry Patates Douces &           Patates douces, pois chiches, lait de           Sens Inverse / 100°C / Pois Chiches                         coco, curry                                    Vitesse 1 Seitan fumé, poireaux, navets, carottes,",
+        "Pot-au-Feu au Seitan Fumé                                                        Mijoter / 60 min / 95°C bouillon Macaronis, cheddar râpé, purée de",
+        "Mac and Cheese au Potiron                                                        Sauce / 90°C / Vitesse 3 potiron, lait Butternut, quinoa, chèvre, cranberries,",
+        "Butternut Farcie au Quinoa                                                       Hacher & Malaxer la farce amandes",
+        "Cannellonis Épinards-            Épinards frais, ricotta, parmesan, sauce Hacher Épinards / Vitesse 5 Ricotta                              tomate",
+        "Bolognese de Lentilles           Lentilles vertes, coulis de tomate,             Mijoter / 30 min / Sens Vertes                               oignons, céleri                                Inverse 21 à 30. Collection Hiver &          Panais, topinambours, betteraves, Cuisson Vapeur / Varoma Crèmes                               châtaignes, marrons 31 à 40. Collection Printemps &      Asperges, petits pois, aubergines, Turbo / Hachage Rapide Dips                                 poivrons rôtis 41 à 50. Desserts & Douceurs         Chocolat blanc, crème de marrons, purée Fouet / Vitesse 4 / Émulsion de Fêtes                             d'amande L'intégralité des 50 fiches recettes techniques détaillées est enregistrée dans la mémoire de stockage de ce fichier PDF."
+      ],
+      "notes": [
+        "Pour 30 truffes | Accessoires : Lames, Gobelet doseur"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation",
+          "lines": [
+            "👥 Pour 30 truffes"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "250g de chocolat noir 70%, 100g de crème liquide entière, 30g de beurre,",
+            "une pincée de cannelle, poudre de cacao."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Faites fondre : 4 min / 50°C / Vitesse 2 . Laissez durcir la pâte au frais pendant 2h, formez des boules et roulez-les dans le cacao. Index des Recettes 11 à 50 (Incluses dans l'édition intégrale) Chaque recette de l'index complet suit rigoureusement la configuration technique du robot Bouton / Réglage Principal N° & Titre de la Recette             Ingrédients Clés MC Smart",
+            "Gaspacho Vert Épicé              Concombre, avocat, piment, citron vert          Mixage / Vitesse 8 à 10",
+            "Tartinade Petits Pois & Petits pois frais, menthe, ricotta, citron      Hacher / 10 sec / Vitesse 6 Ricotta",
+            "Velouté Chou-Fleur & Brie        Chou-fleur, crème de brie, ail, bouillon        Cuisson / 100°C / Vitesse 1",
+            "Bourguignon de                   Champignons bruns, vin rouge, carottes,         Mijoter / Sens Inverse / Champignons                          oignons                                        95°C",
+            "Curry Patates Douces &           Patates douces, pois chiches, lait de           Sens Inverse / 100°C / Pois Chiches                         coco, curry                                    Vitesse 1 Seitan fumé, poireaux, navets, carottes,",
+            "Pot-au-Feu au Seitan Fumé                                                        Mijoter / 60 min / 95°C bouillon Macaronis, cheddar râpé, purée de",
+            "Mac and Cheese au Potiron                                                        Sauce / 90°C / Vitesse 3 potiron, lait Butternut, quinoa, chèvre, cranberries,",
+            "Butternut Farcie au Quinoa                                                       Hacher & Malaxer la farce amandes",
+            "Cannellonis Épinards-            Épinards frais, ricotta, parmesan, sauce Hacher Épinards / Vitesse 5 Ricotta                              tomate",
+            "Bolognese de Lentilles           Lentilles vertes, coulis de tomate,             Mijoter / 30 min / Sens Vertes                               oignons, céleri                                Inverse 21 à 30. Collection Hiver &          Panais, topinambours, betteraves, Cuisson Vapeur / Varoma Crèmes                               châtaignes, marrons 31 à 40. Collection Printemps &      Asperges, petits pois, aubergines, Turbo / Hachage Rapide Dips                                 poivrons rôtis 41 à 50. Desserts & Douceurs         Chocolat blanc, crème de marrons, purée Fouet / Vitesse 4 / Émulsion de Fêtes                             d'amande L'intégralité des 50 fiches recettes techniques détaillées est enregistrée dans la mémoire de stockage de ce fichier PDF."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 10",
+      "timePrep": "",
+      "timeCook": "",
+      "servings": "30 truffes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-011",
+      "name": "Gaspacho Vert Épicé au Concombre et Avocat",
+      "ingredients": [
+        "2 concombres",
+        "2 avocats bien mûrs",
+        "1 piment vert (épépiné)",
+        "2 gousses d'ail",
+        "le jus de 2 citrons verts",
+        "30g de feuilles de menthe fraîche",
+        "3 cuillères à soupe d'huile d'olive",
+        "100ml d'eau glacée",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Lavez les concombres et coupez-les en gros tronçons. Coupez la chair des avocats en morceaux.",
+        "Mettez les gousses d'ail et le piment vert dans le bol mixeur. Insérez le gobelet doseur et lancez le programme Hacher / 5 secondes / Vitesse 6 .",
+        "Ajoutez les tronçons de concombre, la chair d'avocat, la menthe, le jus de citron vert, l'huile d'olive, l'eau glacée, du sel et du poivre.",
+        "Fermez le couvercle avec le gobelet doseur. Lancez le programme Mixage progressif / 1 minute / Vitesse 4 à 10 jusqu'à obtention d'une texture veloutée parfaite. Réservez au frais."
+      ],
+      "robot": [
+        "Lavez les concombres et coupez-les en gros tronçons. Coupez la chair des avocats en morceaux.",
+        "Mettez les gousses d'ail et le piment vert dans le bol mixeur. Insérez le gobelet doseur et lancez le programme Hacher / 5 secondes / Vitesse 6 .",
+        "Ajoutez les tronçons de concombre, la chair d'avocat, la menthe, le jus de citron vert, l'huile d'olive, l'eau glacée, du sel et du poivre.",
+        "Fermez le couvercle avec le gobelet doseur. Lancez le programme Mixage progressif / 1 minute / Vitesse 4 à 10 jusqu'à obtention d'une texture veloutée parfaite. Réservez au frais."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur | Temps : 10 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 10 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 concombres",
+            "2 avocats bien mûrs",
+            "1 piment vert (épépiné)",
+            "2 gousses d'ail",
+            "le jus de 2 citrons verts",
+            "30g de feuilles de menthe fraîche",
+            "3 cuillères à soupe d'huile d'olive",
+            "100ml d'eau glacée",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Lavez les concombres et coupez-les en gros tronçons. Coupez la chair des avocats en morceaux.",
+            "Mettez les gousses d'ail et le piment vert dans le bol mixeur. Insérez le gobelet doseur et lancez le programme Hacher / 5 secondes / Vitesse 6 .",
+            "Ajoutez les tronçons de concombre, la chair d'avocat, la menthe, le jus de citron vert, l'huile d'olive, l'eau glacée, du sel et du poivre.",
+            "Fermez le couvercle avec le gobelet doseur. Lancez le programme Mixage progressif / 1 minute / Vitesse 4 à 10 jusqu'à obtention d'une texture veloutée parfaite. Réservez au frais."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 11",
+      "timePrep": "10 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-012",
+      "name": "Tartinade de Petits Pois à la Menthe et Ricotta",
+      "ingredients": [
+        "400g de petits pois (frais ou surgelés)",
+        "150g de ricotta",
+        "20g de menthe fraîche",
+        "2 cuillères à soupe d'huile d'olive",
+        "le jus d'un demi-citron",
+        "sel",
+        "poivre blanc."
+      ],
+      "steps": [
+        "Versez 500ml d'eau dans le bol mixeur. Placez les petits pois dans le Panier de cuisson , puis insérez-le dans le bol.",
+        "Fermez le couvercle et faites cuire 10 minutes / 100°C / Vitesse 1 .",
+        "Videz l'eau du bol. Passez les petits pois sous l'eau froide pour fixer la couleur verte et mettez-les dans le bol mixeur vide.",
+        "Ajoutez la ricotta, la menthe, l'huile d'olive, le jus de citron, le sel et le poivre. Insérez le gobelet doseur et mixez 30 secondes / Vitesse 7 . Ajustez la texture selon votre goût."
+      ],
+      "robot": [
+        "Versez 500ml d'eau dans le bol mixeur. Placez les petits pois dans le Panier de cuisson , puis insérez-le dans le bol.",
+        "Fermez le couvercle et faites cuire 10 minutes / 100°C / Vitesse 1 .",
+        "Videz l'eau du bol. Passez les petits pois sous l'eau froide pour fixer la couleur verte et mettez-les dans le bol mixeur vide.",
+        "Ajoutez la ricotta, la menthe, l'huile d'olive, le jus de citron, le sel et le poivre. Insérez le gobelet doseur et mixez 30 secondes / Vitesse 7 . Ajustez la texture selon votre goût."
+      ],
+      "notes": [
+        "Pour 6 personnes | Accessoires : Gobelet doseur, Panier de cuisson | Temps : 15 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 15 min",
+          "lines": [
+            "👥 Pour 6 personnes",
+            "⏱️ Temps indiqué : 15 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de petits pois (frais ou surgelés)",
+            "150g de ricotta",
+            "20g de menthe fraîche",
+            "2 cuillères à soupe d'huile d'olive",
+            "le jus d'un demi-citron",
+            "sel",
+            "poivre blanc."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Versez 500ml d'eau dans le bol mixeur. Placez les petits pois dans le Panier de cuisson , puis insérez-le dans le bol.",
+            "Fermez le couvercle et faites cuire 10 minutes / 100°C / Vitesse 1 .",
+            "Videz l'eau du bol. Passez les petits pois sous l'eau froide pour fixer la couleur verte et mettez-les dans le bol mixeur vide.",
+            "Ajoutez la ricotta, la menthe, l'huile d'olive, le jus de citron, le sel et le poivre. Insérez le gobelet doseur et mixez 30 secondes / Vitesse 7 . Ajustez la texture selon votre goût."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 12",
+      "timePrep": "15 min",
+      "timeCook": "",
+      "servings": "6 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-013",
+      "name": "Velouté Douceur de Chou-Fleur et Brie de Meaux",
+      "ingredients": [
+        "600g de sommités de chou-fleur",
+        "1 oignon",
+        "1 cuillère à soupe de beurre",
+        "500ml de bouillon de légumes",
+        "150g de Brie de Meaux (sans la croûte)",
+        "100ml de crème fraîche liquide",
+        "sel",
+        "poivre",
+        "muscade."
+      ],
+      "steps": [
+        "Mettez l'oignon coupé en deux dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Raclez les parois à l'aide de la spatule.",
+        "Ajoutez le beurre et faites rissoler avec le programme Saisir / 3 minutes / 120°C sans le gobelet doseur.",
+        "Ajoutez les sommités de chou-fleur et le bouillon de légumes. Mettez le couvercle et le gobelet doseur, puis cuisez 20 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez le Brie de Meaux en morceaux, la crème, le sel, le poivre et une pincée de muscade. Mixez le tout 1 minute / Vitesse 4 à 8 de manière progressive."
+      ],
+      "robot": [
+        "Mettez l'oignon coupé en deux dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Raclez les parois à l'aide de la spatule.",
+        "Ajoutez le beurre et faites rissoler avec le programme Saisir / 3 minutes / 120°C sans le gobelet doseur.",
+        "Ajoutez les sommités de chou-fleur et le bouillon de légumes. Mettez le couvercle et le gobelet doseur, puis cuisez 20 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez le Brie de Meaux en morceaux, la crème, le sel, le poivre et une pincée de muscade. Mixez le tout 1 minute / Vitesse 4 à 8 de manière progressive."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur | Temps : 30 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 30 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 30 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600g de sommités de chou-fleur",
+            "1 oignon",
+            "1 cuillère à soupe de beurre",
+            "500ml de bouillon de légumes",
+            "150g de Brie de Meaux (sans la croûte)",
+            "100ml de crème fraîche liquide",
+            "sel",
+            "poivre",
+            "muscade."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon coupé en deux dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Raclez les parois à l'aide de la spatule.",
+            "Ajoutez le beurre et faites rissoler avec le programme Saisir / 3 minutes / 120°C sans le gobelet doseur.",
+            "Ajoutez les sommités de chou-fleur et le bouillon de légumes. Mettez le couvercle et le gobelet doseur, puis cuisez 20 minutes / 100°C / Vitesse 1 .",
+            "Ajoutez le Brie de Meaux en morceaux, la crème, le sel, le poivre et une pincée de muscade. Mixez le tout 1 minute / Vitesse 4 à 8 de manière progressive."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 13",
+      "timePrep": "30 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-014",
+      "name": "Bourguignon de Champignons Bruns et Légumes Racines",
+      "ingredients": [
+        "500g de champignons bruns (coupés en quatre)",
+        "2 carottes en rondelles",
+        "1 panais en dés",
+        "1 oignon",
+        "2 gousses d'ail",
+        "400ml de vin rouge",
+        "200ml de bouillon de légumes",
+        "2 cuillères à soupe de concentré de tomates",
+        "2 cuillères à soupe d'huile d'olive",
+        "1 bouquet garni",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Mettez l'oignon et l'ail dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Raclez les parois.",
+        "Ajoutez l'huile d'olive. Lancez le programme Saisir / 4 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les champignons, les carottes et le panais. Lancez à nouveau Saisir / 5 minutes / 120°C .",
+        "Ajoutez le vin rouge, le bouillon, le concentré de tomates et le bouquet garni. Fermez le couvercle et programmez Mijoter / 30 minutes / 95°C / Sens Inverse ."
+      ],
+      "robot": [
+        "Mettez l'oignon et l'ail dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Raclez les parois.",
+        "Ajoutez l'huile d'olive. Lancez le programme Saisir / 4 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les champignons, les carottes et le panais. Lancez à nouveau Saisir / 5 minutes / 120°C .",
+        "Ajoutez le vin rouge, le bouillon, le concentré de tomates et le bouquet garni. Fermez le couvercle et programmez Mijoter / 30 minutes / 95°C / Sens Inverse ."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur, Gobelet doseur | Temps : 45 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 45 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 45 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500g de champignons bruns (coupés en quatre)",
+            "2 carottes en rondelles",
+            "1 panais en dés",
+            "1 oignon",
+            "2 gousses d'ail",
+            "400ml de vin rouge",
+            "200ml de bouillon de légumes",
+            "2 cuillères à soupe de concentré de tomates",
+            "2 cuillères à soupe d'huile d'olive",
+            "1 bouquet garni",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon et l'ail dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Raclez les parois.",
+            "Ajoutez l'huile d'olive. Lancez le programme Saisir / 4 minutes / 120°C .",
+            "Insérez le Mélangeur . Ajoutez les champignons, les carottes et le panais. Lancez à nouveau Saisir / 5 minutes / 120°C .",
+            "Ajoutez le vin rouge, le bouillon, le concentré de tomates et le bouquet garni. Fermez le couvercle et programmez Mijoter / 30 minutes / 95°C / Sens Inverse ."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 14",
+      "timePrep": "45 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-015",
+      "name": "Curry de Patates Douces, Pois Chiches et Lait de Coco",
+      "ingredients": [
+        "500g de patates douces (coupées en cubes)",
+        "250g de pois chiches cuits égouttés",
+        "1 oignon",
+        "400ml de lait de coco",
+        "200g de concassé de tomates",
+        "2 cuillères à café de curry en poudre",
+        "2 cuillères à soupe d'huile neutre",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Mettez l'oignon dans le bol et hachez 5 secondes / Vitesse 5 .",
+        "Ajoutez l'huile et le curry en poudre pour torréfier les épices : lancez Saisir / 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les cubes de patates douces, le lait de coco et le concassé de tomates. Faites cuire 20 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les pois chiches, salez, poivrez et prolongez la cuisson de 5 minutes / 95°C / Sens Inverse / Vitesse 1 ."
+      ],
+      "robot": [
+        "Mettez l'oignon dans le bol et hachez 5 secondes / Vitesse 5 .",
+        "Ajoutez l'huile et le curry en poudre pour torréfier les épices : lancez Saisir / 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les cubes de patates douces, le lait de coco et le concassé de tomates. Faites cuire 20 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les pois chiches, salez, poivrez et prolongez la cuisson de 5 minutes / 95°C / Sens Inverse / Vitesse 1 ."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur | Temps : 35 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 35 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 35 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500g de patates douces (coupées en cubes)",
+            "250g de pois chiches cuits égouttés",
+            "1 oignon",
+            "400ml de lait de coco",
+            "200g de concassé de tomates",
+            "2 cuillères à café de curry en poudre",
+            "2 cuillères à soupe d'huile neutre",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon dans le bol et hachez 5 secondes / Vitesse 5 .",
+            "Ajoutez l'huile et le curry en poudre pour torréfier les épices : lancez Saisir / 3 minutes / 120°C .",
+            "Insérez le Mélangeur . Ajoutez les cubes de patates douces, le lait de coco et le concassé de tomates. Faites cuire 20 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+            "Ajoutez les pois chiches, salez, poivrez et prolongez la cuisson de 5 minutes / 95°C / Sens Inverse / Vitesse 1 ."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 15",
+      "timePrep": "35 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-016",
+      "name": "Pot-au-Feu Végétarien au Seitan Fumé",
+      "ingredients": [
+        "300g de seitan fumé coupé en gros morceaux",
+        "2 carottes",
+        "2 navets",
+        "2 poireaux (blancs uniquement)",
+        "1 branche de céleri",
+        "1 oignon piqué d’un clou de girofle",
+        "800ml de bouillon de légumes",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Lavez et coupez tous les légumes en gros tronçons de taille régulière.",
+        "Insérez le Mélangeur dans le bol mixeur. Déposez-y tous les légumes, l'oignon piqué et le seitan fumé.",
+        "Mouillez avec le bouillon de légumes jusqu'à couvrir les ingrédients. Ajoutez du sel et du poivre.",
+        "Verrouillez le couvercle avec le gobelet doseur et faites cuire 40 minutes / 100°C / Sens Inverse / Vitesse 1 ."
+      ],
+      "robot": [
+        "Lavez et coupez tous les légumes en gros tronçons de taille régulière.",
+        "Insérez le Mélangeur dans le bol mixeur. Déposez-y tous les légumes, l'oignon piqué et le seitan fumé.",
+        "Mouillez avec le bouillon de légumes jusqu'à couvrir les ingrédients. Ajoutez du sel et du poivre.",
+        "Verrouillez le couvercle avec le gobelet doseur et faites cuire 40 minutes / 100°C / Sens Inverse / Vitesse 1 ."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur | Temps : 50 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 50 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 50 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "300g de seitan fumé coupé en gros morceaux",
+            "2 carottes",
+            "2 navets",
+            "2 poireaux (blancs uniquement)",
+            "1 branche de céleri",
+            "1 oignon piqué d’un clou de girofle",
+            "800ml de bouillon de légumes",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Lavez et coupez tous les légumes en gros tronçons de taille régulière.",
+            "Insérez le Mélangeur dans le bol mixeur. Déposez-y tous les légumes, l'oignon piqué et le seitan fumé.",
+            "Mouillez avec le bouillon de légumes jusqu'à couvrir les ingrédients. Ajoutez du sel et du poivre.",
+            "Verrouillez le couvercle avec le gobelet doseur et faites cuire 40 minutes / 100°C / Sens Inverse / Vitesse 1 ."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 16",
+      "timePrep": "50 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-017",
+      "name": "Mac and Cheese au Potiron et Cheddar Coulant",
+      "ingredients": [
+        "300g de macaronis (cuits à part)",
+        "300g de chair de potiron",
+        "40g de beurre",
+        "40g de farine",
+        "400ml de lait",
+        "150g de cheddar râpé",
+        "sel",
+        "poivre",
+        "une pincée de paprika."
+      ],
+      "steps": [
+        "Mettez la chair de potiron coupée en petits dés dans le bol mixeur avec 50ml d'eau. Cuisez 12 minutes / 100°C / Vitesse 1 , puis mixez 15 secondes / Vitesse 6 . Retirez la purée du bol et réservez.",
+        "Dans le bol propre, insérez le Fouet . Ajoutez le beurre, la farine, le lait, le sel et le poivre pour la béchamel. Chauffez 8 minutes / 90°C / Vitesse 3 .",
+        "Ajoutez la purée de potiron réservée, le cheddar râpé et le paprika. Mélangez 1 minute / Vitesse 2 pour faire fondre le fromage.",
+        "Nappez vos macaronis cuits avec cette sauce crémeuse et servez chaud."
+      ],
+      "robot": [
+        "Mettez la chair de potiron coupée en petits dés dans le bol mixeur avec 50ml d'eau. Cuisez 12 minutes / 100°C / Vitesse 1 , puis mixez 15 secondes / Vitesse 6 . Retirez la purée du bol et réservez.",
+        "Dans le bol propre, insérez le Fouet . Ajoutez le beurre, la farine, le lait, le sel et le poivre pour la béchamel. Chauffez 8 minutes / 90°C / Vitesse 3 .",
+        "Ajoutez la purée de potiron réservée, le cheddar râpé et le paprika. Mélangez 1 minute / Vitesse 2 pour faire fondre le fromage.",
+        "Nappez vos macaronis cuits avec cette sauce crémeuse et servez chaud."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur, Fouet | Temps : 25 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 25 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 25 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "300g de macaronis (cuits à part)",
+            "300g de chair de potiron",
+            "40g de beurre",
+            "40g de farine",
+            "400ml de lait",
+            "150g de cheddar râpé",
+            "sel",
+            "poivre",
+            "une pincée de paprika."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez la chair de potiron coupée en petits dés dans le bol mixeur avec 50ml d'eau. Cuisez 12 minutes / 100°C / Vitesse 1 , puis mixez 15 secondes / Vitesse 6 . Retirez la purée du bol et réservez.",
+            "Dans le bol propre, insérez le Fouet . Ajoutez le beurre, la farine, le lait, le sel et le poivre pour la béchamel. Chauffez 8 minutes / 90°C / Vitesse 3 .",
+            "Ajoutez la purée de potiron réservée, le cheddar râpé et le paprika. Mélangez 1 minute / Vitesse 2 pour faire fondre le fromage.",
+            "Nappez vos macaronis cuits avec cette sauce crémeuse et servez chaud."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 17",
+      "timePrep": "25 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-018",
+      "name": "Butternut Farcie au Quinoa et Chèvre Frais",
+      "ingredients": [
+        "1 petite courge butternut",
+        "80g de quinoa",
+        "100g de chèvre frais",
+        "30g de cranberries séchées",
+        "1 oignon",
+        "1 cuillère à soupe d'huile d'olive",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Coupez la butternut en deux dans le sens de la longueur et évidez la partie contenant les graines.",
+        "Versez 600ml d'eau dans le bol. Disposez les deux moitiés de courge dans l'ensemble Varoma , face bombée vers le haut. Placez le Varoma et cuisez 25 minutes / Vapeur (Varoma) / Vitesse 1 .",
+        "Pendant ce temps, faites cuire le quinoa à la casserole. Une fois la butternut tendre, évidez un peu de chair de la partie longue et mettez-la dans le bol propre avec l'oignon. Hachez 5 secondes / Vitesse 5 , puis faites rissoler avec l'huile d'olive 3 minutes / 120°C / Vitesse 1 .",
+        "Mélangez dans un saladier ce hachis avec le quinoa, le chèvre frais et les cranberries. Garnissez les demis-courges et passez-les 5 minutes sous le gril du four."
+      ],
+      "robot": [
+        "Coupez la butternut en deux dans le sens de la longueur et évidez la partie contenant les graines.",
+        "Versez 600ml d'eau dans le bol. Disposez les deux moitiés de courge dans l'ensemble Varoma , face bombée vers le haut. Placez le Varoma et cuisez 25 minutes / Vapeur (Varoma) / Vitesse 1 .",
+        "Pendant ce temps, faites cuire le quinoa à la casserole. Une fois la butternut tendre, évidez un peu de chair de la partie longue et mettez-la dans le bol propre avec l'oignon. Hachez 5 secondes / Vitesse 5 , puis faites rissoler avec l'huile d'olive 3 minutes / 120°C / Vitesse 1 .",
+        "Mélangez dans un saladier ce hachis avec le quinoa, le chèvre frais et les cranberries. Garnissez les demis-courges et passez-les 5 minutes sous le gril du four."
+      ],
+      "notes": [
+        "Pour 2 personnes | Accessoires : Ensemble Varoma, Gobelet doseur | Temps : 40 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 40 min",
+          "lines": [
+            "👥 Pour 2 personnes",
+            "⏱️ Temps indiqué : 40 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 petite courge butternut",
+            "80g de quinoa",
+            "100g de chèvre frais",
+            "30g de cranberries séchées",
+            "1 oignon",
+            "1 cuillère à soupe d'huile d'olive",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Coupez la butternut en deux dans le sens de la longueur et évidez la partie contenant les graines.",
+            "Versez 600ml d'eau dans le bol. Disposez les deux moitiés de courge dans l'ensemble Varoma , face bombée vers le haut. Placez le Varoma et cuisez 25 minutes / Vapeur (Varoma) / Vitesse 1 .",
+            "Pendant ce temps, faites cuire le quinoa à la casserole. Une fois la butternut tendre, évidez un peu de chair de la partie longue et mettez-la dans le bol propre avec l'oignon. Hachez 5 secondes / Vitesse 5 , puis faites rissoler avec l'huile d'olive 3 minutes / 120°C / Vitesse 1 .",
+            "Mélangez dans un saladier ce hachis avec le quinoa, le chèvre frais et les cranberries. Garnissez les demis-courges et passez-les 5 minutes sous le gril du four."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 18",
+      "timePrep": "40 min",
+      "timeCook": "",
+      "servings": "2 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-019",
+      "name": "Cannellonis Épinards, Ricotta et Béchamel Légère",
+      "ingredients": [
+        "12 tubes de cannellonis",
+        "400g d'épinards frais",
+        "250g de ricotta",
+        "50g de parmesan",
+        "1 gousse d'ail",
+        "40g de beurre",
+        "40g de farine",
+        "500ml de lait",
+        "sel",
+        "poivre",
+        "muscade."
+      ],
+      "steps": [
+        "Mettez l'ail et les épinards dans le bol mixeur. Hachez 5 secondes / Vitesse 6 . Lancez la cuisson 5 minutes / 100°C / Sens Inverse / Vitesse 1 pour faire tomber les épinards. Égouttez- les bien.",
+        "Remettez les épinards dans le bol, ajoutez la ricotta et le parmesan, du sel et du poivre. Mélangez 20 secondes / Sens Inverse / Vitesse 3 . Utilisez ce mélange pour garnir les cannellonis.",
+        "Pour la béchamel : lavez le bol, insérez le Fouet . Mettez le beurre, la farine, le lait, du sel, du poivre et de la muscade. Lancez 8 minutes / 90°C / Vitesse 3 .",
+        "Disposez les cannellonis dans un plat à gratin, recouvrez de béchamel et enfournez pour 25 minutes à 180°C."
+      ],
+      "robot": [
+        "Mettez l'ail et les épinards dans le bol mixeur. Hachez 5 secondes / Vitesse 6 . Lancez la cuisson 5 minutes / 100°C / Sens Inverse / Vitesse 1 pour faire tomber les épinards. Égouttez- les bien.",
+        "Remettez les épinards dans le bol, ajoutez la ricotta et le parmesan, du sel et du poivre. Mélangez 20 secondes / Sens Inverse / Vitesse 3 . Utilisez ce mélange pour garnir les cannellonis.",
+        "Pour la béchamel : lavez le bol, insérez le Fouet . Mettez le beurre, la farine, le lait, du sel, du poivre et de la muscade. Lancez 8 minutes / 90°C / Vitesse 3 .",
+        "Disposez les cannellonis dans un plat à gratin, recouvrez de béchamel et enfournez pour 25 minutes à 180°C."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur, Fouet | Temps : 35 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 35 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 35 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "12 tubes de cannellonis",
+            "400g d'épinards frais",
+            "250g de ricotta",
+            "50g de parmesan",
+            "1 gousse d'ail",
+            "40g de beurre",
+            "40g de farine",
+            "500ml de lait",
+            "sel",
+            "poivre",
+            "muscade."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'ail et les épinards dans le bol mixeur. Hachez 5 secondes / Vitesse 6 . Lancez la cuisson 5 minutes / 100°C / Sens Inverse / Vitesse 1 pour faire tomber les épinards. Égouttez- les bien.",
+            "Remettez les épinards dans le bol, ajoutez la ricotta et le parmesan, du sel et du poivre. Mélangez 20 secondes / Sens Inverse / Vitesse 3 . Utilisez ce mélange pour garnir les cannellonis.",
+            "Pour la béchamel : lavez le bol, insérez le Fouet . Mettez le beurre, la farine, le lait, du sel, du poivre et de la muscade. Lancez 8 minutes / 90°C / Vitesse 3 .",
+            "Disposez les cannellonis dans un plat à gratin, recouvrez de béchamel et enfournez pour 25 minutes à 180°C."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 19",
+      "timePrep": "35 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-020",
+      "name": "Bolognese de Lentilles Vertes pour Pasta",
+      "ingredients": [
+        "150g de lentilles vertes (crues)",
+        "1 oignon",
+        "1 carotte",
+        "1 branche de céleri",
+        "1 gousse d'ail",
+        "500g de coulis de tomates",
+        "150ml de bouillon de légumes",
+        "2 cuillères à soupe d'huile d'olive",
+        "sel",
+        "poivre",
+        "herbes de Provence."
+      ],
+      "steps": [
+        "Mettez l'oignon, la carotte, le céleri et l'ail dans le bol. Insérez le gobelet doseur et hachez 5 secondes / Vitesse 5 .",
+        "Ajoutez l'huile d'olive et faites rissoler avec le programme Saisir / 4 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les lentilles vertes rincées, le coulis de tomates, le bouillon de légumes et les herbes de Provence.",
+        "Fermez le couvercle avec le gobelet doseur et faites cuire 30 minutes / 100°C / Sens Inverse / Vitesse 1 jusqu'à ce que les lentilles soient bien tendres. Servir sur des spaghettis."
+      ],
+      "robot": [
+        "Mettez l'oignon, la carotte, le céleri et l'ail dans le bol. Insérez le gobelet doseur et hachez 5 secondes / Vitesse 5 .",
+        "Ajoutez l'huile d'olive et faites rissoler avec le programme Saisir / 4 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les lentilles vertes rincées, le coulis de tomates, le bouillon de légumes et les herbes de Provence.",
+        "Fermez le couvercle avec le gobelet doseur et faites cuire 30 minutes / 100°C / Sens Inverse / Vitesse 1 jusqu'à ce que les lentilles soient bien tendres. Servir sur des spaghettis."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur, Gobelet doseur | Temps : 40 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 40 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 40 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150g de lentilles vertes (crues)",
+            "1 oignon",
+            "1 carotte",
+            "1 branche de céleri",
+            "1 gousse d'ail",
+            "500g de coulis de tomates",
+            "150ml de bouillon de légumes",
+            "2 cuillères à soupe d'huile d'olive",
+            "sel",
+            "poivre",
+            "herbes de Provence."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon, la carotte, le céleri et l'ail dans le bol. Insérez le gobelet doseur et hachez 5 secondes / Vitesse 5 .",
+            "Ajoutez l'huile d'olive et faites rissoler avec le programme Saisir / 4 minutes / 120°C .",
+            "Insérez le Mélangeur . Ajoutez les lentilles vertes rincées, le coulis de tomates, le bouillon de légumes et les herbes de Provence.",
+            "Fermez le couvercle avec le gobelet doseur et faites cuire 30 minutes / 100°C / Sens Inverse / Vitesse 1 jusqu'à ce que les lentilles soient bien tendres. Servir sur des spaghettis."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 20",
+      "timePrep": "40 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-021",
+      "name": "Crème de Panais au Chocolat Blanc",
+      "ingredients": [
+        "600g de panais",
+        "1 oignon",
+        "20g de beurre",
+        "500ml de bouillon de légumes",
+        "40g de chocolat blanc de cuisine",
+        "100ml de crème liquide",
+        "sel",
+        "poivre blanc."
+      ],
+      "steps": [
+        "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 . Ajoutez le beurre et faites revenir 3 minutes / 120°C / Vitesse 1 .",
+        "Ajoutez les panais coupés en morceaux et le bouillon de légumes. Faites cuire 20 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez le chocolat blanc en morceaux et la crème liquide. Laissez fondre 1 minute dans le bol chaud.",
+        "Mixez vigoureusement de façon progressive 1 minute / Vitesse 4 à 8 pour obtenir une texture nappante et soyeuse."
+      ],
+      "robot": [
+        "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 . Ajoutez le beurre et faites revenir 3 minutes / 120°C / Vitesse 1 .",
+        "Ajoutez les panais coupés en morceaux et le bouillon de légumes. Faites cuire 20 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez le chocolat blanc en morceaux et la crème liquide. Laissez fondre 1 minute dans le bol chaud.",
+        "Mixez vigoureusement de façon progressive 1 minute / Vitesse 4 à 8 pour obtenir une texture nappante et soyeuse."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur | Temps : 30 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 30 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 30 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600g de panais",
+            "1 oignon",
+            "20g de beurre",
+            "500ml de bouillon de légumes",
+            "40g de chocolat blanc de cuisine",
+            "100ml de crème liquide",
+            "sel",
+            "poivre blanc."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 . Ajoutez le beurre et faites revenir 3 minutes / 120°C / Vitesse 1 .",
+            "Ajoutez les panais coupés en morceaux et le bouillon de légumes. Faites cuire 20 minutes / 100°C / Vitesse 1 .",
+            "Ajoutez le chocolat blanc en morceaux et la crème liquide. Laissez fondre 1 minute dans le bol chaud.",
+            "Mixez vigoureusement de façon progressive 1 minute / Vitesse 4 à 8 pour obtenir une texture nappante et soyeuse."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 21",
+      "timePrep": "30 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-022",
+      "name": "Soupe de Topinambours aux Brisures de Marrons",
+      "ingredients": [
+        "500g de topinambours",
+        "1 pomme de terre",
+        "1 échalote",
+        "15g de beurre",
+        "600ml de bouillon de légumes",
+        "100g de marrons cuits au naturel",
+        "2 cuillères à soupe de crème fraîche",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Mettez l'échalote dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Ajoutez le beurre et rissolez 3 minutes / 120°C .",
+        "Ajoutez les topinambours et la pomme de terre coupés en dés, ainsi que le bouillon de légumes. Cuisez 25 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez la crème fraîche, salez et poivrez. Mixez 45 secondes / Vitesse 5 à 8 .",
+        "Servez chaud dans des bols en parsemant de brisures de marrons cuits."
+      ],
+      "robot": [
+        "Mettez l'échalote dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Ajoutez le beurre et rissolez 3 minutes / 120°C .",
+        "Ajoutez les topinambours et la pomme de terre coupés en dés, ainsi que le bouillon de légumes. Cuisez 25 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez la crème fraîche, salez et poivrez. Mixez 45 secondes / Vitesse 5 à 8 .",
+        "Servez chaud dans des bols en parsemant de brisures de marrons cuits."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur | Temps : 35 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 35 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 35 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500g de topinambours",
+            "1 pomme de terre",
+            "1 échalote",
+            "15g de beurre",
+            "600ml de bouillon de légumes",
+            "100g de marrons cuits au naturel",
+            "2 cuillères à soupe de crème fraîche",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'échalote dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Ajoutez le beurre et rissolez 3 minutes / 120°C .",
+            "Ajoutez les topinambours et la pomme de terre coupés en dés, ainsi que le bouillon de légumes. Cuisez 25 minutes / 100°C / Vitesse 1 .",
+            "Ajoutez la crème fraîche, salez et poivrez. Mixez 45 secondes / Vitesse 5 à 8 .",
+            "Servez chaud dans des bols en parsemant de brisures de marrons cuits."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 22",
+      "timePrep": "35 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-023",
+      "name": "Houmous Rose Éclatant à la Betterave",
+      "ingredients": [
+        "250g de pois chiches cuits égouttés",
+        "150g de betterave cuite",
+        "2 cuillères à soupe de tahini (crème de sésame)",
+        "le jus d'un citron",
+        "1 gousse d'ail",
+        "4 cuillères à soupe d'huile d'olive",
+        "1 cuillère à café de cumin",
+        "sel."
+      ],
+      "steps": [
+        "Mettez la gousse d'ail dans le bol mixeur. Hachez 5 secondes / Vitesse 6 .",
+        "Ajoutez les pois chiches, la betterave coupée en dés, le tahini, le jus de citron, l'huile d'olive, le cumin et une bonne pincée de sel.",
+        "Insérez le couvercle avec le gobelet doseur. Mixez 45 secondes / Vitesse 7 .",
+        "Raclez les parois à l'aide de la spatule et mixez de nouveau 15 secondes / Vitesse 8 pour obtenir une texture ultra-lisse et homogène."
+      ],
+      "robot": [
+        "Mettez la gousse d'ail dans le bol mixeur. Hachez 5 secondes / Vitesse 6 .",
+        "Ajoutez les pois chiches, la betterave coupée en dés, le tahini, le jus de citron, l'huile d'olive, le cumin et une bonne pincée de sel.",
+        "Insérez le couvercle avec le gobelet doseur. Mixez 45 secondes / Vitesse 7 .",
+        "Raclez les parois à l'aide de la spatule et mixez de nouveau 15 secondes / Vitesse 8 pour obtenir une texture ultra-lisse et homogène."
+      ],
+      "notes": [
+        "Pour 6 personnes | Accessoires : Gobelet doseur | Temps : 5 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 5 min",
+          "lines": [
+            "👥 Pour 6 personnes",
+            "⏱️ Temps indiqué : 5 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "250g de pois chiches cuits égouttés",
+            "150g de betterave cuite",
+            "2 cuillères à soupe de tahini (crème de sésame)",
+            "le jus d'un citron",
+            "1 gousse d'ail",
+            "4 cuillères à soupe d'huile d'olive",
+            "1 cuillère à café de cumin",
+            "sel."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez la gousse d'ail dans le bol mixeur. Hachez 5 secondes / Vitesse 6 .",
+            "Ajoutez les pois chiches, la betterave coupée en dés, le tahini, le jus de citron, l'huile d'olive, le cumin et une bonne pincée de sel.",
+            "Insérez le couvercle avec le gobelet doseur. Mixez 45 secondes / Vitesse 7 .",
+            "Raclez les parois à l'aide de la spatule et mixez de nouveau 15 secondes / Vitesse 8 pour obtenir une texture ultra-lisse et homogène."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 23",
+      "timePrep": "5 min",
+      "timeCook": "",
+      "servings": "6 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-024",
+      "name": "Farce Festive pour Wellington de Butternut",
+      "ingredients": [
+        "250g de champignons de Paris bruns",
+        "150g d'épinards frais",
+        "50g de cerneaux de noix",
+        "1 échalote",
+        "2 gousses d'ail",
+        "20g de beurre",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Mettez l'échalote, l'ail et les noix dans le bol mixeur. Hachez 5 secondes / Vitesse 5 .",
+        "Ajoutez les champignons coupés en deux. Hachez grossièrement 4 secondes / Vitesse 4 .",
+        "Ajoutez le beurre et les épinards frais. Programmez Saisir / 6 minutes / 120°C / Sens Inverse sans le gobelet doseur pour faire évaporer toute l'eau des légumes.",
+        "Salez et poivrez. Votre farce texturée est prête à être étalée sur une pâte feuilletée autour de votre butternut rôtie."
+      ],
+      "robot": [
+        "Mettez l'échalote, l'ail et les noix dans le bol mixeur. Hachez 5 secondes / Vitesse 5 .",
+        "Ajoutez les champignons coupés en deux. Hachez grossièrement 4 secondes / Vitesse 4 .",
+        "Ajoutez le beurre et les épinards frais. Programmez Saisir / 6 minutes / 120°C / Sens Inverse sans le gobelet doseur pour faire évaporer toute l'eau des légumes.",
+        "Salez et poivrez. Votre farce texturée est prête à être étalée sur une pâte feuilletée autour de votre butternut rôtie."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur | Temps : 15 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 15 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 15 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "250g de champignons de Paris bruns",
+            "150g d'épinards frais",
+            "50g de cerneaux de noix",
+            "1 échalote",
+            "2 gousses d'ail",
+            "20g de beurre",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'échalote, l'ail et les noix dans le bol mixeur. Hachez 5 secondes / Vitesse 5 .",
+            "Ajoutez les champignons coupés en deux. Hachez grossièrement 4 secondes / Vitesse 4 .",
+            "Ajoutez le beurre et les épinards frais. Programmez Saisir / 6 minutes / 120°C / Sens Inverse sans le gobelet doseur pour faire évaporer toute l'eau des légumes.",
+            "Salez et poivrez. Votre farce texturée est prête à être étalée sur une pâte feuilletée autour de votre butternut rôtie."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 24",
+      "timePrep": "15 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-025",
+      "name": "Sauce Crémeuse aux Marrons Salée & Champignons Sauvages",
+      "ingredients": [
+        "200g de champignons sauvages (pleurotes",
+        "girolles)",
+        "100g de marrons cuits",
+        "1 échalote",
+        "20g de beurre",
+        "200ml de crème liquide entière",
+        "50ml de vin blanc sec",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Hachez l'échalote dans le bol 5 secondes / Vitesse 5 .",
+        "Insérez le Mélangeur . Ajoutez le beurre et les champignons sauvages. Lancez le programme Saisir / 5 minutes / 120°C .",
+        "Ajoutez le vin blanc et laissez réduire en programmant 2 minutes / 100°C / Sens Inverse / Vitesse 1 sans le gobelet doseur.",
+        "Ajoutez les marrons coupés en morceaux et la crème liquide. Assaisonnez et faites épaissir pendant 8 minutes / 95°C / Sens Inverse / Vitesse 1 ."
+      ],
+      "robot": [
+        "Hachez l'échalote dans le bol 5 secondes / Vitesse 5 .",
+        "Insérez le Mélangeur . Ajoutez le beurre et les champignons sauvages. Lancez le programme Saisir / 5 minutes / 120°C .",
+        "Ajoutez le vin blanc et laissez réduire en programmant 2 minutes / 100°C / Sens Inverse / Vitesse 1 sans le gobelet doseur.",
+        "Ajoutez les marrons coupés en morceaux et la crème liquide. Assaisonnez et faites épaissir pendant 8 minutes / 95°C / Sens Inverse / Vitesse 1 ."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur, Gobelet doseur | Temps : 20 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 20 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 20 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de champignons sauvages (pleurotes",
+            "girolles)",
+            "100g de marrons cuits",
+            "1 échalote",
+            "20g de beurre",
+            "200ml de crème liquide entière",
+            "50ml de vin blanc sec",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'échalote dans le bol 5 secondes / Vitesse 5 .",
+            "Insérez le Mélangeur . Ajoutez le beurre et les champignons sauvages. Lancez le programme Saisir / 5 minutes / 120°C .",
+            "Ajoutez le vin blanc et laissez réduire en programmant 2 minutes / 100°C / Sens Inverse / Vitesse 1 sans le gobelet doseur.",
+            "Ajoutez les marrons coupés en morceaux et la crème liquide. Assaisonnez et faites épaissir pendant 8 minutes / 95°C / Sens Inverse / Vitesse 1 ."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 25",
+      "timePrep": "20 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-026",
+      "name": "Ragoût de Pois Chiches au Chou Kale",
+      "ingredients": [
+        "400g de pois chiches cuits",
+        "150g de feuilles de chou kale (sans les côtes)",
+        "1 oignon",
+        "2 gousses d'ail",
+        "400g de tomates concassées en boîte",
+        "150ml de bouillon de légumes",
+        "2 cuillères à soupe d'huile d'olive",
+        "1 cuillère à café de piment doux",
+        "sel."
+      ],
+      "steps": [
+        "Hachez l'oignon et l'ail dans le bol mixeur 5 secondes / Vitesse 5 . Faites rissoler avec l'huile d'olive 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez le chou kale grossièrement déchiré, les tomates concassées, le piment doux et le bouillon.",
+        "Faites cuire 15 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les pois chiches égouttés et poursuivez la cuisson 8 minutes / 95°C / Sens Inverse / Vitesse 1 ."
+      ],
+      "robot": [
+        "Hachez l'oignon et l'ail dans le bol mixeur 5 secondes / Vitesse 5 . Faites rissoler avec l'huile d'olive 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez le chou kale grossièrement déchiré, les tomates concassées, le piment doux et le bouillon.",
+        "Faites cuire 15 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les pois chiches égouttés et poursuivez la cuisson 8 minutes / 95°C / Sens Inverse / Vitesse 1 ."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur | Temps : 30 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 30 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 30 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de pois chiches cuits",
+            "150g de feuilles de chou kale (sans les côtes)",
+            "1 oignon",
+            "2 gousses d'ail",
+            "400g de tomates concassées en boîte",
+            "150ml de bouillon de légumes",
+            "2 cuillères à soupe d'huile d'olive",
+            "1 cuillère à café de piment doux",
+            "sel."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'oignon et l'ail dans le bol mixeur 5 secondes / Vitesse 5 . Faites rissoler avec l'huile d'olive 3 minutes / 120°C .",
+            "Insérez le Mélangeur . Ajoutez le chou kale grossièrement déchiré, les tomates concassées, le piment doux et le bouillon.",
+            "Faites cuire 15 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+            "Ajoutez les pois chiches égouttés et poursuivez la cuisson 8 minutes / 95°C / Sens Inverse / Vitesse 1 ."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 26",
+      "timePrep": "30 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-027",
+      "name": "Curry de Légumes d'Automne au Lait de Coco",
+      "ingredients": [
+        "300g de potiron",
+        "200g de carottes",
+        "200g de pommes de terre",
+        "1 oignon",
+        "400ml de lait de coco",
+        "1 cuillère à soupe de pâte de curry jaune",
+        "2 cuillères à soupe d'huile",
+        "sel."
+      ],
+      "steps": [
+        "Hachez l'oignon dans le bol 5 secondes / Vitesse 5 . Ajoutez l'huile et la pâte de curry, puis faites chauffer 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez tous les légumes coupés en dés de 2 cm et le lait de coco.",
+        "Fermez le couvercle avec le gobelet doseur et faites cuire avec le programme Mijoter / 25 minutes / 100°C / Sens Inverse . Vérifiez la cuisson des pommes de terre avant de servir."
+      ],
+      "robot": [
+        "Hachez l'oignon dans le bol 5 secondes / Vitesse 5 . Ajoutez l'huile et la pâte de curry, puis faites chauffer 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez tous les légumes coupés en dés de 2 cm et le lait de coco.",
+        "Fermez le couvercle avec le gobelet doseur et faites cuire avec le programme Mijoter / 25 minutes / 100°C / Sens Inverse . Vérifiez la cuisson des pommes de terre avant de servir."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur | Temps : 35 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 35 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 35 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "300g de potiron",
+            "200g de carottes",
+            "200g de pommes de terre",
+            "1 oignon",
+            "400ml de lait de coco",
+            "1 cuillère à soupe de pâte de curry jaune",
+            "2 cuillères à soupe d'huile",
+            "sel."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'oignon dans le bol 5 secondes / Vitesse 5 . Ajoutez l'huile et la pâte de curry, puis faites chauffer 3 minutes / 120°C .",
+            "Insérez le Mélangeur . Ajoutez tous les légumes coupés en dés de 2 cm et le lait de coco.",
+            "Fermez le couvercle avec le gobelet doseur et faites cuire avec le programme Mijoter / 25 minutes / 100°C / Sens Inverse . Vérifiez la cuisson des pommes de terre avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 27",
+      "timePrep": "35 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-028",
+      "name": "Appareil à Clafoutis Rustique aux Tomates Cerises & Romarin",
+      "ingredients": [
+        "4 œufs",
+        "250ml de lait",
+        "100ml de crème liquide",
+        "80g de farine",
+        "40g de parmesan râpé",
+        "sel",
+        "poivre",
+        "1 branche de romarin (effeuillée)",
+        "300g de tomates cerises (à disposer dans le plat)."
+      ],
+      "steps": [
+        "Mettez les œufs, le lait, la crème, la farine, le parmesan, le sel et le poivre dans le bol mixeur.",
+        "Fermez avec le gobelet doseur et mixez 45 secondes / Vitesse 4 pour obtenir une pâte lisse et sans grumeaux.",
+        "Ajoutez les aiguilles de romarin et mélangez 10 secondes / Sens Inverse / Vitesse 2 .",
+        "Versez cet appareil sur vos tomates cerises préalablement disposées dans un plat à gratin beurré, puis enfournez 35 minutes à 180°C."
+      ],
+      "robot": [
+        "Mettez les œufs, le lait, la crème, la farine, le parmesan, le sel et le poivre dans le bol mixeur.",
+        "Fermez avec le gobelet doseur et mixez 45 secondes / Vitesse 4 pour obtenir une pâte lisse et sans grumeaux.",
+        "Ajoutez les aiguilles de romarin et mélangez 10 secondes / Sens Inverse / Vitesse 2 .",
+        "Versez cet appareil sur vos tomates cerises préalablement disposées dans un plat à gratin beurré, puis enfournez 35 minutes à 180°C."
+      ],
+      "notes": [
+        "Pour 6 personnes | Accessoires : Gobelet doseur | Temps : 5 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 5 min",
+          "lines": [
+            "👥 Pour 6 personnes",
+            "⏱️ Temps indiqué : 5 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 œufs",
+            "250ml de lait",
+            "100ml de crème liquide",
+            "80g de farine",
+            "40g de parmesan râpé",
+            "sel",
+            "poivre",
+            "1 branche de romarin (effeuillée)",
+            "300g de tomates cerises (à disposer dans le plat)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez les œufs, le lait, la crème, la farine, le parmesan, le sel et le poivre dans le bol mixeur.",
+            "Fermez avec le gobelet doseur et mixez 45 secondes / Vitesse 4 pour obtenir une pâte lisse et sans grumeaux.",
+            "Ajoutez les aiguilles de romarin et mélangez 10 secondes / Sens Inverse / Vitesse 2 .",
+            "Versez cet appareil sur vos tomates cerises préalablement disposées dans un plat à gratin beurré, puis enfournez 35 minutes à 180°C."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 28",
+      "timePrep": "5 min",
+      "timeCook": "",
+      "servings": "6 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-029",
+      "name": "Purée Fondante de Patates Douces aux Épices",
+      "ingredients": [
+        "800g de patates douces",
+        "150ml de lait",
+        "30g de beurre",
+        "1 demi-cuillère à café de cannelle ou quatre-épices",
+        "sel."
+      ],
+      "steps": [
+        "Épluchez les patates douces et coupez-les en petits cubes. Mettez-les dans le bol mixeur avec le lait et une pincée de sel.",
+        "Fermez le couvercle avec le gobelet doseur et faites cuire 20 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez le beurre et les épices. Insérez le Fouet sur les lames.",
+        "Mixez et fouettez l'ensemble pendant 40 secondes / Vitesse 3 pour obtenir une texture ultra- aérée et lisse."
+      ],
+      "robot": [
+        "Épluchez les patates douces et coupez-les en petits cubes. Mettez-les dans le bol mixeur avec le lait et une pincée de sel.",
+        "Fermez le couvercle avec le gobelet doseur et faites cuire 20 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez le beurre et les épices. Insérez le Fouet sur les lames.",
+        "Mixez et fouettez l'ensemble pendant 40 secondes / Vitesse 3 pour obtenir une texture ultra- aérée et lisse."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur, Fouet | Temps : 25 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 25 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 25 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "800g de patates douces",
+            "150ml de lait",
+            "30g de beurre",
+            "1 demi-cuillère à café de cannelle ou quatre-épices",
+            "sel."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Épluchez les patates douces et coupez-les en petits cubes. Mettez-les dans le bol mixeur avec le lait et une pincée de sel.",
+            "Fermez le couvercle avec le gobelet doseur et faites cuire 20 minutes / 100°C / Vitesse 1 .",
+            "Ajoutez le beurre et les épices. Insérez le Fouet sur les lames.",
+            "Mixez et fouettez l'ensemble pendant 40 secondes / Vitesse 3 pour obtenir une texture ultra- aérée et lisse."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 29",
+      "timePrep": "25 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-030",
+      "name": "Fondue de Poireaux au Chèvre Frais & Épeautre",
+      "ingredients": [
+        "4 poireaux (blancs et vert tendre)",
+        "1 oignon",
+        "20g de beurre",
+        "100g de chèvre frais type Petit Billy",
+        "50ml d'eau",
+        "sel",
+        "poivre. (À servir avec de l'épeautre cuit à part)."
+      ],
+      "steps": [
+        "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 .",
+        "Insérez le Mélangeur . Ajoutez le beurre et les poireaux coupés en fines rondelles. Lancez le programme Saisir / 5 minutes / 120°C .",
+        "Ajoutez l'eau, du sel, du poivre. Fermez le couvercle avec le gobelet doseur et faites cuire à l'étouffée pendant 15 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez le fromage de chèvre frais en morceaux et mélangez doucement 2 minutes / 90°C / Sens Inverse / Vitesse 1 pour lier la fondue."
+      ],
+      "robot": [
+        "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 .",
+        "Insérez le Mélangeur . Ajoutez le beurre et les poireaux coupés en fines rondelles. Lancez le programme Saisir / 5 minutes / 120°C .",
+        "Ajoutez l'eau, du sel, du poivre. Fermez le couvercle avec le gobelet doseur et faites cuire à l'étouffée pendant 15 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez le fromage de chèvre frais en morceaux et mélangez doucement 2 minutes / 90°C / Sens Inverse / Vitesse 1 pour lier la fondue."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur | Temps : 30 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 30 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 30 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 poireaux (blancs et vert tendre)",
+            "1 oignon",
+            "20g de beurre",
+            "100g de chèvre frais type Petit Billy",
+            "50ml d'eau",
+            "sel",
+            "poivre. (À servir avec de l'épeautre cuit à part)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 .",
+            "Insérez le Mélangeur . Ajoutez le beurre et les poireaux coupés en fines rondelles. Lancez le programme Saisir / 5 minutes / 120°C .",
+            "Ajoutez l'eau, du sel, du poivre. Fermez le couvercle avec le gobelet doseur et faites cuire à l'étouffée pendant 15 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+            "Ajoutez le fromage de chèvre frais en morceaux et mélangez doucement 2 minutes / 90°C / Sens Inverse / Vitesse 1 pour lier la fondue."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 30",
+      "timePrep": "30 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-031",
+      "name": "Carpaccio de Betteraves & Émulsion au Fromage de Chèvre",
+      "ingredients": [
+        "2 betteraves cuites (à trancher finement à la mandoline)",
+        "150g de fromage de chèvre frais",
+        "50ml de crème liquide entière très froide",
+        "1 cuillère à soupe d'huile de noix",
+        "sel",
+        "poivre",
+        "quelques cerneaux de noix."
+      ],
+      "steps": [
+        "Insérez le Fouet dans le bol mixeur parfaitement propre et froid.",
+        "Ajoutez le chèvre frais, la crème liquide, l'huile de noix, une pincée de sel et du poivre blanc.",
+        "Montez l'émulsion en programmant 1 minute 30 secondes / Vitesse 4 avec le gobelet doseur en place. Vous devez obtenir une crème légère.",
+        "Disposez vos tranches de betterave en rosace dans les assiettes, déposez une belle quenelle d'émulsion au centre et parsemez d'éclats de noix."
+      ],
+      "robot": [
+        "Insérez le Fouet dans le bol mixeur parfaitement propre et froid.",
+        "Ajoutez le chèvre frais, la crème liquide, l'huile de noix, une pincée de sel et du poivre blanc.",
+        "Montez l'émulsion en programmant 1 minute 30 secondes / Vitesse 4 avec le gobelet doseur en place. Vous devez obtenir une crème légère.",
+        "Disposez vos tranches de betterave en rosace dans les assiettes, déposez une belle quenelle d'émulsion au centre et parsemez d'éclats de noix."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Fouet, Gobelet doseur | Temps : 10 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 10 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 betteraves cuites (à trancher finement à la mandoline)",
+            "150g de fromage de chèvre frais",
+            "50ml de crème liquide entière très froide",
+            "1 cuillère à soupe d'huile de noix",
+            "sel",
+            "poivre",
+            "quelques cerneaux de noix."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Insérez le Fouet dans le bol mixeur parfaitement propre et froid.",
+            "Ajoutez le chèvre frais, la crème liquide, l'huile de noix, une pincée de sel et du poivre blanc.",
+            "Montez l'émulsion en programmant 1 minute 30 secondes / Vitesse 4 avec le gobelet doseur en place. Vous devez obtenir une crème légère.",
+            "Disposez vos tranches de betterave en rosace dans les assiettes, déposez une belle quenelle d'émulsion au centre et parsemez d'éclats de noix."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 31",
+      "timePrep": "10 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-032",
+      "name": "Caviar d'Aubergines aux Épices Douces",
+      "ingredients": [
+        "2 belles aubergines",
+        "2 gousses d'ail",
+        "le jus d'un demi-citron",
+        "3 cuillères à soupe d'huile d'olive",
+        "1 demi-cuillère à café de cumin",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Coupez les aubergines en deux dans le sens de la longueur. Quadrillez la chair avec un couteau.",
+        "Mettez 500ml d'eau dans le bol. Disposez les aubergines dans l'ensemble Varoma , côté chair vers le bas. Installez le Varoma et faites cuire 30 minutes / Vapeur (Varoma) / Vitesse 1 .",
+        "Videz l'eau du bol. À l'aide d'une cuillère, récupérez la chair tendre des aubergines et jetez la peau. Mettez cette chair dans le bol mixeur vide avec l'ail, le jus de citron, l'huile d'olive, le cumin, le sel et le poivre.",
+        "Fermez avec le gobelet doseur et mixez 30 secondes / Vitesse 6 . Laissez refroidir avant de servir avec des gressins."
+      ],
+      "robot": [
+        "Coupez les aubergines en deux dans le sens de la longueur. Quadrillez la chair avec un couteau.",
+        "Mettez 500ml d'eau dans le bol. Disposez les aubergines dans l'ensemble Varoma , côté chair vers le bas. Installez le Varoma et faites cuire 30 minutes / Vapeur (Varoma) / Vitesse 1 .",
+        "Videz l'eau du bol. À l'aide d'une cuillère, récupérez la chair tendre des aubergines et jetez la peau. Mettez cette chair dans le bol mixeur vide avec l'ail, le jus de citron, l'huile d'olive, le cumin, le sel et le poivre.",
+        "Fermez avec le gobelet doseur et mixez 30 secondes / Vitesse 6 . Laissez refroidir avant de servir avec des gressins."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Ensemble Varoma, Gobelet doseur | Temps : 40 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 40 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 40 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 belles aubergines",
+            "2 gousses d'ail",
+            "le jus d'un demi-citron",
+            "3 cuillères à soupe d'huile d'olive",
+            "1 demi-cuillère à café de cumin",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Coupez les aubergines en deux dans le sens de la longueur. Quadrillez la chair avec un couteau.",
+            "Mettez 500ml d'eau dans le bol. Disposez les aubergines dans l'ensemble Varoma , côté chair vers le bas. Installez le Varoma et faites cuire 30 minutes / Vapeur (Varoma) / Vitesse 1 .",
+            "Videz l'eau du bol. À l'aide d'une cuillère, récupérez la chair tendre des aubergines et jetez la peau. Mettez cette chair dans le bol mixeur vide avec l'ail, le jus de citron, l'huile d'olive, le cumin, le sel et le poivre.",
+            "Fermez avec le gobelet doseur et mixez 30 secondes / Vitesse 6 . Laissez refroidir avant de servir avec des gressins."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 32",
+      "timePrep": "40 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-033",
+      "name": "Tartinade de Tomates Séchées & Cajou",
+      "ingredients": [
+        "150g de tomates séchées à l'huile (égouttées)",
+        "80g de noix de cajou (non salées)",
+        "100g de fromage frais type Saint-Morêt",
+        "1 gousse d'ail",
+        "quelques feuilles de basilic",
+        "poivre."
+      ],
+      "steps": [
+        "Mettez les noix de cajou et la gousse d'ail dans le bol mixeur. Lancez le mode Turbo / 2 fois / 2 secondes pour concasser finement.",
+        "Ajoutez les tomates séchées et le basilic. Hachez pendant 10 secondes / Vitesse 6 .",
+        "Ajoutez le fromage frais et un peu de poivre (le sel n'est généralement pas nécessaire car les tomates le sont déjà).",
+        "Mettez le gobelet doseur et mixez 20 secondes / Vitesse 5 pour obtenir une texture tartinable et homogène."
+      ],
+      "robot": [
+        "Mettez les noix de cajou et la gousse d'ail dans le bol mixeur. Lancez le mode Turbo / 2 fois / 2 secondes pour concasser finement.",
+        "Ajoutez les tomates séchées et le basilic. Hachez pendant 10 secondes / Vitesse 6 .",
+        "Ajoutez le fromage frais et un peu de poivre (le sel n'est généralement pas nécessaire car les tomates le sont déjà).",
+        "Mettez le gobelet doseur et mixez 20 secondes / Vitesse 5 pour obtenir une texture tartinable et homogène."
+      ],
+      "notes": [
+        "Pour 6 personnes | Accessoires : Gobelet doseur | Temps : 5 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 5 min",
+          "lines": [
+            "👥 Pour 6 personnes",
+            "⏱️ Temps indiqué : 5 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150g de tomates séchées à l'huile (égouttées)",
+            "80g de noix de cajou (non salées)",
+            "100g de fromage frais type Saint-Morêt",
+            "1 gousse d'ail",
+            "quelques feuilles de basilic",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez les noix de cajou et la gousse d'ail dans le bol mixeur. Lancez le mode Turbo / 2 fois / 2 secondes pour concasser finement.",
+            "Ajoutez les tomates séchées et le basilic. Hachez pendant 10 secondes / Vitesse 6 .",
+            "Ajoutez le fromage frais et un peu de poivre (le sel n'est généralement pas nécessaire car les tomates le sont déjà).",
+            "Mettez le gobelet doseur et mixez 20 secondes / Vitesse 5 pour obtenir une texture tartinable et homogène."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 33",
+      "timePrep": "5 min",
+      "timeCook": "",
+      "servings": "6 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-034",
+      "name": "Tajine Végétarien aux Abricots Secs & Amandes",
+      "ingredients": [
+        "300g de courgettes",
+        "300g de carottes",
+        "200g de navets",
+        "1 oignon",
+        "80g d'abricots secs",
+        "40g d'amandes émondées",
+        "300ml de bouillon de légumes",
+        "1 cuillère à soupe de ras-el- hanout",
+        "2 cuillères à soupe d'huile d'olive",
+        "sel."
+      ],
+      "steps": [
+        "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et le ras-el- hanout : faites rissoler 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez tous les légumes coupés en gros morceaux, les abricots secs coupés en deux et le bouillon de légumes.",
+        "Verrouillez le couvercle et programmez Mijoter / 30 minutes / 95°C / Sens Inverse .",
+        "Pendant ce temps, faites torréfier les amandes à la poêle. Parsemez-les sur le tajine chaud au moment du service."
+      ],
+      "robot": [
+        "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et le ras-el- hanout : faites rissoler 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez tous les légumes coupés en gros morceaux, les abricots secs coupés en deux et le bouillon de légumes.",
+        "Verrouillez le couvercle et programmez Mijoter / 30 minutes / 95°C / Sens Inverse .",
+        "Pendant ce temps, faites torréfier les amandes à la poêle. Parsemez-les sur le tajine chaud au moment du service."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur | Temps : 45 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 45 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 45 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "300g de courgettes",
+            "300g de carottes",
+            "200g de navets",
+            "1 oignon",
+            "80g d'abricots secs",
+            "40g d'amandes émondées",
+            "300ml de bouillon de légumes",
+            "1 cuillère à soupe de ras-el- hanout",
+            "2 cuillères à soupe d'huile d'olive",
+            "sel."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et le ras-el- hanout : faites rissoler 3 minutes / 120°C .",
+            "Insérez le Mélangeur . Ajoutez tous les légumes coupés en gros morceaux, les abricots secs coupés en deux et le bouillon de légumes.",
+            "Verrouillez le couvercle et programmez Mijoter / 30 minutes / 95°C / Sens Inverse .",
+            "Pendant ce temps, faites torréfier les amandes à la poêle. Parsemez-les sur le tajine chaud au moment du service."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 34",
+      "timePrep": "45 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-035",
+      "name": "Curry de Banane Verte & Patate Douce",
+      "ingredients": [
+        "2 bananes vertes (type banane poireau ou plantain peu mûre)",
+        "400g de patates douces",
+        "1 oignon",
+        "400ml de lait de coco",
+        "1 cuillère à soupe de poudre de colombo (ou curry doux)",
+        "2 cuillères à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Mettez l'oignon dans le bol et hachez 5 secondes / Vitesse 5 . Ajoutez l'huile et les épices de colombo, puis rissolez 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les bananes épluchées et coupées en rondelles épaisses, les cubes de patates douces et le lait de coco.",
+        "Salez et poivrez à votre convenance.",
+        "Fermez le couvercle et lancez le programme automatique Mijoter / 25 minutes / 100°C / Sens Inverse jusqu'à ce que les légumes soient fondants."
+      ],
+      "robot": [
+        "Mettez l'oignon dans le bol et hachez 5 secondes / Vitesse 5 . Ajoutez l'huile et les épices de colombo, puis rissolez 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les bananes épluchées et coupées en rondelles épaisses, les cubes de patates douces et le lait de coco.",
+        "Salez et poivrez à votre convenance.",
+        "Fermez le couvercle et lancez le programme automatique Mijoter / 25 minutes / 100°C / Sens Inverse jusqu'à ce que les légumes soient fondants."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur | Temps : 35 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 35 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 35 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 bananes vertes (type banane poireau ou plantain peu mûre)",
+            "400g de patates douces",
+            "1 oignon",
+            "400ml de lait de coco",
+            "1 cuillère à soupe de poudre de colombo (ou curry doux)",
+            "2 cuillères à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon dans le bol et hachez 5 secondes / Vitesse 5 . Ajoutez l'huile et les épices de colombo, puis rissolez 3 minutes / 120°C .",
+            "Insérez le Mélangeur . Ajoutez les bananes épluchées et coupées en rondelles épaisses, les cubes de patates douces et le lait de coco.",
+            "Salez et poivrez à votre convenance.",
+            "Fermez le couvercle et lancez le programme automatique Mijoter / 25 minutes / 100°C / Sens Inverse jusqu'à ce que les légumes soient fondants."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 35",
+      "timePrep": "35 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-036",
+      "name": "Ragoût de Lentilles Vertes aux Légumes Racines",
+      "ingredients": [
+        "200g de lentilles vertes sèches",
+        "2 carottes",
+        "1 panais",
+        "1 oignon",
+        "1 gousse d'ail",
+        "700ml de bouillon de légumes",
+        "1 cuillère à soupe d'huile d'olive",
+        "1 feuille de laurier",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Hachez l'oignon et l'ail dans le bol mixeur 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et faites revenir 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les carottes et le panais coupés en petits dés, les lentilles vertes préalablement rincées, le bouillon de légumes et la feuille de laurier.",
+        "Fermez le couvercle avec le gobelet doseur. Programmez la cuisson : 35 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "En fin de cuisson, retirez la feuille de laurier, ajustez le sel et le poivre avant de dresser."
+      ],
+      "robot": [
+        "Hachez l'oignon et l'ail dans le bol mixeur 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et faites revenir 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les carottes et le panais coupés en petits dés, les lentilles vertes préalablement rincées, le bouillon de légumes et la feuille de laurier.",
+        "Fermez le couvercle avec le gobelet doseur. Programmez la cuisson : 35 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "En fin de cuisson, retirez la feuille de laurier, ajustez le sel et le poivre avant de dresser."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur, Gobelet doseur | Temps : 45 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 45 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 45 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de lentilles vertes sèches",
+            "2 carottes",
+            "1 panais",
+            "1 oignon",
+            "1 gousse d'ail",
+            "700ml de bouillon de légumes",
+            "1 cuillère à soupe d'huile d'olive",
+            "1 feuille de laurier",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'oignon et l'ail dans le bol mixeur 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et faites revenir 3 minutes / 120°C .",
+            "Insérez le Mélangeur . Ajoutez les carottes et le panais coupés en petits dés, les lentilles vertes préalablement rincées, le bouillon de légumes et la feuille de laurier.",
+            "Fermez le couvercle avec le gobelet doseur. Programmez la cuisson : 35 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+            "En fin de cuisson, retirez la feuille de laurier, ajustez le sel et le poivre avant de dresser."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 36",
+      "timePrep": "45 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-037",
+      "name": "Appareil à Flan de Potimarron au Beaufort",
+      "ingredients": [
+        "400g de chair de potimarron",
+        "3 œufs",
+        "150ml de crème liquide",
+        "80g de Beaufort râpé",
+        "1 pincée de muscade",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Mettez les cubes de potimarron dans le bol avec 50ml d'eau. Faites cuire 12 minutes / 100°C / Vitesse 1 . Videz l'excédent d'eau s'il y en a.",
+        "Ajoutez les œufs, la crème liquide, la muscade, le sel et le poivre dans le bol contenant la courge.",
+        "Insérez le gobelet doseur et mixez l'ensemble 40 secondes / Vitesse 5 pour obtenir une base lisse.",
+        "Ajoutez le Beaufort râpé et incorporez-le en programmant 15 secondes / Sens Inverse / Vitesse",
+        "5 . Versez dans des ramequins et enfournez 25 minutes à 180°C au bain-marie."
+      ],
+      "robot": [
+        "Mettez les cubes de potimarron dans le bol avec 50ml d'eau. Faites cuire 12 minutes / 100°C / Vitesse 1 . Videz l'excédent d'eau s'il y en a.",
+        "Ajoutez les œufs, la crème liquide, la muscade, le sel et le poivre dans le bol contenant la courge.",
+        "Insérez le gobelet doseur et mixez l'ensemble 40 secondes / Vitesse 5 pour obtenir une base lisse.",
+        "Ajoutez le Beaufort râpé et incorporez-le en programmant 15 secondes / Sens Inverse / Vitesse",
+        "5 . Versez dans des ramequins et enfournez 25 minutes à 180°C au bain-marie."
+      ],
+      "notes": [
+        "Pour 6 personnes | Accessoires : Gobelet doseur | Temps : 20 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 20 min",
+          "lines": [
+            "👥 Pour 6 personnes",
+            "⏱️ Temps indiqué : 20 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de chair de potimarron",
+            "3 œufs",
+            "150ml de crème liquide",
+            "80g de Beaufort râpé",
+            "1 pincée de muscade",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez les cubes de potimarron dans le bol avec 50ml d'eau. Faites cuire 12 minutes / 100°C / Vitesse 1 . Videz l'excédent d'eau s'il y en a.",
+            "Ajoutez les œufs, la crème liquide, la muscade, le sel et le poivre dans le bol contenant la courge.",
+            "Insérez le gobelet doseur et mixez l'ensemble 40 secondes / Vitesse 5 pour obtenir une base lisse.",
+            "Ajoutez le Beaufort râpé et incorporez-le en programmant 15 secondes / Sens Inverse / Vitesse",
+            "5 . Versez dans des ramequins et enfournez 25 minutes à 180°C au bain-marie."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 37",
+      "timePrep": "20 min",
+      "timeCook": "",
+      "servings": "6 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-038",
+      "name": "Crème de Courge Butternut pour Cannellonis",
+      "ingredients": [
+        "500g de courge butternut épluchée",
+        "1 oignon",
+        "20g de beurre",
+        "50ml de lait",
+        "30g de parmesan râpé",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Mettez l'oignon dans le bol mixeur et hachez 5 secondes / Vitesse 5 . Ajoutez le beurre et faites suer 3 minutes / 120°C .",
+        "Ajoutez les cubes de butternut et le lait. Fermez le couvercle avec le gobelet doseur et faites cuire 15 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez le parmesan râpé, le sel et le poivre noir.",
+        "Mixez vigoureusement 30 secondes / Vitesse 7 pour obtenir une crème de courge fine et soyeuse, idéale pour napper vos pâtes à cannellonis."
+      ],
+      "robot": [
+        "Mettez l'oignon dans le bol mixeur et hachez 5 secondes / Vitesse 5 . Ajoutez le beurre et faites suer 3 minutes / 120°C .",
+        "Ajoutez les cubes de butternut et le lait. Fermez le couvercle avec le gobelet doseur et faites cuire 15 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez le parmesan râpé, le sel et le poivre noir.",
+        "Mixez vigoureusement 30 secondes / Vitesse 7 pour obtenir une crème de courge fine et soyeuse, idéale pour napper vos pâtes à cannellonis."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur | Temps : 20 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 20 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 20 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500g de courge butternut épluchée",
+            "1 oignon",
+            "20g de beurre",
+            "50ml de lait",
+            "30g de parmesan râpé",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon dans le bol mixeur et hachez 5 secondes / Vitesse 5 . Ajoutez le beurre et faites suer 3 minutes / 120°C .",
+            "Ajoutez les cubes de butternut et le lait. Fermez le couvercle avec le gobelet doseur et faites cuire 15 minutes / 100°C / Vitesse 1 .",
+            "Ajoutez le parmesan râpé, le sel et le poivre noir.",
+            "Mixez vigoureusement 30 secondes / Vitesse 7 pour obtenir une crème de courge fine et soyeuse, idéale pour napper vos pâtes à cannellonis."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 38",
+      "timePrep": "20 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-039",
+      "name": "Risotto Printanier aux Asperges Vertes & Petits Pois",
+      "ingredients": [
+        "320g de riz arborio",
+        "1 botte d'asperges vertes (pointes réservées",
+        "tiges en rondelles)",
+        "100g de petits pois frais",
+        "1 oignon",
+        "60ml de vin blanc sec",
+        "750ml de bouillon de légumes chaud",
+        "30g de parmesan",
+        "20g de beurre",
+        "2 cuillères à soupe d'huile d'olive."
+      ],
+      "steps": [
+        "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 .",
+        "Insérez le Mélangeur . Ajoutez l'huile d'olive et le riz arborio. Lancez le programme Saisir / 3 minutes / 120°C sans le gobelet pour nacrer le riz.",
+        "Ajoutez le vin blanc et faites évaporer en programmant 2 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les rondelles de tiges d'asperges, les petits pois et le bouillon de légumes. Cuisez 14 minutes / 100°C / Sens Inverse / Vitesse 1 (ajoutez les pointes d'asperges 5 minutes avant la fin). Liez avec le beurre et le parmesan à la spatule hors du bol."
+      ],
+      "robot": [
+        "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 .",
+        "Insérez le Mélangeur . Ajoutez l'huile d'olive et le riz arborio. Lancez le programme Saisir / 3 minutes / 120°C sans le gobelet pour nacrer le riz.",
+        "Ajoutez le vin blanc et faites évaporer en programmant 2 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les rondelles de tiges d'asperges, les petits pois et le bouillon de légumes. Cuisez 14 minutes / 100°C / Sens Inverse / Vitesse 1 (ajoutez les pointes d'asperges 5 minutes avant la fin). Liez avec le beurre et le parmesan à la spatule hors du bol."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur, Gobelet doseur | Temps : 30 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 30 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 30 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "320g de riz arborio",
+            "1 botte d'asperges vertes (pointes réservées",
+            "tiges en rondelles)",
+            "100g de petits pois frais",
+            "1 oignon",
+            "60ml de vin blanc sec",
+            "750ml de bouillon de légumes chaud",
+            "30g de parmesan",
+            "20g de beurre",
+            "2 cuillères à soupe d'huile d'olive."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'oignon dans le bol mixeur 5 secondes / Vitesse 5 .",
+            "Insérez le Mélangeur . Ajoutez l'huile d'olive et le riz arborio. Lancez le programme Saisir / 3 minutes / 120°C sans le gobelet pour nacrer le riz.",
+            "Ajoutez le vin blanc et faites évaporer en programmant 2 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+            "Ajoutez les rondelles de tiges d'asperges, les petits pois et le bouillon de légumes. Cuisez 14 minutes / 100°C / Sens Inverse / Vitesse 1 (ajoutez les pointes d'asperges 5 minutes avant la fin). Liez avec le beurre et le parmesan à la spatule hors du bol."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 39",
+      "timePrep": "30 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-040",
+      "name": "Shakshuka Verte 100% Légumes & Œufs Pochés",
+      "ingredients": [
+        "4 œufs",
+        "200g d'épinards frais",
+        "150g de poireau (émincé)",
+        "100g de petits pois",
+        "1 oignon",
+        "1 gousse d'ail",
+        "2 cuillères à soupe d'huile d'olive",
+        "50ml d'eau",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Hachez l'oignon et l'ail dans le bol 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et le poireau émincé : faites rissoler 4 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les épinards frais, les petits pois, l'eau, le sel et le poivre.",
+        "Huilez légèrement le plateau intermédiaire du Varoma et cassez-y délicatement les 4 œufs espacés. Installez l'ensemble Varoma sur le bol mixeur.",
+        "Faites cuire l'ensemble pendant 12 minutes / Vapeur (Varoma) / Sens Inverse / Vitesse 1 . Les légumes vont fondre dans le bol pendant que les œufs pochent à la vapeur au-dessus. Servez les œufs sur le lit de légumes verts."
+      ],
+      "robot": [
+        "Hachez l'oignon et l'ail dans le bol 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et le poireau émincé : faites rissoler 4 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les épinards frais, les petits pois, l'eau, le sel et le poivre.",
+        "Huilez légèrement le plateau intermédiaire du Varoma et cassez-y délicatement les 4 œufs espacés. Installez l'ensemble Varoma sur le bol mixeur.",
+        "Faites cuire l'ensemble pendant 12 minutes / Vapeur (Varoma) / Sens Inverse / Vitesse 1 . Les légumes vont fondre dans le bol pendant que les œufs pochent à la vapeur au-dessus. Servez les œufs sur le lit de légumes verts."
+      ],
+      "notes": [
+        "Pour 2 personnes | Accessoires : Ensemble Varoma, Mélangeur | Temps : 25 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 25 min",
+          "lines": [
+            "👥 Pour 2 personnes",
+            "⏱️ Temps indiqué : 25 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 œufs",
+            "200g d'épinards frais",
+            "150g de poireau (émincé)",
+            "100g de petits pois",
+            "1 oignon",
+            "1 gousse d'ail",
+            "2 cuillères à soupe d'huile d'olive",
+            "50ml d'eau",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'oignon et l'ail dans le bol 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et le poireau émincé : faites rissoler 4 minutes / 120°C .",
+            "Insérez le Mélangeur . Ajoutez les épinards frais, les petits pois, l'eau, le sel et le poivre.",
+            "Huilez légèrement le plateau intermédiaire du Varoma et cassez-y délicatement les 4 œufs espacés. Installez l'ensemble Varoma sur le bol mixeur.",
+            "Faites cuire l'ensemble pendant 12 minutes / Vapeur (Varoma) / Sens Inverse / Vitesse 1 . Les légumes vont fondre dans le bol pendant que les œufs pochent à la vapeur au-dessus. Servez les œufs sur le lit de légumes verts."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 40",
+      "timePrep": "25 min",
+      "timeCook": "",
+      "servings": "2 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-041",
+      "name": "Velouté de Rutabaga au Miel et Crème de Marrons",
+      "ingredients": [
+        "600g de rutabaga",
+        "1 oignon",
+        "1 cuillère à soupe de miel de châtaignier",
+        "20g de beurre",
+        "600ml de bouillon de légumes",
+        "2 cuillères à soupe de crème de marrons",
+        "sel",
+        "poivre blanc."
+      ],
+      "steps": [
+        "Mettez l'oignon coupé en deux dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Raclez les parois.",
+        "Ajoutez le beurre et le miel. Faites caraméliser avec le programme Saisir / 3 minutes / 120°C sans le gobelet doseur.",
+        "Ajoutez les cubes de rutabaga et le bouillon de légumes. Mettez le couvercle avec le gobelet doseur et cuisez 25 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez la crème de marrons, salez et poivrez. Mixez progressivement 1 minute / Vitesse 4 à 8 pour obtenir un velouté onctueux."
+      ],
+      "robot": [
+        "Mettez l'oignon coupé en deux dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Raclez les parois.",
+        "Ajoutez le beurre et le miel. Faites caraméliser avec le programme Saisir / 3 minutes / 120°C sans le gobelet doseur.",
+        "Ajoutez les cubes de rutabaga et le bouillon de légumes. Mettez le couvercle avec le gobelet doseur et cuisez 25 minutes / 100°C / Vitesse 1 .",
+        "Ajoutez la crème de marrons, salez et poivrez. Mixez progressivement 1 minute / Vitesse 4 à 8 pour obtenir un velouté onctueux."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur | Temps : 35 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 35 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 35 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600g de rutabaga",
+            "1 oignon",
+            "1 cuillère à soupe de miel de châtaignier",
+            "20g de beurre",
+            "600ml de bouillon de légumes",
+            "2 cuillères à soupe de crème de marrons",
+            "sel",
+            "poivre blanc."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon coupé en deux dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Raclez les parois.",
+            "Ajoutez le beurre et le miel. Faites caraméliser avec le programme Saisir / 3 minutes / 120°C sans le gobelet doseur.",
+            "Ajoutez les cubes de rutabaga et le bouillon de légumes. Mettez le couvercle avec le gobelet doseur et cuisez 25 minutes / 100°C / Vitesse 1 .",
+            "Ajoutez la crème de marrons, salez et poivrez. Mixez progressivement 1 minute / Vitesse 4 à 8 pour obtenir un velouté onctueux."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 41",
+      "timePrep": "35 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-042",
+      "name": "Pâte à Cromesquis de Risotto au Potimarron",
+      "ingredients": [
+        "200g de riz arborio",
+        "150g de purée de potimarron",
+        "1 oignon",
+        "500ml de bouillon de légumes",
+        "40g de parmesan",
+        "20g de beurre. (Pour le façonnage : 1 boule de mozzarella",
+        "chapelure",
+        "2 œufs",
+        "farine)."
+      ],
+      "steps": [
+        "Hachez l'oignon dans le bol 5 secondes / Vitesse 5 . Insérez le Mélangeur , ajoutez un filet d'huile et le riz : lancez Saisir / 3 minutes / 120°C .",
+        "Ajoutez la purée de potimarron et le bouillon. Faites cuire 16 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez le beurre et le parmesan. Mélangez à la spatule et étalez le risotto sur une plaque pour le laisser complètement refroidir au réfrigérateur pendant 2 heures.",
+        "Une fois le riz figé, formez des boulettes en insérant un cube de mozzarella au centre. Passez-les successivement dans la farine, les œufs battus, puis la chapelure avant de les frire à la poêle."
+      ],
+      "robot": [
+        "Hachez l'oignon dans le bol 5 secondes / Vitesse 5 . Insérez le Mélangeur , ajoutez un filet d'huile et le riz : lancez Saisir / 3 minutes / 120°C .",
+        "Ajoutez la purée de potimarron et le bouillon. Faites cuire 16 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez le beurre et le parmesan. Mélangez à la spatule et étalez le risotto sur une plaque pour le laisser complètement refroidir au réfrigérateur pendant 2 heures.",
+        "Une fois le riz figé, formez des boulettes en insérant un cube de mozzarella au centre. Passez-les successivement dans la farine, les œufs battus, puis la chapelure avant de les frire à la poêle."
+      ],
+      "notes": [
+        "Pour 4 personnes (environ 12 pièces) | Accessoires : Mélangeur, Gobelet doseur | Temps : 30 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 30 min",
+          "lines": [
+            "👥 Pour 4 personnes (environ 12 pièces)",
+            "⏱️ Temps indiqué : 30 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de riz arborio",
+            "150g de purée de potimarron",
+            "1 oignon",
+            "500ml de bouillon de légumes",
+            "40g de parmesan",
+            "20g de beurre. (Pour le façonnage : 1 boule de mozzarella",
+            "chapelure",
+            "2 œufs",
+            "farine)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Hachez l'oignon dans le bol 5 secondes / Vitesse 5 . Insérez le Mélangeur , ajoutez un filet d'huile et le riz : lancez Saisir / 3 minutes / 120°C .",
+            "Ajoutez la purée de potimarron et le bouillon. Faites cuire 16 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+            "Ajoutez le beurre et le parmesan. Mélangez à la spatule et étalez le risotto sur une plaque pour le laisser complètement refroidir au réfrigérateur pendant 2 heures.",
+            "Une fois le riz figé, formez des boulettes en insérant un cube de mozzarella au centre. Passez-les successivement dans la farine, les œufs battus, puis la chapelure avant de les frire à la poêle."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 42",
+      "timePrep": "30 min",
+      "timeCook": "",
+      "servings": "4 personnes (environ 12 pièces)",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-043",
+      "name": "Ceviche Végétal de Cœurs de Palmier et Mangue",
+      "ingredients": [
+        "400g de cœurs de palmier en conserve (égouttés)",
+        "1 mangue ferme",
+        "1 oignon rouge",
+        "le jus de 3 citrons verts",
+        "1 bouquet de coriandre fraîche",
+        "2 cuillères à soupe d'huile d'olive",
+        "sel",
+        "piment d'Espelette."
+      ],
+      "steps": [
+        "Mettez l'oignon rouge coupé en quatre et la coriandre dans le bol mixeur. Hachez de manière contrôlée pendant 4 secondes / Vitesse 5 . Transvasez dans un grand saladier.",
+        "Coupez les cœurs de palmier en rondelles et la mangue en petits dés de taille régulière à la main (pour préserver un joli visuel en cubes). Mettez-les dans le saladier.",
+        "Dans le bol mixeur vide, versez le jus de citron vert, l'huile d'olive, le sel et une belle pincée de piment d'Espelette. Mélangez 10 secondes / Vitesse 3 .",
+        "Versez cette marinade sur la préparation aux cœurs de palmier et mangue. Mélangez délicatement à la spatule et réservez au frais 30 minutes avant de servir."
+      ],
+      "robot": [
+        "Mettez l'oignon rouge coupé en quatre et la coriandre dans le bol mixeur. Hachez de manière contrôlée pendant 4 secondes / Vitesse 5 . Transvasez dans un grand saladier.",
+        "Coupez les cœurs de palmier en rondelles et la mangue en petits dés de taille régulière à la main (pour préserver un joli visuel en cubes). Mettez-les dans le saladier.",
+        "Dans le bol mixeur vide, versez le jus de citron vert, l'huile d'olive, le sel et une belle pincée de piment d'Espelette. Mélangez 10 secondes / Vitesse 3 .",
+        "Versez cette marinade sur la préparation aux cœurs de palmier et mangue. Mélangez délicatement à la spatule et réservez au frais 30 minutes avant de servir."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur | Temps : 5 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 5 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 5 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de cœurs de palmier en conserve (égouttés)",
+            "1 mangue ferme",
+            "1 oignon rouge",
+            "le jus de 3 citrons verts",
+            "1 bouquet de coriandre fraîche",
+            "2 cuillères à soupe d'huile d'olive",
+            "sel",
+            "piment d'Espelette."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon rouge coupé en quatre et la coriandre dans le bol mixeur. Hachez de manière contrôlée pendant 4 secondes / Vitesse 5 . Transvasez dans un grand saladier.",
+            "Coupez les cœurs de palmier en rondelles et la mangue en petits dés de taille régulière à la main (pour préserver un joli visuel en cubes). Mettez-les dans le saladier.",
+            "Dans le bol mixeur vide, versez le jus de citron vert, l'huile d'olive, le sel et une belle pincée de piment d'Espelette. Mélangez 10 secondes / Vitesse 3 .",
+            "Versez cette marinade sur la préparation aux cœurs de palmier et mangue. Mélangez délicatement à la spatule et réservez au frais 30 minutes avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 43",
+      "timePrep": "5 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-044",
+      "name": "Cassoulet Végétarien aux Haricots Blancs et Seitan Fumé",
+      "ingredients": [
+        "500g de haricots blancs cuits en boîte (égouttés)",
+        "250g de seitan fumé coupé en gros morceaux",
+        "1 oignon",
+        "2 gousses d'ail",
+        "2 carottes en rondelles",
+        "400g de pulpe de tomates en boîte",
+        "200ml de bouillon de légumes",
+        "1 cuillère à soupe d'huile d'olive",
+        "1 branche de thym",
+        "1 feuille de laurier",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Mettez l'oignon et l'ail dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et rissolez avec le programme Saisir / 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les morceaux de seitan fumé et les carottes. Lancez à nouveau Saisir / 4 minutes / 120°C / Sens Inverse .",
+        "Ajoutez la pulpe de tomates, le bouillon de légumes, le thym et le laurier. Programmez la cuisson lente : 25 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les haricots blancs cuits, ajustez l'assaisonnement et prolongez la cuisson de 10 minutes / 95°C / Sens Inverse / Vitesse 1 pour bien lier la sauce sans écraser les haricots."
+      ],
+      "robot": [
+        "Mettez l'oignon et l'ail dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et rissolez avec le programme Saisir / 3 minutes / 120°C .",
+        "Insérez le Mélangeur . Ajoutez les morceaux de seitan fumé et les carottes. Lancez à nouveau Saisir / 4 minutes / 120°C / Sens Inverse .",
+        "Ajoutez la pulpe de tomates, le bouillon de légumes, le thym et le laurier. Programmez la cuisson lente : 25 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+        "Ajoutez les haricots blancs cuits, ajustez l'assaisonnement et prolongez la cuisson de 10 minutes / 95°C / Sens Inverse / Vitesse 1 pour bien lier la sauce sans écraser les haricots."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur, Gobelet doseur | Temps : 50 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 50 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 50 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500g de haricots blancs cuits en boîte (égouttés)",
+            "250g de seitan fumé coupé en gros morceaux",
+            "1 oignon",
+            "2 gousses d'ail",
+            "2 carottes en rondelles",
+            "400g de pulpe de tomates en boîte",
+            "200ml de bouillon de légumes",
+            "1 cuillère à soupe d'huile d'olive",
+            "1 branche de thym",
+            "1 feuille de laurier",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon et l'ail dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Ajoutez l'huile d'olive et rissolez avec le programme Saisir / 3 minutes / 120°C .",
+            "Insérez le Mélangeur . Ajoutez les morceaux de seitan fumé et les carottes. Lancez à nouveau Saisir / 4 minutes / 120°C / Sens Inverse .",
+            "Ajoutez la pulpe de tomates, le bouillon de légumes, le thym et le laurier. Programmez la cuisson lente : 25 minutes / 100°C / Sens Inverse / Vitesse 1 .",
+            "Ajoutez les haricots blancs cuits, ajustez l'assaisonnement et prolongez la cuisson de 10 minutes / 95°C / Sens Inverse / Vitesse 1 pour bien lier la sauce sans écraser les haricots."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 44",
+      "timePrep": "50 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-045",
+      "name": "Crème fine de Gorgonzola pour Lasagnes de Butternut",
+      "ingredients": [
+        "150g de Gorgonzola",
+        "40g de beurre",
+        "40g de farine",
+        "500ml de lait",
+        "1 pincée de poivre blanc",
+        "une pincée de noix de muscade."
+      ],
+      "steps": [
+        "Insérez le Fouet dans le bol mixeur.",
+        "Ajoutez le beurre, la farine, le lait, le poivre blanc et la muscade.",
+        "Verrouillez le couvercle avec le gobelet doseur et faites cuire la base de sauce pendant 8 minutes / 90°C / Vitesse 3 .",
+        "Ajoutez le Gorgonzola coupé en dés directement dans le bol chaud. Insérez le gobelet doseur et mélangez pendant 3 minutes / 90°C / Vitesse 2.5 jusqu'à ce que le fromage soit entièrement fondu et la crème bien nappante."
+      ],
+      "robot": [
+        "Insérez le Fouet dans le bol mixeur.",
+        "Ajoutez le beurre, la farine, le lait, le poivre blanc et la muscade.",
+        "Verrouillez le couvercle avec le gobelet doseur et faites cuire la base de sauce pendant 8 minutes / 90°C / Vitesse 3 .",
+        "Ajoutez le Gorgonzola coupé en dés directement dans le bol chaud. Insérez le gobelet doseur et mélangez pendant 3 minutes / 90°C / Vitesse 2.5 jusqu'à ce que le fromage soit entièrement fondu et la crème bien nappante."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur, Fouet | Temps : 15 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 15 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 15 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150g de Gorgonzola",
+            "40g de beurre",
+            "40g de farine",
+            "500ml de lait",
+            "1 pincée de poivre blanc",
+            "une pincée de noix de muscade."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Insérez le Fouet dans le bol mixeur.",
+            "Ajoutez le beurre, la farine, le lait, le poivre blanc et la muscade.",
+            "Verrouillez le couvercle avec le gobelet doseur et faites cuire la base de sauce pendant 8 minutes / 90°C / Vitesse 3 .",
+            "Ajoutez le Gorgonzola coupé en dés directement dans le bol chaud. Insérez le gobelet doseur et mélangez pendant 3 minutes / 90°C / Vitesse 2.5 jusqu'à ce que le fromage soit entièrement fondu et la crème bien nappante."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 45",
+      "timePrep": "15 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-046",
+      "name": "Farce aux Champignons et Comté pour Courge Farcie",
+      "ingredients": [
+        "400g de champignons de Paris",
+        "1 oignon",
+        "2 gousses d'ail",
+        "80g de Comté vieux râpé",
+        "2 tranches de pain de mie rassis",
+        "50ml de lait",
+        "20g de beurre",
+        "sel",
+        "poivre",
+        "persil frais."
+      ],
+      "steps": [
+        "Mettez le pain de mie à tremper dans le lait dans un petit bol à part.",
+        "Mettez l'oignon, l'ail et le persil dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Ajoutez les champignons coupés en deux et hachez à nouveau 4 secondes / Vitesse 4 pour garder des morceaux.",
+        "Ajoutez le beurre. Lancez la cuisson avec le programme Saisir / 5 minutes / 120°C / Sens Inverse sans le gobelet pour faire évaporer le jus de cuisson des champignons.",
+        "Ajoutez le pain de mie essoré, le Comté râpé, du sel et du poivre. Mélangez le tout 20 secondes / Sens Inverse / Vitesse 3 . Votre farce est prête à garnir une courge (type potimarron) avant son passage au four."
+      ],
+      "robot": [
+        "Mettez le pain de mie à tremper dans le lait dans un petit bol à part.",
+        "Mettez l'oignon, l'ail et le persil dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Ajoutez les champignons coupés en deux et hachez à nouveau 4 secondes / Vitesse 4 pour garder des morceaux.",
+        "Ajoutez le beurre. Lancez la cuisson avec le programme Saisir / 5 minutes / 120°C / Sens Inverse sans le gobelet pour faire évaporer le jus de cuisson des champignons.",
+        "Ajoutez le pain de mie essoré, le Comté râpé, du sel et du poivre. Mélangez le tout 20 secondes / Sens Inverse / Vitesse 3 . Votre farce est prête à garnir une courge (type potimarron) avant son passage au four."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Gobelet doseur | Temps : 15 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 15 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 15 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de champignons de Paris",
+            "1 oignon",
+            "2 gousses d'ail",
+            "80g de Comté vieux râpé",
+            "2 tranches de pain de mie rassis",
+            "50ml de lait",
+            "20g de beurre",
+            "sel",
+            "poivre",
+            "persil frais."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez le pain de mie à tremper dans le lait dans un petit bol à part.",
+            "Mettez l'oignon, l'ail et le persil dans le bol mixeur. Hachez 5 secondes / Vitesse 5 . Ajoutez les champignons coupés en deux et hachez à nouveau 4 secondes / Vitesse 4 pour garder des morceaux.",
+            "Ajoutez le beurre. Lancez la cuisson avec le programme Saisir / 5 minutes / 120°C / Sens Inverse sans le gobelet pour faire évaporer le jus de cuisson des champignons.",
+            "Ajoutez le pain de mie essoré, le Comté râpé, du sel et du poivre. Mélangez le tout 20 secondes / Sens Inverse / Vitesse 3 . Votre farce est prête à garnir une courge (type potimarron) avant son passage au four."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 46",
+      "timePrep": "15 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-047",
+      "name": "Curry de Colombo aux Patates Douces et Pois Chiches",
+      "ingredients": [
+        "600g de patates douces",
+        "250g de pois chiches cuits",
+        "1 oignon",
+        "400ml de lait de coco",
+        "1 cuillère à soupe de poudre de colombo",
+        "1 cuillère à café de graines de moutarde",
+        "2 cuillères à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Mettez l'oignon dans le bol mixeur et hachez 5 secondes / Vitesse 5 .",
+        "Ajoutez l'huile, la poudre de colombo et les graines de moutarde. Faites chauffer avec le programme Saisir / 3 minutes / 120°C pour exhaler les parfums.",
+        "Insérez le Mélangeur . Ajoutez les patates douces coupées en cubes réguliers et le lait de coco.",
+        "Salez, poivrez et lancez le programme de cuisson automatique Mijoter / 20 minutes / 100°C / Sens Inverse . Ajoutez les pois chiches à la spatule par l'orifice du couvercle 5 minutes avant la fin de la cuisson."
+      ],
+      "robot": [
+        "Mettez l'oignon dans le bol mixeur et hachez 5 secondes / Vitesse 5 .",
+        "Ajoutez l'huile, la poudre de colombo et les graines de moutarde. Faites chauffer avec le programme Saisir / 3 minutes / 120°C pour exhaler les parfums.",
+        "Insérez le Mélangeur . Ajoutez les patates douces coupées en cubes réguliers et le lait de coco.",
+        "Salez, poivrez et lancez le programme de cuisson automatique Mijoter / 20 minutes / 100°C / Sens Inverse . Ajoutez les pois chiches à la spatule par l'orifice du couvercle 5 minutes avant la fin de la cuisson."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur | Temps : 35 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 35 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 35 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600g de patates douces",
+            "250g de pois chiches cuits",
+            "1 oignon",
+            "400ml de lait de coco",
+            "1 cuillère à soupe de poudre de colombo",
+            "1 cuillère à café de graines de moutarde",
+            "2 cuillères à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon dans le bol mixeur et hachez 5 secondes / Vitesse 5 .",
+            "Ajoutez l'huile, la poudre de colombo et les graines de moutarde. Faites chauffer avec le programme Saisir / 3 minutes / 120°C pour exhaler les parfums.",
+            "Insérez le Mélangeur . Ajoutez les patates douces coupées en cubes réguliers et le lait de coco.",
+            "Salez, poivrez et lancez le programme de cuisson automatique Mijoter / 20 minutes / 100°C / Sens Inverse . Ajoutez les pois chiches à la spatule par l'orifice du couvercle 5 minutes avant la fin de la cuisson."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 47",
+      "timePrep": "35 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-048",
+      "name": "Pâte à Galettes de Panais pour Burgers d'Hiver",
+      "ingredients": [
+        "400g de panais",
+        "1 petite pomme de terre",
+        "1 œuf",
+        "30g de farine",
+        "40g de emmental râpé",
+        "1 pincée de muscade",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "Épluchez le panais et la pomme de terre, coupez-les en gros cubes. Mettez-les dans le bol mixeur. Hachez finement pendant 8 secondes / Vitesse 5 .",
+        "Ajoutez 50ml d'eau, fermez le couvercle avec le gobelet doseur et faites précuire à la vapeur 10 minutes / 100°C / Sens Inverse / Vitesse 1 . Égouttez soigneusement le hachis dans un tamis pour retirer toute l'eau.",
+        "Remettez les légumes égouttés dans le bol. Ajoutez l'œuf, la farine, l'emmental, la muscade, le sel et le poivre.",
+        "Mélangez le tout 20 secondes / Vitesse 3 pour obtenir une pâte collante homogène. Formez 4 galettes épaisses à la main et faites-les dorer à la poêle avec un peu d'huile avant de monter vos burgers."
+      ],
+      "robot": [
+        "Épluchez le panais et la pomme de terre, coupez-les en gros cubes. Mettez-les dans le bol mixeur. Hachez finement pendant 8 secondes / Vitesse 5 .",
+        "Ajoutez 50ml d'eau, fermez le couvercle avec le gobelet doseur et faites précuire à la vapeur 10 minutes / 100°C / Sens Inverse / Vitesse 1 . Égouttez soigneusement le hachis dans un tamis pour retirer toute l'eau.",
+        "Remettez les légumes égouttés dans le bol. Ajoutez l'œuf, la farine, l'emmental, la muscade, le sel et le poivre.",
+        "Mélangez le tout 20 secondes / Vitesse 3 pour obtenir une pâte collante homogène. Formez 4 galettes épaisses à la main et faites-les dorer à la poêle avec un peu d'huile avant de monter vos burgers."
+      ],
+      "notes": [
+        "Pour 4 personnes (4 grosses galettes) | Accessoires : Gobelet doseur | Temps : 20 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 20 min",
+          "lines": [
+            "👥 Pour 4 personnes (4 grosses galettes)",
+            "⏱️ Temps indiqué : 20 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de panais",
+            "1 petite pomme de terre",
+            "1 œuf",
+            "30g de farine",
+            "40g de emmental râpé",
+            "1 pincée de muscade",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Épluchez le panais et la pomme de terre, coupez-les en gros cubes. Mettez-les dans le bol mixeur. Hachez finement pendant 8 secondes / Vitesse 5 .",
+            "Ajoutez 50ml d'eau, fermez le couvercle avec le gobelet doseur et faites précuire à la vapeur 10 minutes / 100°C / Sens Inverse / Vitesse 1 . Égouttez soigneusement le hachis dans un tamis pour retirer toute l'eau.",
+            "Remettez les légumes égouttés dans le bol. Ajoutez l'œuf, la farine, l'emmental, la muscade, le sel et le poivre.",
+            "Mélangez le tout 20 secondes / Vitesse 3 pour obtenir une pâte collante homogène. Formez 4 galettes épaisses à la main et faites-les dorer à la poêle avec un peu d'huile avant de monter vos burgers."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 48",
+      "timePrep": "20 min",
+      "timeCook": "",
+      "servings": "4 personnes (4 grosses galettes)",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-049",
+      "name": "Chili de Haricots Noirs pour Quesadillas Express",
+      "ingredients": [
+        "400g de haricots noirs en boîte (égouttés)",
+        "1 oignon",
+        "1 poivron rouge",
+        "200g de concassé de tomates",
+        "1 cuillère à café de cumin",
+        "1 demi-cuillère à café de piment en poudre",
+        "1 cuillère à soupe d'huile d'olive",
+        "sel. (Prévoir des tortillas de blé et du fromage râpé pour le montage final)."
+      ],
+      "steps": [
+        "Mettez l'oignon et le poivron rouge coupé en morceaux dans le bol mixeur. Hachez 5 secondes / Vitesse 5 .",
+        "Ajoutez l'huile d'olive, le cumin et le piment. Faites rissoler avec le programme Saisir / 4 minutes / 120°C sans le gobelet doseur.",
+        "Insérez le Mélangeur . Ajoutez le concassé de tomates, les haricots noirs égouttés et une pincée de sel.",
+        "Fermez le couvercle avec le gobelet doseur et faites mijoter 10 minutes / 95°C / Sens Inverse / Vitesse 1 . Cette farce épaisse s'utilise pour garnir des tortillas pliées en deux avec du fromage, puis dorées à la poêle."
+      ],
+      "robot": [
+        "Mettez l'oignon et le poivron rouge coupé en morceaux dans le bol mixeur. Hachez 5 secondes / Vitesse 5 .",
+        "Ajoutez l'huile d'olive, le cumin et le piment. Faites rissoler avec le programme Saisir / 4 minutes / 120°C sans le gobelet doseur.",
+        "Insérez le Mélangeur . Ajoutez le concassé de tomates, les haricots noirs égouttés et une pincée de sel.",
+        "Fermez le couvercle avec le gobelet doseur et faites mijoter 10 minutes / 95°C / Sens Inverse / Vitesse 1 . Cette farce épaisse s'utilise pour garnir des tortillas pliées en deux avec du fromage, puis dorées à la poêle."
+      ],
+      "notes": [
+        "Pour 4 personnes | Accessoires : Mélangeur, Gobelet doseur | Temps : 20 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 20 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Temps indiqué : 20 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de haricots noirs en boîte (égouttés)",
+            "1 oignon",
+            "1 poivron rouge",
+            "200g de concassé de tomates",
+            "1 cuillère à café de cumin",
+            "1 demi-cuillère à café de piment en poudre",
+            "1 cuillère à soupe d'huile d'olive",
+            "sel. (Prévoir des tortillas de blé et du fromage râpé pour le montage final)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Mettez l'oignon et le poivron rouge coupé en morceaux dans le bol mixeur. Hachez 5 secondes / Vitesse 5 .",
+            "Ajoutez l'huile d'olive, le cumin et le piment. Faites rissoler avec le programme Saisir / 4 minutes / 120°C sans le gobelet doseur.",
+            "Insérez le Mélangeur . Ajoutez le concassé de tomates, les haricots noirs égouttés et une pincée de sel.",
+            "Fermez le couvercle avec le gobelet doseur et faites mijoter 10 minutes / 95°C / Sens Inverse / Vitesse 1 . Cette farce épaisse s'utilise pour garnir des tortillas pliées en deux avec du fromage, puis dorées à la poêle."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 49",
+      "timePrep": "20 min",
+      "timeCook": "",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "veg-robot-050",
+      "name": "Appareil à Tatin de Poireaux au Chèvre Sainte-Maure",
+      "ingredients": [
+        "4 gros poireaux (blancs uniquement",
+        "coupés en tronçons de 3 cm)",
+        "30g de beurre",
+        "2 cuillères à soupe de sucre roux",
+        "1 cuillère à soupe de vinaigre balsamique",
+        "sel",
+        "poivre. (À assembler avec : 1 bûche de chèvre Sainte-Maure",
+        "1 pâte feuilletée)."
+      ],
+      "steps": [
+        "Insérez le Mélangeur dans le bol mixeur. Ajoutez le beurre, le sucre roux et le vinaigre balsamique. Chauffez 2 minutes / 100°C / Vitesse 1 pour créer un début de caramel.",
+        "Ajoutez les tronçons de poireaux à la verticale autant que possible, salez et poivrez.",
+        "Verrouillez le couvercle avec le gobelet doseur et faites cuire à l'étouffée doucement pendant 15 minutes / 95°C / Sens Inverse / Vitesse 1 . Les poireaux doivent être tendres mais garder leur forme.",
+        "Disposez les poireaux cuits au fond d'un moule à manqué, ajoutez des rondelles de chèvre Sainte-Maure sur le dessus, puis recouvrez avec la pâte feuilletée en rentrant les bords. Enfournez 25 minutes à 200°C avant de retourner la Tatin."
+      ],
+      "robot": [
+        "Insérez le Mélangeur dans le bol mixeur. Ajoutez le beurre, le sucre roux et le vinaigre balsamique. Chauffez 2 minutes / 100°C / Vitesse 1 pour créer un début de caramel.",
+        "Ajoutez les tronçons de poireaux à la verticale autant que possible, salez et poivrez.",
+        "Verrouillez le couvercle avec le gobelet doseur et faites cuire à l'étouffée doucement pendant 15 minutes / 95°C / Sens Inverse / Vitesse 1 . Les poireaux doivent être tendres mais garder leur forme.",
+        "Disposez les poireaux cuits au fond d'un moule à manqué, ajoutez des rondelles de chèvre Sainte-Maure sur le dessus, puis recouvrez avec la pâte feuilletée en rentrant les bords. Enfournez 25 minutes à 200°C avant de retourner la Tatin."
+      ],
+      "notes": [
+        "Pour 6 personnes | Accessoires : Mélangeur | Temps : 25 min"
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Préparation: 25 min",
+          "lines": [
+            "👥 Pour 6 personnes",
+            "⏱️ Temps indiqué : 25 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 gros poireaux (blancs uniquement",
+            "coupés en tronçons de 3 cm)",
+            "30g de beurre",
+            "2 cuillères à soupe de sucre roux",
+            "1 cuillère à soupe de vinaigre balsamique",
+            "sel",
+            "poivre. (À assembler avec : 1 bûche de chèvre Sainte-Maure",
+            "1 pâte feuilletée)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation Monsieur Cuisine Smart",
+          "lines": [
+            "Insérez le Mélangeur dans le bol mixeur. Ajoutez le beurre, le sucre roux et le vinaigre balsamique. Chauffez 2 minutes / 100°C / Vitesse 1 pour créer un début de caramel.",
+            "Ajoutez les tronçons de poireaux à la verticale autant que possible, salez et poivrez.",
+            "Verrouillez le couvercle avec le gobelet doseur et faites cuire à l'étouffée doucement pendant 15 minutes / 95°C / Sens Inverse / Vitesse 1 . Les poireaux doivent être tendres mais garder leur forme.",
+            "Disposez les poireaux cuits au fond d'un moule à manqué, ajoutez des rondelles de chèvre Sainte-Maure sur le dessus, puis recouvrez avec la pâte feuilletée en rentrant les bords. Enfournez 25 minutes à 200°C avant de retourner la Tatin."
+          ]
+        }
+      ],
+      "source": "PDF fourni — recette 50",
+      "timePrep": "25 min",
+      "timeCook": "",
+      "servings": "6 personnes",
+      "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
+      "regime": "vegetarien",
+      "sous_regime": "robot"
     }
   ],
   "plan": [
