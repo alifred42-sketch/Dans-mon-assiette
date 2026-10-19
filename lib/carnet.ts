@@ -174,7 +174,40 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const season = seasonForWeek(week);
   const used = new Set<string>();
   const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe) && profileAllows(recipe, preferences));
+  const plantProfile = Boolean(preferences.vegan || preferences.vegetarien);
+  const roleText = (recipe: Recipe) => normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
+  const chooseRole = (pattern: RegExp, exclude: Set<string> = new Set<string>()) =>
+    eligible.filter((recipe) => !exclude.has(recipe.id) && pattern.test(roleText(recipe)))
+      .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"))[0];
+  const reserved = new Set<string>();
+  const fishOrPlant = chooseRole(plantProfile ? /tofu|pois chiches|lentilles|haricots|edamame|œufs|oeufs|omelette/ : /poisson|saumon|cabillaud|thon|maquereau|crevette|sardine|colin|lieu/, reserved);
+  if (fishOrPlant) reserved.add(fishOrPlant.id);
+  const pivot = chooseRole(plantProfile ? /tofu|pois chiches|lentilles|haricots|edamame|œufs|oeufs|omelette/ : /poulet|dinde|bœuf|boeuf|veau|porc|agneau|viande|steak/, reserved);
+  if (pivot) reserved.add(pivot.id);
+  const soup = chooseRole(/soupe|velouté|veloute|potage|bouillon/, reserved);
+  if (soup) reserved.add(soup.id);
+  const pantry = chooseRole(/wrap|salade|omelette|tartine|riz sauté|riz saute|poêlée|poelee|vide.?frigo/, reserved);
+  if (pantry) reserved.add(pantry.id);
+  const pleasure = chooseRole(/pizza|burger|lasagnes|tarte|crumble|fondant|dessert|gaufre|crêpe|crepe|pancake|festif|gourmand/, reserved);
+  const matrix = new Map<string, { recipe: Recipe; name?: string }>();
+  const setRole = (day: string, meal: string, recipe?: Recipe, name?: string) => { if (recipe) matrix.set(`${day}|${meal}`, { recipe, name }); };
+  setRole("LUNDI", "Soir", fishOrPlant);
+  setRole("MARDI", "Soir", pivot);
+  setRole("MERCREDI", "Midi", pivot);
+  setRole("MERCREDI", "Soir", soup);
+  setRole("JEUDI", "Soir", pivot, pivot ? `Seconde vie — ${pivot.name}` : undefined);
+  setRole("VENDREDI", "Midi", pantry);
+  setRole("SAMEDI", "Midi", pleasure);
+  setRole("SAMEDI", "Soir", pleasure);
+  setRole("DIMANCHE", "Midi", pleasure);
+  setRole("DIMANCHE", "Soir", pleasure);
   return slots.map((slot) => {
+    const matrixSelection = matrix.get(`${slot.day}|${slot.meal}`);
+    if (matrixSelection) {
+      if (slot.day === "MARDI" && slot.meal === "Soir" && matrixSelection.recipe) used.add(matrixSelection.recipe.id);
+      if (slot.day === "MERCREDI" && slot.meal === "Soir" && matrixSelection.recipe) used.add(matrixSelection.recipe.id);
+      return { ...slot, name: matrixSelection.name || matrixSelection.recipe.name, recipeId: matrixSelection.recipe.id };
+    }
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
     const currentValid = current ? isValidatedRecipe(current) && profileAllows(current, preferences) : false;
     const currentScore = current ? seasonalScore(current, season) : 0;
