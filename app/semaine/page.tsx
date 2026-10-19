@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, currentIsoWeek, getRecipe, seasonLabel, weekPlan } from "@/lib/carnet";
+import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, currentIsoWeek, getRecipe, seasonLabel, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { InstallApp } from "@/components/install-app";
 import { MealReminders } from "@/components/meal-reminders";
 import { WeekPicker } from "@/components/week-picker";
@@ -15,12 +15,17 @@ export default function WeekPage() {
   const [currentWeek] = useState(() => currentIsoWeek());
   const [weekday, setWeekday] = useState(1);
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
+  const [preferences, setPreferences] = useState<PlanningPreferences>({});
   useEffect(() => {
-    const refresh = () => { try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); } };
+    const refresh = () => {
+      try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); }
+      try { setPreferences(JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}")); } catch { setPreferences({}); }
+    };
     refresh();
     window.addEventListener("storage", refresh);
     window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
-    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); };
+    window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
+    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
   }, []);
   useEffect(() => {
     setWeekday(new Date().getDay());
@@ -29,7 +34,9 @@ export default function WeekPage() {
   const mondayDate = (() => { const now = new Date(); const d = new Date(now.getFullYear(), 0, 4); d.setDate(d.getDate() - ((d.getDay() + 6) % 7) + (week - 1) * 7); return d; })();
   const sundayDate = new Date(mondayDate); sundayDate.setDate(mondayDate.getDate() + 6);
   const dateRange = `${mondayDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long" })} au ${sundayDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long" })}`;
-  const slots = weekPlan(week, recipeOverrides);
+  const slots = weekPlan(week, recipeOverrides, preferences);
+  const validatedSlotCount = slots.filter((slot) => Boolean(slot.recipeId)).length;
+  const activeProfiles = [preferences.etudiant && "Étudiant", preferences.vegan && "Végan", preferences.vegetarien && "Végétarien", preferences.halal && "Halal", preferences.sansGluten && "Sans gluten", preferences.sansLactose && "Sans lactose", preferences.sansFruitsCoque && "Sans fruits à coque"].filter(Boolean);
   const breakfast = breakfastForWeek(week);
 
   return (
@@ -49,6 +56,7 @@ export default function WeekPage() {
       {weekday === 5 ? <aside className="rounded-2xl border border-[#D98A6C]/30 bg-[#F3C6B1]/35 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">C'est vendredi ! Rangez les tupperwares du batchcooking, place à la cuisine plaisir !</aside> : null}
       {weekday === 6 ? <aside className="rounded-2xl border border-[#D98A6C]/30 bg-[#F3C6B1]/35 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">Week-end en mode Cuisine Chic Ouf : on se fait plaisir sans se prendre la tête.</aside> : null}
       <WeekPicker week={week} path="/semaine" />
+      <aside className="rounded-2xl border border-[#8FA89B]/40 bg-[#8FA89B]/10 p-3 text-sm text-[#2B2B2B]"><strong>Filtre de sécurité actif :</strong> {validatedSlotCount}/{slots.length} créneaux utilisent une fiche complète validée.{activeProfiles.length ? <span> Profils : {activeProfiles.join(", ")}.</span> : null}{validatedSlotCount < slots.length ? <p className="mt-1 text-xs">Les créneaux sans recette validée restent volontairement vides plutôt que d’afficher une fiche incomplète.</p> : null}</aside>
       <MealReminders />
       {breakfast && breakfast.lines.length > 0 ? (
         <section className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
