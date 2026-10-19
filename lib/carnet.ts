@@ -105,23 +105,15 @@ function normalizeRecipeForPlanning(recipe: Recipe): Recipe {
   const timePrep = normalizedRecipeTime(recipe.timePrep, defaultPrepTime({ ...recipe, ingredients }));
   const timeCook = normalizedRecipeTime(recipe.timeCook, defaultCookTime({ ...recipe, ingredients }));
   const servings = recipe.servings && /\d/.test(recipe.servings) ? recipe.servings : "4 personnes";
-  const flexibleLines = [
-    "☀️ Option Midi copieux : ajoutez un féculent de secours selon votre faim.",
-    "🌙 Option Soir copieux : ajustez les portions de légumes et de protéines selon votre faim.",
-  ];
-  for (const note of flexibleLines) if (!notes.some((existing) => existing.startsWith(note.slice(0, 20)))) notes.push(note);
-
   const sections = [...(recipe.sections || [])].map((section) => {
     if (/ingrédients|ingredients|🛒/i.test(section.title || "")) return { ...section, lines: ingredients };
     if (/préparation|preparation|👩‍🍳/i.test(section.title || "")) return { ...section, lines: steps };
     if (/temps|durée|duree|⏱️/i.test(section.title || "")) return { ...section, lines: ["⏱️ Préparation : " + timePrep, "🔥 Cuisson : " + timeCook, "👥 Pour " + servings] };
-    if (/portions flexibles/i.test(section.title || "")) return { ...section, lines: flexibleLines };
     return section;
   });
   if (!sections.some((section) => /ingrédients|ingredients|🛒/i.test(section.title || ""))) sections.push({ title: "🛒 Ingrédients", lines: ingredients });
   if (!sections.some((section) => /préparation|preparation|👩‍🍳/i.test(section.title || ""))) sections.push({ title: "👩‍🍳 Préparation", lines: steps });
   if (!sections.some((section) => /temps|durée|duree|⏱️/i.test(section.title || ""))) sections.unshift({ title: "⏱️ Temps et portions", lines: ["⏱️ Préparation : " + timePrep, "🔥 Cuisson : " + timeCook, "👥 Pour " + servings] });
-  if (!sections.some((section) => /portions flexibles/i.test(section.title || ""))) sections.push({ title: "🍽️ Portions flexibles", lines: flexibleLines });
   return { ...recipe, ingredients, steps, timePrep, timeCook, servings, notes, sections };
 }
 
