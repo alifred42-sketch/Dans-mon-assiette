@@ -52,7 +52,7 @@ export default function BatchPage() {
     return `${recipe?.name || slot.name} du ${dayName(slot.day)} ${slot.meal.toLowerCase()}`;
   };
   const targetText = (slots: typeof changedPlan) => `[Pour ${slots.map(targetName).join("; ")}]`;
-  const batchBasePlan = changedPlan.filter((slot) => (slot.day === "MARDI" && slot.meal === "Soir") || (slot.day === "MERCREDI" && (slot.meal === "Midi" || slot.meal === "Soir")) || (slot.day === "JEUDI" && slot.meal === "Soir"));
+  const batchBasePlan = changedPlan.filter((slot) => (slot.day === "MARDI" && slot.meal === "Soir") || (slot.day === "MERCREDI" && slot.meal === "Soir"));
   const recipeDetails = batchBasePlan.map((slot) => {
     const source = getRecipe(slot.recipeId);
     return { slot, recipe: source ? displayRecipe(source) : undefined };
