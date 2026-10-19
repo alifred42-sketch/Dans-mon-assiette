@@ -73139,6 +73139,3084 @@
       "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
       "regime": "vegan",
       "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-automne-hiver-001",
+      "name": "Velouté de Potimarron aux Châtaignes",
+      "ingredients": [
+        "1 potimarron (environ 1 kg)",
+        "200g de châtaignes cuites (en bocal ou sous vide)",
+        "1 oignon jaune",
+        "2 gousses d'ail",
+        "750 ml de bouillon de légumes",
+        "200 ml de crème de soja ou de coco",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel, poivre, une pincée de muscade"
+      ],
+      "steps": [
+        "Lavez le potimarron, coupez-le en deux, retirez les graines, puis coupez-le en gros cubes (gardez la peau). Émincez l'oignon et l'ail.",
+        "Dans une grande casserole, faites chauffer l'huile d'olive. Faites-y revenir l'oignon et l'ail pendant 3 minutes.",
+        "Ajoutez les cubes de potimarron et les 3/4 des châtaignes. Versez le bouillon de légumes. Portez à ébullition, puis laissez mijoter à couvert pendant 20 minutes (la chair du potimarron doit être tendre).",
+        "Mixez le tout finement avec la crème végétale, le sel, le poivre et la muscade jusqu'à obtenir une texture lisse.",
+        "Servez chaud en émiettant le reste des châtaignes sur le dessus pour le croquant."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 1/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 potimarron (environ 1 kg)",
+            "200g de châtaignes cuites (en bocal ou sous vide)",
+            "1 oignon jaune",
+            "2 gousses d'ail",
+            "750 ml de bouillon de légumes",
+            "200 ml de crème de soja ou de coco",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel, poivre, une pincée de muscade"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Lavez le potimarron, coupez-le en deux, retirez les graines, puis coupez-le en gros cubes (gardez la peau). Émincez l'oignon et l'ail.",
+            "Dans une grande casserole, faites chauffer l'huile d'olive. Faites-y revenir l'oignon et l'ail pendant 3 minutes.",
+            "Ajoutez les cubes de potimarron et les 3/4 des châtaignes. Versez le bouillon de légumes. Portez à ébullition, puis laissez mijoter à couvert pendant 20 minutes (la chair du potimarron doit être tendre).",
+            "Mixez le tout finement avec la crème végétale, le sel, le poivre et la muscade jusqu'à obtenir une texture lisse.",
+            "Servez chaud en émiettant le reste des châtaignes sur le dessus pour le croquant."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 1/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-002",
+      "name": "Curry de Pois Chiches, Patate Douce et Épinards",
+      "ingredients": [
+        "1 grosse patate douce (environ 500g)",
+        "400g de pois chiches cuits (1 boîte)",
+        "200g d'épinards frais (ou surgelés)",
+        "400 ml de lait de coco",
+        "400g de tomates concassées (1 boîte)",
+        "1 oignon et 2 gousses d'ail",
+        "1 cuillère à soupe de curry en poudre",
+        "1 cuillère à café de gingembre moulu",
+        "1 cuillère à soupe d'huile de coco (ou d'olive)",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Épluchez la patate douce et coupez-la en dés de 2 cm. Émincez l'oignon et l'ail.",
+        "Dans une sauteuse, faites chauffer l'huile. Faites revenir l'oignon, l'ail, le curry et le gingembre pendant 2 minutes pour libérer les arômes.",
+        "Ajoutez les dés de patate douce, les tomates concassées et le lait de coco. Salez et poivrez.",
+        "Couvrez et laissez mijoter à feu doux pendant 20 minutes, jusqu'à ce que la patate douce soit tendre.",
+        "Ajoutez les pois chiches rincés et égouttés ainsi que les épinards. Laissez cuire encore 5 minutes le temps que les épinards tombent. Servez avec du riz."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 2/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 grosse patate douce (environ 500g)",
+            "400g de pois chiches cuits (1 boîte)",
+            "200g d'épinards frais (ou surgelés)",
+            "400 ml de lait de coco",
+            "400g de tomates concassées (1 boîte)",
+            "1 oignon et 2 gousses d'ail",
+            "1 cuillère à soupe de curry en poudre",
+            "1 cuillère à café de gingembre moulu",
+            "1 cuillère à soupe d'huile de coco (ou d'olive)",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Épluchez la patate douce et coupez-la en dés de 2 cm. Émincez l'oignon et l'ail.",
+            "Dans une sauteuse, faites chauffer l'huile. Faites revenir l'oignon, l'ail, le curry et le gingembre pendant 2 minutes pour libérer les arômes.",
+            "Ajoutez les dés de patate douce, les tomates concassées et le lait de coco. Salez et poivrez.",
+            "Couvrez et laissez mijoter à feu doux pendant 20 minutes, jusqu'à ce que la patate douce soit tendre.",
+            "Ajoutez les pois chiches rincés et égouttés ainsi que les épinards. Laissez cuire encore 5 minutes le temps que les épinards tombent. Servez avec du riz."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 2/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-003",
+      "name": "Poêlée de Choux de Bruxelles Rôtis au Sirop d'Érable et Pécans",
+      "ingredients": [
+        "600g de choux de Bruxelles",
+        "60g de noix de pécan",
+        "2 cuillères à soupe de sirop d'érable",
+        "2 cuillères à soupe d'huile d'olive",
+        "1 cuillère à soupe de vinaigre balsamique",
+        "Fleur de sel et poivre noir"
+      ],
+      "steps": [
+        "Préchauffez votre four à 200°C.",
+        "Lavez les choux de Bruxelles, coupez le pied dur et enlevez les premières feuilles abîmées. Coupez-les en deux dans le sens de la longueur.",
+        "Dans un saladier, mélangez les choux avec l'huile d'olive, du sel et du poivre.",
+        "Étalez-les sur une plaque de cuisson recouverte de papier sulfurisé, face coupée vers le bas. Enfournez pour 20 minutes.",
+        "Pendant ce temps, concassez grossièrement les noix de pécan.",
+        "Sortez la plaque du four, ajoutez les pécans, arrosez avec le sirop d'érable et le vinaigre balsamique. Mélangez bien et réenfournez pour 5 à 7 minutes jusqu'à ce que le tout soit caramélisé."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 3/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600g de choux de Bruxelles",
+            "60g de noix de pécan",
+            "2 cuillères à soupe de sirop d'érable",
+            "2 cuillères à soupe d'huile d'olive",
+            "1 cuillère à soupe de vinaigre balsamique",
+            "Fleur de sel et poivre noir"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez votre four à 200°C.",
+            "Lavez les choux de Bruxelles, coupez le pied dur et enlevez les premières feuilles abîmées. Coupez-les en deux dans le sens de la longueur.",
+            "Dans un saladier, mélangez les choux avec l'huile d'olive, du sel et du poivre.",
+            "Étalez-les sur une plaque de cuisson recouverte de papier sulfurisé, face coupée vers le bas. Enfournez pour 20 minutes.",
+            "Pendant ce temps, concassez grossièrement les noix de pécan.",
+            "Sortez la plaque du four, ajoutez les pécans, arrosez avec le sirop d'érable et le vinaigre balsamique. Mélangez bien et réenfournez pour 5 à 7 minutes jusqu'à ce que le tout soit caramélisé."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 3/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-004",
+      "name": "Dhal de Lentilles Corail au Lait de Coco",
+      "ingredients": [
+        "250g de lentilles corail",
+        "400 ml de lait de coco",
+        "400g de pulpe de tomate",
+        "700 ml d'eau",
+        "1 oignon",
+        "1 cuillère à café de curcuma",
+        "1 cuillère à café de cumin en poudre",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel, poivre et coriandre fraîche pour le service"
+      ],
+      "steps": [
+        "Rincez abondamment les lentilles corail à l'eau froide. Émincez l'oignon.",
+        "Dans une casserole, faites revenir l'oignon dans l'huile d'olive avec le curcuma et le cumin pendant 3 minutes.",
+        "Ajoutez les lentilles corail, la pulpe de tomate, l'eau et le lait de coco. Mélangez bien.",
+        "Portez à ébullition, puis baissez le feu. Laissez mijoter à feu doux pendant 20 minutes en remuant régulièrement pour que le fond n'attache pas. Les lentilles doivent être complètement fondues et la texture crémeuse.",
+        "Salez, poivrez et parsemez de coriandre fraîche avant de servir chaud."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 4/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "250g de lentilles corail",
+            "400 ml de lait de coco",
+            "400g de pulpe de tomate",
+            "700 ml d'eau",
+            "1 oignon",
+            "1 cuillère à café de curcuma",
+            "1 cuillère à café de cumin en poudre",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel, poivre et coriandre fraîche pour le service"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Rincez abondamment les lentilles corail à l'eau froide. Émincez l'oignon.",
+            "Dans une casserole, faites revenir l'oignon dans l'huile d'olive avec le curcuma et le cumin pendant 3 minutes.",
+            "Ajoutez les lentilles corail, la pulpe de tomate, l'eau et le lait de coco. Mélangez bien.",
+            "Portez à ébullition, puis baissez le feu. Laissez mijoter à feu doux pendant 20 minutes en remuant régulièrement pour que le fond n'attache pas. Les lentilles doivent être complètement fondues et la texture crémeuse.",
+            "Salez, poivrez et parsemez de coriandre fraîche avant de servir chaud."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 4/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-005",
+      "name": "Butternut Rôtie Remplie de Quinoa et Canneberges",
+      "ingredients": [
+        "2 petites courges butternut (ou 1 grande)",
+        "150g de quinoa",
+        "50g de canneberges séchées (cranberries)",
+        "50g de graines de courge",
+        "1 oignon rouge",
+        "3 cuillères à soupe d'huile d'olive",
+        "Sel, poivre et une pincée de cannelle"
+      ],
+      "steps": [
+        "Préchauffez le four à 200°C. Coupez les butternuts en deux dans la longueur et retirez les graines. Quadriez la chair avec un couteau, badigeonnez d'une cuillère d'huile d'olive, salez et poivrez. Enfournez pour 40 minutes.",
+        "Pendant ce temps, faites cuire le quinoa dans deux fois son volume d'eau salée pendant 12 minutes. Égouttez.",
+        "Dans une poêle, faites revenir l'oignon rouge émincé dans le reste d'huile d'olive pendant 5 minutes. Ajoutez le quinoa cuit, les canneberges, les graines de courge et la cannelle. Laissez chauffer 3 minutes.",
+        "Sortez les butternuts du four. Creusez légèrement une partie de la chair de la courge, mélangez-la à la farce au quinoa, puis garnissez généreusement les cavités des courges avec ce mélange.",
+        "Remettez au four pendant 10 minutes avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 5/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 petites courges butternut (ou 1 grande)",
+            "150g de quinoa",
+            "50g de canneberges séchées (cranberries)",
+            "50g de graines de courge",
+            "1 oignon rouge",
+            "3 cuillères à soupe d'huile d'olive",
+            "Sel, poivre et une pincée de cannelle"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez le four à 200°C. Coupez les butternuts en deux dans la longueur et retirez les graines. Quadriez la chair avec un couteau, badigeonnez d'une cuillère d'huile d'olive, salez et poivrez. Enfournez pour 40 minutes.",
+            "Pendant ce temps, faites cuire le quinoa dans deux fois son volume d'eau salée pendant 12 minutes. Égouttez.",
+            "Dans une poêle, faites revenir l'oignon rouge émincé dans le reste d'huile d'olive pendant 5 minutes. Ajoutez le quinoa cuit, les canneberges, les graines de courge et la cannelle. Laissez chauffer 3 minutes.",
+            "Sortez les butternuts du four. Creusez légèrement une partie de la chair de la courge, mélangez-la à la farce au quinoa, puis garnissez généreusement les cavités des courges avec ce mélange.",
+            "Remettez au four pendant 10 minutes avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 5/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-006",
+      "name": "Pâtes Crémeuses aux Champignons et à l'Ail",
+      "ingredients": [
+        "400g de pâtes (type Tagliatelles ou Penne)",
+        "500g de champignons de Paris (ou mélange forestier)",
+        "3 gousses d'ail",
+        "200 ml de crème de cajou (ou de soja cuisine)",
+        "2 cuillères à soupe de levure maltée (pour le goût fromager)",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel, poivre noir et persil frais"
+      ],
+      "steps": [
+        "Faites cuire les pâtes dans une grande casserole d'eau bouillante salée en suivant les instructions du paquet. Égouttez en gardant une louche d'eau de cuisson.",
+        "Pendant ce temps, nettoyez et émincez les champignons en lamelles. Hachez l'ail.",
+        "Dans une grande poêle, faites chauffer l'huile d'olive. Ajoutez les champignons et l'ail. Faites sauter à feu vif pendant 5 à 7 minutes jusqu'à ce que les champignons soient dorés et aient rendu leur eau.",
+        "Baissez le feu, versez la crème végétale, la levure maltée, le sel et beaucoup de poivre. Laissez frémir 2 minutes.",
+        "Ajoutez les pâtes directement dans la poêle avec la sauce (et un peu d'eau de cuisson si la sauce est trop épaisse). Mélangez bien pendant 1 minute, parsemez de persil et servez."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 6/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de pâtes (type Tagliatelles ou Penne)",
+            "500g de champignons de Paris (ou mélange forestier)",
+            "3 gousses d'ail",
+            "200 ml de crème de cajou (ou de soja cuisine)",
+            "2 cuillères à soupe de levure maltée (pour le goût fromager)",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel, poivre noir et persil frais"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Faites cuire les pâtes dans une grande casserole d'eau bouillante salée en suivant les instructions du paquet. Égouttez en gardant une louche d'eau de cuisson.",
+            "Pendant ce temps, nettoyez et émincez les champignons en lamelles. Hachez l'ail.",
+            "Dans une grande poêle, faites chauffer l'huile d'olive. Ajoutez les champignons et l'ail. Faites sauter à feu vif pendant 5 à 7 minutes jusqu'à ce que les champignons soient dorés et aient rendu leur eau.",
+            "Baissez le feu, versez la crème végétale, la levure maltée, le sel et beaucoup de poivre. Laissez frémir 2 minutes.",
+            "Ajoutez les pâtes directement dans la poêle avec la sauce (et un peu d'eau de cuisson si la sauce est trop épaisse). Mélangez bien pendant 1 minute, parsemez de persil et servez."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 6/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-007",
+      "name": "Parmentier de Lentilles Vertes et Purée de Potiron",
+      "ingredients": [
+        "200g de lentilles vertes sèches",
+        "1 carotte et 1 oignon",
+        "2 cuillères à soupe de double concentré de tomate",
+        "600g de chair de potiron (ou potimarron)",
+        "400g de pommes de terre",
+        "50 ml de lait végétal (nature, sans sucre)",
+        "2 cuillères à soupe d'huile d'olive",
+        "Sel, poivre et une pincée de noix de muscade"
+      ],
+      "steps": [
+        "Faites cuire les lentilles dans une casserole d'eau bouillante non salée pendant 25 minutes. Égouttez.",
+        "Épluchez le potiron et les pommes de terre, coupez-les en cubes et faites-les cuire à la vapeur ou à l'eau pendant 20 minutes. Écrasez-les en purée avec le lait végétal, du sel, du poivre et la muscade.",
+        "Dans une poêle, faites revenir l'oignon et la carotte coupée en tout petits dés dans l'huile d'olive pendant 8 minutes. Ajoutez le concentré de tomate et les lentilles cuites. Laissez mijoter 5 minutes.",
+        "Préchauffez le four à 200°C. Dans un plat à gratin, déposez la couche de lentilles aux légumes, puis recouvrez avec la purée de potiron.",
+        "Enfournez pour 20 minutes jusqu'à ce que le dessus commence à dorer."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 7/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de lentilles vertes sèches",
+            "1 carotte et 1 oignon",
+            "2 cuillères à soupe de double concentré de tomate",
+            "600g de chair de potiron (ou potimarron)",
+            "400g de pommes de terre",
+            "50 ml de lait végétal (nature, sans sucre)",
+            "2 cuillères à soupe d'huile d'olive",
+            "Sel, poivre et une pincée de noix de muscade"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Faites cuire les lentilles dans une casserole d'eau bouillante non salée pendant 25 minutes. Égouttez.",
+            "Épluchez le potiron et les pommes de terre, coupez-les en cubes et faites-les cuire à la vapeur ou à l'eau pendant 20 minutes. Écrasez-les en purée avec le lait végétal, du sel, du poivre et la muscade.",
+            "Dans une poêle, faites revenir l'oignon et la carotte coupée en tout petits dés dans l'huile d'olive pendant 8 minutes. Ajoutez le concentré de tomate et les lentilles cuites. Laissez mijoter 5 minutes.",
+            "Préchauffez le four à 200°C. Dans un plat à gratin, déposez la couche de lentilles aux légumes, puis recouvrez avec la purée de potiron.",
+            "Enfournez pour 20 minutes jusqu'à ce que le dessus commence à dorer."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 7/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-008",
+      "name": "Risotto aux Poireaux et Vin Blanc",
+      "ingredients": [
+        "300g de riz à risotto (Arborio)",
+        "3 blancs de poireaux",
+        "1 oignon",
+        "100 ml de vin blanc sec",
+        "1 litre de bouillon de légumes chaud",
+        "3 cuillères à soupe de levure maltée",
+        "2 cuillères à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Lavez les blancs de poireaux et coupez-les en fines rondelles. Émincez l'oignon.",
+        "Dans une sauteuse, faites chauffer l'huile d'olive. Faites-y suer l'oignon et les poireaux à feu doux pendant 10 minutes jusqu'à ce qu'ils soient tendres.",
+        "Ajoutez le riz à risotto sec et remuez pendant 2 minutes jusqu'à ce que les grains deviennent translucides.",
+        "Versez le vin blanc et laissez-le s'évaporer complètement en remuant.",
+        "Ajoutez le bouillon de légumes chaud louche après louche, en attendant que le liquide soit absorbé avant d'en rajouter. Remuez constamment. L'opération prend environ 18 à 20 minutes.",
+        "En fin de cuisson, éteignez le feu, ajoutez la levure maltée pour la touche crémeuse, salez, poivrez, couvrez 2 minutes et servez immédiatement."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 8/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "300g de riz à risotto (Arborio)",
+            "3 blancs de poireaux",
+            "1 oignon",
+            "100 ml de vin blanc sec",
+            "1 litre de bouillon de légumes chaud",
+            "3 cuillères à soupe de levure maltée",
+            "2 cuillères à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Lavez les blancs de poireaux et coupez-les en fines rondelles. Émincez l'oignon.",
+            "Dans une sauteuse, faites chauffer l'huile d'olive. Faites-y suer l'oignon et les poireaux à feu doux pendant 10 minutes jusqu'à ce qu'ils soient tendres.",
+            "Ajoutez le riz à risotto sec et remuez pendant 2 minutes jusqu'à ce que les grains deviennent translucides.",
+            "Versez le vin blanc et laissez-le s'évaporer complètement en remuant.",
+            "Ajoutez le bouillon de légumes chaud louche après louche, en attendant que le liquide soit absorbé avant d'en rajouter. Remuez constamment. L'opération prend environ 18 à 20 minutes.",
+            "En fin de cuisson, éteignez le feu, ajoutez la levure maltée pour la touche crémeuse, salez, poivrez, couvrez 2 minutes et servez immédiatement."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 8/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-009",
+      "name": "Chili Veggie aux Haricots Rouges et Maïs",
+      "ingredients": [
+        "400g de haricots rouges cuits (1 boîte)",
+        "200g de maïs en grains (1 petite boîte)",
+        "400g de tomates concassées (1 boîte)",
+        "1 poivron rouge",
+        "1 oignon et 2 gousses d'ail",
+        "1 cuillère à café de piment en poudre (ou selon les goûts)",
+        "1 cuillère à café de cumin",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Émincez l'oignon, l'ail et coupez le poivron rouge en petits dés.",
+        "Dans une grande casserole, faites chauffer l'huile d'olive. Faites revenir l'oignon, l'ail et le poivron pendant 5 minutes.",
+        "Ajoutez le cumin et le piment, remuez 1 minute.",
+        "Ajoutez les tomates concassées, les haricots rouges rincés et égouttés, ainsi que le maïs. Salez et poivrez.",
+        "Laissez mijoter à feu doux et à couvert pendant 20 minutes pour que les saveurs se mélangent bien. Servez bien chaud avec du riz ou des tortillas."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 9/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de haricots rouges cuits (1 boîte)",
+            "200g de maïs en grains (1 petite boîte)",
+            "400g de tomates concassées (1 boîte)",
+            "1 poivron rouge",
+            "1 oignon et 2 gousses d'ail",
+            "1 cuillère à café de piment en poudre (ou selon les goûts)",
+            "1 cuillère à café de cumin",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Émincez l'oignon, l'ail et coupez le poivron rouge en petits dés.",
+            "Dans une grande casserole, faites chauffer l'huile d'olive. Faites revenir l'oignon, l'ail et le poivron pendant 5 minutes.",
+            "Ajoutez le cumin et le piment, remuez 1 minute.",
+            "Ajoutez les tomates concassées, les haricots rouges rincés et égouttés, ainsi que le maïs. Salez et poivrez.",
+            "Laissez mijoter à feu doux et à couvert pendant 20 minutes pour que les saveurs se mélangent bien. Servez bien chaud avec du riz ou des tortillas."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 9/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-010",
+      "name": "Crumble Salé de Panais, Carottes et Noisettes",
+      "ingredients": [
+        "3 panais",
+        "3 carottes",
+        "1 cuillère à soupe de sirop d'agave",
+        "Pour le crumble : 80g de farine de blé (ou d'épeautre), 40g de poudre de noisettes, 40g de noisettes concassées, 4 cuillères à soupe d'huile d'olive, une pincée de sel."
+      ],
+      "steps": [
+        "Préchauffez le four à 180°C. Épluchez les panais et les carottes, puis coupez-les en rondelles d'un demi-centimètre.",
+        "Faites-les cuire à la vapeur pendant 15 minutes pour les attendrir. Disposez-les ensuite dans un plat à gratin, arrosez avec le sirop d'agave, un filet d'huile d'olive, du sel et du poivre.",
+        "Dans un bol, préparez le crumble : mélangez la farine, la poudre de noisettes, les noisettes concassées et le sel. Ajoutez l'huile d'olive et sablez le mélange du bout des doigts pour obtenir des miettes de pâte.",
+        "Répartissez cette pâte à crumble sur les légumes.",
+        "Enfournez pour 20 à 25 minutes, jusqu'à ce que le crumble soit bien doré et croustillant."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 10/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "3 panais",
+            "3 carottes",
+            "1 cuillère à soupe de sirop d'agave",
+            "Pour le crumble : 80g de farine de blé (ou d'épeautre), 40g de poudre de noisettes, 40g de noisettes concassées, 4 cuillères à soupe d'huile d'olive, une pincée de sel."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez le four à 180°C. Épluchez les panais et les carottes, puis coupez-les en rondelles d'un demi-centimètre.",
+            "Faites-les cuire à la vapeur pendant 15 minutes pour les attendrir. Disposez-les ensuite dans un plat à gratin, arrosez avec le sirop d'agave, un filet d'huile d'olive, du sel et du poivre.",
+            "Dans un bol, préparez le crumble : mélangez la farine, la poudre de noisettes, les noisettes concassées et le sel. Ajoutez l'huile d'olive et sablez le mélange du bout des doigts pour obtenir des miettes de pâte.",
+            "Répartissez cette pâte à crumble sur les légumes.",
+            "Enfournez pour 20 à 25 minutes, jusqu'à ce que le crumble soit bien doré et croustillant."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 10/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-011",
+      "name": "Velouté de Chou-Fleur Rôti et Ail Doux",
+      "ingredients": [
+        "1 gros chou-fleur",
+        "1 tête d'ail entière",
+        "750 ml de bouillon de légumes",
+        "200 ml de lait d'amande (non sucré)",
+        "3 cuillères à soupe d'huile d'olive",
+        "Sel, poivre et une pincée de paprika fumé"
+      ],
+      "steps": [
+        "Préchauffez votre four à 200°C. Coupez le chou-fleur en bouquets, lavez-les et séchez-les. Coupe le haut de la tête d'ail pour exposer les gousses.",
+        "Sur une plaque de cuisson, déposez les bouquets de chou-fleur et la tête d'ail. Arrosez le tout avec 2 cuillères à soupe d'huile d'olive, du sel et du poivre. Enfournez pour 25 minutes (le chou-fleur doit être doré).",
+        "Dans une grande casserole, versez le bouillon de légumes et le lait d'amande.",
+        "Ajoutez les bouquets de chou-fleur rôtis. Pressez la tête d'ail cuite pour faire sortir la pulpe d'ail confite directement dans la casserole.",
+        "Portez à frémissement pendant 5 minutes, puis mixez longuement le tout au plongeur jusqu'à obtenir un velouté très soyeux. Saupoudrez d'un peu de paprika fumé avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 11/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 gros chou-fleur",
+            "1 tête d'ail entière",
+            "750 ml de bouillon de légumes",
+            "200 ml de lait d'amande (non sucré)",
+            "3 cuillères à soupe d'huile d'olive",
+            "Sel, poivre et une pincée de paprika fumé"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez votre four à 200°C. Coupez le chou-fleur en bouquets, lavez-les et séchez-les. Coupe le haut de la tête d'ail pour exposer les gousses.",
+            "Sur une plaque de cuisson, déposez les bouquets de chou-fleur et la tête d'ail. Arrosez le tout avec 2 cuillères à soupe d'huile d'olive, du sel et du poivre. Enfournez pour 25 minutes (le chou-fleur doit être doré).",
+            "Dans une grande casserole, versez le bouillon de légumes et le lait d'amande.",
+            "Ajoutez les bouquets de chou-fleur rôtis. Pressez la tête d'ail cuite pour faire sortir la pulpe d'ail confite directement dans la casserole.",
+            "Portez à frémissement pendant 5 minutes, puis mixez longuement le tout au plongeur jusqu'à obtenir un velouté très soyeux. Saupoudrez d'un peu de paprika fumé avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 11/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-012",
+      "name": "Mijoté de Lentilles Brunes aux Champignons et Vin Rouge",
+      "ingredients": [
+        "200g de lentilles brunes sèches",
+        "300g de champignons de Paris ou de pleurotes",
+        "1 oignon jaune et 2 carottes",
+        "2 gousses d'ail",
+        "150 ml de vin rouge sec",
+        "500 ml de bouillon de légumes",
+        "1 cuillère à soupe de concentré de tomate",
+        "2 cuillères à soupe d'huile d'olive",
+        "1 branche de thym et 1 feuille de laurier",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Émincez l'oignon et l'ail. Coupez les carottes en petites rondelles et les champignons en quartiers.",
+        "Dans une cocotte, faites chauffer l'huile d'olive. Faites-y revenir l'oignon, l'ail et les carottes pendant 5 minutes. Ajoutez les champignons et laissez cuire encore 3 minutes.",
+        "Incorporez le concentré de tomate, puis versez le vin rouge pour déglacer. Laissez réduire de moitié (environ 3 minutes).",
+        "Ajoutez les lentilles brunes (rincées), le bouillon de légumes, le thym et le laurier.",
+        "Couvrez et laissez mijoter à feu doux pendant 35 à 40 minutes. Les lentilles doivent être tendres et la sauce doit avoir épaissi. Rectifiez l'assaisonnement en sel et poivre avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 12/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de lentilles brunes sèches",
+            "300g de champignons de Paris ou de pleurotes",
+            "1 oignon jaune et 2 carottes",
+            "2 gousses d'ail",
+            "150 ml de vin rouge sec",
+            "500 ml de bouillon de légumes",
+            "1 cuillère à soupe de concentré de tomate",
+            "2 cuillères à soupe d'huile d'olive",
+            "1 branche de thym et 1 feuille de laurier",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Émincez l'oignon et l'ail. Coupez les carottes en petites rondelles et les champignons en quartiers.",
+            "Dans une cocotte, faites chauffer l'huile d'olive. Faites-y revenir l'oignon, l'ail et les carottes pendant 5 minutes. Ajoutez les champignons et laissez cuire encore 3 minutes.",
+            "Incorporez le concentré de tomate, puis versez le vin rouge pour déglacer. Laissez réduire de moitié (environ 3 minutes).",
+            "Ajoutez les lentilles brunes (rincées), le bouillon de légumes, le thym et le laurier.",
+            "Couvrez et laissez mijoter à feu doux pendant 35 à 40 minutes. Les lentilles doivent être tendres et la sauce doit avoir épaissi. Rectifiez l'assaisonnement en sel et poivre avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 12/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-013",
+      "name": "Galettes de Courge Butternut et Flocons d'Avoine",
+      "ingredients": [
+        "400g de chair de courge butternut crue",
+        "100g de flocons d'avoine",
+        "1 oignon rouge",
+        "2 cuillères à soupe de farine de pois chiches (ou de blé)",
+        "50 ml de lait de soja (nature)",
+        "1 cuillère à café de cumin en poudre",
+        "2 cuillères à soupe d'huile de cuisson",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Râpez finement la chair de la butternut crue et émincez l'oignon rouge.",
+        "Dans un grand saladier, mélangez les flocons d'avoine, la farine et le lait de soja. Laissez reposer 5 minutes pour que l'avoine absorbe le liquide.",
+        "Ajoutez la butternut râpée, l'oignon, le cumin, le sel et le poivre. Mélangez bien avec les mains pour obtenir une texture collante qui se tient.",
+        "Formez 8 galettes épaisses avec vos mains.",
+        "Faites chauffer l'huile dans une poêle antiadhésive. Faites cuire les galettes à feu moyen pendant 5 à 6 minutes de chaque côté, jusqu'à ce qu'elles soient bien dorées et croustillantes."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 13/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de chair de courge butternut crue",
+            "100g de flocons d'avoine",
+            "1 oignon rouge",
+            "2 cuillères à soupe de farine de pois chiches (ou de blé)",
+            "50 ml de lait de soja (nature)",
+            "1 cuillère à café de cumin en poudre",
+            "2 cuillères à soupe d'huile de cuisson",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Râpez finement la chair de la butternut crue et émincez l'oignon rouge.",
+            "Dans un grand saladier, mélangez les flocons d'avoine, la farine et le lait de soja. Laissez reposer 5 minutes pour que l'avoine absorbe le liquide.",
+            "Ajoutez la butternut râpée, l'oignon, le cumin, le sel et le poivre. Mélangez bien avec les mains pour obtenir une texture collante qui se tient.",
+            "Formez 8 galettes épaisses avec vos mains.",
+            "Faites chauffer l'huile dans une poêle antiadhésive. Faites cuire les galettes à feu moyen pendant 5 à 6 minutes de chaque côté, jusqu'à ce qu'elles soient bien dorées et croustillantes."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 13/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-014",
+      "name": "Stroganoff de Tofu aux Poireaux",
+      "ingredients": [
+        "400g de tofu ferme",
+        "2 gros poireaux",
+        "1 oignon",
+        "200 ml de crème de soja cuisine",
+        "1 cuillère à soupe de moutarde de Dijon",
+        "1 cuillère à soupe de sauce soja (Tamari)",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre noir"
+      ],
+      "steps": [
+        "Pressez le tofu dans un torchon propre pour retirer l'excès d'eau, puis coupez-le en lamelles ou en dés. Émincez l'oignon et coupez les poireaux en rondelles.",
+        "Dans une poêle, faites chauffer l'huile d'olive et faites-y dorer le tofu pendant 5 minutes. Retirez-le de la poêle et réservez-le.",
+        "Dans la même poêle, ajoutez l'oignon et les poireaux. Faites-les suer à feu moyen pendant 10 minutes (ajoutez un filet d'eau si nécessaire pour qu'ils ne brûlent pas).",
+        "Remettez le tofu dans la poêle. Ajoutez la sauce soja, la moutarde et la crème de soja.",
+        "Mélangez bien et laissez mijoter à feu doux pendant 3 à 5 minutes pour épaissir la sauce. Poivrez généreusement avant de servir avec du riz",
+        "u des pâtes."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 14/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de tofu ferme",
+            "2 gros poireaux",
+            "1 oignon",
+            "200 ml de crème de soja cuisine",
+            "1 cuillère à soupe de moutarde de Dijon",
+            "1 cuillère à soupe de sauce soja (Tamari)",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre noir"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Pressez le tofu dans un torchon propre pour retirer l'excès d'eau, puis coupez-le en lamelles ou en dés. Émincez l'oignon et coupez les poireaux en rondelles.",
+            "Dans une poêle, faites chauffer l'huile d'olive et faites-y dorer le tofu pendant 5 minutes. Retirez-le de la poêle et réservez-le.",
+            "Dans la même poêle, ajoutez l'oignon et les poireaux. Faites-les suer à feu moyen pendant 10 minutes (ajoutez un filet d'eau si nécessaire pour qu'ils ne brûlent pas).",
+            "Remettez le tofu dans la poêle. Ajoutez la sauce soja, la moutarde et la crème de soja.",
+            "Mélangez bien et laissez mijoter à feu doux pendant 3 à 5 minutes pour épaissir la sauce. Poivrez généreusement avant de servir avec du riz",
+            "u des pâtes."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 14/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-015",
+      "name": "Minestrone d'Hiver au Chou Vert et Haricots Blancs",
+      "ingredients": [
+        "1/2 chou vert frisé",
+        "2 carottes et 2 branches de céleri",
+        "1 oignon",
+        "400g de haricots blancs cuits (1 boîte)",
+        "400g de tomates concassées (1 boîte)",
+        "1 litre de bouillon de légumes",
+        "100g de petites pâtes (coquillettes ou ditalini)",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Émincez l'oignon. Coupez les carottes et le céleri en petits dés. Lavez le chou vert et coupez-le en fines lanières en retirant les côtes trop dures.",
+        "Dans une grande marmite, faites revenir l'oignon, les carottes et le céleri dans l'huile d'olive pendant 5 minutes.",
+        "Ajoutez le chou vert et laissez-le réduire pendant 3 minutes en remuant.",
+        "Versez les tomates concassées et le bouillon de légumes. Portez à ébullition, couvrez et laissez mijoter à feu moyen pendant 15 minutes.",
+        "Ajoutez les petites pâtes et les haricots blancs égouttés. Laissez cuire encore 10 minutes (le temps que les pâtes soient cuites). Ajustez l'assaisonnement et servez bien chaud."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 15/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1/2 chou vert frisé",
+            "2 carottes et 2 branches de céleri",
+            "1 oignon",
+            "400g de haricots blancs cuits (1 boîte)",
+            "400g de tomates concassées (1 boîte)",
+            "1 litre de bouillon de légumes",
+            "100g de petites pâtes (coquillettes ou ditalini)",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Émincez l'oignon. Coupez les carottes et le céleri en petits dés. Lavez le chou vert et coupez-le en fines lanières en retirant les côtes trop dures.",
+            "Dans une grande marmite, faites revenir l'oignon, les carottes et le céleri dans l'huile d'olive pendant 5 minutes.",
+            "Ajoutez le chou vert et laissez-le réduire pendant 3 minutes en remuant.",
+            "Versez les tomates concassées et le bouillon de légumes. Portez à ébullition, couvrez et laissez mijoter à feu moyen pendant 15 minutes.",
+            "Ajoutez les petites pâtes et les haricots blancs égouttés. Laissez cuire encore 10 minutes (le temps que les pâtes soient cuites). Ajustez l'assaisonnement et servez bien chaud."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 15/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-016",
+      "name": "Wok de Chou Kale, Patate Douce et Sauce Cacahuète",
+      "ingredients": [
+        "1 grande botte de chou kale",
+        "1 grosse patate douce",
+        "1 cuillère à soupe d'huile de sésame (ou de cuisson)",
+        "Pour la sauce : 3 cuillères à soupe de beurre de cacahuète (100% pur), 2 cuillères à soupe de sauce soja, 1 cuillère à soupe de sirop d'érable, 4 à 5 cuillères à soupe d'eau chaude pour détendre."
+      ],
+      "steps": [
+        "Épluchez la patate douce et coupez-la en tout petits dés (pour qu'ils cuisent vite). Lavez le chou kale, enlevez la tige centrale dure et déchirez les feuilles en morceaux.",
+        "Dans un bol, préparez la sauce en mélangeant vigoureusement le beurre de cacahuète, la sauce soja, le sirop d'érable et l'eau chaude jusqu'à obtenir une texture fluide.",
+        "Dans un wok ou une grande poêle, faites chauffer l'huile de sésame. Ajoutez les dés de patate douce et faites-les sauter pendant 8 à 10 minutes à feu moyen en remuant souvent jusqu'à ce qu'ils soient tendres.",
+        "Ajoutez les feuilles de chou kale et 2 cuillères à soupe d'eau. Faites sauter pendant 3 à 4 minutes : le kale doit réduire et devenir vert vif.",
+        "Versez la sauce cacahuète directement dans le wok, mélangez bien pendant 1 minute pour napper les légumes et servez immédiatement."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 16/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 grande botte de chou kale",
+            "1 grosse patate douce",
+            "1 cuillère à soupe d'huile de sésame (ou de cuisson)",
+            "Pour la sauce : 3 cuillères à soupe de beurre de cacahuète (100% pur), 2 cuillères à soupe de sauce soja, 1 cuillère à soupe de sirop d'érable, 4 à 5 cuillères à soupe d'eau chaude pour détendre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Épluchez la patate douce et coupez-la en tout petits dés (pour qu'ils cuisent vite). Lavez le chou kale, enlevez la tige centrale dure et déchirez les feuilles en morceaux.",
+            "Dans un bol, préparez la sauce en mélangeant vigoureusement le beurre de cacahuète, la sauce soja, le sirop d'érable et l'eau chaude jusqu'à obtenir une texture fluide.",
+            "Dans un wok ou une grande poêle, faites chauffer l'huile de sésame. Ajoutez les dés de patate douce et faites-les sauter pendant 8 à 10 minutes à feu moyen en remuant souvent jusqu'à ce qu'ils soient tendres.",
+            "Ajoutez les feuilles de chou kale et 2 cuillères à soupe d'eau. Faites sauter pendant 3 à 4 minutes : le kale doit réduire et devenir vert vif.",
+            "Versez la sauce cacahuète directement dans le wok, mélangez bien pendant 1 minute pour napper les légumes et servez immédiatement."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 16/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-017",
+      "name": "Gratin de Crozets de Savoie aux Poireaux et Fromage",
+      "ingredients": [
+        "300g de crozets (au sarrasin ou nature)",
+        "2 poireaux",
+        "200 ml de crème de soja ou d'épeautre cuisine",
+        "150g de fromage végétal râpé (qui fond bien)",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel, poivre et une pincée de noix de muscade"
+      ],
+      "steps": [
+        "Faites cuire les crozets dans une grande casserole d'eau bouillante salée en suivant le temps indiqué sur le paquet (généralement 15 minutes). Égouttez-les.",
+        "Pendant ce temps, émincez les poireaux et faites-les revenir dans une poêle avec l'huile d'olive pendant 10 minutes jusqu'à ce qu'ils soient bien fondants.",
+        "Préchauffez votre four à 200°C en mode gril.",
+        "Dans un saladier, mélangez les crozets cuits, les poireaux fondus, la crème végétale, la moitié du fromage végétal râpé, le sel, le poivre et la muscade.",
+        "Versez le mélange dans un plat à gratin, parsemez avec le reste de fromage végétal râpé et enfournez pour 10 à 12 minutes jusqu'à ce que le dessus soit bien gratiné."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 17/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "300g de crozets (au sarrasin ou nature)",
+            "2 poireaux",
+            "200 ml de crème de soja ou d'épeautre cuisine",
+            "150g de fromage végétal râpé (qui fond bien)",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel, poivre et une pincée de noix de muscade"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Faites cuire les crozets dans une grande casserole d'eau bouillante salée en suivant le temps indiqué sur le paquet (généralement 15 minutes). Égouttez-les.",
+            "Pendant ce temps, émincez les poireaux et faites-les revenir dans une poêle avec l'huile d'olive pendant 10 minutes jusqu'à ce qu'ils soient bien fondants.",
+            "Préchauffez votre four à 200°C en mode gril.",
+            "Dans un saladier, mélangez les crozets cuits, les poireaux fondus, la crème végétale, la moitié du fromage végétal râpé, le sel, le poivre et la muscade.",
+            "Versez le mélange dans un plat à gratin, parsemez avec le reste de fromage végétal râpé et enfournez pour 10 à 12 minutes jusqu'à ce que le dessus soit bien gratiné."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 17/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-018",
+      "name": "Salade Tiède de Lentilles Vertes, Pommes et Noix",
+      "ingredients": [
+        "200g de lentilles vertes",
+        "2 pommes (type Gala ou Granny Smith)",
+        "60g de cerneaux de noix",
+        "1 oignon rouge",
+        "Pour la vinaigrette : 3 cuillères à soupe d'huile de noix (ou d'olive), 1 cuillère à soupe de vinaigre de cidre, 1 cuillère à café de moutarde à l'ancienne, sel et poivre."
+      ],
+      "steps": [
+        "Faites cuire les lentilles vertes dans une casserole d'eau froide non salée. Portez à ébullition et laissez cuire 25 minutes. Égouttez-les et laissez-les tiédir.",
+        "Pendant ce temps, coupez les pommes en petits dés (gardez la peau si elles sont bio) et émincez finement l'oignon rouge. Concassez grossièrement les noix.",
+        "Dans un grand saladier, préparez la vinaigrette en mélangeant la moutarde, le vinaigre, le sel, le poivre et l'huile.",
+        "Ajoutez les lentilles encore tièdes, les dés de pommes, l'oignon rouge et les noix.",
+        "Mélangez délicatement pour que les lentilles absorbent bien la vinaigrette. Servez tiède ou à température ambiante."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 18/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de lentilles vertes",
+            "2 pommes (type Gala ou Granny Smith)",
+            "60g de cerneaux de noix",
+            "1 oignon rouge",
+            "Pour la vinaigrette : 3 cuillères à soupe d'huile de noix (ou d'olive), 1 cuillère à soupe de vinaigre de cidre, 1 cuillère à café de moutarde à l'ancienne, sel et poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Faites cuire les lentilles vertes dans une casserole d'eau froide non salée. Portez à ébullition et laissez cuire 25 minutes. Égouttez-les et laissez-les tiédir.",
+            "Pendant ce temps, coupez les pommes en petits dés (gardez la peau si elles sont bio) et émincez finement l'oignon rouge. Concassez grossièrement les noix.",
+            "Dans un grand saladier, préparez la vinaigrette en mélangeant la moutarde, le vinaigre, le sel, le poivre et l'huile.",
+            "Ajoutez les lentilles encore tièdes, les dés de pommes, l'oignon rouge et les noix.",
+            "Mélangez délicatement pour que les lentilles absorbent bien la vinaigrette. Servez tiède ou à température ambiante."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 18/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-019",
+      "name": "Gnocchis Poêlés à la Crème de Courge et Sauge",
+      "ingredients": [
+        "500g de gnocchis (vérifiez qu'ils soient sans œufs)",
+        "400g de chair de potimarron ou de butternut",
+        "150 ml de bouillon de légumes",
+        "6-8 feuilles de sauge fraîche",
+        "2 cuillères à soupe d'huile d'olive (ou de margarine végétale)",
+        "Sel et poivre noir"
+      ],
+      "steps": [
+        "Coupez la courge en cubes et faites-la cuire à la vapeur ou à l'eau pendant 15 minutes. Mixez-la ensuite finement avec le bouillon de légumes chaud pour obtenir une crème lisse (ajustez le bouillon pour la texture). Salez et poivrez.",
+        "Dans une grande poêle, faites chauffer l'huile d'olive. Ajoutez les gnocchis directement (sans les cuire à l'eau au préalable).",
+        "Faites-les sauter à feu moyen-vif pendant 5 à 7 minutes en remuant régulièrement jusqu'à ce qu'ils soient bien dorés et croustillants à l'extérieur.",
+        "Ajoutez les feuilles de sauge dans la poêle les 2 dernières minutes pour qu'elles deviennent croustillantes.",
+        "Versez la crème de courge chaude au fond des assiettes, déposez les gnocchis croustillants et la sauge par-dessus. Poivrez généreusement."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 19/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500g de gnocchis (vérifiez qu'ils soient sans œufs)",
+            "400g de chair de potimarron ou de butternut",
+            "150 ml de bouillon de légumes",
+            "6-8 feuilles de sauge fraîche",
+            "2 cuillères à soupe d'huile d'olive (ou de margarine végétale)",
+            "Sel et poivre noir"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Coupez la courge en cubes et faites-la cuire à la vapeur ou à l'eau pendant 15 minutes. Mixez-la ensuite finement avec le bouillon de légumes chaud pour obtenir une crème lisse (ajustez le bouillon pour la texture). Salez et poivrez.",
+            "Dans une grande poêle, faites chauffer l'huile d'olive. Ajoutez les gnocchis directement (sans les cuire à l'eau au préalable).",
+            "Faites-les sauter à feu moyen-vif pendant 5 à 7 minutes en remuant régulièrement jusqu'à ce qu'ils soient bien dorés et croustillants à l'extérieur.",
+            "Ajoutez les feuilles de sauge dans la poêle les 2 dernières minutes pour qu'elles deviennent croustillantes.",
+            "Versez la crème de courge chaude au fond des assiettes, déposez les gnocchis croustillants et la sauge par-dessus. Poivrez généreusement."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 19/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-020",
+      "name": "Pitas Garnies de Chou Rouge Épicé et Pois Chiches Rôtis",
+      "ingredients": [
+        "4 pains pitas",
+        "400g de pois chiches cuits (1 boîte)",
+        "1/4 de chou rouge",
+        "1 cuillère à café de paprika et 1/2 cuillère à café de cumin",
+        "2 cuillères à soupe d'huile d'olive",
+        "Pour la sauce : 4 cuillères à soupe de yaourt de soja nature, 1 cuillère à soupe de jus de citron, sel et poivre."
+      ],
+      "steps": [
+        "Préchauffez votre four à 200°C. Rincez et séchez très bien les pois chiches dans un torchon.",
+        "Mélangez les pois chiches dans un bol avec 1 cuillère à soupe d'huile d'olive, le paprika, le cumin, du sel et du poivre. Étalez-les sur une plaque et enfournez pour 20 minutes jusqu'à ce qu'ils soient croustillants.",
+        "Pendant ce temps, émincez très finement le chou rouge. Dans une petite poêle avec le reste d'huile d'olive, faites sauter le chou rouge pendant 5 minutes pour qu'il s'assouplisse légèrement tout en restant croquant.",
+        "Préparez la sauce en mélangeant le yaourt de soja, le jus de citron, du sel et du poivre.",
+        "Faites chauffer rapidement les pains pitas au grille-pain ou au four. Ouvrez-les en deux, tartinez l'intérieur de sauce, puis garnissez de chou rouge chaud et de pois chiches rôtis."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 20/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 pains pitas",
+            "400g de pois chiches cuits (1 boîte)",
+            "1/4 de chou rouge",
+            "1 cuillère à café de paprika et 1/2 cuillère à café de cumin",
+            "2 cuillères à soupe d'huile d'olive",
+            "Pour la sauce : 4 cuillères à soupe de yaourt de soja nature, 1 cuillère à soupe de jus de citron, sel et poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez votre four à 200°C. Rincez et séchez très bien les pois chiches dans un torchon.",
+            "Mélangez les pois chiches dans un bol avec 1 cuillère à soupe d'huile d'olive, le paprika, le cumin, du sel et du poivre. Étalez-les sur une plaque et enfournez pour 20 minutes jusqu'à ce qu'ils soient croustillants.",
+            "Pendant ce temps, émincez très finement le chou rouge. Dans une petite poêle avec le reste d'huile d'olive, faites sauter le chou rouge pendant 5 minutes pour qu'il s'assouplisse légèrement tout en restant croquant.",
+            "Préparez la sauce en mélangeant le yaourt de soja, le jus de citron, du sel et du poivre.",
+            "Faites chauffer rapidement les pains pitas au grille-pain ou au four. Ouvrez-les en deux, tartinez l'intérieur de sauce, puis garnissez de chou rouge chaud et de pois chiches rôtis."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 20/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-021",
+      "name": "Velouté de Panais aux Poires et Noisettes Torréfiées",
+      "ingredients": [
+        "600g de panais",
+        "2 poires bien mûres",
+        "1 oignon jaune",
+        "800 ml de bouillon de légumes",
+        "200 ml de crème d'avoine cuisine",
+        "40g de noisettes entières",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Épluchez les panais et les poires. Coupez-les en dés. Émincez l'oignon.",
+        "Dans une casserole, faites chauffer l'huile d'olive et faites-y suer l'oignon pendant 3 minutes.",
+        "Ajoutez les dés de panais et de poires, puis versez le bouillon de légumes. Portez à ébullition, couvrez et laissez mijoter à feu doux pendant 20 minutes (les panais doivent être très tendres).",
+        "Pendant ce temps, faites torréfier les noisettes à sec dans une poêle pendant 3 minutes, puis concassez-les grossièrement.",
+        "Mixez le velouté finement avec la crème d'avoine, du sel et du poivre. Servez bien chaud en parsemant de noisettes croquantes."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 21/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600g de panais",
+            "2 poires bien mûres",
+            "1 oignon jaune",
+            "800 ml de bouillon de légumes",
+            "200 ml de crème d'avoine cuisine",
+            "40g de noisettes entières",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Épluchez les panais et les poires. Coupez-les en dés. Émincez l'oignon.",
+            "Dans une casserole, faites chauffer l'huile d'olive et faites-y suer l'oignon pendant 3 minutes.",
+            "Ajoutez les dés de panais et de poires, puis versez le bouillon de légumes. Portez à ébullition, couvrez et laissez mijoter à feu doux pendant 20 minutes (les panais doivent être très tendres).",
+            "Pendant ce temps, faites torréfier les noisettes à sec dans une poêle pendant 3 minutes, puis concassez-les grossièrement.",
+            "Mixez le velouté finement avec la crème d'avoine, du sel et du poivre. Servez bien chaud en parsemant de noisettes croquantes."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 21/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-022",
+      "name": "Bouillon Thaï au Lait de Coco, Shiitakés et Tofu Rôti",
+      "ingredients": [
+        "200g de champignons shiitakés (ou champignons de Paris brun)",
+        "250g de tofu ferme",
+        "400 ml de lait de coco",
+        "600 ml de bouillon de légumes",
+        "1 cuillère à soupe de pâte de curry rouge",
+        "2 cuillères à soupe de sauce soja",
+        "1 cuillère à soupe d'huile de sésame",
+        "100g de nouilles de riz",
+        "Le jus d'un demi-citron vert"
+      ],
+      "steps": [
+        "Coupez le tofu en cubes et les shiitakés en lamelles.",
+        "Dans une casserole, faites chauffer l'huile de sésame. Faites-y dorer les cubes de tofu pendant 5 minutes. Retirez-les et réservez-les.",
+        "Dans la même casserole, ajoutez la pâte de curry rouge et les shiitakés. Faites sauter 2 minutes.",
+        "Versez le bouillon de légumes, le lait de coco et la sauce soja. Portez à frémissement pendant 10 minutes.",
+        "Ajoutez les nouilles de riz directement dans le bouillon chaud et laissez- les cuire le temps indiqué sur le paquet (souvent 4-5 minutes).",
+        "Remettez le tofu, ajoutez le jus de citron vert et servez immédiatement dans de grands bols."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 22/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de champignons shiitakés (ou champignons de Paris brun)",
+            "250g de tofu ferme",
+            "400 ml de lait de coco",
+            "600 ml de bouillon de légumes",
+            "1 cuillère à soupe de pâte de curry rouge",
+            "2 cuillères à soupe de sauce soja",
+            "1 cuillère à soupe d'huile de sésame",
+            "100g de nouilles de riz",
+            "Le jus d'un demi-citron vert"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Coupez le tofu en cubes et les shiitakés en lamelles.",
+            "Dans une casserole, faites chauffer l'huile de sésame. Faites-y dorer les cubes de tofu pendant 5 minutes. Retirez-les et réservez-les.",
+            "Dans la même casserole, ajoutez la pâte de curry rouge et les shiitakés. Faites sauter 2 minutes.",
+            "Versez le bouillon de légumes, le lait de coco et la sauce soja. Portez à frémissement pendant 10 minutes.",
+            "Ajoutez les nouilles de riz directement dans le bouillon chaud et laissez- les cuire le temps indiqué sur le paquet (souvent 4-5 minutes).",
+            "Remettez le tofu, ajoutez le jus de citron vert et servez immédiatement dans de grands bols."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 22/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-023",
+      "name": "Polenta Crémeuse aux Champignons Poêlés au Persil",
+      "ingredients": [
+        "200g de polenta instantanée",
+        "800 ml d'eau (ou de bouillon de légumes)",
+        "400g de champignons mélangés (pleurotes, Paris, cèpes)",
+        "2 gousses d'ail",
+        "2 cuillères à soupe de margarine végétale",
+        "2 cuillères à soupe d'huile d'olive",
+        "Un petit bouquet de persil frais",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Nettoyez les champignons et coupez-les en morceaux. Hachez l'ail et le persil.",
+        "Dans une poêle, faites chauffer l'huile d'olive. Ajoutez les champignons et l'ail, et faites-les sauter à feu vif pendant 7 minutes jusqu'à ce qu'ils soient bien dorés. En fin de cuisson, salez, poivrez et ajoutez le persil. Réservez au chaud.",
+        "Dans une casserole, portez l'eau salée à ébullition. Versez la polenta en pluie tout en remuant vigoureusement à l'aide d'un fouet.",
+        "Laissez cuire à feu très doux pendant 3 à 5 minutes sans cesser de remuer (la polenta doit épaissir).",
+        "Hors du feu, incorporez la margarine végétale pour la rendre très crémeuse. Servez la polenta immédiatement dans les assiettes et déposez la poêlée de champignons par-dessus."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 23/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de polenta instantanée",
+            "800 ml d'eau (ou de bouillon de légumes)",
+            "400g de champignons mélangés (pleurotes, Paris, cèpes)",
+            "2 gousses d'ail",
+            "2 cuillères à soupe de margarine végétale",
+            "2 cuillères à soupe d'huile d'olive",
+            "Un petit bouquet de persil frais",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Nettoyez les champignons et coupez-les en morceaux. Hachez l'ail et le persil.",
+            "Dans une poêle, faites chauffer l'huile d'olive. Ajoutez les champignons et l'ail, et faites-les sauter à feu vif pendant 7 minutes jusqu'à ce qu'ils soient bien dorés. En fin de cuisson, salez, poivrez et ajoutez le persil. Réservez au chaud.",
+            "Dans une casserole, portez l'eau salée à ébullition. Versez la polenta en pluie tout en remuant vigoureusement à l'aide d'un fouet.",
+            "Laissez cuire à feu très doux pendant 3 à 5 minutes sans cesser de remuer (la polenta doit épaissir).",
+            "Hors du feu, incorporez la margarine végétale pour la rendre très crémeuse. Servez la polenta immédiatement dans les assiettes et déposez la poêlée de champignons par-dessus."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 23/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-024",
+      "name": "Mijoté de Patates Douces et Pois Chiches à la Marocaine",
+      "ingredients": [
+        "2 grosses patates douces",
+        "400g de pois chiches cuits (1 boîte)",
+        "400g de tomates concassées (1 boîte)",
+        "50g de raisins secs",
+        "1 oignon",
+        "1 cuillère à café de cannelle et 1 de cumin",
+        "300 ml de bouillon de légumes",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Épluchez les patates douces et coupez-les en gros cubes. Émincez l'oignon.",
+        "Dans une cocotte, faites chauffer l'huile d'olive. Faites-y revenir l'oignon avec le cumin et la cannelle pendant 3 minutes.",
+        "Ajoutez les cubes de patate douce, les pois chiches rincés et égouttés, ainsi que les raisins secs.",
+        "Versez les tomates concassées et le bouillon de légumes. Salez et poivrez.",
+        "Couvrez et laissez mijoter à feu doux pendant 25 minutes, jusqu'à ce que les patates douces soient fondantes et la sauce sirupeuse."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 24/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 grosses patates douces",
+            "400g de pois chiches cuits (1 boîte)",
+            "400g de tomates concassées (1 boîte)",
+            "50g de raisins secs",
+            "1 oignon",
+            "1 cuillère à café de cannelle et 1 de cumin",
+            "300 ml de bouillon de légumes",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Épluchez les patates douces et coupez-les en gros cubes. Émincez l'oignon.",
+            "Dans une cocotte, faites chauffer l'huile d'olive. Faites-y revenir l'oignon avec le cumin et la cannelle pendant 3 minutes.",
+            "Ajoutez les cubes de patate douce, les pois chiches rincés et égouttés, ainsi que les raisins secs.",
+            "Versez les tomates concassées et le bouillon de légumes. Salez et poivrez.",
+            "Couvrez et laissez mijoter à feu doux pendant 25 minutes, jusqu'à ce que les patates douces soient fondantes et la sauce sirupeuse."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 24/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-025",
+      "name": "Tarte Fine aux Poireaux et Moutarde à l'Ancienne",
+      "ingredients": [
+        "1 pâte feuilletée (prête à dérouler, vérifiez qu'elle soit végétale)",
+        "3 poireaux",
+        "2 cuillères à soupe de moutarde à l'ancienne",
+        "2 cuillères à soupe de crème de soja cuisine",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Préchauffez votre four à 200°C.",
+        "Lavez les poireaux et coupez-les en fines rondelles. Faites-les revenir dans une poêle avec l'huile d'olive pendant 12 à 15 minutes à feu doux pour les faire fondre. Salez et poivrez.",
+        "Dans un bol, mélangez la moutarde à l'ancienne et la crème de soja.",
+        "Déroulez la pâte feuilletée sur une plaque de cuisson. Piquez le fond avec une fourchette.",
+        "Étalez le mélange moutarde-crème sur la pâte en laissant un bord d'un centimètre, puis répartissez les poireaux fondus par-dessus.",
+        "Enfournez pour 20 à 25 minutes jusqu'à ce que les bords de la tarte soient bien dorés et croustillants."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 25/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 pâte feuilletée (prête à dérouler, vérifiez qu'elle soit végétale)",
+            "3 poireaux",
+            "2 cuillères à soupe de moutarde à l'ancienne",
+            "2 cuillères à soupe de crème de soja cuisine",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez votre four à 200°C.",
+            "Lavez les poireaux et coupez-les en fines rondelles. Faites-les revenir dans une poêle avec l'huile d'olive pendant 12 à 15 minutes à feu doux pour les faire fondre. Salez et poivrez.",
+            "Dans un bol, mélangez la moutarde à l'ancienne et la crème de soja.",
+            "Déroulez la pâte feuilletée sur une plaque de cuisson. Piquez le fond avec une fourchette.",
+            "Étalez le mélange moutarde-crème sur la pâte en laissant un bord d'un centimètre, puis répartissez les poireaux fondus par-dessus.",
+            "Enfournez pour 20 à 25 minutes jusqu'à ce que les bords de la tarte soient bien dorés et croustillants."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 25/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-026",
+      "name": "One Pot Pasta d'Automne (Courge, Épinards et Noix)",
+      "ingredients": [
+        "350g de pâtes (type Penne ou Fusilli)",
+        "300g de chair de butternut coupée en petits dés",
+        "100g d'épinards frais",
+        "1 oignon et 2 gousses d'ail émincés",
+        "900 ml de bouillon de légumes chaud",
+        "50g de cerneaux de noix concassés",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Dans une grande casserole ou une sauteuse, déposez dans l'ordre : les pâtes crues, les petits dés de butternut, l'oignon, l'ail et l'huile d'olive.",
+        "Versez le bouillon de légumes chaud par-dessus.",
+        "Portez à ébullition, puis baissez le feu et laissez cuire pendant environ 12 à 15 minutes à découvert en remuant très régulièrement. Le liquide doit être presque entièrement absorbé pour former une sauce.",
+        "Les 2 dernières minutes, intégrez les épinards frais pour qu'ils tombent.",
+        "Salez, poivrez et servez immédiatement parsemé de noix concassées."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 26/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "350g de pâtes (type Penne ou Fusilli)",
+            "300g de chair de butternut coupée en petits dés",
+            "100g d'épinards frais",
+            "1 oignon et 2 gousses d'ail émincés",
+            "900 ml de bouillon de légumes chaud",
+            "50g de cerneaux de noix concassés",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Dans une grande casserole ou une sauteuse, déposez dans l'ordre : les pâtes crues, les petits dés de butternut, l'oignon, l'ail et l'huile d'olive.",
+            "Versez le bouillon de légumes chaud par-dessus.",
+            "Portez à ébullition, puis baissez le feu et laissez cuire pendant environ 12 à 15 minutes à découvert en remuant très régulièrement. Le liquide doit être presque entièrement absorbé pour former une sauce.",
+            "Les 2 dernières minutes, intégrez les épinards frais pour qu'ils tombent.",
+            "Salez, poivrez et servez immédiatement parsemé de noix concassées."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 26/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-027",
+      "name": "Hachis Camarguais aux Lentilles Rouges et Riz Complet",
+      "ingredients": [
+        "150g de lentilles corail (ou rouges)",
+        "150g de riz complet",
+        "1 boîte (400g) de tomates concassées",
+        "1 oignon et 1 carotte",
+        "2 cuillères à soupe d'huile d'olive",
+        "1 cuillère à café d'herbes de Provence",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Faites cuire le riz complet dans une casserole d'eau bouillante salée en suivant les instructions du paquet (environ 30 minutes). Égouttez.",
+        "Pendant ce temps, coupez la carotte et l'oignon en tout petits dés. Faites-les revenir dans l'huile d'olive dans une casserole pendant 5 minutes.",
+        "Ajoutez les lentilles corail (rincées), les tomates concassées, les herbes de Provence et 300 ml d'eau.",
+        "Laissez mijoter à feu doux pendant 15 à 20 minutes jusqu'à ce que les lentilles soient cuites et aient absorbé le liquide. Salez et poivrez.",
+        "Mélangez le riz cuit avec la préparation aux lentilles et pressez le tout dans un plat pour servir chaud."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 27/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150g de lentilles corail (ou rouges)",
+            "150g de riz complet",
+            "1 boîte (400g) de tomates concassées",
+            "1 oignon et 1 carotte",
+            "2 cuillères à soupe d'huile d'olive",
+            "1 cuillère à café d'herbes de Provence",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Faites cuire le riz complet dans une casserole d'eau bouillante salée en suivant les instructions du paquet (environ 30 minutes). Égouttez.",
+            "Pendant ce temps, coupez la carotte et l'oignon en tout petits dés. Faites-les revenir dans l'huile d'olive dans une casserole pendant 5 minutes.",
+            "Ajoutez les lentilles corail (rincées), les tomates concassées, les herbes de Provence et 300 ml d'eau.",
+            "Laissez mijoter à feu doux pendant 15 à 20 minutes jusqu'à ce que les lentilles soient cuites et aient absorbé le liquide. Salez et poivrez.",
+            "Mélangez le riz cuit avec la préparation aux lentilles et pressez le tout dans un plat pour servir chaud."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 27/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-028",
+      "name": "Chou Rouge Mijoté aux Pommes et Vinaigre de Cidre",
+      "ingredients": [
+        "1/2 chou rouge",
+        "2 pommes",
+        "1 oignon",
+        "3 cuillères à soupe de vinaigre de cidre",
+        "1 cuillère à soupe de sirop d'érable (ou de sucre)",
+        "150 ml d'eau",
+        "1 cuillère à soupe d'huile d'olive",
+        "1 pincée de cannelle (optionnel), sel et poivre"
+      ],
+      "steps": [
+        "Émincez finement le chou rouge et l'oignon. Épluchez les pommes et coupez-les en cubes.",
+        "Dans une grande cocotte, faites chauffer l'huile d'olive et faites-y suer l'oignon pendant 3 minutes.",
+        "Ajoutez le chou rouge, les morceaux de pommes, le vinaigre de cidre, le sirop d'érable, la cannelle et l'eau.",
+        "Salez, poivrez et mélangez bien.",
+        "Couvrez la cocotte et laissez mijoter à feu très doux pendant 45 minutes en remuant de temps en temps. Le chou doit devenir extrêmement tendre et confit."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 28/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1/2 chou rouge",
+            "2 pommes",
+            "1 oignon",
+            "3 cuillères à soupe de vinaigre de cidre",
+            "1 cuillère à soupe de sirop d'érable (ou de sucre)",
+            "150 ml d'eau",
+            "1 cuillère à soupe d'huile d'olive",
+            "1 pincée de cannelle (optionnel), sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Émincez finement le chou rouge et l'oignon. Épluchez les pommes et coupez-les en cubes.",
+            "Dans une grande cocotte, faites chauffer l'huile d'olive et faites-y suer l'oignon pendant 3 minutes.",
+            "Ajoutez le chou rouge, les morceaux de pommes, le vinaigre de cidre, le sirop d'érable, la cannelle et l'eau.",
+            "Salez, poivrez et mélangez bien.",
+            "Couvrez la cocotte et laissez mijoter à feu très doux pendant 45 minutes en remuant de temps en temps. Le chou doit devenir extrêmement tendre et confit."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 28/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-029",
+      "name": "Gratin de Chou-Fleur à la Béchamel de Cajou",
+      "ingredients": [
+        "1 gros chou-fleur",
+        "100g de noix de cajou (trempées 1h dans de l'eau bouillante si vous n'avez pas un robot puissant)",
+        "250 ml d'eau ou de lait végétal non sucré",
+        "2 cuillères à soupe de levure maltée",
+        "1/2 cuillère à café d'ail en poudre",
+        "Sel, poivre et une pincée de noix de muscade"
+      ],
+      "steps": [
+        "Préchauffez votre four à 200°C. Coupez le chou-fleur en bouquets et faites-le cuire à la vapeur pendant 10 à 12 minutes (il doit rester légèrement ferme).",
+        "Pendant ce temps, préparez la béchamel : égouttez les noix de cajou. Mixez-les longuement dans un blender avec l'eau (ou le lait végétal), la levure maltée, l'ail en poudre, le sel, le poivre et la muscade jusqu'à",
+        "btenir une crème parfaitement lisse.",
+        "Disposez le chou-fleur cuit dans un plat à gratin.",
+        "Nappez généreusement le chou-fleur avec la béchamel de cajou.",
+        "Enfournez pour 15 à 20 minutes jusqu'à ce que le gratin soit joliment doré sur le dessus."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 29/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 gros chou-fleur",
+            "100g de noix de cajou (trempées 1h dans de l'eau bouillante si vous n'avez pas un robot puissant)",
+            "250 ml d'eau ou de lait végétal non sucré",
+            "2 cuillères à soupe de levure maltée",
+            "1/2 cuillère à café d'ail en poudre",
+            "Sel, poivre et une pincée de noix de muscade"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez votre four à 200°C. Coupez le chou-fleur en bouquets et faites-le cuire à la vapeur pendant 10 à 12 minutes (il doit rester légèrement ferme).",
+            "Pendant ce temps, préparez la béchamel : égouttez les noix de cajou. Mixez-les longuement dans un blender avec l'eau (ou le lait végétal), la levure maltée, l'ail en poudre, le sel, le poivre et la muscade jusqu'à",
+            "btenir une crème parfaitement lisse.",
+            "Disposez le chou-fleur cuit dans un plat à gratin.",
+            "Nappez généreusement le chou-fleur avec la béchamel de cajou.",
+            "Enfournez pour 15 à 20 minutes jusqu'à ce que le gratin soit joliment doré sur le dessus."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 29/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-030",
+      "name": "Salade de Quinoa Tiède au Potimarron Rôti et Pesto de Mâche",
+      "ingredients": [
+        "150g de quinoa",
+        "500g de potimarron (pesé sans les graines)",
+        "2 cuillères à soupe d'huile d'olive",
+        "Pour le pesto : 100g de mâche, 30g de graines de tournesol, 1 gousse d'ail, 4 cuillères à soupe d'huile d'olive, sel."
+      ],
+      "steps": [
+        "Préchauffez le four à 200°C. Lavez le potimarron (inutile de l'éplucher), coupez-le en petits cubes. Mélangez-les avec 1 cuillère à soupe d'huile d'olive, du sel et du poivre sur une plaque. Enfournez pour 20 minutes.",
+        "Faites cuire le quinoa dans une casserole avec deux fois son volume d'eau salée pendant 12 minutes. Égouttez et laissez tiédir.",
+        "Préparez le pesto : mixez ensemble la mâche lavée, les graines de tournesol, l'ail, l'huile d'olive et une pincée de sel jusqu'à obtenir une texture de sauce.",
+        "Dans un grand saladier, mélangez le quinoa tiède, les cubes de potimarron rôti et le pesto de mâche. Servez immédiatement."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 30/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150g de quinoa",
+            "500g de potimarron (pesé sans les graines)",
+            "2 cuillères à soupe d'huile d'olive",
+            "Pour le pesto : 100g de mâche, 30g de graines de tournesol, 1 gousse d'ail, 4 cuillères à soupe d'huile d'olive, sel."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez le four à 200°C. Lavez le potimarron (inutile de l'éplucher), coupez-le en petits cubes. Mélangez-les avec 1 cuillère à soupe d'huile d'olive, du sel et du poivre sur une plaque. Enfournez pour 20 minutes.",
+            "Faites cuire le quinoa dans une casserole avec deux fois son volume d'eau salée pendant 12 minutes. Égouttez et laissez tiédir.",
+            "Préparez le pesto : mixez ensemble la mâche lavée, les graines de tournesol, l'ail, l'huile d'olive et une pincée de sel jusqu'à obtenir une texture de sauce.",
+            "Dans un grand saladier, mélangez le quinoa tiède, les cubes de potimarron rôti et le pesto de mâche. Servez immédiatement."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 30/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-031",
+      "name": "Velouté de Carottes au Gingembre et Lait de Coco",
+      "ingredients": [
+        "800g de carottes",
+        "1 oignon",
+        "2 cm de gingembre frais",
+        "400 ml de lait de coco",
+        "500 ml de bouillon de légumes",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Épluchez les carottes et coupez-les en rondelles. Émincez l'oignon et râpez finement le gingembre.",
+        "Dans une casserole, faites chauffer l'huile d'olive. Faites revenir l'oignon et le gingembre râpé pendant 3 minutes à feu moyen.",
+        "Ajoutez les rondelles de carottes, puis versez le bouillon de légumes et le lait de coco.",
+        "Portez à ébullition, couvrez et laissez mijoter à feu doux pendant 25 minutes (les carottes doivent être très tendres).",
+        "Mixez le tout longuement au mixeur plongeant jusqu'à obtenir une texture parfaitement lisse et veloutée. Ajustez le sel et le poivre avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 31/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "800g de carottes",
+            "1 oignon",
+            "2 cm de gingembre frais",
+            "400 ml de lait de coco",
+            "500 ml de bouillon de légumes",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Épluchez les carottes et coupez-les en rondelles. Émincez l'oignon et râpez finement le gingembre.",
+            "Dans une casserole, faites chauffer l'huile d'olive. Faites revenir l'oignon et le gingembre râpé pendant 3 minutes à feu moyen.",
+            "Ajoutez les rondelles de carottes, puis versez le bouillon de légumes et le lait de coco.",
+            "Portez à ébullition, couvrez et laissez mijoter à feu doux pendant 25 minutes (les carottes doivent être très tendres).",
+            "Mixez le tout longuement au mixeur plongeant jusqu'à obtenir une texture parfaitement lisse et veloutée. Ajustez le sel et le poivre avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 31/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-032",
+      "name": "Bourguignon de Champignons et Seitan",
+      "ingredients": [
+        "400g de champignons de Paris (bruns de préférence)",
+        "250g de seitan (nature ou fumé)",
+        "2 carottes",
+        "1 oignon et 2 gousses d'ail",
+        "200 ml de vin rouge sec",
+        "400 ml de bouillon de légumes",
+        "2 cuillerées à soupe de farine de blé",
+        "1 cuillère à soupe de concentré de tomate",
+        "2 cuillerées à soupe d'huile d'olive",
+        "1 branche de thym et 1 feuille de laurier, sel, poivre"
+      ],
+      "steps": [
+        "Coupez le seitan en cubes. Coupez les carottes en rondelles, les champignons en deux ou en quatre selon leur taille, et émincez l'oignon et l'ail.",
+        "Dans une cocotte, faites chauffer l'huile d'olive. Faites-y dorer les cubes de seitan et les champignons pendant 5 minutes. Retirez-les de la cocotte et réservez-les.",
+        "Dans la même cocotte, ajoutez l'oignon, l'ail et les carottes. Faites-les revenir pendant 5 minutes. Saupoudrez de farine et remuez bien pendant 1 minute.",
+        "Versez le vin rouge pour déglacer en grattant le fond de la cocotte, puis ajoutez le bouillon de légumes, le concentré de tomate, le thym et le laurier.",
+        "Remettez le seitan et les champignons. Couvrez et laissez mijoter à feu doux pendant 30 minutes jusqu'à ce que la sauce soit bien nappante et épaisse."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 32/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de champignons de Paris (bruns de préférence)",
+            "250g de seitan (nature ou fumé)",
+            "2 carottes",
+            "1 oignon et 2 gousses d'ail",
+            "200 ml de vin rouge sec",
+            "400 ml de bouillon de légumes",
+            "2 cuillerées à soupe de farine de blé",
+            "1 cuillère à soupe de concentré de tomate",
+            "2 cuillerées à soupe d'huile d'olive",
+            "1 branche de thym et 1 feuille de laurier, sel, poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Coupez le seitan en cubes. Coupez les carottes en rondelles, les champignons en deux ou en quatre selon leur taille, et émincez l'oignon et l'ail.",
+            "Dans une cocotte, faites chauffer l'huile d'olive. Faites-y dorer les cubes de seitan et les champignons pendant 5 minutes. Retirez-les de la cocotte et réservez-les.",
+            "Dans la même cocotte, ajoutez l'oignon, l'ail et les carottes. Faites-les revenir pendant 5 minutes. Saupoudrez de farine et remuez bien pendant 1 minute.",
+            "Versez le vin rouge pour déglacer en grattant le fond de la cocotte, puis ajoutez le bouillon de légumes, le concentré de tomate, le thym et le laurier.",
+            "Remettez le seitan et les champignons. Couvrez et laissez mijoter à feu doux pendant 30 minutes jusqu'à ce que la sauce soit bien nappante et épaisse."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 32/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-033",
+      "name": "Galettes de Pommes de Terre et Panais (Röstis)",
+      "ingredients": [
+        "400g de pommes de terre (variété à chair farineuse)",
+        "400g de panais",
+        "1 oignon jaune",
+        "3 cuillères à soupe de fécule de maïs (Maïzena)",
+        "3 cuillères à soupe d'huile de cuisson",
+        "Sel, poivre et une pincée de noix de muscade"
+      ],
+      "steps": [
+        "Épluchez les pommes de terre, les panais et l'oignon.",
+        "Râpez-les grossièrement à l'aide d'une râpe à fromage ou d'un robot. Placez les légumes râpés dans un torchon propre et pressez-les très fort au-dessus de l'évier pour extraire le maximum de jus.",
+        "Dans un grand saladier, mélangez les légumes râpés pressés avec la fécule de maïs, le sel, le poivre et la muscade.",
+        "Faites chauffer l'huile dans une grande poêle. Formez de petites galettes plates avec vos mains et déposez-les délicatement dans l'huile chaude.",
+        "Faites-les cuire à feu moyen pendant 6 à 8 minutes de chaque côté. Elles doivent être bien dorées et croustillantes. Égouttez sur du papier absorbant avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 33/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de pommes de terre (variété à chair farineuse)",
+            "400g de panais",
+            "1 oignon jaune",
+            "3 cuillères à soupe de fécule de maïs (Maïzena)",
+            "3 cuillères à soupe d'huile de cuisson",
+            "Sel, poivre et une pincée de noix de muscade"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Épluchez les pommes de terre, les panais et l'oignon.",
+            "Râpez-les grossièrement à l'aide d'une râpe à fromage ou d'un robot. Placez les légumes râpés dans un torchon propre et pressez-les très fort au-dessus de l'évier pour extraire le maximum de jus.",
+            "Dans un grand saladier, mélangez les légumes râpés pressés avec la fécule de maïs, le sel, le poivre et la muscade.",
+            "Faites chauffer l'huile dans une grande poêle. Formez de petites galettes plates avec vos mains et déposez-les délicatement dans l'huile chaude.",
+            "Faites-les cuire à feu moyen pendant 6 à 8 minutes de chaque côté. Elles doivent être bien dorées et croustillantes. Égouttez sur du papier absorbant avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 33/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-034",
+      "name": "Curry Vert de Tofu, Brocoli et Pois Gourmands",
+      "ingredients": [
+        "400g de tofu ferme",
+        "1 tête de brocoli",
+        "150g de pois gourmands (ou haricots plats)",
+        "400 ml de lait de coco",
+        "1 cuillère à soupe de pâte de curry vert (ajustez selon votre tolérance au piment)",
+        "1 cuillère à soupe de sauce soja",
+        "1 cuillère à soupe d'huile de coco (ou d'olive)",
+        "Le jus d'un demi-citron vert"
+      ],
+      "steps": [
+        "Coupez le tofu en cubes. Séparez le brocoli en petits bouquets (lavez- les). Équeutez les pois gourmands.",
+        "Dans une sauteuse ou un wok, faites chauffer l'huile. Faites-y revenir la pâte de curry vert pendant 1 minute pour développer ses parfums.",
+        "Ajoutez les cubes de tofu et faites-les sauter 3 minutes pour qu'ils s'imprègnent du curry.",
+        "Versez le lait de coco et la sauce soja. Ajoutez les bouquets de brocoli. Couvrez et laissez mijoter pendant 8 minutes.",
+        "Ajoutez les pois gourmands et poursuivez la cuisson à découvert pendant 4 minutes (les légumes doivent rester légèrement croquants). Arrosez de jus de citron vert juste avant de servir avec du riz thaï."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 34/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de tofu ferme",
+            "1 tête de brocoli",
+            "150g de pois gourmands (ou haricots plats)",
+            "400 ml de lait de coco",
+            "1 cuillère à soupe de pâte de curry vert (ajustez selon votre tolérance au piment)",
+            "1 cuillère à soupe de sauce soja",
+            "1 cuillère à soupe d'huile de coco (ou d'olive)",
+            "Le jus d'un demi-citron vert"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Coupez le tofu en cubes. Séparez le brocoli en petits bouquets (lavez- les). Équeutez les pois gourmands.",
+            "Dans une sauteuse ou un wok, faites chauffer l'huile. Faites-y revenir la pâte de curry vert pendant 1 minute pour développer ses parfums.",
+            "Ajoutez les cubes de tofu et faites-les sauter 3 minutes pour qu'ils s'imprègnent du curry.",
+            "Versez le lait de coco et la sauce soja. Ajoutez les bouquets de brocoli. Couvrez et laissez mijoter pendant 8 minutes.",
+            "Ajoutez les pois gourmands et poursuivez la cuisson à découvert pendant 4 minutes (les légumes doivent rester légèrement croquants). Arrosez de jus de citron vert juste avant de servir avec du riz thaï."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 34/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-035",
+      "name": "Soupe de Pois Cassés aux Croûtons Aillés",
+      "ingredients": [
+        "250g de pois cassés",
+        "1 carotte",
+        "1 oignon et 1 branche de céleri",
+        "1,2 litre de bouillon de légumes",
+        "1 cuillère à soupe d'huile d'olive",
+        "1 feuille de laurier",
+        "Pour les croûtons : 2 tranches de pain rassis, 1 gousse d'ail, 1 cuillère à soupe d'huile d'olive."
+      ],
+      "steps": [
+        "Rincez les pois cassés. Émincez l'oignon, coupez la carotte et le céleri en petits dés.",
+        "Dans une grande marmite, faites chauffer l'huile d'olive et faites-y suer l'oignon, la carotte et le céleri pendant 5 minutes.",
+        "Ajoutez les pois cassés, le bouillon de légumes et la feuille de laurier. Portez à ébullition, puis baissez le feu.",
+        "Laissez mijoter à feu doux et à couvert pendant 45 à 50 minutes, jusqu'à ce que les pois cassés soient complètement écrasés et fondants. Retirez le laurier et mixez la soupe (ajoutez un peu d'eau si elle est trop épaisse). Salez et poivrez.",
+        "Préparez les croûtons : coupez le pain en dés. Faites-les dorer dans une poêle avec l'huile d'olive et la gousse d'ail écrasée pendant 3 minutes. Servez la soupe bien chaude avec les croûtons croustillants sur le dessus."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 35/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "250g de pois cassés",
+            "1 carotte",
+            "1 oignon et 1 branche de céleri",
+            "1,2 litre de bouillon de légumes",
+            "1 cuillère à soupe d'huile d'olive",
+            "1 feuille de laurier",
+            "Pour les croûtons : 2 tranches de pain rassis, 1 gousse d'ail, 1 cuillère à soupe d'huile d'olive."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Rincez les pois cassés. Émincez l'oignon, coupez la carotte et le céleri en petits dés.",
+            "Dans une grande marmite, faites chauffer l'huile d'olive et faites-y suer l'oignon, la carotte et le céleri pendant 5 minutes.",
+            "Ajoutez les pois cassés, le bouillon de légumes et la feuille de laurier. Portez à ébullition, puis baissez le feu.",
+            "Laissez mijoter à feu doux et à couvert pendant 45 à 50 minutes, jusqu'à ce que les pois cassés soient complètement écrasés et fondants. Retirez le laurier et mixez la soupe (ajoutez un peu d'eau si elle est trop épaisse). Salez et poivrez.",
+            "Préparez les croûtons : coupez le pain en dés. Faites-les dorer dans une poêle avec l'huile d'olive et la gousse d'ail écrasée pendant 3 minutes. Servez la soupe bien chaude avec les croûtons croustillants sur le dessus."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 35/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-036",
+      "name": "Pâtes au Pesto d'Hiver (Chou Kale et Graines de Courge)",
+      "ingredients": [
+        "400g de pâtes au choix (Spaghetti, Trofie...)",
+        "4 grandes feuilles de chou kale (sans la tige centrale)",
+        "50g de graines de courge",
+        "1 gousse d'ail",
+        "2 cuillères à soupe de levure maltée",
+        "6 cuillères à soupe d'huile d'olive",
+        "Sel et poivre noir"
+      ],
+      "steps": [
+        "Faites cuire vos pâtes dans un grand volume d'eau bouillante salée en suivant les instructions du paquet.",
+        "Pendant ce temps, préparez le pesto : faites torréfier les graines de courge à sec dans une poêle pendant 2 minutes.",
+        "Dans un mixeur, placez les feuilles de chou kale lavées et grossièrement coupées, les graines de courge torréfiées, l'ail, la levure maltée, l'huile d'olive et une bonne pincée de sel. Mixez par impulsions jusqu'à obtenir une texture granuleuse et homogène (ajoutez un filet d'eau si nécessaire).",
+        "Égouttez les pâtes en réservant une petite louche d'eau de cuisson.",
+        "Mélangez immédiatement les pâtes chaudes avec le pesto de kale et un peu d'eau de cuisson pour détendre la sauce. Poivrez généreusement et servez."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 36/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de pâtes au choix (Spaghetti, Trofie...)",
+            "4 grandes feuilles de chou kale (sans la tige centrale)",
+            "50g de graines de courge",
+            "1 gousse d'ail",
+            "2 cuillères à soupe de levure maltée",
+            "6 cuillères à soupe d'huile d'olive",
+            "Sel et poivre noir"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Faites cuire vos pâtes dans un grand volume d'eau bouillante salée en suivant les instructions du paquet.",
+            "Pendant ce temps, préparez le pesto : faites torréfier les graines de courge à sec dans une poêle pendant 2 minutes.",
+            "Dans un mixeur, placez les feuilles de chou kale lavées et grossièrement coupées, les graines de courge torréfiées, l'ail, la levure maltée, l'huile d'olive et une bonne pincée de sel. Mixez par impulsions jusqu'à obtenir une texture granuleuse et homogène (ajoutez un filet d'eau si nécessaire).",
+            "Égouttez les pâtes en réservant une petite louche d'eau de cuisson.",
+            "Mélangez immédiatement les pâtes chaudes avec le pesto de kale et un peu d'eau de cuisson pour détendre la sauce. Poivrez généreusement et servez."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 36/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-037",
+      "name": "Courges Délicata Rôties au Four et Épices Douces",
+      "ingredients": [
+        "3 courges Délicata (ou à défaut, des petites courges Sweet Dumpling)",
+        "2 cuillères à soupe d'huile d'olive",
+        "1 cuillère à café de paprika doux",
+        "1/2 cuillère à café de poudre d'oignon",
+        "1 cuillère à soupe de sirop d'érable",
+        "Fleur de sel et poivre noir"
+      ],
+      "steps": [
+        "Préchauffez votre four à 200°C.",
+        "Lavez soigneusement les courges Délicata. Coupez les extrémités, puis coupez-les en deux dans le sens de la longueur. À l'aide d'une cuillère, retirez les graines.",
+        "Coupez les courges en tranches (en forme de demi-lunes) d'environ 1,5 cm d'épaisseur.",
+        "Dans un grand saladier, mélangez les tranches de courge avec l'huile d'olive, le paprika, la poudre d'oignon, le sirop d'érable, le sel et le poivre.",
+        "Étalez les tranches sur une plaque de cuisson recouverte de papier sulfurisé en évitant qu'elles ne se chevauchent. Enfournez pour 20 à 25 minutes (en les retournant à mi-cuisson) jusqu'à ce qu'elles soient tendres et caramélisées."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 37/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "3 courges Délicata (ou à défaut, des petites courges Sweet Dumpling)",
+            "2 cuillères à soupe d'huile d'olive",
+            "1 cuillère à café de paprika doux",
+            "1/2 cuillère à café de poudre d'oignon",
+            "1 cuillère à soupe de sirop d'érable",
+            "Fleur de sel et poivre noir"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez votre four à 200°C.",
+            "Lavez soigneusement les courges Délicata. Coupez les extrémités, puis coupez-les en deux dans le sens de la longueur. À l'aide d'une cuillère, retirez les graines.",
+            "Coupez les courges en tranches (en forme de demi-lunes) d'environ 1,5 cm d'épaisseur.",
+            "Dans un grand saladier, mélangez les tranches de courge avec l'huile d'olive, le paprika, la poudre d'oignon, le sirop d'érable, le sel et le poivre.",
+            "Étalez les tranches sur une plaque de cuisson recouverte de papier sulfurisé en évitant qu'elles ne se chevauchent. Enfournez pour 20 à 25 minutes (en les retournant à mi-cuisson) jusqu'à ce qu'elles soient tendres et caramélisées."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 37/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-038",
+      "name": "Casserole d'Haricots Blancs à la Tomate et à la Sauge",
+      "ingredients": [
+        "800g de haricots blancs cuits (2 boîtes)",
+        "400g de pulpe de tomates en dés",
+        "2 gousses d'ail",
+        "8-10 feuilles de sauge fraîche",
+        "2 cuillères à soupe d'huile d'olive",
+        "100 ml de bouillon de légumes",
+        "Sel et poivre noir du moulin"
+      ],
+      "steps": [
+        "Pelez et émincez finement les gousses d'ail. Rincez et égouttez les haricots blancs.",
+        "Dans une sauteuse, faites chauffer l'huile d'olive à feu moyen. Ajoutez l'ail et les feuilles de sauge entière. Faites-les frire doucement pendant 2 minutes sans laisser brûler l'ail.",
+        "Ajoutez la pulpe de tomates et le bouillon de légumes. Laissez frémir pendant 5 minutes.",
+        "Intégrez les haricots blancs. Salez et poivrez.",
+        "Baissez le feu au minimum, couvrez et laissez mijoter doucement pendant 15 à 20 minutes pour que les haricots s'imprègnent des parfums de la sauge. Servez chaud avec des tranches de pain grillé."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 38/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "800g de haricots blancs cuits (2 boîtes)",
+            "400g de pulpe de tomates en dés",
+            "2 gousses d'ail",
+            "8-10 feuilles de sauge fraîche",
+            "2 cuillères à soupe d'huile d'olive",
+            "100 ml de bouillon de légumes",
+            "Sel et poivre noir du moulin"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Pelez et émincez finement les gousses d'ail. Rincez et égouttez les haricots blancs.",
+            "Dans une sauteuse, faites chauffer l'huile d'olive à feu moyen. Ajoutez l'ail et les feuilles de sauge entière. Faites-les frire doucement pendant 2 minutes sans laisser brûler l'ail.",
+            "Ajoutez la pulpe de tomates et le bouillon de légumes. Laissez frémir pendant 5 minutes.",
+            "Intégrez les haricots blancs. Salez et poivrez.",
+            "Baissez le feu au minimum, couvrez et laissez mijoter doucement pendant 15 à 20 minutes pour que les haricots s'imprègnent des parfums de la sauge. Servez chaud avec des tranches de pain grillé."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 38/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-039",
+      "name": "Tatin de Navets Caramélisés au Vinaigre Balsamique",
+      "ingredients": [
+        "600g de navets (variété boule d'or ou navets violets)",
+        "1 pâte brisée (végétale)",
+        "2 cuillères à soupe de vinaigre balsamique",
+        "2 cuillères à soupe de sirop d'agave ou d'érable",
+        "1 cuillère à soupe de margarine végétale",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Préchauffez votre four à 190°C. Épluchez les navets et coupez-les en tranches d'un centimètre d'épaisseur.",
+        "Dans une poêle pouvant aller au four (ou une poêle classique avant transfert), faites fondre la margarine avec le sirop d'agave et le vinaigre balsamique.",
+        "Disposez les tranches de navets dans la poêle et laissez-les cuire à feu moyen pendant 10 minutes en les retournant à mi-parcours pour les caraméliser. Salez et poivrez.",
+        "Si votre poêle ne va pas au four, disposez harmonieusement les navets et leur caramel au fond d'un moule à manqué.",
+        "Déroulez la pâte brisée par-dessus les navets en rentrant bien les bords de la pâte vers l'intérieur du moule. Piquez la pâte avec une fourchette.",
+        "Enfournez pour 25 à 30 minutes. Laissez tiédir 5 minutes avant de démouler délicatement en renversant la tatin sur un grand plat."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 39/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600g de navets (variété boule d'or ou navets violets)",
+            "1 pâte brisée (végétale)",
+            "2 cuillères à soupe de vinaigre balsamique",
+            "2 cuillères à soupe de sirop d'agave ou d'érable",
+            "1 cuillère à soupe de margarine végétale",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez votre four à 190°C. Épluchez les navets et coupez-les en tranches d'un centimètre d'épaisseur.",
+            "Dans une poêle pouvant aller au four (ou une poêle classique avant transfert), faites fondre la margarine avec le sirop d'agave et le vinaigre balsamique.",
+            "Disposez les tranches de navets dans la poêle et laissez-les cuire à feu moyen pendant 10 minutes en les retournant à mi-parcours pour les caraméliser. Salez et poivrez.",
+            "Si votre poêle ne va pas au four, disposez harmonieusement les navets et leur caramel au fond d'un moule à manqué.",
+            "Déroulez la pâte brisée par-dessus les navets en rentrant bien les bords de la pâte vers l'intérieur du moule. Piquez la pâte avec une fourchette.",
+            "Enfournez pour 25 à 30 minutes. Laissez tiédir 5 minutes avant de démouler délicatement en renversant la tatin sur un grand plat."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 39/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-040",
+      "name": "Taboulé d'Hiver au Chou-Fleur Râpé, Grenade et Pignons",
+      "ingredients": [
+        "1/2 chou-fleur cru",
+        "1/2 grenade (les grains)",
+        "40g de pignons de pin",
+        "Un petit bouquet de persil plat et de menthe",
+        "Pour l'assaisonnement : 3 cuillères à soupe d'huile d'olive, 2 cuillères à soupe de jus de citron, sel et poivre."
+      ],
+      "steps": [
+        "Lavez les bouquets de chou-fleur et séchez-les bien. Râpez-les à l'aide d'une râpe fine ou mixez-les brièvement au robot pour obtenir une texture de semoule de couscous. Placez dans un saladier.",
+        "Faites griller les pignons de pin à sec dans une poêle pendant 2 minutes jusqu'à ce qu'ils soient dorés.",
+        "Hachez finement le persil et la menthe. Récupérez les grains de la grenade.",
+        "Ajoutez les herbes hachées, les grains de grenade et les pignons au chou-fleur râpé.",
+        "Arrosez avec l'huile d'olive et le jus de citron. Salez, poivrez et mélangez bien. Laissez reposer 15 minutes au frais avant de déguster."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 40/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1/2 chou-fleur cru",
+            "1/2 grenade (les grains)",
+            "40g de pignons de pin",
+            "Un petit bouquet de persil plat et de menthe",
+            "Pour l'assaisonnement : 3 cuillères à soupe d'huile d'olive, 2 cuillères à soupe de jus de citron, sel et poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Lavez les bouquets de chou-fleur et séchez-les bien. Râpez-les à l'aide d'une râpe fine ou mixez-les brièvement au robot pour obtenir une texture de semoule de couscous. Placez dans un saladier.",
+            "Faites griller les pignons de pin à sec dans une poêle pendant 2 minutes jusqu'à ce qu'ils soient dorés.",
+            "Hachez finement le persil et la menthe. Récupérez les grains de la grenade.",
+            "Ajoutez les herbes hachées, les grains de grenade et les pignons au chou-fleur râpé.",
+            "Arrosez avec l'huile d'olive et le jus de citron. Salez, poivrez et mélangez bien. Laissez reposer 15 minutes au frais avant de déguster."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 40/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-041",
+      "name": "Velouté de Topinambours aux Éclats de Châtaignes",
+      "ingredients": [
+        "800g de topinambours",
+        "1 pomme de terre",
+        "1 oignon",
+        "800 ml de bouillon de légumes",
+        "150 ml de crème de soja cuisine",
+        "4 châtaignes cuites (pour le service)",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Épluchez soigneusement les topinambours et la pomme de terre (le topinambour a une forme irrégulière, prenez votre temps). Coupez-les en cubes. Émincez l'oignon.",
+        "Dans une casserole, faites chauffer l'huile d'olive. Faites suer l'oignon pendant 3 minutes.",
+        "Ajoutez les cubes de topinambours et de pomme de terre. Versez le bouillon de légumes.",
+        "Portez à ébullition, puis couvrez et laissez mijoter à feu doux pendant 25 minutes jusqu'à ce que les légumes soient très tendres.",
+        "Mixez finement avec la crème végétale, le sel et le poivre. Servez dans des bols en émiettant les châtaignes cuites sur le dessus."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 41/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "800g de topinambours",
+            "1 pomme de terre",
+            "1 oignon",
+            "800 ml de bouillon de légumes",
+            "150 ml de crème de soja cuisine",
+            "4 châtaignes cuites (pour le service)",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Épluchez soigneusement les topinambours et la pomme de terre (le topinambour a une forme irrégulière, prenez votre temps). Coupez-les en cubes. Émincez l'oignon.",
+            "Dans une casserole, faites chauffer l'huile d'olive. Faites suer l'oignon pendant 3 minutes.",
+            "Ajoutez les cubes de topinambours et de pomme de terre. Versez le bouillon de légumes.",
+            "Portez à ébullition, puis couvrez et laissez mijoter à feu doux pendant 25 minutes jusqu'à ce que les légumes soient très tendres.",
+            "Mixez finement avec la crème végétale, le sel et le poivre. Servez dans des bols en émiettant les châtaignes cuites sur le dessus."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 41/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-042",
+      "name": "Shepherd’s Pie au Haché de Protéines de Soja et Purée de Céleri-Rave",
+      "ingredients": [
+        "100g de protéines de soja texturées (PST) fines",
+        "1 oignon et 2 gousses d'ail",
+        "1 boîte (400g) de tomates concassées",
+        "1 cuillère à soupe de sauce soja (Tamari)",
+        "1 gros céleri-rave (environ 800g)",
+        "100 ml de lait d'avoine (non sucré)",
+        "2 cuillères à soupe d'huile d'olive",
+        "Sel, poivre et noix de muscade"
+      ],
+      "steps": [
+        "Réhydratez les PST dans un bol d'eau bouillante pendant 10 minutes, puis égouttez-les bien en les pressant.",
+        "Épluchez le céleri-rave, coupez-le en cubes et faites-le cuire à la vapeur ou à l'eau pendant 20 minutes. Écrasez-le en purée avec le lait d'avoine, du sel, du poivre et de la muscade.",
+        "Dans une poêle, faites revenir l'oignon et l'ail émincés dans l'huile d'olive pendant 3 minutes. Ajoutez les PST égouttées et faites-les dorer 5 minutes.",
+        "Ajoutez la sauce soja et les tomates concassées. Laissez mijoter à feu doux pendant 10 minutes pour épaissir la sauce.",
+        "Préchauffez le four à 200°C. Dans un plat à gratin, versez la sauce aux PST puis recouvrez uniformément avec la purée de céleri-rave. Enfournez pour 20 minutes jusqu'à ce que le dessus soit gratiné."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 42/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100g de protéines de soja texturées (PST) fines",
+            "1 oignon et 2 gousses d'ail",
+            "1 boîte (400g) de tomates concassées",
+            "1 cuillère à soupe de sauce soja (Tamari)",
+            "1 gros céleri-rave (environ 800g)",
+            "100 ml de lait d'avoine (non sucré)",
+            "2 cuillères à soupe d'huile d'olive",
+            "Sel, poivre et noix de muscade"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Réhydratez les PST dans un bol d'eau bouillante pendant 10 minutes, puis égouttez-les bien en les pressant.",
+            "Épluchez le céleri-rave, coupez-le en cubes et faites-le cuire à la vapeur ou à l'eau pendant 20 minutes. Écrasez-le en purée avec le lait d'avoine, du sel, du poivre et de la muscade.",
+            "Dans une poêle, faites revenir l'oignon et l'ail émincés dans l'huile d'olive pendant 3 minutes. Ajoutez les PST égouttées et faites-les dorer 5 minutes.",
+            "Ajoutez la sauce soja et les tomates concassées. Laissez mijoter à feu doux pendant 10 minutes pour épaissir la sauce.",
+            "Préchauffez le four à 200°C. Dans un plat à gratin, versez la sauce aux PST puis recouvrez uniformément avec la purée de céleri-rave. Enfournez pour 20 minutes jusqu'à ce que le dessus soit gratiné."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 42/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-043",
+      "name": "Sarrasin Grillé (Kasha) aux Légumes Racines Rôtis",
+      "ingredients": [
+        "200g de sarrasin grillé (kasha)",
+        "2 carottes",
+        "2 panais",
+        "1/2 courge butternut",
+        "3 cuillères à soupe d'huile d'olive",
+        "1 cuillère à café d'herbes de Provence",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Préchauffez votre four à 200°C. Épluchez les carottes, les panais et la butternut, puis coupez-les en cubes réguliers d'environ 2 cm.",
+        "Mélangez les légumes dans un saladier avec l'huile d'olive, les herbes de Provence, du sel et du poivre. Étalez-les sur une plaque de cuisson et enfournez pour 25 à 30 minutes jusqu'à ce qu'ils soient tendres et dorés.",
+        "Pendant ce temps, faites cuire le kasha dans deux fois son volume d'eau bouillante salée pendant 10 minutes à feu doux et à couvert. L'eau doit être entièrement absorbée.",
+        "Mélangez délicatement le sarrasin cuit avec les légumes racines rôtis directement sur la plaque ou dans un grand plat de service. Servez chaud."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 43/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de sarrasin grillé (kasha)",
+            "2 carottes",
+            "2 panais",
+            "1/2 courge butternut",
+            "3 cuillères à soupe d'huile d'olive",
+            "1 cuillère à café d'herbes de Provence",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Préchauffez votre four à 200°C. Épluchez les carottes, les panais et la butternut, puis coupez-les en cubes réguliers d'environ 2 cm.",
+            "Mélangez les légumes dans un saladier avec l'huile d'olive, les herbes de Provence, du sel et du poivre. Étalez-les sur une plaque de cuisson et enfournez pour 25 à 30 minutes jusqu'à ce qu'ils soient tendres et dorés.",
+            "Pendant ce temps, faites cuire le kasha dans deux fois son volume d'eau bouillante salée pendant 10 minutes à feu doux et à couvert. L'eau doit être entièrement absorbée.",
+            "Mélangez délicatement le sarrasin cuit avec les légumes racines rôtis directement sur la plaque ou dans un grand plat de service. Servez chaud."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 43/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-044",
+      "name": "Curry de Courge Butternut aux Lentilles Vertes",
+      "ingredients": [
+        "1/2 courge butternut (environ 500g)",
+        "150g de lentilles vertes",
+        "400 ml de lait de coco",
+        "1 oignon et 2 gousses d'ail",
+        "1 cuillère à soupe de curry en poudre",
+        "500 ml de bouillon de légumes",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Épluchez la butternut et coupez-la en cubes. Émincez l'oignon et l'ail.",
+        "Dans une grande casserole, faites chauffer l'huile d'olive. Faites revenir l'oignon, l'ail et le curry pendant 2 minutes.",
+        "Ajoutez les cubes de butternut et les lentilles vertes préalablement rincées.",
+        "Versez le bouillon de légumes et le lait de coco. Salez et poivrez.",
+        "Portez à frémissement, puis baissez le feu. Laissez mijoter à couvert pendant 30 minutes à feu doux en remuant de temps en temps. Les lentilles et la courge doivent être parfaitement tendres."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 44/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1/2 courge butternut (environ 500g)",
+            "150g de lentilles vertes",
+            "400 ml de lait de coco",
+            "1 oignon et 2 gousses d'ail",
+            "1 cuillère à soupe de curry en poudre",
+            "500 ml de bouillon de légumes",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Épluchez la butternut et coupez-la en cubes. Émincez l'oignon et l'ail.",
+            "Dans une grande casserole, faites chauffer l'huile d'olive. Faites revenir l'oignon, l'ail et le curry pendant 2 minutes.",
+            "Ajoutez les cubes de butternut et les lentilles vertes préalablement rincées.",
+            "Versez le bouillon de légumes et le lait de coco. Salez et poivrez.",
+            "Portez à frémissement, puis baissez le feu. Laissez mijoter à couvert pendant 30 minutes à feu doux en remuant de temps en temps. Les lentilles et la courge doivent être parfaitement tendres."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 44/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-045",
+      "name": "Frittata Végétale aux Épinards et à la Farine de Pois",
+      "ingredients": [
+        "150g de farine de pois chiches",
+        "300 ml d'eau tiède",
+        "200g d'épinards frais",
+        "1 oignon",
+        "2 cuillères à soupe de levure maltée (optionnel, pour le goût)",
+        "2 cuillères à soupe d'huile d'olive",
+        "1/2 cuillère à café de curcuma (pour la couleur jaune), sel et poivre"
+      ],
+      "steps": [
+        "Dans un grand saladier, fouettez la farine de pois chiches, l'eau tiède, le curcuma, la levure maltée, du sel et du poivre jusqu'à obtenir une pâte lisse sans grumeaux. Laissez reposer 10 minutes.",
+        "Pendant ce temps, émincez l'oignon. Dans une poêle antiadhésive (allant idéalement au four), faites chauffer 1 cuillère à soupe d'huile d'olive et faites-y suer l'oignon pendant 3 minutes. Ajoutez les épinards et laissez-les réduire pendant 2 minutes.",
+        "Versez la préparation de pois chiches directement dans la poêle sur les épinards. Mélangez rapidement pour répartir les légumes.",
+        "Laissez cuire à feu doux pendant 8 minutes sans toucher. Le dessous doit être pris.",
+        "Retournez la frittata à l'aide d'une grande assiette (ou passez la poêle sous le gril du four pendant 5 minutes si elle est adaptée) pour cuire l'autre face pendant 4 minutes. Servez chaud ou tiède."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 45/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150g de farine de pois chiches",
+            "300 ml d'eau tiède",
+            "200g d'épinards frais",
+            "1 oignon",
+            "2 cuillères à soupe de levure maltée (optionnel, pour le goût)",
+            "2 cuillères à soupe d'huile d'olive",
+            "1/2 cuillère à café de curcuma (pour la couleur jaune), sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Dans un grand saladier, fouettez la farine de pois chiches, l'eau tiède, le curcuma, la levure maltée, du sel et du poivre jusqu'à obtenir une pâte lisse sans grumeaux. Laissez reposer 10 minutes.",
+            "Pendant ce temps, émincez l'oignon. Dans une poêle antiadhésive (allant idéalement au four), faites chauffer 1 cuillère à soupe d'huile d'olive et faites-y suer l'oignon pendant 3 minutes. Ajoutez les épinards et laissez-les réduire pendant 2 minutes.",
+            "Versez la préparation de pois chiches directement dans la poêle sur les épinards. Mélangez rapidement pour répartir les légumes.",
+            "Laissez cuire à feu doux pendant 8 minutes sans toucher. Le dessous doit être pris.",
+            "Retournez la frittata à l'aide d'une grande assiette (ou passez la poêle sous le gril du four pendant 5 minutes si elle est adaptée) pour cuire l'autre face pendant 4 minutes. Servez chaud ou tiède."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 45/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-046",
+      "name": "Pâtes au Ragoût de Lentilles Brunes (Style Bolognaise)",
+      "ingredients": [
+        "400g de pâtes (Spaghetti ou Rigatoni)",
+        "1 boîte (400g) de lentilles brunes cuites (ou vertes)",
+        "1 boîte (400g) de tomates concassées",
+        "1 carotte et 1 branche de céleri",
+        "1 oignon et 2 gousses d'ail",
+        "1 cuillère à soupe d'herbes de Provence",
+        "2 cuillères à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Hachez très finement l'oignon, l'ail, la carotte et le céleri (façon brunoise).",
+        "Dans une casserole, faites chauffer l'huile d'olive. Faites-y revenir le mélange de légumes hachés pendant 7 minutes à feu moyen jusqu'à ce qu'ils soient tendres.",
+        "Ajoutez les tomates concassées, les herbes de Provence et les lentilles brunes égouttées et rincées. Salez et poivrez. Laissez mijoter à feu doux pendant 15 minutes.",
+        "Pendant ce temps, faites cuire les pâtes dans un grand volume d'eau bouillante salée. Égouttez-les.",
+        "Mélangez les pâtes chaudes avec le ragoût de lentilles et servez immédiatement."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 46/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de pâtes (Spaghetti ou Rigatoni)",
+            "1 boîte (400g) de lentilles brunes cuites (ou vertes)",
+            "1 boîte (400g) de tomates concassées",
+            "1 carotte et 1 branche de céleri",
+            "1 oignon et 2 gousses d'ail",
+            "1 cuillère à soupe d'herbes de Provence",
+            "2 cuillères à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Hachez très finement l'oignon, l'ail, la carotte et le céleri (façon brunoise).",
+            "Dans une casserole, faites chauffer l'huile d'olive. Faites-y revenir le mélange de légumes hachés pendant 7 minutes à feu moyen jusqu'à ce qu'ils soient tendres.",
+            "Ajoutez les tomates concassées, les herbes de Provence et les lentilles brunes égouttées et rincées. Salez et poivrez. Laissez mijoter à feu doux pendant 15 minutes.",
+            "Pendant ce temps, faites cuire les pâtes dans un grand volume d'eau bouillante salée. Égouttez-les.",
+            "Mélangez les pâtes chaudes avec le ragoût de lentilles et servez immédiatement."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 46/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-047",
+      "name": "Chou Vert Frisé Farci au Riz et Canneberges",
+      "ingredients": [
+        "8 grandes feuilles de chou vert frisé",
+        "150g de riz blanc ou complet cuit",
+        "1 oignon",
+        "40g de canneberges séchées",
+        "40g de graines de tournesol",
+        "300 ml de bouillon de légumes",
+        "1 cuillère à soupe d'huile d'olive",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Faites blanchir les feuilles de chou entier dans une grande casserole d'eau bouillante pendant 3 minutes pour les assouplir. Plongez-les dans l'eau glacée, égouttez-les et épongez-les délicatement. Coupez la partie centrale de la côte si elle est trop dure.",
+        "Dans une poêle, faites chauffer l'huile d'olive. Faites-y revenir l'oignon émincé pendant 4 minutes. Ajoutez le riz cuit, les canneberges et les graines de tournesol. Salez, poivrez et mélangez bien pendant 2 minutes.",
+        "Préchauffez le four à 180°C. Étalez une feuille de chou à plat, déposez 2 cuillères à soupe de farce au centre, puis repliez les bords pour former un petit paquet fermé. Répétez l'opération.",
+        "Disposez les choux farcis dans un plat allant au four, serrés les uns contre les autres. Versez le bouillon de légumes au fond du plat.",
+        "Enfournez pour 25 minutes en arrosant à mi-cuisson avec le bouillon."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 47/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 grandes feuilles de chou vert frisé",
+            "150g de riz blanc ou complet cuit",
+            "1 oignon",
+            "40g de canneberges séchées",
+            "40g de graines de tournesol",
+            "300 ml de bouillon de légumes",
+            "1 cuillère à soupe d'huile d'olive",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Faites blanchir les feuilles de chou entier dans une grande casserole d'eau bouillante pendant 3 minutes pour les assouplir. Plongez-les dans l'eau glacée, égouttez-les et épongez-les délicatement. Coupez la partie centrale de la côte si elle est trop dure.",
+            "Dans une poêle, faites chauffer l'huile d'olive. Faites-y revenir l'oignon émincé pendant 4 minutes. Ajoutez le riz cuit, les canneberges et les graines de tournesol. Salez, poivrez et mélangez bien pendant 2 minutes.",
+            "Préchauffez le four à 180°C. Étalez une feuille de chou à plat, déposez 2 cuillères à soupe de farce au centre, puis repliez les bords pour former un petit paquet fermé. Répétez l'opération.",
+            "Disposez les choux farcis dans un plat allant au four, serrés les uns contre les autres. Versez le bouillon de légumes au fond du plat.",
+            "Enfournez pour 25 minutes en arrosant à mi-cuisson avec le bouillon."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 47/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-048",
+      "name": "Salade Repas d'Hiver : Mâche, Betterave Rôtie et Croutons",
+      "ingredients": [
+        "200g de salade mâche",
+        "2 betteraves crues (ou déjà cuites si vous manquez de temps)",
+        "200g de tofu fumé",
+        "1 cuillère à soupe de fécule de maïs",
+        "Pour la vinaigrette : 3 cuillères à soupe d'huile de colza, 1 cuillère à soupe de vinaigre de cidre, 1 cuillère à café de sirop d'érable, sel et poivre."
+      ],
+      "steps": [
+        "Si betteraves crues : Préchauffez le four à 200°C. Épluchez les betteraves (mettez des gants !), coupez-les en dés, enrobez-les d'un filet d'huile et enfournez pour 35 minutes jusqu'à ce qu'elles soient tendres. Laissez tiédir.",
+        "Coupez le tofu fumé en petits dés. Enrobez-les de fécule de maïs dans un bol.",
+        "Faites chauffer une cuillère d'huile dans une poêle et faites-y griller les dés de tofu pendant 5 à 7 minutes à feu vif pour les rendre bien croustillants.",
+        "Dans un grand saladier, préparez la vinaigrette en mélangeant tous les ingrédients.",
+        "Ajoutez la mâche lavée, les dés de betterave tièdes et les croûtons de tofu fumé bien croustillants. Mélangez délicatement et servez."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 48/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de salade mâche",
+            "2 betteraves crues (ou déjà cuites si vous manquez de temps)",
+            "200g de tofu fumé",
+            "1 cuillère à soupe de fécule de maïs",
+            "Pour la vinaigrette : 3 cuillères à soupe d'huile de colza, 1 cuillère à soupe de vinaigre de cidre, 1 cuillère à café de sirop d'érable, sel et poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Si betteraves crues : Préchauffez le four à 200°C. Épluchez les betteraves (mettez des gants !), coupez-les en dés, enrobez-les d'un filet d'huile et enfournez pour 35 minutes jusqu'à ce qu'elles soient tendres. Laissez tiédir.",
+            "Coupez le tofu fumé en petits dés. Enrobez-les de fécule de maïs dans un bol.",
+            "Faites chauffer une cuillère d'huile dans une poêle et faites-y griller les dés de tofu pendant 5 à 7 minutes à feu vif pour les rendre bien croustillants.",
+            "Dans un grand saladier, préparez la vinaigrette en mélangeant tous les ingrédients.",
+            "Ajoutez la mâche lavée, les dés de betterave tièdes et les croûtons de tofu fumé bien croustillants. Mélangez délicatement et servez."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 48/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-049",
+      "name": "Tartines d'Hiver au Radis Noir, Avocat et Gomasio",
+      "ingredients": [
+        "4 grandes tranches de pain de campagne ou de seigle",
+        "1/2 radis noir",
+        "2 avocats bien mûres",
+        "Le jus d'un demi-citron",
+        "1 cuillère à soupe de gomasio (mélange de sésame grillé et sel)",
+        "Un filet d'huile d'olive"
+      ],
+      "steps": [
+        "Faites griller les tranches de pain au grille-pain ou sous le gril du four.",
+        "Dans un bol, écrasez la chair des avocats à la fourchette avec le jus de citron, un filet d'huile d'olive, du sel et du poivre jusqu'à obtenir une texture de purée.",
+        "Lavez soigneusement le radis noir (inutile de l'éplucher s'il est bio) et coupez-le en très fines rondelles à l'aide d'un couteau aiguisé ou d'une mandoline.",
+        "Tartinez généreusement le pain grillé avec la purée d'avocat.",
+        "Disposez les rondelles de radis noir en rosace par-dessus et saupoudrez généreusement de gomasio pour apporter du croquant."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 49/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 grandes tranches de pain de campagne ou de seigle",
+            "1/2 radis noir",
+            "2 avocats bien mûres",
+            "Le jus d'un demi-citron",
+            "1 cuillère à soupe de gomasio (mélange de sésame grillé et sel)",
+            "Un filet d'huile d'olive"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Faites griller les tranches de pain au grille-pain ou sous le gril du four.",
+            "Dans un bol, écrasez la chair des avocats à la fourchette avec le jus de citron, un filet d'huile d'olive, du sel et du poivre jusqu'à obtenir une texture de purée.",
+            "Lavez soigneusement le radis noir (inutile de l'éplucher s'il est bio) et coupez-le en très fines rondelles à l'aide d'un couteau aiguisé ou d'une mandoline.",
+            "Tartinez généreusement le pain grillé avec la purée d'avocat.",
+            "Disposez les rondelles de radis noir en rosace par-dessus et saupoudrez généreusement de gomasio pour apporter du croquant."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 49/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "vegan-automne-hiver-050",
+      "name": "Mijoté de Seitan aux Carottes et Pruneaux",
+      "ingredients": [
+        "400g de seitan nature",
+        "4 belles carottes",
+        "12 pruneaux dénoyautés",
+        "1 oignon",
+        "400 ml de bouillon de légumes",
+        "1 cuillère à soupe de farine",
+        "2 cuillères à soupe d'huile d'olive",
+        "Sel, poivre et 1 branche de thym"
+      ],
+      "steps": [
+        "Coupez le seitan en gros morceaux. Épluchez les carottes et coupez- les en grosses rondelles. Émincez l'oignon.",
+        "Dans une cocotte, faites chauffer l'huile d'olive. Faites-y revenir le seitan et l'oignon pendant 5 minutes pour qu'ils colorent.",
+        "Saupoudrez avec la farine et remuez pendant 1 minute.",
+        "Ajoutez les rondelles de carottes, les pruneaux et la branche de thym.",
+        "Versez le bouillon de légumes chaud. Salez et poivrez. Couvrez la cocotte, baissez le feu au minimum et laissez mijoter doucement pendant 35 minutes. La sauce doit épaissir et les carottes doivent être fondantes."
+      ],
+      "robot": [],
+      "notes": [
+        "Source : PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf », fiche 50/50.",
+        "Recette prévue pour 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "Catégorie : 🌱 Végan · 🍂 Automne / Hiver"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400g de seitan nature",
+            "4 belles carottes",
+            "12 pruneaux dénoyautés",
+            "1 oignon",
+            "400 ml de bouillon de légumes",
+            "1 cuillère à soupe de farine",
+            "2 cuillères à soupe d'huile d'olive",
+            "Sel, poivre et 1 branche de thym"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Coupez le seitan en gros morceaux. Épluchez les carottes et coupez- les en grosses rondelles. Émincez l'oignon.",
+            "Dans une cocotte, faites chauffer l'huile d'olive. Faites-y revenir le seitan et l'oignon pendant 5 minutes pour qu'ils colorent.",
+            "Saupoudrez avec la farine et remuez pendant 1 minute.",
+            "Ajoutez les rondelles de carottes, les pruneaux et la branche de thym.",
+            "Versez le bouillon de légumes chaud. Salez et poivrez. Couvrez la cocotte, baissez le feu au minimum et laissez mijoter doucement pendant 35 minutes. La sauce doit épaissir et les carottes doivent être fondantes."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN - AUTOMNE HIVER.pdf » — fiche 50/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🍂 Automne / Hiver",
+      "regime": "vegan",
+      "sous_regime": "automne_hiver"
     }
   ],
   "plan": [
