@@ -69099,6 +69099,284 @@
       "blurb": "🌱 Végan · ⚡ Express",
       "regime": "vegan",
       "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-036",
+      "name": "Salade de Pamplemousse, Avocat et Roquette",
+      "ingredients": [
+        "2 pamplemousses roses",
+        "2 avocats",
+        "4 poignées roquette",
+        "4 c. à soupe huile d’avocat ou d’olive",
+        "Sel, poivre blanc"
+      ],
+      "steps": [
+        "Peler les pamplemousses à vif et détacher les suprêmes; couper les avocats en dés.",
+        "Répartir la roquette dans quatre assiettes.",
+        "Ajouter avocat et pamplemousse, arroser d’huile, saler et poivrer."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 36/50. Quantités pour 4 personnes.",
+        "Temps total : 10 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 10 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 pamplemousses roses",
+            "2 avocats",
+            "4 poignées roquette",
+            "4 c. à soupe huile d’avocat ou d’olive",
+            "Sel, poivre blanc"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Peler les pamplemousses à vif et détacher les suprêmes; couper les avocats en dés.",
+            "Répartir la roquette dans quatre assiettes.",
+            "Ajouter avocat et pamplemousse, arroser d’huile, saler et poivrer."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 36/50",
+      "timePrep": "10 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-037",
+      "name": "Poêlée Flash de Tofu Fumé et Pousses d’Épinards",
+      "ingredients": [
+        "400 g tofu fumé",
+        "8 grosses poignées pousses d’épinards",
+        "4 c. à café huile d’olive",
+        "4 c. à soupe graines de tournesol",
+        "Sel"
+      ],
+      "steps": [
+        "Couper le tofu en dés et faire dorer dans l’huile 3 min à feu vif.",
+        "Ajouter les épinards et remuer environ 1 min.",
+        "Retirer du feu, saler et parsemer de graines."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 37/50. Quantités pour 4 personnes.",
+        "Temps total : 10 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 6 min",
+            "🔥 Cuisson : 4 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g tofu fumé",
+            "8 grosses poignées pousses d’épinards",
+            "4 c. à café huile d’olive",
+            "4 c. à soupe graines de tournesol",
+            "Sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Couper le tofu en dés et faire dorer dans l’huile 3 min à feu vif.",
+            "Ajouter les épinards et remuer environ 1 min.",
+            "Retirer du feu, saler et parsemer de graines."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 37/50",
+      "timePrep": "6 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-038",
+      "name": "Tartine de Purée de Cacahuète et Banane",
+      "ingredients": [
+        "8 tranches pain de mie complet",
+        "8 c. à soupe beurre de cacahuète 100 %",
+        "2 bananes",
+        "4 pincées graines de sésame"
+      ],
+      "steps": [
+        "Griller le pain.",
+        "Tartiner de beurre de cacahuète pendant qu’il est chaud.",
+        "Ajouter la banane en rondelles et les graines de sésame."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 38/50. Quantités pour 4 personnes.",
+        "Temps total : 7 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 7 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 2 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches pain de mie complet",
+            "8 c. à soupe beurre de cacahuète 100 %",
+            "2 bananes",
+            "4 pincées graines de sésame"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Griller le pain.",
+            "Tartiner de beurre de cacahuète pendant qu’il est chaud.",
+            "Ajouter la banane en rondelles et les graines de sésame."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 38/50",
+      "timePrep": "5 min",
+      "timeCook": "2 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-039",
+      "name": "Salade de Pois Chiches, Tomates et Olives à la Grecque",
+      "ingredients": [
+        "600 g pois chiches en conserve rincés",
+        "24 tomates cerises",
+        "24 olives Kalamata",
+        "4 c. à soupe huile d’olive",
+        "2 c. à café origan séché",
+        "Sel"
+      ],
+      "steps": [
+        "Mettre les pois chiches égouttés dans un saladier.",
+        "Couper tomates et olives, puis ajouter.",
+        "Assaisonner avec huile, origan et sel, mélanger."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 39/50. Quantités pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g pois chiches en conserve rincés",
+            "24 tomates cerises",
+            "24 olives Kalamata",
+            "4 c. à soupe huile d’olive",
+            "2 c. à café origan séché",
+            "Sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mettre les pois chiches égouttés dans un saladier.",
+            "Couper tomates et olives, puis ajouter.",
+            "Assaisonner avec huile, origan et sel, mélanger."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 39/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-040",
+      "name": "Smoothie Vert Express Energy",
+      "ingredients": [
+        "600 ml lait d’amande sans sucre",
+        "4 poignées épinards frais",
+        "2 bananes congelées",
+        "4 c. à soupe purée d’amande blanche"
+      ],
+      "steps": [
+        "Mettre tous les ingrédients dans un blender.",
+        "Mixer 45 à 60 secondes jusqu’à texture veloutée.",
+        "Verser dans quatre verres et servir."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 40/50. Quantités pour 4 personnes.",
+        "Temps total : 6 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 6 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 1 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 ml lait d’amande sans sucre",
+            "4 poignées épinards frais",
+            "2 bananes congelées",
+            "4 c. à soupe purée d’amande blanche"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mettre tous les ingrédients dans un blender.",
+            "Mixer 45 à 60 secondes jusqu’à texture veloutée.",
+            "Verser dans quatre verres et servir."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 40/50",
+      "timePrep": "5 min",
+      "timeCook": "1 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
     }
   ],
   "plan": [
