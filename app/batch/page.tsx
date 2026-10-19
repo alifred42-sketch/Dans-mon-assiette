@@ -33,7 +33,7 @@ export default function BatchPage() {
     return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
   }, []);
   const changedPlan = weekPlan(week, recipeOverrides, preferences);
-  const allItems = batchForWeek(week);
+  const allItems = batchForWeek(week).filter((item) => /protéine pivot|proteine pivot|féculent|feculent|soupe de saison|base soupe/i.test(`${item.title} ${item.group || ""}`));
   const assigned = new Set<string>();
   function take(pattern: RegExp) {
     const rows = allItems.filter((item) => !assigned.has(item.id) && matches(item, pattern));
@@ -52,7 +52,8 @@ export default function BatchPage() {
     return `${recipe?.name || slot.name} du ${dayName(slot.day)} ${slot.meal.toLowerCase()}`;
   };
   const targetText = (slots: typeof changedPlan) => `[Pour ${slots.map(targetName).join("; ")}]`;
-  const recipeDetails = changedPlan.map((slot) => {
+  const batchBasePlan = changedPlan.filter((slot) => (slot.day === "MARDI" && slot.meal === "Soir") || (slot.day === "MERCREDI" && (slot.meal === "Midi" || slot.meal === "Soir")) || (slot.day === "JEUDI" && slot.meal === "Soir"));
+  const recipeDetails = batchBasePlan.map((slot) => {
     const source = getRecipe(slot.recipeId);
     return { slot, recipe: source ? displayRecipe(source) : undefined };
   });
@@ -90,8 +91,8 @@ export default function BatchPage() {
     target: targetText([slot]),
     group: `${String(["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"].indexOf(dayName(slot.day)) + 1).padStart(2, "0")} ${dayName(slot.day)}`,
   }));
-  const assemblyGuides = Array.from(new Set(changedPlan.map((slot) => slot.day))).map((day) => {
-    const daySlots = changedPlan.filter((slot) => slot.day === day);
+  const assemblyGuides = Array.from(new Set(recipeDetails.map(({ slot }) => slot.day))).map((day) => {
+    const daySlots = recipeDetails.filter(({ slot }) => slot.day === day).map(({ slot }) => slot);
     return {
       id: `assembly-guide-${day}`,
       title: "RÉCHAUFFER LA PORTION. ASSEMBLER. AJOUTER LES HERBES, SAUCE OU GARNITURE AU DERNIER MOMENT.",
@@ -111,8 +112,8 @@ export default function BatchPage() {
       <WeekPicker week={week} path="/batch" />
       {robotPriority ? <a href="#mode-cuisson-robot" className="flex items-center gap-3 rounded-2xl border-2 border-[#8FA89B] bg-[#8FA89B]/20 p-4 text-sm font-extrabold text-[#1A1A1A] shadow-[3px_4px_10px_rgba(26,26,26,0.08)]">🤖 Robot Monsieur Cuisine activé — consignes robot en priorité <span className="ml-auto">↓</span></a> : null}
       <section className="rounded-2xl border-2 border-[#8FA89B] bg-[#F4F7F2] p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#1A1A1A]">✅ Votre batchcooking structuré</h2>
-        <p className="mt-1 text-sm leading-relaxed text-[#2B2B2B]">Les 5 étapes demandées sont prêtes pour la semaine {week}. Ouvrez directement le mode dont vous avez besoin :</p>
+        <h2 className="font-heading text-xl font-extrabold text-[#1A1A1A]">✅ Batchcooking des bases chaudes</h2>
+        <p className="mt-1 text-sm leading-relaxed text-[#2B2B2B]">Le dimanche, préparez uniquement les bases réellement réutilisées : la protéine pivot, le féculent et la soupe de saison. Les autres repas se terminent au moment de servir.</p>
         <div className="mt-3 grid grid-cols-2 gap-2 text-sm font-bold sm:grid-cols-5">
           <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-decoupe">🔪 Découpe</a>
           <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-cuisson-four">🔥 Four / feu</a>
@@ -155,7 +156,7 @@ export default function BatchPage() {
       <section className="space-y-4 rounded-2xl border border-[#8FA89B]/40 bg-[#8FA89B]/10 p-4 shadow-sm">
         <h2 className="font-heading text-xl font-extrabold text-[#1A1A1A]">📖 Les recettes, étape par étape</h2>
         <p className="text-sm leading-relaxed text-[#2B2B2B]">Retrouvez ici les ingrédients et les étapes de chaque repas prévu. Cette liste suit automatiquement les recettes sélectionnées dans votre menu, y compris après un remplacement.</p>
-        {changedPlan.map((slot, i) => {
+        {recipeDetails.map(({ slot }, i) => {
           const sourceRecipe = getRecipe(slot.recipeId);
           const recipe = sourceRecipe ? displayRecipe(sourceRecipe) : undefined;
           if (!recipe) return (
