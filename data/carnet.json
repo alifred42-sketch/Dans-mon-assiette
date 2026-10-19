@@ -68817,6 +68817,288 @@
       "blurb": "🌱 Végan · ⚡ Express",
       "regime": "vegan",
       "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-031",
+      "name": "Salade Crue de Courgettes au Citron et Menthe",
+      "ingredients": [
+        "4 petites courgettes",
+        "4 c. à soupe huile d’olive",
+        "4 c. à café jus de citron",
+        "20 feuilles menthe",
+        "4 c. à soupe pignons",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Tailler les courgettes en rubans fins.",
+        "Mélanger huile, citron, sel et poivre, verser sur les courgettes.",
+        "Ajouter menthe ciselée et pignons, mélanger."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 31/50. Quantités pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 petites courgettes",
+            "4 c. à soupe huile d’olive",
+            "4 c. à café jus de citron",
+            "20 feuilles menthe",
+            "4 c. à soupe pignons",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Tailler les courgettes en rubans fins.",
+            "Mélanger huile, citron, sel et poivre, verser sur les courgettes.",
+            "Ajouter menthe ciselée et pignons, mélanger."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 31/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-032",
+      "name": "Tartine Houmous et Concombre Boostée",
+      "ingredients": [
+        "8 tranches pain de seigle",
+        "12 c. à soupe houmous",
+        "1 concombre",
+        "4 c. à café graines de chanvre",
+        "Paprika doux"
+      ],
+      "steps": [
+        "Griller le pain.",
+        "Étaler le houmous.",
+        "Ajouter concombre en rondelles, graines de chanvre et paprika."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 32/50. Quantités pour 4 personnes.",
+        "Temps total : 9 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 9 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 7 min",
+            "🔥 Cuisson : 2 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches pain de seigle",
+            "12 c. à soupe houmous",
+            "1 concombre",
+            "4 c. à café graines de chanvre",
+            "Paprika doux"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Griller le pain.",
+            "Étaler le houmous.",
+            "Ajouter concombre en rondelles, graines de chanvre et paprika."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 32/50",
+      "timePrep": "7 min",
+      "timeCook": "2 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-033",
+      "name": "Petit Déjeuner Express Chia-Mangue",
+      "ingredients": [
+        "600 g yaourt de coco",
+        "12 c. à soupe purée de mangue",
+        "4 c. à café graines de chia",
+        "4 c. à soupe granola vegan"
+      ],
+      "steps": [
+        "Mélanger le yaourt avec les graines de chia dans quatre bols.",
+        "Verser la purée de mangue par-dessus.",
+        "Ajouter le granola avant de déguster."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 33/50. Quantités pour 4 personnes.",
+        "Temps total : 5 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 5 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g yaourt de coco",
+            "12 c. à soupe purée de mangue",
+            "4 c. à café graines de chia",
+            "4 c. à soupe granola vegan"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mélanger le yaourt avec les graines de chia dans quatre bols.",
+            "Verser la purée de mangue par-dessus.",
+            "Ajouter le granola avant de déguster."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 33/50",
+      "timePrep": "5 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-034",
+      "name": "Nouilles Soba Froides à la Sauce Soja-Sésame",
+      "ingredients": [
+        "320 g nouilles soba",
+        "4 c. à soupe sauce soja",
+        "4 c. à café huile de sésame",
+        "2 c. à café sirop d’érable",
+        "2 branches cébette"
+      ],
+      "steps": [
+        "Cuire les soba 4 min, égoutter et refroidir sous l’eau froide.",
+        "Fouetter soja, huile de sésame et sirop.",
+        "Mélanger avec les nouilles et ajouter la cébette."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 34/50. Quantités pour 4 personnes.",
+        "Temps total : 10 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 6 min",
+            "🔥 Cuisson : 4 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "320 g nouilles soba",
+            "4 c. à soupe sauce soja",
+            "4 c. à café huile de sésame",
+            "2 c. à café sirop d’érable",
+            "2 branches cébette"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Cuire les soba 4 min, égoutter et refroidir sous l’eau froide.",
+            "Fouetter soja, huile de sésame et sirop.",
+            "Mélanger avec les nouilles et ajouter la cébette."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 34/50",
+      "timePrep": "6 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-035",
+      "name": "Wrap Épicé aux Haricots Rouges et Avocat",
+      "ingredients": [
+        "4 grandes tortillas",
+        "320 g haricots rouges en conserve rincés",
+        "1 avocat",
+        "2 c. à café épices chili",
+        "4 c. à soupe maïs",
+        "4 poignées jeunes pousses"
+      ],
+      "steps": [
+        "Écraser l’avocat et les haricots avec les épices.",
+        "Étaler sur les tortillas.",
+        "Ajouter maïs et pousses, puis rouler."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 35/50. Quantités pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 grandes tortillas",
+            "320 g haricots rouges en conserve rincés",
+            "1 avocat",
+            "2 c. à café épices chili",
+            "4 c. à soupe maïs",
+            "4 poignées jeunes pousses"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Écraser l’avocat et les haricots avec les épices.",
+            "Étaler sur les tortillas.",
+            "Ajouter maïs et pousses, puis rouler."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 35/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
     }
   ],
   "plan": [
