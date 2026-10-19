@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Heart, Share2, Users, Bot, UserRound, Leaf, Wheat, Milk, Nut, GraduationCap, ShieldCheck } from "lucide-react";
 import { carnet } from "@/lib/carnet";
-const DEFAULT_PREFS = { etudiant:false, vegetarien:false, vegan:false, sansGluten:false, sansLactose:false, sansFruitsCoque:false, robot:false };
+const DEFAULT_PREFS = { etudiant:false, vegetarien:false, vegan:false, halal:false, sansGluten:false, sansLactose:false, sansFruitsCoque:false, robot:false };
 type Prefs = typeof DEFAULT_PREFS;
 function Toggle({label,checked,onChange,icon}:{label:string;checked:boolean;onChange:(v:boolean)=>void;icon?:React.ReactNode}) {
  return <label className={`flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border px-3 py-3 text-sm font-semibold transition ${checked?"border-[#8FA89B] bg-[#8FA89B]/20":"border-[#E7E5DE] bg-white"}`}><input type="checkbox" checked={checked} onChange={e=>onChange(e.target.checked)} className="size-4 accent-[#8FA89B]"/>{icon}<span className="flex-1 text-[#1A1A1A]">{label}</span>{checked?<span className="text-xs font-bold text-[#557565]">Activé</span>:null}</label>;
