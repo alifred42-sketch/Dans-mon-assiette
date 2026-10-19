@@ -67127,6 +67127,1420 @@
       "blurb": "🏷️ Catégorie : 🥦 Végétarien · 🤖 Robot",
       "regime": "vegetarien",
       "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-express-001",
+      "name": "Tartine Avocat-Pois Chiches Express",
+      "ingredients": [
+        "8 tranches de pain de campagne",
+        "2 avocats mûrs",
+        "240 g de pois chiches en conserve rincés",
+        "4 c. à café de jus de citron",
+        "4 pincées de piment en flocons",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Faire griller le pain.",
+        "Écraser les avocats et pois chiches avec le citron, sel et poivre.",
+        "Étaler sur les tartines et saupoudrer de piment."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 1/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 5 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 5 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches de pain de campagne",
+            "2 avocats mûrs",
+            "240 g de pois chiches en conserve rincés",
+            "4 c. à café de jus de citron",
+            "4 pincées de piment en flocons",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Faire griller le pain.",
+            "Écraser les avocats et pois chiches avec le citron, sel et poivre.",
+            "Étaler sur les tartines et saupoudrer de piment."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 1/50",
+      "timePrep": "5 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-002",
+      "name": "Wrap Méditerranéen Express",
+      "ingredients": [
+        "4 grandes tortillas de blé",
+        "8 c. à soupe de houmous",
+        "16 tomates cerises",
+        "1 concombre",
+        "20 olives noires dénoyautées",
+        "4 poignées de pousses d’épinards"
+      ],
+      "steps": [
+        "Étaler le houmous sur les tortillas.",
+        "Ajouter épinards, tomates, concombre et olives au centre.",
+        "Rouler serré et couper en deux."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 2/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 grandes tortillas de blé",
+            "8 c. à soupe de houmous",
+            "16 tomates cerises",
+            "1 concombre",
+            "20 olives noires dénoyautées",
+            "4 poignées de pousses d’épinards"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Étaler le houmous sur les tortillas.",
+            "Ajouter épinards, tomates, concombre et olives au centre.",
+            "Rouler serré et couper en deux."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 2/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-003",
+      "name": "Salade de Haricots Rouges et Maïs Flash",
+      "ingredients": [
+        "600 g haricots rouges en conserve rincés",
+        "300 g maïs en conserve",
+        "2 poivrons rouges",
+        "4 c. à soupe huile d’olive",
+        "4 c. à café vinaigre de cidre",
+        "Coriandre fraîche, sel, poivre"
+      ],
+      "steps": [
+        "Mélanger haricots, maïs et poivrons en dés.",
+        "Ajouter huile, vinaigre, sel et poivre.",
+        "Parsemer de coriandre ciselée."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 3/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g haricots rouges en conserve rincés",
+            "300 g maïs en conserve",
+            "2 poivrons rouges",
+            "4 c. à soupe huile d’olive",
+            "4 c. à café vinaigre de cidre",
+            "Coriandre fraîche, sel, poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mélanger haricots, maïs et poivrons en dés.",
+            "Ajouter huile, vinaigre, sel et poivre.",
+            "Parsemer de coriandre ciselée."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 3/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-004",
+      "name": "Salade de Tomates, Tofu et Pesto",
+      "ingredients": [
+        "8 tomates moyennes",
+        "400 g tofu ferme nature",
+        "8 c. à café pesto vegan",
+        "4 c. à café pignons de pin",
+        "4 c. à soupe huile d’olive"
+      ],
+      "steps": [
+        "Couper tomates et tofu en cubes.",
+        "Répartir dans les assiettes.",
+        "Délayer le pesto dans l’huile, napper et ajouter les pignons."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 4/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tomates moyennes",
+            "400 g tofu ferme nature",
+            "8 c. à café pesto vegan",
+            "4 c. à café pignons de pin",
+            "4 c. à soupe huile d’olive"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Couper tomates et tofu en cubes.",
+            "Répartir dans les assiettes.",
+            "Délayer le pesto dans l’huile, napper et ajouter les pignons."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 4/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-005",
+      "name": "Tartine Tataki de Tomates",
+      "ingredients": [
+        "8 tranches pain de mie complet",
+        "4 c. à soupe purée d’amande blanche",
+        "4 tomates",
+        "4 c. à café graines de sésame",
+        "4 filets sirop d’érable"
+      ],
+      "steps": [
+        "Griller le pain.",
+        "Tartiner de purée d’amande.",
+        "Ajouter les tomates en tranches, sirop d’érable et sésame."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 5/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 7 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 7 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 2 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches pain de mie complet",
+            "4 c. à soupe purée d’amande blanche",
+            "4 tomates",
+            "4 c. à café graines de sésame",
+            "4 filets sirop d’érable"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Griller le pain.",
+            "Tartiner de purée d’amande.",
+            "Ajouter les tomates en tranches, sirop d’érable et sésame."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 5/50",
+      "timePrep": "5 min",
+      "timeCook": "2 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-006",
+      "name": "Couscous Express aux Raisins et Amandes",
+      "ingredients": [
+        "240 g semoule fine",
+        "280 ml eau bouillante",
+        "4 c. à soupe raisins secs",
+        "4 c. à soupe amandes effilées",
+        "4 c. à café huile d’olive",
+        "Cumin et sel"
+      ],
+      "steps": [
+        "Mettre semoule, raisins, cumin et sel dans un saladier; verser l’eau bouillante.",
+        "Couvrir 5 min.",
+        "Égrener avec l’huile et ajouter les amandes."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 6/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 7 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 7 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 7 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "240 g semoule fine",
+            "280 ml eau bouillante",
+            "4 c. à soupe raisins secs",
+            "4 c. à soupe amandes effilées",
+            "4 c. à café huile d’olive",
+            "Cumin et sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mettre semoule, raisins, cumin et sel dans un saladier; verser l’eau bouillante.",
+            "Couvrir 5 min.",
+            "Égrener avec l’huile et ajouter les amandes."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 6/50",
+      "timePrep": "7 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-007",
+      "name": "Nouilles Express Sauce Cacahuète",
+      "ingredients": [
+        "320 g nouilles de riz instantanées",
+        "4 c. à soupe bombées beurre de cacahuète",
+        "4 c. à soupe sauce soja/tamari",
+        "4 c. à café sirop d’agave",
+        "8 c. à soupe eau chaude",
+        "4 c. à café oignon vert"
+      ],
+      "steps": [
+        "Cuire les nouilles selon le paquet, 3–4 min, puis égoutter.",
+        "Fouetter beurre de cacahuète, soja, sirop et eau chaude.",
+        "Mélanger avec les nouilles et parsemer d’oignon vert."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 7/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 10 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 6 min",
+            "🔥 Cuisson : 4 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "320 g nouilles de riz instantanées",
+            "4 c. à soupe bombées beurre de cacahuète",
+            "4 c. à soupe sauce soja/tamari",
+            "4 c. à café sirop d’agave",
+            "8 c. à soupe eau chaude",
+            "4 c. à café oignon vert"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Cuire les nouilles selon le paquet, 3–4 min, puis égoutter.",
+            "Fouetter beurre de cacahuète, soja, sirop et eau chaude.",
+            "Mélanger avec les nouilles et parsemer d’oignon vert."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 7/50",
+      "timePrep": "6 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-008",
+      "name": "Salade de Concombre Asiatique",
+      "ingredients": [
+        "4 concombres",
+        "4 c. à soupe sauce soja",
+        "4 c. à café huile de sésame",
+        "4 c. à café vinaigre de riz",
+        "4 c. à café graines de sésame"
+      ],
+      "steps": [
+        "Couper les concombres en fines rondelles.",
+        "Mélanger soja, huile de sésame et vinaigre.",
+        "Verser sur le concombre et parsemer de sésame."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 8/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 concombres",
+            "4 c. à soupe sauce soja",
+            "4 c. à café huile de sésame",
+            "4 c. à café vinaigre de riz",
+            "4 c. à café graines de sésame"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Couper les concombres en fines rondelles.",
+            "Mélanger soja, huile de sésame et vinaigre.",
+            "Verser sur le concombre et parsemer de sésame."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 8/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-009",
+      "name": "Roulés de Courgette au Fromage Vegan",
+      "ingredients": [
+        "4 petites courgettes",
+        "12 c. à soupe fromage à tartiner vegan ail et fines herbes",
+        "4 poignées roquette"
+      ],
+      "steps": [
+        "Tailler les courgettes en longues lanières à l’économe.",
+        "Étaler le fromage vegan.",
+        "Ajouter la roquette à une extrémité et rouler."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 9/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 10 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 10 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 petites courgettes",
+            "12 c. à soupe fromage à tartiner vegan ail et fines herbes",
+            "4 poignées roquette"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Tailler les courgettes en longues lanières à l’économe.",
+            "Étaler le fromage vegan.",
+            "Ajouter la roquette à une extrémité et rouler."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 9/50",
+      "timePrep": "10 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-010",
+      "name": "Porridge Express Micro-ondes à la Banane",
+      "ingredients": [
+        "160 g flocons d’avoine",
+        "800 ml lait d’amande sans sucre",
+        "2 bananes",
+        "4 c. à café graines de chia",
+        "Cannelle"
+      ],
+      "steps": [
+        "Mélanger avoine, lait d’amande et cannelle dans des bols adaptés.",
+        "Cuire au micro-ondes 2 min, surveiller et répartir si nécessaire.",
+        "Ajouter les bananes en rondelles et les graines de chia."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 10/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 7 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 7 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 2 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "160 g flocons d’avoine",
+            "800 ml lait d’amande sans sucre",
+            "2 bananes",
+            "4 c. à café graines de chia",
+            "Cannelle"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mélanger avoine, lait d’amande et cannelle dans des bols adaptés.",
+            "Cuire au micro-ondes 2 min, surveiller et répartir si nécessaire.",
+            "Ajouter les bananes en rondelles et les graines de chia."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 10/50",
+      "timePrep": "5 min",
+      "timeCook": "2 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-011",
+      "name": "Salade de Pois Chiches Express au Cumin",
+      "ingredients": [
+        "600 g pois chiches en conserve rincés",
+        "1 oignon rouge",
+        "2 c. à café cumin",
+        "4 c. à soupe huile d’olive",
+        "4 c. à café jus de citron",
+        "Persil frais, sel, poivre"
+      ],
+      "steps": [
+        "Mettre les pois chiches et l’oignon finement émincé dans un saladier.",
+        "Ajouter cumin, huile, citron, sel et poivre.",
+        "Mélanger et parsemer de persil."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 11/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g pois chiches en conserve rincés",
+            "1 oignon rouge",
+            "2 c. à café cumin",
+            "4 c. à soupe huile d’olive",
+            "4 c. à café jus de citron",
+            "Persil frais, sel, poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mettre les pois chiches et l’oignon finement émincé dans un saladier.",
+            "Ajouter cumin, huile, citron, sel et poivre.",
+            "Mélanger et parsemer de persil."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 11/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-012",
+      "name": "Tartine Italienne à la Crème de Cannellini",
+      "ingredients": [
+        "8 tranches pain de campagne",
+        "400 g haricots blancs cannellini en conserve rincés",
+        "4 c. à café huile d’olive",
+        "Ail en poudre",
+        "12 tomates séchées à l’huile",
+        "Sel"
+      ],
+      "steps": [
+        "Écraser les haricots avec l’huile, l’ail et le sel jusqu’à texture crémeuse.",
+        "Tartiner sur le pain grillé.",
+        "Ajouter les tomates séchées en morceaux."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 12/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 10 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 2 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches pain de campagne",
+            "400 g haricots blancs cannellini en conserve rincés",
+            "4 c. à café huile d’olive",
+            "Ail en poudre",
+            "12 tomates séchées à l’huile",
+            "Sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Écraser les haricots avec l’huile, l’ail et le sel jusqu’à texture crémeuse.",
+            "Tartiner sur le pain grillé.",
+            "Ajouter les tomates séchées en morceaux."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 12/50",
+      "timePrep": "8 min",
+      "timeCook": "2 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-013",
+      "name": "Wrap Façon César Végétal",
+      "ingredients": [
+        "4 grandes tortillas",
+        "320 g tofu fumé en lamelles",
+        "4 poignées salade romaine",
+        "4 c. à soupe mayonnaise vegan",
+        "4 c. à café levure maltée"
+      ],
+      "steps": [
+        "Dorer le tofu à la poêle à sec environ 2 min de chaque côté.",
+        "Mélanger la salade, la mayonnaise vegan et la levure maltée.",
+        "Garnir les tortillas et rouler."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 13/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 10 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 6 min",
+            "🔥 Cuisson : 4 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 grandes tortillas",
+            "320 g tofu fumé en lamelles",
+            "4 poignées salade romaine",
+            "4 c. à soupe mayonnaise vegan",
+            "4 c. à café levure maltée"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Dorer le tofu à la poêle à sec environ 2 min de chaque côté.",
+            "Mélanger la salade, la mayonnaise vegan et la levure maltée.",
+            "Garnir les tortillas et rouler."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 13/50",
+      "timePrep": "6 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-014",
+      "name": "Nouilles Instantanées au Bouillon Miso-Gingembre",
+      "ingredients": [
+        "320 g nouilles de blé instantanées sans assaisonnement",
+        "4 c. à café bombées pâte miso blanc",
+        "2 c. à café gingembre râpé",
+        "1,2 l eau bouillante",
+        "4 poignées pousses de soja"
+      ],
+      "steps": [
+        "Délayer miso et gingembre dans l’eau bouillante répartie dans quatre bols.",
+        "Ajouter les nouilles et couvrir 4 min.",
+        "Ajouter les pousses de soja avant de déguster."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 14/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 10 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 6 min",
+            "🔥 Cuisson : 4 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "320 g nouilles de blé instantanées sans assaisonnement",
+            "4 c. à café bombées pâte miso blanc",
+            "2 c. à café gingembre râpé",
+            "1,2 l eau bouillante",
+            "4 poignées pousses de soja"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Délayer miso et gingembre dans l’eau bouillante répartie dans quatre bols.",
+            "Ajouter les nouilles et couvrir 4 min.",
+            "Ajouter les pousses de soja avant de déguster."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 14/50",
+      "timePrep": "6 min",
+      "timeCook": "4 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-015",
+      "name": "Salade de Lentilles Flash à la Moutarde",
+      "ingredients": [
+        "600 g lentilles vertes en conserve rincées",
+        "2 carottes râpées",
+        "4 c. à café moutarde à l’ancienne",
+        "4 c. à soupe huile de colza",
+        "4 c. à café vinaigre de vin",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mélanger moutarde, vinaigre, huile, sel et poivre pour faire la vinaigrette.",
+        "Ajouter lentilles égouttées et carottes.",
+        "Bien mélanger."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 15/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g lentilles vertes en conserve rincées",
+            "2 carottes râpées",
+            "4 c. à café moutarde à l’ancienne",
+            "4 c. à soupe huile de colza",
+            "4 c. à café vinaigre de vin",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mélanger moutarde, vinaigre, huile, sel et poivre pour faire la vinaigrette.",
+            "Ajouter lentilles égouttées et carottes.",
+            "Bien mélanger."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 15/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-016",
+      "name": "Gaspacho Express de Tomate et Poivron",
+      "ingredients": [
+        "800 g tomates concassées ou passata",
+        "2 poivrons rouges",
+        "1 gousse d’ail",
+        "4 c. à soupe huile d’olive",
+        "4 c. à café vinaigre balsamique",
+        "Sel"
+      ],
+      "steps": [
+        "Mettre tous les ingrédients dans un blender.",
+        "Mixer 1 min jusqu’à texture lisse.",
+        "Servir immédiatement, éventuellement avec des glaçons."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 16/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 6 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 6 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 1 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "800 g tomates concassées ou passata",
+            "2 poivrons rouges",
+            "1 gousse d’ail",
+            "4 c. à soupe huile d’olive",
+            "4 c. à café vinaigre balsamique",
+            "Sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mettre tous les ingrédients dans un blender.",
+            "Mixer 1 min jusqu’à texture lisse.",
+            "Servir immédiatement, éventuellement avec des glaçons."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 16/50",
+      "timePrep": "5 min",
+      "timeCook": "1 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-017",
+      "name": "Tartine Œuf Brouillé Vegan (Tofu Scramble)",
+      "ingredients": [
+        "4 tranches pain de mie complet",
+        "400 g tofu soyeux ou ferme écrasé",
+        "1 c. à café curcuma",
+        "Sel Kala Namak",
+        "4 c. à café margarine végétale"
+      ],
+      "steps": [
+        "Faire fondre la margarine dans une poêle.",
+        "Ajouter le tofu émietté, le curcuma et le sel Kala Namak.",
+        "Remuer 3 min puis déposer sur les tartines grillées."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 17/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 10 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 7 min",
+            "🔥 Cuisson : 3 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 tranches pain de mie complet",
+            "400 g tofu soyeux ou ferme écrasé",
+            "1 c. à café curcuma",
+            "Sel Kala Namak",
+            "4 c. à café margarine végétale"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Faire fondre la margarine dans une poêle.",
+            "Ajouter le tofu émietté, le curcuma et le sel Kala Namak.",
+            "Remuer 3 min puis déposer sur les tartines grillées."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 17/50",
+      "timePrep": "7 min",
+      "timeCook": "3 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-018",
+      "name": "Salade de Mangue et Avocat au Citron Vert",
+      "ingredients": [
+        "2 mangues",
+        "2 avocats",
+        "4 c. à café jus de citron vert",
+        "Piment de Cayenne",
+        "Menthe fraîche"
+      ],
+      "steps": [
+        "Couper mangues et avocats en dés et placer dans un saladier.",
+        "Arroser de citron vert.",
+        "Ajouter une pointe de piment et la menthe ciselée."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 18/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 mangues",
+            "2 avocats",
+            "4 c. à café jus de citron vert",
+            "Piment de Cayenne",
+            "Menthe fraîche"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Couper mangues et avocats en dés et placer dans un saladier.",
+            "Arroser de citron vert.",
+            "Ajouter une pointe de piment et la menthe ciselée."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 18/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-019",
+      "name": "Taboulé de Chou-Fleur Express",
+      "ingredients": [
+        "600 g fleurettes de chou-fleur cru",
+        "16 tomates cerises",
+        "4 c. à soupe huile d’olive",
+        "4 c. à soupe jus de citron",
+        "20 feuilles menthe",
+        "Sel"
+      ],
+      "steps": [
+        "Mixer brièvement le chou-fleur pour obtenir une texture de semoule fine.",
+        "Ajouter les tomates cerises coupées en quatre.",
+        "Assaisonner avec huile, citron, menthe ciselée et sel."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 19/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g fleurettes de chou-fleur cru",
+            "16 tomates cerises",
+            "4 c. à soupe huile d’olive",
+            "4 c. à soupe jus de citron",
+            "20 feuilles menthe",
+            "Sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mixer brièvement le chou-fleur pour obtenir une texture de semoule fine.",
+            "Ajouter les tomates cerises coupées en quatre.",
+            "Assaisonner avec huile, citron, menthe ciselée et sel."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 19/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-020",
+      "name": "Crème de Chia Express Coco-Framboise",
+      "ingredients": [
+        "8 c. à soupe bombées graines de chia",
+        "600 ml lait de coco en brique",
+        "4 c. à café sirop d’érable",
+        "4 poignées framboises"
+      ],
+      "steps": [
+        "Mélanger chia, lait de coco et sirop dans quatre pots.",
+        "Laisser reposer 3 min puis remuer.",
+        "Écraser les framboises et déposer dessus."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 20/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 5 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 5 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 c. à soupe bombées graines de chia",
+            "600 ml lait de coco en brique",
+            "4 c. à café sirop d’érable",
+            "4 poignées framboises"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mélanger chia, lait de coco et sirop dans quatre pots.",
+            "Laisser reposer 3 min puis remuer.",
+            "Écraser les framboises et déposer dessus."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 20/50",
+      "timePrep": "5 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-021",
+      "name": "Curry Express de Pois Chiches à la Tomate",
+      "ingredients": [
+        "600 g pois chiches en conserve rincés",
+        "16 c. à soupe passata",
+        "8 c. à soupe crème de soja",
+        "2 c. à café curry",
+        "Ail en poudre et sel"
+      ],
+      "steps": [
+        "Mélanger pois chiches, passata, curry et ail dans une casserole ou un bol micro-ondes.",
+        "Chauffer 3 min à feu moyen ou 1 min 30 au micro-ondes.",
+        "Incorporer la crème de soja hors du feu, saler et mélanger."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 21/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 3 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g pois chiches en conserve rincés",
+            "16 c. à soupe passata",
+            "8 c. à soupe crème de soja",
+            "2 c. à café curry",
+            "Ail en poudre et sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mélanger pois chiches, passata, curry et ail dans une casserole ou un bol micro-ondes.",
+            "Chauffer 3 min à feu moyen ou 1 min 30 au micro-ondes.",
+            "Incorporer la crème de soja hors du feu, saler et mélanger."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 21/50",
+      "timePrep": "5 min",
+      "timeCook": "3 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-022",
+      "name": "Salade Asiatique de Chou Rouge et Edamames",
+      "ingredients": [
+        "400 g chou rouge finement émincé",
+        "200 g edamames cuits",
+        "4 c. à café huile de sésame",
+        "4 c. à café sauce soja",
+        "4 c. à café graines de sésame noir"
+      ],
+      "steps": [
+        "Mettre chou rouge et edamames dans un saladier.",
+        "Arroser d’huile de sésame et de sauce soja.",
+        "Malaxer le chou 30 secondes puis parsemer de sésame."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 22/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 5 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 5 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g chou rouge finement émincé",
+            "200 g edamames cuits",
+            "4 c. à café huile de sésame",
+            "4 c. à café sauce soja",
+            "4 c. à café graines de sésame noir"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mettre chou rouge et edamames dans un saladier.",
+            "Arroser d’huile de sésame et de sauce soja.",
+            "Malaxer le chou 30 secondes puis parsemer de sésame."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 22/50",
+      "timePrep": "5 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-023",
+      "name": "Tartine Ricotta de Tofu et Basilic",
+      "ingredients": [
+        "8 tranches pain grillé",
+        "400 g tofu ferme",
+        "4 c. à café jus de citron",
+        "4 c. à soupe huile d’olive",
+        "16 feuilles basilic",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Émietter finement le tofu à la fourchette.",
+        "Ajouter citron, huile, sel, poivre et basilic ciselé; mélanger.",
+        "Tartiner sur le pain chaud."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 23/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches pain grillé",
+            "400 g tofu ferme",
+            "4 c. à café jus de citron",
+            "4 c. à soupe huile d’olive",
+            "16 feuilles basilic",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Émietter finement le tofu à la fourchette.",
+            "Ajouter citron, huile, sel, poivre et basilic ciselé; mélanger.",
+            "Tartiner sur le pain chaud."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 23/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-024",
+      "name": "Pâtes Flash à la Crème de Levure Maltée",
+      "ingredients": [
+        "320 g pâtes cuisson rapide",
+        "8 c. à soupe crème de soja",
+        "4 c. à soupe bombées levure maltée",
+        "Muscade, sel, poivre"
+      ],
+      "steps": [
+        "Cuire les pâtes dans l’eau bouillante salée environ 3 min puis égoutter.",
+        "Remettre dans la casserole éteinte.",
+        "Ajouter crème de soja, levure maltée, muscade et poivre; mélanger."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 24/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 9 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 9 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 6 min",
+            "🔥 Cuisson : 3 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "320 g pâtes cuisson rapide",
+            "8 c. à soupe crème de soja",
+            "4 c. à soupe bombées levure maltée",
+            "Muscade, sel, poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Cuire les pâtes dans l’eau bouillante salée environ 3 min puis égoutter.",
+            "Remettre dans la casserole éteinte.",
+            "Ajouter crème de soja, levure maltée, muscade et poivre; mélanger."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 24/50",
+      "timePrep": "6 min",
+      "timeCook": "3 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-025",
+      "name": "Wrap Tex-Mex aux Haricots Noirs",
+      "ingredients": [
+        "4 grandes tortillas",
+        "400 g haricots noirs en conserve rincés",
+        "8 c. à soupe salsa de tomate",
+        "1 avocat écrasé",
+        "4 poignées salade verte"
+      ],
+      "steps": [
+        "Écraser grossièrement les haricots avec la salsa.",
+        "Étaler l’avocat sur les tortillas puis ajouter les haricots.",
+        "Ajouter la salade, rouler et couper en deux."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF « Recettes Véganes Express 10 Min », fiche 25/50. Quantités recalibrées pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 grandes tortillas",
+            "400 g haricots noirs en conserve rincés",
+            "8 c. à soupe salsa de tomate",
+            "1 avocat écrasé",
+            "4 poignées salade verte"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Écraser grossièrement les haricots avec la salsa.",
+            "Étaler l’avocat sur les tortillas puis ajouter les haricots.",
+            "Ajouter la salade, rouler et couper en deux."
+          ]
+        }
+      ],
+      "source": "PDF « Recettes Véganes Express 10 Min » — fiche 25/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
     }
   ],
   "plan": [
