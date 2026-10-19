@@ -76783,6 +76783,3216 @@
       "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Avec Alcool",
       "fete": "halloween",
       "sous_fete": "potions"
+    },
+    {
+      "id": "student-one-pan-001",
+      "name": "One-Pan Pasta Tomate & Mozzarella",
+      "ingredients": [
+        "100g de pâtes (pennes ou spaghettis)",
+        "8 tomates cerises",
+        "1 gousse d'ail",
+        "1/2 boule de mozzarella",
+        "1 cuillère à soupe d'huile d'olive",
+        "300 ml d'eau",
+        "sel",
+        "poivre",
+        "quelques feuilles de basilic (optionnel)."
+      ],
+      "steps": [
+        "1. Coupez les tomates cerises en deux et émincez finement l'gousse d'ail.",
+        "2. Dans la poêle froide, déposez les pâtes, les tomates, l'ail, l'huile d'olive, une bonne pincée de sel et du poivre.",
+        "3. Versez l'eau froide par-dessus pour couvrir les ingrédients.",
+        "4. Portez à ébullition à feu vif, puis baissez à feu moyen. Laissez cuire environ 10 à 12 minutes en remuant régulièrement pour que les pâtes n'accrochent pas. L'eau va s'évaporer et créer une sauce crémeuse.",
+        "5. Coupez le feu lorsqu'il reste un fond de sauce. Ajoutez la mozzarella coupée en dés. Couvrez la poêle pendant 2 minutes pour faire fondre le fromage avant de déguster."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100g de pâtes (pennes ou spaghettis)",
+            "8 tomates cerises",
+            "1 gousse d'ail",
+            "1/2 boule de mozzarella",
+            "1 cuillère à soupe d'huile d'olive",
+            "300 ml d'eau",
+            "sel",
+            "poivre",
+            "quelques feuilles de basilic (optionnel)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez les tomates cerises en deux et émincez finement l'gousse d'ail.",
+            "2. Dans la poêle froide, déposez les pâtes, les tomates, l'ail, l'huile d'olive, une bonne pincée de sel et du poivre.",
+            "3. Versez l'eau froide par-dessus pour couvrir les ingrédients.",
+            "4. Portez à ébullition à feu vif, puis baissez à feu moyen. Laissez cuire environ 10 à 12 minutes en remuant régulièrement pour que les pâtes n'accrochent pas. L'eau va s'évaporer et créer une sauce crémeuse.",
+            "5. Coupez le feu lorsqu'il reste un fond de sauce. Ajoutez la mozzarella coupée en dés. Couvrez la poêle pendant 2 minutes pour faire fondre le fromage avant de déguster."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 1/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-002",
+      "name": "Riz sauté express au thon et petits pois",
+      "ingredients": [
+        "1 sachet de riz nature pré-cuit micro-ondable (ou 150g de reste de riz cuit)",
+        "1 petite boîte de thon au naturel (environ 80g)",
+        "50g de petits pois surgelés",
+        "1 œuf",
+        "1 cuillère à soupe de sauce soja",
+        "1 cuillère à soupe d'huile neutre."
+      ],
+      "steps": [
+        "1. Faites chauffer l'huile à feu moyen dans la poêle. Ajoutez les petits pois encore surgelés et faites-les sauter pendant 3 minutes.",
+        "2. Émiettez le thon directement dans la poêle et ajoutez le riz. Mélangez bien et laissez chauffer pendant 3 minutes en remuant pour que le riz devienne légèrement croustillant.",
+        "3. Poussez les ingrédients sur un côté de la poêle pour libérer de l'espace. Cassez l'œuf dans cet espace vide.",
+        "4. À l'aide d'une spatule, battez l'œuf en brouillade directement dans la poêle pendant 1 minute.",
+        "5. Mélangez enfin l'œuf avec le reste du riz, versez la sauce soja, remuez une dernière fois pendant 1 minute et coupez le feu."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 sachet de riz nature pré-cuit micro-ondable (ou 150g de reste de riz cuit)",
+            "1 petite boîte de thon au naturel (environ 80g)",
+            "50g de petits pois surgelés",
+            "1 œuf",
+            "1 cuillère à soupe de sauce soja",
+            "1 cuillère à soupe d'huile neutre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Faites chauffer l'huile à feu moyen dans la poêle. Ajoutez les petits pois encore surgelés et faites-les sauter pendant 3 minutes.",
+            "2. Émiettez le thon directement dans la poêle et ajoutez le riz. Mélangez bien et laissez chauffer pendant 3 minutes en remuant pour que le riz devienne légèrement croustillant.",
+            "3. Poussez les ingrédients sur un côté de la poêle pour libérer de l'espace. Cassez l'œuf dans cet espace vide.",
+            "4. À l'aide d'une spatule, battez l'œuf en brouillade directement dans la poêle pendant 1 minute.",
+            "5. Mélangez enfin l'œuf avec le reste du riz, versez la sauce soja, remuez une dernière fois pendant 1 minute et coupez le feu."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 2/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-003",
+      "name": "Shakshuka étudiante aux œufs",
+      "ingredients": [
+        "2 œufs",
+        "1/2 boîte de tomates concassées (200g)",
+        "1/2 poivron rouge",
+        "1/2 oignon",
+        "1 cuillère à café de cumin ou de paprika",
+        "1 cuillère à soupe d'huile d'olive",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Émincez finement l'oignon et coupez le poivron en petits dés.",
+        "2. Faites chauffer l'huile d'olive à feu moyen. Faites-y revenir l'oignon et le poivron pendant 5 minutes jusqu'à ce qu'ils soient tendres.",
+        "3. Ajoutez le cumin (ou le paprika), salez, poivrez, puis versez les tomates concassées. Mélangez et laissez mijoter à feu doux pendant 5 minutes pour épaissir la sauce.",
+        "4. À l'aide d'une cuillère, creusez deux petits puits dans la sauce tomate.",
+        "5. Cassez un œuf dans chaque puits. Mettez un couvercle sur la poêle et laissez cuire à feu doux pendant 4 à 5 minutes, jusqu'à ce que le blanc des œufs soit opaque mais le jaune encore coulant."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 œufs",
+            "1/2 boîte de tomates concassées (200g)",
+            "1/2 poivron rouge",
+            "1/2 oignon",
+            "1 cuillère à café de cumin ou de paprika",
+            "1 cuillère à soupe d'huile d'olive",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez finement l'oignon et coupez le poivron en petits dés.",
+            "2. Faites chauffer l'huile d'olive à feu moyen. Faites-y revenir l'oignon et le poivron pendant 5 minutes jusqu'à ce qu'ils soient tendres.",
+            "3. Ajoutez le cumin (ou le paprika), salez, poivrez, puis versez les tomates concassées. Mélangez et laissez mijoter à feu doux pendant 5 minutes pour épaissir la sauce.",
+            "4. À l'aide d'une cuillère, creusez deux petits puits dans la sauce tomate.",
+            "5. Cassez un œuf dans chaque puits. Mettez un couvercle sur la poêle et laissez cuire à feu doux pendant 4 à 5 minutes, jusqu'à ce que le blanc des œufs soit opaque mais le jaune encore coulant."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 3/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-004",
+      "name": "Gnocchis croustillants au bacon et crème",
+      "ingredients": [
+        "200g de gnocchis à poêler",
+        "50g de lardons ou de bacon en lanières",
+        "2 cuillères à soupe de crème fraîche épaisse",
+        "30g de fromage râpé",
+        "1 noisette de beurre."
+      ],
+      "steps": [
+        "1. Faites chauffer la poêle à feu vif sans matière grasse et jetez-y les lardons. Faites-les dorer pendant 3 minutes, puis retirez-les de la poêle en laissant le gras au fond.",
+        "2. Baissez à feu moyen, ajoutez la noisette de beurre dans le gras des lardons, puis versez les gnocchis.",
+        "3. Laissez dorer les gnocchis pendant 5 à 6 minutes en les remuant souvent pour qu'ils soient croustillants sur toutes les faces.",
+        "4. Remettez les lardons dans la poêle avec les gnocchis.",
+        "5. Ajoutez la crème fraîche et le fromage râpé. Mélangez bien pendant 1 minute à feu très doux pour lier le tout, puis servez immédiatement."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de gnocchis à poêler",
+            "50g de lardons ou de bacon en lanières",
+            "2 cuillères à soupe de crème fraîche épaisse",
+            "30g de fromage râpé",
+            "1 noisette de beurre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Faites chauffer la poêle à feu vif sans matière grasse et jetez-y les lardons. Faites-les dorer pendant 3 minutes, puis retirez-les de la poêle en laissant le gras au fond.",
+            "2. Baissez à feu moyen, ajoutez la noisette de beurre dans le gras des lardons, puis versez les gnocchis.",
+            "3. Laissez dorer les gnocchis pendant 5 à 6 minutes en les remuant souvent pour qu'ils soient croustillants sur toutes les faces.",
+            "4. Remettez les lardons dans la poêle avec les gnocchis.",
+            "5. Ajoutez la crème fraîche et le fromage râpé. Mélangez bien pendant 1 minute à feu très doux pour lier le tout, puis servez immédiatement."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 4/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-005",
+      "name": "Omelette paysanne aux pommes de terre",
+      "ingredients": [
+        "3 œufs",
+        "150g de pommes de terre rissolées surgelées (ou des restes de pommes de terre cuites coupées en dés)",
+        "1/2 oignon",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Émincez le demi-oignon. Dans la poêle, faites chauffer l'huile à feu moyen.",
+        "2. Ajoutez l'oignon et les pommes de terre rissolées. Faites-les dorer pendant 8 à 10 minutes en remuant régulièrement jusqu'à ce qu'elles soient bien tendres et dorées.",
+        "3. Pendant ce temps, cassez les œufs dans un bol, salez, poivrez et battez-les énergiquement à la fourchette.",
+        "4. Répartissez uniformément les pommes de terre au fond de la poêle, puis versez les œufs battus par-dessus.",
+        "5. Couvrez la poêle et laissez cuire à feu doux pendant 5 minutes (pour une omelette baveuse) à 7 minutes (pour une omelette bien prise)."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "3 œufs",
+            "150g de pommes de terre rissolées surgelées (ou des restes de pommes de terre cuites coupées en dés)",
+            "1/2 oignon",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez le demi-oignon. Dans la poêle, faites chauffer l'huile à feu moyen.",
+            "2. Ajoutez l'oignon et les pommes de terre rissolées. Faites-les dorer pendant 8 à 10 minutes en remuant régulièrement jusqu'à ce qu'elles soient bien tendres et dorées.",
+            "3. Pendant ce temps, cassez les œufs dans un bol, salez, poivrez et battez-les énergiquement à la fourchette.",
+            "4. Répartissez uniformément les pommes de terre au fond de la poêle, puis versez les œufs battus par-dessus.",
+            "5. Couvrez la poêle et laissez cuire à feu doux pendant 5 minutes (pour une omelette baveuse) à 7 minutes (pour une omelette bien prise)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 5/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-006",
+      "name": "Quesadilla express Jambon & Fromage",
+      "ingredients": [
+        "1 grande tortilla de blé (wrap)",
+        "1 tranche de jambon blanc",
+        "50g de fromage râpé (ou cheddar)",
+        "3 rondelles de tomate",
+        "1 noisette de beurre."
+      ],
+      "steps": [
+        "1. Faites fondre le beurre à feu moyen dans la poêle et déposez la tortilla bien à plat.",
+        "2. Saupoudrez la moitié de la tortilla avec la moitié du fromage râpé.",
+        "3. Déposez par-dessus la tranche de jambon pliée en deux, puis les rondelles de tomate. Ajoutez le reste du fromage râpé par-dessus.",
+        "4. À l'aide d'une spatule, repliez la moitié vide de la tortilla sur la moitié garnie pour former un demi-lune.",
+        "5. Appuyez légèrement avec la spatule et laissez dorer 2 à 3 minutes de chaque côté, jusqu'à ce que la tortilla soit croustillante et que le fromage soit totalement fondu."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 grande tortilla de blé (wrap)",
+            "1 tranche de jambon blanc",
+            "50g de fromage râpé (ou cheddar)",
+            "3 rondelles de tomate",
+            "1 noisette de beurre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Faites fondre le beurre à feu moyen dans la poêle et déposez la tortilla bien à plat.",
+            "2. Saupoudrez la moitié de la tortilla avec la moitié du fromage râpé.",
+            "3. Déposez par-dessus la tranche de jambon pliée en deux, puis les rondelles de tomate. Ajoutez le reste du fromage râpé par-dessus.",
+            "4. À l'aide d'une spatule, repliez la moitié vide de la tortilla sur la moitié garnie pour former un demi-lune.",
+            "5. Appuyez légèrement avec la spatule et laissez dorer 2 à 3 minutes de chaque côté, jusqu'à ce que la tortilla soit croustillante et que le fromage soit totalement fondu."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 6/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-007",
+      "name": "Émincé de poulet au curry et lait de coco",
+      "ingredients": [
+        "1 blanc de poulet (environ 120g)",
+        "100g de légumes surgelés au choix (mélange julienne ou wok)",
+        "10 cl de lait de coco",
+        "1 cuillère à café de curry en poudre",
+        "1 cuillère à soupe d'huile neutre",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Coupez le blanc de poulet en morceaux de taille moyenne.",
+        "2. Faites chauffer l'huile dans la poêle à feu vif et saisissez les morceaux de poulet pendant 3 à 4 minutes pour les colorer. Salez et poivrez.",
+        "3. Ajoutez les légumes surgelés directement avec le poulet. Baissez à feu moyen et faites sauter le tout pendant 5 minutes.",
+        "4. Saupoudrez le curry en poudre sur les ingrédients et mélangez bien pour libérer les arômes.",
+        "5. Versez le lait de coco. Mélangez, baissez le feu au minimum et laissez mijoter pendant 4 minutes pour que la sauce réduise et n'enrobe le poulet."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 blanc de poulet (environ 120g)",
+            "100g de légumes surgelés au choix (mélange julienne ou wok)",
+            "10 cl de lait de coco",
+            "1 cuillère à café de curry en poudre",
+            "1 cuillère à soupe d'huile neutre",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez le blanc de poulet en morceaux de taille moyenne.",
+            "2. Faites chauffer l'huile dans la poêle à feu vif et saisissez les morceaux de poulet pendant 3 à 4 minutes pour les colorer. Salez et poivrez.",
+            "3. Ajoutez les légumes surgelés directement avec le poulet. Baissez à feu moyen et faites sauter le tout pendant 5 minutes.",
+            "4. Saupoudrez le curry en poudre sur les ingrédients et mélangez bien pour libérer les arômes.",
+            "5. Versez le lait de coco. Mélangez, baissez le feu au minimum et laissez mijoter pendant 4 minutes pour que la sauce réduise et n'enrobe le poulet."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 7/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-008",
+      "name": "Poêlée de pois chiches, épinards et feta",
+      "ingredients": [
+        "1 petite boîte de pois chiches (environ 200g égouttés)",
+        "2 grosses poignées d'épinards frais (ou 3 galets d'épinards surgelés)",
+        "50g de feta",
+        "1 gousse d'ail",
+        "1 cuillère à soupe d'huile d'olive",
+        "jus de citron (optionnel)."
+      ],
+      "steps": [
+        "1. Rincez et égouttez soigneusement les pois chiches. Émincez l'ail.",
+        "2. Dans la poêle, faites chauffer l'huile d'olive à feu moyen. Faites-y revenir l'ail pendant 1 minute sans le laisser brûler.",
+        "3. Ajoutez les pois chiches et faites-les sauter pendant 4 minutes pour qu'ils deviennent légèrement croquants.",
+        "4. Ajoutez les épinards. S'ils sont frais, remuez pendant 2 minutes jusqu'à ce qu'ils tombent (réduisent). S'ils sont surgelés, couvrez et laissez décongeler 4 minutes à feu doux.",
+        "5. Coupez le feu. Émiettez la feta directement au-dessus de la poêle, ajoutez un trait de jus de citron, mélangez délicatement et servez. 6."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 petite boîte de pois chiches (environ 200g égouttés)",
+            "2 grosses poignées d'épinards frais (ou 3 galets d'épinards surgelés)",
+            "50g de feta",
+            "1 gousse d'ail",
+            "1 cuillère à soupe d'huile d'olive",
+            "jus de citron (optionnel)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Rincez et égouttez soigneusement les pois chiches. Émincez l'ail.",
+            "2. Dans la poêle, faites chauffer l'huile d'olive à feu moyen. Faites-y revenir l'ail pendant 1 minute sans le laisser brûler.",
+            "3. Ajoutez les pois chiches et faites-les sauter pendant 4 minutes pour qu'ils deviennent légèrement croquants.",
+            "4. Ajoutez les épinards. S'ils sont frais, remuez pendant 2 minutes jusqu'à ce qu'ils tombent (réduisent). S'ils sont surgelés, couvrez et laissez décongeler 4 minutes à feu doux.",
+            "5. Coupez le feu. Émiettez la feta directement au-dessus de la poêle, ajoutez un trait de jus de citron, mélangez délicatement et servez. 6."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 8/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-009",
+      "name": "Grilled-Cheese façon pain perdu salé",
+      "ingredients": [
+        "2 tranches de pain (de mie ou pain rassis)",
+        "1 œuf",
+        "3 cuillères à soupe de lait",
+        "2 tranches de fromage fondant (toastinette",
+        "emmental ou gouda)",
+        "1 noisette de beurre",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Dans une assiette creuse, battez l'œuf avec le lait, une pincée de sel et du poivre.",
+        "2. Trempez les deux tranches de pain dans ce mélange pendant 30 secondes par face pour qu'elles s'imbibent bien.",
+        "3. Faites fondre le beurre à feu moyen dans la poêle. Déposez les deux tranches de pain côte à côte.",
+        "4. Laissez dorer la première face pendant 3 minutes. Retournez les deux tranches.",
+        "5. Placez immédiatement les tranches de fromage sur l'une des tranches de pain, puis refermez le sandwich avec la deuxième tranche de pain. Laissez cuire encore 2 minutes à feu doux (si besoin sous un couvercle) pour que le fromage au cœur soit coulant. 6."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 tranches de pain (de mie ou pain rassis)",
+            "1 œuf",
+            "3 cuillères à soupe de lait",
+            "2 tranches de fromage fondant (toastinette",
+            "emmental ou gouda)",
+            "1 noisette de beurre",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans une assiette creuse, battez l'œuf avec le lait, une pincée de sel et du poivre.",
+            "2. Trempez les deux tranches de pain dans ce mélange pendant 30 secondes par face pour qu'elles s'imbibent bien.",
+            "3. Faites fondre le beurre à feu moyen dans la poêle. Déposez les deux tranches de pain côte à côte.",
+            "4. Laissez dorer la première face pendant 3 minutes. Retournez les deux tranches.",
+            "5. Placez immédiatement les tranches de fromage sur l'une des tranches de pain, puis refermez le sandwich avec la deuxième tranche de pain. Laissez cuire encore 2 minutes à feu doux (si besoin sous un couvercle) pour que le fromage au cœur soit coulant. 6."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 9/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-010",
+      "name": "Chili con carne minute",
+      "ingredients": [
+        "100g de viande hachée de bœuf",
+        "1/2 petite boîte de haricots rouges (environ 100g égouttés)",
+        "2 cuillères à soupe de maïs en boîte",
+        "4 cuillères à soupe de coulis de tomate",
+        "1/2 oignon",
+        "1/2 cuillère à café de piment ou de cumin",
+        "1 cuillère à soupe d'huile."
+      ],
+      "steps": [
+        "1. Émincez le demi-oignon. Faites-le revenir dans la poêle avec l'huile à feu moyen pendant 2 minutes.",
+        "2. Ajoutez la viande hachée en l'émiettant avec votre spatule. Faites-la cuire pendant 3 minutes jusqu'à ce qu'elle change de couleur.",
+        "3. Ajoutez les haricots rouges rincés et le maïs. Mélangez bien.",
+        "4. Versez le coulis de tomate et ajoutez les épices, du sel et du poivre.",
+        "5. Baissez le feu, couvrez et laissez mijoter doucement pendant 5 minutes pour que toutes les saveurs se mélangent avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100g de viande hachée de bœuf",
+            "1/2 petite boîte de haricots rouges (environ 100g égouttés)",
+            "2 cuillères à soupe de maïs en boîte",
+            "4 cuillères à soupe de coulis de tomate",
+            "1/2 oignon",
+            "1/2 cuillère à café de piment ou de cumin",
+            "1 cuillère à soupe d'huile."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez le demi-oignon. Faites-le revenir dans la poêle avec l'huile à feu moyen pendant 2 minutes.",
+            "2. Ajoutez la viande hachée en l'émiettant avec votre spatule. Faites-la cuire pendant 3 minutes jusqu'à ce qu'elle change de couleur.",
+            "3. Ajoutez les haricots rouges rincés et le maïs. Mélangez bien.",
+            "4. Versez le coulis de tomate et ajoutez les épices, du sel et du poivre.",
+            "5. Baissez le feu, couvrez et laissez mijoter doucement pendant 5 minutes pour que toutes les saveurs se mélangent avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 10/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-011",
+      "name": "Poêlée forestière aux œufs cocotte",
+      "ingredients": [
+        "150g de champignons de Paris (frais ou en boîte)",
+        "2 œufs",
+        "1 gousse d'ail",
+        "1 cuillère à soupe de persil haché",
+        "1 cuillère à soupe de crème fraîche",
+        "1 noisette de beurre",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Si les champignons sont frais, coupez-les en lamelles. Émincez finement l'ail.",
+        "2. Faites fondre le beurre à feu vif dans la poêle et jetez-y les champignons et l'ail. Faites-les sauter pendant 5 minutes jusqu'à ce qu'ils soient bien dorés (si frais, attendez que l'eau se soit évaporée).",
+        "3. Baissez le feu, ajoutez la crème fraîche, le persil, du sel et du poivre. Mélangez bien pendant 1 minute.",
+        "4. Creusez deux petits puits dans les champignons et cassez-y les œufs.",
+        "5. Couvrez la poêle et laissez cuire à feu doux pendant 4 à 5 minutes, jusqu'à ce que le blanc des œufs soit cuit mais les jaunes encore bien coulants."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150g de champignons de Paris (frais ou en boîte)",
+            "2 œufs",
+            "1 gousse d'ail",
+            "1 cuillère à soupe de persil haché",
+            "1 cuillère à soupe de crème fraîche",
+            "1 noisette de beurre",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Si les champignons sont frais, coupez-les en lamelles. Émincez finement l'ail.",
+            "2. Faites fondre le beurre à feu vif dans la poêle et jetez-y les champignons et l'ail. Faites-les sauter pendant 5 minutes jusqu'à ce qu'ils soient bien dorés (si frais, attendez que l'eau se soit évaporée).",
+            "3. Baissez le feu, ajoutez la crème fraîche, le persil, du sel et du poivre. Mélangez bien pendant 1 minute.",
+            "4. Creusez deux petits puits dans les champignons et cassez-y les œufs.",
+            "5. Couvrez la poêle et laissez cuire à feu doux pendant 4 à 5 minutes, jusqu'à ce que le blanc des œufs soit cuit mais les jaunes encore bien coulants."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 11/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-012",
+      "name": "Gnocchis à la provençale et au thon",
+      "ingredients": [
+        "200g de gnocchis à poêler",
+        "1/2 boîte de tomates concassées (200g)",
+        "1 petite boîte de thon au naturel (80g)",
+        "5 olives noires dénoyautées",
+        "1 cuillère à soupe d'huile d'olive",
+        "herbes de Provence",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Chauffez l'huile d'olive à feu moyen dans la poêle et faites-y dorer les gnocchis directement pendant 4 minutes en remuant souvent.",
+        "2. Ajoutez le thon égoutté et émietté, ainsi que les olives coupées en rondelles. Mélangez pendant 1 minute.",
+        "3. Versez les tomates concassées par-dessus. Saupoudrez d'une bonne pincée d'herbes de Provence, de sel et de poivre.",
+        "4. Baissez le feu, couvrez la poêle et laissez mijoter doucement pendant 6 à 7 minutes.",
+        "5. Remuez une dernière fois : la sauce doit avoir épaissi et bien enrober les gnocchis devenus fondants."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de gnocchis à poêler",
+            "1/2 boîte de tomates concassées (200g)",
+            "1 petite boîte de thon au naturel (80g)",
+            "5 olives noires dénoyautées",
+            "1 cuillère à soupe d'huile d'olive",
+            "herbes de Provence",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Chauffez l'huile d'olive à feu moyen dans la poêle et faites-y dorer les gnocchis directement pendant 4 minutes en remuant souvent.",
+            "2. Ajoutez le thon égoutté et émietté, ainsi que les olives coupées en rondelles. Mélangez pendant 1 minute.",
+            "3. Versez les tomates concassées par-dessus. Saupoudrez d'une bonne pincée d'herbes de Provence, de sel et de poivre.",
+            "4. Baissez le feu, couvrez la poêle et laissez mijoter doucement pendant 6 à 7 minutes.",
+            "5. Remuez une dernière fois : la sauce doit avoir épaissi et bien enrober les gnocchis devenus fondants."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 12/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-013",
+      "name": "Poêlée de Francfort aux pommes de terre",
+      "ingredients": [
+        "2 saucisses de Francfort (ou de Strasbourg)",
+        "150g de pommes de terre rissolées surgelées",
+        "1/2 oignon",
+        "1 cuillère à café de moutarde",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Émincez l'oignon et coupez les saucisses en rondelles d'un centimètre.",
+        "2. Faites chauffer l'huile à feu moyen dans la poêle. Ajoutez l'oignon et les pommes de terre rissolées. Faites-les dorer pendant 8 minutes en remuant régulièrement.",
+        "3. Ajoutez les rondelles de saucisses dans la poêle et poursuivez la cuisson pendant 3 minutes pour les faire griller légèrement.",
+        "4. Hors du feu (ou feu au minimum), ajoutez la cuillère de moutarde directement dans la poêle.",
+        "5. Mélangez énergiquement pour enrober les pommes de terre et les saucisses, salez, poivrez et servez chaud."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 saucisses de Francfort (ou de Strasbourg)",
+            "150g de pommes de terre rissolées surgelées",
+            "1/2 oignon",
+            "1 cuillère à café de moutarde",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez l'oignon et coupez les saucisses en rondelles d'un centimètre.",
+            "2. Faites chauffer l'huile à feu moyen dans la poêle. Ajoutez l'oignon et les pommes de terre rissolées. Faites-les dorer pendant 8 minutes en remuant régulièrement.",
+            "3. Ajoutez les rondelles de saucisses dans la poêle et poursuivez la cuisson pendant 3 minutes pour les faire griller légèrement.",
+            "4. Hors du feu (ou feu au minimum), ajoutez la cuillère de moutarde directement dans la poêle.",
+            "5. Mélangez énergiquement pour enrober les pommes de terre et les saucisses, salez, poivrez et servez chaud."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 13/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-014",
+      "name": "One-Pan Pasta crémeux au jambon",
+      "ingredients": [
+        "100g de pâtes (coquillettes ou pennes)",
+        "1 tranche de jambon blanc",
+        "2 cuillères à soupe de crème fraîche",
+        "30g de fromage râpé",
+        "300 ml d'eau",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Coupez la tranche de jambon en petits carrés.",
+        "2. Dans la poêle froide, déposez les pâtes, les morceaux de jambon, une pincée de sel et du poivre. Versez l'eau par-dessus.",
+        "3. Portez à ébullition à feu vif, puis baissez à feu moyen. Laissez cuire pendant 10 minutes en remuant très régulièrement. Les pâtes vont boire l'eau et libérer leur amidon pour créer une base de sauce.",
+        "4. Lorsqu'il ne reste presque plus de liquide, baissez le feu au minimum.",
+        "5. Ajoutez la crème fraîche et le fromage râpé. Remuez constamment pendant 1 à 2 minutes pour obtenir une texture ultra-crémeuse avant de couper le feu."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100g de pâtes (coquillettes ou pennes)",
+            "1 tranche de jambon blanc",
+            "2 cuillères à soupe de crème fraîche",
+            "30g de fromage râpé",
+            "300 ml d'eau",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez la tranche de jambon en petits carrés.",
+            "2. Dans la poêle froide, déposez les pâtes, les morceaux de jambon, une pincée de sel et du poivre. Versez l'eau par-dessus.",
+            "3. Portez à ébullition à feu vif, puis baissez à feu moyen. Laissez cuire pendant 10 minutes en remuant très régulièrement. Les pâtes vont boire l'eau et libérer leur amidon pour créer une base de sauce.",
+            "4. Lorsqu'il ne reste presque plus de liquide, baissez le feu au minimum.",
+            "5. Ajoutez la crème fraîche et le fromage râpé. Remuez constamment pendant 1 à 2 minutes pour obtenir une texture ultra-crémeuse avant de couper le feu."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 14/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-015",
+      "name": "Curry express de lentilles corail",
+      "ingredients": [
+        "80g de lentilles corail (elles cuisent très vite)",
+        "1/2 boîte de tomates concassées (200g)",
+        "15 cl d'eau",
+        "5 cl de lait de coco (ou crème)",
+        "1 cuillère à café de curry",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Mettez l'huile et le curry dans la poêle froide, puis allumez le feu à intensité moyenne pendant 1 minute pour torréfier l'épice.",
+        "2. Ajoutez les lentilles corail (crues et rincées), les tomates concassées et l'eau. Mélangez bien.",
+        "3. Portez à légers frémissements, puis baissez le feu. Couvrez et laissez mijoter pendant 12 à 15 minutes en remuant de temps en temps. Les lentilles doivent devenir tendres et absorber le liquide.",
+        "4. Si la poêle s'assèche trop avant que les lentilles soient cuites, rajoutez un tout petit filet d'eau.",
+        "5. En fin de cuisson, versez le lait de coco, salez, poivrez, mélangez 1 minute et servez (idéal avec un morceau de pain)."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "80g de lentilles corail (elles cuisent très vite)",
+            "1/2 boîte de tomates concassées (200g)",
+            "15 cl d'eau",
+            "5 cl de lait de coco (ou crème)",
+            "1 cuillère à café de curry",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Mettez l'huile et le curry dans la poêle froide, puis allumez le feu à intensité moyenne pendant 1 minute pour torréfier l'épice.",
+            "2. Ajoutez les lentilles corail (crues et rincées), les tomates concassées et l'eau. Mélangez bien.",
+            "3. Portez à légers frémissements, puis baissez le feu. Couvrez et laissez mijoter pendant 12 à 15 minutes en remuant de temps en temps. Les lentilles doivent devenir tendres et absorber le liquide.",
+            "4. Si la poêle s'assèche trop avant que les lentilles soient cuites, rajoutez un tout petit filet d'eau.",
+            "5. En fin de cuisson, versez le lait de coco, salez, poivrez, mélangez 1 minute et servez (idéal avec un morceau de pain)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 15/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-016",
+      "name": "Pavé de saumon sur lit de poireaux (Surgelés)",
+      "ingredients": [
+        "1 pavé de saumon (frais ou décongelé)",
+        "150g de fondue de poireaux surgelée en galets",
+        "1 cuillère à soupe de crème fraîche",
+        "1 noisette de beurre",
+        "sel",
+        "poivre",
+        "un filet de jus de citron."
+      ],
+      "steps": [
+        "1. Faites fondre le beurre dans la poêle à feu moyen. Déposez les galets de poireaux encore surgelés et 2 cuillères à soupe d'eau. Couvrez et laissez fondre pendant 5 minutes.",
+        "2. Remuez les poireaux, salez, poivrez, puis poussez-les sur les côtés de la poêle pour libérer le centre.",
+        "3. Déposez le pavé de saumon au centre de la poêle (côté peau en dessous s'il en a une). Salez et poivrez le poisson.",
+        "4. Couvrez la poêle et laissez cuire à feu doux pendant 7 à 8 minutes. Le saumon va cuire à la vapeur des poireaux.",
+        "5. Retirez le couvercle, ajoutez la crème fraîche dans les poireaux, arrosez le saumon d'un filet de jus de citron et laissez chauffer 1 minute avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 pavé de saumon (frais ou décongelé)",
+            "150g de fondue de poireaux surgelée en galets",
+            "1 cuillère à soupe de crème fraîche",
+            "1 noisette de beurre",
+            "sel",
+            "poivre",
+            "un filet de jus de citron."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Faites fondre le beurre dans la poêle à feu moyen. Déposez les galets de poireaux encore surgelés et 2 cuillères à soupe d'eau. Couvrez et laissez fondre pendant 5 minutes.",
+            "2. Remuez les poireaux, salez, poivrez, puis poussez-les sur les côtés de la poêle pour libérer le centre.",
+            "3. Déposez le pavé de saumon au centre de la poêle (côté peau en dessous s'il en a une). Salez et poivrez le poisson.",
+            "4. Couvrez la poêle et laissez cuire à feu doux pendant 7 à 8 minutes. Le saumon va cuire à la vapeur des poireaux.",
+            "5. Retirez le couvercle, ajoutez la crème fraîche dans les poireaux, arrosez le saumon d'un filet de jus de citron et laissez chauffer 1 minute avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 16/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-017",
+      "name": "Tartine campagnarde à la poêle",
+      "ingredients": [
+        "1 grande et épaisse tranche de pain",
+        "1 cuillère à café de moutarde (ou crème)",
+        "2 tranches de bacon (ou poitrine fumée)",
+        "1 poignée de fromage râpé",
+        "1 noisette de beurre."
+      ],
+      "steps": [
+        "1. Tartinez le dessus de votre tranche de pain avec la moutarde ou la crème fraîche, puis déposez le fromage râpé par-dessus.",
+        "2. Dans la poêle sèche à feu moyen, faites griller les tranches de bacon pendant 2 minutes. Retirez-les et déposez-les sur le fromage de votre tartine.",
+        "3. Sans laver la poêle, ajoutez la noisette de beurre.",
+        "4. Déposez la tartine garnie dans la poêle.",
+        "5. Couvrez immédiatement avec un couvercle (ou une grande assiette retournée) et laissez cuire à feu très doux pendant 5 minutes. Le dessous du pain va devenir croustillant tandis que la chaleur piégée va faire fondre le fromage sur le dessus."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 grande et épaisse tranche de pain",
+            "1 cuillère à café de moutarde (ou crème)",
+            "2 tranches de bacon (ou poitrine fumée)",
+            "1 poignée de fromage râpé",
+            "1 noisette de beurre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Tartinez le dessus de votre tranche de pain avec la moutarde ou la crème fraîche, puis déposez le fromage râpé par-dessus.",
+            "2. Dans la poêle sèche à feu moyen, faites griller les tranches de bacon pendant 2 minutes. Retirez-les et déposez-les sur le fromage de votre tartine.",
+            "3. Sans laver la poêle, ajoutez la noisette de beurre.",
+            "4. Déposez la tartine garnie dans la poêle.",
+            "5. Couvrez immédiatement avec un couvercle (ou une grande assiette retournée) et laissez cuire à feu très doux pendant 5 minutes. Le dessous du pain va devenir croustillant tandis que la chaleur piégée va faire fondre le fromage sur le dessus."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 17/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-018",
+      "name": "Poêlée mexicaine au poulet et maïs",
+      "ingredients": [
+        "1 blanc de poulet",
+        "1/2 petite boîte de maïs (environ 70g)",
+        "1/2 poivron (rouge ou vert)",
+        "2 cuillères à soupe de coulis de tomate",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre",
+        "paprika."
+      ],
+      "steps": [
+        "1. Coupez le poulet en dés et le poivron en fines lanières.",
+        "2. Faites chauffer l'huile dans la poêle à feu vif. Faites sauter le poulet et le poivron ensemble pendant 5 minutes jusqu'à ce que le poulet blanchisse et que le poivron soit un peu tendre.",
+        "3. Ajoutez le maïs égoutté, le coulis de tomate, une belle pincée de paprika, du sel et du poivre.",
+        "4. Baissez le feu à niveau moyen, mélangez bien pour lier les ingrédients.",
+        "5. Laissez mijoter à découvert pendant 4 minutes pour que la sauce réduise et caramélise légèrement autour du poulet."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 blanc de poulet",
+            "1/2 petite boîte de maïs (environ 70g)",
+            "1/2 poivron (rouge ou vert)",
+            "2 cuillères à soupe de coulis de tomate",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre",
+            "paprika."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez le poulet en dés et le poivron en fines lanières.",
+            "2. Faites chauffer l'huile dans la poêle à feu vif. Faites sauter le poulet et le poivron ensemble pendant 5 minutes jusqu'à ce que le poulet blanchisse et que le poivron soit un peu tendre.",
+            "3. Ajoutez le maïs égoutté, le coulis de tomate, une belle pincée de paprika, du sel et du poivre.",
+            "4. Baissez le feu à niveau moyen, mélangez bien pour lier les ingrédients.",
+            "5. Laissez mijoter à découvert pendant 4 minutes pour que la sauce réduise et caramélise légèrement autour du poulet."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 18/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-019",
+      "name": "Œufs brouillés crémeux aux miettes de thon",
+      "ingredients": [
+        "3 œufs",
+        "1 petite boîte de thon au naturel (80g)",
+        "1 cuillère à soupe de crème fraîche (ou une noisette de beurre)",
+        "sel",
+        "poivre",
+        "un peu de ciboulette (optionnel)."
+      ],
+      "steps": [
+        "1. Dans un bol, cassez les œufs, ajoutez le thon bien égoutté et émietté, du sel et du poivre. Battez le tout à la fourchette.",
+        "2. Versez le mélange directement dans la poêle froide sans matière grasse.",
+        "3. Allumez le feu à intensité douce. À l'aide d'une spatule en bois ou en silicone, remuez le mélange en continu dès que la poêle commence à chauffer.",
+        "4. L'œuf va coaguler très lentement en petites parcelles douces. Continuez à remuer pendant environ 4 à 5 minutes.",
+        "5. Dès que les œufs ont une consistance de crème épaisse mais restent très humides, retirez la poêle du feu. Ajoutez immédiatement la crème fraîche pour stopper la cuisson et remuez. Servez aussitôt."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "3 œufs",
+            "1 petite boîte de thon au naturel (80g)",
+            "1 cuillère à soupe de crème fraîche (ou une noisette de beurre)",
+            "sel",
+            "poivre",
+            "un peu de ciboulette (optionnel)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans un bol, cassez les œufs, ajoutez le thon bien égoutté et émietté, du sel et du poivre. Battez le tout à la fourchette.",
+            "2. Versez le mélange directement dans la poêle froide sans matière grasse.",
+            "3. Allumez le feu à intensité douce. À l'aide d'une spatule en bois ou en silicone, remuez le mélange en continu dès que la poêle commence à chauffer.",
+            "4. L'œuf va coaguler très lentement en petites parcelles douces. Continuez à remuer pendant environ 4 à 5 minutes.",
+            "5. Dès que les œufs ont une consistance de crème épaisse mais restent très humides, retirez la poêle du feu. Ajoutez immédiatement la crème fraîche pour stopper la cuisson et remuez. Servez aussitôt."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 19/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-020",
+      "name": "Poêlée de ravioles de Royans aux épinards",
+      "ingredients": [
+        "1 plaque de ravioles de Royans (au fromage)",
+        "2 poignées d'épinards frais (ou 3 galets surgelés)",
+        "1 cuillère à soupe de crème fraîche",
+        "1 noisette de beurre",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Dans la poêle, faites fondre le beurre à feu moyen et ajoutez les épinards. S'ils sont frais, faites-les tomber pendant 2 minutes. S'ils sont surgelés, laissez-les fondre 4 minutes à couvert.",
+        "2. Ajoutez la crème fraîche dans les épinards, salez légèrement (les ravioles sont déjà salées) et poivrez.",
+        "3. Détachez grossièrement les ravioles de la plaque et déposez-les directement sur le lit d'épinards à la crème.",
+        "4. Ne remuez pas tout de suite pour ne pas casser les ravioles. Mettez un couvercle et laissez cuire à feu doux pendant 3 minutes.",
+        "5. Retirez le couvercle, mélangez très délicatement avec une spatule pour enrober les ravioles de sauce, laissez chauffer 1 minute supplémentaire et servez."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 plaque de ravioles de Royans (au fromage)",
+            "2 poignées d'épinards frais (ou 3 galets surgelés)",
+            "1 cuillère à soupe de crème fraîche",
+            "1 noisette de beurre",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans la poêle, faites fondre le beurre à feu moyen et ajoutez les épinards. S'ils sont frais, faites-les tomber pendant 2 minutes. S'ils sont surgelés, laissez-les fondre 4 minutes à couvert.",
+            "2. Ajoutez la crème fraîche dans les épinards, salez légèrement (les ravioles sont déjà salées) et poivrez.",
+            "3. Détachez grossièrement les ravioles de la plaque et déposez-les directement sur le lit d'épinards à la crème.",
+            "4. Ne remuez pas tout de suite pour ne pas casser les ravioles. Mettez un couvercle et laissez cuire à feu doux pendant 3 minutes.",
+            "5. Retirez le couvercle, mélangez très délicatement avec une spatule pour enrober les ravioles de sauce, laissez chauffer 1 minute supplémentaire et servez."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 20/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-021",
+      "name": "Poêlée de gnocchis au pesto et tomates cerises",
+      "ingredients": [
+        "200g de gnocchis à poêler",
+        "2 cuillères à soupe de pesto (vert ou rouge)",
+        "8 tomates cerises",
+        "1 cuillère à soupe d'huile d'olive",
+        "2 cuillères à soupe d'eau",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Faites chauffer l'huile d'olive à feu moyen dans la poêle. Ajoutez les gnocchis et faites-les dorer pendant 4 minutes en les remuant souvent.",
+        "2. Coupez les tomates cerises en deux et ajoutez-les dans la poêle. Poursuivez la cuisson pendant 2 minutes pour que les tomates commencent à ramollir et à libérer leur jus.",
+        "3. Baissez le feu au minimum. Ajoutez les 2 cuillères à soupe de pesto et les 2 cuillères à soupe d'eau (l'eau va aider à détendre le pesto pour en faire une vraie sauce).",
+        "4. Mélangez délicatement pour enrober tous les gnocchis.",
+        "5. Laissez mijoter à feu très doux pendant 2 minutes supplémentaires, poivrez à votre convenance et servez chaud."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de gnocchis à poêler",
+            "2 cuillères à soupe de pesto (vert ou rouge)",
+            "8 tomates cerises",
+            "1 cuillère à soupe d'huile d'olive",
+            "2 cuillères à soupe d'eau",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Faites chauffer l'huile d'olive à feu moyen dans la poêle. Ajoutez les gnocchis et faites-les dorer pendant 4 minutes en les remuant souvent.",
+            "2. Coupez les tomates cerises en deux et ajoutez-les dans la poêle. Poursuivez la cuisson pendant 2 minutes pour que les tomates commencent à ramollir et à libérer leur jus.",
+            "3. Baissez le feu au minimum. Ajoutez les 2 cuillères à soupe de pesto et les 2 cuillères à soupe d'eau (l'eau va aider à détendre le pesto pour en faire une vraie sauce).",
+            "4. Mélangez délicatement pour enrober tous les gnocchis.",
+            "5. Laissez mijoter à feu très doux pendant 2 minutes supplémentaires, poivrez à votre convenance et servez chaud."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 21/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-022",
+      "name": "Tortilla burger (Wrap-Burger) à la poêle",
+      "ingredients": [
+        "1 tortilla de blé (wrap)",
+        "1 steak haché (100g à 125g)",
+        "1 tranche de cheddar",
+        "1/2 oignon",
+        "1 cuillère à café de ketchup ou sauce burger",
+        "1 noisette de beurre (ou un filet d'huile)."
+      ],
+      "steps": [
+        "1. Émincez finement le demi-oignon. Écrasez le steak haché crû avec la paume de la main pour le rendre le plus fin possible (comme un smash burger).",
+        "2. Faites chauffer la poêle à feu vif. Déposez-y le steak haché et les oignons émincés juste à côté. Laissez cuire 2 à 3 minutes de ce côté pour bien griller la viande.",
+        "3. Retournez le steak, mettez les oignons cuits par-dessus le steak, puis déposez la tranche de cheddar sur les oignons pour qu'elle commence à fondre. Laissez cuire 2 minutes.",
+        "4. Tartinez le centre de votre tortilla avec votre sauce. Retirez le steak de la poêle et déposez-le au milieu de la tortilla.",
+        "5. Pliez la tortilla en quatre (en rabattant les bords vers le centre pour enfermer le steak). Baissez le feu à niveau moyen, ajoutez le beurre dans la poêle et déposez le wrap plié. Faites-le dorer 1 à 2 minutes de chaque côté pour qu'il soit croustillant."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 tortilla de blé (wrap)",
+            "1 steak haché (100g à 125g)",
+            "1 tranche de cheddar",
+            "1/2 oignon",
+            "1 cuillère à café de ketchup ou sauce burger",
+            "1 noisette de beurre (ou un filet d'huile)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez finement le demi-oignon. Écrasez le steak haché crû avec la paume de la main pour le rendre le plus fin possible (comme un smash burger).",
+            "2. Faites chauffer la poêle à feu vif. Déposez-y le steak haché et les oignons émincés juste à côté. Laissez cuire 2 à 3 minutes de ce côté pour bien griller la viande.",
+            "3. Retournez le steak, mettez les oignons cuits par-dessus le steak, puis déposez la tranche de cheddar sur les oignons pour qu'elle commence à fondre. Laissez cuire 2 minutes.",
+            "4. Tartinez le centre de votre tortilla avec votre sauce. Retirez le steak de la poêle et déposez-le au milieu de la tortilla.",
+            "5. Pliez la tortilla en quatre (en rabattant les bords vers le centre pour enfermer le steak). Baissez le feu à niveau moyen, ajoutez le beurre dans la poêle et déposez le wrap plié. Faites-le dorer 1 à 2 minutes de chaque côté pour qu'il soit croustillant."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 22/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-023",
+      "name": "Risotto express aux champignons (sans riz à risotto)",
+      "ingredients": [
+        "1 sachet de riz nature pré-cuit micro-ondable (ou 150g de reste de riz cuit)",
+        "100g de champignons de Paris en boîte (ou frais)",
+        "1/2 oignon",
+        "5 cl de crème fraîche",
+        "20g de parmesan (ou fromage râpé)",
+        "10 cl de bouillon (10 cl d'eau chaude + 1/4 de cube de bouillon)",
+        "1 noisette de beurre."
+      ],
+      "steps": [
+        "1. Émincez l'oignon. Dans la poêle, faites fondre le beurre à feu moyen et faites-y revenir l'oignon et les champignons égouttés pendant 4 minutes.",
+        "2. Ajoutez le riz directement dans la poêle et mélangez bien pendant 1 minute pour qu'il s'imprègne des saveurs.",
+        "3. Versez la moitié du bouillon chaud. Laissez le riz absorber le liquide à feu doux en remuant. Une fois absorbé, versez le reste du bouillon. Cette étape prend environ 4 minutes.",
+        "4. Quand le riz a absorbé presque tout le bouillon et est bien chaud, ajoutez la crème fraîche et le parmesan.",
+        "5. Remuez énergiquement pendant 1 minute à feu très doux pour obtenir la texture crémeuse typique du risotto, puis coupez le feu."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 sachet de riz nature pré-cuit micro-ondable (ou 150g de reste de riz cuit)",
+            "100g de champignons de Paris en boîte (ou frais)",
+            "1/2 oignon",
+            "5 cl de crème fraîche",
+            "20g de parmesan (ou fromage râpé)",
+            "10 cl de bouillon (10 cl d'eau chaude + 1/4 de cube de bouillon)",
+            "1 noisette de beurre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez l'oignon. Dans la poêle, faites fondre le beurre à feu moyen et faites-y revenir l'oignon et les champignons égouttés pendant 4 minutes.",
+            "2. Ajoutez le riz directement dans la poêle et mélangez bien pendant 1 minute pour qu'il s'imprègne des saveurs.",
+            "3. Versez la moitié du bouillon chaud. Laissez le riz absorber le liquide à feu doux en remuant. Une fois absorbé, versez le reste du bouillon. Cette étape prend environ 4 minutes.",
+            "4. Quand le riz a absorbé presque tout le bouillon et est bien chaud, ajoutez la crème fraîche et le parmesan.",
+            "5. Remuez énergiquement pendant 1 minute à feu très doux pour obtenir la texture crémeuse typique du risotto, puis coupez le feu."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 23/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-024",
+      "name": "Poêlée de haricots blancs à la tomate et au bacon",
+      "ingredients": [
+        "1 petite boîte de haricots blancs cuits au naturel (environ 200g égouttés)",
+        "3 tranches de bacon (ou de poitrine fumée)",
+        "4 cuillères à soupe de coulis de tomate",
+        "1/2 gousse d'ail",
+        "1 cuillère à soupe d'huile d'olive",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Coupez les tranches de bacon en lanières et émincez l'ail. Rincez et égouttez les haricots blancs.",
+        "2. Dans la poêle, faites chauffer l'huile d'olive à feu moyen. Faites griller le bacon et l'ail pendant 2 minutes.",
+        "3. Ajoutez les haricots blancs dans la poêle et faites-les sauter avec le bacon pendant 2 minutes.",
+        "4. Versez le coulis de tomate, salez légèrement et poivrez généreusement.",
+        "5. Baissez le feu, couvrez et laissez mijoter doucement pendant 5 minutes pour que les haricots s'imprègnent bien de la sauce tomate avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 petite boîte de haricots blancs cuits au naturel (environ 200g égouttés)",
+            "3 tranches de bacon (ou de poitrine fumée)",
+            "4 cuillères à soupe de coulis de tomate",
+            "1/2 gousse d'ail",
+            "1 cuillère à soupe d'huile d'olive",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez les tranches de bacon en lanières et émincez l'ail. Rincez et égouttez les haricots blancs.",
+            "2. Dans la poêle, faites chauffer l'huile d'olive à feu moyen. Faites griller le bacon et l'ail pendant 2 minutes.",
+            "3. Ajoutez les haricots blancs dans la poêle et faites-les sauter avec le bacon pendant 2 minutes.",
+            "4. Versez le coulis de tomate, salez légèrement et poivrez généreusement.",
+            "5. Baissez le feu, couvrez et laissez mijoter doucement pendant 5 minutes pour que les haricots s'imprègnent bien de la sauce tomate avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 24/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-025",
+      "name": "Galette complète bretonne à la poêle",
+      "ingredients": [
+        "1 galette de sarrasin (blé noir)",
+        "1 œuf",
+        "1 tranche de jambon blanc",
+        "40g de fromage râpé",
+        "1 grosse noisette de beurre",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Faites fondre la moitié du beurre à feu moyen dans la poêle et déposez la galette de sarrasin bien à plat.",
+        "2. Saupoudrez le fromage râpé au centre de la galette en laissant les bords libres. Déposez la tranche de jambon par-dessus le fromage.",
+        "3. Cassez l'œuf directement au centre, sur le jambon. À l'aide du dos d'une cuillère, étalez délicatement le blanc d'œuf sur le jambon pour qu'il cuise plus vite, sans casser le jaune. Salez et poivrez le jaune.",
+        "4. Rabattez les quatre bords de la galette vers le centre pour former un carré, en laissant le jaune d'œuf visible au milieu.",
+        "5. Ajoutez le reste du beurre sous la galette, couvrez la poêle et laissez cuire à feu doux pendant 4 minutes, jusqu'à ce que le fromage soit fondu et le blanc d'œuf bien pris."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 galette de sarrasin (blé noir)",
+            "1 œuf",
+            "1 tranche de jambon blanc",
+            "40g de fromage râpé",
+            "1 grosse noisette de beurre",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Faites fondre la moitié du beurre à feu moyen dans la poêle et déposez la galette de sarrasin bien à plat.",
+            "2. Saupoudrez le fromage râpé au centre de la galette en laissant les bords libres. Déposez la tranche de jambon par-dessus le fromage.",
+            "3. Cassez l'œuf directement au centre, sur le jambon. À l'aide du dos d'une cuillère, étalez délicatement le blanc d'œuf sur le jambon pour qu'il cuise plus vite, sans casser le jaune. Salez et poivrez le jaune.",
+            "4. Rabattez les quatre bords de la galette vers le centre pour former un carré, en laissant le jaune d'œuf visible au milieu.",
+            "5. Ajoutez le reste du beurre sous la galette, couvrez la poêle et laissez cuire à feu doux pendant 4 minutes, jusqu'à ce que le fromage soit fondu et le blanc d'œuf bien pris."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 25/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-026",
+      "name": "One-Pan Pasta au thon, citron et câpres",
+      "ingredients": [
+        "100g de pâtes (spaghettis ou pennes)",
+        "1 petite boîte de thon au naturel (80g)",
+        "1 cuillère à café de câpres (optionnel",
+        "ou des olives vertes)",
+        "le jus d'un 1/2 citron",
+        "1 cuillère à soupe d'huile d'olive",
+        "300 ml d'eau",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Dans la poêle froide, déposez les pâtes, le thon égoutté et émietté, les câpres, l'huile d'olive et une pincée de sel.",
+        "2. Versez l'eau froide par-dessus. Portez à ébullition à feu vif.",
+        "3. Dès que l'eau bout, baissez à feu moyen et laissez cuire 10 à 12 minutes en remuant régulièrement. Le liquide doit presque entièrement s'évaporer.",
+        "4. Lorsque les pâtes sont cuites et qu'il reste un léger fond de sauce crémeuse, coupez le feu.",
+        "5. Versez le jus de citron frais, poivrez généreusement, mélangez bien et servez immédiatement."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100g de pâtes (spaghettis ou pennes)",
+            "1 petite boîte de thon au naturel (80g)",
+            "1 cuillère à café de câpres (optionnel",
+            "ou des olives vertes)",
+            "le jus d'un 1/2 citron",
+            "1 cuillère à soupe d'huile d'olive",
+            "300 ml d'eau",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans la poêle froide, déposez les pâtes, le thon égoutté et émietté, les câpres, l'huile d'olive et une pincée de sel.",
+            "2. Versez l'eau froide par-dessus. Portez à ébullition à feu vif.",
+            "3. Dès que l'eau bout, baissez à feu moyen et laissez cuire 10 à 12 minutes en remuant régulièrement. Le liquide doit presque entièrement s'évaporer.",
+            "4. Lorsque les pâtes sont cuites et qu'il reste un léger fond de sauce crémeuse, coupez le feu.",
+            "5. Versez le jus de citron frais, poivrez généreusement, mélangez bien et servez immédiatement."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 26/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-027",
+      "name": "Poêlée de knacks au chou et pommes de terre (façon choucroute express)",
+      "ingredients": [
+        "2 saucisses de Strasbourg (knacks)",
+        "150g de pommes de terre rissolées surgelées",
+        "1/2 petite boîte de choucroute cuite au naturel (environ 150g)",
+        "1 noisette de beurre",
+        "2 cuillères à soupe d'eau",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Coupez les saucisses en rondelles. Rincez rapidement la choucroute en boîte et essorez-la bien avec vos mains.",
+        "2. Dans la poêle, faites fondre le beurre à feu moyen. Ajoutez les pommes de terre rissolées et faites-les dorer pendant 5 minutes.",
+        "3. Ajoutez la choucroute effilochée et les rondelles de saucisses dans la poêle. Salez très légèrement et poivrez.",
+        "4. Ajoutez les 2 cuillères à soupe d'eau au fond de la poêle pour créer un peu de vapeur.",
+        "5. Couvrez la poêle et laissez mijoter à feu doux pendant 6 à 7 minutes en remuant à mi-cuisson pour que le tout soit bien chaud et fondant."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 saucisses de Strasbourg (knacks)",
+            "150g de pommes de terre rissolées surgelées",
+            "1/2 petite boîte de choucroute cuite au naturel (environ 150g)",
+            "1 noisette de beurre",
+            "2 cuillères à soupe d'eau",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez les saucisses en rondelles. Rincez rapidement la choucroute en boîte et essorez-la bien avec vos mains.",
+            "2. Dans la poêle, faites fondre le beurre à feu moyen. Ajoutez les pommes de terre rissolées et faites-les dorer pendant 5 minutes.",
+            "3. Ajoutez la choucroute effilochée et les rondelles de saucisses dans la poêle. Salez très légèrement et poivrez.",
+            "4. Ajoutez les 2 cuillères à soupe d'eau au fond de la poêle pour créer un peu de vapeur.",
+            "5. Couvrez la poêle et laissez mijoter à feu doux pendant 6 à 7 minutes en remuant à mi-cuisson pour que le tout soit bien chaud et fondant."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 27/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-028",
+      "name": "Émincé de porc ou poulet sauce moutarde",
+      "ingredients": [
+        "1 escalope de porc ou de poulet (120g)",
+        "1/2 oignon",
+        "1 grosse cuillère à café de moutarde à l'ancienne (ou forte)",
+        "5 cl de crème fraîche",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Coupez l'escalope en fines lanières (émincé) et émincez le demi- oignon.",
+        "2. Faites chauffer l'huile dans la poêle à feu vif. Faites-y sauter la viande et l'oignon pendant 4 à 5 minutes, jusqu'à ce que la viande soit bien colorée. Salez et poivrez.",
+        "3. Baissez le feu au minimum. Ajoutez la moutarde directement sur la viande et mélangez bien pendant 30 secondes.",
+        "4. Versez la crème fraîche. Mélangez pour lier la moutarde et la crème afin d'obtenir une sauce fluide et nappante.",
+        "5. Laissez mijoter à feu très doux pendant 2 minutes sans faire bouillir la crème, puis servez."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 escalope de porc ou de poulet (120g)",
+            "1/2 oignon",
+            "1 grosse cuillère à café de moutarde à l'ancienne (ou forte)",
+            "5 cl de crème fraîche",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez l'escalope en fines lanières (émincé) et émincez le demi- oignon.",
+            "2. Faites chauffer l'huile dans la poêle à feu vif. Faites-y sauter la viande et l'oignon pendant 4 à 5 minutes, jusqu'à ce que la viande soit bien colorée. Salez et poivrez.",
+            "3. Baissez le feu au minimum. Ajoutez la moutarde directement sur la viande et mélangez bien pendant 30 secondes.",
+            "4. Versez la crème fraîche. Mélangez pour lier la moutarde et la crème afin d'obtenir une sauce fluide et nappante.",
+            "5. Laissez mijoter à feu très doux pendant 2 minutes sans faire bouillir la crème, puis servez."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 28/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-029",
+      "name": "Poêlée paysanne Maïs, Lardons et Œufs brouillés",
+      "ingredients": [
+        "2 œufs",
+        "75g de lardons",
+        "1/2 petite boîte de maïs (70g)",
+        "1/2 oignon",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Émincez le demi-oignon. Dans la poêle froide, déposez les lardons et l'oignon.",
+        "2. Allumez le feu à intensité moyenne et faites dorer les lardons avec l'oignon pendant 4 minutes dans leur propre gras.",
+        "3. Égouttez le maïs et jetez-le dans la poêle. Faites sauter le tout pendant 2 minutes pour que le maïs caramélise légèrement.",
+        "4. Pendant ce temps, cassez les œufs dans un bol, poivrez (ne salez pas, les lardons le sont déjà) et battez-les rapidement à la fourchette.",
+        "5. Baissez le feu au minimum, versez les œufs battus dans la poêle et remuez continuellement avec une spatule pendant 2 minutes jusqu'à ce que les œufs soient pris mais encore moelleux."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 œufs",
+            "75g de lardons",
+            "1/2 petite boîte de maïs (70g)",
+            "1/2 oignon",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez le demi-oignon. Dans la poêle froide, déposez les lardons et l'oignon.",
+            "2. Allumez le feu à intensité moyenne et faites dorer les lardons avec l'oignon pendant 4 minutes dans leur propre gras.",
+            "3. Égouttez le maïs et jetez-le dans la poêle. Faites sauter le tout pendant 2 minutes pour que le maïs caramélise légèrement.",
+            "4. Pendant ce temps, cassez les œufs dans un bol, poivrez (ne salez pas, les lardons le sont déjà) et battez-les rapidement à la fourchette.",
+            "5. Baissez le feu au minimum, versez les œufs battus dans la poêle et remuez continuellement avec une spatule pendant 2 minutes jusqu'à ce que les œufs soient pris mais encore moelleux."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 29/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-030",
+      "name": "Pain perdu surprise à la tomate et mozzarella",
+      "ingredients": [
+        "2 tranches de pain de mie (ou pain rassis)",
+        "1 œuf",
+        "3 cuillères à soupe de lait",
+        "3 rondelles de tomate",
+        "1/2 boule de mozzarella",
+        "1 noisette de beurre",
+        "sel",
+        "poivre",
+        "herbes de Provence."
+      ],
+      "steps": [
+        "1. Dans une assiette creuse, battez l'œuf avec le lait, du sel, du poivre et une pincée d'herbes de Provence. Trempez les deux tranches de pain dedans pour qu'elles s'imbibent bien.",
+        "2. Faites fondre le beurre à feu moyen dans la poêle. Déposez les deux tranches de pain imbibées.",
+        "3. Laissez dorer la première face pendant 3 minutes, puis retournez les deux tranches.",
+        "4. Sur l'une des tranches, déposez immédiatement les rondelles de tomate et la mozzarella coupée en lamelles.",
+        "5. Refermez le sandwich avec la deuxième tranche de pain. Couvrez la poêle et laissez cuire à feu très doux pendant 3 minutes pour que le fromage fonde totalement à l'intérieur."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 tranches de pain de mie (ou pain rassis)",
+            "1 œuf",
+            "3 cuillères à soupe de lait",
+            "3 rondelles de tomate",
+            "1/2 boule de mozzarella",
+            "1 noisette de beurre",
+            "sel",
+            "poivre",
+            "herbes de Provence."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans une assiette creuse, battez l'œuf avec le lait, du sel, du poivre et une pincée d'herbes de Provence. Trempez les deux tranches de pain dedans pour qu'elles s'imbibent bien.",
+            "2. Faites fondre le beurre à feu moyen dans la poêle. Déposez les deux tranches de pain imbibées.",
+            "3. Laissez dorer la première face pendant 3 minutes, puis retournez les deux tranches.",
+            "4. Sur l'une des tranches, déposez immédiatement les rondelles de tomate et la mozzarella coupée en lamelles.",
+            "5. Refermez le sandwich avec la deuxième tranche de pain. Couvrez la poêle et laissez cuire à feu très doux pendant 3 minutes pour que le fromage fonde totalement à l'intérieur."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 30/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-031",
+      "name": "Gnocchis sauce crémeuse à la tomate et thon",
+      "ingredients": [
+        "200g de gnocchis à poêler",
+        "1 petite boîte de thon au naturel (80g)",
+        "4 cuillères à soupe de coulis de tomate",
+        "2 cuillères à soupe de crème fraîche",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Faites chauffer l'huile à feu moyen dans la poêle et faites-y dorer les gnocchis pendant 4 minutes en remuant souvent.",
+        "2. Ajoutez le thon bien égoutté et émietté directement sur les gnocchis. Mélangez pendant 1 minute.",
+        "3. Versez le coulis de tomate, salez et poivrez. Baissez le feu, couvrez la poêle et laissez mijoter doucement pendant 4 minutes.",
+        "4. Retirez le couvercle, puis ajoutez la crème fraîche.",
+        "5. Mélangez délicatement pendant 1 minute à feu très doux pour obtenir une sauce rose, onctueuse et bien chaude avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de gnocchis à poêler",
+            "1 petite boîte de thon au naturel (80g)",
+            "4 cuillères à soupe de coulis de tomate",
+            "2 cuillères à soupe de crème fraîche",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Faites chauffer l'huile à feu moyen dans la poêle et faites-y dorer les gnocchis pendant 4 minutes en remuant souvent.",
+            "2. Ajoutez le thon bien égoutté et émietté directement sur les gnocchis. Mélangez pendant 1 minute.",
+            "3. Versez le coulis de tomate, salez et poivrez. Baissez le feu, couvrez la poêle et laissez mijoter doucement pendant 4 minutes.",
+            "4. Retirez le couvercle, puis ajoutez la crème fraîche.",
+            "5. Mélangez délicatement pendant 1 minute à feu très doux pour obtenir une sauce rose, onctueuse et bien chaude avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 31/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-032",
+      "name": "Keftas de bœuf minute et oignons caramélisés",
+      "ingredients": [
+        "125g de viande hachée de bœuf",
+        "1/2 oignon",
+        "1/2 cuillère à café de cumin",
+        "1/2 cuillère à café de paprika",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Dans un bol, mélangez la viande hachée crue avec le cumin, le paprika, du sel et du poivre. Formez 3 ou 4 petites boulettes allongées (façon keftas) avec vos mains. Émincez le demi-oignon.",
+        "2. Faites chauffer l'huile à feu moyen dans la poêle. Ajoutez les oignons émincés sur un côté et les keftas de l'autre.",
+        "3. Laissez cuire les keftas 3 minutes de chaque côté pour bien les dorer. Remuez les oignons régulièrement pour qu'ils colorent sans brûler.",
+        "4. Dès que la viande est cuite à votre goût, baissez le feu au minimum.",
+        "5. Mélangez les oignons devenus fondants avec les keftas pendant 1 minute dans le jus de cuisson de la viande, puis servez (excellent dans un pain pita ou un wrap)."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "125g de viande hachée de bœuf",
+            "1/2 oignon",
+            "1/2 cuillère à café de cumin",
+            "1/2 cuillère à café de paprika",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans un bol, mélangez la viande hachée crue avec le cumin, le paprika, du sel et du poivre. Formez 3 ou 4 petites boulettes allongées (façon keftas) avec vos mains. Émincez le demi-oignon.",
+            "2. Faites chauffer l'huile à feu moyen dans la poêle. Ajoutez les oignons émincés sur un côté et les keftas de l'autre.",
+            "3. Laissez cuire les keftas 3 minutes de chaque côté pour bien les dorer. Remuez les oignons régulièrement pour qu'ils colorent sans brûler.",
+            "4. Dès que la viande est cuite à votre goût, baissez le feu au minimum.",
+            "5. Mélangez les oignons devenus fondants avec les keftas pendant 1 minute dans le jus de cuisson de la viande, puis servez (excellent dans un pain pita ou un wrap)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 32/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-033",
+      "name": "One-Pan Mac and Cheese étudiant",
+      "ingredients": [
+        "100g de pâtes (coquillettes ou macaronis)",
+        "60g de fromage râpé (un mélange de cheddar et d'emmental est idéal)",
+        "200 ml d'eau",
+        "100 ml de lait",
+        "1 noisette de beurre",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Dans la poêle froide, déposez les pâtes, le beurre, l'eau, le lait, une pincée de sel et du poivre.",
+        "2. Portez à ébullition à feu vif en remuant dès que le liquide commence à chauffer pour éviter que les pâtes ne collent au fond.",
+        "3. Réduisez à feu moyen et laissez cuire pendant 9 à 10 minutes sans cesser de remuer régulièrement. Les pâtes vont absorber le mélange eau/lait et créer un liquide épais.",
+        "4. Dès qu'il reste juste un fond de sauce très crémeuse autour des pâtes, baissez le feu au minimum.",
+        "5. Saupoudrez tout le fromage râpé en une seule fois. Remuez énergiquement pendant 1 à 2 minutes jusqu'à ce que le fromage soit entièrement fondu et file de manière ultra-gourmande."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100g de pâtes (coquillettes ou macaronis)",
+            "60g de fromage râpé (un mélange de cheddar et d'emmental est idéal)",
+            "200 ml d'eau",
+            "100 ml de lait",
+            "1 noisette de beurre",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans la poêle froide, déposez les pâtes, le beurre, l'eau, le lait, une pincée de sel et du poivre.",
+            "2. Portez à ébullition à feu vif en remuant dès que le liquide commence à chauffer pour éviter que les pâtes ne collent au fond.",
+            "3. Réduisez à feu moyen et laissez cuire pendant 9 à 10 minutes sans cesser de remuer régulièrement. Les pâtes vont absorber le mélange eau/lait et créer un liquide épais.",
+            "4. Dès qu'il reste juste un fond de sauce très crémeuse autour des pâtes, baissez le feu au minimum.",
+            "5. Saupoudrez tout le fromage râpé en une seule fois. Remuez énergiquement pendant 1 à 2 minutes jusqu'à ce que le fromage soit entièrement fondu et file de manière ultra-gourmande."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 33/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-034",
+      "name": "Poêlée de riz au curry, œufs et petits pois",
+      "ingredients": [
+        "1 sachet de riz nature pré-cuit (ou 150g de reste de riz cuit)",
+        "2 œufs",
+        "50g de petits pois surgelés",
+        "1/2 oignon",
+        "1 cuillère à café de curry en poudre",
+        "1 cuillère à soupe d'huile neutre",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Émincez le demi-oignon. Faites chauffer l'huile dans la poêle à feu moyen et faites-y revenir l'oignon et les petits pois surgelés pendant 4 minutes.",
+        "2. Ajoutez le curry en poudre dans la poêle et mélangez 30 secondes pour développer les arômes.",
+        "3. Ajoutez le riz. Remuez bien pour qu'il se colore en jaune et faites-le chauffer pendant 3 minutes. Salez et poivrez.",
+        "4. Poussez le riz sur les bords pour créer un grand espace vide au milieu de la poêle. Cassez-y les deux œufs.",
+        "5. À l'aide de votre spatule, brouillez les œufs au centre pendant 1 à 2 minutes, puis incorporez-les au reste du riz au curry. Laissez sur le feu 1 minute de plus et servez."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 sachet de riz nature pré-cuit (ou 150g de reste de riz cuit)",
+            "2 œufs",
+            "50g de petits pois surgelés",
+            "1/2 oignon",
+            "1 cuillère à café de curry en poudre",
+            "1 cuillère à soupe d'huile neutre",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez le demi-oignon. Faites chauffer l'huile dans la poêle à feu moyen et faites-y revenir l'oignon et les petits pois surgelés pendant 4 minutes.",
+            "2. Ajoutez le curry en poudre dans la poêle et mélangez 30 secondes pour développer les arômes.",
+            "3. Ajoutez le riz. Remuez bien pour qu'il se colore en jaune et faites-le chauffer pendant 3 minutes. Salez et poivrez.",
+            "4. Poussez le riz sur les bords pour créer un grand espace vide au milieu de la poêle. Cassez-y les deux œufs.",
+            "5. À l'aide de votre spatule, brouillez les œufs au centre pendant 1 à 2 minutes, puis incorporez-les au reste du riz au curry. Laissez sur le feu 1 minute de plus et servez."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 34/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-035",
+      "name": "Poêlée de dinde au paprika et pommes de terre",
+      "ingredients": [
+        "1 escalope de dinde (ou de poulet)",
+        "150g de pommes de terre rissolées surgelées",
+        "1 cuillère à café de paprika",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Coupez l'escalope de dinde en dés de taille moyenne.",
+        "2. Dans la poêle, faites chauffer l'huile à feu moyen. Versez les pommes de terre rissolées encore surgelées et laissez-les dorer pendant 6 minutes en remuant régulièrement.",
+        "3. Ajoutez les dés de dinde directement dans la poêle avec les pommes de terre. Saupoudrez le tout avec le paprika, du sel et du poivre.",
+        "4. Poursuivez la cuisson à feu moyen pendant 6 minutes supplémentaires. Remuez souvent pour que la viande cuise uniformément et s'imprègne de l'épice.",
+        "5. Vérifiez que la dinde est bien cuite à cœur et que les pommes de terre sont croustillantes avant de couper le feu."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 escalope de dinde (ou de poulet)",
+            "150g de pommes de terre rissolées surgelées",
+            "1 cuillère à café de paprika",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez l'escalope de dinde en dés de taille moyenne.",
+            "2. Dans la poêle, faites chauffer l'huile à feu moyen. Versez les pommes de terre rissolées encore surgelées et laissez-les dorer pendant 6 minutes en remuant régulièrement.",
+            "3. Ajoutez les dés de dinde directement dans la poêle avec les pommes de terre. Saupoudrez le tout avec le paprika, du sel et du poivre.",
+            "4. Poursuivez la cuisson à feu moyen pendant 6 minutes supplémentaires. Remuez souvent pour que la viande cuise uniformément et s'imprègne de l'épice.",
+            "5. Vérifiez que la dinde est bien cuite à cœur et que les pommes de terre sont croustillantes avant de couper le feu."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 35/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-036",
+      "name": "Poisson blanc express à la tomate et aux olives",
+      "ingredients": [
+        "1 filet de poisson blanc (colin",
+        "cabillaud",
+        "frais ou décongelé)",
+        "1/2 boîte de tomates concassées (200g)",
+        "6 olives vertes ou noires dénoyautées",
+        "1 gousse d'ail",
+        "1 cuillère à soupe d'huile d'olive",
+        "herbes de Provence",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Émincez finement la gousse d'ail et coupez les olives en rondelles.",
+        "2. Dans la poêle, faites chauffer l'huile d'olive à feu moyen. Faites-y revenir l'ail pendant 1 minute sans le laisser brûler.",
+        "3. Versez les tomates concassées et les rondelles d'olives. Ajoutez une pincée d'herbes de Provence, du sel et du poivre. Laissez frémir la sauce pendant 3 minutes.",
+        "4. Déposez délicatement le filet de poisson blanc au centre de la sauce tomate. À l'aide d'une cuillère, nappez le dessus du poisson avec un peu de sauce.",
+        "5. Couvrez la poêle, baissez le feu et laissez cuire pendant 6 à 8 minutes (selon l'épaisseur du poisson) jusqu'à ce que la chair soit opaque et s'émiette facilement."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 filet de poisson blanc (colin",
+            "cabillaud",
+            "frais ou décongelé)",
+            "1/2 boîte de tomates concassées (200g)",
+            "6 olives vertes ou noires dénoyautées",
+            "1 gousse d'ail",
+            "1 cuillère à soupe d'huile d'olive",
+            "herbes de Provence",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez finement la gousse d'ail et coupez les olives en rondelles.",
+            "2. Dans la poêle, faites chauffer l'huile d'olive à feu moyen. Faites-y revenir l'ail pendant 1 minute sans le laisser brûler.",
+            "3. Versez les tomates concassées et les rondelles d'olives. Ajoutez une pincée d'herbes de Provence, du sel et du poivre. Laissez frémir la sauce pendant 3 minutes.",
+            "4. Déposez délicatement le filet de poisson blanc au centre de la sauce tomate. À l'aide d'une cuillère, nappez le dessus du poisson avec un peu de sauce.",
+            "5. Couvrez la poêle, baissez le feu et laissez cuire pendant 6 à 8 minutes (selon l'épaisseur du poisson) jusqu'à ce que la chair soit opaque et s'émiette facilement."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 36/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-037",
+      "name": "Tartine \"Carbonara\" à la poêle",
+      "ingredients": [
+        "1 grande tranche de pain épaisse",
+        "2 cuillères à soupe de crème fraîche épaisse",
+        "40g de lardons",
+        "30g de fromage râpé",
+        "1 jaune d'œuf (optionnel)",
+        "poivre noir."
+      ],
+      "steps": [
+        "1. Dans la poêle bien chaude à feu vif et sans matière grasse, jetez les lardons. Faites-les griller pendant 3 minutes. Retirez-les de la poêle en laissant le gras au fond.",
+        "2. Baissez le feu à niveau doux. Déposez la tranche de pain directement dans le gras des lardons pour faire dorer le dessous pendant 2 minutes.",
+        "3. Pendant ce temps, tartinez le dessus de la tranche de pain avec la crème fraîche épaisse et poivrez généreusement. Ajoutez les lardons grillés et saupoudrez de fromage râpé.",
+        "4. Couvrez la poêle avec un couvercle et laissez cuire à feu très doux pendant 4 à 5 minutes, le temps que le fromage soit parfaitement fondu.",
+        "5. Retirez la tartine de la poêle. Si vous le souhaitez, déposez délicatement le jaune d'œuf cru au centre de la tartine chaude juste avant de manger."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 grande tranche de pain épaisse",
+            "2 cuillères à soupe de crème fraîche épaisse",
+            "40g de lardons",
+            "30g de fromage râpé",
+            "1 jaune d'œuf (optionnel)",
+            "poivre noir."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans la poêle bien chaude à feu vif et sans matière grasse, jetez les lardons. Faites-les griller pendant 3 minutes. Retirez-les de la poêle en laissant le gras au fond.",
+            "2. Baissez le feu à niveau doux. Déposez la tranche de pain directement dans le gras des lardons pour faire dorer le dessous pendant 2 minutes.",
+            "3. Pendant ce temps, tartinez le dessus de la tranche de pain avec la crème fraîche épaisse et poivrez généreusement. Ajoutez les lardons grillés et saupoudrez de fromage râpé.",
+            "4. Couvrez la poêle avec un couvercle et laissez cuire à feu très doux pendant 4 à 5 minutes, le temps que le fromage soit parfaitement fondu.",
+            "5. Retirez la tartine de la poêle. Si vous le souhaitez, déposez délicatement le jaune d'œuf cru au centre de la tartine chaude juste avant de manger."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 37/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-038",
+      "name": "Couscous minute aux merguez",
+      "ingredients": [
+        "60g de semoule de blé moyenne (crue)",
+        "2 merguez",
+        "1/2 petite boîte de pois chiches (100g égouttés)",
+        "4 cuillères à soupe de coulis de tomate",
+        "150 ml d'eau chaude",
+        "sel",
+        "poivre",
+        "une pincée de ras-el-hanout ou de piment (optionnel)."
+      ],
+      "steps": [
+        "1. Coupez les merguez en morceaux d'environ 2 cm. Dans la poêle chaude sans matière grasse, faites-les dorer à feu moyen pendant 4 minutes pour qu'elles rendent leur jus.",
+        "2. Ajoutez les pois chiches rincés et égouttés, le coulis de tomate et l'eau chaude. Si vous avez des épices (ras-el-hanout), ajoutez-les maintenant avec un peu de sel et de poivre. Portez à ébullition.",
+        "3. Baissez le feu au minimum. Saupoudrez la semoule crue de manière uniforme sur tout le liquide de la poêle.",
+        "4. Ne mélangez pas. Couvrez immédiatement la poêle avec un couvercle et coupez complètement le feu.",
+        "5. Laissez gonfler pendant 5 minutes sans ouvrir. Retirez le couvercle, égrenez la semoule délicatement à l'aide d'une fourchette en la mélangeant aux merguez et aux pois chiches, puis servez."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "60g de semoule de blé moyenne (crue)",
+            "2 merguez",
+            "1/2 petite boîte de pois chiches (100g égouttés)",
+            "4 cuillères à soupe de coulis de tomate",
+            "150 ml d'eau chaude",
+            "sel",
+            "poivre",
+            "une pincée de ras-el-hanout ou de piment (optionnel)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez les merguez en morceaux d'environ 2 cm. Dans la poêle chaude sans matière grasse, faites-les dorer à feu moyen pendant 4 minutes pour qu'elles rendent leur jus.",
+            "2. Ajoutez les pois chiches rincés et égouttés, le coulis de tomate et l'eau chaude. Si vous avez des épices (ras-el-hanout), ajoutez-les maintenant avec un peu de sel et de poivre. Portez à ébullition.",
+            "3. Baissez le feu au minimum. Saupoudrez la semoule crue de manière uniforme sur tout le liquide de la poêle.",
+            "4. Ne mélangez pas. Couvrez immédiatement la poêle avec un couvercle et coupez complètement le feu.",
+            "5. Laissez gonfler pendant 5 minutes sans ouvrir. Retirez le couvercle, égrenez la semoule délicatement à l'aide d'une fourchette en la mélangeant aux merguez et aux pois chiches, puis servez."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 38/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-039",
+      "name": "Poêlée de thon surprise au maïs et œuf miroir",
+      "ingredients": [
+        "1 petite boîte de thon au naturel (80g)",
+        "1/2 petite boîte de maïs (70g)",
+        "1 œuf",
+        "1/2 oignon",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Émincez le demi-oignon. Faites-le revenir dans la poêle avec l'huile à feu moyen pendant 2 minutes.",
+        "2. Ajoutez le thon égoutté et émietté ainsi que le maïs. Mélangez bien le tout.",
+        "3. Faites sauter le mélange pendant 3 à 4 minutes en remuant régulièrement. Le maïs et le thon doivent légèrement dorer. Salez et poivrez.",
+        "4. À l'aide de votre spatule, écartez le mélange vers les bords de la poêle pour dégager un espace rond au centre.",
+        "5. Cassez l'œuf directement dans cet espace. Couvrez la poêle et laissez cuire pendant 3 à 4 minutes, jusqu'à ce que le blanc de l'œuf soit blanc et opaque, mais le jaune encore coulant."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 petite boîte de thon au naturel (80g)",
+            "1/2 petite boîte de maïs (70g)",
+            "1 œuf",
+            "1/2 oignon",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez le demi-oignon. Faites-le revenir dans la poêle avec l'huile à feu moyen pendant 2 minutes.",
+            "2. Ajoutez le thon égoutté et émietté ainsi que le maïs. Mélangez bien le tout.",
+            "3. Faites sauter le mélange pendant 3 à 4 minutes en remuant régulièrement. Le maïs et le thon doivent légèrement dorer. Salez et poivrez.",
+            "4. À l'aide de votre spatule, écartez le mélange vers les bords de la poêle pour dégager un espace rond au centre.",
+            "5. Cassez l'œuf directement dans cet espace. Couvrez la poêle et laissez cuire pendant 3 à 4 minutes, jusqu'à ce que le blanc de l'œuf soit blanc et opaque, mais le jaune encore coulant."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 39/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-040",
+      "name": "Dessert étudiant : Poêlée de pomme caramélisée au pain perdu",
+      "ingredients": [
+        "1 pomme",
+        "1 tranche de pain (de mie ou rassis)",
+        "1 œuf",
+        "3 cuillères à soupe de lait",
+        "1 cuillère à soupe de sucre (ou de confiture)",
+        "1 grosse noisette de beurre",
+        "une pincée de cannelle (optionnel)."
+      ],
+      "steps": [
+        "1. Épluchez la pomme et coupez-la en fines lamelles. Dans un bol, battez l'œuf avec le lait. Trempez la tranche de pain dedans pour qu'elle s'imbibe bien.",
+        "2. Dans la poêle, faites fondre la moitié du beurre à feu moyen. Déposez les lamelles de pomme d'un côté de la poêle et saupoudrez-les avec le sucre (et la cannelle). Laissez-les dorer 3 minutes.",
+        "3. Poussez les pommes sur un côté. Ajoutez le reste du beurre dans l'espace libre et déposez-y la tranche de pain imbibée.",
+        "4. Laissez cuire pendant 3 minutes. Retournez la tranche de pain et retournez également les morceaux de pommes.",
+        "5. Poursuivez la cuisson pendant 3 minutes supplémentaires jusqu'à ce que le pain soit bien doré et les pommes parfaitement tendres et caramélisées. Servez les pommes sur le pain perdu."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 pomme",
+            "1 tranche de pain (de mie ou rassis)",
+            "1 œuf",
+            "3 cuillères à soupe de lait",
+            "1 cuillère à soupe de sucre (ou de confiture)",
+            "1 grosse noisette de beurre",
+            "une pincée de cannelle (optionnel)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Épluchez la pomme et coupez-la en fines lamelles. Dans un bol, battez l'œuf avec le lait. Trempez la tranche de pain dedans pour qu'elle s'imbibe bien.",
+            "2. Dans la poêle, faites fondre la moitié du beurre à feu moyen. Déposez les lamelles de pomme d'un côté de la poêle et saupoudrez-les avec le sucre (et la cannelle). Laissez-les dorer 3 minutes.",
+            "3. Poussez les pommes sur un côté. Ajoutez le reste du beurre dans l'espace libre et déposez-y la tranche de pain imbibée.",
+            "4. Laissez cuire pendant 3 minutes. Retournez la tranche de pain et retournez également les morceaux de pommes.",
+            "5. Poursuivez la cuisson pendant 3 minutes supplémentaires jusqu'à ce que le pain soit bien doré et les pommes parfaitement tendres et caramélisées. Servez les pommes sur le pain perdu."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 40/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-041",
+      "name": "Galettes croustillantes de thon et maïs",
+      "ingredients": [
+        "1 petite boîte de thon au naturel (80g)",
+        "1/2 petite boîte de maïs (70g)",
+        "1 œuf",
+        "1 cuillère à soupe bombée de farine (ou chapelure)",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Égouttez soigneusement le thon et le maïs. Dans un bol, émiettez le thon à la fourchette, ajoutez le maïs, l'œuf entier et la farine. Salez et poivrez.",
+        "2. Mélangez énergiquement jusqu'à obtenir une pâte épaisse et homogène.",
+        "3. Faites chauffer l'huile dans la poêle à feu moyen. Avec une grosse cuillère, déposez 2 ou 3 tas du mélange dans la poêle.",
+        "4. Aplatissez doucement chaque tas avec le dos de la cuillère pour former de petites galettes.",
+        "5. Laissez dorer 4 minutes de la première face sans y toucher, puis retournez-les délicatement et faites cuire 3 à 4 minutes de l'autre côté jusqu'à ce qu'elles soient bien croustillantes."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 petite boîte de thon au naturel (80g)",
+            "1/2 petite boîte de maïs (70g)",
+            "1 œuf",
+            "1 cuillère à soupe bombée de farine (ou chapelure)",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Égouttez soigneusement le thon et le maïs. Dans un bol, émiettez le thon à la fourchette, ajoutez le maïs, l'œuf entier et la farine. Salez et poivrez.",
+            "2. Mélangez énergiquement jusqu'à obtenir une pâte épaisse et homogène.",
+            "3. Faites chauffer l'huile dans la poêle à feu moyen. Avec une grosse cuillère, déposez 2 ou 3 tas du mélange dans la poêle.",
+            "4. Aplatissez doucement chaque tas avec le dos de la cuillère pour former de petites galettes.",
+            "5. Laissez dorer 4 minutes de la première face sans y toucher, puis retournez-les délicatement et faites cuire 3 à 4 minutes de l'autre côté jusqu'à ce qu'elles soient bien croustillantes."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 41/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-042",
+      "name": "Gnocchis crémeux à la feta et tomates cerises",
+      "ingredients": [
+        "200g de gnocchis à poêler",
+        "8 tomates cerises",
+        "50g de feta",
+        "1 gousse d'ail",
+        "1 cuillère à soupe d'huile d'olive",
+        "3 cuillères à soupe d'eau",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Coupez les tomates cerises en deux et émincez finement la gousse d'ail.",
+        "2. Faites chauffer l'huile d'olive dans la poêle à feu moyen et jetez-y les gnocchis. Faites-les dorer pendant 4 minutes en les remuant souvent.",
+        "3. Ajoutez les tomates cerises et l'ail dans la poêle. Faites sauter le tout pendant 2 minutes.",
+        "4. Émiettez la feta directement par-dessus les gnocchis et ajoutez les 3 cuillères à soupe d'eau.",
+        "5. Couvrez immédiatement la poêle et baissez le feu au minimum. Laissez fondre pendant 3 à 4 minutes, puis retirez le couvercle et mélangez bien : la feta fondue et l'eau vont former une sauce onctueuse enrobant les gnocchis."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de gnocchis à poêler",
+            "8 tomates cerises",
+            "50g de feta",
+            "1 gousse d'ail",
+            "1 cuillère à soupe d'huile d'olive",
+            "3 cuillères à soupe d'eau",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez les tomates cerises en deux et émincez finement la gousse d'ail.",
+            "2. Faites chauffer l'huile d'olive dans la poêle à feu moyen et jetez-y les gnocchis. Faites-les dorer pendant 4 minutes en les remuant souvent.",
+            "3. Ajoutez les tomates cerises et l'ail dans la poêle. Faites sauter le tout pendant 2 minutes.",
+            "4. Émiettez la feta directement par-dessus les gnocchis et ajoutez les 3 cuillères à soupe d'eau.",
+            "5. Couvrez immédiatement la poêle et baissez le feu au minimum. Laissez fondre pendant 3 à 4 minutes, puis retirez le couvercle et mélangez bien : la feta fondue et l'eau vont former une sauce onctueuse enrobant les gnocchis."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 42/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-043",
+      "name": "One-Pan Pasta façon Tartiflette étudiante",
+      "ingredients": [
+        "100g de pâtes (coquillettes ou pennes)",
+        "40g de lardons",
+        "1/4 de Reblochon (ou 2 tranches de fromage à raclette)",
+        "1/2 oignon",
+        "250 ml d'eau",
+        "50 ml de lait (ou crème)",
+        "poivre."
+      ],
+      "steps": [
+        "1. Émincez finement le demi-oignon. Dans la poêle froide, déposez les lardons et l'oignon.",
+        "2. Allumez le feu à intensité moyenne et faites-les dorer ensemble pendant 3 minutes dans le gras des lardons.",
+        "3. Ajoutez les pâtes crues, l'eau et le lait. Poivrez généreusement (inutile de saler, les lardons s'en chargent).",
+        "4. Portez à ébullition à feu vif, puis baissez à feu moyen. Laissez cuire environ 10 minutes en remuant régulièrement jusqu'à ce que les pâtes aient absorbé la quasi-totalité du liquide.",
+        "5. Coupez les tranches de fromage, déposez-les sur les pâtes chaudes, couvrez la poêle et coupez le feu. Laissez reposer 3 minutes pour que le fromage fonde totalement avant de déguster."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100g de pâtes (coquillettes ou pennes)",
+            "40g de lardons",
+            "1/4 de Reblochon (ou 2 tranches de fromage à raclette)",
+            "1/2 oignon",
+            "250 ml d'eau",
+            "50 ml de lait (ou crème)",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez finement le demi-oignon. Dans la poêle froide, déposez les lardons et l'oignon.",
+            "2. Allumez le feu à intensité moyenne et faites-les dorer ensemble pendant 3 minutes dans le gras des lardons.",
+            "3. Ajoutez les pâtes crues, l'eau et le lait. Poivrez généreusement (inutile de saler, les lardons s'en chargent).",
+            "4. Portez à ébullition à feu vif, puis baissez à feu moyen. Laissez cuire environ 10 minutes en remuant régulièrement jusqu'à ce que les pâtes aient absorbé la quasi-totalité du liquide.",
+            "5. Coupez les tranches de fromage, déposez-les sur les pâtes chaudes, couvrez la poêle et coupez le feu. Laissez reposer 3 minutes pour que le fromage fonde totalement avant de déguster."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 43/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-044",
+      "name": "Œufs brouillés à la mexicaine",
+      "ingredients": [
+        "3 œufs",
+        "1/2 petite boîte de haricots rouges (100g égouttés)",
+        "2 cuillères à soupe de coulis de tomate (ou sauce salsa)",
+        "1/2 poivron vert ou rouge",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre",
+        "piment (optionnel)."
+      ],
+      "steps": [
+        "1. Coupez le demi-poivron en très petits dés. Rincez et égouttez les haricots rouges.",
+        "2. Dans la poêle, faites chauffer l'huile à feu moyen et faites sauter les dés de poivron pendant 4 minutes pour les attendrir.",
+        "3. Ajoutez les haricots rouges et le coulis de tomate. Laissez mijoter pendant 2 minutes.",
+        "4. Dans un bol, battez les œufs à la fourchette avec du sel et du poivre. Versez-les directement dans la poêle sur les légumes.",
+        "5. Baissez le feu au minimum et remuez constamment avec votre spatule pendant 2 minutes pour cuire les œufs de manière très moelleuse et les lier aux haricots et poivrons."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "3 œufs",
+            "1/2 petite boîte de haricots rouges (100g égouttés)",
+            "2 cuillères à soupe de coulis de tomate (ou sauce salsa)",
+            "1/2 poivron vert ou rouge",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre",
+            "piment (optionnel)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez le demi-poivron en très petits dés. Rincez et égouttez les haricots rouges.",
+            "2. Dans la poêle, faites chauffer l'huile à feu moyen et faites sauter les dés de poivron pendant 4 minutes pour les attendrir.",
+            "3. Ajoutez les haricots rouges et le coulis de tomate. Laissez mijoter pendant 2 minutes.",
+            "4. Dans un bol, battez les œufs à la fourchette avec du sel et du poivre. Versez-les directement dans la poêle sur les légumes.",
+            "5. Baissez le feu au minimum et remuez constamment avec votre spatule pendant 2 minutes pour cuire les œufs de manière très moelleuse et les lier aux haricots et poivrons."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 44/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-045",
+      "name": "Riz sauté au poulet et sauce soja",
+      "ingredients": [
+        "1 sachet de riz nature pré-cuit (ou 150g de reste de riz cuit)",
+        "1 blanc de poulet",
+        "1 cuillère à soupe de sauce soja",
+        "1 cuillère à soupe d'huile neutre",
+        "sel",
+        "poivre",
+        "quelques graines de sésame (optionnel)."
+      ],
+      "steps": [
+        "1. Coupez le blanc de poulet en tout petits cubes (ils cuiront ainsi très vite).",
+        "2. Faites chauffer l'huile à feu vif dans la poêle et saisissez les dés de poulet pendant 4 minutes pour qu'ils soient bien cuits et dorés.",
+        "3. Ajoutez le riz pré-cuit directement dans la poêle avec le poulet. Mélangez bien et faites sauter le tout à feu moyen pendant 3 minutes en remuant régulièrement.",
+        "4. Versez la sauce soja sur l'ensemble des ingrédients.",
+        "5. Mélangez énergiquement pendant 1 minute pour que le riz colore et s'imprègne bien, puis coupez le feu."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 sachet de riz nature pré-cuit (ou 150g de reste de riz cuit)",
+            "1 blanc de poulet",
+            "1 cuillère à soupe de sauce soja",
+            "1 cuillère à soupe d'huile neutre",
+            "sel",
+            "poivre",
+            "quelques graines de sésame (optionnel)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez le blanc de poulet en tout petits cubes (ils cuiront ainsi très vite).",
+            "2. Faites chauffer l'huile à feu vif dans la poêle et saisissez les dés de poulet pendant 4 minutes pour qu'ils soient bien cuits et dorés.",
+            "3. Ajoutez le riz pré-cuit directement dans la poêle avec le poulet. Mélangez bien et faites sauter le tout à feu moyen pendant 3 minutes en remuant régulièrement.",
+            "4. Versez la sauce soja sur l'ensemble des ingrédients.",
+            "5. Mélangez énergiquement pendant 1 minute pour que le riz colore et s'imprègne bien, puis coupez le feu."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 45/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-046",
+      "name": "Tortilla roulée croustillante Bœuf & Fromage (Fajita Express)",
+      "ingredients": [
+        "1 tortilla de blé (wrap)",
+        "100g de viande hachée de bœuf",
+        "40g de fromage râpé",
+        "1/2 oignon",
+        "1 cuillère à soupe de coulis de tomate",
+        "1 cuillère à soupe d'huile",
+        "sel",
+        "poivre",
+        "paprika."
+      ],
+      "steps": [
+        "1. Émincez l'oignon. Dans la poêle, faites chauffer la moitié de l'huile et faites revenir l'oignon et la viande hachée pendant 3 minutes à feu vif. Salez, poivrez et ajoutez une pincée de paprika.",
+        "2. Ajoutez le coulis de tomate, mélangez et laissez cuire 1 minute, puis débarrassez la viande dans une assiette. Essuyez rapidement la poêle avec un essuie-tout.",
+        "3. Posez la tortilla à plat sur votre plan de travail. Déposez la viande cuite au centre, saupoudrez de fromage râpé, puis roulez fermement la tortilla en rabattant les côtés pour former un burrito fermé.",
+        "4. Mettez le reste d'huile dans la poêle à feu moyen et déposez-y le wrap roulé (côté pliure vers le bas en premier pour sceller le wrap).",
+        "5. Faites dorer 2 minutes de chaque côté jusqu'à ce que le wrap soit croustillant et le fromage fondu."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 tortilla de blé (wrap)",
+            "100g de viande hachée de bœuf",
+            "40g de fromage râpé",
+            "1/2 oignon",
+            "1 cuillère à soupe de coulis de tomate",
+            "1 cuillère à soupe d'huile",
+            "sel",
+            "poivre",
+            "paprika."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez l'oignon. Dans la poêle, faites chauffer la moitié de l'huile et faites revenir l'oignon et la viande hachée pendant 3 minutes à feu vif. Salez, poivrez et ajoutez une pincée de paprika.",
+            "2. Ajoutez le coulis de tomate, mélangez et laissez cuire 1 minute, puis débarrassez la viande dans une assiette. Essuyez rapidement la poêle avec un essuie-tout.",
+            "3. Posez la tortilla à plat sur votre plan de travail. Déposez la viande cuite au centre, saupoudrez de fromage râpé, puis roulez fermement la tortilla en rabattant les côtés pour former un burrito fermé.",
+            "4. Mettez le reste d'huile dans la poêle à feu moyen et déposez-y le wrap roulé (côté pliure vers le bas en premier pour sceller le wrap).",
+            "5. Faites dorer 2 minutes de chaque côté jusqu'à ce que le wrap soit croustillant et le fromage fondu."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 46/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-047",
+      "name": "Poêlée de gnocchis au jambon cru et copeaux de fromage",
+      "ingredients": [
+        "200g de gnocchis à poêler",
+        "2 tranches de jambon cru (type Serrano ou Prosciutto)",
+        "30g de parmesan ou de fromage à pâte dure (emmental coupé fin)",
+        "1 cuillère à soupe d'huile d'olive",
+        "poivre noir."
+      ],
+      "steps": [
+        "1. Coupez les tranches de jambon cru en larges lanières.",
+        "2. Faites chauffer l'huile d'olive dans la poêle à feu moyen. Versez les gnocchis et faites-les dorer pendant 5 à 6 minutes pour qu'ils soient bien croustillants à l'extérieur et moelleux à l'intérieur.",
+        "3. Baissez le feu au minimum, jetez les lanières de jambon cru dans la poêle et mélangez-les aux gnocchis chauds pendant seulement 30 secondes (le jambon doit juste tiédir et libérer son parfum sans trop cuire, sinon il devient trop salé).",
+        "4. Coupez le feu et transférez le tout dans votre assiette.",
+        "5. Parsemez immédiatement de copeaux de fromage et d'un tour de moulin à poivre avant de servir."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200g de gnocchis à poêler",
+            "2 tranches de jambon cru (type Serrano ou Prosciutto)",
+            "30g de parmesan ou de fromage à pâte dure (emmental coupé fin)",
+            "1 cuillère à soupe d'huile d'olive",
+            "poivre noir."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Coupez les tranches de jambon cru en larges lanières.",
+            "2. Faites chauffer l'huile d'olive dans la poêle à feu moyen. Versez les gnocchis et faites-les dorer pendant 5 à 6 minutes pour qu'ils soient bien croustillants à l'extérieur et moelleux à l'intérieur.",
+            "3. Baissez le feu au minimum, jetez les lanières de jambon cru dans la poêle et mélangez-les aux gnocchis chauds pendant seulement 30 secondes (le jambon doit juste tiédir et libérer son parfum sans trop cuire, sinon il devient trop salé).",
+            "4. Coupez le feu et transférez le tout dans votre assiette.",
+            "5. Parsemez immédiatement de copeaux de fromage et d'un tour de moulin à poivre avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 47/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-048",
+      "name": "Thon chaud à la crème, ail et pâtes",
+      "ingredients": [
+        "100g de pâtes (coquillettes de préférence)",
+        "1 petite boîte de thon au naturel (80g)",
+        "2 cuillères à soupe de crème fraîche",
+        "1/2 gousse d'ail",
+        "300 ml d'eau",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Émincez très finement la demi-gousse d'ail.",
+        "2. Dans la poêle froide, déposez les pâtes, l'ail émincé, le thon bien égoutté et émietté, ainsi qu'une bonne pincée de sel. Versez l'eau par- dessus.",
+        "3. Portez à ébullition à feu vif, puis baissez le feu à intensité moyenne et laissez cuire 10 minutes en remuant fréquemment.",
+        "4. Quand le liquide a été absorbé en quasi-totalité par les pâtes, réduisez le feu au strict minimum.",
+        "5. Incorporez la crème fraîche, poivrez généreusement et remuez pendant 1 minute pour lier la sauce et obtenir un plat de pâtes au thon bien crémeux."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100g de pâtes (coquillettes de préférence)",
+            "1 petite boîte de thon au naturel (80g)",
+            "2 cuillères à soupe de crème fraîche",
+            "1/2 gousse d'ail",
+            "300 ml d'eau",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Émincez très finement la demi-gousse d'ail.",
+            "2. Dans la poêle froide, déposez les pâtes, l'ail émincé, le thon bien égoutté et émietté, ainsi qu'une bonne pincée de sel. Versez l'eau par- dessus.",
+            "3. Portez à ébullition à feu vif, puis baissez le feu à intensité moyenne et laissez cuire 10 minutes en remuant fréquemment.",
+            "4. Quand le liquide a été absorbé en quasi-totalité par les pâtes, réduisez le feu au strict minimum.",
+            "5. Incorporez la crème fraîche, poivrez généreusement et remuez pendant 1 minute pour lier la sauce et obtenir un plat de pâtes au thon bien crémeux."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 48/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-049",
+      "name": "Poêlée de pois chiches au chorizo",
+      "ingredients": [
+        "1 petite boîte de pois chiches (200g égouttés)",
+        "40g de chorizo (doux ou fort selon les goûts)",
+        "1/2 oignon",
+        "3 cuillères à soupe de coulis de tomate",
+        "sel",
+        "poivre."
+      ],
+      "steps": [
+        "1. Retirez la peau du chorizo et coupez-le en fines rondelles. Émincez le demi-oignon. Rincez et égouttez les pois chiches.",
+        "2. Déposez les rondelles de chorizo et l'oignon dans la poêle froide. Allumez à feu moyen et laissez suer pendant 4 minutes. Le chorizo va libérer son huile rouge parfumée.",
+        "3. Ajoutez les pois chiches dans la poêle. Mélangez bien pour les enrober de l'huile de chorizo et faites sauter le tout pendant 3 minutes.",
+        "4. Versez le coulis de tomate, salez très légèrement et poivrez.",
+        "5. Laissez mijoter à feu doux pendant 3 minutes supplémentaires pour que les pois chiches s'imprègnent des saveurs épicées du chorizo."
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 petite boîte de pois chiches (200g égouttés)",
+            "40g de chorizo (doux ou fort selon les goûts)",
+            "1/2 oignon",
+            "3 cuillères à soupe de coulis de tomate",
+            "sel",
+            "poivre."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Retirez la peau du chorizo et coupez-le en fines rondelles. Émincez le demi-oignon. Rincez et égouttez les pois chiches.",
+            "2. Déposez les rondelles de chorizo et l'oignon dans la poêle froide. Allumez à feu moyen et laissez suer pendant 4 minutes. Le chorizo va libérer son huile rouge parfumée.",
+            "3. Ajoutez les pois chiches dans la poêle. Mélangez bien pour les enrober de l'huile de chorizo et faites sauter le tout pendant 3 minutes.",
+            "4. Versez le coulis de tomate, salez très légèrement et poivrez.",
+            "5. Laissez mijoter à feu doux pendant 3 minutes supplémentaires pour que les pois chiches s'imprègnent des saveurs épicées du chorizo."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 49/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
+    },
+    {
+      "id": "student-one-pan-050",
+      "name": "Dessert étudiant : Le Pancake géant à la poêle",
+      "ingredients": [
+        "1 œuf",
+        "4 cuillères à soupe bombées de farine",
+        "1 cuillère à café de sucre",
+        "1/2 cuillère à café de levure chimique (optionnel)",
+        "5 cl de lait",
+        "1 noisette de beurre",
+        "garniture au choix (Nutella",
+        "confiture",
+        "sirop)."
+      ],
+      "steps": [
+        "1. Dans un bol ou un grand mug, mélangez la farine, le sucre et la levure. Ajoutez l'œuf entier et mélangez, puis versez le lait petit à petit en fouettant à la fourchette pour obtenir une pâte lisse et épaisse (plus épaisse qu'une pâte à crêpe).",
+        "2. Faites fondre la noisette de beurre dans la poêle à feu moyen et essuyez l'excédent avec un essuie-tout pour graisser la surface.",
+        "3. Versez la totalité de la pâte au centre de la poêle chaude. Elle va s'étaler d'elle-même pour former un unique pancake géant.",
+        "4. Laissez cuire à feu moyen-doux pendant 3 à 4 minutes. Dès que de petites bulles se forment à la surface et que les bords deviennent mats, c'est le moment de le retourner.",
+        "5. Glissez délicatement une spatule sous le pancake, retournez-le d'un geste vif et laissez cuire la deuxième face pendant 2 minutes. Servez chaud avec votre garniture préférée !"
+      ],
+      "robot": [],
+      "notes": [
+        "Bloc : Étudiant & Petit Budget → 🍳 Les Options de Cuisson Unique → 🍳 100% Poêle (One-Pan).",
+        "Toutes les étapes de cuisson se font dans une seule poêle; un bol peut être utilisé uniquement pour mélanger si nécessaire.",
+        "Quantités reprises du PDF, généralement pour 1 portion; multiplier les ingrédients par 4 pour servir 4 personnes."
+      ],
+      "sections": [
+        {
+          "title": "🍳 Cuisson unique — une seule poêle",
+          "lines": [
+            "Une seule poêle pour toutes les étapes de cuisson.",
+            "👥 Quantités adaptables : base du PDF, multiplier par 4 pour 4 personnes."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 œuf",
+            "4 cuillères à soupe bombées de farine",
+            "1 cuillère à café de sucre",
+            "1/2 cuillère à café de levure chimique (optionnel)",
+            "5 cl de lait",
+            "1 noisette de beurre",
+            "garniture au choix (Nutella",
+            "confiture",
+            "sirop)."
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans un bol ou un grand mug, mélangez la farine, le sucre et la levure. Ajoutez l'œuf entier et mélangez, puis versez le lait petit à petit en fouettant à la fourchette pour obtenir une pâte lisse et épaisse (plus épaisse qu'une pâte à crêpe).",
+            "2. Faites fondre la noisette de beurre dans la poêle à feu moyen et essuyez l'excédent avec un essuie-tout pour graisser la surface.",
+            "3. Versez la totalité de la pâte au centre de la poêle chaude. Elle va s'étaler d'elle-même pour former un unique pancake géant.",
+            "4. Laissez cuire à feu moyen-doux pendant 3 à 4 minutes. Dès que de petites bulles se forment à la surface et que les bords deviennent mats, c'est le moment de le retourner.",
+            "5. Glissez délicatement une spatule sous le pancake, retournez-le d'un geste vif et laissez cuire la deuxième face pendant 2 minutes. Servez chaud avec votre garniture préférée !"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES ETUDIANTS POELE » — fiche 50/50",
+      "timePrep": "5 min (estimation; non indiqué dans le PDF)",
+      "timeCook": "Voir durées indiquées dans les étapes (le PDF ne donne pas de durée totale)",
+      "servings": "1 portion — quantités adaptables ×4 pour 4 personnes",
+      "blurb": "🎓 Étudiant & Petit Budget · 🍳 One-Pan",
+      "profil": "etudiant",
+      "sous_etudiant": "one_pan"
     }
   ],
   "plan": [
