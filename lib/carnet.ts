@@ -89,7 +89,7 @@ export function seasonalReplacement(
     .filter((recipe) =>
       recipe.id !== currentRecipeId &&
       !excludedIds.has(recipe.id) &&
-      isCompleteRecipe(recipe) &&
+      isValidatedRecipe(recipe) &&
       isMealRecipe(recipe) &&
       seasonalScore(recipe, season) > 0
     )
@@ -116,6 +116,45 @@ function isCompleteRecipe(recipe: Recipe): boolean {
   return ingredients.length >= 2 && steps.length >= 2;
 }
 
+const SEASONING_ONLY = /^(sel|poivre|épices?|epices?|herbes|aromates|persil|coriandre|basilic|ciboulette|menthe|thym|laurier|paprika|cumin|curry|muscade|cannelle|piment|origan|aneth|romarin|herbes de provence)(\\b|\\s|,)/i;
+const QUANTIFIED_INGREDIENT = /\\b\\d+(?:[.,]\\d+)?\\s*(?:kg|g|grammes?|mg|l|litres?|ml|cl|c\\.?\\s*à\\s*(?:soupe|café)|càs|cac|cs|cc|cuillères?|pincées?|tranches?|gousses?|filets?|doses?|boîtes?|boites?|pots?|paquets?|branches?|feuilles?|poignées?|poignees?|tasses?|verres?|œufs?|oeufs?|avocats?|tomates?|carottes?|courgettes?|poivrons?|oignons?|pommes?|bananes?|citrons?|concombres?|tortillas?|wraps?|galettes?)(?:\\b|\\s)/i;
+
+/** Gate de sécurité du planning : quantités chiffrées, temps explicites, portions numériques et étapes réelles. */
+export function isValidatedRecipe(recipe: Recipe): boolean {
+  if (!isCompleteRecipe(recipe) || isSauceOrSideRecipe(recipe.name)) return false;
+  const prep = durationMinutes(recipe.timePrep);
+  const cook = durationMinutes(recipe.timeCook);
+  if (prep === null || cook === null || prep < 0 || cook < 0) return false;
+  if (!recipe.servings || !/\\b\\d+\\b/.test(recipe.servings)) return false;
+  const ingredients = (recipe.ingredients || []).filter((line) => line.trim() && !isPlaceholderIngredient(line));
+  if (ingredients.length < 3 || ingredients.some((line) => !QUANTIFIED_INGREDIENT.test(line) && !SEASONING_ONLY.test(line.trim()))) return false;
+  const steps = (recipe.steps || []).filter((line) => line.trim() && !/^(a completer|etapes a definir|mode d'emploi a ajouter)/i.test(line));
+  return steps.length >= 3 && steps.every((step) => !/^(à compléter|etape à definir|étape à définir|mode d'emploi à ajouter)/i.test(step.trim()));
+}
+
+function isSauceOrSideRecipe(name: string): boolean {
+  return /^(sauce|marinade|vinaigrette|pesto|coulis|mélange d'épices|melange d'epices|épices|epices|granola|confiture|compote|sirop|boisson|cocktail|tartinade|dip\\b|crackers|gressins|biscuits apéritifs)/i.test(name.trim());
+}
+
+export type PlanningPreferences = {
+  etudiant?: boolean; vegetarien?: boolean; vegan?: boolean; halal?: boolean;
+  sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean;
+};
+
+function profileAllows(recipe: Recipe, prefs: PlanningPreferences): boolean {
+  const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || []), ...(recipe.steps || [])].join(" "));
+  const regime = normalizedSeasonText(recipe.regime || "");
+  const tags = normalizedSeasonText(recipe.sous_regime || "");
+  if (prefs.vegan && regime !== "vegan") return false;
+  if (prefs.vegetarien && !["vegan", "vegetarien", "vegetarian"].includes(regime)) return false;
+  if (prefs.etudiant && !/etudiant|petit.?budget|economique|budget/.test(tags + " " + text)) return false;
+  if (prefs.halal && (/(porc|lardon|jambon|bacon|saucisse de porc|vin blanc|vin rouge|rhum|cognac|porto|alcool)/.test(text) || !/halal/.test(regime + " " + tags + " " + text))) return false;
+  if (prefs.sansGluten && /(farine de ble|pain|pates|semoule|couscous|tortilla|wrap|chapelure|seitan|sauce soja(?! sans gluten))/.test(text)) return false;
+  if (prefs.sansLactose && /(lait|creme|beurre|fromage|yaourt|skyr|ricotta|mozzarella|parmesan|feta)/.test(text)) return false;
+  if (prefs.sansFruitsCoque && /(amande|noisette|noix|pistache|noix de cajou|pignon|cacahuete)/.test(text)) return false;
+  return true;
+}
+
 function seasonalScore(recipe: Recipe, season: Season): number {
   if (!isCompleteRecipe(recipe)) return 0;
   const text = normalizedSeasonText([
@@ -126,7 +165,7 @@ function seasonalScore(recipe: Recipe, season: Season): number {
   return SEASON_TERMS[season].reduce((score, term) => score + (text.includes(normalizedSeasonText(term)) ? 1 : 0), 0);
 }
 
-export function weekPlan(week: number, overrides: Record<string, string> = {}): PlanSlot[] {
+export function weekPlan(week: number, overrides: Record<string, string> = {}, preferences: PlanningPreferences = {}): PlanSlot[] {
   const slots = carnet.plan.filter((p) => p.week === week).map((slot) => {
     const id = overrides[`${slot.week}|${slot.day}|${slot.meal}`];
     const recipe = id ? recipesById.get(id) : undefined;
@@ -134,28 +173,25 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}): 
   });
   const season = seasonForWeek(week);
   const used = new Set<string>();
+  const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe) && profileAllows(recipe, preferences));
   return slots.map((slot) => {
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
-    const currentComplete = current ? isCompleteRecipe(current) : false;
+    const currentValid = current ? isValidatedRecipe(current) && profileAllows(current, preferences) : false;
     const currentScore = current ? seasonalScore(current, season) : 0;
-    if (current && currentComplete && currentScore > 0 && !used.has(current.id)) {
+    if (current && currentValid && currentScore > 0 && !used.has(current.id)) {
       used.add(current.id);
       return { ...slot, name: current.name };
     }
-    const completeAlternatives = carnet.recipes
-      .filter((recipe) => isCompleteRecipe(recipe) && !used.has(recipe.id) && recipe.id !== current?.id)
+    const alternatives = eligible
+      .filter((recipe) => !used.has(recipe.id) && recipe.id !== current?.id)
       .map((recipe) => ({ recipe, score: seasonalScore(recipe, season) }))
       .sort((a, b) => b.score - a.score || a.recipe.name.localeCompare(b.recipe.name, "fr"));
-    const replacement = completeAlternatives.find((item) => item.score > 0)?.recipe || completeAlternatives[0]?.recipe;
-    if (!replacement) {
-      if (current) used.add(current.id);
-      return slot;
-    }
+    const replacement = alternatives.find((item) => item.score > 0)?.recipe || alternatives[0]?.recipe;
+    if (!replacement) return { ...slot, name: "Aucune recette complète validée pour ces critères", recipeId: null };
     used.add(replacement.id);
     return { ...slot, name: replacement.name, recipeId: replacement.id };
   });
 }
-
 export function breakfastForWeek(week: number): Breakfast | undefined {
   return (carnet.breakfasts || []).find((item) => item.week === week);
 }
