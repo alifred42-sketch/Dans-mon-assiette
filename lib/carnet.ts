@@ -176,17 +176,21 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe) && profileAllows(recipe, preferences));
   const plantProfile = Boolean(preferences.vegan || preferences.vegetarien);
   const roleText = (recipe: Recipe) => normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
-  const chooseRole = (pattern: RegExp, exclude: Set<string> = new Set<string>()) =>
-    eligible.filter((recipe) => !exclude.has(recipe.id) && pattern.test(roleText(recipe)))
-      .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"))[0];
+  const chooseRole = (pattern: RegExp, exclude: Set<string> = new Set<string>(), quick = false) =>
+    eligible.filter((recipe) => {
+      if (exclude.has(recipe.id) || !pattern.test(roleText(recipe))) return false;
+      if (!quick) return true;
+      const total = (durationMinutes(recipe.timePrep) || 0) + (durationMinutes(recipe.timeCook) || 0);
+      return total <= 20;
+    }).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"))[0];
   const reserved = new Set<string>();
-  const fishOrPlant = chooseRole(plantProfile ? /tofu|pois chiches|lentilles|haricots|edamame|œufs|oeufs|omelette/ : /poisson|saumon|cabillaud|thon|maquereau|crevette|sardine|colin|lieu/, reserved);
+  const fishOrPlant = chooseRole(plantProfile ? /tofu|pois chiches|lentilles|haricots|edamame|œufs|oeufs|omelette/ : /poisson|saumon|cabillaud|thon|maquereau|crevette|sardine|colin|lieu/, reserved, true);
   if (fishOrPlant) reserved.add(fishOrPlant.id);
   const pivot = chooseRole(plantProfile ? /tofu|pois chiches|lentilles|haricots|edamame|œufs|oeufs|omelette/ : /poulet|dinde|bœuf|boeuf|veau|porc|agneau|viande|steak/, reserved);
   if (pivot) reserved.add(pivot.id);
-  const soup = chooseRole(/soupe|velouté|veloute|potage|bouillon/, reserved);
+  const soup = eligible.filter((recipe) => !reserved.has(recipe.id) && /soupe|velouté|veloute|potage|bouillon/.test(roleText(recipe)) && seasonalScore(recipe, season) > 0).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"))[0];
   if (soup) reserved.add(soup.id);
-  const pantry = chooseRole(/wrap|salade|omelette|tartine|riz sauté|riz saute|poêlée|poelee|vide.?frigo/, reserved);
+  const pantry = chooseRole(/vide.?frigo|restes|anti.?gaspi|fond de placard/, reserved);
   if (pantry) reserved.add(pantry.id);
   const pleasures = eligible.filter((recipe) => !reserved.has(recipe.id) && /pizza|burger|lasagnes|tarte|crumble|fondant|dessert|gaufre|crêpe|crepe|pancake|festif|gourmand/.test(roleText(recipe))).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
   const matrix = new Map<string, { recipe: Recipe | null; name: string }>();
