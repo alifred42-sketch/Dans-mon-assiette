@@ -267,7 +267,7 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
 
   for (const slot of activePlan) {
     // La seconde vie du pivot réutilise les portions déjà comptées mardi et mercredi : aucun achat supplémentaire.
-    if (/^seconde vie\\s*[—-]/i.test(slot.name)) continue;
+    if (/^seconde vie\s*[—-]/i.test(slot.name)) continue;
     const sourceRecipe = getRecipe(slot.recipeId);
     if (!sourceRecipe) continue;
     const recipe = displayRecipe(sourceRecipe);
