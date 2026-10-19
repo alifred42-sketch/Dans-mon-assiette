@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Heart, Share2, Users, Bot, UserRound, Leaf, Wheat, Milk, Nut, GraduationCap } from "lucide-react";
+import { ArrowUpRight, Heart, Share2, Users, Bot, UserRound, Leaf, Wheat, Milk, Nut, GraduationCap, ShieldCheck } from "lucide-react";
 import { carnet } from "@/lib/carnet";
 const DEFAULT_PREFS = { etudiant:false, vegetarien:false, vegan:false, sansGluten:false, sansLactose:false, sansFruitsCoque:false, robot:false };
 type Prefs = typeof DEFAULT_PREFS;
