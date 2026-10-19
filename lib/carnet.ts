@@ -116,8 +116,8 @@ function isCompleteRecipe(recipe: Recipe): boolean {
   return ingredients.length >= 2 && steps.length >= 2;
 }
 
-const SEASONING_ONLY = /^(sel|poivre|épices?|epices?|herbes|aromates|persil|coriandre|basilic|ciboulette|menthe|thym|laurier|paprika|cumin|curry|muscade|cannelle|piment|origan|aneth|romarin|herbes de provence)(\\b|\\s|,)/i;
-const QUANTIFIED_INGREDIENT = /\\b\\d+(?:[.,]\\d+)?\\s*(?:kg|g|grammes?|mg|l|litres?|ml|cl|c\\.?\\s*à\\s*(?:soupe|café)|càs|cac|cs|cc|cuillères?|pincées?|tranches?|gousses?|filets?|doses?|boîtes?|boites?|pots?|paquets?|branches?|feuilles?|poignées?|poignees?|tasses?|verres?|œufs?|oeufs?|avocats?|tomates?|carottes?|courgettes?|poivrons?|oignons?|pommes?|bananes?|citrons?|concombres?|tortillas?|wraps?|galettes?)(?:\\b|\\s)/i;
+const SEASONING_ONLY = /^(sel|poivre|épices?|epices?|herbes|aromates|persil|coriandre|basilic|ciboulette|menthe|thym|laurier|paprika|cumin|curry|muscade|cannelle|piment|origan|aneth|romarin|herbes de provence)(\b|\s|,)/i;
+const QUANTIFIED_INGREDIENT = /\b\d+(?:[.,]\d+)?\s*(?:kg|g|grammes?|mg|l|litres?|ml|cl|c\.?\s*à\s*(?:soupe|café)|càs|cac|cs|cc|cuillères?|pincées?|tranches?|gousses?|filets?|doses?|boîtes?|boites?|pots?|paquets?|branches?|feuilles?|poignées?|poignees?|tasses?|verres?|œufs?|oeufs?|avocats?|tomates?|carottes?|courgettes?|poivrons?|oignons?|pommes?|bananes?|citrons?|concombres?|tortillas?|wraps?|galettes?)(?:\b|\s)/i;
 
 /** Gate de sécurité du planning : quantités chiffrées, temps explicites, portions numériques et étapes réelles. */
 export function isValidatedRecipe(recipe: Recipe): boolean {
@@ -125,7 +125,7 @@ export function isValidatedRecipe(recipe: Recipe): boolean {
   const prep = durationMinutes(recipe.timePrep);
   const cook = durationMinutes(recipe.timeCook);
   if (prep === null || cook === null || prep < 0 || cook < 0) return false;
-  if (!recipe.servings || !/\\b\\d+\\b/.test(recipe.servings)) return false;
+  if (!recipe.servings || !/\b\d+\b/.test(recipe.servings)) return false;
   const ingredients = (recipe.ingredients || []).filter((line) => line.trim() && !isPlaceholderIngredient(line));
   if (ingredients.length < 3 || ingredients.some((line) => !QUANTIFIED_INGREDIENT.test(line) && !SEASONING_ONLY.test(line.trim()))) return false;
   const steps = (recipe.steps || []).filter((line) => line.trim() && !/^(a completer|etapes a definir|mode d'emploi a ajouter)/i.test(line));
@@ -133,7 +133,7 @@ export function isValidatedRecipe(recipe: Recipe): boolean {
 }
 
 function isSauceOrSideRecipe(name: string): boolean {
-  return /^(sauce|marinade|vinaigrette|pesto|coulis|mélange d'épices|melange d'epices|épices|epices|granola|confiture|compote|sirop|boisson|cocktail|tartinade|dip\\b|crackers|gressins|biscuits apéritifs)/i.test(name.trim());
+  return /^(sauce|marinade|vinaigrette|pesto|coulis|mélange d'épices|melange d'epices|épices|epices|granola|confiture|compote|sirop|boisson|cocktail|tartinade|dip\b|crackers|gressins|biscuits apéritifs)/i.test(name.trim());
 }
 
 export type PlanningPreferences = {
