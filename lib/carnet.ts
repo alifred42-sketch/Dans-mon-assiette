@@ -312,9 +312,13 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   if (pivot) reserved.add(pivot.id);
   const soup = eligible.filter((recipe) => !reserved.has(recipe.id) && /soupe|velouté|veloute|potage|bouillon/.test(roleText(recipe)) && seasonalScore(recipe, season) > 0).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"))[0];
   if (soup) reserved.add(soup.id);
-  const pantry = chooseRole(/vide.?frigo|restes|anti.?gaspi|fond de placard/, reserved);
+  const pantry = chooseRole(/vide.?frigo|restes|anti.?gaspi|fond de placard/, reserved)
+    || chooseRole(/salade|omelette|wrap|poelee|quiche|tarte|frittata|gratin/, reserved)
+    || chooseRole(/./, reserved);
   if (pantry) reserved.add(pantry.id);
   const pleasures = eligible.filter((recipe) => !reserved.has(recipe.id) && /pizza|burger|lasagnes|tarte|crumble|fondant|dessert|gaufre|crêpe|crepe|pancake|festif|gourmand/.test(roleText(recipe))).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+  const weekendPleasures = [...pleasures, ...eligible.filter((recipe) => !reserved.has(recipe.id) && !pleasures.some((pleasure) => pleasure.id === recipe.id)).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"))].slice(0, 4);
+  weekendPleasures.forEach((recipe) => reserved.add(recipe.id));
   const matrix = new Map<string, { recipe: Recipe | null; name: string }>();
   const setRole = (day: string, meal: string, recipe: Recipe | undefined, fallback: string, name?: string) =>
     matrix.set(`${day}|${meal}`, { recipe: recipe || null, name: name || recipe?.name || fallback });
@@ -323,11 +327,11 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   setRole("MERCREDI", "Midi", pivot, "Aucune portion pivot validée");
   setRole("MERCREDI", "Soir", soup, "Aucune soupe de saison complète validée");
   setRole("JEUDI", "Soir", pivot, "Seconde vie du pivot indisponible", pivot ? `Seconde vie — ${pivot.name}` : undefined);
-  setRole("VENDREDI", "Midi", pantry, "Aucune recette Vide-Frigo complète validée");
-  setRole("SAMEDI", "Midi", pleasures[0], "Aucun repas plaisir validé");
-  setRole("SAMEDI", "Soir", pleasures[1], "Aucun repas plaisir validé");
-  setRole("DIMANCHE", "Midi", pleasures[2], "Aucun repas plaisir validé");
-  setRole("DIMANCHE", "Soir", pleasures[3], "Aucun repas plaisir validé");
+  setRole("VENDREDI", "Midi", pantry, "Aucune recette Vide-Frigo complète validée", pantry ? "Vide-frigo — " + pantry.name : undefined);
+  setRole("SAMEDI", "Midi", weekendPleasures[0], "Aucun repas plaisir validé");
+  setRole("SAMEDI", "Soir", weekendPleasures[1], "Aucun repas plaisir validé");
+  setRole("DIMANCHE", "Midi", weekendPleasures[2], "Aucun repas plaisir validé");
+  setRole("DIMANCHE", "Soir", weekendPleasures[3], "Aucun repas plaisir validé");
   return slots.map((slot) => {
     const matrixSelection = matrix.get(`${slot.day}|${slot.meal}`);
     if (matrixSelection) {
@@ -336,14 +340,14 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
       return { ...slot, name: matrixSelection.name, recipeId: matrixSelection.recipe.id };
     }
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
-    const currentValid = current ? isValidatedRecipe(current) && profileAllows(current, preferences) : false;
+    const currentValid = current ? isValidatedRecipe(current) && profileAllows(current, preferences) && !reserved.has(current.id) : false;
     const currentScore = current ? seasonalScore(current, season) : 0;
     if (current && currentValid && currentScore > 0 && !used.has(current.id)) {
       used.add(current.id);
       return { ...slot, name: current.name };
     }
     const alternatives = eligible
-      .filter((recipe) => !used.has(recipe.id) && recipe.id !== current?.id)
+      .filter((recipe) => !used.has(recipe.id) && !reserved.has(recipe.id) && recipe.id !== current?.id)
       .map((recipe) => ({ recipe, score: seasonalScore(recipe, season) }))
       .sort((a, b) => b.score - a.score || a.recipe.name.localeCompare(b.recipe.name, "fr"));
     const replacement = alternatives.find((item) => item.score > 0)?.recipe || alternatives[0]?.recipe;
