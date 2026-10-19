@@ -69655,6 +69655,282 @@
       "blurb": "🌱 Végan · ⚡ Express",
       "regime": "vegan",
       "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-046",
+      "name": "Salade de Cœurs de Palmier et Avocat",
+      "ingredients": [
+        "12 cœurs de palmier en conserve",
+        "2 avocats",
+        "4 c. à soupe mayonnaise vegan",
+        "4 c. à café jus de citron",
+        "Paprika et sel"
+      ],
+      "steps": [
+        "Couper les cœurs de palmier en rondelles et les avocats en dés.",
+        "Mélanger la mayonnaise vegan avec le jus de citron et le paprika.",
+        "Napper la salade et ajuster le sel."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 46/50. Quantités pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "12 cœurs de palmier en conserve",
+            "2 avocats",
+            "4 c. à soupe mayonnaise vegan",
+            "4 c. à café jus de citron",
+            "Paprika et sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Couper les cœurs de palmier en rondelles et les avocats en dés.",
+            "Mélanger la mayonnaise vegan avec le jus de citron et le paprika.",
+            "Napper la salade et ajuster le sel."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 46/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-047",
+      "name": "Tartine Chocolat-Noisette et Fraises Flash",
+      "ingredients": [
+        "8 tranches pain brioché vegan ou pain blanc",
+        "8 c. à soupe pâte à tartiner chocolat-noisette vegan",
+        "12 fraises ou baies de saison",
+        "4 c. à café éclats de noisettes"
+      ],
+      "steps": [
+        "Tartiner la pâte chocolat-noisette sur les tranches grillées.",
+        "Laver les fraises, couper en lamelles et disposer sur le chocolat.",
+        "Parsemer d’éclats de noisettes."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 47/50. Quantités pour 4 personnes.",
+        "Temps total : 9 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 9 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 7 min",
+            "🔥 Cuisson : 2 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches pain brioché vegan ou pain blanc",
+            "8 c. à soupe pâte à tartiner chocolat-noisette vegan",
+            "12 fraises ou baies de saison",
+            "4 c. à café éclats de noisettes"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Tartiner la pâte chocolat-noisette sur les tranches grillées.",
+            "Laver les fraises, couper en lamelles et disposer sur le chocolat.",
+            "Parsemer d’éclats de noisettes."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 47/50",
+      "timePrep": "7 min",
+      "timeCook": "2 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-048",
+      "name": "Couscous Express Vert à la Coriandre",
+      "ingredients": [
+        "240 g semoule fine",
+        "280 ml eau bouillante",
+        "4 c. à soupe huile d’olive",
+        "2 poignées coriandre fraîche",
+        "4 c. à soupe pignons de pin",
+        "Sel"
+      ],
+      "steps": [
+        "Mettre semoule et sel dans un saladier, verser l’eau bouillante et couvrir 4 min.",
+        "Hacher finement la coriandre.",
+        "Égrener avec l’huile puis incorporer coriandre et pignons."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 48/50. Quantités pour 4 personnes.",
+        "Temps total : 6 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 6 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 6 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "240 g semoule fine",
+            "280 ml eau bouillante",
+            "4 c. à soupe huile d’olive",
+            "2 poignées coriandre fraîche",
+            "4 c. à soupe pignons de pin",
+            "Sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mettre semoule et sel dans un saladier, verser l’eau bouillante et couvrir 4 min.",
+            "Hacher finement la coriandre.",
+            "Égrener avec l’huile puis incorporer coriandre et pignons."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 48/50",
+      "timePrep": "6 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-049",
+      "name": "Tartine Complète aux Radis et Margarine",
+      "ingredients": [
+        "8 tranches pain de seigle noir",
+        "4 c. à soupe margarine végétale",
+        "24 radis roses",
+        "Fleur de sel"
+      ],
+      "steps": [
+        "Étaler la margarine sur le pain de seigle.",
+        "Laver les radis et les couper en rondelles fines.",
+        "Disposer les radis sur le pain et saupoudrer de fleur de sel."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 49/50. Quantités pour 4 personnes.",
+        "Temps total : 7 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 7 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 7 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches pain de seigle noir",
+            "4 c. à soupe margarine végétale",
+            "24 radis roses",
+            "Fleur de sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Étaler la margarine sur le pain de seigle.",
+            "Laver les radis et les couper en rondelles fines.",
+            "Disposer les radis sur le pain et saupoudrer de fleur de sel."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 49/50",
+      "timePrep": "7 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-050",
+      "name": "Crème Express Avocat-Choco (Mousse minute)",
+      "ingredients": [
+        "4 avocats mûrs",
+        "8 c. à soupe cacao non sucré",
+        "8 c. à soupe sirop d’érable",
+        "12 c. à soupe lait d’amande"
+      ],
+      "steps": [
+        "Mettre la chair des avocats dans un blender.",
+        "Ajouter cacao, sirop d’érable et lait d’amande.",
+        "Mixer 1 min jusqu’à obtenir une crème lisse et brillante; servir aussitôt."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 50/50. Quantités pour 4 personnes.",
+        "Temps total : 6 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 6 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 1 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 avocats mûrs",
+            "8 c. à soupe cacao non sucré",
+            "8 c. à soupe sirop d’érable",
+            "12 c. à soupe lait d’amande"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mettre la chair des avocats dans un blender.",
+            "Ajouter cacao, sirop d’érable et lait d’amande.",
+            "Mixer 1 min jusqu’à obtenir une crème lisse et brillante; servir aussitôt."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 50/50",
+      "timePrep": "5 min",
+      "timeCook": "1 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
     }
   ],
   "plan": [
