@@ -68541,6 +68541,282 @@
       "blurb": "🏷️ Catégorie : 🌱 Végan · ⚡ Express",
       "regime": "vegan",
       "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-026",
+      "name": "Salade de Brocoli Cru aux Canneberges",
+      "ingredients": [
+        "400 g brocoli cru",
+        "4 c. à soupe canneberges séchées",
+        "4 c. à soupe graines de tournesol",
+        "4 c. à soupe mayonnaise vegan",
+        "4 c. à café vinaigre de cidre"
+      ],
+      "steps": [
+        "Hacher finement le brocoli.",
+        "Mélanger mayonnaise vegan et vinaigre.",
+        "Ajouter brocoli, canneberges et graines, puis mélanger."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 26/50. Quantités pour 4 personnes.",
+        "Temps total : 10 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 10 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 10 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g brocoli cru",
+            "4 c. à soupe canneberges séchées",
+            "4 c. à soupe graines de tournesol",
+            "4 c. à soupe mayonnaise vegan",
+            "4 c. à café vinaigre de cidre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Hacher finement le brocoli.",
+            "Mélanger mayonnaise vegan et vinaigre.",
+            "Ajouter brocoli, canneberges et graines, puis mélanger."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 26/50",
+      "timePrep": "10 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-027",
+      "name": "Soupe Miso Express au Tofu et Algues",
+      "ingredients": [
+        "1,2 l eau bouillante",
+        "4 c. à soupe pâte miso rouge ou blanc",
+        "200 g tofu ferme",
+        "4 c. à café algues wakamé séchées",
+        "4 brins ciboulette"
+      ],
+      "steps": [
+        "Mettre wakamé et tofu en dés dans quatre bols.",
+        "Verser l’eau bouillante et laisser reposer 2 min.",
+        "Délayer le miso dans un peu d’eau chaude, reverser, remuer et ajouter la ciboulette."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 27/50. Quantités pour 4 personnes.",
+        "Temps total : 5 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 5 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1,2 l eau bouillante",
+            "4 c. à soupe pâte miso rouge ou blanc",
+            "200 g tofu ferme",
+            "4 c. à café algues wakamé séchées",
+            "4 brins ciboulette"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mettre wakamé et tofu en dés dans quatre bols.",
+            "Verser l’eau bouillante et laisser reposer 2 min.",
+            "Délayer le miso dans un peu d’eau chaude, reverser, remuer et ajouter la ciboulette."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 27/50",
+      "timePrep": "5 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-028",
+      "name": "Carpaccio de Betterave et Pomme Verte",
+      "ingredients": [
+        "4 betteraves cuites",
+        "2 pommes Granny Smith",
+        "4 c. à soupe huile de noix",
+        "4 c. à café vinaigre balsamique",
+        "Sel et poivre"
+      ],
+      "steps": [
+        "Couper les betteraves en tranches fines et répartir dans les assiettes.",
+        "Tailler les pommes en bâtonnets fins.",
+        "Répartir sur les betteraves, assaisonner avec huile, vinaigre, sel et poivre."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 28/50. Quantités pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 betteraves cuites",
+            "2 pommes Granny Smith",
+            "4 c. à soupe huile de noix",
+            "4 c. à café vinaigre balsamique",
+            "Sel et poivre"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Couper les betteraves en tranches fines et répartir dans les assiettes.",
+            "Tailler les pommes en bâtonnets fins.",
+            "Répartir sur les betteraves, assaisonner avec huile, vinaigre, sel et poivre."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 28/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-029",
+      "name": "Tartine Pomme-Beurre d’Amande et Cannelle",
+      "ingredients": [
+        "8 tranches pain de mie complet",
+        "8 c. à soupe beurre d’amande",
+        "2 pommes",
+        "Cannelle"
+      ],
+      "steps": [
+        "Tartiner le beurre d’amande sur le pain grillé.",
+        "Ajouter les pommes en fines lamelles.",
+        "Saupoudrer de cannelle."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 29/50. Quantités pour 4 personnes.",
+        "Temps total : 9 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 9 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 7 min",
+            "🔥 Cuisson : 2 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches pain de mie complet",
+            "8 c. à soupe beurre d’amande",
+            "2 pommes",
+            "Cannelle"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Tartiner le beurre d’amande sur le pain grillé.",
+            "Ajouter les pommes en fines lamelles.",
+            "Saupoudrer de cannelle."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 29/50",
+      "timePrep": "7 min",
+      "timeCook": "2 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-030",
+      "name": "Yaourt Végétal Gourmand aux Figues et Noix",
+      "ingredients": [
+        "600 g yaourt de soja",
+        "4 figues fraîches ou 8 figues séchées",
+        "16 cerneaux de noix",
+        "4 c. à café sirop d’agave"
+      ],
+      "steps": [
+        "Répartir le yaourt dans quatre bols.",
+        "Couper les figues et les déposer sur le yaourt.",
+        "Ajouter les noix et le sirop d’agave."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 30/50. Quantités pour 4 personnes.",
+        "Temps total : 5 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 5 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g yaourt de soja",
+            "4 figues fraîches ou 8 figues séchées",
+            "16 cerneaux de noix",
+            "4 c. à café sirop d’agave"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Répartir le yaourt dans quatre bols.",
+            "Couper les figues et les déposer sur le yaourt.",
+            "Ajouter les noix et le sirop d’agave."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 30/50",
+      "timePrep": "5 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
     }
   ],
   "plan": [
