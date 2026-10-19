@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { carnet } from "@/lib/carnet";
+import { recipeLines } from "@/lib/search";
+import { RecipeList } from "@/components/recipe-list";
 import { ArrowLeft, CookingPot, Soup, Microwave, Salad, Coffee, Sparkles } from "lucide-react";
 
 type Book = "cuisson-unique" | "fast-chic";
@@ -79,10 +82,22 @@ export default function EtudiantPetitBudgetPage() {
               })}
             </div>
             {selectedFilter ? (
-              <div className="rounded-2xl border border-[#D8D1C7] bg-white/70 p-5 text-[#1A1A1A]" role="status">
-                <h3 className="font-bold">{selectedFilter.label}</h3>
-                <p className="mt-1 text-sm">{selectedFilter.description}</p>
-                <p className="mt-3 text-sm text-[#5D625E]">Les recettes seront rangées ici après réception et vérification du PDF des 112 recettes. Aucun contenu n’est ajouté avant d’avoir contrôlé les sources et les doublons.</p>
+              <div className="space-y-4">
+                <div className="rounded-2xl border border-[#D8D1C7] bg-white/70 p-5 text-[#1A1A1A]" role="status">
+                  <h3 className="font-bold">{selectedFilter.label}</h3>
+                  <p className="mt-1 text-sm">{selectedFilter.description}</p>
+                </div>
+                {selectedFilter.id === "one_pot" ? (
+                  <RecipeList
+                    items={carnet.recipes
+                      .filter((recipe) => recipe.profil === "etudiant" && recipe.sous_etudiant === "one_pot")
+                      .map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }))}
+                  />
+                ) : (
+                  <p className="rounded-2xl border border-[#D8D1C7] bg-white/70 p-5 text-sm text-[#5D625E]">
+                    Les recettes de cette sous-catégorie seront affichées ici après leur intégration.
+                  </p>
+                )}
               </div>
             ) : null}
           </section>
