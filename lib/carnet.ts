@@ -117,7 +117,7 @@ function isCompleteRecipe(recipe: Recipe): boolean {
 }
 
 const SEASONING_ONLY = /^(sel|poivre|épices?|epices?|herbes|aromates|persil|coriandre|basilic|ciboulette|menthe|thym|laurier|paprika|cumin|curry|muscade|cannelle|piment|origan|aneth|romarin|herbes de provence)(\b|\s|,)/i;
-const QUANTIFIED_INGREDIENT = /\b\d+(?:[.,]\d+)?\s*(?:kg|g|grammes?|mg|l|litres?|ml|cl|c\.?\s*à\s*(?:soupe|café)|càs|cac|cs|cc|cuillères?|pincées?|tranches?|gousses?|filets?|doses?|boîtes?|boites?|pots?|paquets?|branches?|feuilles?|poignées?|poignees?|tasses?|verres?|œufs?|oeufs?|avocats?|tomates?|carottes?|courgettes?|poivrons?|oignons?|pommes?|bananes?|citrons?|concombres?|tortillas?|wraps?|galettes?)(?:\b|\s)/i;
+const QUANTIFIED_INGREDIENT = /^\s*\d+(?:[.,]\d+)?(?:\s*\/\s*\d+(?:[.,]\d+)?)?\s*(?:(?:kg|g|grammes?|mg|l|litres?|ml|cl|c\.?\s*à\s*(?:soupe|café)|càs|cac|cs|cc|cuillères?|pincées?|tranches?|gousses?|filets?|doses?|boîtes?|boites?|pots?|paquets?|branches?|feuilles?|poignées?|poignees?|tasses?|verres?)\s+)?[\p{L}]/iu;
 
 /** Gate de sécurité du planning : quantités chiffrées, temps explicites, portions numériques et étapes réelles. */
 export function isValidatedRecipe(recipe: Recipe): boolean {
@@ -189,23 +189,25 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const pantry = chooseRole(/wrap|salade|omelette|tartine|riz sauté|riz saute|poêlée|poelee|vide.?frigo/, reserved);
   if (pantry) reserved.add(pantry.id);
   const pleasures = eligible.filter((recipe) => !reserved.has(recipe.id) && /pizza|burger|lasagnes|tarte|crumble|fondant|dessert|gaufre|crêpe|crepe|pancake|festif|gourmand/.test(roleText(recipe))).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
-  const matrix = new Map<string, { recipe: Recipe; name?: string }>();
-  const setRole = (day: string, meal: string, recipe?: Recipe, name?: string) => { if (recipe) matrix.set(`${day}|${meal}`, { recipe, name }); };
-  setRole("LUNDI", "Soir", fishOrPlant);
-  setRole("MARDI", "Soir", pivot);
-  setRole("MERCREDI", "Midi", pivot);
-  setRole("MERCREDI", "Soir", soup);
-  setRole("JEUDI", "Soir", pivot, pivot ? `Seconde vie — ${pivot.name}` : undefined);
-  setRole("VENDREDI", "Midi", pantry);
-  setRole("SAMEDI", "Midi", pleasures[0]);
-  setRole("SAMEDI", "Soir", pleasures[1]);
-  setRole("DIMANCHE", "Midi", pleasures[2]);
-  setRole("DIMANCHE", "Soir", pleasures[3]);
+  const matrix = new Map<string, { recipe: Recipe | null; name: string }>();
+  const setRole = (day: string, meal: string, recipe: Recipe | undefined, fallback: string, name?: string) =>
+    matrix.set(`${day}|${meal}`, { recipe: recipe || null, name: name || recipe?.name || fallback });
+  setRole("LUNDI", "Soir", fishOrPlant, plantProfile ? "Aucune protéine végétale éclair validée" : "Aucun poisson éclair validé");
+  setRole("MARDI", "Soir", pivot, "Aucun pivot protéiné complet validé");
+  setRole("MERCREDI", "Midi", pivot, "Aucune portion pivot validée");
+  setRole("MERCREDI", "Soir", soup, "Aucune soupe de saison complète validée");
+  setRole("JEUDI", "Soir", pivot, "Seconde vie du pivot indisponible", pivot ? `Seconde vie — ${pivot.name}` : undefined);
+  setRole("VENDREDI", "Midi", pantry, "Aucune recette Vide-Frigo complète validée");
+  setRole("SAMEDI", "Midi", pleasures[0], "Aucun repas plaisir validé");
+  setRole("SAMEDI", "Soir", pleasures[1], "Aucun repas plaisir validé");
+  setRole("DIMANCHE", "Midi", pleasures[2], "Aucun repas plaisir validé");
+  setRole("DIMANCHE", "Soir", pleasures[3], "Aucun repas plaisir validé");
   return slots.map((slot) => {
     const matrixSelection = matrix.get(`${slot.day}|${slot.meal}`);
     if (matrixSelection) {
+      if (!matrixSelection.recipe) return { ...slot, name: matrixSelection.name, recipeId: null };
       used.add(matrixSelection.recipe.id);
-      return { ...slot, name: matrixSelection.name || matrixSelection.recipe.name, recipeId: matrixSelection.recipe.id };
+      return { ...slot, name: matrixSelection.name, recipeId: matrixSelection.recipe.id };
     }
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
     const currentValid = current ? isValidatedRecipe(current) && profileAllows(current, preferences) : false;
