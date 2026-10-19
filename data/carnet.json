@@ -76217,6 +76217,572 @@
       "blurb": "🌱 Végan · 🍂 Automne / Hiver",
       "regime": "vegan",
       "sous_regime": "automne_hiver"
+    },
+    {
+      "id": "halloween-potions-031",
+      "name": "L'Élixir du Vampire au Cranberry (Sans Alcool)",
+      "ingredients": [
+        "300 ml de jus de cranberry",
+        "100 ml de jus de pomme",
+        "50 ml de sirop de cerise",
+        "Sucre en poudre",
+        "Colorant rouge"
+      ],
+      "steps": [
+        "Mélangez un peu de sirop de cerise et une goutte de colorant rouge dans une assiette. Mettez du sucre dans une autre. Plongez les bords des verres dans le sirop puis dans le sucre pour créer un effet givré de sang séché.",
+        "Dans un shaker, mélangez le jus de cranberry et le jus de pomme avec des glaçons.",
+        "Versez délicatement dans les verres sans abîmer le givrage. Ajoutez un filet de sirop de cerise au dernier moment pour l'effet de densité au fond du verre."
+      ],
+      "robot": [],
+      "notes": [
+        "Chapitre 4 : Le Grimoire des Potions & Cocktails (PDF Halloween, fiche 031).",
+        "2 personnes · Préparation : 10 min · Sans cuisson."
+      ],
+      "sections": [
+        {
+          "title": "👥 Portions : 2 personnes",
+          "lines": [
+            "Portions : 2 personnes",
+            "⏱️ Temps de préparation : 10 min",
+            "🎃 Halloween · 🧪 Potions & Cocktails",
+            "🚫 Sans alcool"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "300 ml de jus de cranberry",
+            "100 ml de jus de pomme",
+            "50 ml de sirop de cerise",
+            "Sucre en poudre",
+            "Colorant rouge"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Mélangez un peu de sirop de cerise et une goutte de colorant rouge dans une assiette. Mettez du sucre dans une autre. Plongez les bords des verres dans le sirop puis dans le sucre pour créer un effet givré de sang séché.",
+            "2. Dans un shaker, mélangez le jus de cranberry et le jus de pomme avec des glaçons.",
+            "3. Versez délicatement dans les verres sans abîmer le givrage. Ajoutez un filet de sirop de cerise au dernier moment pour l'effet de densité au fond du verre."
+          ]
+        }
+      ],
+      "source": "PDF « grand_livre_recettes_halloween.pdf » — Chapitre 4, fiche 031",
+      "timePrep": "10 min",
+      "timeCook": "Sans cuisson",
+      "servings": "2 personnes",
+      "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Sans Alcool",
+      "fete": "halloween",
+      "sous_fete": "potions"
+    },
+    {
+      "id": "halloween-potions-032",
+      "name": "Le Philtre Vert de la Sorcière (Sans Alcool)",
+      "ingredients": [
+        "4 kiwis mûrs",
+        "200 ml de jus d'ananas",
+        "2 cuillères à soupe de sirop de menthe",
+        "Eau gazeuse"
+      ],
+      "steps": [
+        "Pelez et mixez finement les kiwis au blender avec le jus d'ananas et le sirop de menthe.",
+        "Filtrez la préparation pour enlever les petits pépins noirs si désiré, ou gardez-les pour un effet d'ingrédients de potion écrasés.",
+        "Remplissez la moitié des verres avec ce mélange bien vert et complétez avec de l'eau gazeuse pour faire mousser l'écume au sommet."
+      ],
+      "robot": [],
+      "notes": [
+        "Chapitre 4 : Le Grimoire des Potions & Cocktails (PDF Halloween, fiche 032).",
+        "4 personnes · Préparation : 10 min · Sans cuisson."
+      ],
+      "sections": [
+        {
+          "title": "👥 Portions : 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "⏱️ Temps de préparation : 10 min",
+            "🎃 Halloween · 🧪 Potions & Cocktails",
+            "🚫 Sans alcool"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 kiwis mûrs",
+            "200 ml de jus d'ananas",
+            "2 cuillères à soupe de sirop de menthe",
+            "Eau gazeuse"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Pelez et mixez finement les kiwis au blender avec le jus d'ananas et le sirop de menthe.",
+            "2. Filtrez la préparation pour enlever les petits pépins noirs si désiré, ou gardez-les pour un effet d'ingrédients de potion écrasés.",
+            "3. Remplissez la moitié des verres avec ce mélange bien vert et complétez avec de l'eau gazeuse pour faire mousser l'écume au sommet."
+          ]
+        }
+      ],
+      "source": "PDF « grand_livre_recettes_halloween.pdf » — Chapitre 4, fiche 032",
+      "timePrep": "10 min",
+      "timeCook": "Sans cuisson",
+      "servings": "4 personnes",
+      "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Sans Alcool",
+      "fete": "halloween",
+      "sous_fete": "potions"
+    },
+    {
+      "id": "halloween-potions-033",
+      "name": "Le Smoothie Monstrueux « Frankenstein » (Sans Alcool)",
+      "ingredients": [
+        "1 avocat bien mûr",
+        "1 banane",
+        "150 ml de lait d'amande",
+        "1 cuillère à soupe de miel",
+        "30 g de chocolat noir fondu"
+      ],
+      "steps": [
+        "À l'aide d'un pinceau ou d'un cure-dent, dessinez des cicatrices et des cheveux en dents de scie à l'intérieur de verres transparents avec le chocolat noir fondu. Laissez figer 5 minutes au frais.",
+        "Mixez ensemble l'avocat, la banane, le lait d'amande et le miel jusqu'à obtenir un smoothie bien onctueux et d'un vert éclatant.",
+        "Versez délicatement le smoothie vert dans les verres décorés pour faire apparaître le visage du monstre."
+      ],
+      "robot": [],
+      "notes": [
+        "Chapitre 4 : Le Grimoire des Potions & Cocktails (PDF Halloween, fiche 033).",
+        "2 personnes · Préparation : 15 min · Sans cuisson."
+      ],
+      "sections": [
+        {
+          "title": "👥 Portions : 2 personnes",
+          "lines": [
+            "Portions : 2 personnes",
+            "⏱️ Temps de préparation : 15 min",
+            "🎃 Halloween · 🧪 Potions & Cocktails",
+            "🚫 Sans alcool"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 avocat bien mûr",
+            "1 banane",
+            "150 ml de lait d'amande",
+            "1 cuillère à soupe de miel",
+            "30 g de chocolat noir fondu"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. À l'aide d'un pinceau ou d'un cure-dent, dessinez des cicatrices et des cheveux en dents de scie à l'intérieur de verres transparents avec le chocolat noir fondu. Laissez figer 5 minutes au frais.",
+            "2. Mixez ensemble l'avocat, la banane, le lait d'amande et le miel jusqu'à obtenir un smoothie bien onctueux et d'un vert éclatant.",
+            "3. Versez délicatement le smoothie vert dans les verres décorés pour faire apparaître le visage du monstre."
+          ]
+        }
+      ],
+      "source": "PDF « grand_livre_recettes_halloween.pdf » — Chapitre 4, fiche 033",
+      "timePrep": "15 min",
+      "timeCook": "Sans cuisson",
+      "servings": "2 personnes",
+      "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Sans Alcool",
+      "fete": "halloween",
+      "sous_fete": "potions"
+    },
+    {
+      "id": "halloween-potions-034",
+      "name": "La Potion Fumante au Chaudron de Citrouille (Sans Alcool)",
+      "ingredients": [
+        "1 L de jus de citrouille ou de mangue",
+        "500 ml de jus d'orange",
+        "500 ml de ginger ale (soda au gingembre)",
+        "Tranches d'oranges",
+        "Glace carbonique (facultatif, pour l'effet fumant, à manipuler avec précautions)"
+      ],
+      "steps": [
+        "Dans un grand saladier ou une citrouille évidée contenant un grand bol en verre caché, versez le jus de mangue et le jus d'orange.",
+        "Ajoutez le ginger ale juste avant de servir pour le côté pétillant et disposez les tranches d'oranges en surface.",
+        "Pour l'effet fumant de sorcière (optionnel et sous stricte surveillance d'un adulte), placez quelques morceaux de glace carbonique dans le grand récipient extérieur, jamais directement dans la boisson à consommer."
+      ],
+      "robot": [],
+      "notes": [
+        "Chapitre 4 : Le Grimoire des Potions & Cocktails (PDF Halloween, fiche 034).",
+        "8 personnes · Préparation : 15 min · Sans cuisson."
+      ],
+      "sections": [
+        {
+          "title": "👥 Portions : 8 personnes",
+          "lines": [
+            "Portions : 8 personnes",
+            "⏱️ Temps de préparation : 15 min",
+            "🎃 Halloween · 🧪 Potions & Cocktails",
+            "🚫 Sans alcool"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 L de jus de citrouille ou de mangue",
+            "500 ml de jus d'orange",
+            "500 ml de ginger ale (soda au gingembre)",
+            "Tranches d'oranges",
+            "Glace carbonique (facultatif, pour l'effet fumant, à manipuler avec précautions)"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans un grand saladier ou une citrouille évidée contenant un grand bol en verre caché, versez le jus de mangue et le jus d'orange.",
+            "2. Ajoutez le ginger ale juste avant de servir pour le côté pétillant et disposez les tranches d'oranges en surface.",
+            "3. Pour l'effet fumant de sorcière (optionnel et sous stricte surveillance d'un adulte), placez quelques morceaux de glace carbonique dans le grand récipient extérieur, jamais directement dans la boisson à consommer."
+          ]
+        }
+      ],
+      "source": "PDF « grand_livre_recettes_halloween.pdf » — Chapitre 4, fiche 034",
+      "timePrep": "15 min",
+      "timeCook": "Sans cuisson",
+      "servings": "8 personnes",
+      "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Sans Alcool",
+      "fete": "halloween",
+      "sous_fete": "potions"
+    },
+    {
+      "id": "halloween-potions-035",
+      "name": "Le Shirley Temple de la Terreur (Sans Alcool)",
+      "ingredients": [
+        "300 ml de ginger ale ou de limonade",
+        "Un trait de jus de citron",
+        "4 cl de sirop de grenadine",
+        "2 seringues en plastique sans aiguille, neuves"
+      ],
+      "steps": [
+        "Remplissez les deux seringues en plastique propres avec le sirop de grenadine pure.",
+        "Versez le ginger ale bien frais et le jus de citron dans deux verres munis de glaçons.",
+        "Placez une seringue remplie de « sang » (grenadine) dans chaque verre. Laissez vos invités injecter eux-mêmes le sirop rouge au moment de boire pour colorer la potion."
+      ],
+      "robot": [],
+      "notes": [
+        "Chapitre 4 : Le Grimoire des Potions & Cocktails (PDF Halloween, fiche 035).",
+        "2 personnes · Préparation : 10 min · Sans cuisson."
+      ],
+      "sections": [
+        {
+          "title": "👥 Portions : 2 personnes",
+          "lines": [
+            "Portions : 2 personnes",
+            "⏱️ Temps de préparation : 10 min",
+            "🎃 Halloween · 🧪 Potions & Cocktails",
+            "🚫 Sans alcool"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "300 ml de ginger ale ou de limonade",
+            "Un trait de jus de citron",
+            "4 cl de sirop de grenadine",
+            "2 seringues en plastique sans aiguille, neuves"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Remplissez les deux seringues en plastique propres avec le sirop de grenadine pure.",
+            "2. Versez le ginger ale bien frais et le jus de citron dans deux verres munis de glaçons.",
+            "3. Placez une seringue remplie de « sang » (grenadine) dans chaque verre. Laissez vos invités injecter eux-mêmes le sirop rouge au moment de boire pour colorer la potion."
+          ]
+        }
+      ],
+      "source": "PDF « grand_livre_recettes_halloween.pdf » — Chapitre 4, fiche 035",
+      "timePrep": "10 min",
+      "timeCook": "Sans cuisson",
+      "servings": "2 personnes",
+      "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Sans Alcool",
+      "fete": "halloween",
+      "sous_fete": "potions"
+    },
+    {
+      "id": "halloween-potions-036",
+      "name": "Le Bloody Mary de la Veuve Noire (Avec Alcool)",
+      "ingredients": [
+        "90 ml de vodka",
+        "180 ml de jus de tomate",
+        "1 cuillère à soupe de jus de citron",
+        "2 gouttes de Tabasco",
+        "1 pincée de sel de céleri",
+        "Olives noires"
+      ],
+      "steps": [
+        "Dans un shaker rempli de glaçons, versez la vodka, le jus de tomate, le citron, le sel de céleri et le Tabasco. Secouez vigoureusement.",
+        "Versez dans de grands verres en filtrant la glace.",
+        "Décorez en fixant une araignée en olive noire (corps et pattes) sur un pic en bois posé en travers du verre."
+      ],
+      "robot": [],
+      "notes": [
+        "Chapitre 4 : Le Grimoire des Potions & Cocktails (PDF Halloween, fiche 036).",
+        "2 personnes · Préparation : 10 min · Sans cuisson."
+      ],
+      "sections": [
+        {
+          "title": "👥 Portions : 2 personnes",
+          "lines": [
+            "Portions : 2 personnes",
+            "⏱️ Temps de préparation : 10 min",
+            "🎃 Halloween · 🧪 Potions & Cocktails",
+            "🍸 Avec alcool"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "90 ml de vodka",
+            "180 ml de jus de tomate",
+            "1 cuillère à soupe de jus de citron",
+            "2 gouttes de Tabasco",
+            "1 pincée de sel de céleri",
+            "Olives noires"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans un shaker rempli de glaçons, versez la vodka, le jus de tomate, le citron, le sel de céleri et le Tabasco. Secouez vigoureusement.",
+            "2. Versez dans de grands verres en filtrant la glace.",
+            "3. Décorez en fixant une araignée en olive noire (corps et pattes) sur un pic en bois posé en travers du verre."
+          ]
+        }
+      ],
+      "source": "PDF « grand_livre_recettes_halloween.pdf » — Chapitre 4, fiche 036",
+      "timePrep": "10 min",
+      "timeCook": "Sans cuisson",
+      "servings": "2 personnes",
+      "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Avec Alcool",
+      "fete": "halloween",
+      "sous_fete": "potions"
+    },
+    {
+      "id": "halloween-potions-037",
+      "name": "La Margarita Noire Sombre (Avec Alcool)",
+      "ingredients": [
+        "100 ml de tequila",
+        "50 ml de triple sec (Cointreau)",
+        "50 ml de jus de citron vert",
+        "1 gélule de charbon végétal activé comestible",
+        "Sel blanc pour le bord des verres"
+      ],
+      "steps": [
+        "Passez un quartier de citron sur le bord des verres et plongez-les dans le sel blanc pour créer un liseré contrastant.",
+        "Dans un shaker contenant des glaçons, versez la tequila, le triple sec et le jus de citron vert. Ouvrez la gélule de charbon et versez la poudre noire à l'intérieur.",
+        "Secouez énergiquement. Versez filtré dans les verres."
+      ],
+      "robot": [],
+      "notes": [
+        "Chapitre 4 : Le Grimoire des Potions & Cocktails (PDF Halloween, fiche 037).",
+        "2 personnes · Préparation : 10 min · Sans cuisson."
+      ],
+      "sections": [
+        {
+          "title": "👥 Portions : 2 personnes",
+          "lines": [
+            "Portions : 2 personnes",
+            "⏱️ Temps de préparation : 10 min",
+            "🎃 Halloween · 🧪 Potions & Cocktails",
+            "🍸 Avec alcool"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100 ml de tequila",
+            "50 ml de triple sec (Cointreau)",
+            "50 ml de jus de citron vert",
+            "1 gélule de charbon végétal activé comestible",
+            "Sel blanc pour le bord des verres"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Passez un quartier de citron sur le bord des verres et plongez-les dans le sel blanc pour créer un liseré contrastant.",
+            "2. Dans un shaker contenant des glaçons, versez la tequila, le triple sec et le jus de citron vert. Ouvrez la gélule de charbon et versez la poudre noire à l'intérieur.",
+            "3. Secouez énergiquement. Versez filtré dans les verres."
+          ]
+        }
+      ],
+      "source": "PDF « grand_livre_recettes_halloween.pdf » — Chapitre 4, fiche 037",
+      "timePrep": "10 min",
+      "timeCook": "Sans cuisson",
+      "servings": "2 personnes",
+      "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Avec Alcool",
+      "fete": "halloween",
+      "sous_fete": "potions"
+    },
+    {
+      "id": "halloween-potions-038",
+      "name": "Le Spritz Empoisonné à la Mûre (Avec Alcool)",
+      "ingredients": [
+        "120 ml de Prosecco",
+        "80 ml d'Apérol ou Campari",
+        "40 ml de crème de mûre",
+        "Eau gazeuse",
+        "Mûres fraîches",
+        "2 branches de romarin"
+      ],
+      "steps": [
+        "Dans des verres remplis de glaçons, versez l'Apérol, la crème de mûre et le Prosecco.",
+        "Complétez avec un filet d'eau gazeuse et remuez délicatement. Ajoutez quelques mûres fraîches piquées.",
+        "Pour l'effet mystique, allumez l'extrémité de la branche de romarin avec un briquet pendant 2 secondes, soufflez pour l'éteindre et plongez la branche fumante dans le verre en guise de mélangeur."
+      ],
+      "robot": [],
+      "notes": [
+        "Chapitre 4 : Le Grimoire des Potions & Cocktails (PDF Halloween, fiche 038).",
+        "2 personnes · Préparation : 10 min · Sans cuisson."
+      ],
+      "sections": [
+        {
+          "title": "👥 Portions : 2 personnes",
+          "lines": [
+            "Portions : 2 personnes",
+            "⏱️ Temps de préparation : 10 min",
+            "🎃 Halloween · 🧪 Potions & Cocktails",
+            "🍸 Avec alcool"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "120 ml de Prosecco",
+            "80 ml d'Apérol ou Campari",
+            "40 ml de crème de mûre",
+            "Eau gazeuse",
+            "Mûres fraîches",
+            "2 branches de romarin"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans des verres remplis de glaçons, versez l'Apérol, la crème de mûre et le Prosecco.",
+            "2. Complétez avec un filet d'eau gazeuse et remuez délicatement. Ajoutez quelques mûres fraîches piquées.",
+            "3. Pour l'effet mystique, allumez l'extrémité de la branche de romarin avec un briquet pendant 2 secondes, soufflez pour l'éteindre et plongez la branche fumante dans le verre en guise de mélangeur."
+          ]
+        }
+      ],
+      "source": "PDF « grand_livre_recettes_halloween.pdf » — Chapitre 4, fiche 038",
+      "timePrep": "10 min",
+      "timeCook": "Sans cuisson",
+      "servings": "2 personnes",
+      "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Avec Alcool",
+      "fete": "halloween",
+      "sous_fete": "potions"
+    },
+    {
+      "id": "halloween-potions-039",
+      "name": "Le Mimosa de la Citrouille (Avec Alcool)",
+      "ingredients": [
+        "1 bouteille de Champagne ou de Crémant bien frais",
+        "300 ml de jus d'orange pressé",
+        "1 pincée d'épices à pain d'épices (cannelle, muscade)"
+      ],
+      "steps": [
+        "Dans une carafe, mélangez le jus d'orange frais avec la pincée d'épices douces pour lui donner une saveur chaude et automnale.",
+        "Remplissez la moitié des flûtes à champagne avec ce jus d'orange épicé.",
+        "Complétez délicatement le reste du verre avec le Champagne bien frais pour obtenir un cocktail pétillant à la robe orange citrouille."
+      ],
+      "robot": [],
+      "notes": [
+        "Chapitre 4 : Le Grimoire des Potions & Cocktails (PDF Halloween, fiche 039).",
+        "4 personnes · Préparation : 5 min · Sans cuisson."
+      ],
+      "sections": [
+        {
+          "title": "👥 Portions : 4 personnes",
+          "lines": [
+            "Portions : 4 personnes",
+            "⏱️ Temps de préparation : 5 min",
+            "🎃 Halloween · 🧪 Potions & Cocktails",
+            "🍸 Avec alcool"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "1 bouteille de Champagne ou de Crémant bien frais",
+            "300 ml de jus d'orange pressé",
+            "1 pincée d'épices à pain d'épices (cannelle, muscade)"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans une carafe, mélangez le jus d'orange frais avec la pincée d'épices douces pour lui donner une saveur chaude et automnale.",
+            "2. Remplissez la moitié des flûtes à champagne avec ce jus d'orange épicé.",
+            "3. Complétez délicatement le reste du verre avec le Champagne bien frais pour obtenir un cocktail pétillant à la robe orange citrouille."
+          ]
+        }
+      ],
+      "source": "PDF « grand_livre_recettes_halloween.pdf » — Chapitre 4, fiche 039",
+      "timePrep": "5 min",
+      "timeCook": "Sans cuisson",
+      "servings": "4 personnes",
+      "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Avec Alcool",
+      "fete": "halloween",
+      "sous_fete": "potions"
+    },
+    {
+      "id": "halloween-potions-040",
+      "name": "Le Daiquiri Fantomatique (Avec Alcool)",
+      "ingredients": [
+        "100 ml de rhum blanc",
+        "40 ml de jus de citron vert",
+        "40 ml de sirop de sucre de canne",
+        "4 cuillères à soupe de lait de coco crémeux",
+        "Glaçons"
+      ],
+      "steps": [
+        "Dans un blender, mettez une bonne poignée de glaçons, le rhum blanc, le jus de citron vert, le sirop de sucre et le lait de coco.",
+        "Mixez à haute vitesse jusqu'à obtenir une texture de granité glacé d'un blanc opaque et spectral.",
+        "Versez dans des verres à cocktail évasés. Vous pouvez ajouter deux pépites de chocolat noir sur le dessus du granité pour dessiner les yeux de votre fantôme."
+      ],
+      "robot": [],
+      "notes": [
+        "Chapitre 4 : Le Grimoire des Potions & Cocktails (PDF Halloween, fiche 040).",
+        "2 personnes · Préparation : 10 min · Sans cuisson."
+      ],
+      "sections": [
+        {
+          "title": "👥 Portions : 2 personnes",
+          "lines": [
+            "Portions : 2 personnes",
+            "⏱️ Temps de préparation : 10 min",
+            "🎃 Halloween · 🧪 Potions & Cocktails",
+            "🍸 Avec alcool"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100 ml de rhum blanc",
+            "40 ml de jus de citron vert",
+            "40 ml de sirop de sucre de canne",
+            "4 cuillères à soupe de lait de coco crémeux",
+            "Glaçons"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "1. Dans un blender, mettez une bonne poignée de glaçons, le rhum blanc, le jus de citron vert, le sirop de sucre et le lait de coco.",
+            "2. Mixez à haute vitesse jusqu'à obtenir une texture de granité glacé d'un blanc opaque et spectral.",
+            "3. Versez dans des verres à cocktail évasés. Vous pouvez ajouter deux pépites de chocolat noir sur le dessus du granité pour dessiner les yeux de votre fantôme."
+          ]
+        }
+      ],
+      "source": "PDF « grand_livre_recettes_halloween.pdf » — Chapitre 4, fiche 040",
+      "timePrep": "10 min",
+      "timeCook": "Sans cuisson",
+      "servings": "2 personnes",
+      "blurb": "🎃 Halloween · 🧪 Potions & Cocktails · Avec Alcool",
+      "fete": "halloween",
+      "sous_fete": "potions"
     }
   ],
   "plan": [
