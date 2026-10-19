@@ -6,7 +6,7 @@ import { BATCH_GUIDES } from "@/data/batch-guides";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan } from "@/lib/carnet";
+import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { CheckList, type CheckItem } from "@/components/check-list";
 import { WeekPicker } from "@/components/week-picker";
 
@@ -22,16 +22,17 @@ export default function BatchPage() {
     setWeek(clampWeek(requestedWeek ?? String(currentIsoWeek())));
   }, [requestedWeek]);
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
+  const [preferences, setPreferences] = useState<PlanningPreferences>({});
   const [robotPriority, setRobotPriority] = useState(false);
   useEffect(() => {
-    const refresh = () => { try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); } try { setRobotPriority(Boolean(JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}").robot)); } catch { setRobotPriority(false); } };
+    const refresh = () => { try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); } try { const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}"); setPreferences(saved); setRobotPriority(Boolean(saved.robot)); } catch { setPreferences({}); setRobotPriority(false); } };
     refresh();
     window.addEventListener("storage", refresh);
     window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
     window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
     return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
   }, []);
-  const changedPlan = weekPlan(week, recipeOverrides);
+  const changedPlan = weekPlan(week, recipeOverrides, preferences);
   const allItems = batchForWeek(week);
   const assigned = new Set<string>();
   function take(pattern: RegExp) {
