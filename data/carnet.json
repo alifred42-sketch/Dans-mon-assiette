@@ -69931,6 +69931,3214 @@
       "blurb": "🌱 Végan · ⚡ Express",
       "regime": "vegan",
       "sous_regime": "express"
+    },
+    {
+      "id": "vegan-robot-001",
+      "name": "Velouté de Butternut et Lait de Coco",
+      "ingredients": [
+        "600 g de courge butternut (épluchée et coupée en cubes de 2 cm)",
+        "1 gros oignon (coupé en deux)",
+        "1 gousse d'ail",
+        "200 ml de lait de coco",
+        "400 ml d'eau",
+        "1 cube de bouillon de légumes",
+        "2 c. à soupe d'huile d'olive",
+        "Sel, poivre, une pincée de muscade"
+      ],
+      "steps": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5. Racler les parois.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les cubes de butternut, l'eau, le cube de bouillon, du sel et du poivre. Cuire 20 min / 100°C / Vitesse 1.",
+        "Ajouter le lait de coco et la muscade. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement)."
+      ],
+      "robot": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5. Racler les parois.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les cubes de butternut, l'eau, le cube de bouillon, du sel et du poivre. Cuire 20 min / 100°C / Vitesse 1.",
+        "Ajouter le lait de coco et la muscade. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement)."
+      ],
+      "notes": [
+        "Un classique d'automne doux et crémeux.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 1/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g de courge butternut (épluchée et coupée en cubes de 2 cm)",
+            "1 gros oignon (coupé en deux)",
+            "1 gousse d'ail",
+            "200 ml de lait de coco",
+            "400 ml d'eau",
+            "1 cube de bouillon de légumes",
+            "2 c. à soupe d'huile d'olive",
+            "Sel, poivre, une pincée de muscade"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5. Racler les parois.",
+            "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter les cubes de butternut, l'eau, le cube de bouillon, du sel et du poivre. Cuire 20 min / 100°C / Vitesse 1.",
+            "Ajouter le lait de coco et la muscade. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 1/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-002",
+      "name": "Risotto aux Champignons et Persillade",
+      "ingredients": [
+        "320 g de riz Arborio (spécial risotto)",
+        "250 g de champignons de Paris (émincés)",
+        "1 oignon",
+        "60 ml de vin blanc sec",
+        "750 ml d'eau tiède + 1 cube de bouillon de légumes",
+        "3 c. à soupe d'huile d'olive",
+        "2 c. à soupe de levure maltée (pour le goût fromager, optionnel)",
+        "Persil frais haché, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5. Racler les parois.",
+        "Ajouter l'huile d'olive et les champignons. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter le riz. Rissoler 2 min / Mode Rissoler / Sans le gobelet doseur.",
+        "Ajouter le vin blanc. Cuire 2 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet.",
+        "Ajouter l'eau, le cube de bouillon, le sel et le poivre. Cuire 14 min / 100°C / Rotation gauche / Vitesse 1 (poser le panier de cuisson sur le couvercle pour éviter les projections).",
+        "Ajouter la levure maltée et le persil. Mélanger 1 min / Rotation gauche / Vitesse 2. Laisser reposer 2 min dans le bol avant de servir. <PARSED TEXT FOR PAGE: 2 / 22>"
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5. Racler les parois.",
+        "Ajouter l'huile d'olive et les champignons. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter le riz. Rissoler 2 min / Mode Rissoler / Sans le gobelet doseur.",
+        "Ajouter le vin blanc. Cuire 2 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet.",
+        "Ajouter l'eau, le cube de bouillon, le sel et le poivre. Cuire 14 min / 100°C / Rotation gauche / Vitesse 1 (poser le panier de cuisson sur le couvercle pour éviter les projections).",
+        "Ajouter la levure maltée et le persil. Mélanger 1 min / Rotation gauche / Vitesse 2. Laisser reposer 2 min dans le bol avant de servir. <PARSED TEXT FOR PAGE: 2 / 22>"
+      ],
+      "notes": [
+        "Un plat crémeux sans produit laitier grâce à l'amidon du riz.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 2/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "320 g de riz Arborio (spécial risotto)",
+            "250 g de champignons de Paris (émincés)",
+            "1 oignon",
+            "60 ml de vin blanc sec",
+            "750 ml d'eau tiède + 1 cube de bouillon de légumes",
+            "3 c. à soupe d'huile d'olive",
+            "2 c. à soupe de levure maltée (pour le goût fromager, optionnel)",
+            "Persil frais haché, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5. Racler les parois.",
+            "Ajouter l'huile d'olive et les champignons. Rissoler 4 min / Mode Rissoler (130°C).",
+            "Ajouter le riz. Rissoler 2 min / Mode Rissoler / Sans le gobelet doseur.",
+            "Ajouter le vin blanc. Cuire 2 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet.",
+            "Ajouter l'eau, le cube de bouillon, le sel et le poivre. Cuire 14 min / 100°C / Rotation gauche / Vitesse 1 (poser le panier de cuisson sur le couvercle pour éviter les projections).",
+            "Ajouter la levure maltée et le persil. Mélanger 1 min / Rotation gauche / Vitesse 2. Laisser reposer 2 min dans le bol avant de servir. <PARSED TEXT FOR PAGE: 2 / 22>"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 2/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-003",
+      "name": "Chili Sin Carne express",
+      "ingredients": [
+        "400 g de haricots rouges en boîte (égouttés)",
+        "400 g de pulpe de tomate en conserve",
+        "100 g de protéines de soja texturées (petites)",
+        "1 poivron rouge (coupé en lanières)",
+        "1 gros oignon",
+        "1 gousse d'ail",
+        "200 ml de bouillon de légumes",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à café de cumin, 1 c. à café de paprika, 1 pincée de piment",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive et le poivron. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter la pulpe de tomate, les protéines de soja (sèches), le bouillon de légumes, le cumin, le paprika, le piment, le sel et le poivre. Cuire 15 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les haricots rouges égouttés. Cuire 5 min / 95°C / Rotation gauche / Vitesse 1."
+      ],
+      "robot": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive et le poivron. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter la pulpe de tomate, les protéines de soja (sèches), le bouillon de légumes, le cumin, le paprika, le piment, le sel et le poivre. Cuire 15 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les haricots rouges égouttés. Cuire 5 min / 95°C / Rotation gauche / Vitesse 1."
+      ],
+      "notes": [
+        "Un plat mijoté riche en protéines végétales.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 3/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de haricots rouges en boîte (égouttés)",
+            "400 g de pulpe de tomate en conserve",
+            "100 g de protéines de soja texturées (petites)",
+            "1 poivron rouge (coupé en lanières)",
+            "1 gros oignon",
+            "1 gousse d'ail",
+            "200 ml de bouillon de légumes",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à café de cumin, 1 c. à café de paprika, 1 pincée de piment",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive et le poivron. Rissoler 4 min / Mode Rissoler (130°C).",
+            "Ajouter la pulpe de tomate, les protéines de soja (sèches), le bouillon de légumes, le cumin, le paprika, le piment, le sel et le poivre. Cuire 15 min / 100°C / Rotation gauche / Vitesse 1.",
+            "Ajouter les haricots rouges égouttés. Cuire 5 min / 95°C / Rotation gauche / Vitesse 1."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 3/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-004",
+      "name": "Dahl de Lentilles Corail au Curry",
+      "ingredients": [
+        "200 g de lentilles corail (rincées)",
+        "400 g de tomates concassées en boîte",
+        "200 ml de lait de coco",
+        "1 oignon",
+        "1 gousse d'ail",
+        "1 cm de gingembre frais",
+        "300 ml d'eau",
+        "2 c. à soupe d'huile de tournesol",
+        "1 c. à soupe de curry en poudre",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon, l'ail et le gingembre dans le bol. Hacher 5 sec / Vitesse 6. Racler les parois.",
+        "Ajouter l'huile et le curry. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les lentilles corail, les tomates concassées, l'eau, le sel et le poivre. Cuire 15 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter le lait de coco. Cuire 3 min / 90°C / Rotation gauche / Vitesse <PARSED TEXT FOR PAGE: 3 / 22>"
+      ],
+      "robot": [
+        "Mettre l'oignon, l'ail et le gingembre dans le bol. Hacher 5 sec / Vitesse 6. Racler les parois.",
+        "Ajouter l'huile et le curry. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les lentilles corail, les tomates concassées, l'eau, le sel et le poivre. Cuire 15 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter le lait de coco. Cuire 3 min / 90°C / Rotation gauche / Vitesse <PARSED TEXT FOR PAGE: 3 / 22>"
+      ],
+      "notes": [
+        "Un plat réconfortant et rapide à réaliser.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 4/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200 g de lentilles corail (rincées)",
+            "400 g de tomates concassées en boîte",
+            "200 ml de lait de coco",
+            "1 oignon",
+            "1 gousse d'ail",
+            "1 cm de gingembre frais",
+            "300 ml d'eau",
+            "2 c. à soupe d'huile de tournesol",
+            "1 c. à soupe de curry en poudre",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon, l'ail et le gingembre dans le bol. Hacher 5 sec / Vitesse 6. Racler les parois.",
+            "Ajouter l'huile et le curry. Rissoler 3 min / Mode Rissoler (120°C).",
+            "Ajouter les lentilles corail, les tomates concassées, l'eau, le sel et le poivre. Cuire 15 min / 100°C / Rotation gauche / Vitesse 1.",
+            "Ajouter le lait de coco. Cuire 3 min / 90°C / Rotation gauche / Vitesse <PARSED TEXT FOR PAGE: 3 / 22>"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 4/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-005",
+      "name": "Curry de Pois Chiches et Épinards",
+      "ingredients": [
+        "400 g de pois chiches en boîte (égouttés)",
+        "150 g d'épinards frais hachés",
+        "400 g de coulis de tomate",
+        "1 oignon",
+        "200 ml de lait de coco",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à café de garam masala, 1 c. à café de curcuma",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive, le garam masala et le curcuma. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter le coulis de tomate et les pois chiches. Cuire 10 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les épinards frais et le lait de coco. Cuire 5 min / 90°C / Rotation gauche / Vitesse 1."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive, le garam masala et le curcuma. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter le coulis de tomate et les pois chiches. Cuire 10 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les épinards frais et le lait de coco. Cuire 5 min / 90°C / Rotation gauche / Vitesse 1."
+      ],
+      "notes": [
+        "Un classique de la cuisine indienne sain et rassasiant.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 5/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de pois chiches en boîte (égouttés)",
+            "150 g d'épinards frais hachés",
+            "400 g de coulis de tomate",
+            "1 oignon",
+            "200 ml de lait de coco",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à café de garam masala, 1 c. à café de curcuma",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive, le garam masala et le curcuma. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter le coulis de tomate et les pois chiches. Cuire 10 min / 100°C / Rotation gauche / Vitesse 1.",
+            "Ajouter les épinards frais et le lait de coco. Cuire 5 min / 90°C / Rotation gauche / Vitesse 1."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 5/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-006",
+      "name": "Bolognaise de Lentilles Vertes",
+      "ingredients": [
+        "150 g de lentilles vertes (crues, rincées)",
+        "500 g de passata (purée de tomate)",
+        "1 carotte (coupée en morceaux)",
+        "1 branche de céleri (coupée en morceaux)",
+        "1 oignon",
+        "1 gousse d'ail",
+        "400 ml d'eau",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à café d'herbes de Provence, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon, l'ail, la carotte et le céleri dans le bol. Hacher 6 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter les lentilles vertes, la passata, l'eau, les herbes de Provence, le sel et le poivre.",
+        "Cuire 35 min / 100°C / Rotation gauche / Vitesse 1 (vérifier la cuisson des lentilles, prolonger de 5 min si nécessaire). <PARSED TEXT FOR PAGE: 4 / 22>"
+      ],
+      "robot": [
+        "Mettre l'oignon, l'ail, la carotte et le céleri dans le bol. Hacher 6 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter les lentilles vertes, la passata, l'eau, les herbes de Provence, le sel et le poivre.",
+        "Cuire 35 min / 100°C / Rotation gauche / Vitesse 1 (vérifier la cuisson des lentilles, prolonger de 5 min si nécessaire). <PARSED TEXT FOR PAGE: 4 / 22>"
+      ],
+      "notes": [
+        "Pour napper vos pâtes avec une alternative végétale bluffante.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 6/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150 g de lentilles vertes (crues, rincées)",
+            "500 g de passata (purée de tomate)",
+            "1 carotte (coupée en morceaux)",
+            "1 branche de céleri (coupée en morceaux)",
+            "1 oignon",
+            "1 gousse d'ail",
+            "400 ml d'eau",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à café d'herbes de Provence, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon, l'ail, la carotte et le céleri dans le bol. Hacher 6 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive. Rissoler 4 min / Mode Rissoler (130°C).",
+            "Ajouter les lentilles vertes, la passata, l'eau, les herbes de Provence, le sel et le poivre.",
+            "Cuire 35 min / 100°C / Rotation gauche / Vitesse 1 (vérifier la cuisson des lentilles, prolonger de 5 min si nécessaire). <PARSED TEXT FOR PAGE: 4 / 22>"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 6/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-007",
+      "name": "Houmous Crémeux Traditionnel",
+      "ingredients": [
+        "400 g de pois chiches en conserve (conserver le jus de la boîte = l'aquafaba)",
+        "60 g de tahini (crème de sésame)",
+        "30 ml de jus de citron frais",
+        "1 gousse d'ail (dégermée)",
+        "40 ml d'huile d'olive",
+        "3 à 4 c. à soupe du jus des pois chiches (ou d'eau glacée)",
+        "1/2 c. à café de cumin en poudre, sel"
+      ],
+      "steps": [
+        "Mettre la gousse d'ail dans le bol. Hacher 5 sec / Vitesse 7. Racler les parois.",
+        "Ajouter les pois chiches égouttés, le tahini, le jus de citron, l'huile d'olive, le cumin, le sel et 3 cuillères à soupe de jus de pois chiches.",
+        "Mixer 1 min / Vitesse 7.",
+        "Racler les parois. Si le houmous est trop épais, ajouter encore une cuillère de jus. Mixer à nouveau 30 sec / Vitesse 8 pour obtenir une texture ultra-lisse."
+      ],
+      "robot": [
+        "Mettre la gousse d'ail dans le bol. Hacher 5 sec / Vitesse 7. Racler les parois.",
+        "Ajouter les pois chiches égouttés, le tahini, le jus de citron, l'huile d'olive, le cumin, le sel et 3 cuillères à soupe de jus de pois chiches.",
+        "Mixer 1 min / Vitesse 7.",
+        "Racler les parois. Si le houmous est trop épais, ajouter encore une cuillère de jus. Mixer à nouveau 30 sec / Vitesse 8 pour obtenir une texture ultra-lisse."
+      ],
+      "notes": [
+        "Idéal pour les apéritifs ou les tartinades.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 7/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de pois chiches en conserve (conserver le jus de la boîte = l'aquafaba)",
+            "60 g de tahini (crème de sésame)",
+            "30 ml de jus de citron frais",
+            "1 gousse d'ail (dégermée)",
+            "40 ml d'huile d'olive",
+            "3 à 4 c. à soupe du jus des pois chiches (ou d'eau glacée)",
+            "1/2 c. à café de cumin en poudre, sel"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre la gousse d'ail dans le bol. Hacher 5 sec / Vitesse 7. Racler les parois.",
+            "Ajouter les pois chiches égouttés, le tahini, le jus de citron, l'huile d'olive, le cumin, le sel et 3 cuillères à soupe de jus de pois chiches.",
+            "Mixer 1 min / Vitesse 7.",
+            "Racler les parois. Si le houmous est trop épais, ajouter encore une cuillère de jus. Mixer à nouveau 30 sec / Vitesse 8 pour obtenir une texture ultra-lisse."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 7/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-008",
+      "name": "Crème Dessert Vegan au Chocolat",
+      "ingredients": [
+        "500 ml de lait d'amande (ou de soja)",
+        "100 g de chocolat noir à pâtisser (en morceaux)",
+        "25 g de fécule de maïs (Maïzena)",
+        "40 g de sucre de canne"
+      ],
+      "steps": [
+        "Mettre le chocolat noir dans le bol. Hacher 10 sec / Vitesse 8.",
+        "Ajouter le lait végétal, la fécule de maïs et le sucre.",
+        "Cuire 10 min / 90°C / Vitesse 3.",
+        "Mixer 20 sec / Vitesse 4 pour lisser la crème. Rpartir dans des ramequins et placer au frais au moins 2 heures."
+      ],
+      "robot": [
+        "Mettre le chocolat noir dans le bol. Hacher 10 sec / Vitesse 8.",
+        "Ajouter le lait végétal, la fécule de maïs et le sucre.",
+        "Cuire 10 min / 90°C / Vitesse 3.",
+        "Mixer 20 sec / Vitesse 4 pour lisser la crème. Rpartir dans des ramequins et placer au frais au moins 2 heures."
+      ],
+      "notes": [
+        "Une texture onctueuse sans œufs ni lait.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 8/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 ml de lait d'amande (ou de soja)",
+            "100 g de chocolat noir à pâtisser (en morceaux)",
+            "25 g de fécule de maïs (Maïzena)",
+            "40 g de sucre de canne"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre le chocolat noir dans le bol. Hacher 10 sec / Vitesse 8.",
+            "Ajouter le lait végétal, la fécule de maïs et le sucre.",
+            "Cuire 10 min / 90°C / Vitesse 3.",
+            "Mixer 20 sec / Vitesse 4 pour lisser la crème. Rpartir dans des ramequins et placer au frais au moins 2 heures."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 8/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-009",
+      "name": "Pommes de Terre et Chou-Fleur à la Vapeur, Sauce Moutarde",
+      "ingredients": [
+        "400 g de pommes de terre (coupées en morceaux)",
+        "400 g de bouquets de chou-fleur",
+        "500 ml d'eau (pour la vapeur)",
+        "Pour la sauce : 150 ml de crème de soja liquide, 2 c. à soupe de moutarde à l'ancienne, 1 c. à soupe de jus de citron, sel, poivre."
+      ],
+      "steps": [
+        "Verser les 500 ml d'eau dans le bol. <PARSED TEXT FOR PAGE: 5 / 22>",
+        "Placer les pommes de terre dans le panier de cuisson inférieur et les bouquets de chou-fleur dans le grand cuiseur vapeur (profond) fixé sur le couvercle. Mettre le couvercle du cuiseur vapeur.",
+        "Cuire 25 min / Mode Cuisson Vapeur (120°C). Retirer les légumes et vider le bol.",
+        "Dans le bol vide, mettre la crème de soja, la moutarde, le jus de citron, du sel et du poivre. Chauffer 3 min / 80°C / Vitesse 2. Napper les légumes."
+      ],
+      "robot": [
+        "Verser les 500 ml d'eau dans le bol. <PARSED TEXT FOR PAGE: 5 / 22>",
+        "Placer les pommes de terre dans le panier de cuisson inférieur et les bouquets de chou-fleur dans le grand cuiseur vapeur (profond) fixé sur le couvercle. Mettre le couvercle du cuiseur vapeur.",
+        "Cuire 25 min / Mode Cuisson Vapeur (120°C). Retirer les légumes et vider le bol.",
+        "Dans le bol vide, mettre la crème de soja, la moutarde, le jus de citron, du sel et du poivre. Chauffer 3 min / 80°C / Vitesse 2. Napper les légumes."
+      ],
+      "notes": [
+        "Une recette saine utilisant l'ensemble cuiseur vapeur (Varoma).\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 9/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de pommes de terre (coupées en morceaux)",
+            "400 g de bouquets de chou-fleur",
+            "500 ml d'eau (pour la vapeur)",
+            "Pour la sauce : 150 ml de crème de soja liquide, 2 c. à soupe de moutarde à l'ancienne, 1 c. à soupe de jus de citron, sel, poivre."
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Verser les 500 ml d'eau dans le bol. <PARSED TEXT FOR PAGE: 5 / 22>",
+            "Placer les pommes de terre dans le panier de cuisson inférieur et les bouquets de chou-fleur dans le grand cuiseur vapeur (profond) fixé sur le couvercle. Mettre le couvercle du cuiseur vapeur.",
+            "Cuire 25 min / Mode Cuisson Vapeur (120°C). Retirer les légumes et vider le bol.",
+            "Dans le bol vide, mettre la crème de soja, la moutarde, le jus de citron, du sel et du poivre. Chauffer 3 min / 80°C / Vitesse 2. Napper les légumes."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 9/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-010",
+      "name": "Compote Pomme, Poire et Cannelle douce",
+      "ingredients": [
+        "400 g de pommes (épluchées et coupées en quartiers)",
+        "400 g de poires (épluchées et coupées en quartiers)",
+        "1/2 c. à café de cannelle en poudre",
+        "1 c. à soupe de jus de citron"
+      ],
+      "steps": [
+        "Mettre tous les ingrédients dans le bol.",
+        "Cuire 12 min / 100°C / Vitesse 1.",
+        "Mixer 30 sec / Vitesse 5 pour une compote avec morceaux, ou 20 sec / Vitesse 8 pour une texture parfaitement lisse."
+      ],
+      "robot": [
+        "Mettre tous les ingrédients dans le bol.",
+        "Cuire 12 min / 100°C / Vitesse 1.",
+        "Mixer 30 sec / Vitesse 5 pour une compote avec morceaux, ou 20 sec / Vitesse 8 pour une texture parfaitement lisse."
+      ],
+      "notes": [
+        "Le dessert ou goûter simple par excellence.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 10/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de pommes (épluchées et coupées en quartiers)",
+            "400 g de poires (épluchées et coupées en quartiers)",
+            "1/2 c. à café de cannelle en poudre",
+            "1 c. à soupe de jus de citron"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre tous les ingrédients dans le bol.",
+            "Cuire 12 min / 100°C / Vitesse 1.",
+            "Mixer 30 sec / Vitesse 5 pour une compote avec morceaux, ou 20 sec / Vitesse 8 pour une texture parfaitement lisse."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 10/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-011",
+      "name": "Soupe Thaï au Tofu et Nouilles de Riz",
+      "ingredients": [
+        "200 g de tofu fumé (coupé en dés)",
+        "100 g de nouilles de riz fraîches ou sèches (fines)",
+        "1 poivron rouge (émincé finement)",
+        "1 oignon",
+        "1 gousse d'ail",
+        "400 ml de lait de coco",
+        "500 ml d'eau + 1 cube de bouillon de légumes",
+        "2 c. à soupe de sauce soja (tamari)",
+        "1 c. à soupe de pâte de curry rouge (ou vert)",
+        "1 c. à soupe d'huile de sésame"
+      ],
+      "steps": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile de sésame et la pâte de curry. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter le poivron rouge, le lait de coco, l'eau, le cube de bouillon et la sauce soja. Cuire 12 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les dés de tofu et les nouilles de riz par l'orifice du couvercle. Cuire 4 min / 95°C / Rotation gauche / Vitesse 1 (ajuster selon le temps de cuisson des nouilles). <PARSED TEXT FOR PAGE: 6 / 22>"
+      ],
+      "robot": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile de sésame et la pâte de curry. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter le poivron rouge, le lait de coco, l'eau, le cube de bouillon et la sauce soja. Cuire 12 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les dés de tofu et les nouilles de riz par l'orifice du couvercle. Cuire 4 min / 95°C / Rotation gauche / Vitesse 1 (ajuster selon le temps de cuisson des nouilles). <PARSED TEXT FOR PAGE: 6 / 22>"
+      ],
+      "notes": [
+        "Un bouillon parfumé, complet et réconfortant.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 11/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200 g de tofu fumé (coupé en dés)",
+            "100 g de nouilles de riz fraîches ou sèches (fines)",
+            "1 poivron rouge (émincé finement)",
+            "1 oignon",
+            "1 gousse d'ail",
+            "400 ml de lait de coco",
+            "500 ml d'eau + 1 cube de bouillon de légumes",
+            "2 c. à soupe de sauce soja (tamari)",
+            "1 c. à soupe de pâte de curry rouge (ou vert)",
+            "1 c. à soupe d'huile de sésame"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile de sésame et la pâte de curry. Rissoler 3 min / Mode Rissoler (120°C).",
+            "Ajouter le poivron rouge, le lait de coco, l'eau, le cube de bouillon et la sauce soja. Cuire 12 min / 100°C / Rotation gauche / Vitesse 1.",
+            "Ajouter les dés de tofu et les nouilles de riz par l'orifice du couvercle. Cuire 4 min / 95°C / Rotation gauche / Vitesse 1 (ajuster selon le temps de cuisson des nouilles). <PARSED TEXT FOR PAGE: 6 / 22>"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 11/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-012",
+      "name": "Purée de Patates Douces au Gingembre",
+      "ingredients": [
+        "800 g de patates douces (épluchées et coupées en cubes)",
+        "150 ml de lait d'amande sans sucre (ou de soja)",
+        "1 cm de gingembre frais (épluché)",
+        "20 g de margarine végétale",
+        "1 pincée de noix de muscade, sel, poivre"
+      ],
+      "steps": [
+        "Insérer le batteur (papillon) sur les lames.",
+        "Mettre le gingembre dans le bol (sans le batteur au départ). Hacher 5 sec / Vitesse 7. Racler les parois.",
+        "Insérer le batteur, ajouter les cubes de patates douces, le lait végétal, le sel et le poivre.",
+        "Cuire 25 min / 95°C / Vitesse 1 (poser le gobelet doseur).",
+        "Ajouter la margarine et la muscade. Retirer le gobelet doseur, maintenir le couvercle et mixer 45 sec / Vitesse 3 pour obtenir une texture bien lisse."
+      ],
+      "robot": [
+        "Insérer le batteur (papillon) sur les lames.",
+        "Mettre le gingembre dans le bol (sans le batteur au départ). Hacher 5 sec / Vitesse 7. Racler les parois.",
+        "Insérer le batteur, ajouter les cubes de patates douces, le lait végétal, le sel et le poivre.",
+        "Cuire 25 min / 95°C / Vitesse 1 (poser le gobelet doseur).",
+        "Ajouter la margarine et la muscade. Retirer le gobelet doseur, maintenir le couvercle et mixer 45 sec / Vitesse 3 pour obtenir une texture bien lisse."
+      ],
+      "notes": [
+        "Une purée douce et subtilement relevée.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 12/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "800 g de patates douces (épluchées et coupées en cubes)",
+            "150 ml de lait d'amande sans sucre (ou de soja)",
+            "1 cm de gingembre frais (épluché)",
+            "20 g de margarine végétale",
+            "1 pincée de noix de muscade, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Insérer le batteur (papillon) sur les lames.",
+            "Mettre le gingembre dans le bol (sans le batteur au départ). Hacher 5 sec / Vitesse 7. Racler les parois.",
+            "Insérer le batteur, ajouter les cubes de patates douces, le lait végétal, le sel et le poivre.",
+            "Cuire 25 min / 95°C / Vitesse 1 (poser le gobelet doseur).",
+            "Ajouter la margarine et la muscade. Retirer le gobelet doseur, maintenir le couvercle et mixer 45 sec / Vitesse 3 pour obtenir une texture bien lisse."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 12/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-013",
+      "name": "Caviar d'Aubergines aux Épices",
+      "ingredients": [
+        "2 grosses aubergines (environ 600 g, coupées en gros dés)",
+        "2 gousses d'ail (dégermées)",
+        "40 ml d'huile d'olive",
+        "1 c. à soupe de jus de citron",
+        "1/2 c. à café de cumin, 1/2 c. à café de paprika",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'ail dans le bol. Hacher 5 sec / Vitesse 6. Racler les parois.",
+        "Ajouter les dés d'aubergine et 20 ml d'huile d'olive. Rissoler 5 min / Mode Rissoler (130°C).",
+        "Ajouter le sel, le poivre et les épices (cumin, paprika). Cuire 15 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter le reste d'huile d'olive (20 ml) et le jus de citron. Mixer 20 sec / Vitesse 5 (ou plus si vous préférez une consistance ultra-lisse). Laisser refroidir au frais."
+      ],
+      "robot": [
+        "Mettre l'ail dans le bol. Hacher 5 sec / Vitesse 6. Racler les parois.",
+        "Ajouter les dés d'aubergine et 20 ml d'huile d'olive. Rissoler 5 min / Mode Rissoler (130°C).",
+        "Ajouter le sel, le poivre et les épices (cumin, paprika). Cuire 15 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter le reste d'huile d'olive (20 ml) et le jus de citron. Mixer 20 sec / Vitesse 5 (ou plus si vous préférez une consistance ultra-lisse). Laisser refroidir au frais."
+      ],
+      "notes": [
+        "Une tartinade fondante idéale pour l'apéritif.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 13/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 grosses aubergines (environ 600 g, coupées en gros dés)",
+            "2 gousses d'ail (dégermées)",
+            "40 ml d'huile d'olive",
+            "1 c. à soupe de jus de citron",
+            "1/2 c. à café de cumin, 1/2 c. à café de paprika",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'ail dans le bol. Hacher 5 sec / Vitesse 6. Racler les parois.",
+            "Ajouter les dés d'aubergine et 20 ml d'huile d'olive. Rissoler 5 min / Mode Rissoler (130°C).",
+            "Ajouter le sel, le poivre et les épices (cumin, paprika). Cuire 15 min / 100°C / Rotation gauche / Vitesse 1.",
+            "Ajouter le reste d'huile d'olive (20 ml) et le jus de citron. Mixer 20 sec / Vitesse 5 (ou plus si vous préférez une consistance ultra-lisse). Laisser refroidir au frais."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 13/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-014",
+      "name": "One Pot Pasta aux Tomates Cerises et Basilic",
+      "ingredients": [
+        "250 g de pâtes (type Penne ou Fusilli)",
+        "250 g de tomates cerises (coupées en deux)",
+        "1 oignon",
+        "1 gousse d'ail",
+        "550 ml d'eau bouillante + 1 cube de bouillon de légumes <PARSED TEXT FOR PAGE: 7 / 22>",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à café d'origan séché, sel, poivre",
+        "Une poignée de feuilles de basilic frais"
+      ],
+      "steps": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les tomates cerises, l'eau bouillante, le cube de bouillon, l'origan, le sel et le poivre.",
+        "Ajouter les pâtes directement dans le liquide. Cuire le temps indiqué sur le paquet de pâtes + 2 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (placer le panier de cuisson sur le couvercle).",
+        "Ajouter le basilic frais juste avant de servir."
+      ],
+      "robot": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les tomates cerises, l'eau bouillante, le cube de bouillon, l'origan, le sel et le poivre.",
+        "Ajouter les pâtes directement dans le liquide. Cuire le temps indiqué sur le paquet de pâtes + 2 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (placer le panier de cuisson sur le couvercle).",
+        "Ajouter le basilic frais juste avant de servir."
+      ],
+      "notes": [
+        "Tout cuit ensemble dans le bol pour un minimum de vaisselle.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 14/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "250 g de pâtes (type Penne ou Fusilli)",
+            "250 g de tomates cerises (coupées en deux)",
+            "1 oignon",
+            "1 gousse d'ail",
+            "550 ml d'eau bouillante + 1 cube de bouillon de légumes <PARSED TEXT FOR PAGE: 7 / 22>",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à café d'origan séché, sel, poivre",
+            "Une poignée de feuilles de basilic frais"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter les tomates cerises, l'eau bouillante, le cube de bouillon, l'origan, le sel et le poivre.",
+            "Ajouter les pâtes directement dans le liquide. Cuire le temps indiqué sur le paquet de pâtes + 2 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (placer le panier de cuisson sur le couvercle).",
+            "Ajouter le basilic frais juste avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 14/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-015",
+      "name": "Mac and Cheese Vegan (Sauce au Potimarron)",
+      "ingredients": [
+        "200 g de pommes de terre (épluchées et coupées en cubes)",
+        "150 g de potimarron ou butternut (en cubes)",
+        "1 petit oignon",
+        "4 c. à soupe de levure maltée (indispensable pour le goût \"fromage\")",
+        "1 c. à café de moutarde fine",
+        "1 c. à prélever de jus de citron",
+        "40 ml d'huile d'olive",
+        "200 ml d'eau de cuisson des légumes",
+        "Sel, poivre, une pincée de curcuma (pour la couleur jaune)",
+        "Accompagnement : 300 g de macaronis cuits à part."
+      ],
+      "steps": [
+        "Mettre les pommes de terre, le potimarron et l'oignon dans le bol. Ajouter 500 ml d'eau. Cuire 20 min / 100°C / Vitesse 1.",
+        "Égoutter les légumes en veillant à conserver le liquide de cuisson.",
+        "Remettre les légumes cuits dans le bol. Ajouter 200 ml de leur eau de cuisson mise de côté, la levure maltée, l'huile d'olive, la moutarde, le jus de citron, le curcuma, le sel et le poivre.",
+        "Mixer 1 min / Vitesse 8 pour obtenir une sauce fromagère épaisse et nappante. Mélanger chaud sur vos macaronis."
+      ],
+      "robot": [
+        "Mettre les pommes de terre, le potimarron et l'oignon dans le bol. Ajouter 500 ml d'eau. Cuire 20 min / 100°C / Vitesse 1.",
+        "Égoutter les légumes en veillant à conserver le liquide de cuisson.",
+        "Remettre les légumes cuits dans le bol. Ajouter 200 ml de leur eau de cuisson mise de côté, la levure maltée, l'huile d'olive, la moutarde, le jus de citron, le curcuma, le sel et le poivre.",
+        "Mixer 1 min / Vitesse 8 pour obtenir une sauce fromagère épaisse et nappante. Mélanger chaud sur vos macaronis."
+      ],
+      "notes": [
+        "L'illusion parfaite du fromage grâce aux légumes et à la levure maltée.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 15/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200 g de pommes de terre (épluchées et coupées en cubes)",
+            "150 g de potimarron ou butternut (en cubes)",
+            "1 petit oignon",
+            "4 c. à soupe de levure maltée (indispensable pour le goût \"fromage\")",
+            "1 c. à café de moutarde fine",
+            "1 c. à prélever de jus de citron",
+            "40 ml d'huile d'olive",
+            "200 ml d'eau de cuisson des légumes",
+            "Sel, poivre, une pincée de curcuma (pour la couleur jaune)",
+            "Accompagnement : 300 g de macaronis cuits à part."
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre les pommes de terre, le potimarron et l'oignon dans le bol. Ajouter 500 ml d'eau. Cuire 20 min / 100°C / Vitesse 1.",
+            "Égoutter les légumes en veillant à conserver le liquide de cuisson.",
+            "Remettre les légumes cuits dans le bol. Ajouter 200 ml de leur eau de cuisson mise de côté, la levure maltée, l'huile d'olive, la moutarde, le jus de citron, le curcuma, le sel et le poivre.",
+            "Mixer 1 min / Vitesse 8 pour obtenir une sauce fromagère épaisse et nappante. Mélanger chaud sur vos macaronis."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 15/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-016",
+      "name": "Gaspacho Andalou Express",
+      "ingredients": [
+        "500 g de tomates bien mûres (coupées en quartiers)",
+        "1/2 poivron vert (épépiné et coupé en morceaux)",
+        "1/2 concombre (épluché et en morceaux)",
+        "1 petite gousse d'ail",
+        "30 ml d'huile d'olive",
+        "15 ml de vinaigre de xérès ou de cidre",
+        "4 glaçons <PARSED TEXT FOR PAGE: 8 / 22>",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre la gousse d'ail dans le bol. Hacher 5 sec / Vitesse 7.",
+        "Ajouter les tomates, le poivron, le concombre, l'huile d'olive, le vinaigre, le sel, le poivre et les glaçons.",
+        "Mixer 2 min / Vitesse 10 jusqu'à ce que la texture soit parfaitement lisse et fluide. Réserver au réfrigérateur au moins 2 heures avant de servir."
+      ],
+      "robot": [
+        "Mettre la gousse d'ail dans le bol. Hacher 5 sec / Vitesse 7.",
+        "Ajouter les tomates, le poivron, le concombre, l'huile d'olive, le vinaigre, le sel, le poivre et les glaçons.",
+        "Mixer 2 min / Vitesse 10 jusqu'à ce que la texture soit parfaitement lisse et fluide. Réserver au réfrigérateur au moins 2 heures avant de servir."
+      ],
+      "notes": [
+        "Une soupe froide rafraîchissante et vitaminée.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 16/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 g de tomates bien mûres (coupées en quartiers)",
+            "1/2 poivron vert (épépiné et coupé en morceaux)",
+            "1/2 concombre (épluché et en morceaux)",
+            "1 petite gousse d'ail",
+            "30 ml d'huile d'olive",
+            "15 ml de vinaigre de xérès ou de cidre",
+            "4 glaçons <PARSED TEXT FOR PAGE: 8 / 22>",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre la gousse d'ail dans le bol. Hacher 5 sec / Vitesse 7.",
+            "Ajouter les tomates, le poivron, le concombre, l'huile d'olive, le vinaigre, le sel, le poivre et les glaçons.",
+            "Mixer 2 min / Vitesse 10 jusqu'à ce que la texture soit parfaitement lisse et fluide. Réserver au réfrigérateur au moins 2 heures avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 16/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-017",
+      "name": "Curry de Tofu aux Petits Légumes",
+      "ingredients": [
+        "200 g de tofu ferme (coupé en dés de 1,5 cm)",
+        "150 g de fleurettes de brocoli (petites)",
+        "1 carotte (coupée en fines rondelles)",
+        "1 oignon",
+        "200 ml de lait de coco",
+        "100 ml de bouillon de légumes",
+        "2 c. à soupe d'huile neutre",
+        "1 c. à soupe de curry en poudre, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile et le curry. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les rondelles de carotte, les fleurettes de brocoli, le tofu, le lait de coco et le bouillon de légumes. Saler et poivrer.",
+        "Cuire 14 min / 100°C / Rotation gauche / Vitesse 1."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile et le curry. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les rondelles de carotte, les fleurettes de brocoli, le tofu, le lait de coco et le bouillon de légumes. Saler et poivrer.",
+        "Cuire 14 min / 100°C / Rotation gauche / Vitesse 1."
+      ],
+      "notes": [
+        "Un plat asiatique complet, haut en couleur.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 17/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200 g de tofu ferme (coupé en dés de 1,5 cm)",
+            "150 g de fleurettes de brocoli (petites)",
+            "1 carotte (coupée en fines rondelles)",
+            "1 oignon",
+            "200 ml de lait de coco",
+            "100 ml de bouillon de légumes",
+            "2 c. à soupe d'huile neutre",
+            "1 c. à soupe de curry en poudre, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile et le curry. Rissoler 3 min / Mode Rissoler (120°C).",
+            "Ajouter les rondelles de carotte, les fleurettes de brocoli, le tofu, le lait de coco et le bouillon de légumes. Saler et poivrer.",
+            "Cuire 14 min / 100°C / Rotation gauche / Vitesse 1."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 17/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-018",
+      "name": "Riz au Lait de Coco et Mangue Fraîche",
+      "ingredients": [
+        "100 g de riz rond (rincé)",
+        "400 ml de lait de coco léger (ou 200 ml de crème de coco + 200 ml d'eau)",
+        "200 ml de lait de soja à la vanille",
+        "50 g de sucre de canne",
+        "1 mangue bien mûre (coupée en dés pour le service)"
+      ],
+      "steps": [
+        "Insérer le batteur (papillon) sur les lames.",
+        "Mettre le riz rond, le lait de coco et le lait de soja dans le bol.",
+        "Cuire 30 min / 90°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (placer le panier de cuisson par-dessus).",
+        "Ajouter le sucre. Cuire à nouveau 5 min / 90°C / Rotation gauche / Vitesse 1.",
+        "Verser dans des verrines, laisser refroidir et servir frais accompagné des dés de mangue fraîche. <PARSED TEXT FOR PAGE: 9 / 22>"
+      ],
+      "robot": [
+        "Insérer le batteur (papillon) sur les lames.",
+        "Mettre le riz rond, le lait de coco et le lait de soja dans le bol.",
+        "Cuire 30 min / 90°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (placer le panier de cuisson par-dessus).",
+        "Ajouter le sucre. Cuire à nouveau 5 min / 90°C / Rotation gauche / Vitesse 1.",
+        "Verser dans des verrines, laisser refroidir et servir frais accompagné des dés de mangue fraîche. <PARSED TEXT FOR PAGE: 9 / 22>"
+      ],
+      "notes": [
+        "Un dessert d'inspiration thaïlandaise doux et fruité.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 18/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100 g de riz rond (rincé)",
+            "400 ml de lait de coco léger (ou 200 ml de crème de coco + 200 ml d'eau)",
+            "200 ml de lait de soja à la vanille",
+            "50 g de sucre de canne",
+            "1 mangue bien mûre (coupée en dés pour le service)"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Insérer le batteur (papillon) sur les lames.",
+            "Mettre le riz rond, le lait de coco et le lait de soja dans le bol.",
+            "Cuire 30 min / 90°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (placer le panier de cuisson par-dessus).",
+            "Ajouter le sucre. Cuire à nouveau 5 min / 90°C / Rotation gauche / Vitesse 1.",
+            "Verser dans des verrines, laisser refroidir et servir frais accompagné des dés de mangue fraîche. <PARSED TEXT FOR PAGE: 9 / 22>"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 18/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-019",
+      "name": "Taboulé de Chou-Fleur Express",
+      "ingredients": [
+        "400 g de bouquets de chou-fleur cru (bien lavés et séchés)",
+        "2 tomates (coupées en dés à la main)",
+        "1/2 concombre (coupé en dés à la main)",
+        "Le jus d'un gros citron",
+        "4 c. à soupe d'huile d'olive",
+        "Une belle poignée de menthe fraîche et de persil",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre la menthe et le persil dans le bol bien sec. Hacher 5 sec / Vitesse 7. Retirer et réserver.",
+        "Mettre les bouquets de chou-fleur cru dans le bol. Hacher 4 à 5 sec / Vitesse 5 (surveiller pour obtenir une consistance de semoule, ne pas transformer en purée).",
+        "Ajouter dans le bol le jus de citron, l'huile d'olive, le sel, le poivre et les herbes hachées. Mélanger 15 sec / Rotation gauche / Vitesse 2.",
+        "Verser dans un saladier et incorporer délicatement à la spatule les dés de tomates et de concombre. Laisser reposer 1 heure au frais."
+      ],
+      "robot": [
+        "Mettre la menthe et le persil dans le bol bien sec. Hacher 5 sec / Vitesse 7. Retirer et réserver.",
+        "Mettre les bouquets de chou-fleur cru dans le bol. Hacher 4 à 5 sec / Vitesse 5 (surveiller pour obtenir une consistance de semoule, ne pas transformer en purée).",
+        "Ajouter dans le bol le jus de citron, l'huile d'olive, le sel, le poivre et les herbes hachées. Mélanger 15 sec / Rotation gauche / Vitesse 2.",
+        "Verser dans un saladier et incorporer délicatement à la spatule les dés de tomates et de concombre. Laisser reposer 1 heure au frais."
+      ],
+      "notes": [
+        "Une alternative sans gluten au taboulé traditionnel, très fraîche.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 19/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de bouquets de chou-fleur cru (bien lavés et séchés)",
+            "2 tomates (coupées en dés à la main)",
+            "1/2 concombre (coupé en dés à la main)",
+            "Le jus d'un gros citron",
+            "4 c. à soupe d'huile d'olive",
+            "Une belle poignée de menthe fraîche et de persil",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre la menthe et le persil dans le bol bien sec. Hacher 5 sec / Vitesse 7. Retirer et réserver.",
+            "Mettre les bouquets de chou-fleur cru dans le bol. Hacher 4 à 5 sec / Vitesse 5 (surveiller pour obtenir une consistance de semoule, ne pas transformer en purée).",
+            "Ajouter dans le bol le jus de citron, l'huile d'olive, le sel, le poivre et les herbes hachées. Mélanger 15 sec / Rotation gauche / Vitesse 2.",
+            "Verser dans un saladier et incorporer délicatement à la spatule les dés de tomates et de concombre. Laisser reposer 1 heure au frais."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 19/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-020",
+      "name": "Crème de Panais à la Noisette",
+      "ingredients": [
+        "500 g de panais (épluchés et coupés en morceaux)",
+        "1 pomme de terre (épluchée et coupée en morceaux)",
+        "1 oignon",
+        "500 ml d'eau + 1 cube de bouillon de légumes",
+        "20 g de purée de noisette blanche (magasin bio) ou 150 ml de lait de noisette",
+        "2 c. à soupe d'huile d'olive, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les morceaux de panais, de pomme de terre, l'eau et le cube de bouillon. Cuire 22 min / 100°C / Vitesse 1.",
+        "Ajouter la purée de noisette (ou le lait de noisette), le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 (augmentation progressive)."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les morceaux de panais, de pomme de terre, l'eau et le cube de bouillon. Cuire 22 min / 100°C / Vitesse 1.",
+        "Ajouter la purée de noisette (ou le lait de noisette), le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 (augmentation progressive)."
+      ],
+      "notes": [
+        "Une entrée raffinée au goût légèrement sucré.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 20/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 g de panais (épluchés et coupés en morceaux)",
+            "1 pomme de terre (épluchée et coupée en morceaux)",
+            "1 oignon",
+            "500 ml d'eau + 1 cube de bouillon de légumes",
+            "20 g de purée de noisette blanche (magasin bio) ou 150 ml de lait de noisette",
+            "2 c. à soupe d'huile d'olive, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter les morceaux de panais, de pomme de terre, l'eau et le cube de bouillon. Cuire 22 min / 100°C / Vitesse 1.",
+            "Ajouter la purée de noisette (ou le lait de noisette), le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 (augmentation progressive)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 20/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-021",
+      "name": "Curry de Patates Douces et Lentilles Corail",
+      "ingredients": [
+        "400 g de patates douces (épluchées et coupées en cubes de 2 cm)",
+        "150 g de lentilles corail (rincées) <PARSED TEXT FOR PAGE: 10 / 22>",
+        "400 ml de lait de coco",
+        "200 ml d'eau",
+        "1 oignon",
+        "1 gousse d'ail",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à soupe de curry en poudre",
+        "1 c. à café de gingembre en poudre",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5. Racler les parois.",
+        "Ajouter l'huile d'olive, le curry et le gingembre. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les cubes de patates douces, les lentilles corail, l'eau et le lait de coco. Saler et poivrer.",
+        "Cuire 20 min / 100°C / Rotation gauche / Vitesse 1. Vérifier la tendreté des patates douces avant de servir."
+      ],
+      "robot": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5. Racler les parois.",
+        "Ajouter l'huile d'olive, le curry et le gingembre. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les cubes de patates douces, les lentilles corail, l'eau et le lait de coco. Saler et poivrer.",
+        "Cuire 20 min / 100°C / Rotation gauche / Vitesse 1. Vérifier la tendreté des patates douces avant de servir."
+      ],
+      "notes": [
+        "Un plat mijoté onctueux et très rassasiant.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 21/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de patates douces (épluchées et coupées en cubes de 2 cm)",
+            "150 g de lentilles corail (rincées) <PARSED TEXT FOR PAGE: 10 / 22>",
+            "400 ml de lait de coco",
+            "200 ml d'eau",
+            "1 oignon",
+            "1 gousse d'ail",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à soupe de curry en poudre",
+            "1 c. à café de gingembre en poudre",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5. Racler les parois.",
+            "Ajouter l'huile d'olive, le curry et le gingembre. Rissoler 3 min / Mode Rissoler (120°C).",
+            "Ajouter les cubes de patates douces, les lentilles corail, l'eau et le lait de coco. Saler et poivrer.",
+            "Cuire 20 min / 100°C / Rotation gauche / Vitesse 1. Vérifier la tendreté des patates douces avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 21/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-022",
+      "name": "Risotto au Citron et Pignons de Pin",
+      "ingredients": [
+        "320 g de riz Arborio",
+        "Le jus et le zeste râpé fin d'un citron bio",
+        "1 oignon",
+        "60 ml de vin blanc sec",
+        "750 ml d'eau tiède + 1 cube de bouillon de légumes",
+        "3 c. à soupe d'huile d'olive",
+        "30 g de pignons de pin (torréfiés à la poêle au préalable)",
+        "2 c. à soupe de levure maltée",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter le riz Arborio. Rissoler 2 min / Mode Rissoler / Sans le gobelet doseur.",
+        "Ajouter le vin blanc et le jus de citron. Cuire 2 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet.",
+        "Ajouter l'eau, le cube de bouillon, le zeste de citron, le sel et le poivre. Cuire 14 min / 100°C / Rotation gauche / Vitesse 1 (poser le panier de cuisson sur le couvercle).",
+        "Ajouter la levure maltée et les pignons de pin. Mélanger 1 min / Rotation gauche / Vitesse 2. <PARSED TEXT FOR PAGE: 11 / 22>"
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter le riz Arborio. Rissoler 2 min / Mode Rissoler / Sans le gobelet doseur.",
+        "Ajouter le vin blanc et le jus de citron. Cuire 2 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet.",
+        "Ajouter l'eau, le cube de bouillon, le zeste de citron, le sel et le poivre. Cuire 14 min / 100°C / Rotation gauche / Vitesse 1 (poser le panier de cuisson sur le couvercle).",
+        "Ajouter la levure maltée et les pignons de pin. Mélanger 1 min / Rotation gauche / Vitesse 2. <PARSED TEXT FOR PAGE: 11 / 22>"
+      ],
+      "notes": [
+        "Une version fraîche et acidulée du grand classique italien.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 22/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "320 g de riz Arborio",
+            "Le jus et le zeste râpé fin d'un citron bio",
+            "1 oignon",
+            "60 ml de vin blanc sec",
+            "750 ml d'eau tiède + 1 cube de bouillon de légumes",
+            "3 c. à soupe d'huile d'olive",
+            "30 g de pignons de pin (torréfiés à la poêle au préalable)",
+            "2 c. à soupe de levure maltée",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter le riz Arborio. Rissoler 2 min / Mode Rissoler / Sans le gobelet doseur.",
+            "Ajouter le vin blanc et le jus de citron. Cuire 2 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet.",
+            "Ajouter l'eau, le cube de bouillon, le zeste de citron, le sel et le poivre. Cuire 14 min / 100°C / Rotation gauche / Vitesse 1 (poser le panier de cuisson sur le couvercle).",
+            "Ajouter la levure maltée et les pignons de pin. Mélanger 1 min / Rotation gauche / Vitesse 2. <PARSED TEXT FOR PAGE: 11 / 22>"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 22/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-023",
+      "name": "Soupe de Pois Cassés au \"Bacon\" de Tofu",
+      "ingredients": [
+        "250 g de pois cassés (rincés)",
+        "1 carotte (coupée en morceaux)",
+        "1 poireau (blanc uniquement, coupé en rondelles)",
+        "1 oignon",
+        "1 litre d'eau + 1 cube de bouillon de légumes",
+        "2 c. à soupe d'huile de tournesol",
+        "1 c. à café de paprika fumé (indispensable pour le goût fumé)",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile et le paprika fumé. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter la carotte, le poireau, les pois cassés, l'eau et le cube de bouillon.",
+        "Cuire 40 min / 100°C / Vitesse 1.",
+        "Saler et poivrer à convenance. Mixer 1 min / Vitesse 5 à 8 en augmentant progressivement la vitesse pour obtenir un velouté bien lisse."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile et le paprika fumé. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter la carotte, le poireau, les pois cassés, l'eau et le cube de bouillon.",
+        "Cuire 40 min / 100°C / Vitesse 1.",
+        "Saler et poivrer à convenance. Mixer 1 min / Vitesse 5 à 8 en augmentant progressivement la vitesse pour obtenir un velouté bien lisse."
+      ],
+      "notes": [
+        "Un grand classique d'hiver revisité en version végétale.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 23/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "250 g de pois cassés (rincés)",
+            "1 carotte (coupée en morceaux)",
+            "1 poireau (blanc uniquement, coupé en rondelles)",
+            "1 oignon",
+            "1 litre d'eau + 1 cube de bouillon de légumes",
+            "2 c. à soupe d'huile de tournesol",
+            "1 c. à café de paprika fumé (indispensable pour le goût fumé)",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile et le paprika fumé. Rissoler 3 min / Mode Rissoler (120°C).",
+            "Ajouter la carotte, le poireau, les pois cassés, l'eau et le cube de bouillon.",
+            "Cuire 40 min / 100°C / Vitesse 1.",
+            "Saler et poivrer à convenance. Mixer 1 min / Vitesse 5 à 8 en augmentant progressivement la vitesse pour obtenir un velouté bien lisse."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 23/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-024",
+      "name": "Pesto de Roquette aux Noix",
+      "ingredients": [
+        "100 g de roquette fraîche (lavée et bien séchée)",
+        "50 g de cerneaux de noix",
+        "1 gousse d'ail",
+        "80 ml d'huile d'olive",
+        "3 c. à soupe de levure maltée (pour remplacer le parmesan)",
+        "1 c. à soupe de jus de citron",
+        "1/2 c. à café de sel gros, poivre"
+      ],
+      "steps": [
+        "Mettre la gousse d'ail et les noix dans le bol. Hacher 5 sec / Vitesse 7. Racler les parois.",
+        "Ajouter la roquette, la levure maltée, le jus de citron et le sel.",
+        "Mixer 15 sec / Vitesse 7. Racler à nouveau les parois du bol.",
+        "Ajouter l'huile d'olive. Mixer 20 sec / Vitesse 5 pour émulsionner le tout sans réduire la roquette en purée totalement liquide. <PARSED TEXT FOR PAGE: 12 / 22>"
+      ],
+      "robot": [
+        "Mettre la gousse d'ail et les noix dans le bol. Hacher 5 sec / Vitesse 7. Racler les parois.",
+        "Ajouter la roquette, la levure maltée, le jus de citron et le sel.",
+        "Mixer 15 sec / Vitesse 7. Racler à nouveau les parois du bol.",
+        "Ajouter l'huile d'olive. Mixer 20 sec / Vitesse 5 pour émulsionner le tout sans réduire la roquette en purée totalement liquide. <PARSED TEXT FOR PAGE: 12 / 22>"
+      ],
+      "notes": [
+        "Un pesto piquant et original pour napper vos pâtes.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 24/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100 g de roquette fraîche (lavée et bien séchée)",
+            "50 g de cerneaux de noix",
+            "1 gousse d'ail",
+            "80 ml d'huile d'olive",
+            "3 c. à soupe de levure maltée (pour remplacer le parmesan)",
+            "1 c. à soupe de jus de citron",
+            "1/2 c. à café de sel gros, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre la gousse d'ail et les noix dans le bol. Hacher 5 sec / Vitesse 7. Racler les parois.",
+            "Ajouter la roquette, la levure maltée, le jus de citron et le sel.",
+            "Mixer 15 sec / Vitesse 7. Racler à nouveau les parois du bol.",
+            "Ajouter l'huile d'olive. Mixer 20 sec / Vitesse 5 pour émulsionner le tout sans réduire la roquette en purée totalement liquide. <PARSED TEXT FOR PAGE: 12 / 22>"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 24/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-025",
+      "name": "Velouté de Carottes au Cumin et Orange",
+      "ingredients": [
+        "600 g de carottes (épluchées et en rondelles)",
+        "1 grosse pomme de terre (épluchée et en cubes)",
+        "1 oignon",
+        "Le jus d'une orange pressée (environ 80 ml)",
+        "450 ml d'eau + 1 cube de bouillon de légumes",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à café de cumin en poudre",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive et le cumin. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les carottes, la pomme de terre, l'eau et le cube de bouillon. Cuire 25 min / 100°C / Vitesse 1.",
+        "Ajouter le jus d'orange, le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement)."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive et le cumin. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les carottes, la pomme de terre, l'eau et le cube de bouillon. Cuire 25 min / 100°C / Vitesse 1.",
+        "Ajouter le jus d'orange, le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement)."
+      ],
+      "notes": [
+        "Une association douce, vitaminée et légèrement acidulée.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 25/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g de carottes (épluchées et en rondelles)",
+            "1 grosse pomme de terre (épluchée et en cubes)",
+            "1 oignon",
+            "Le jus d'une orange pressée (environ 80 ml)",
+            "450 ml d'eau + 1 cube de bouillon de légumes",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à café de cumin en poudre",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive et le cumin. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter les carottes, la pomme de terre, l'eau et le cube de bouillon. Cuire 25 min / 100°C / Vitesse 1.",
+            "Ajouter le jus d'orange, le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 25/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-026",
+      "name": "Minestrone de Légumes et Haricots Blancs",
+      "ingredients": [
+        "200 g de haricots blancs en boîte (cuits et égouttés)",
+        "1 carotte, 1 courgette, 1 branche de céleri (le tout coupé en petits dés de 1 cm)",
+        "1 oignon, 1 gousse d'ail",
+        "400 g de tomates concassées en conserve",
+        "600 ml d'eau + 1 cube de bouillon de légumes",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à café de thym séché, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les dés de carotte, courgette et céleri. Rissoler à nouveau 4 min / Mode Rissoler (120°C).",
+        "Ajouter les tomates concassées, l'eau, le cube de bouillon, le thym, le sel et le poivre. Cuire 20 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les haricots blancs. Cuire 5 min / 90°C / Rotation gauche / Vitesse 1. <PARSED TEXT FOR PAGE: 13 / 22>"
+      ],
+      "robot": [
+        "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les dés de carotte, courgette et céleri. Rissoler à nouveau 4 min / Mode Rissoler (120°C).",
+        "Ajouter les tomates concassées, l'eau, le cube de bouillon, le thym, le sel et le poivre. Cuire 20 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les haricots blancs. Cuire 5 min / 90°C / Rotation gauche / Vitesse 1. <PARSED TEXT FOR PAGE: 13 / 22>"
+      ],
+      "notes": [
+        "Une soupe repas italienne épaisse et riche en saveurs.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 26/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "200 g de haricots blancs en boîte (cuits et égouttés)",
+            "1 carotte, 1 courgette, 1 branche de céleri (le tout coupé en petits dés de 1 cm)",
+            "1 oignon, 1 gousse d'ail",
+            "400 g de tomates concassées en conserve",
+            "600 ml d'eau + 1 cube de bouillon de légumes",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à café de thym séché, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon et l'ail dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter les dés de carotte, courgette et céleri. Rissoler à nouveau 4 min / Mode Rissoler (120°C).",
+            "Ajouter les tomates concassées, l'eau, le cube de bouillon, le thym, le sel et le poivre. Cuire 20 min / 100°C / Rotation gauche / Vitesse 1.",
+            "Ajouter les haricots blancs. Cuire 5 min / 90°C / Rotation gauche / Vitesse 1. <PARSED TEXT FOR PAGE: 13 / 22>"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 26/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-027",
+      "name": "Crème de Courgettes Légère à la Menthe",
+      "ingredients": [
+        "700 g de courgettes (non épluchées, coupées en grosses rondelles)",
+        "1 oignon",
+        "350 ml d'eau + 1 cube de bouillon de légumes",
+        "100 ml de crème de soja liquide",
+        "10 feuilles de menthe fraîche",
+        "2 c. à soupe d'huile d'olive, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les rondelles de courgettes, l'eau et le cube de bouillon. Cuire 18 min / 100°C / Vitesse 1.",
+        "Ajouter la crème de soja, les feuilles de menthe, le sel et le poivre. Mixer 45 sec / Vitesse 5 à 9 de manière progressive."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les rondelles de courgettes, l'eau et le cube de bouillon. Cuire 18 min / 100°C / Vitesse 1.",
+        "Ajouter la crème de soja, les feuilles de menthe, le sel et le poivre. Mixer 45 sec / Vitesse 5 à 9 de manière progressive."
+      ],
+      "notes": [
+        "Une soupe printanière ou estivale, délicieuse chaude ou glacée.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 27/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "700 g de courgettes (non épluchées, coupées en grosses rondelles)",
+            "1 oignon",
+            "350 ml d'eau + 1 cube de bouillon de légumes",
+            "100 ml de crème de soja liquide",
+            "10 feuilles de menthe fraîche",
+            "2 c. à soupe d'huile d'olive, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter les rondelles de courgettes, l'eau et le cube de bouillon. Cuire 18 min / 100°C / Vitesse 1.",
+            "Ajouter la crème de soja, les feuilles de menthe, le sel et le poivre. Mixer 45 sec / Vitesse 5 à 9 de manière progressive."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 27/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-028",
+      "name": "Riz sauté au Tofu et Petits Pois",
+      "ingredients": [
+        "300 g de riz blanc cuit (froid)",
+        "150 g de tofu ferme (coupé en tout petits dés)",
+        "100 g de petits pois (surgelés ou en boîte)",
+        "1 carotte (coupée en tout petits dés de 5 mm)",
+        "1 oignon blanc ou 2 tiges d'oignons nouveaux",
+        "3 c. à soupe de sauce soja (tamari)",
+        "2 c. à soupe d'huile de sésame"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile de sésame et les dés de carotte. Rissoler 5 min / Mode Rissoler (120°C).",
+        "Ajouter les dés de tofu et les petits pois. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter le riz cuit froid et la sauce soja. Cuire 5 min / 95°C / Rotation gauche / Vitesse 1 (sans le gobelet doseur pour faire sauter le riz)."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile de sésame et les dés de carotte. Rissoler 5 min / Mode Rissoler (120°C).",
+        "Ajouter les dés de tofu et les petits pois. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter le riz cuit froid et la sauce soja. Cuire 5 min / 95°C / Rotation gauche / Vitesse 1 (sans le gobelet doseur pour faire sauter le riz)."
+      ],
+      "notes": [
+        "Un plat asiatique express utilisant le riz de la veille ou cuit en parallèle.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 28/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "300 g de riz blanc cuit (froid)",
+            "150 g de tofu ferme (coupé en tout petits dés)",
+            "100 g de petits pois (surgelés ou en boîte)",
+            "1 carotte (coupée en tout petits dés de 5 mm)",
+            "1 oignon blanc ou 2 tiges d'oignons nouveaux",
+            "3 c. à soupe de sauce soja (tamari)",
+            "2 c. à soupe d'huile de sésame"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile de sésame et les dés de carotte. Rissoler 5 min / Mode Rissoler (120°C).",
+            "Ajouter les dés de tofu et les petits pois. Rissoler 3 min / Mode Rissoler (120°C).",
+            "Ajouter le riz cuit froid et la sauce soja. Cuire 5 min / 95°C / Rotation gauche / Vitesse 1 (sans le gobelet doseur pour faire sauter le riz)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 28/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-029",
+      "name": "Crème Pâtissière Végétale à la Vanille",
+      "ingredients": [
+        "500 ml de lait de soja ou d'amande vanillé",
+        "45 g de fécule de maïs (Maïzena)",
+        "60 g de sucre de canne",
+        "1 c. à café d'extrait de vanille liquide ou les grains d'une gousse",
+        "1 pincée de curcuma (facultatif, uniquement pour donner la couleur jaune des œufs) <PARSED TEXT FOR PAGE: 14 / 22>"
+      ],
+      "steps": [
+        "Mettre tous les ingrédients dans le bol (lait végétal, fécule, sucre, vanille, curcuma).",
+        "Mélanger 10 sec / Vitesse 4 pour dissoudre la fécule.",
+        "Cuire 8 min / 90°C / Vitesse 3 (sans le gobelet doseur). La crème va épaissir rapidement.",
+        "Mixer 20 sec / Vitesse 4 pour enlever les éventuels grumeaux. Transférer dans un récipient et filmer au contact avant de laisser refroidir."
+      ],
+      "robot": [
+        "Mettre tous les ingrédients dans le bol (lait végétal, fécule, sucre, vanille, curcuma).",
+        "Mélanger 10 sec / Vitesse 4 pour dissoudre la fécule.",
+        "Cuire 8 min / 90°C / Vitesse 3 (sans le gobelet doseur). La crème va épaissir rapidement.",
+        "Mixer 20 sec / Vitesse 4 pour enlever les éventuels grumeaux. Transférer dans un récipient et filmer au contact avant de laisser refroidir."
+      ],
+      "notes": [
+        "Pour garnir vos tartes ou à déguster à la petite cuillère.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 29/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 ml de lait de soja ou d'amande vanillé",
+            "45 g de fécule de maïs (Maïzena)",
+            "60 g de sucre de canne",
+            "1 c. à café d'extrait de vanille liquide ou les grains d'une gousse",
+            "1 pincée de curcuma (facultatif, uniquement pour donner la couleur jaune des œufs) <PARSED TEXT FOR PAGE: 14 / 22>"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre tous les ingrédients dans le bol (lait végétal, fécule, sucre, vanille, curcuma).",
+            "Mélanger 10 sec / Vitesse 4 pour dissoudre la fécule.",
+            "Cuire 8 min / 90°C / Vitesse 3 (sans le gobelet doseur). La crème va épaissir rapidement.",
+            "Mixer 20 sec / Vitesse 4 pour enlever les éventuels grumeaux. Transférer dans un récipient et filmer au contact avant de laisser refroidir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 29/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-030",
+      "name": "Compote Pomme, Rhubarbe et Fraise",
+      "ingredients": [
+        "400 g de pommes (épluchées et en morceaux)",
+        "200 g de tiges de rhubarbe (pelées et coupées en tronçons)",
+        "200 g de fraises (équeutées)",
+        "40 g de sucre de canne (à ajuster selon vos goûts)"
+      ],
+      "steps": [
+        "Mettre les morceaux de pommes et de rhubarbe dans le bol avec le sucre.",
+        "Cuire 10 min / 100°C / Vitesse 1.",
+        "Ajouter les fraises dans le bol. Cuire à nouveau 4 min / 90°C / Vitesse 1.",
+        "Mixer 20 sec / Vitesse 5 (pour garder de la texture) ou 20 sec / Vitesse 8 (pour une texture lisse)."
+      ],
+      "robot": [
+        "Mettre les morceaux de pommes et de rhubarbe dans le bol avec le sucre.",
+        "Cuire 10 min / 100°C / Vitesse 1.",
+        "Ajouter les fraises dans le bol. Cuire à nouveau 4 min / 90°C / Vitesse 1.",
+        "Mixer 20 sec / Vitesse 5 (pour garder de la texture) ou 20 sec / Vitesse 8 (pour une texture lisse)."
+      ],
+      "notes": [
+        "Un équilibre parfait entre l'acidité de la rhubarbe et la douceur des fruits.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 30/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de pommes (épluchées et en morceaux)",
+            "200 g de tiges de rhubarbe (pelées et coupées en tronçons)",
+            "200 g de fraises (équeutées)",
+            "40 g de sucre de canne (à ajuster selon vos goûts)"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre les morceaux de pommes et de rhubarbe dans le bol avec le sucre.",
+            "Cuire 10 min / 100°C / Vitesse 1.",
+            "Ajouter les fraises dans le bol. Cuire à nouveau 4 min / 90°C / Vitesse 1.",
+            "Mixer 20 sec / Vitesse 5 (pour garder de la texture) ou 20 sec / Vitesse 8 (pour une texture lisse)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 30/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-031",
+      "name": "Chili de Quinoa aux Haricots Noirs",
+      "ingredients": [
+        "120 g de quinoa (rincé à l'eau fine)",
+        "400 g de haricots noirs en boîte (égouttés)",
+        "400 g de tomates concassées en boîte",
+        "100 g de maïs en boîte",
+        "1 oignon",
+        "1 poivron vert (en dés)",
+        "300 ml de bouillon de légumes",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à café de coriandre moulue, 1 c. à café de cumin, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive et le poivron vert. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter le quinoa cru, les tomates concassées, le bouillon de légumes, le cumin et la coriandre. Saler et poivrer.",
+        "Cuire 18 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les haricots noirs et le maïs. Cuire 4 min / 90°C / Rotation gauche / Vitesse 1. <PARSED TEXT FOR PAGE: 15 / 22>"
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive et le poivron vert. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter le quinoa cru, les tomates concassées, le bouillon de légumes, le cumin et la coriandre. Saler et poivrer.",
+        "Cuire 18 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les haricots noirs et le maïs. Cuire 4 min / 90°C / Rotation gauche / Vitesse 1. <PARSED TEXT FOR PAGE: 15 / 22>"
+      ],
+      "notes": [
+        "Une variante ultra-protéinée et légère du chili sin carne.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 31/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "120 g de quinoa (rincé à l'eau fine)",
+            "400 g de haricots noirs en boîte (égouttés)",
+            "400 g de tomates concassées en boîte",
+            "100 g de maïs en boîte",
+            "1 oignon",
+            "1 poivron vert (en dés)",
+            "300 ml de bouillon de légumes",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à café de coriandre moulue, 1 c. à café de cumin, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive et le poivron vert. Rissoler 4 min / Mode Rissoler (130°C).",
+            "Ajouter le quinoa cru, les tomates concassées, le bouillon de légumes, le cumin et la coriandre. Saler et poivrer.",
+            "Cuire 18 min / 100°C / Rotation gauche / Vitesse 1.",
+            "Ajouter les haricots noirs et le maïs. Cuire 4 min / 90°C / Rotation gauche / Vitesse 1. <PARSED TEXT FOR PAGE: 15 / 22>"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 31/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-032",
+      "name": "Crème de Brocoli au Lait d'Amande et Levure Maltée",
+      "ingredients": [
+        "500 g de fleurettes de brocoli (fraîches ou surgelées)",
+        "1 grosse pomme de terre (en cubes)",
+        "1 oignon",
+        "400 ml d'eau + 1 cube de bouillon de légumes",
+        "200 ml de lait d'amande sans sucre",
+        "3 c. à soupe de levure maltée",
+        "2 c. à soupe d'huile d'olive, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les fleurettes de brocoli, les cubes de pomme de terre, l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+        "Ajouter le lait d'amande, la levure maltée, le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement)."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les fleurettes de brocoli, les cubes de pomme de terre, l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+        "Ajouter le lait d'amande, la levure maltée, le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement)."
+      ],
+      "notes": [
+        "Un velouté onctueux au petit goût de \"fromage\".\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 32/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 g de fleurettes de brocoli (fraîches ou surgelées)",
+            "1 grosse pomme de terre (en cubes)",
+            "1 oignon",
+            "400 ml d'eau + 1 cube de bouillon de légumes",
+            "200 ml de lait d'amande sans sucre",
+            "3 c. à soupe de levure maltée",
+            "2 c. à soupe d'huile d'olive, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter les fleurettes de brocoli, les cubes de pomme de terre, l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+            "Ajouter le lait d'amande, la levure maltée, le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 32/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-033",
+      "name": "One Pot de Blé au Potimarron et Sauge",
+      "ingredients": [
+        "250 g de blé à cuire (type Ebly)",
+        "350 g de potimarron (avec la peau si bio, coupé en dés de 1,5 cm)",
+        "1 oignon",
+        "550 ml d'eau chaude + 1 cube de bouillon de légumes",
+        "2 c. à soupe d'huile d'olive",
+        "5 feuilles de sauge fraîche",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive et les feuilles de sauge. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les dés de potimarron, le blé, l'eau chaude et le cube de bouillon. Saler légèrement et poivrer.",
+        "Cuire 15 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (poser le panier de cuisson sur le couvercle pour éviter les projections). Lisser à la spatule si nécessaire à mi-cuisson."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive et les feuilles de sauge. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les dés de potimarron, le blé, l'eau chaude et le cube de bouillon. Saler légèrement et poivrer.",
+        "Cuire 15 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (poser le panier de cuisson sur le couvercle pour éviter les projections). Lisser à la spatule si nécessaire à mi-cuisson."
+      ],
+      "notes": [
+        "Un plat crémeux et boisé, idéal pour les journées fraîches.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 33/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "250 g de blé à cuire (type Ebly)",
+            "350 g de potimarron (avec la peau si bio, coupé en dés de 1,5 cm)",
+            "1 oignon",
+            "550 ml d'eau chaude + 1 cube de bouillon de légumes",
+            "2 c. à soupe d'huile d'olive",
+            "5 feuilles de sauge fraîche",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive et les feuilles de sauge. Rissoler 3 min / Mode Rissoler (120°C).",
+            "Ajouter les dés de potimarron, le blé, l'eau chaude et le cube de bouillon. Saler légèrement et poivrer.",
+            "Cuire 15 min / 100°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (poser le panier de cuisson sur le couvercle pour éviter les projections). Lisser à la spatule si nécessaire à mi-cuisson."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 33/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-034",
+      "name": "Bolognaise de Protéines de Soja Texturées (PST)",
+      "ingredients": [
+        "80 g de protéines de soja texturées (gros ou petit calibre, sèches)",
+        "600 g de passata de tomate",
+        "1 carotte (en morceaux) <PARSED TEXT FOR PAGE: 16 / 22>",
+        "1 oignon",
+        "1 gousse d'ail",
+        "150 ml de bouillon de légumes chaud",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à café d'origan séché, 1 c. à de sucre (pour l'acidité), sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon, l'ail et la carotte dans le bol. Hacher 6 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter les PST sèches, la passata de tomate, le bouillon de légumes, l'origan, le sucre, le sel et le poivre.",
+        "Cuire 25 min / 100°C / Rotation gauche / Vitesse 1 (placer le panier de cuisson sur le couvercle). Les protéines vont se réhydrater directement dans la sauce."
+      ],
+      "robot": [
+        "Mettre l'oignon, l'ail et la carotte dans le bol. Hacher 6 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter les PST sèches, la passata de tomate, le bouillon de légumes, l'origan, le sucre, le sel et le poivre.",
+        "Cuire 25 min / 100°C / Rotation gauche / Vitesse 1 (placer le panier de cuisson sur le couvercle). Les protéines vont se réhydrater directement dans la sauce."
+      ],
+      "notes": [
+        "Une texture bluffante qui rappelle fidèlement la recette traditionnelle.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 34/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "80 g de protéines de soja texturées (gros ou petit calibre, sèches)",
+            "600 g de passata de tomate",
+            "1 carotte (en morceaux) <PARSED TEXT FOR PAGE: 16 / 22>",
+            "1 oignon",
+            "1 gousse d'ail",
+            "150 ml de bouillon de légumes chaud",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à café d'origan séché, 1 c. à de sucre (pour l'acidité), sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon, l'ail et la carotte dans le bol. Hacher 6 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive. Rissoler 4 min / Mode Rissoler (130°C).",
+            "Ajouter les PST sèches, la passata de tomate, le bouillon de légumes, l'origan, le sucre, le sel et le poivre.",
+            "Cuire 25 min / 100°C / Rotation gauche / Vitesse 1 (placer le panier de cuisson sur le couvercle). Les protéines vont se réhydrater directement dans la sauce."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 34/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-035",
+      "name": "Velouté de Pois Chiches au Romarin",
+      "ingredients": [
+        "400 g de pois chiches en boîte (égouttés et rincés)",
+        "1 pomme de terre (en cubes)",
+        "1 oignon",
+        "1 gousse d'ail",
+        "500 ml d'eau + 1 cube de bouillon de légumes",
+        "1 branche de romarin frais (effeuillée)",
+        "3 c. à soupe d'huile d'olive, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon, l'ail et les aiguilles de romarin dans le bol. Hacher 5 sec / Vitesse 6.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les pois chiches, la pomme de terre, l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+        "Saler et poivrer. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement) pour obtenir une texture crème de velours."
+      ],
+      "robot": [
+        "Mettre l'oignon, l'ail et les aiguilles de romarin dans le bol. Hacher 5 sec / Vitesse 6.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les pois chiches, la pomme de terre, l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+        "Saler et poivrer. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement) pour obtenir une texture crème de velours."
+      ],
+      "notes": [
+        "Une soupe méditerranéenne épaisse, douce et réconfortante.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 35/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de pois chiches en boîte (égouttés et rincés)",
+            "1 pomme de terre (en cubes)",
+            "1 oignon",
+            "1 gousse d'ail",
+            "500 ml d'eau + 1 cube de bouillon de légumes",
+            "1 branche de romarin frais (effeuillée)",
+            "3 c. à soupe d'huile d'olive, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon, l'ail et les aiguilles de romarin dans le bol. Hacher 5 sec / Vitesse 6.",
+            "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter les pois chiches, la pomme de terre, l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+            "Saler et poivrer. Mixer 1 min / Vitesse 5 à 9 (en augmentant progressivement) pour obtenir une texture crème de velours."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 35/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-036",
+      "name": "Curry d'Aubergines et Tomates au Garam Masala",
+      "ingredients": [
+        "2 aubergines moyennes (coupées en cubes de 2 cm)",
+        "400 g de tomates concassées en boîte",
+        "1 oignon",
+        "100 ml d'eau",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à soupe de garam masala",
+        "1/2 c. à café de curcuma",
+        "Sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive, le garam masala et le curcuma. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les cubes d'aubergines, les tomates concassées et l'eau. Saler et poivrer.",
+        "Cuire 25 min / 100°C / Rotation gauche / Vitesse 1 (vérifier que les aubergines soient parfaitement fondantes, rajouter 3 min si nécessaire)."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive, le garam masala et le curcuma. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les cubes d'aubergines, les tomates concassées et l'eau. Saler et poivrer.",
+        "Cuire 25 min / 100°C / Rotation gauche / Vitesse 1 (vérifier que les aubergines soient parfaitement fondantes, rajouter 3 min si nécessaire)."
+      ],
+      "notes": [
+        "Des aubergines fondantes et parfumées sans excès de matière grasse.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 36/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "2 aubergines moyennes (coupées en cubes de 2 cm)",
+            "400 g de tomates concassées en boîte",
+            "1 oignon",
+            "100 ml d'eau",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à soupe de garam masala",
+            "1/2 c. à café de curcuma",
+            "Sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive, le garam masala et le curcuma. Rissoler 3 min / Mode Rissoler (120°C).",
+            "Ajouter les cubes d'aubergines, les tomates concassées et l'eau. Saler et poivrer.",
+            "Cuire 25 min / 100°C / Rotation gauche / Vitesse 1 (vérifier que les aubergines soient parfaitement fondantes, rajouter 3 min si nécessaire)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 36/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-037",
+      "name": "Crème Dessert Vegan Citron et Lait de Coco",
+      "ingredients": [
+        "400 ml de lait de coco (en boîte, bien mélangé)",
+        "100 ml d'eau",
+        "Le jus de 2 citrons jaunes bio",
+        "Le zeste râpé fin d'un citron bio",
+        "35 g de fécule de maïs (Maïzena)",
+        "70 g de sucre de canne"
+      ],
+      "steps": [
+        "Mettre tous les ingrédients dans le bol : lait de coco, eau, jus et zeste de citron, fécule de maïs et sucre.",
+        "Mélanger 10 sec / Vitesse 4 pour bien diluer la fécule.",
+        "Cuire 9 min / 90°C / Vitesse 3 (sans le gobelet doseur).",
+        "Mixer 15 sec / Vitesse 4 pour parfaire la texture. Répartir dans des verrines et laisser figer au réfrigérateur pendant au moins 3 heures."
+      ],
+      "robot": [
+        "Mettre tous les ingrédients dans le bol : lait de coco, eau, jus et zeste de citron, fécule de maïs et sucre.",
+        "Mélanger 10 sec / Vitesse 4 pour bien diluer la fécule.",
+        "Cuire 9 min / 90°C / Vitesse 3 (sans le gobelet doseur).",
+        "Mixer 15 sec / Vitesse 4 pour parfaire la texture. Répartir dans des verrines et laisser figer au réfrigérateur pendant au moins 3 heures."
+      ],
+      "notes": [
+        "Un dessert frais, acidulé et naturellement ferme grâce à la fécule.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 37/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 ml de lait de coco (en boîte, bien mélangé)",
+            "100 ml d'eau",
+            "Le jus de 2 citrons jaunes bio",
+            "Le zeste râpé fin d'un citron bio",
+            "35 g de fécule de maïs (Maïzena)",
+            "70 g de sucre de canne"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre tous les ingrédients dans le bol : lait de coco, eau, jus et zeste de citron, fécule de maïs et sucre.",
+            "Mélanger 10 sec / Vitesse 4 pour bien diluer la fécule.",
+            "Cuire 9 min / 90°C / Vitesse 3 (sans le gobelet doseur).",
+            "Mixer 15 sec / Vitesse 4 pour parfaire la texture. Répartir dans des verrines et laisser figer au réfrigérateur pendant au moins 3 heures."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 37/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-038",
+      "name": "Riz au Lait d'Amande et Fleur d'Oranger",
+      "ingredients": [
+        "100 g de riz rond (rincé)",
+        "650 ml de lait d'amande (sans sucre)",
+        "55 g de sucre de canne",
+        "1 c. à soupe d'eau de fleur d'oranger"
+      ],
+      "steps": [
+        "Insérer le batteur (papillon) sur les lames.",
+        "Mettre le riz rond et le lait d'amande dans le bol.",
+        "Cuire 32 min / 90°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (mettre le panier de cuisson sur le couvercle).",
+        "Ajouter le sucre et l'eau de fleur d'oranger. Cuire à nouveau 4 min / 90°C / Rotation gauche / Vitesse 1. Verser dans un plat et laisser refroidir. <PARSED TEXT FOR PAGE: 18 / 22>"
+      ],
+      "robot": [
+        "Insérer le batteur (papillon) sur les lames.",
+        "Mettre le riz rond et le lait d'amande dans le bol.",
+        "Cuire 32 min / 90°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (mettre le panier de cuisson sur le couvercle).",
+        "Ajouter le sucre et l'eau de fleur d'oranger. Cuire à nouveau 4 min / 90°C / Rotation gauche / Vitesse 1. Verser dans un plat et laisser refroidir. <PARSED TEXT FOR PAGE: 18 / 22>"
+      ],
+      "notes": [
+        "Une version douce et florale du riz au lait d'enfance.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 38/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "100 g de riz rond (rincé)",
+            "650 ml de lait d'amande (sans sucre)",
+            "55 g de sucre de canne",
+            "1 c. à soupe d'eau de fleur d'oranger"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Insérer le batteur (papillon) sur les lames.",
+            "Mettre le riz rond et le lait d'amande dans le bol.",
+            "Cuire 32 min / 90°C / Rotation gauche / Vitesse 1 / Sans le gobelet doseur (mettre le panier de cuisson sur le couvercle).",
+            "Ajouter le sucre et l'eau de fleur d'oranger. Cuire à nouveau 4 min / 90°C / Rotation gauche / Vitesse 1. Verser dans un plat et laisser refroidir. <PARSED TEXT FOR PAGE: 18 / 22>"
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 38/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-039",
+      "name": "Caviar de Courgettes au Basilic",
+      "ingredients": [
+        "500 g de courgettes (en grosses rondelles)",
+        "1 gousse d'ail (dégermée)",
+        "20 ml d'huile d'olive",
+        "10 grandes feuilles de basilic frais",
+        "1 c. à soupe de jus de citron, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'ail dans le bol. Hacher 5 sec / Vitesse 6.",
+        "Ajouter les courgettes et l'huile d'olive. Rissoler 5 min / Mode Rissoler (130°C).",
+        "Ajouter le sel et le poivre. Cuire 12 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Laisser tiédir quelques minutes dans le bol. Ajouter le basilic frais et le jus de citron. Mixer 20 sec / Vitesse 5 (ajuster selon la texture désirée, avec ou sans morceaux). Mettre au frais."
+      ],
+      "robot": [
+        "Mettre l'ail dans le bol. Hacher 5 sec / Vitesse 6.",
+        "Ajouter les courgettes et l'huile d'olive. Rissoler 5 min / Mode Rissoler (130°C).",
+        "Ajouter le sel et le poivre. Cuire 12 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Laisser tiédir quelques minutes dans le bol. Ajouter le basilic frais et le jus de citron. Mixer 20 sec / Vitesse 5 (ajuster selon la texture désirée, avec ou sans morceaux). Mettre au frais."
+      ],
+      "notes": [
+        "Une tartinade verte et fraîche à servir sur des toasts.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 39/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 g de courgettes (en grosses rondelles)",
+            "1 gousse d'ail (dégermée)",
+            "20 ml d'huile d'olive",
+            "10 grandes feuilles de basilic frais",
+            "1 c. à soupe de jus de citron, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'ail dans le bol. Hacher 5 sec / Vitesse 6.",
+            "Ajouter les courgettes et l'huile d'olive. Rissoler 5 min / Mode Rissoler (130°C).",
+            "Ajouter le sel et le poivre. Cuire 12 min / 100°C / Rotation gauche / Vitesse 1.",
+            "Laisser tiédir quelques minutes dans le bol. Ajouter le basilic frais et le jus de citron. Mixer 20 sec / Vitesse 5 (ajuster selon la texture désirée, avec ou sans morceaux). Mettre au frais."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 39/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-040",
+      "name": "Compote Pomme, Abricot et Vanille",
+      "ingredients": [
+        "500 g de pommes (épluchées et en morceaux)",
+        "300 g d'abricots dénoyautés (frais ou surgelés)",
+        "1 c. à café d'extrait de vanille liquide",
+        "20 g de sucre de canne (facultatif si les fruits sont très mûrs)"
+      ],
+      "steps": [
+        "Mettre tous les ingrédients dans le bol.",
+        "Cuire 13 min / 100°C / Vitesse 1.",
+        "Mixer 20 sec / Vitesse 8 pour une consistance de fine purée lisse ou Vitesse 5 pour garder de petits morceaux."
+      ],
+      "robot": [
+        "Mettre tous les ingrédients dans le bol.",
+        "Cuire 13 min / 100°C / Vitesse 1.",
+        "Mixer 20 sec / Vitesse 8 pour une consistance de fine purée lisse ou Vitesse 5 pour garder de petits morceaux."
+      ],
+      "notes": [
+        "Une douceur ensoleillée, parfaite avec des abricots frais ou secs réhydratés.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 40/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 g de pommes (épluchées et en morceaux)",
+            "300 g d'abricots dénoyautés (frais ou surgelés)",
+            "1 c. à café d'extrait de vanille liquide",
+            "20 g de sucre de canne (facultatif si les fruits sont très mûrs)"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre tous les ingrédients dans le bol.",
+            "Cuire 13 min / 100°C / Vitesse 1.",
+            "Mixer 20 sec / Vitesse 8 pour une consistance de fine purée lisse ou Vitesse 5 pour garder de petits morceaux."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 40/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-041",
+      "name": "Curry de Chou-Fleur et Lentilles Vertes",
+      "ingredients": [
+        "400 g de bouquets de chou-fleur (petits)",
+        "120 g de lentilles vertes (rincées)",
+        "400 g de pulpe de tomate en conserve",
+        "200 ml d'eau + 1 cube de bouillon de légumes",
+        "1 oignon",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à soupe de curry en poudre, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5. <PARSED TEXT FOR PAGE: 19 / 22>",
+        "Ajouter l'huile d'olive et le curry. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les lentilles vertes, la pulpe de tomate, l'eau et le cube de bouillon. Cuire 20 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les bouquets de chou-fleur par l'orifice du couvercle. Cuire 15 min / 100°C / Rotation gauche / Vitesse 1 (le chou-fleur doit être tendre mais pas en purée)."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5. <PARSED TEXT FOR PAGE: 19 / 22>",
+        "Ajouter l'huile d'olive et le curry. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter les lentilles vertes, la pulpe de tomate, l'eau et le cube de bouillon. Cuire 20 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter les bouquets de chou-fleur par l'orifice du couvercle. Cuire 15 min / 100°C / Rotation gauche / Vitesse 1 (le chou-fleur doit être tendre mais pas en purée)."
+      ],
+      "notes": [
+        "Un plat mijoté complet, rustique et riche en fibres.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 41/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de bouquets de chou-fleur (petits)",
+            "120 g de lentilles vertes (rincées)",
+            "400 g de pulpe de tomate en conserve",
+            "200 ml d'eau + 1 cube de bouillon de légumes",
+            "1 oignon",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à soupe de curry en poudre, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5. <PARSED TEXT FOR PAGE: 19 / 22>",
+            "Ajouter l'huile d'olive et le curry. Rissoler 3 min / Mode Rissoler (120°C).",
+            "Ajouter les lentilles vertes, la pulpe de tomate, l'eau et le cube de bouillon. Cuire 20 min / 100°C / Rotation gauche / Vitesse 1.",
+            "Ajouter les bouquets de chou-fleur par l'orifice du couvercle. Cuire 15 min / 100°C / Rotation gauche / Vitesse 1 (le chou-fleur doit être tendre mais pas en purée)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 41/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-042",
+      "name": "Velouté de Champignons à la Châtaigne",
+      "ingredients": [
+        "400 g de champignons de Paris (lavés et coupés en deux)",
+        "200 g de châtaignes cuites (en bocal ou sous vide)",
+        "1 oignon",
+        "500 ml d'eau + 1 cube de bouillon de légumes",
+        "100 ml de crème de soja liquide",
+        "2 c. à soupe d'huile d'olive, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive et les champignons. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter les châtaignes (en réserver 2 ou 3 pour le décor), l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+        "Ajouter la crème de soja, le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 de manière progressive pour obtenir un velouté très fin."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive et les champignons. Rissoler 4 min / Mode Rissoler (130°C).",
+        "Ajouter les châtaignes (en réserver 2 ou 3 pour le décor), l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+        "Ajouter la crème de soja, le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 de manière progressive pour obtenir un velouté très fin."
+      ],
+      "notes": [
+        "Une soupe d'automne onctueuse au goût boisé unique.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 42/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de champignons de Paris (lavés et coupés en deux)",
+            "200 g de châtaignes cuites (en bocal ou sous vide)",
+            "1 oignon",
+            "500 ml d'eau + 1 cube de bouillon de légumes",
+            "100 ml de crème de soja liquide",
+            "2 c. à soupe d'huile d'olive, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive et les champignons. Rissoler 4 min / Mode Rissoler (130°C).",
+            "Ajouter les châtaignes (en réserver 2 ou 3 pour le décor), l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+            "Ajouter la crème de soja, le sel et le poivre. Mixer 1 min / Vitesse 5 à 9 de manière progressive pour obtenir un velouté très fin."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 42/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-043",
+      "name": "Quinoa aux Légumes du Soleil Express",
+      "ingredients": [
+        "150 g de quinoa (très bien rincé pour enlever l'amertume)",
+        "1/2 poivron rouge, 1/2 poivron jaune, 1/2 courgette (le tout coupé en petits dés)",
+        "1 oignon",
+        "350 ml d'eau + 1 cube de bouillon de légumes",
+        "2 c. à soupe d'huile d'olive",
+        "1 c. à café d'herbes de Provence, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les dés de poivrons et de courgette. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter le quinoa cru, l'eau, le cube de bouillon et les herbes de Provence. Saler et poivrer. <PARSED TEXT FOR PAGE: 20 / 22>",
+        "Cuire 16 min / 100°C / Rotation gauche / Vitesse 1 (poser le panier de cuisson sur le couvercle à la place du gobelet). Laisser reposer 5 min dans le bol avant de servir."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter les dés de poivrons et de courgette. Rissoler 3 min / Mode Rissoler (120°C).",
+        "Ajouter le quinoa cru, l'eau, le cube de bouillon et les herbes de Provence. Saler et poivrer. <PARSED TEXT FOR PAGE: 20 / 22>",
+        "Cuire 16 min / 100°C / Rotation gauche / Vitesse 1 (poser le panier de cuisson sur le couvercle à la place du gobelet). Laisser reposer 5 min dans le bol avant de servir."
+      ],
+      "notes": [
+        "Un plat du midi léger et coloré.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 43/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150 g de quinoa (très bien rincé pour enlever l'amertume)",
+            "1/2 poivron rouge, 1/2 poivron jaune, 1/2 courgette (le tout coupé en petits dés)",
+            "1 oignon",
+            "350 ml d'eau + 1 cube de bouillon de légumes",
+            "2 c. à soupe d'huile d'olive",
+            "1 c. à café d'herbes de Provence, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter les dés de poivrons et de courgette. Rissoler 3 min / Mode Rissoler (120°C).",
+            "Ajouter le quinoa cru, l'eau, le cube de bouillon et les herbes de Provence. Saler et poivrer. <PARSED TEXT FOR PAGE: 20 / 22>",
+            "Cuire 16 min / 100°C / Rotation gauche / Vitesse 1 (poser le panier de cuisson sur le couvercle à la place du gobelet). Laisser reposer 5 min dans le bol avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 43/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-044",
+      "name": "Crème de Maïs Doux au Lait de Coco (Soupe Chowder)",
+      "ingredients": [
+        "500 g de maïs doux en grains (en boîte, égoutté)",
+        "1 grosse pomme de terre (en cubes)",
+        "1 oignon",
+        "300 ml d'eau + 1 cube de bouillon de légumes",
+        "200 ml de lait de coco",
+        "2 c. à soupe d'huile de tournesol, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter la pomme de terre, 400 g de maïs (garder 100 g de grains entiers de côté), l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+        "Ajouter le lait de coco, saler et poivrer. Mixer 1 min / Vitesse 9 jusqu'à consistance crémeuse.",
+        "Ajouter les 100 g de grains de maïs restants. Mélanger 1 min / Rotation gauche / Vitesse 2 à 80°C avant de servir."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter la pomme de terre, 400 g de maïs (garder 100 g de grains entiers de côté), l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+        "Ajouter le lait de coco, saler et poivrer. Mixer 1 min / Vitesse 9 jusqu'à consistance crémeuse.",
+        "Ajouter les 100 g de grains de maïs restants. Mélanger 1 min / Rotation gauche / Vitesse 2 à 80°C avant de servir."
+      ],
+      "notes": [
+        "Une soupe d'inspiration américaine, douce, épaisse et réconfortante.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 44/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 g de maïs doux en grains (en boîte, égoutté)",
+            "1 grosse pomme de terre (en cubes)",
+            "1 oignon",
+            "300 ml d'eau + 1 cube de bouillon de légumes",
+            "200 ml de lait de coco",
+            "2 c. à soupe d'huile de tournesol, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter la pomme de terre, 400 g de maïs (garder 100 g de grains entiers de côté), l'eau et le cube de bouillon. Cuire 20 min / 100°C / Vitesse 1.",
+            "Ajouter le lait de coco, saler et poivrer. Mixer 1 min / Vitesse 9 jusqu'à consistance crémeuse.",
+            "Ajouter les 100 g de grains de maïs restants. Mélanger 1 min / Rotation gauche / Vitesse 2 à 80°C avant de servir."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 44/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-045",
+      "name": "Risotto Vert aux Épinards",
+      "ingredients": [
+        "320 g de riz Arborio",
+        "150 g d'épinards frais",
+        "1 oignon",
+        "60 ml de vin blanc sec",
+        "750 ml d'eau + 1 cube de bouillon de légumes",
+        "3 c. à soupe d'huile d'olive",
+        "2 c. à soupe de levure maltée, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter le riz Arborio. Rissoler 2 min / Mode Rissoler / Sans le gobelet.",
+        "Ajouter le vin blanc. Cuire 2 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter l'eau, le cube de bouillon, le sel et le poivre. Cuire 12 min / 100°C / Rotation gauche / Vitesse 1 (panier posé sur le couvercle). <PARSED TEXT FOR PAGE: 21 / 22>",
+        "Ajouter les épinards frais et la levure maltée. Cuire les 3 dernières minutes / 100°C / Rotation gauche / Vitesse 1. Les épinards vont fondre instantanément dans le riz chaud."
+      ],
+      "robot": [
+        "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+        "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+        "Ajouter le riz Arborio. Rissoler 2 min / Mode Rissoler / Sans le gobelet.",
+        "Ajouter le vin blanc. Cuire 2 min / 100°C / Rotation gauche / Vitesse 1.",
+        "Ajouter l'eau, le cube de bouillon, le sel et le poivre. Cuire 12 min / 100°C / Rotation gauche / Vitesse 1 (panier posé sur le couvercle). <PARSED TEXT FOR PAGE: 21 / 22>",
+        "Ajouter les épinards frais et la levure maltée. Cuire les 3 dernières minutes / 100°C / Rotation gauche / Vitesse 1. Les épinards vont fondre instantanément dans le riz chaud."
+      ],
+      "notes": [
+        "Une couleur éclatante pour un risotto crémeux et sain.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 45/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "320 g de riz Arborio",
+            "150 g d'épinards frais",
+            "1 oignon",
+            "60 ml de vin blanc sec",
+            "750 ml d'eau + 1 cube de bouillon de légumes",
+            "3 c. à soupe d'huile d'olive",
+            "2 c. à soupe de levure maltée, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon dans le bol. Hacher 5 sec / Vitesse 5.",
+            "Ajouter l'huile d'olive. Rissoler 3 min / Mode Rissoler (130°C).",
+            "Ajouter le riz Arborio. Rissoler 2 min / Mode Rissoler / Sans le gobelet.",
+            "Ajouter le vin blanc. Cuire 2 min / 100°C / Rotation gauche / Vitesse 1.",
+            "Ajouter l'eau, le cube de bouillon, le sel et le poivre. Cuire 12 min / 100°C / Rotation gauche / Vitesse 1 (panier posé sur le couvercle). <PARSED TEXT FOR PAGE: 21 / 22>",
+            "Ajouter les épinards frais et la levure maltée. Cuire les 3 dernières minutes / 100°C / Rotation gauche / Vitesse 1. Les épinards vont fondre instantanément dans le riz chaud."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 45/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-046",
+      "name": "Caviar de Poivrons Rouges (Muhammara light)",
+      "ingredients": [
+        "400 g de poivrons rouges cuits (en bocal, égouttés)",
+        "50 g de poudre d'amande",
+        "1 gousse d'ail (dégermée)",
+        "30 ml d'huile d'olive",
+        "1 c. à café de jus de citron",
+        "1/2 c. à café de cumin, 1/2 c. à café de paprika fumé, sel"
+      ],
+      "steps": [
+        "Mettre la gousse d'ail dans le bol. Hacher 5 sec / Vitesse 6.",
+        "Ajouter les poivrons rouges bien égouttés, la poudre d'amande, l'huile d'olive, le jus de citron, le cumin, le paprika fumé et le sel.",
+        "Mixer 30 sec / Vitesse 6. Racler les parois du bol avec la spatule.",
+        "Mixer à nouveau 15 sec / Vitesse 7 pour obtenir une tartinade homogène. Placer au frais."
+      ],
+      "robot": [
+        "Mettre la gousse d'ail dans le bol. Hacher 5 sec / Vitesse 6.",
+        "Ajouter les poivrons rouges bien égouttés, la poudre d'amande, l'huile d'olive, le jus de citron, le cumin, le paprika fumé et le sel.",
+        "Mixer 30 sec / Vitesse 6. Racler les parois du bol avec la spatule.",
+        "Mixer à nouveau 15 sec / Vitesse 7 pour obtenir une tartinade homogène. Placer au frais."
+      ],
+      "notes": [
+        "Une tartinade express, douce et légèrement fumée.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 46/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "400 g de poivrons rouges cuits (en bocal, égouttés)",
+            "50 g de poudre d'amande",
+            "1 gousse d'ail (dégermée)",
+            "30 ml d'huile d'olive",
+            "1 c. à café de jus de citron",
+            "1/2 c. à café de cumin, 1/2 c. à café de paprika fumé, sel"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre la gousse d'ail dans le bol. Hacher 5 sec / Vitesse 6.",
+            "Ajouter les poivrons rouges bien égouttés, la poudre d'amande, l'huile d'olive, le jus de citron, le cumin, le paprika fumé et le sel.",
+            "Mixer 30 sec / Vitesse 6. Racler les parois du bol avec la spatule.",
+            "Mixer à nouveau 15 sec / Vitesse 7 pour obtenir une tartinade homogène. Placer au frais."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 46/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-047",
+      "name": "Crème Dessert Vegan au Café",
+      "ingredients": [
+        "500 ml de lait de soja (neutre ou vanillé)",
+        "2 c. à soupe de café soluble (en poudre)",
+        "30 g de fécule de maïs (Maïzena)",
+        "55 g de sucre de canne"
+      ],
+      "steps": [
+        "Mettre tous les ingrédients dans le bol (lait de soja, café soluble, fécule et sucre).",
+        "Mélanger 15 sec / Vitesse 4 pour dissoudre le café et la fécule.",
+        "Cuire 9 min / 90°C / Vitesse 3 (sans le gobelet doseur).",
+        "Mixer 20 sec / Vitesse 4 pour lisser la crème. Verser dans des pots de verre et mettre au réfrigérateur 2 heures."
+      ],
+      "robot": [
+        "Mettre tous les ingrédients dans le bol (lait de soja, café soluble, fécule et sucre).",
+        "Mélanger 15 sec / Vitesse 4 pour dissoudre le café et la fécule.",
+        "Cuire 9 min / 90°C / Vitesse 3 (sans le gobelet doseur).",
+        "Mixer 20 sec / Vitesse 4 pour lisser la crème. Verser dans des pots de verre et mettre au réfrigérateur 2 heures."
+      ],
+      "notes": [
+        "Une douceur parfumée pour les amateurs de café.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 47/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 ml de lait de soja (neutre ou vanillé)",
+            "2 c. à soupe de café soluble (en poudre)",
+            "30 g de fécule de maïs (Maïzena)",
+            "55 g de sucre de canne"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre tous les ingrédients dans le bol (lait de soja, café soluble, fécule et sucre).",
+            "Mélanger 15 sec / Vitesse 4 pour dissoudre le café et la fécule.",
+            "Cuire 9 min / 90°C / Vitesse 3 (sans le gobelet doseur).",
+            "Mixer 20 sec / Vitesse 4 pour lisser la crème. Verser dans des pots de verre et mettre au réfrigérateur 2 heures."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 47/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-048",
+      "name": "Tapioca au Lait de Coco et Vanille",
+      "ingredients": [
+        "40 g de perles de tapioca (crues)",
+        "200 ml de lait de coco",
+        "300 ml de lait d'amande",
+        "40 g de sucre de canne <PARSED TEXT FOR PAGE: 22 / 22>",
+        "1 c. à café d'extrait de vanille liquide"
+      ],
+      "steps": [
+        "Insérer le batteur (papillon) sur les lames.",
+        "Mettre le lait de coco, le lait d'amande, le sucre et la vanille dans le bol. Chauffer 4 min / 95°C / Vitesse 2.",
+        "Ajouter les perles de tapioca par l'orifice du couvercle.",
+        "Cuire 15 min / 90°C / Rotation gauche / Vitesse 1. Les perles doivent devenir translucides. Verser dans des verrines (le mélange épaissit en refroidissant)."
+      ],
+      "robot": [
+        "Insérer le batteur (papillon) sur les lames.",
+        "Mettre le lait de coco, le lait d'amande, le sucre et la vanille dans le bol. Chauffer 4 min / 95°C / Vitesse 2.",
+        "Ajouter les perles de tapioca par l'orifice du couvercle.",
+        "Cuire 15 min / 90°C / Rotation gauche / Vitesse 1. Les perles doivent devenir translucides. Verser dans des verrines (le mélange épaissit en refroidissant)."
+      ],
+      "notes": [
+        "Un dessert rétro à la texture perlé unique.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 48/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "40 g de perles de tapioca (crues)",
+            "200 ml de lait de coco",
+            "300 ml de lait d'amande",
+            "40 g de sucre de canne <PARSED TEXT FOR PAGE: 22 / 22>",
+            "1 c. à café d'extrait de vanille liquide"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Insérer le batteur (papillon) sur les lames.",
+            "Mettre le lait de coco, le lait d'amande, le sucre et la vanille dans le bol. Chauffer 4 min / 95°C / Vitesse 2.",
+            "Ajouter les perles de tapioca par l'orifice du couvercle.",
+            "Cuire 15 min / 90°C / Rotation gauche / Vitesse 1. Les perles doivent devenir translucides. Verser dans des verrines (le mélange épaissit en refroidissant)."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 48/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-049",
+      "name": "Compote Pomme, Banane et Sucre Muscovado",
+      "ingredients": [
+        "500 g de pommes (épluchées et en morceaux)",
+        "2 bananes bien mûres (coupées en rondelles)",
+        "1 c. à soupe de jus de citron (pour éviter l'oxydation)",
+        "1 c. à café de sucre complet Muscovado (pour sa note de caramel, optionnel)"
+      ],
+      "steps": [
+        "Mettre tous les ingrédients dans le bol.",
+        "Cuire 11 min / 100°C / Vitesse 1.",
+        "Mixer 20 sec / Vitesse 7 pour obtenir un velouté de compote parfait."
+      ],
+      "robot": [
+        "Mettre tous les ingrédients dans le bol.",
+        "Cuire 11 min / 100°C / Vitesse 1.",
+        "Mixer 20 sec / Vitesse 7 pour obtenir un velouté de compote parfait."
+      ],
+      "notes": [
+        "Une texture naturellement douce et veloutée grâce à la banane.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 49/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "500 g de pommes (épluchées et en morceaux)",
+            "2 bananes bien mûres (coupées en rondelles)",
+            "1 c. à soupe de jus de citron (pour éviter l'oxydation)",
+            "1 c. à café de sucre complet Muscovado (pour sa note de caramel, optionnel)"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre tous les ingrédients dans le bol.",
+            "Cuire 11 min / 100°C / Vitesse 1.",
+            "Mixer 20 sec / Vitesse 7 pour obtenir un velouté de compote parfait."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 49/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
+    },
+    {
+      "id": "vegan-robot-050",
+      "name": "Bouillon Clarifié aux Légumes d'Hiver et Tofu",
+      "ingredients": [
+        "150 g de tofu ferme (en petits cubes)",
+        "1 poireau (coupé en fines rondelles)",
+        "2 carottes (coupées en fines rondelles)",
+        "1 oignon (coupé en quatre)",
+        "850 ml d'eau",
+        "3 c. à soupe de sauce soja (tamari)",
+        "1 feuille de laurier, sel, poivre"
+      ],
+      "steps": [
+        "Mettre l'oignon, les rondelles de carottes et de poireau dans le bol.",
+        "Ajouter l'eau, la sauce soja, la feuille de laurier, le sel et le poivre.",
+        "Cuire 25 min / 100°C / Rotation gauche / Vitesse 1 (placer le gobelet doseur).",
+        "Ajouter les dés de tofu par l'orifice du couvercle. Cuire à nouveau 3 min / 90°C / Rotation gauche / Vitesse 1. Retirer le laurier avant de servir ce bouillon bien chaud."
+      ],
+      "robot": [
+        "Mettre l'oignon, les rondelles de carottes et de poireau dans le bol.",
+        "Ajouter l'eau, la sauce soja, la feuille de laurier, le sel et le poivre.",
+        "Cuire 25 min / 100°C / Rotation gauche / Vitesse 1 (placer le gobelet doseur).",
+        "Ajouter les dés de tofu par l'orifice du couvercle. Cuire à nouveau 3 min / 90°C / Rotation gauche / Vitesse 1. Retirer le laurier avant de servir ce bouillon bien chaud."
+      ],
+      "notes": [
+        "Une soupe très légère pour purifier l'organisme.\n   •",
+        "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 50/50. Référence : 4 personnes.",
+        "Option Robot [Monsieur Cuisine] : les réglages de temps, température, vitesse et rotation sont repris des instructions de la fiche PDF."
+      ],
+      "sections": [
+        {
+          "title": "👥 Pour 4 personnes",
+          "lines": [
+            "Base de portions : 4 personnes. Les quantités de la fiche PDF sont conservées."
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "150 g de tofu ferme (en petits cubes)",
+            "1 poireau (coupé en fines rondelles)",
+            "2 carottes (coupées en fines rondelles)",
+            "1 oignon (coupé en quatre)",
+            "850 ml d'eau",
+            "3 c. à soupe de sauce soja (tamari)",
+            "1 feuille de laurier, sel, poivre"
+          ]
+        },
+        {
+          "title": "🤖 Option Robot [Monsieur Cuisine]",
+          "lines": [
+            "Mettre l'oignon, les rondelles de carottes et de poireau dans le bol.",
+            "Ajouter l'eau, la sauce soja, la feuille de laurier, le sel et le poivre.",
+            "Cuire 25 min / 100°C / Rotation gauche / Vitesse 1 (placer le gobelet doseur).",
+            "Ajouter les dés de tofu par l'orifice du couvercle. Cuire à nouveau 3 min / 90°C / Rotation gauche / Vitesse 1. Retirer le laurier avant de servir ce bouillon bien chaud."
+          ]
+        }
+      ],
+      "source": "PDF « RECETTES VEGAN MR CUISINE.pdf » — fiche 50/50",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · 🤖 Monsieur Cuisine",
+      "regime": "vegan",
+      "sous_regime": "robot"
     }
   ],
   "plan": [
