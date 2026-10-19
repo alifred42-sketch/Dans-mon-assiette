@@ -5,6 +5,7 @@ import { useState } from "react";
 import { carnet } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
+import type { Recipe } from "@/lib/types";
 import { ArrowLeft, CookingPot, Soup, Microwave, Salad, Coffee, Sparkles } from "lucide-react";
 
 type Book = "cuisson-unique" | "fast-chic";
@@ -90,7 +91,7 @@ export default function EtudiantPetitBudgetPage() {
                 {selectedFilter.id === "one_pot" ? (
                   <RecipeList
                     items={carnet.recipes
-                      .filter((recipe) => recipe.profil === "etudiant" && recipe.sous_etudiant === "one_pot")
+                      .filter((recipe) => { const tagged = recipe as Recipe & { profil?: string; sous_etudiant?: string }; return tagged.profil === "etudiant" && tagged.sous_etudiant === "one_pot"; })
                       .map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }))}
                   />
                 ) : (
