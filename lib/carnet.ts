@@ -306,11 +306,13 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
       return total <= 20;
     }).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"))[0];
   const reserved = new Set<string>();
-  const fishOrPlant = chooseRole(plantProfile ? /tofu|pois chiches|lentilles|haricots|edamame|œufs|oeufs|omelette/ : /poisson|saumon|cabillaud|thon|maquereau|crevette|sardine|colin|lieu/, reserved, true);
+  const fishOrPlantPattern = plantProfile ? /tofu|pois chiches|lentilles|haricots|edamame|œufs|oeufs|omelette/ : /poisson|saumon|cabillaud|thon|maquereau|crevette|sardine|colin|lieu/;
+  const fishOrPlant = chooseRole(fishOrPlantPattern, reserved, true) || chooseRole(fishOrPlantPattern, reserved);
   if (fishOrPlant) reserved.add(fishOrPlant.id);
   const pivot = chooseRole(plantProfile ? /tofu|pois chiches|lentilles|haricots|edamame|œufs|oeufs|omelette/ : /poulet|dinde|bœuf|boeuf|veau|porc|agneau|viande|steak/, reserved);
   if (pivot) reserved.add(pivot.id);
-  const soup = eligible.filter((recipe) => !reserved.has(recipe.id) && /soupe|velouté|veloute|potage|bouillon/.test(roleText(recipe)) && seasonalScore(recipe, season) > 0).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"))[0];
+  const soupCandidates = eligible.filter((recipe) => !reserved.has(recipe.id) && /soupe|velouté|veloute|potage|bouillon/.test(roleText(recipe))).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+  const soup = soupCandidates.find((recipe) => seasonalScore(recipe, season) > 0) || soupCandidates[0];
   if (soup) reserved.add(soup.id);
   const pantry = chooseRole(/vide.?frigo|restes|anti.?gaspi|fond de placard/, reserved)
     || chooseRole(/salade|omelette|wrap|poelee|quiche|tarte|frittata|gratin/, reserved)
