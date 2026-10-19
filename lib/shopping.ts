@@ -1,4 +1,4 @@
-import { carnet, getRecipe, isPlaceholderIngredient, weekPlan } from "./carnet";
+import { carnet, getRecipe, isPlaceholderIngredient, weekPlan, type PlanningPreferences } from "./carnet";
 import type { ShoppingItem } from "./carnet";
 import { displayRecipe, resolveVagueIngredient } from "./recipe-display";
 
@@ -228,7 +228,7 @@ function findLinkedSauce(line: string) {
   }).sort((a, b) => a.name.length - b.name.length)[0];
 }
 
-export function shoppingForWeek(week: number, servingsByRecipe: Record<string, number> = {}, overrides: Record<string, string> = {}): ShoppingItem[] {
+export function shoppingForWeek(week: number, servingsByRecipe: Record<string, number> = {}, overrides: Record<string, string> = {}, preferences: PlanningPreferences = {}): ShoppingItem[] {
   const official = (carnet.courses || []).filter((row) => row.week === week);
   const aisleByName = new Map<string, string>();
   for (const row of official) {
@@ -262,7 +262,7 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
     bag.set(key, cur);
   }
 
-  const activePlan = weekPlan(week, overrides);
+  const activePlan = weekPlan(week, overrides, preferences);
   const activeDishNames = new Set(activePlan.map((slot) => fold(slot.name)).filter(Boolean));
 
   for (const slot of activePlan) {
