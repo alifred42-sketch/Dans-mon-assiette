@@ -55,6 +55,7 @@ function canonicalIngredient(raw: string): string {
     .replace(/\b(?:herbes de provence|herbes provencales)\b/g, "herbes de provence")
     .replace(/\b(?:sucre en poudre|sucre semoule|sucre blanc)\b/g, "sucre")
     .replace(/\b(?:farine de ble|farine blanche)\b/g, "farine")
+    .replace(/\b(?:rotis?|roties?|vapeur|cuits?|cuites?|emince|emincee|rapes?|rapees?|en des|en rondelles|en morceaux|finement)\b/g, " ")
     .replace(/\b(?:riz basmati|riz long|riz complet)\b/g, "riz")
     .replace(/\b(?:eau du robinet|eau froide|eau chaude)\b/g, "eau")
     .replace(/\s+/g, " ")
@@ -108,7 +109,7 @@ type Parsed = {
 };
 
 function parseLine(raw: string): Parsed | null {
-  const t = stripDecor(raw);
+  const t = stripDecor(raw).replace(/^(\d+(?:[.,]\d+)?)\s+[\p{Extended_Pictographic}\uFE0F]+\s*/u, "$1 ");
   if (!t || isJunk(t)) return null;
 
   const colon = t.match(/^([^:]{2,40})\s*:\s+(.+)$/);
