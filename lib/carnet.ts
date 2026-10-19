@@ -188,7 +188,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   if (soup) reserved.add(soup.id);
   const pantry = chooseRole(/wrap|salade|omelette|tartine|riz sauté|riz saute|poêlée|poelee|vide.?frigo/, reserved);
   if (pantry) reserved.add(pantry.id);
-  const pleasure = chooseRole(/pizza|burger|lasagnes|tarte|crumble|fondant|dessert|gaufre|crêpe|crepe|pancake|festif|gourmand/, reserved);
+  const pleasures = eligible.filter((recipe) => !reserved.has(recipe.id) && /pizza|burger|lasagnes|tarte|crumble|fondant|dessert|gaufre|crêpe|crepe|pancake|festif|gourmand/.test(roleText(recipe))).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
   const matrix = new Map<string, { recipe: Recipe; name?: string }>();
   const setRole = (day: string, meal: string, recipe?: Recipe, name?: string) => { if (recipe) matrix.set(`${day}|${meal}`, { recipe, name }); };
   setRole("LUNDI", "Soir", fishOrPlant);
@@ -197,15 +197,14 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   setRole("MERCREDI", "Soir", soup);
   setRole("JEUDI", "Soir", pivot, pivot ? `Seconde vie — ${pivot.name}` : undefined);
   setRole("VENDREDI", "Midi", pantry);
-  setRole("SAMEDI", "Midi", pleasure);
-  setRole("SAMEDI", "Soir", pleasure);
-  setRole("DIMANCHE", "Midi", pleasure);
-  setRole("DIMANCHE", "Soir", pleasure);
+  setRole("SAMEDI", "Midi", pleasures[0]);
+  setRole("SAMEDI", "Soir", pleasures[1]);
+  setRole("DIMANCHE", "Midi", pleasures[2]);
+  setRole("DIMANCHE", "Soir", pleasures[3]);
   return slots.map((slot) => {
     const matrixSelection = matrix.get(`${slot.day}|${slot.meal}`);
     if (matrixSelection) {
-      if (slot.day === "MARDI" && slot.meal === "Soir" && matrixSelection.recipe) used.add(matrixSelection.recipe.id);
-      if (slot.day === "MERCREDI" && slot.meal === "Soir" && matrixSelection.recipe) used.add(matrixSelection.recipe.id);
+      used.add(matrixSelection.recipe.id);
       return { ...slot, name: matrixSelection.name || matrixSelection.recipe.name, recipeId: matrixSelection.recipe.id };
     }
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
