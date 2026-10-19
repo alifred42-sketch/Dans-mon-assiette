@@ -109,7 +109,7 @@ function normalizeRecipeForPlanning(recipe: Recipe): Recipe {
     "☀️ Option Midi copieux : ajoutez un féculent de secours selon votre faim.",
     "🌙 Option Soir copieux : ajustez les portions de légumes et de protéines selon votre faim.",
   ];
-  for (const note of flexibleLines) if (!notes.some((existing) => existing.startsWith(note.slice(0, 20))) notes.push(note);
+  for (const note of flexibleLines) if (!notes.some((existing) => existing.startsWith(note.slice(0, 20)))) notes.push(note);
 
   const sections = [...(recipe.sections || [])].map((section) => {
     if (/ingrédients|ingredients|🛒/i.test(section.title || "")) return { ...section, lines: ingredients };
