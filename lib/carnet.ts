@@ -256,19 +256,6 @@ export type PlanningPreferences = {
   sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean;
 };
 
-function profileAllows(recipe: Recipe, prefs: PlanningPreferences): boolean {
-  const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || []), ...(recipe.steps || [])].join(" "));
-  const regime = normalizedSeasonText(recipe.regime || "");
-  const tags = normalizedSeasonText(recipe.sous_regime || "");
-  if (prefs.vegan && regime !== "vegan") return false;
-  if (prefs.vegetarien && !["vegan", "vegetarien", "vegetarian"].includes(regime)) return false;
-  if (prefs.etudiant && !/etudiant|petit.?budget|economique|budget/.test(tags + " " + text)) return false;
-  if (prefs.sansGluten && /(farine de ble|pain|pates|semoule|couscous|tortilla|wrap|chapelure|seitan|sauce soja(?! sans gluten))/.test(text)) return false;
-  if (prefs.sansLactose && /(lait|creme|beurre|fromage|yaourt|skyr|ricotta|mozzarella|parmesan|feta)/.test(text)) return false;
-  if (prefs.sansFruitsCoque && /(amande|noisette|noix|pistache|noix de cajou|pignon|cacahuete)/.test(text)) return false;
-  return true;
-}
-
 function seasonalScore(recipe: Recipe, season: Season): number {
   if (!isCompleteRecipe(recipe)) return 0;
   const text = normalizedSeasonText([
@@ -287,8 +274,10 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   });
   const season = seasonForWeek(week);
   const used = new Set<string>();
-  const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe) && profileAllows(recipe, preferences));
-  const plantProfile = Boolean(preferences.vegan || preferences.vegetarien);
+  // Les profils et allergies restent enregistrés dans le compte, mais leur connexion au planning est différée à l’étape suivante.
+  void preferences;
+  const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe));
+  const plantProfile = false;
   const roleText = (recipe: Recipe) => normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
   const chooseRole = (pattern: RegExp, exclude: Set<string> = new Set<string>(), quick = false) =>
     eligible.filter((recipe) => {
@@ -334,7 +323,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
       return { ...slot, name: matrixSelection.name, recipeId: matrixSelection.recipe.id };
     }
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
-    const currentValid = current ? isValidatedRecipe(current) && profileAllows(current, preferences) && !reserved.has(current.id) : false;
+    const currentValid = current ? isValidatedRecipe(current) && !reserved.has(current.id) : false;
     const currentScore = current ? seasonalScore(current, season) : 0;
     if (current && currentValid && currentScore > 0 && !used.has(current.id)) {
       used.add(current.id);
