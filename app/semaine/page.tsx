@@ -36,7 +36,7 @@ export default function WeekPage() {
   const dateRange = `${mondayDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long" })} au ${sundayDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long" })}`;
   const slots = weekPlan(week, recipeOverrides, preferences);
   const validatedSlotCount = slots.filter((slot) => Boolean(slot.recipeId)).length;
-  const activeProfiles = [preferences.etudiant && "Étudiant", preferences.vegan && "Végan", preferences.vegetarien && "Végétarien", preferences.halal && "Halal", preferences.sansGluten && "Sans gluten", preferences.sansLactose && "Sans lactose", preferences.sansFruitsCoque && "Sans fruits à coque"].filter(Boolean);
+  const activeProfiles = [preferences.etudiant && "Étudiant", preferences.vegan && "Végan", preferences.vegetarien && "Végétarien", preferences.sansGluten && "Sans gluten", preferences.sansLactose && "Sans lactose", preferences.sansFruitsCoque && "Sans fruits à coque"].filter(Boolean);
   const breakfast = breakfastForWeek(week);
 
   return (
