@@ -137,7 +137,7 @@ function isSauceOrSideRecipe(name: string): boolean {
 }
 
 export type PlanningPreferences = {
-  etudiant?: boolean; vegetarien?: boolean; vegan?: boolean; halal?: boolean;
+  etudiant?: boolean; vegetarien?: boolean; vegan?: boolean;
   sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean;
 };
 
@@ -148,7 +148,6 @@ function profileAllows(recipe: Recipe, prefs: PlanningPreferences): boolean {
   if (prefs.vegan && regime !== "vegan") return false;
   if (prefs.vegetarien && !["vegan", "vegetarien", "vegetarian"].includes(regime)) return false;
   if (prefs.etudiant && !/etudiant|petit.?budget|economique|budget/.test(tags + " " + text)) return false;
-  if (prefs.halal && (/(porc|lardon|jambon|bacon|saucisse de porc|vin blanc|vin rouge|rhum|cognac|porto|alcool)/.test(text) || !/halal/.test(regime + " " + tags + " " + text))) return false;
   if (prefs.sansGluten && /(farine de ble|pain|pates|semoule|couscous|tortilla|wrap|chapelure|seitan|sauce soja(?! sans gluten))/.test(text)) return false;
   if (prefs.sansLactose && /(lait|creme|beurre|fromage|yaourt|skyr|ricotta|mozzarella|parmesan|feta)/.test(text)) return false;
   if (prefs.sansFruitsCoque && /(amande|noisette|noix|pistache|noix de cajou|pignon|cacahuete)/.test(text)) return false;
