@@ -69377,6 +69377,284 @@
       "blurb": "🌱 Végan · ⚡ Express",
       "regime": "vegan",
       "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-041",
+      "name": "Salade Flash de Quinoa et Cranberries",
+      "ingredients": [
+        "600 g quinoa déjà cuit",
+        "4 c. à soupe cranberries séchées",
+        "4 c. à soupe graines de courge",
+        "4 c. à soupe huile de colza",
+        "4 c. à café vinaigre de cidre",
+        "Sel"
+      ],
+      "steps": [
+        "Réchauffer le quinoa en sachet 1 min ou l’utiliser froid.",
+        "Ajouter cranberries et graines de courge.",
+        "Assaisonner avec huile, vinaigre et sel, mélanger."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 41/50. Quantités pour 4 personnes.",
+        "Temps total : 6 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 6 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 1 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g quinoa déjà cuit",
+            "4 c. à soupe cranberries séchées",
+            "4 c. à soupe graines de courge",
+            "4 c. à soupe huile de colza",
+            "4 c. à café vinaigre de cidre",
+            "Sel"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Réchauffer le quinoa en sachet 1 min ou l’utiliser froid.",
+            "Ajouter cranberries et graines de courge.",
+            "Assaisonner avec huile, vinaigre et sel, mélanger."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 41/50",
+      "timePrep": "5 min",
+      "timeCook": "1 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-042",
+      "name": "Tartine Caviar d’Aubergine et Grenade",
+      "ingredients": [
+        "8 tranches pain complet",
+        "12 c. à soupe caviar d’aubergine en pot",
+        "4 c. à soupe graines de grenade",
+        "4 filets huile d’olive"
+      ],
+      "steps": [
+        "Griller le pain complet.",
+        "Étaler le caviar d’aubergine sur les tartines.",
+        "Parsemer de grenade et ajouter un filet d’huile d’olive."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 42/50. Quantités pour 4 personnes.",
+        "Temps total : 7 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 7 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 2 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "8 tranches pain complet",
+            "12 c. à soupe caviar d’aubergine en pot",
+            "4 c. à soupe graines de grenade",
+            "4 filets huile d’olive"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Griller le pain complet.",
+            "Étaler le caviar d’aubergine sur les tartines.",
+            "Parsemer de grenade et ajouter un filet d’huile d’olive."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 42/50",
+      "timePrep": "5 min",
+      "timeCook": "2 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-043",
+      "name": "Salade de Haricots Blancs au Pesto Rouge",
+      "ingredients": [
+        "600 g haricots blancs en conserve rincés",
+        "4 c. à soupe bombées pesto rouge vegan",
+        "16 tomates cerises",
+        "4 poignées roquette"
+      ],
+      "steps": [
+        "Mélanger les haricots blancs avec le pesto rouge vegan.",
+        "Ajouter délicatement tomates coupées en quatre et roquette.",
+        "Servir à température ambiante."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 43/50. Quantités pour 4 personnes.",
+        "Temps total : 7 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 7 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 7 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "600 g haricots blancs en conserve rincés",
+            "4 c. à soupe bombées pesto rouge vegan",
+            "16 tomates cerises",
+            "4 poignées roquette"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mélanger les haricots blancs avec le pesto rouge vegan.",
+            "Ajouter délicatement tomates coupées en quatre et roquette.",
+            "Servir à température ambiante."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 43/50",
+      "timePrep": "7 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-044",
+      "name": "Wrap Crémeux aux Carottes Râpées et Raisins",
+      "ingredients": [
+        "4 grandes tortillas",
+        "320 g carottes râpées",
+        "4 c. à soupe yaourt de soja",
+        "4 c. à café moutarde douce",
+        "4 c. à soupe raisins secs"
+      ],
+      "steps": [
+        "Mélanger le yaourt de soja et la moutarde.",
+        "Ajouter les carottes et les raisins, mélanger.",
+        "Garnir les tortillas, rouler fermement et couper en deux."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 44/50. Quantités pour 4 personnes.",
+        "Temps total : 8 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 8 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 8 min",
+            "🔥 Cuisson : 0 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "4 grandes tortillas",
+            "320 g carottes râpées",
+            "4 c. à soupe yaourt de soja",
+            "4 c. à café moutarde douce",
+            "4 c. à soupe raisins secs"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mélanger le yaourt de soja et la moutarde.",
+            "Ajouter les carottes et les raisins, mélanger.",
+            "Garnir les tortillas, rouler fermement et couper en deux."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 44/50",
+      "timePrep": "8 min",
+      "timeCook": "0 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
+    },
+    {
+      "id": "vegan-express-045",
+      "name": "Porridge Salé Express au Tamari",
+      "ingredients": [
+        "160 g flocons d’avoine",
+        "800 ml eau",
+        "4 c. à soupe sauce soja/tamari",
+        "4 c. à café huile de sésame",
+        "4 c. à café graines de sésame"
+      ],
+      "steps": [
+        "Mélanger avoine et eau dans des bols adaptés et cuire au micro-ondes 2 min.",
+        "Ajouter tamari et huile de sésame, remuer jusqu’à texture crémeuse.",
+        "Saupoudrer de graines et servir chaud."
+      ],
+      "robot": [],
+      "notes": [
+        "PDF Recettes Véganes Express 10 Min, fiche 45/50. Quantités pour 4 personnes.",
+        "Temps total : 7 min."
+      ],
+      "sections": [
+        {
+          "title": "⏱️ Temps total : 7 min",
+          "lines": [
+            "👥 Pour 4 personnes",
+            "⏱️ Préparation : 5 min",
+            "🔥 Cuisson : 2 min"
+          ]
+        },
+        {
+          "title": "🛒 Ingrédients",
+          "lines": [
+            "160 g flocons d’avoine",
+            "800 ml eau",
+            "4 c. à soupe sauce soja/tamari",
+            "4 c. à café huile de sésame",
+            "4 c. à café graines de sésame"
+          ]
+        },
+        {
+          "title": "👩‍🍳 Préparation",
+          "lines": [
+            "Mélanger avoine et eau dans des bols adaptés et cuire au micro-ondes 2 min.",
+            "Ajouter tamari et huile de sésame, remuer jusqu’à texture crémeuse.",
+            "Saupoudrer de graines et servir chaud."
+          ]
+        }
+      ],
+      "source": "PDF Recettes Véganes Express 10 Min — fiche 45/50",
+      "timePrep": "5 min",
+      "timeCook": "2 min",
+      "servings": "4 personnes",
+      "blurb": "🌱 Végan · ⚡ Express",
+      "regime": "vegan",
+      "sous_regime": "express"
     }
   ],
   "plan": [
