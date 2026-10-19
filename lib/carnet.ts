@@ -28,7 +28,7 @@ function defaultCookTime(recipe: Partial<Recipe>): number {
 
 function normalizeIngredientQuantity(raw: string): string {
   let line = String(raw || "").trim().replace(/^[•\-–]\s*/, "");
-  line = line.replace(/^(\d+(?:[.,]\d+)?)\s+[\p{Extended_Pictographic}\uFE0F]+\s*/u, "$1 ");
+  line = line.replace(/[\p{Extended_Pictographic}\uFE0F]/gu, " ").replace(/\s+/g, " ").trim();
   const reverse = line.match(/^(poireaux?|carottes?)\s*:\s*(\d+(?:[.,]\d+)?)$/i);
   if (reverse) return reverse[2] + " " + reverse[1].toLocaleLowerCase("fr");
   if (/^1 quelques rondelles de concombre$/i.test(line)) return "1 concombre (à couper en rondelles)";
