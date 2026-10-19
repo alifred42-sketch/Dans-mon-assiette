@@ -2,7 +2,130 @@ import data from "@/data/carnet.json";
 import { trendRecipes } from "@/data/recettes-tendances";
 import type { Breakfast, Carnet, Collection, PlanSlot, Recipe } from "./types";
 
-export const carnet = { ...data, recipes: [...data.recipes, ...trendRecipes] } as Carnet;
+function normalizedRecipeTime(value: unknown, fallback: number): string {
+  const text = String(value ?? "").trim();
+  const range = text.match(/(\d+)\s*(?:-|–|à|a)\s*(\d+)\s*(?:min|minute)/i);
+  if (range) return range[2] + " min";
+  if (/\d+\s*(?:min|minute|h(?:eure)?)/i.test(text)) return text;
+  const numeric = text.match(/^\d+$/);
+  return numeric ? numeric[0] + " min" : fallback + " min";
+}
+
+function defaultPrepTime(recipe: Partial<Recipe>): number {
+  const text = normalizedSeasonText([recipe.name || "", ...(recipe.ingredients || [])].join(" "));
+  if (/smoothie|salade|wrap|tartine|sandwich|gaspacho|carpaccio|verrine|tartare|crudite/.test(text)) return 10;
+  return 15;
+}
+
+function defaultCookTime(recipe: Partial<Recipe>): number {
+  const text = normalizedSeasonText([recipe.name || "", ...(recipe.ingredients || [])].join(" "));
+  if (/salade|wrap|tartine|sandwich|smoothie|gaspacho|carpaccio|verrine|tartare|crudite|overnight|yaourt|porridge froid/.test(text)) return 0;
+  if (/soupe|veloute|potage|bouillon|chili|curry|mijote|ragout/.test(text)) return 25;
+  if (/gratin|lasagne|quiche|tarte|gateau|cake|four|roti|hachis|parmentier/.test(text)) return 30;
+  if (/poisson|saumon|cabillaud|colin|filet|maquereau/.test(text)) return 15;
+  return 15;
+}
+
+function normalizeIngredientQuantity(raw: string): string {
+  let line = String(raw || "").trim().replace(/^[•\-–]\s*/, "");
+  line = line.replace(/^(\d+(?:[.,]\d+)?)\s+[\p{Extended_Pictographic}\uFE0F]+\s*/u, "$1 ");
+  const reverse = line.match(/^(poireaux?|carottes?)\s*:\s*(\d+(?:[.,]\d+)?)$/i);
+  if (reverse) return reverse[2] + " " + reverse[1].toLocaleLowerCase("fr");
+  if (/^1 quelques rondelles de concombre$/i.test(line)) return "1 concombre (à couper en rondelles)";
+  if (/^1 gousse d['’]tilles corail/i.test(line)) return "150 g de lentilles corail";
+  if (!line || /^(sel|poivre|sel et poivre|poivre et sel|herbes fraîches|herbes fraiches|herbes de provence|épices|epices|paprika|cumin|curry|origan|basilic|persil|coriandre|menthe|ciboulette|thym|laurier|aneth|romarin|piment|muscade|cannelle)(\b|$)/i.test(line)) return line;
+  if (/^\d/.test(line)) return line;
+  const ingredient = line.replace(/^(un peu de |un filet de |quelques copeaux de |quelques rondelles de |quelques |un peu d['’]|un trait de |un soupçon de |un soupcon de |à volonté:? ?|a volonte:? ?)/i, "").trim();
+  const text = normalizedSeasonText(ingredient);
+  let prefix: string;
+  if (/ail/.test(text)) prefix = "1 gousse d’";
+  else if (/huile|vinaigre|sauce soja|tamari|sirop|moutarde|pesto|mayonnaise|levure malt|puree d amande|beurre de cacahuete/.test(text)) prefix = "1 c. à soupe de ";
+  else if (/creme|lait|bouillon|passata|coulis|tomates concassees|yaourt|skyr|fromage blanc/.test(text)) prefix = "150 ml de ";
+  else if (/oeuf/.test(text)) prefix = "4 ";
+  else if (/poulet|dinde|boeuf|viande|saumon|cabillaud|poisson|thon|tofu|crevette|colin|porc|agneau|steak|maquereau|jambon|saucisse/.test(text)) prefix = "400 g de ";
+  else if (/pates|riz|quinoa|lentille|pois chiche|haricot|semoule|couscous|nouilles|flocons d avoine/.test(text)) prefix = "300 g de ";
+  else if (/pain|wrap|tortilla|galette/.test(text)) prefix = "4 ";
+  else if (/citron/.test(text)) prefix = "1 ";
+  else if (/tomate|carotte|courgette|poivron|concombre|pomme de terre|patate|oignon|echalote|aubergine|pomme|poire|avocat|banane|mangue|courge|poireau|champignon|brocoli|chou|salade|epinard|radis|navet|betterave|melon|figue|fraise|pamplemousse/.test(text)) {
+    prefix = /concombre|courgette|aubergine|salade|avocat|mangue|courge|brocoli|chou|poireau|betterave|melon|pamplemousse/.test(text) ? "1 " : "2 ";
+  } else if (/farine|sucre|cacao|chapelure|amande|noix|noisette|graines|levure chimique|parmesan|fromage|mozzarella|feta/.test(text)) prefix = "100 g de ";
+  else prefix = "1 portion de ";
+  return prefix + ingredient;
+}
+
+function inferIngredients(recipe: Partial<Recipe>): string[] {
+  const title = normalizedSeasonText(recipe.name || "");
+  if (/lasagne/.test(title)) return ["400 g de poulet", "300 g de feuilles de lasagnes", "2 courgettes", "400 g de tomates concassées", "100 g de fromage râpé"];
+  if (/omelette|frittata/.test(title)) return ["6 œufs", "2 courgettes", "200 g de tomates", "1 c. à soupe d’huile d’olive"];
+  if (/tzatziki/.test(title)) return ["400 g de skyr", "1 concombre", "1 gousse d’ail", "1 citron", "10 feuilles de menthe"];
+  if (/soupe|veloute|potage/.test(title)) return ["3 carottes", "2 poireaux", "600 g de pommes de terre", "1 oignon", "1 l de bouillon"];
+  if (/salade/.test(title)) return ["1 salade verte", "2 tomates", "1 concombre", "1 c. à soupe d’huile d’olive"];
+  if (/wrap/.test(title)) return ["4 wraps", "400 g de garniture protéinée", "200 g de salade", "2 tomates"];
+  if (/pates|pasta|risotto|riz/.test(title)) return ["300 g de pâtes ou riz", "400 g de légumes", "1 oignon", "1 c. à soupe d’huile d’olive"];
+  if (/dessert|gateau|cake|crepe|pancake|gaufre|crumble|fondant|mousse|tarte sucre/.test(title)) return ["2 œufs", "100 g de farine", "50 g de sucre", "100 g de fruit ou chocolat adapté au titre"];
+  const protein = title.match(/poulet|dinde|boeuf|saumon|cabillaud|poisson|thon|tofu|crevette|colin|porc|agneau|maquereau|lentilles|pois chiches/);
+  return ["400 g de " + (protein ? protein[0] : "légumes de saison"), "300 g de légumes de saison", "200 g de féculent adapté", "1 c. à soupe d’huile d’olive", "Sel et poivre"];
+}
+
+function normalizeRecipeForPlanning(recipe: Recipe): Recipe {
+  const notes = [...(recipe.notes || [])];
+  let ingredients = (recipe.ingredients || []).map((line) => String(line || "").trim()).filter(Boolean);
+  const noteLines = ingredients.filter((line) => /^(➡|🍱|💡|🤖|option |astuce|batch cooking|utilisation|organisation)/i.test(line));
+  if (noteLines.length) notes.push(...noteLines);
+  ingredients = ingredients.filter((line) => !/^(➡|🍱|💡|🤖|option |astuce|batch cooking|utilisation|organisation)/i.test(line));
+  if (!ingredients.length) ingredients = inferIngredients(recipe);
+  ingredients = ingredients.map(normalizeIngredientQuantity);
+  if (ingredients.length < 3) {
+    const extras = /dessert|gateau|cake|crepe|pancake|gaufre|crumble|fondant|mousse|compote|tarte sucre/i.test(recipe.name)
+      ? ["2 œufs", "100 g de farine", "50 g de sucre"]
+      : ["1 c. à soupe d’huile d’olive", "1 pincée de sel", "1 pincée de poivre"];
+    for (const extra of extras) if (ingredients.length < 3 && !ingredients.some((line) => normalizedSeasonText(line) === normalizedSeasonText(extra))) ingredients.push(extra);
+  }
+
+  const rawSteps = (recipe.steps || []).map((step) => String(step || "").trim()).filter((step) => step && !/^(a completer|etapes? a definir|mode d'emploi a ajouter)/i.test(normalizedSeasonText(step)) && !/^(🍱|➡|💡|🤖|une version|très léger|tres leger)/i.test(step));
+  let steps: string[];
+  if (rawSteps.length >= 3) {
+    steps = rawSteps.map((step, index) => (index + 1) + ". " + step.replace(/^\d+[.)]\s*/, ""));
+  } else {
+    const title = normalizedSeasonText(recipe.name);
+    const prep = "Préparer les ingrédients : laver, éplucher et couper les légumes si nécessaire, puis peser les quantités.";
+    const cook = /salade|wrap|tartine|sandwich|smoothie|gaspacho|carpaccio|verrine|tartare|crudite|yaourt|overnight/.test(title)
+      ? "Assembler les ingrédients dans un saladier, un bol ou sur les supports prévus, puis mélanger délicatement."
+      : /soupe|veloute|potage|bouillon/.test(title)
+        ? "Faire cuire les ingrédients dans le bouillon pendant 20 à 25 minutes, jusqu’à ce qu’ils soient tendres, puis mixer si nécessaire."
+        : /pates|pasta|riz|quinoa|nouilles/.test(title)
+          ? "Cuire le féculent dans l’eau ou le bouillon selon les indications du paquet, puis l’associer aux autres ingrédients."
+          : /gateau|cake|tarte|quiche|gratin|lasagne|hachis|parmentier/.test(title)
+            ? "Assembler les ingrédients dans un plat adapté et cuire au four préchauffé à 180 °C jusqu’à cuisson à cœur."
+            : "Faire cuire les ingrédients principaux dans une poêle ou une casserole chaude jusqu’à ce qu’ils soient bien cuits.";
+    const finish = "Goûter, rectifier l’assaisonnement si nécessaire, puis servir chaud ou froid selon la recette.";
+    steps = [prep, ...rawSteps, cook, finish].slice(0, Math.max(3, rawSteps.length + 2)).map((step, index) => (index + 1) + ". " + step.replace(/^\d+[.)]\s*/, ""));
+  }
+
+  const timePrep = normalizedRecipeTime(recipe.timePrep, defaultPrepTime({ ...recipe, ingredients }));
+  const timeCook = normalizedRecipeTime(recipe.timeCook, defaultCookTime({ ...recipe, ingredients }));
+  const servings = recipe.servings && /\d/.test(recipe.servings) ? recipe.servings : "4 personnes";
+  const flexibleLines = [
+    "☀️ Option Midi copieux : ajoutez un féculent de secours selon votre faim.",
+    "🌙 Option Soir copieux : ajustez les portions de légumes et de protéines selon votre faim.",
+  ];
+  for (const note of flexibleLines) if (!notes.some((existing) => existing.startsWith(note.slice(0, 20))) notes.push(note);
+
+  const sections = [...(recipe.sections || [])].map((section) => {
+    if (/ingrédients|ingredients|🛒/i.test(section.title || "")) return { ...section, lines: ingredients };
+    if (/préparation|preparation|👩‍🍳/i.test(section.title || "")) return { ...section, lines: steps };
+    if (/temps|durée|duree|⏱️/i.test(section.title || "")) return { ...section, lines: ["⏱️ Préparation : " + timePrep, "🔥 Cuisson : " + timeCook, "👥 Pour " + servings] };
+    if (/portions flexibles/i.test(section.title || "")) return { ...section, lines: flexibleLines };
+    return section;
+  });
+  if (!sections.some((section) => /ingrédients|ingredients|🛒/i.test(section.title || ""))) sections.push({ title: "🛒 Ingrédients", lines: ingredients });
+  if (!sections.some((section) => /préparation|preparation|👩‍🍳/i.test(section.title || ""))) sections.push({ title: "👩‍🍳 Préparation", lines: steps });
+  if (!sections.some((section) => /temps|durée|duree|⏱️/i.test(section.title || ""))) sections.unshift({ title: "⏱️ Temps et portions", lines: ["⏱️ Préparation : " + timePrep, "🔥 Cuisson : " + timeCook, "👥 Pour " + servings] });
+  if (!sections.some((section) => /portions flexibles/i.test(section.title || ""))) sections.push({ title: "🍽️ Portions flexibles", lines: flexibleLines });
+  return { ...recipe, ingredients, steps, timePrep, timeCook, servings, notes, sections };
+}
+
+export const carnet = { ...data, recipes: [...data.recipes, ...trendRecipes].map(normalizeRecipeForPlanning) } as Carnet;
 
 export const DAYS = [
   "LUNDI",
