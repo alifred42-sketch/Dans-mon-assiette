@@ -60,6 +60,11 @@ export default async function FichePage({
           <p className="text-sm text-muted-foreground">Au menu : {menuNames.join(" · ")}</p>
         )}
         {meta && <p className="text-sm text-muted-foreground">{meta}</p>}
+        <aside className="rounded-2xl border border-[#8FA89B]/40 bg-[#8FA89B]/10 p-3 text-sm text-[#2B2B2B]">
+          <p className="font-bold">🍽️ À adapter selon votre faim</p>
+          <p className="mt-1"><strong>Option ☀️ Midi copieux :</strong> ajoutez un féculent adapté (riz, pommes de terre, pâtes ou pain) si besoin.</p>
+          <p className="mt-1"><strong>Option 🌙 Soir copieux :</strong> augmentez la portion du plat et ajoutez des légumes ou un accompagnement adapté à votre profil.</p>
+        </aside>
         {weeks.length > 0 && (
           <p className="text-xs text-muted-foreground">
             Semaines {weeks.slice(0, 10).join(", ")}
