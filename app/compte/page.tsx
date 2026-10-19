@@ -1,16 +1,16 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Heart, Share2, Users, Bot, UserRound, Leaf, Wheat, Milk, Nut, GraduationCap, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, Heart, Share2, Users, Bot, UserRound, Leaf, Wheat, Milk, Nut, GraduationCap } from "lucide-react";
 import { carnet } from "@/lib/carnet";
-const DEFAULT_PREFS = { etudiant:false, vegetarien:false, vegan:false, halal:false, sansGluten:false, sansLactose:false, sansFruitsCoque:false, robot:false };
+const DEFAULT_PREFS = { etudiant:false, vegetarien:false, vegan:false, sansGluten:false, sansLactose:false, sansFruitsCoque:false, robot:false };
 type Prefs = typeof DEFAULT_PREFS;
 function Toggle({label,checked,onChange,icon}:{label:string;checked:boolean;onChange:(v:boolean)=>void;icon?:React.ReactNode}) {
  return <label className={`flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border px-3 py-3 text-sm font-semibold transition ${checked?"border-[#8FA89B] bg-[#8FA89B]/20":"border-[#E7E5DE] bg-white"}`}><input type="checkbox" checked={checked} onChange={e=>onChange(e.target.checked)} className="size-4 accent-[#8FA89B]"/>{icon}<span className="flex-1 text-[#1A1A1A]">{label}</span>{checked?<span className="text-xs font-bold text-[#557565]">Activé</span>:null}</label>;
 }
 export default function ComptePage(){
  const [servings,setServings]=useState(4); const [prefs,setPrefs]=useState<Prefs>(DEFAULT_PREFS); const [ready,setReady]=useState(false);
- useEffect(()=>{try{const n=Number(localStorage.getItem("assiette-household-servings")||"4");setServings(Number.isFinite(n)?Math.min(20,Math.max(1,n)):4);setPrefs({...DEFAULT_PREFS,...JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences")||"{}")});}catch{}setReady(true);},[]);
+ useEffect(()=>{try{const n=Number(localStorage.getItem("assiette-household-servings")||"4");setServings(Number.isFinite(n)?Math.min(20,Math.max(1,n)):4);const saved=JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences")||"{}");delete saved.halal;setPrefs({...DEFAULT_PREFS,...saved});}catch{}setReady(true);},[]);
  function updateServings(n:number){const safe=Math.min(20,Math.max(1,n));setServings(safe);try{localStorage.setItem("assiette-household-servings",String(safe));const saved=JSON.parse(localStorage.getItem("assiette-recipe-servings")||"{}") as Record<string,number>;for(const recipe of carnet.recipes)saved[recipe.id]=safe;localStorage.setItem("assiette-recipe-servings",JSON.stringify(saved));window.dispatchEvent(new CustomEvent("assiette-servings-change"));}catch{}}
  function updatePref(key:keyof Prefs,value:boolean){const next={...prefs,[key]:value};setPrefs(next);try{localStorage.setItem("cuisine-chic-ouf-preferences",JSON.stringify(next));}catch{}window.dispatchEvent(new CustomEvent("cuisine-chic-ouf-preferences-change"));}
  async function shareApp(){const url=window.location.origin+window.location.pathname.replace(/\/compte\/?$/,"");const data={title:"CUISINE CHIC OUF !",text:"Viens découvrir CUISINE CHIC OUF ! Des menus et des courses sans prise de tête.",url};try{if(navigator.share)await navigator.share(data);else if(navigator.clipboard){await navigator.clipboard.writeText(url);alert("Lien copié, prêt à partager !");}}catch{}}
@@ -24,7 +24,7 @@ export default function ComptePage(){
  <section className="space-y-4 rounded-3xl border border-white bg-[#F9F9F7] p-4 shadow-[7px_7px_18px_rgba(26,26,26,0.07),-5px_-5px_14px_rgba(255,255,255,0.95)]">
  <div className="flex items-center gap-3"><span className="flex size-11 items-center justify-center rounded-2xl bg-[#8FA89B]/20"><UserRound className="size-6"/></span><div><h2 className="font-heading text-xl font-bold">Mes préférences & mode de vie</h2><p className="text-xs text-[#666660]">Vos choix sont enregistrés pour la suite.</p></div></div>
  <div className="space-y-2"><h3 className="text-xs font-extrabold uppercase tracking-wider text-[#686862]">Mode de vie & budget</h3><Toggle label="Étudiant" checked={prefs.etudiant} onChange={v=>updatePref("etudiant",v)} icon={<GraduationCap className="size-5"/>}/></div>
- <div className="space-y-2"><h3 className="text-xs font-extrabold uppercase tracking-wider text-[#686862]">Régimes</h3><Toggle label="Végétarien" checked={prefs.vegetarien} onChange={v=>updatePref("vegetarien",v)} icon={<Leaf className="size-5"/>}/><Toggle label="Végan" checked={prefs.vegan} onChange={v=>updatePref("vegan",v)} icon={<Leaf className="size-5"/>}/><Toggle label="Halal" checked={prefs.halal} onChange={v=>updatePref("halal",v)} icon={<ShieldCheck className="size-5"/>}/></div>
+ <div className="space-y-2"><h3 className="text-xs font-extrabold uppercase tracking-wider text-[#686862]">Régimes</h3><Toggle label="Végétarien" checked={prefs.vegetarien} onChange={v=>updatePref("vegetarien",v)} icon={<Leaf className="size-5"/>}/><Toggle label="Végan" checked={prefs.vegan} onChange={v=>updatePref("vegan",v)} icon={<Leaf className="size-5"/>}/></div>
  <div className="space-y-2"><h3 className="text-xs font-extrabold uppercase tracking-wider text-[#686862]">Allergies & intolérances</h3><Toggle label="Sans Gluten" checked={prefs.sansGluten} onChange={v=>updatePref("sansGluten",v)} icon={<Wheat className="size-5"/>}/><Toggle label="Sans Lactose" checked={prefs.sansLactose} onChange={v=>updatePref("sansLactose",v)} icon={<Milk className="size-5"/>}/><Toggle label="Sans Fruits à coque" checked={prefs.sansFruitsCoque} onChange={v=>updatePref("sansFruitsCoque",v)} icon={<Nut className="size-5"/>}/></div>
  </section>
  <section className="space-y-3 rounded-3xl border border-white bg-[#F9F9F7] p-4 shadow-[7px_7px_18px_rgba(26,26,26,0.07),-5px_-5px_14px_rgba(255,255,255,0.95)]">
