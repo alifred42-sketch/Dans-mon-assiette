@@ -1,4 +1,4 @@
-import { carnet, getRecipe, isPlaceholderIngredient, weekPlan, type PlanningPreferences } from "./carnet";
+import { carnet, getRecipe, isPlaceholderIngredient, isValidatedRecipe, weekPlan, type PlanningPreferences } from "./carnet";
 import type { ShoppingItem } from "./carnet";
 import { displayRecipe, resolveVagueIngredient } from "./recipe-display";
 
@@ -270,7 +270,8 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
     // La seconde vie du pivot réutilise les portions déjà comptées mardi et mercredi : aucun achat supplémentaire.
     if (/^seconde vie\s*[—-]/i.test(slot.name)) continue;
     const sourceRecipe = getRecipe(slot.recipeId);
-    if (!sourceRecipe) continue;
+    // Défense en profondeur : aucune fiche non validée ne génère de ligne de courses.
+    if (!sourceRecipe || !isValidatedRecipe(sourceRecipe)) continue;
     const recipe = displayRecipe(sourceRecipe);
     const foodSection = /ingr|épice|epice|légume|viande|fromage|sauce|appareil|pain|féculent|feculent|dessus|assais/i;
     const baseServings = Number.parseInt(recipe.servings || "4", 10) || 4;
