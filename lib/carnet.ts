@@ -194,6 +194,7 @@ export function seasonalReplacement(
   week: number,
   currentRecipeId: string | null,
   excludedIds: ReadonlySet<string> = new Set<string>(),
+  preferences: PlanningPreferences = {},
 ): Recipe | undefined {
   const season = seasonForWeek(week);
   const current = getRecipe(currentRecipeId);
@@ -205,6 +206,7 @@ export function seasonalReplacement(
       recipe.id !== currentRecipeId &&
       !excludedIds.has(recipe.id) &&
       isValidatedRecipe(recipe) &&
+      eligibleForPreferences(recipe, preferences) &&
       isMealRecipe(recipe) &&
       seasonalScore(recipe, season) > 0
     )
@@ -260,14 +262,8 @@ export type PlanningPreferences = {
 function eligibleForPreferences(recipe: Recipe, preferences: PlanningPreferences): boolean {
   const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
   const regime = normalizedSeasonText(recipe.regime || "");
-  if (preferences.vegan) {
-    if (regime === "vegan") return true;
-    return false;
-  }
-  if (preferences.vegetarien) {
-    if (regime === "vegetarien" || regime === "vegan") return true;
-    if (/poulet|dinde|boeuf|porc|agneau|viande|poisson|saumon|thon|cabillaud|crevette|jambon|lardons|saucisse/.test(text)) return false;
-  }
+  if (preferences.vegan && regime !== "vegan") return false;
+  if (preferences.vegetarien && regime !== "vegetarien" && regime !== "vegan" && /poulet|dinde|boeuf|porc|agneau|viande|poisson|saumon|thon|cabillaud|crevette|jambon|lardons|saucisse/.test(text)) return false;
   if (preferences.halal && /porc|jambon|lardons|bacon|vin blanc|vin rouge|rhum|liqueur|alcool/.test(text)) return false;
   if (preferences.sansGluten && /farine de ble|pain|wrap|tortilla|pates|nouilles de ble|couscous|semoule de ble|chapelure|seitan/.test(text)) return false;
   if (preferences.sansLactose && /lait|creme fraiche|beurre|fromage|parmesan|mozzarella|feta|skyr|yaourt/.test(text) && !/vegan|vegetal|vegetale|soja|amande|coco/.test(text)) return false;
