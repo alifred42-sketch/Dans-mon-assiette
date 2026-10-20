@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Repeat2 } from "lucide-react";
-import { seasonalReplacement, weekPlan } from "@/lib/carnet";
+import { seasonalReplacement, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 
 type Slot = { week: number; day: string; meal: string; name: string; recipeId: string | null };
 type Props = { slot: Slot; onChanged?: () => void };
@@ -20,14 +20,16 @@ export function SwitchMeal({ slot, onChanged }: Props) {
     try {
       const key = "cuisine-chic-ouf-recipe-switches";
       const overrides = JSON.parse(localStorage.getItem(key) || "{}") as Record<string, string>;
-      const currentPlan = weekPlan(slot.week, overrides);
+      let preferences: PlanningPreferences = {};
+      try { preferences = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}") as PlanningPreferences; } catch { preferences = {}; }
+      const currentPlan = weekPlan(slot.week, overrides, preferences);
       const excludedIds = new Set(
         currentPlan
           .filter((item) => !(item.day === slot.day && item.meal === slot.meal))
           .map((item) => item.recipeId)
           .filter((id): id is string => Boolean(id)),
       );
-      const replacement = seasonalReplacement(slot.week, slot.recipeId, excludedIds);
+      const replacement = seasonalReplacement(slot.week, slot.recipeId, excludedIds, preferences);
       if (!replacement) {
         setMessage("Aucune autre recette complète de saison disponible pour ce repas.");
         return;
