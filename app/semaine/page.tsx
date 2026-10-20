@@ -36,7 +36,7 @@ export default function WeekPage() {
   const dateRange = `${mondayDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long" })} au ${sundayDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long" })}`;
   const slots = weekPlan(week, recipeOverrides, preferences);
   const validatedSlotCount = slots.filter((slot) => Boolean(slot.recipeId)).length;
-  const activeProfiles = [preferences.etudiant && "Étudiant", preferences.vegan && "Végan", preferences.vegetarien && "Végétarien", preferences.sansGluten && "Sans gluten", preferences.sansLactose && "Sans lactose", preferences.sansFruitsCoque && "Sans fruits à coque"].filter(Boolean);
+  const activeProfiles = [preferences.etudiant && "Étudiant", preferences.vegan && "Végan", preferences.vegetarien && "Végétarien", preferences.halal && "Halal", preferences.sansGluten && "Sans gluten", preferences.sansLactose && "Sans lactose", preferences.sansFruitsCoque && "Sans fruits à coque"].filter(Boolean);
   const breakfast = breakfastForWeek(week);
 
   return (
@@ -56,7 +56,7 @@ export default function WeekPage() {
       {weekday === 5 ? <aside className="rounded-2xl border border-[#D98A6C]/30 bg-[#F3C6B1]/35 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">C'est vendredi ! Rangez les tupperwares du batchcooking, place à la cuisine plaisir !</aside> : null}
       {weekday === 6 ? <aside className="rounded-2xl border border-[#D98A6C]/30 bg-[#F3C6B1]/35 p-4 text-sm font-semibold leading-relaxed text-[#2B2B2B]">Week-end en mode Cuisine Chic Ouf : on se fait plaisir sans se prendre la tête.</aside> : null}
       <WeekPicker week={week} path="/semaine" />
-      <aside className="rounded-2xl border border-[#8FA89B]/40 bg-[#8FA89B]/10 p-3 text-sm text-[#2B2B2B]"><strong>Filtre de sécurité actif :</strong> {validatedSlotCount}/{slots.length} créneaux utilisent une fiche complète validée.{activeProfiles.length ? <span> Préférences enregistrées (connexion au planning à venir) : {activeProfiles.join(", ")}.</span> : null}{validatedSlotCount < slots.length ? <p className="mt-1 text-xs">Les créneaux sans recette validée restent volontairement vides plutôt que d’afficher une fiche incomplète.</p> : null}</aside>
+      <aside className="rounded-2xl border border-[#8FA89B]/40 bg-[#8FA89B]/10 p-3 text-sm text-[#2B2B2B]"><strong>Filtre de sécurité actif :</strong> {validatedSlotCount}/{slots.length} créneaux utilisent une fiche complète validée.{activeProfiles.length ? <span> Préférences appliquées au planning : {activeProfiles.join(", ")}.</span> : null}{validatedSlotCount < slots.length ? <p className="mt-1 text-xs">Les créneaux sans recette validée restent volontairement vides plutôt que d’afficher une fiche incomplète.</p> : null}</aside>
       <MealReminders />
       {breakfast && breakfast.lines.length > 0 ? (
         <section className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
