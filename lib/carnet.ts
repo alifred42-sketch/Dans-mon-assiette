@@ -259,6 +259,8 @@ function isSauceOrSideRecipe(name: string): boolean {
   return /^(sauce|marinade|vinaigrette|pesto|coulis|mélange d'épices|melange d'epices|épices|epices|granola|confiture|compote|sirop|boisson|cocktail|tartinade|dip\b|crackers|gressins|biscuits apéritifs)/i.test(clean);
 }
 
+const VAGUE_RECIPE_STEP = /ajoutez les ingrédients restants|préparer les ingrédients\s*:?\s*laver,?\s*éplucher et couper les légumes si nécessaire|préparer les légumes et la sauce|assembler les ingrédients dans un saladier|faire cuire les ingrédients principaux|cuire les ingrédients dans l’eau ou le bouillon selon les indications|faire cuire les ingrédients dans une poêle ou une casserole chaude|rectifier l’assaisonnement si nécessaire|jusqu’à cuisson à cœur|selon disponibilité|selon votre goût|préparer les courgettes\b|préparer les légumes\b|ingrédients à prévoir|étapes à définir|à compléter/i;
+
 function isRawValidatedRecipe(recipe: Recipe): boolean {
   const explicitTime = (value: unknown) => {
     const text = String(value ?? "").trim();
@@ -279,7 +281,12 @@ function isRawValidatedRecipe(recipe: Recipe): boolean {
     (!QUANTIFIED_INGREDIENT.test(line) && !SEASONING_ONLY.test(line)))) return false;
   const steps = (recipe.steps || []).map((step) => String(step || "").trim()).filter(Boolean);
   if (steps.length < 3) return false;
-  if (steps.some((step) => step.length < 8 || /^(à compléter|a completer|etape à definir|étape à définir|mode d'emploi à ajouter|etapes a definir)/i.test(step))) return false;
+  if (steps.some((step) =>
+    step.length < 8 ||
+    !/^\d+[.)]\s+/.test(step) ||
+    /^(à compléter|a completer|etape à definir|étape à définir|mode d'emploi à ajouter|etapes a definir)/i.test(step) ||
+    VAGUE_RECIPE_STEP.test(step)
+  )) return false;
   return true;
 }
 
