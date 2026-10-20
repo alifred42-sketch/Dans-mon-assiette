@@ -350,6 +350,13 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     return bestPool[(Math.max(1, week) - 1) % bestPool.length];
   };
   const reserved = new Set<string>();
+  const overrideRecipe = (day: string, meal: string) => {
+    const id = overrides[week + "|" + day + "|" + meal];
+    const recipe = id ? recipesById.get(id) : undefined;
+    return recipe && isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences) && !reserved.has(recipe.id)
+      ? recipe
+      : undefined;
+  };
   const plantPattern = /tofu|pois chiches|lentilles|haricots|edamame|vegan|vegetarien|omelette|falafel|legumes|salade|quiche|frittata/;
   const mondayTheme = plantProfile ? "plant" : (["fish", "meat", "plant"][(Math.max(1, week) - 1) % 3]);
   const mondayPattern = mondayTheme === "fish"
@@ -358,12 +365,12 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
       ? /poulet|dinde|boeuf|veau|porc|agneau|viande|steak|saucisse|jambon/
       : plantPattern;
   const mondayFallbackPattern = mondayTheme === "fish" ? /./ : mondayTheme === "meat" ? /./ : plantPattern;
-  const monday = chooseRole(mondayPattern, reserved, true) || chooseRole(mondayPattern, reserved) ||
+  const monday = overrideRecipe("LUNDI", "Soir") || chooseRole(mondayPattern, reserved, true) || chooseRole(mondayPattern, reserved) ||
     chooseRole(mondayFallbackPattern, reserved, true) || chooseRole(/./, reserved, true) || chooseRole(/./, reserved);
   if (monday) reserved.add(monday.id);
 
   const pivotPattern = plantProfile ? plantPattern : /poulet|dinde|boeuf|veau|porc|agneau|viande|steak|saucisse|jambon|tofu|pois chiches|lentilles|haricots|edamame/;
-  const pivot = chooseRole(pivotPattern, reserved) || chooseRole(/./, reserved);
+  const pivot = overrideRecipe("MARDI", "Soir") || overrideRecipe("MERCREDI", "Midi") || overrideRecipe("JEUDI", "Soir") || chooseRole(pivotPattern, reserved) || chooseRole(/./, reserved);
   if (pivot) reserved.add(pivot.id);
 
   const seasonalCycles: Record<Season, RegExp[]> = {
@@ -373,12 +380,12 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     automne: [/soupe|veloute|potage|bouillon/, /gratin|lasagne|hachis|parmentier/, /mijote|ragout|curry|chili|blanquette/],
   };
   const wednesdayPattern = seasonalCycles[season][(Math.max(1, week) - 1) % seasonalCycles[season].length];
-  const seasonalBase = chooseRole(wednesdayPattern, reserved) ||
+  const seasonalBase = overrideRecipe("MERCREDI", "Soir") || chooseRole(wednesdayPattern, reserved) ||
     chooseRole(/soupe|veloute|potage|bouillon|gratin|lasagne|hachis|parmentier|mijote|ragout|curry|chili|blanquette|gaspacho|salade|carpaccio|taboule|quiche|tarte|frittata/, reserved) ||
     chooseRole(/./, reserved);
   if (seasonalBase) reserved.add(seasonalBase.id);
 
-  const pantry = chooseRole(/vide.?frigo|restes|anti.?gaspi|fond de placard/, reserved)
+  const pantry = overrideRecipe("VENDREDI", "Midi") || chooseRole(/vide.?frigo|restes|anti.?gaspi|fond de placard/, reserved)
     || chooseRole(/salade|omelette|wrap|poelee|quiche|tarte|frittata|gratin/, reserved)
     || chooseRole(/./, reserved);
   if (pantry) reserved.add(pantry.id);
@@ -389,11 +396,20 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const topScore = pleasurePool.length ? seasonalScore(pleasurePool[0], season) : -1;
   const topPool = pleasurePool.filter((recipe) => seasonalScore(recipe, season) === topScore);
   const start = topPool.length ? (Math.max(1, week) - 1) % topPool.length : 0;
-  const weekendPleasures = [
+  const weekendPool = [
     ...topPool.slice(start), ...topPool.slice(0, start),
     ...pleasurePool.filter((recipe) => seasonalScore(recipe, season) !== topScore),
-  ].slice(0, 4);
-  weekendPleasures.forEach((recipe) => reserved.add(recipe.id));
+  ];
+  const weekendKeys: [string, string][] = [["SAMEDI", "Midi"], ["SAMEDI", "Soir"], ["DIMANCHE", "Midi"], ["DIMANCHE", "Soir"]];
+  const weekendPleasures: (Recipe | undefined)[] = [];
+  for (const [day, meal] of weekendKeys) {
+    const override = overrideRecipe(day, meal);
+    const selected = override || weekendPool.find((recipe) =>
+      !reserved.has(recipe.id) && !weekendPleasures.some((item) => item?.id === recipe.id)
+    );
+    weekendPleasures.push(selected);
+    if (selected) reserved.add(selected.id);
+  }
 
   const matrix = new Map<string, { recipe: Recipe | null; name: string }>();
   const setRole = (day: string, meal: string, recipe: Recipe | undefined, fallback: string, name?: string) =>
