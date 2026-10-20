@@ -295,7 +295,7 @@ const rawValidatedRecipeIds = new Set<string>(
 );
 
 export type PlanningPreferences = {
-  etudiant?: boolean; vegetarien?: boolean; vegan?: boolean;
+  etudiant?: boolean; vegetarien?: boolean; vegan?: boolean; halal?: boolean;
   sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean;
 };
 
@@ -304,8 +304,14 @@ function eligibleForPreferences(recipe: Recipe, preferences: PlanningPreferences
   const text = normalizedSeasonText([recipe.name, ...ingredients].join(" "));
   const regime = normalizedSeasonText(recipe.regime || "");
   if (preferences.vegan && regime !== "vegan") return false;
-  // Le profil végétarien reste strictement dans les fiches catégorisées végétariennes ou véganes.
   if (preferences.vegetarien && regime !== "vegetarien" && regime !== "vegan") return false;
+  if (preferences.halal) {
+    const halalTagged = regime === "halal" || (recipe as Recipe & { halal?: boolean }).halal === true;
+    const plantBasedTagged = regime === "vegan" || regime === "vegetarien";
+    const forbidden = /\bporc\b|\bjambon\b|\blardons?\b|\bbacon\b|\bpancetta\b|\bchorizo\b|\bvin\b|\brhum\b|\bkirsch\b|\balcool\b|\bgélatine animale\b|\ngelatine animale\b/.test(text);
+    const unverifiedMeat = /\bpoulet\b|\bdinde\b|\bboeuf\b|\bveau\b|\bagneau\b|\bporc\b|\bcanard\b|\bjambon\b|\blardons?\b|\bsaucisse\b|\bmerguez\b|\bsteak\b|\bviande\b/.test(text);
+    if (!halalTagged && !plantBasedTagged && (forbidden || unverifiedMeat)) return false;
+  }
   if (preferences.sansGluten && /farine de ble|pain|wrap|tortilla|pates|nouilles de ble|couscous|semoule de ble|chapelure|seitan|orge|seigle|boulgour|sauce soja(?![^,;]*sans gluten)/.test(text)) return false;
   if (preferences.sansLactose && ingredients.some((line) =>
     /lait|creme fraiche|beurre|fromage|parmesan|mozzarella|feta|skyr|yaourt|lactose/.test(line) &&
@@ -350,42 +356,36 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     return bestPool[(Math.max(1, week) - 1) % bestPool.length];
   };
   const reserved = new Set<string>();
-  const overrideRecipe = (day: string, meal: string) => {
+  const overrideRecipe = (day: string, meal: string, pattern?: RegExp, quick = false) => {
     const id = overrides[week + "|" + day + "|" + meal];
     const recipe = id ? recipesById.get(id) : undefined;
-    return recipe && isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences) && !reserved.has(recipe.id)
-      ? recipe
-      : undefined;
+    if (!recipe || !isValidatedRecipe(recipe) || !eligibleForPreferences(recipe, preferences) || reserved.has(recipe.id)) return undefined;
+    if (pattern && !pattern.test(roleText(recipe))) return undefined;
+    if (quick && (durationMinutes(recipe.timePrep) ?? Infinity) + (durationMinutes(recipe.timeCook) ?? Infinity) > 20) return undefined;
+    return recipe;
   };
   const plantPattern = /tofu|pois chiches|lentilles|haricots|edamame|vegan|vegetarien|omelette|falafel|legumes|salade|quiche|frittata/;
-  const mondayTheme = plantProfile ? "plant" : (["fish", "meat", "plant"][(Math.max(1, week) - 1) % 3]);
-  const mondayPattern = mondayTheme === "fish"
-    ? /poisson|saumon|cabillaud|thon|maquereau|crevette|sardine|colin|lieu/
-    : mondayTheme === "meat"
-      ? /poulet|dinde|boeuf|veau|porc|agneau|viande|steak|saucisse|jambon/
-      : plantPattern;
-  const mondayFallbackPattern = mondayTheme === "fish" ? /./ : mondayTheme === "meat" ? /./ : plantPattern;
-  const monday = overrideRecipe("LUNDI", "Soir") || chooseRole(mondayPattern, reserved, true) || chooseRole(mondayPattern, reserved) ||
-    chooseRole(mondayFallbackPattern, reserved, true) || chooseRole(/./, reserved, true) || chooseRole(/./, reserved);
+  const fishPattern = /poisson|saumon|cabillaud|thon|maquereau|crevette|sardine|colin|lieu/;
+  const meatPattern = /poulet|dinde|boeuf|veau|porc|agneau|viande|steak|saucisse|jambon/;
+  const mondayPattern = plantProfile ? plantPattern : fishPattern;
+  const monday = overrideRecipe("LUNDI", "Soir", mondayPattern, true) || chooseRole(mondayPattern, reserved, true);
   if (monday) reserved.add(monday.id);
 
-  const pivotPattern = plantProfile ? plantPattern : /poulet|dinde|boeuf|veau|porc|agneau|viande|steak|saucisse|jambon|tofu|pois chiches|lentilles|haricots|edamame/;
-  const pivot = overrideRecipe("MARDI", "Soir") || overrideRecipe("MERCREDI", "Midi") || overrideRecipe("JEUDI", "Soir") || chooseRole(pivotPattern, reserved) || chooseRole(/./, reserved);
+  const pivotPattern = plantProfile ? plantPattern : preferences.halal
+    ? /poisson|saumon|cabillaud|thon|maquereau|colin|lieu|tofu|pois chiches|lentilles|haricots|edamame/
+    : meatPattern;
+  const pivot = overrideRecipe("MARDI", "Soir", pivotPattern) ||
+    overrideRecipe("MERCREDI", "Midi", pivotPattern) ||
+    overrideRecipe("JEUDI", "Soir", pivotPattern) ||
+    chooseRole(pivotPattern, reserved);
   if (pivot) reserved.add(pivot.id);
 
-  const seasonalCycles: Record<Season, RegExp[]> = {
-    hiver: [/soupe|veloute|potage|bouillon/, /gratin|lasagne|hachis|parmentier/, /mijote|ragout|curry|chili|blanquette/],
-    printemps: [/quiche|tarte|frittata/, /salade|taboule|wrap|carpaccio/, /soupe|veloute|potage|bouillon/],
-    ete: [/gaspacho|salade|carpaccio|taboule/, /quiche|tarte|frittata/, /salade|taboule|wrap/],
-    automne: [/soupe|veloute|potage|bouillon/, /gratin|lasagne|hachis|parmentier/, /mijote|ragout|curry|chili|blanquette/],
-  };
-  const wednesdayPattern = seasonalCycles[season][(Math.max(1, week) - 1) % seasonalCycles[season].length];
-  const seasonalBase = overrideRecipe("MERCREDI", "Soir") || chooseRole(wednesdayPattern, reserved) ||
-    chooseRole(/soupe|veloute|potage|bouillon|gratin|lasagne|hachis|parmentier|mijote|ragout|curry|chili|blanquette|gaspacho|salade|carpaccio|taboule|quiche|tarte|frittata/, reserved) ||
-    chooseRole(/./, reserved);
+  const soupPattern = /soupe|veloute|potage|bouillon/;
+  const seasonalBase = overrideRecipe("MERCREDI", "Soir", soupPattern) || chooseRole(soupPattern, reserved);
   if (seasonalBase) reserved.add(seasonalBase.id);
 
-  const pantry = overrideRecipe("VENDREDI", "Midi") || chooseRole(/vide.?frigo|restes|anti.?gaspi|fond de placard/, reserved)
+  const pantryPattern = /vide.?frigo|restes|anti.?gaspi|fond de placard/;
+  const pantry = overrideRecipe("VENDREDI", "Midi", pantryPattern) || chooseRole(pantryPattern, reserved)
     || chooseRole(/salade|omelette|wrap|poelee|quiche|tarte|frittata|gratin/, reserved)
     || chooseRole(/./, reserved);
   if (pantry) reserved.add(pantry.id);
@@ -511,10 +511,11 @@ export function batchForWeek(
   const starch = (pivot?.ingredients || []).find((line) =>
     /riz|pates|pâtes|nouilles|semoule|couscous|quinoa|boulgour|polenta|orge|pomme de terre|patate douce|feculent|féculent/i.test(line)
   );
+  const soup = seasonBase && /soupe|veloute|potage|bouillon/i.test(seasonBase.name) ? seasonBase : undefined;
   return [
-    { id: `${week}-pivot`, title: `Protéine pivot — ${pivot?.name || "aucune recette pivot validée"}`, detail: "Cuire la base une seule fois en quantité adaptée au repas du mardi soir et au déjeuner du mercredi.", group: "Protéine pivot" },
-    { id: `${week}-starch`, title: `Féculent — ${starch || "aucun féculent quantifié identifié dans la fiche pivot"}`, detail: "Préparer uniquement le féculent réellement prévu dans la fiche du pivot.", group: "Féculent" },
-    { id: `${week}-season`, title: `Base de saison — ${seasonBase?.name || "aucun plat de saison validé"}`, detail: "Préparer cette seule base si sa fiche prévoit une préparation anticipée; en été, privilégier une base froide si le menu le demande.", group: /soupe|veloute|potage|bouillon/i.test(seasonBase?.name || "") ? "Soupe de saison" : "Base de saison" },
+    { id: week + "-pivot", title: "Protéine pivot — " + (pivot?.name || "aucune recette pivot validée"), detail: "Doubler les quantités de la fiche pour préparer deux repas : mardi soir et mercredi midi (8 portions si le foyer compte 4 personnes).", group: "Protéine pivot" },
+    { id: week + "-starch", title: "Féculent — " + (starch || "aucun féculent quantifié identifié dans la fiche pivot"), detail: "Préparer uniquement le féculent réellement prévu dans la fiche du pivot.", group: "Féculent" },
+    { id: week + "-soup", title: "Soupe de saison — " + (soup?.name || "aucune soupe complète validée"), detail: "Préparer la soupe du mercredi soir uniquement si une fiche complète et validée est disponible.", group: "Soupe de saison" },
   ];
 }
 
