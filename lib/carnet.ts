@@ -245,7 +245,7 @@ export function isValidatedRecipe(recipe: Recipe): boolean {
   const prep = durationMinutes(recipe.timePrep);
   const cook = durationMinutes(recipe.timeCook);
   if (prep === null || cook === null || prep < 0 || cook < 0) return false;
-  if (!recipe.servings || !/\b\d+\b/.test(recipe.servings)) return false;
+  if (!recipe.servings || !/\b\d+\b/.test(recipe.servings) || /\d+\s*(?:-|–|à|a)\s*\d+/.test(recipe.servings)) return false;
   const ingredients = (recipe.ingredients || []).filter((line) => line.trim() && !isPlaceholderIngredient(line));
   if (ingredients.length < 3 || ingredients.length > 30) return false;
   if (ingredients.some((line) => /un de ses grands points forts|cuisson automatique|mixage parfait|texture plus légère|base parfaite|^1 hacher$|^1 finir$/i.test(line.trim()))) return false;
