@@ -248,13 +248,33 @@ export function isValidatedRecipe(recipe: Recipe): boolean {
 }
 
 function isSauceOrSideRecipe(name: string): boolean {
-  return /^(sauce|marinade|vinaigrette|pesto|coulis|mélange d'épices|melange d'epices|épices|epices|granola|confiture|compote|sirop|boisson|cocktail|tartinade|dip\b|crackers|gressins|biscuits apéritifs)/i.test(name.trim());
+  const clean = name.trim().replace(/^[^\\p{L}\\p{N}]*/u, "").replace(/^RECETTE\\s+\\d+\\s*[—–-]\\s*/i, "").trim();
+  return /^(sauce|marinade|vinaigrette|pesto|coulis|mélange d'épices|melange d'epices|épices|epices|granola|confiture|compote|sirop|boisson|cocktail|tartinade|dip\\b|crackers|gressins|biscuits apéritifs)/i.test(clean);
 }
 
 export type PlanningPreferences = {
-  etudiant?: boolean; vegetarien?: boolean; vegan?: boolean;
+  etudiant?: boolean; vegetarien?: boolean; vegan?: boolean; halal?: boolean;
   sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean;
 };
+
+function eligibleForPreferences(recipe: Recipe, preferences: PlanningPreferences): boolean {
+  const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
+  const regime = normalizedSeasonText(recipe.regime || "");
+  if (preferences.vegan) {
+    if (regime === "vegan") return true;
+    return false;
+  }
+  if (preferences.vegetarien) {
+    if (regime === "vegetarien" || regime === "vegan") return true;
+    if (/poulet|dinde|boeuf|porc|agneau|viande|poisson|saumon|thon|cabillaud|crevette|jambon|lardons|saucisse/.test(text)) return false;
+  }
+  if (preferences.halal && /porc|jambon|lardons|bacon|vin blanc|vin rouge|rhum|liqueur|alcool/.test(text)) return false;
+  if (preferences.sansGluten && /farine de ble|pain|wrap|tortilla|pates|nouilles de ble|couscous|semoule de ble|chapelure|seitan/.test(text)) return false;
+  if (preferences.sansLactose && /lait|creme fraiche|beurre|fromage|parmesan|mozzarella|feta|skyr|yaourt/.test(text) && !/vegan|vegetal|vegetale|soja|amande|coco/.test(text)) return false;
+  if (preferences.sansFruitsCoque && /amande|noix|noisette|cacahuete|pistache|cajou|pecan/.test(text)) return false;
+  if (preferences.etudiant && /homard|saint jacques|foie gras|truffe|caviar/.test(text)) return false;
+  return true;
+}
 
 function seasonalScore(recipe: Recipe, season: Season): number {
   if (!isCompleteRecipe(recipe)) return 0;
@@ -276,9 +296,9 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const used = new Set<string>();
   // Les profils et allergies restent enregistrés dans le compte, mais leur connexion au planning est différée à l’étape suivante.
   void preferences;
-  const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe));
-  const plantProfile = false;
-  const roleText = (recipe: Recipe) => normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
+  const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences));
+  const plantProfile = Boolean(preferences.vegan || preferences.vegetarien);
+  const roleText = (recipe: Recipe) => normalizedSeasonText(recipe.name);
   const chooseRole = (pattern: RegExp, exclude: Set<string> = new Set<string>(), quick = false) =>
     eligible.filter((recipe) => {
       if (exclude.has(recipe.id) || !pattern.test(roleText(recipe))) return false;
@@ -299,7 +319,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     || chooseRole(/salade|omelette|wrap|poelee|quiche|tarte|frittata|gratin/, reserved)
     || chooseRole(/./, reserved);
   if (pantry) reserved.add(pantry.id);
-  const pleasures = eligible.filter((recipe) => !reserved.has(recipe.id) && /pizza|burger|lasagnes|tarte|crumble|fondant|dessert|gaufre|crêpe|crepe|pancake|festif|gourmand/.test(roleText(recipe))).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+  const pleasures = eligible.filter((recipe) => !reserved.has(recipe.id) && !/soupe|velouté|veloute|potage|bouillon/.test(roleText(recipe)) && /pizza|burger|lasagnes|tarte|crumble|fondant|dessert|gaufre|crêpe|crepe|pancake|festif|gourmand/.test(roleText(recipe))).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
   const weekendPleasures = [...pleasures, ...eligible.filter((recipe) => !reserved.has(recipe.id) && !pleasures.some((pleasure) => pleasure.id === recipe.id)).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"))].slice(0, 4);
   weekendPleasures.forEach((recipe) => reserved.add(recipe.id));
   const matrix = new Map<string, { recipe: Recipe | null; name: string }>();
