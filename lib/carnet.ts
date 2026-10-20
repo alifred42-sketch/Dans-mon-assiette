@@ -238,6 +238,9 @@ const QUANTIFIED_INGREDIENT = /^\s*\d+(?:[.,]\d+)?(?:\s*\/\s*\d+(?:[.,]\d+)?)?\s
 
 /** Gate de sécurité du planning : quantités chiffrées, temps explicites, portions numériques et étapes réelles. */
 export function isValidatedRecipe(recipe: Recipe): boolean {
+  // La validation se fait sur la fiche source AVANT toute normalisation automatique.
+  // Une quantité, un temps ou une étape ajoutés par défaut ne peuvent donc pas rendre une fiche admissible.
+  if (!rawValidatedRecipeIds.has(recipe.id)) return false;
   if (!isCompleteRecipe(recipe) || isSauceOrSideRecipe(recipe.name)) return false;
   const prep = durationMinutes(recipe.timePrep);
   const cook = durationMinutes(recipe.timeCook);
@@ -256,21 +259,55 @@ function isSauceOrSideRecipe(name: string): boolean {
   return /^(sauce|marinade|vinaigrette|pesto|coulis|mélange d'épices|melange d'epices|épices|epices|granola|confiture|compote|sirop|boisson|cocktail|tartinade|dip\b|crackers|gressins|biscuits apéritifs)/i.test(clean);
 }
 
+function isRawValidatedRecipe(recipe: Recipe): boolean {
+  const explicitTime = (value: unknown) => {
+    const text = String(value ?? "").trim();
+    return /\d+\s*(?:min(?:ute)?s?|h(?:eure)?s?)/i.test(text) &&
+      !/\d+\s*(?:-|–|à|a)\s*\d+\s*(?:min(?:ute)?s?)/i.test(text) &&
+      durationMinutes(text) !== null;
+  };
+  if (!recipe.id || !recipe.name || isSauceOrSideRecipe(recipe.name)) return false;
+  if (!explicitTime(recipe.timePrep) || !explicitTime(recipe.timeCook)) return false;
+  if (!recipe.servings || !/\b\d+\b/.test(recipe.servings)) return false;
+  const ingredients = (recipe.ingredients || []).map((line) => String(line || "").trim()).filter(Boolean);
+  if (ingredients.length < 3 || ingredients.length > 30) return false;
+  if (ingredients.some((line) => isPlaceholderIngredient(line) ||
+    /un de ses grands points forts|cuisson automatique|mixage parfait|texture plus légère|base parfaite|à compléter|a completer/i.test(line) ||
+    (!QUANTIFIED_INGREDIENT.test(line) && !SEASONING_ONLY.test(line)))) return false;
+  const steps = (recipe.steps || []).map((step) => String(step || "").trim()).filter(Boolean);
+  if (steps.length < 3) return false;
+  if (steps.some((step) => step.length < 8 || /^(à compléter|a completer|etape à definir|étape à définir|mode d'emploi à ajouter|etapes a definir)/i.test(step))) return false;
+  return true;
+}
+
+const rawValidatedRecipeIds = new Set<string>(
+  [...data.recipes, ...trendRecipes].filter(isRawValidatedRecipe).map((recipe) => recipe.id)
+);
+
 export type PlanningPreferences = {
   etudiant?: boolean; vegetarien?: boolean; vegan?: boolean; halal?: boolean;
   sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean;
 };
 
 function eligibleForPreferences(recipe: Recipe, preferences: PlanningPreferences): boolean {
-  const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
+  const ingredients = (recipe.ingredients || []).map((line) => normalizedSeasonText(line));
+  const text = normalizedSeasonText([recipe.name, ...ingredients].join(" "));
   const regime = normalizedSeasonText(recipe.regime || "");
   if (preferences.vegan && regime !== "vegan") return false;
-  if (preferences.vegetarien && regime !== "vegetarien" && regime !== "vegan" && /poulet|dinde|boeuf|porc|agneau|viande|poisson|saumon|thon|cabillaud|crevette|jambon|lardons|saucisse/.test(text)) return false;
-  if (preferences.halal && /porc|jambon|lardons|bacon|vin blanc|vin rouge|rhum|liqueur|alcool/.test(text)) return false;
-  if (preferences.sansGluten && /farine de ble|pain|wrap|tortilla|pates|nouilles de ble|couscous|semoule de ble|chapelure|seitan/.test(text)) return false;
-  if (preferences.sansLactose && /lait|creme fraiche|beurre|fromage|parmesan|mozzarella|feta|skyr|yaourt/.test(text) && !/vegan|vegetal|vegetale|soja|amande|coco/.test(text)) return false;
+  // Le profil végétarien reste strictement dans les fiches catégorisées végétariennes ou véganes.
+  if (preferences.vegetarien && regime !== "vegetarien" && regime !== "vegan") return false;
+  if (preferences.halal) {
+    if (/porc|jambon|lardons|bacon|vin blanc|vin rouge|rhum|liqueur|alcool|boudin/.test(text)) return false;
+    const containsMeat = /poulet|dinde|boeuf|veau|porc|agneau|viande|steak|saucisse|merguez|jambon|lardons|bacon/.test(text);
+    if (containsMeat && !/halal/.test(text)) return false;
+  }
+  if (preferences.sansGluten && /farine de ble|pain|wrap|tortilla|pates|nouilles de ble|couscous|semoule de ble|chapelure|seitan|orge|seigle|boulgour|sauce soja(?![^,;]*sans gluten)/.test(text)) return false;
+  if (preferences.sansLactose && ingredients.some((line) =>
+    /lait|creme fraiche|beurre|fromage|parmesan|mozzarella|feta|skyr|yaourt|lactose/.test(line) &&
+    !/lait d amande|lait de soja|lait de coco|creme de soja|fromage vegan|yaourt vegetal|yaourt de soja|margarine vegetale/.test(line)
+  )) return false;
   if (preferences.sansFruitsCoque && /amande|noix|noisette|cacahuete|pistache|cajou|pecan/.test(text)) return false;
-  if (preferences.etudiant && /homard|saint jacques|foie gras|truffe|caviar/.test(text)) return false;
+  if (preferences.etudiant && /homard|saint jacques|foie gras|truffe|caviar|safran|wagyu|langouste/.test(text)) return false;
   return true;
 }
 
@@ -292,8 +329,6 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   });
   const season = seasonForWeek(week);
   const used = new Set<string>();
-  // Les profils et allergies restent enregistrés dans le compte, mais leur connexion au planning est différée à l’étape suivante.
-  void preferences;
   const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences));
   const plantProfile = Boolean(preferences.vegan || preferences.vegetarien);
   const roleText = (recipe: Recipe) => normalizedSeasonText(recipe.name);
@@ -341,7 +376,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
       return { ...slot, name: matrixSelection.name, recipeId: matrixSelection.recipe.id };
     }
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
-    const currentValid = current ? isValidatedRecipe(current) && !reserved.has(current.id) : false;
+    const currentValid = current ? isValidatedRecipe(current) && eligibleForPreferences(current, preferences) && !reserved.has(current.id) : false;
     const currentScore = current ? seasonalScore(current, season) : 0;
     if (current && currentValid && currentScore > 0 && !used.has(current.id)) {
       used.add(current.id);
