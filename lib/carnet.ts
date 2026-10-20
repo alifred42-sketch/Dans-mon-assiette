@@ -271,7 +271,10 @@ function isRawValidatedRecipe(recipe: Recipe): boolean {
   if (!recipe.servings || !/\b\d+\b/.test(recipe.servings)) return false;
   const ingredients = (recipe.ingredients || []).map((line) => String(line || "").trim()).filter(Boolean);
   if (ingredients.length < 3 || ingredients.length > 30) return false;
-  if (ingredients.some((line) => isPlaceholderIngredient(line) ||
+  if (ingredients.some((line) =>
+    /^ingr[ée]dients à prévoir/i.test(line) ||
+    /^(➡️|❌|💡|✔|✅|OU|Mélanger|Servir|Ingrédients|Remplacement|Variantes?|Épices|Recherche)/i.test(line) ||
+    (line.startsWith("(") && line.endsWith(")")) ||
     /un de ses grands points forts|cuisson automatique|mixage parfait|texture plus légère|base parfaite|à compléter|a completer/i.test(line) ||
     (!QUANTIFIED_INGREDIENT.test(line) && !SEASONING_ONLY.test(line)))) return false;
   const steps = (recipe.steps || []).map((step) => String(step || "").trim()).filter(Boolean);
