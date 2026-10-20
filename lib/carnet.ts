@@ -248,8 +248,8 @@ export function isValidatedRecipe(recipe: Recipe): boolean {
 }
 
 function isSauceOrSideRecipe(name: string): boolean {
-  const clean = name.trim().replace(/^[^\\p{L}\\p{N}]*/u, "").replace(/^RECETTE\\s+\\d+\\s*[—–-]\\s*/i, "").trim();
-  return /^(sauce|marinade|vinaigrette|pesto|coulis|mélange d'épices|melange d'epices|épices|epices|granola|confiture|compote|sirop|boisson|cocktail|tartinade|dip\\b|crackers|gressins|biscuits apéritifs)/i.test(clean);
+  const clean = name.trim().replace(/^[^\p{L}\p{N}]*/u, "").replace(/^RECETTE\s+\d+\s*[—–-]\s*/i, "").trim();
+  return /^(sauce|marinade|vinaigrette|pesto|coulis|mélange d'épices|melange d'epices|épices|epices|granola|confiture|compote|sirop|boisson|cocktail|tartinade|dip\b|crackers|gressins|biscuits apéritifs)/i.test(clean);
 }
 
 export type PlanningPreferences = {
