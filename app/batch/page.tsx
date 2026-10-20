@@ -40,7 +40,7 @@ export default function BatchPage() {
     rows.forEach((item) => assigned.add(item.id));
     return rows;
   }
-  const prep = take(/organisation|préparation|preparation|découpe|decoupe|laver|éplucher|eplucher|planche|féculent|feculent/i);
+  const prep = take(/organisation|préparation|preparation|découpe|decoupe|laver|éplucher|eplucher|planche|féculent|feculent|protéine pivot|proteine pivot|base de saison|soupe de saison|base soupe/i);
   const oven = take(/four|rôtir|rotir|gratin|cuisson au four|légumes rôtis|legumes rotis/i);
   const robot = take(/robot|mr cuisine|monsieur cuisine|vitesse|mixage|cuisson vapeur|cuissons? simultanées?/i);
   const storage = take(/conservation|congél|congel|frigo|réfrigér|refriger/i);
