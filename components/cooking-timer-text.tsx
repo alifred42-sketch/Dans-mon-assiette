@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
 import { Timer, RotateCcw, Pause, Play } from "lucide-react";
 
 type TimerState = { total: number; remaining: number; running: boolean; finished: boolean };
@@ -37,32 +38,23 @@ function soundAlarm() {
 export function CookingTimerText({ text }: { text: string }) {
   const matches = Array.from(text.matchAll(/\b(\d{1,3})(?:\s*(h|heures?|min(?:ute)?s?|sec(?:onde)?s?))\b/gi));
   const [timers, setTimers] = useState<Record<number, TimerState>>({});
-  const timersRef = useRef<Record<number, TimerState>>({});
-  const lastTickRef = useRef<number>(0);
-
-  useEffect(() => {
-    timersRef.current = timers;
-  }, [timers]);
 
   useEffect(() => {
     const hasRunning = Object.values(timers).some((timer) => timer.running);
     if (!hasRunning) return;
     const interval = window.setInterval(() => {
-      const now = Date.now();
-      const elapsed = lastTickRef.current ? Math.max(1, Math.round((now - lastTickRef.current) / 1000)) : 1;
-      lastTickRef.current = now;
       setTimers((previous) => {
         const next = { ...previous };
         Object.entries(previous).forEach(([key, timer]) => {
           if (!timer.running) return;
-          const remaining = Math.max(0, timer.remaining - elapsed);
+          const remaining = Math.max(0, timer.remaining - 1);
           const finished = remaining === 0;
           next[Number(key)] = { ...timer, remaining, running: !finished, finished };
           if (finished) soundAlarm();
         });
         return next;
       });
-    }, 250);
+    }, 1000);
     return () => window.clearInterval(interval);
   }, [timers]);
 
@@ -75,7 +67,6 @@ export function CookingTimerText({ text }: { text: string }) {
   }
 
   function start(index: number, total: number) {
-    lastTickRef.current = Date.now();
     setTimers((previous) => ({ ...previous, [index]: { total, remaining: total, running: true, finished: false } }));
   }
 
@@ -97,7 +88,7 @@ export function CookingTimerText({ text }: { text: string }) {
 
   if (!matches.length) return <>{text}</>;
 
-  const pieces: React.ReactNode[] = [];
+  const pieces: ReactNode[] = [];
   let cursor = 0;
   matches.forEach((match, index) => {
     const startAt = match.index ?? 0;
