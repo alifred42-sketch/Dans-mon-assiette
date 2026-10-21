@@ -7,7 +7,7 @@ import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type Plan
 import { WeekPicker } from "@/components/week-picker";
 import { Beef, Blender, Carrot, CookingPot, Container, Flame, Refrigerator, Utensils, Wheat } from "lucide-react";
 
-type Task = { id: string; title: string; detail?: string; timer?: string; group?: string };
+type Task = { id: string; title: string; detail?: string; timer?: string; timerMinutes?: number; group?: string };
 type VoiceRecognition = {
   lang: string; continuous: boolean; interimResults: boolean;
   onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript: string }>> }) => void) | null;
@@ -34,8 +34,8 @@ function prettyDay(day: string) { return day.charAt(0) + day.slice(1).toLowerCas
 
 function ingredientKind(value: string): "vegetable" | "protein" | "starch" | "storage" | "equipment" | "other" {
   const text = value.toLocaleLowerCase("fr");
+  if (/poulet|dinde|bœuf|boeuf|viande|poisson|saumon|cabillaud|œuf|oeuf|thon|jambon|protéine|proteine|crevette|porc|agneau|steak|maquereau/.test(text)) return "protein";
   if (/courgette|carotte|tomate|poivron|oignon|échalote|echalote|poireau|champignon|brocoli|chou|épinard|epinard|concombre|pomme de terre|patate douce|aubergine|céleri|celeri|radis|navet|asperge|ail|herbes|salade|légume|legume|découpe|decoupe|laver|éplucher|eplucher/.test(text)) return "vegetable";
-  if (/poulet|dinde|bœuf|boeuf|viande|poisson|saumon|cabillaud|œuf|oeuf|thon|jambon|protéine|proteine/.test(text)) return "protein";
   if (/riz|pâte|pate|semoule|quinoa|pomme de terre|féculent|feculent|farine|lentille|pain/.test(text)) return "starch";
   if (/conteneur|contenant|étiquet|etiquet|frigo|réfrig|refriger|congél|congel|stockage|portion|assembler/.test(text)) return "storage";
   if (/four|robot|mr cuisine|monsieur cuisine|mixage|mixeur|poêle|poele|casserole|cuisson|feu|chauffer|mijot|rôtir|rotir/.test(text)) return "equipment";
@@ -78,6 +78,7 @@ export default function BatchPage() {
   const [voiceMode, setVoiceMode] = useState(false);
   const [voiceStatus, setVoiceStatus] = useState("Mode mains libres désactivé");
   const [voiceIndex, setVoiceIndex] = useState(0);
+  const [activeTimers, setActiveTimers] = useState<Record<string, number>>({});
   const recognitionRef = useRef<VoiceRecognition | null>(null);
 
   useEffect(() => setWeek(clampWeek(requestedWeek ?? String(currentIsoWeek()))), [requestedWeek]);
@@ -130,11 +131,12 @@ export default function BatchPage() {
   const cookTasks: Task[] = recipes.map(({ slot, recipe }, index) => {
     const cookMinutes = minutes(recipe?.timeCook);
     const cookingStep = recipe?.steps.find((step) => /cuire|cuisson|mijot|four|poêle|poele|casserole|bouillir|rôtir|rotir|chauffer|feu/i.test(step));
-    const timer = cookMinutes > 0 ? `Timer : ${cookMinutes} min` : "Timer : durée non renseignée — vérifier la fiche avant de démarrer";
+    const timer = cookMinutes > 0 ? `Lancer le minuteur · ${cookMinutes} min` : "Durée non renseignée — vérifier la fiche avant de démarrer";
     return {
       id: `cook-${slot.day}-${slot.meal}-${slot.recipeId}`,
       title: `Feu ${index + 1} — ${recipe?.name || slot.name}`,
       timer,
+      timerMinutes: cookMinutes > 0 ? cookMinutes : undefined,
       detail: [cookingStep, recipe?.robot?.length ? `Option Monsieur Cuisine : ${recipe.robot.join(" → ")}` : ""].filter(Boolean).join(" "),
       group: "Cuissons en parallèle",
     };
@@ -235,6 +237,28 @@ export default function BatchPage() {
     if ("speechSynthesis" in window) window.speechSynthesis.cancel();
   }, []);
 
+  useEffect(() => {
+    if (!Object.values(activeTimers).some((seconds) => seconds > 0)) return;
+    const interval = window.setInterval(() => {
+      setActiveTimers((current) => {
+        const next = { ...current };
+        for (const id of Object.keys(next)) {
+          if (next[id] > 0) next[id] -= 1;
+          if (next[id] <= 0) {
+            delete next[id];
+            if ("speechSynthesis" in window) {
+              const utterance = new SpeechSynthesisUtterance("Le minuteur est terminé.");
+              utterance.lang = "fr-FR";
+              window.speechSynthesis.speak(utterance);
+            }
+          }
+        }
+        return next;
+      });
+    }, 1000);
+    return () => window.clearInterval(interval);
+  }, [activeTimers]);
+
   const toggle = (id: string) => setChecked((previous) => ({ ...previous, [id]: !previous[id] }));
 
   function taskList(items: Task[]) {
@@ -250,7 +274,7 @@ export default function BatchPage() {
               <span className={checked[task.id] ? "font-semibold text-[#668775] line-through" : "font-semibold text-[#2B2B2B]"}>{task.title}</span>
               <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold ring-1 ${kindStyle(`${task.title} ${task.detail || ""}`).classes}`}><span aria-hidden="true" className="size-2 rounded-full bg-current" />{kindStyle(`${task.title} ${task.detail || ""}`).label}</span>
             </span>
-            {task.timer ? <span className="mt-2 inline-flex rounded-lg bg-[#D98A6C]/15 px-3 py-1 text-sm font-extrabold text-[#8C4C34]">⏱ {task.timer}</span> : null}
+            {task.timer ? <span className="mt-2 flex flex-wrap items-center gap-2"><button type="button" disabled={!task.timerMinutes} onClick={() => setActiveTimers((current) => ({ ...current, [task.id]: (task.timerMinutes || 0) * 60 }))} className="inline-flex rounded-lg bg-[#D98A6C]/15 px-3 py-2 text-sm font-extrabold text-[#8C4C34] disabled:cursor-not-allowed disabled:opacity-50">⏱ {activeTimers[task.id] !== undefined ? "Redémarrer" : task.timer}</button>{activeTimers[task.id] !== undefined ? <><span role="timer" aria-live="off" className="rounded-lg bg-[#FBE3DF] px-3 py-2 font-mono text-sm font-extrabold text-[#A63D35]">{durationLabel(Math.ceil(activeTimers[task.id] / 60))} {String(activeTimers[task.id] % 60).padStart(2, "0")} s</span><button type="button" onClick={() => setActiveTimers((current) => { const next = { ...current }; delete next[task.id]; return next; })} className="rounded-lg border border-[#E7AAA2] px-3 py-2 text-xs font-bold text-[#A63D35]">Réinitialiser</button></> : null}</span> : null}
             {task.detail ? <span className="mt-2 block text-sm leading-relaxed text-[#555551]">{task.detail}</span> : null}
           </span>
         </label>
@@ -276,6 +300,7 @@ export default function BatchPage() {
         <div className="flex flex-wrap gap-2">
           {!voiceMode ? <button type="button" onClick={startVoiceMode} className="rounded-xl bg-[#8FA89B] px-4 py-3 font-extrabold text-white shadow-sm">🎙️ Activer le mode mains libres</button> : <button type="button" onClick={stopVoiceMode} className="rounded-xl bg-[#D98A6C] px-4 py-3 font-extrabold text-white shadow-sm">⏹ Arrêter le mode vocal</button>}
           <button type="button" onClick={() => { setVoiceIndex((index) => { const next = Math.min(index + 1, Math.max(0, tasks.length - 1)); if (tasks[next]) speak(tasks[next].title); return next; }); }} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">Étape suivante</button>
+          <button type="button" onClick={() => { setVoiceIndex((index) => { const previous = Math.max(0, index - 1); if (tasks[previous]) speak(`Étape précédente. ${tasks[previous].title}. ${tasks[previous].detail || ""}`); return previous; }); }} disabled={voiceIndex === 0} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B] disabled:cursor-not-allowed disabled:opacity-40">← Précédent</button>
           <button type="button" onClick={() => speak(currentVoiceTask ? `${currentVoiceTask.title}. ${currentVoiceTask.detail || ""}. ${currentVoiceTask.timer || ""}` : "Aucune étape disponible.")} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">🔊 Répéter</button>
         </div>
         <p aria-live="polite" className="rounded-xl bg-white p-3 text-sm font-semibold text-[#2B2B2B]">{voiceStatus}</p>
