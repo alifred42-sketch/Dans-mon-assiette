@@ -24,6 +24,8 @@ function isJunk(line: string): boolean {
   if (/aucun fromage|le repas contient|après repas possible|par personne\)/i.test(t)) return true;
   if (/^(➡️|💡|🤖|📅|🔍)/.test(t)) return true;
   if (/^recherch/i.test(t)) return true;
+  // Écarter les consignes de préparation qui se sont glissées dans certaines fiches d'ingrédients.
+  if (/^(?:\d+[.)-]?\s*)?(?:lavez?|séchez?|sechez|rincez?|épluchez?|epluchez|coupez?|découpez?|decoupez|émincez?|emincez|hachez?|râpez?|rapez|faites cuire|cuisez|ajoutez?|mélangez?|melangez|versez?|chauffez?|préchauffez?|prechauffez|enfournez|servez|disposez|réservez|reservez|égouttez|egouttez|essuyez)\b/i.test(t)) return true;
   if (/^épices\s*(&|et)?\s*aromates$/i.test(t)) return true;
   if (t.startsWith("(") && t.endsWith(")")) return true;
   return false;
@@ -218,6 +220,14 @@ function prettyName(names: string[]): string {
   return name.charAt(0).toLocaleUpperCase("fr") + name.slice(1);
 }
 
+function pluralizeIngredient(name: string): string {
+  const lower = name.toLocaleLowerCase("fr");
+  if (/\bpomme de terre$/.test(lower)) return lower.replace(/pomme de terre$/, "pommes de terre");
+  if (/\bœuf$|\boeuf$/.test(lower)) return lower.replace(/(?:œuf|oeuf)$/, "œufs");
+  if (/(s|x)$/.test(lower)) return lower;
+  return lower + "s";
+}
+
 function findLinkedSauce(line: string) {
   const cleaned = fold(line);
   const sauces = carnet.recipes.filter((candidate) => { const name = fold(candidate.name); return /(^|\s)(sauce|marinade|vinaigrette|pesto|coulis)\b/.test(name) && !/poulet|cabillaud|saumon|steak|boulettes|colin|merguez|ravioles|paupiettes|wrap/.test(name); });
@@ -332,8 +342,11 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
     .map(([, item]) => {
       const name = prettyName(item.names);
       const qty = formatQty(item.parts);
+      const label = qty && /^\d+(?:,\d+)?$/.test(qty)
+        ? `${qty} ${pluralizeIngredient(name)}`
+        : qty ? `${name} : ${qty}` : name;
       return {
-        label: qty ? `${name} : ${qty}` : name,
+        label,
         recipes: item.recipes,
         aisle: aisleFor(name),
       };
