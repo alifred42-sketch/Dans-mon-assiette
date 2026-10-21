@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { WeekPicker } from "@/components/week-picker";
+import { Beef, Blender, Carrot, CookingPot, Container, Flame, Refrigerator, Utensils, Wheat } from "lucide-react";
 
 type Task = { id: string; title: string; detail?: string; timer?: string; group?: string };
 type VoiceRecognition = {
@@ -30,6 +31,40 @@ function durationLabel(total: number): string {
   return h ? (m ? `${h} h ${m.toString().padStart(2, "0")}` : `${h} h`) : `${m} min`;
 }
 function prettyDay(day: string) { return day.charAt(0) + day.slice(1).toLowerCase(); }
+
+function ingredientKind(value: string): "vegetable" | "protein" | "starch" | "storage" | "equipment" | "other" {
+  const text = value.toLocaleLowerCase("fr");
+  if (/courgette|carotte|tomate|poivron|oignon|échalote|echalote|poireau|champignon|brocoli|chou|épinard|epinard|concombre|pomme de terre|patate douce|aubergine|céleri|celeri|radis|navet|asperge|ail|herbes|salade|légume|legume|découpe|decoupe|laver|éplucher|eplucher/.test(text)) return "vegetable";
+  if (/poulet|dinde|bœuf|boeuf|viande|poisson|saumon|cabillaud|œuf|oeuf|thon|jambon|protéine|proteine/.test(text)) return "protein";
+  if (/riz|pâte|pate|semoule|quinoa|pomme de terre|féculent|feculent|farine|lentille|pain/.test(text)) return "starch";
+  if (/conteneur|contenant|étiquet|etiquet|frigo|réfrig|refriger|congél|congel|stockage|portion|assembler/.test(text)) return "storage";
+  if (/four|robot|mr cuisine|monsieur cuisine|mixage|mixeur|poêle|poele|casserole|cuisson|feu|chauffer|mijot|rôtir|rotir/.test(text)) return "equipment";
+  return "other";
+}
+
+function taskIcon(value: string) {
+  const kind = ingredientKind(value);
+  if (kind === "vegetable") return <Carrot aria-hidden="true" className="size-5" />;
+  if (kind === "protein") return <Beef aria-hidden="true" className="size-5" />;
+  if (kind === "starch") return <Wheat aria-hidden="true" className="size-5" />;
+  if (kind === "storage") return <Refrigerator aria-hidden="true" className="size-5" />;
+  if (/mixeur|robot|mr cuisine|monsieur cuisine|mixage/.test(value.toLocaleLowerCase("fr"))) return <Blender aria-hidden="true" className="size-5" />;
+  if (/four|rôtir|rotir/.test(value.toLocaleLowerCase("fr"))) return <Flame aria-hidden="true" className="size-5" />;
+  if (/poêle|poele|casserole|cuisson|feu/.test(value.toLocaleLowerCase("fr"))) return <CookingPot aria-hidden="true" className="size-5" />;
+  if (/matériel|materiel|ustensile|planche|couteau/.test(value.toLocaleLowerCase("fr"))) return <Utensils aria-hidden="true" className="size-5" />;
+  if (/contenant|bocal|boîte|boite/.test(value.toLocaleLowerCase("fr"))) return <Container aria-hidden="true" className="size-5" />;
+  return <Utensils aria-hidden="true" className="size-5" />;
+}
+
+function kindStyle(value: string) {
+  const kind = ingredientKind(value);
+  if (kind === "vegetable") return { label: "Légumes", classes: "bg-[#E0EFDF] text-[#2F6B3B] ring-[#A8CBA5]" };
+  if (kind === "protein") return { label: "Protéines", classes: "bg-[#FBE3DF] text-[#A63D35] ring-[#E7AAA2]" };
+  if (kind === "starch") return { label: "Féculents", classes: "bg-[#DFEAFB] text-[#315F9E] ring-[#A8C2E8]" };
+  if (kind === "storage") return { label: "Contenants", classes: "bg-[#E6DFD3] text-[#625747] ring-[#C8BDAA]" };
+  if (kind === "equipment") return { label: "Matériel / cuisson", classes: "bg-[#F3E5D9] text-[#8C4C34] ring-[#DDB69F]" };
+  return { label: "Préparation", classes: "bg-[#F2F2EE] text-[#555551] ring-[#DEDED7]" };
+}
 
 export default function BatchPage() {
   const search = useSearchParams();
@@ -207,7 +242,11 @@ export default function BatchPage() {
         <label className="flex cursor-pointer items-start gap-3 p-3">
           <input type="checkbox" className="mt-1 size-6 shrink-0 accent-[#8FA89B]" checked={Boolean(checked[task.id])} onChange={() => toggle(task.id)} />
           <span className="min-w-0 flex-1">
-            <span className={checked[task.id] ? "block font-semibold text-[#668775] line-through" : "block font-semibold text-[#2B2B2B]"}>{task.title}</span>
+            <span className="flex flex-wrap items-center gap-2">
+              <span className={`flex size-9 shrink-0 items-center justify-center rounded-xl ring-1 ${kindStyle(`${task.title} ${task.detail || ""}`).classes}`}>{taskIcon(`${task.title} ${task.detail || ""}`)}</span>
+              <span className={checked[task.id] ? "font-semibold text-[#668775] line-through" : "font-semibold text-[#2B2B2B]"}>{task.title}</span>
+              <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold ring-1 ${kindStyle(`${task.title} ${task.detail || ""}`).classes}`}><span aria-hidden="true" className="size-2 rounded-full bg-current" />{kindStyle(`${task.title} ${task.detail || ""}`).label}</span>
+            </span>
             {task.timer ? <span className="mt-2 inline-flex rounded-lg bg-[#D98A6C]/15 px-3 py-1 text-sm font-extrabold text-[#8C4C34]">⏱ {task.timer}</span> : null}
             {task.detail ? <span className="mt-2 block text-sm leading-relaxed text-[#555551]">{task.detail}</span> : null}
           </span>
