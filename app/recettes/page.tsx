@@ -5,7 +5,7 @@ import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 import { VeganNavigation } from "@/components/vegan-navigation";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const CATEGORY_COPY: Record<string, string> = {
@@ -45,10 +45,10 @@ function durationMinutes(value?: string): number | null {
 
 export default function RecettesPage() {
   const [maxDuration, setMaxDuration] = useState<number | null>(null);
-  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
-  useEffect(() => { try { setFavoriteIds(JSON.parse(localStorage.getItem("cuisine-chic-ouf-favorites") || "[]")); } catch { setFavoriteIds([]); } }, []);
+  const router = useRouter();
   const searchParams = useSearchParams();
   const filter = searchParams.get("filter") || "";
+  useEffect(() => { if (filter === "favoris") router.replace("/mes-recettes?tab=favoris"); }, [filter, router]);
   const allCollections = getCollections();
   const collections = allCollections.filter((col) => col.recipeIds.length > 0).map((col) => ({ slug: col.slug, name: col.name, count: col.recipeIds.length }));
   const slugByFilter: Record<string, string> = {
@@ -78,7 +78,7 @@ export default function RecettesPage() {
     }
   };
   const matchingRecipes = carnet.recipes
-    .filter((recipe) => (filter === "favoris" ? favoriteIds.includes(recipe.id) : (!filter || (selectedIds ? selectedIds.has(recipe.id) : fallbackFilter(recipe)))) )
+    .filter((recipe) => !filter || (selectedIds ? selectedIds.has(recipe.id) : fallbackFilter(recipe)))
     .filter((recipe) => filter !== "tired" || (
       recipe.ingredients.filter((line) => line.trim() && !/^ingr[ée]dients à prévoir/i.test(line)).length >= 2 &&
       recipe.steps.filter((line) => line.trim()).length >= 2
@@ -109,7 +109,7 @@ export default function RecettesPage() {
         <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">{CATEGORY_COPY[filter] || CATEGORY_COPY[""]}</p>
         <p className="mt-1 text-xs text-muted-foreground">{filter ? `${recipes.length} résultat(s) dans cette sélection.` : "Tape un plat ou un ingrédient pour retrouver une fiche."}</p>
       </div>
-      <Link href="/mes-recettes" className="flex min-h-12 items-center justify-center rounded-xl bg-[#D0DBCE] px-4 py-3 text-center text-sm font-bold text-[#2B2B2B] shadow-sm transition hover:shadow-md">Créer ou importer mes recettes personnelles →</Link>
+      <Link href="/mes-recettes?tab=creations" className="flex min-h-12 items-center justify-center rounded-xl bg-[#D6B86A] px-4 py-3 text-center text-sm font-bold text-[#302400] shadow-sm transition hover:shadow-md">Créer ou importer mes recettes personnelles →</Link>
       <div className="flex flex-wrap items-center gap-2">
         {[15, 30, 45].map((minutes) => {
           const active = maxDuration === minutes;

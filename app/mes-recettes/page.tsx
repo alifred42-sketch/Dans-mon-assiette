@@ -1,7 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { ArrowUpRight, Camera, Link2, Pencil, Plus, Trash2, UtensilsCrossed, X } from "lucide-react";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { ArrowUpRight, Camera, Heart, Link2, Pencil, Plus, Trash2, UtensilsCrossed, X } from "lucide-react";
+import { RecipeList } from "@/components/recipe-list";
+import { carnet } from "@/lib/carnet";
+import { recipeLines } from "@/lib/search";
 
 type MyRecipe = {
   id: string;
@@ -18,20 +23,18 @@ type MyRecipe = {
 };
 
 type RecipeMode = "manual" | "link";
+type RecipeTab = "favoris" | "creations" | "imports";
 const STORAGE_KEY = "cuisine-chic-ouf-mes-recettes-v1";
+const FAVORITES_KEY = "cuisine-chic-ouf-favorites";
 const emptyForm = { title: "", description: "", ingredients: "", steps: "", prepTime: "", cookTime: "", servings: "4", sourceUrl: "" };
 const fieldClass = "mt-1.5 min-h-12 w-full rounded-xl border border-[#deded6] bg-white px-3 py-2.5 text-base outline-none focus:border-[#668775] focus:ring-2 focus:ring-[#8FA89B]/25";
+const tabs: { id: RecipeTab; label: string; color: string; activeText: string }[] = [
+  { id: "favoris", label: "Mes Favoris", color: "#F4C542", activeText: "#302400" },
+  { id: "creations", label: "Mes Créations", color: "#D98B7B", activeText: "#30201D" },
+  { id: "imports", label: "Mes Imports", color: "#557C65", activeText: "#FFFFFF" },
+];
 
 function lines(value: string) { return value.split("\n").map((line) => line.trim()).filter(Boolean); }
-
-function openDatabase(): Promise<IDBDatabase> {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open("cuisine-chic-ouf-images", 1);
-    request.onupgradeneeded = () => request.result.createObjectStore("photos");
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error);
-  });
-}
 
 async function shrinkPhoto(file: File): Promise<string> {
   const source = await createImageBitmap(file);
@@ -52,12 +55,30 @@ export default function MesRecettesPage() {
   const [photos, setPhotos] = useState<string[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [message, setMessage] = useState("");
+  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
   const photoInput = useRef<HTMLInputElement>(null);
+  const searchParams = useSearchParams();
+  const requestedTab = searchParams.get("tab");
+  const activeTab: RecipeTab = requestedTab === "creations" || requestedTab === "imports" ? requestedTab : "favoris";
 
   useEffect(() => {
     try { setRecipes(JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]")); } catch { setRecipes([]); }
+    const readFavorites = () => { try { setFavoriteIds(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { setFavoriteIds([]); } };
+    readFavorites();
+    window.addEventListener("storage", readFavorites);
+    window.addEventListener("cuisine-chic-ouf-favorites-change", readFavorites);
     setReady(true);
+    return () => {
+      window.removeEventListener("storage", readFavorites);
+      window.removeEventListener("cuisine-chic-ouf-favorites-change", readFavorites);
+    };
   }, []);
+
+  const favoriteRecipes = carnet.recipes
+    .filter((recipe) => favoriteIds.includes(recipe.id))
+    .sort((a, b) => a.name.localeCompare(b.name, "fr"))
+    .map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
+  const personalRecipes = recipes.filter((recipe) => activeTab === "imports" ? Boolean(recipe.sourceUrl) : activeTab === "creations" ? !recipe.sourceUrl : false);
 
   function persist(next: MyRecipe[]) {
     try {
@@ -103,6 +124,7 @@ export default function MesRecettesPage() {
     const title = form.title.trim();
     if (!title) { setMessage("Ajoute au moins le nom de la recette."); return; }
     let sourceUrl = form.sourceUrl.trim();
+    if (mode === "link" && !sourceUrl) { setMessage("Ajoute le lien de la publication pour l’enregistrer dans Mes Imports."); return; }
     if (sourceUrl) {
       try { const parsed = new URL(sourceUrl); if (!["http:", "https:"].includes(parsed.protocol)) throw new Error(); sourceUrl = parsed.toString(); }
       catch { setMessage("Vérifie le lien : il doit commencer par https:// ou http://."); return; }
@@ -122,19 +144,30 @@ export default function MesRecettesPage() {
       <header className="space-y-2">
         <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#668775]">Votre collection personnelle</p>
         <h1 className="font-heading text-3xl">Mes recettes</h1>
-        <p className="text-sm leading-relaxed text-[#555551]">Crée tes fiches avec tes photos, tes ingrédients et tes étapes, ou garde le lien d’une recette ou d’une vidéo pour la retrouver ici.</p>
+        <p className="text-sm leading-relaxed text-[#555551]">Tes recettes préférées du carnet, tes créations et celles que tu as repérées en ligne.</p>
       </header>
 
-      {!mode ? <section className="grid gap-3 sm:grid-cols-2" aria-label="Ajouter une recette">
-        <button onClick={() => begin("manual")} className="flex min-h-28 flex-col items-start justify-between rounded-2xl bg-[#D0DBCE] p-4 text-left shadow-sm transition hover:shadow-md">
+      <nav aria-label="Sous-navigation Mes recettes" className="grid grid-cols-3 gap-2">
+        {tabs.map((tab) => <Link key={tab.id} href={`/mes-recettes?tab=${tab.id}`} aria-current={activeTab === tab.id ? "page" : undefined} className={`flex min-h-12 items-center justify-center rounded-xl px-2 py-2 text-center text-xs font-extrabold shadow-sm transition sm:text-sm ${activeTab === tab.id ? "ring-2 ring-black/10" : "opacity-75 hover:opacity-100"}`} style={{ backgroundColor: tab.color, color: tab.activeText }}>{tab.label}</Link>)}
+      </nav>
+
+      {activeTab === "favoris" ? <section className="space-y-3">
+        <div><h2 className="font-heading text-xl">Mes Favoris</h2><p className="text-sm text-[#555551]">Les recettes officielles de Cuisine Chic Ouf que tu as ajoutées avec le cœur.</p></div>
+        {favoriteRecipes.length ? <RecipeList items={favoriteRecipes} /> : <div className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5"><Heart className="mx-auto size-8 text-[#D1A900]" /><p className="mt-2 text-sm text-[#555551]">Tes recettes favorites apparaîtront ici. Dans le catalogue, touche le cœur d’une recette pour l’ajouter.</p><Link href="/recettes" className="mt-3 inline-flex min-h-11 items-center rounded-xl bg-[#F4C542] px-4 text-sm font-bold text-[#302400]">Parcourir le catalogue</Link></div>}
+      </section> : null}
+
+      {activeTab !== "favoris" && !mode ? <section className="grid gap-3 sm:grid-cols-2" aria-label="Ajouter une recette">
+        {activeTab === "creations" ? <button onClick={() => begin("manual")} className="flex min-h-28 flex-col items-start justify-between rounded-2xl bg-[#D98B7B] p-4 text-left text-[#30201D] shadow-sm transition hover:shadow-md">
           <span className="flex size-10 items-center justify-center rounded-xl bg-white/70"><Plus className="size-6" /></span>
           <span><strong className="block text-base">Créer ma recette</strong><span className="text-sm">Ajouter texte et photos</span></span>
-        </button>
-        <button onClick={() => begin("link")} className="flex min-h-28 flex-col items-start justify-between rounded-2xl bg-[#F4EAD4] p-4 text-left shadow-sm transition hover:shadow-md">
+        </button> : null}
+        {activeTab === "imports" ? <button onClick={() => begin("link")} className="flex min-h-28 flex-col items-start justify-between rounded-2xl bg-[#557C65] p-4 text-left text-white shadow-sm transition hover:shadow-md">
           <span className="flex size-10 items-center justify-center rounded-xl bg-white/70"><Link2 className="size-5" /></span>
           <span><strong className="block text-base">Ajouter depuis un lien ou une vidéo</strong><span className="text-sm">Facebook, Instagram, YouTube…</span></span>
-        </button>
-      </section> : <section className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 sm:p-6">
+        </button> : null}
+      </section> : null}
+
+      {activeTab !== "favoris" && mode ? <section className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 sm:p-6">
         <div className="mb-5 flex items-start justify-between gap-3">
           <div><p className="text-sm font-bold text-[#668775]">{editingId ? "Modifier ma fiche" : mode === "link" ? "Garder une recette trouvée en ligne" : "Créer une fiche personnelle"}</p><h2 className="mt-1 font-heading text-xl">{mode === "link" ? "Recette ou vidéo" : "Nouvelle recette"}</h2></div>
           <button type="button" onClick={() => setMode(null)} aria-label="Fermer le formulaire" className="flex size-10 items-center justify-center rounded-full bg-[#F3F3EF]"><X className="size-5" /></button>
@@ -160,11 +193,11 @@ export default function MesRecettesPage() {
           {message ? <p role="alert" className="rounded-lg bg-[#FAD2CB]/50 p-3 text-sm font-medium">{message}</p> : null}
           <div className="flex flex-wrap gap-2 pt-1"><button type="submit" disabled={!ready} className="min-h-12 rounded-xl bg-[#668775] px-5 text-sm font-bold text-white shadow-sm hover:bg-[#547460]">{editingId ? "Enregistrer les changements" : "Enregistrer ma recette"}</button><button type="button" onClick={() => setMode(null)} className="min-h-12 rounded-xl px-4 text-sm font-semibold text-[#555551]">Annuler</button></div>
         </form>
-      </section>}
+      </section> : null}
 
-      <section className="space-y-3">
-        <div className="flex items-center justify-between"><h2 className="font-heading text-xl">Mes fiches personnelles</h2><span className="text-sm text-[#777773]">{recipes.length}</span></div>
-        {!recipes.length ? <div className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5"><UtensilsCrossed className="mx-auto size-8 text-[#8FA89B]" /><p className="mt-2 text-sm text-[#555551]">Tes recettes ajoutées apparaîtront ici, uniquement sur cet appareil.</p></div> : <ul className="space-y-3">{recipes.map((recipe) => <li key={recipe.id} className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
+      {activeTab !== "favoris" ? <section className="space-y-3">
+        <div className="flex items-center justify-between"><div><h2 className="font-heading text-xl">{activeTab === "creations" ? "Mes Créations" : "Mes Imports"}</h2><p className="text-sm text-[#555551]">{activeTab === "creations" ? "Les fiches que tu as créées toi-même." : "Les recettes gardées depuis un article ou une vidéo."}</p></div><span className="text-sm text-[#777773]">{personalRecipes.length}</span></div>
+        {!personalRecipes.length ? <div className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5"><UtensilsCrossed className="mx-auto size-8 text-[#8FA89B]" /><p className="mt-2 text-sm text-[#555551]">{activeTab === "creations" ? "Tes recettes personnelles apparaîtront ici." : "Tes recettes avec un lien source apparaîtront ici."}</p></div> : <ul className="space-y-3">{personalRecipes.map((recipe) => <li key={recipe.id} className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
           {recipe.photos[0] ? <img src={recipe.photos[0]} alt={`Photo de ${recipe.title}`} className="max-h-64 w-full object-cover" /> : null}
           <article className="space-y-3 p-4">
             <div className="flex items-start justify-between gap-3"><div className="min-w-0"><h3 className="font-heading text-lg leading-tight">{recipe.title}</h3>{recipe.description ? <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-[#555551]">{recipe.description}</p> : null}<p className="mt-2 text-xs text-[#777773]">{[recipe.prepTime && `Préparation ${recipe.prepTime}`, recipe.cookTime && `Cuisson ${recipe.cookTime}`, recipe.servings && `${recipe.servings} personne(s)`].filter(Boolean).join(" · ") || "Fiche personnelle"}</p></div><div className="flex shrink-0 gap-1"><button type="button" onClick={() => edit(recipe)} aria-label={`Modifier ${recipe.title}`} className="flex size-10 items-center justify-center rounded-xl bg-[#F3F3EF]"><Pencil className="size-4" /></button><button type="button" onClick={() => remove(recipe.id)} aria-label={`Supprimer ${recipe.title}`} className="flex size-10 items-center justify-center rounded-xl bg-[#FAD2CB]/40 text-[#7C3A35]"><Trash2 className="size-4" /></button></div></div>
@@ -174,7 +207,7 @@ export default function MesRecettesPage() {
             {recipe.sourceUrl ? <a href={recipe.sourceUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-1 rounded-lg text-sm font-semibold text-[#668775] underline">Voir la publication ou la vidéo <ArrowUpRight className="size-4" /></a> : null}
           </article>
         </li>)}</ul>}
-      </section>
+      </section> : null}
       <p className="text-center text-xs leading-relaxed text-[#777773]">Pour l’instant, tes fiches et tes photos sont enregistrées dans le navigateur de cet appareil. Elles ne sont pas partagées entre plusieurs téléphones.</p>
     </div>
   );

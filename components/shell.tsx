@@ -3,17 +3,18 @@
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 
-import { CalendarDays, CookingPot, ShoppingCart, UtensilsCrossed, UserRound } from "lucide-react";
+import { CalendarDays, CookingPot, ShoppingCart, UtensilsCrossed, UserRound, BookHeart } from "lucide-react";
 import { BackButton } from "@/components/back-button";
 import { MealReminders } from "@/components/meal-reminders";
 import { BASE_PATH } from "@/lib/base-path";
 
 const NAV = [
-  { href: "/semaine", label: "Semaine", icon: CalendarDays },
-  { href: "/courses", label: "Courses", icon: ShoppingCart },
-  { href: "/batch", label: "Batch", icon: CookingPot },
-  { href: "/recettes", label: "Recettes", icon: UtensilsCrossed },
-  { href: "/compte", label: "Mon compte", icon: UserRound },
+  { href: "/semaine", label: "Semaine", icon: CalendarDays, color: "#203552", activeText: "#FFFFFF" },
+  { href: "/recettes", label: "Recettes", icon: UtensilsCrossed, color: "#D6B86A", activeText: "#302400" },
+  { href: "/batch", label: "Batch", icon: CookingPot, color: "#F05B4E", activeText: "#FFFFFF" },
+  { href: "/courses", label: "Courses", icon: ShoppingCart, color: "#83D6B0", activeText: "#173C2C" },
+  { href: "/compte", label: "Mon compte", icon: UserRound, color: "#383B3A", activeText: "#FFFFFF" },
+  { href: "/mes-recettes?tab=favoris", label: "Mes recettes", icon: BookHeart, color: "#D6B86A", activeText: "#302400" },
 ];
 
 export function Shell({ children }: { children: React.ReactNode }) {
@@ -33,25 +34,27 @@ export function Shell({ children }: { children: React.ReactNode }) {
       </header>
       <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-28 pt-6"><BackButton />{children}<div className="mt-6"><MealReminders visible={pathname === "/semaine" || pathname === "/"} /></div><div className="mt-10 border-t border-[#E9E9E4] pt-5 text-center"><Link href="/notre-histoire" className="text-sm font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">Notre Histoire — pourquoi Cuisine Chic Ouf ?</Link></div></main>
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-[#E9E9E4] bg-[#F9F9F7]/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md">
-        <div className="mx-auto grid max-w-2xl grid-cols-5">
+        <div className="mx-auto grid max-w-3xl grid-cols-6 gap-0.5 px-1">
           {NAV.map((item) => {
             const Icon = item.icon;
-            const href = `${item.href}${item.href === "/recettes" ? "" : weekQuery}`;
+            const href = `${item.href}${item.href.startsWith("/mes-recettes") ? "" : item.href === "/recettes" ? "" : weekQuery}`;
             const active =
               item.href === "/semaine"
                 ? pathname === "/" || pathname === "/semaine"
                 : item.href === "/recettes"
-                  ? pathname.startsWith("/recettes") || pathname.startsWith("/mes-recettes") || pathname.startsWith("/carnet") || pathname.startsWith("/fiche")
+                  ? pathname.startsWith("/recettes") || pathname.startsWith("/carnet") || pathname.startsWith("/fiche")
+                  : item.href.startsWith("/mes-recettes")
+                    ? pathname.startsWith("/mes-recettes")
                   : pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
                 href={href}
-                className={`flex min-h-16 flex-col items-center justify-center gap-1 text-xs font-semibold ${
-                  active ? "text-[#8FA89B]" : "text-[#777773]"
-                }`}
+                aria-current={active ? "page" : undefined}
+                className={`flex min-h-16 min-w-0 flex-col items-center justify-center gap-1 rounded-xl px-0.5 text-[10px] font-bold leading-tight transition-colors sm:text-xs ${active ? "shadow-sm" : "hover:bg-black/5"}`}
+                style={{ backgroundColor: active ? item.color : "transparent", color: active ? item.activeText : item.color }}
               >
-                <Icon className="size-6" />
+                <Icon className="size-5 shrink-0 sm:size-6" />
                 {item.label}
               </Link>
             );

@@ -29,9 +29,10 @@ export default function ComptePage(){
  </section>
  <section className="space-y-3 rounded-3xl border border-white bg-[#F9F9F7] p-4 shadow-[7px_7px_18px_rgba(26,26,26,0.07),-5px_-5px_14px_rgba(255,255,255,0.95)]">
  <div className="flex items-center gap-3"><span className="flex size-11 items-center justify-center rounded-2xl bg-[#8FA89B]/20"><Heart className="size-6"/></span><h2 className="font-heading text-xl font-bold">Mon espace & infos</h2></div>
- <Link href="/recettes?filter=favoris" className="flex min-h-12 items-center justify-between rounded-xl bg-white px-4 py-3 text-sm font-bold shadow-sm"><span className="flex items-center gap-2"><Heart className="size-5 text-[#D97878]"/> Mes recettes favorites</span><ArrowUpRight className="size-5"/></Link>
+ <Link href="/mes-recettes?tab=favoris" className="flex min-h-12 items-center justify-between rounded-xl bg-white px-4 py-3 text-sm font-bold shadow-sm"><span className="flex items-center gap-2"><Heart className="size-5 text-[#D1A900]"/> Mes recettes favorites</span><ArrowUpRight className="size-5"/></Link>
  <div className="rounded-2xl bg-[#E6DFD3]/65 p-4"><p className="text-xs font-bold uppercase tracking-wider text-[#655C50]">Compteur OUF !</p><p className="mt-1 font-heading text-xl font-bold">🏆 Compteur OUF ! : <span className="text-[#557565]">[X]</span> semaines de charge mentale évitées.</p><p className="mt-1 text-xs text-[#655C50]">Parce que votre cerveau mérite aussi des vacances.</p></div>
  <Link href="/notre-histoire" className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#8FA89B] px-4 py-3 text-sm font-extrabold text-white shadow-md"><ArrowUpRight className="size-5"/> Notre Histoire</Link>
  <button type="button" onClick={shareApp} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#F3C6B1] px-4 py-3 text-sm font-extrabold text-[#1A1A1A] shadow-md"><Share2 className="size-5"/> Sauver un ami de la flemme</button>
  </section><p className="text-center text-xs text-[#777773]">Préférences enregistrées sur cet appareil.{ready?"":" Chargement…"}</p></div>;
 }
+
