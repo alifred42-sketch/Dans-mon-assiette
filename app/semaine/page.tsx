@@ -28,9 +28,17 @@ export default function WeekPage() {
     return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
   }, []);
   useEffect(() => {
-    setWeekday(new Date().getDay());
+    const refreshCurrentWeek = () => setCurrentWeek(currentIsoWeek());
+    const refreshWeekday = () => setWeekday(new Date().getDay());
+    refreshWeekday();
+    window.addEventListener("focus", refreshCurrentWeek);
+    document.addEventListener("visibilitychange", refreshCurrentWeek);
+    return () => {
+      window.removeEventListener("focus", refreshCurrentWeek);
+      document.removeEventListener("visibilitychange", refreshCurrentWeek);
+    };
   }, []);
-  const week = requestedWeek ? clampWeek(requestedWeek) : currentWeek;
+  const week = requestedWeek && search.get("manual") === "1" ? clampWeek(requestedWeek) : currentWeek;
   const mondayDate = (() => { const now = new Date(); const d = new Date(now.getFullYear(), 0, 4); d.setDate(d.getDate() - ((d.getDay() + 6) % 7) + (week - 1) * 7); return d; })();
   const sundayDate = new Date(mondayDate); sundayDate.setDate(mondayDate.getDate() + 6);
   const dateRange = `${mondayDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long" })} au ${sundayDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long" })}`;
