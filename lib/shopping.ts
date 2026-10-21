@@ -344,6 +344,7 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
   }
 
   return [...bag.entries()]
+    .filter(([, item]) => !item.names.every(isJunk))
     .map(([, item]) => {
       const name = prettyName(item.names);
       const qty = formatQty(item.parts);
