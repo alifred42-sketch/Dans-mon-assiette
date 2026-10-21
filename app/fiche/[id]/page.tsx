@@ -46,6 +46,33 @@ export default async function FichePage({
     if (!target) return line;
     return <Link href={"/fiche/" + target.id} className="font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">{line}</Link>;
   }
+  function ingredientsForStep(step: string) {
+    const normalizedStep = cleanMatch(step);
+    const ignored = new Set(["avec", "dans", "pour", "deux", "trois", "quatre", "cinq", "puis", "ajouter", "ajoutez", "mettre", "mettez", "verser", "versez", "incorporer", "incorporez", "melanger", "melangez", "couper", "coupez", "faire", "faites", "cuire", "cuisez", "jusque", "jusqu", "minutes", "minute", "gramme", "grammes", "cuillere", "soupe", "cafe", "pincee", "filet", "gousse"]);
+    const stepWords = new Set(normalizedStep.split(" "));
+    return shopIngs.filter((ingredient) => {
+      const name = cleanMatch(ingredient.replace(/^\s*\d+(?:[.,]\d+)?\s*(?:g|kg|mg|ml|cl|l)?\s*/i, "").replace(/\([^)]*\)/g, ""));
+      const words = name.split(" ").filter((word) => word.length >= 4 && !ignored.has(word) && !/^\d+$/.test(word));
+      return words.some((word) => stepWords.has(word));
+    });
+  }
+  function instructionWithIngredients(step: string, key: string) {
+    const matched = ingredientsForStep(step);
+    return (
+      <div key={key} className="space-y-2">
+        {matched.length > 0 && (
+          <div className="flex flex-wrap gap-2" aria-label="Ingrédients et quantités de cette étape">
+            {matched.map((ingredient, index) => (
+              <span key={key + "-ingredient-" + index} className="inline-flex rounded-xl border-2 border-[#8FA89B]/60 bg-[#8FA89B]/15 px-3 py-2 text-base font-extrabold leading-snug text-[#24372C] sm:text-lg">
+                {ingredient.toLocaleUpperCase("fr")}
+              </span>
+            ))}
+          </div>
+        )}
+        <div>{linkedInstruction(step)}<ListenStep text={step} /></div>
+      </div>
+    );
+  }
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
     .filter(Boolean)
     .join(" · ");
@@ -97,7 +124,7 @@ export default async function FichePage({
             {recipe.steps.length > 0 ? (
               <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
                 {recipe.steps.map((step, i) => (
-                  <li key={`step-${i}`}>{linkedInstruction(step)}<ListenStep text={step} /></li>
+                  <li key={`step-${i}`}>{instructionWithIngredients(step, `step-${i}`)}</li>
                 ))}
               </ol>
             ) : (
@@ -111,7 +138,7 @@ export default async function FichePage({
               <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
               <ul className="mt-2 space-y-1 text-sm">
                 {recipe.robot.map((line, i) => (
-                  <li key={`robot-${i}`}>{linkedInstruction(line)}</li>
+                  <li key={`robot-${i}`}>{instructionWithIngredients(line, `robot-${i}`)}</li>
                 ))}
               </ul>
             </section>
@@ -123,7 +150,7 @@ export default async function FichePage({
         <section>
           <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
           <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
-            {recipe.steps.map((step, i) => <li key={`step-extra-${i}`}>{linkedInstruction(step)}<ListenStep text={step} /></li>)}
+            {recipe.steps.map((step, i) => <li key={`step-extra-${i}`}>{instructionWithIngredients(step, `step-extra-${i}`)}</li>)}
           </ol>
         </section>
       ) : null}
@@ -131,7 +158,7 @@ export default async function FichePage({
         <section>
           <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
           <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
-            {recipe.robot.map((line, i) => <li key={`robot-extra-${i}`}>{linkedInstruction(line)}</li>)}
+            {recipe.robot.map((line, i) => <li key={`robot-extra-${i}`}>{instructionWithIngredients(line, `robot-extra-${i}`)}</li>)}
           </ol>
         </section>
       ) : null}
