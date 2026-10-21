@@ -118,6 +118,8 @@ export default function BatchPage() {
   const separateMinutes = recipes.reduce((sum, entry) => sum + minutes(entry.recipe?.timePrep) + minutes(entry.recipe?.timeCook), 0);
   const savedMinutes = Math.max(0, separateMinutes - totalMinutes);
   const currentVoiceTask = tasks[Math.min(voiceIndex, Math.max(0, tasks.length - 1))];
+  const currentVoiceTaskRef = useRef<Task | undefined>(undefined);
+  currentVoiceTaskRef.current = currentVoiceTask;
 
   function speak(text: string) {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
@@ -162,11 +164,11 @@ export default function BatchPage() {
           return previous;
         });
       } else if (/répète|repete|répéter|repeter|redis/.test(transcript)) {
-        speak(currentVoiceTask ? `${currentVoiceTask.title}. ${currentVoiceTask.detail || ""}. ${currentVoiceTask.timer || ""}` : "Aucune étape disponible.");
+        speak(currentVoiceTaskRef.current ? `${currentVoiceTaskRef.current.title}. ${currentVoiceTaskRef.current.detail || ""}. ${currentVoiceTaskRef.current.timer || ""}` : "Aucune étape disponible.");
       } else if (/valide|valider|c'est fait|c est fait|terminé|termine/.test(transcript)) {
-        if (currentVoiceTask) {
-          setChecked((previous) => ({ ...previous, [currentVoiceTask.id]: true }));
-          speak(`Étape validée : ${currentVoiceTask.title}. Dites étape suivante pour continuer.`);
+        if (currentVoiceTaskRef.current) {
+          setChecked((previous) => ({ ...previous, [currentVoiceTaskRef.current!.id]: true }));
+          speak(`Étape validée : ${currentVoiceTaskRef.current.title}. Dites étape suivante pour continuer.`);
         }
       } else if (/arrête|arrete|stop|désactive|desactive/.test(transcript)) {
         speak("J'arrête le mode mains libres.");
