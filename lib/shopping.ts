@@ -24,8 +24,10 @@ function isJunk(line: string): boolean {
   if (/aucun fromage|le repas contient|après repas possible|par personne\)/i.test(t)) return true;
   if (/^(➡️|💡|🤖|📅|🔍)/.test(t)) return true;
   if (/^recherch/i.test(t)) return true;
-  // Écarter les consignes de préparation qui se sont glissées dans certaines fiches d'ingrédients.
-  if (/^(?:\d+[.)-]?\s*)?(?:lavez?|séchez?|sechez|rincez?|épluchez?|epluchez|coupez?|découpez?|decoupez|émincez?|emincez|hachez?|râpez?|rapez|faites cuire|cuisez|ajoutez?|mélangez?|melangez|versez?|chauffez?|préchauffez?|prechauffez|enfournez|servez|disposez|réservez|reservez|égouttez|egouttez|essuyez)\b/i.test(t)) return true;
+  // La liste ne doit contenir que des achats : exclure les étapes, y compris « 1-lavez », « Étape 2 : couper… » et les infinitifs.
+  const instruction = fold(t).replace(/^(?:etape\s*)?\d+\s*[.)/:\-–]?\s*/, "").trim();
+  if (/^(?:laver|lavez|lave|secher|sechez|seche|rincer|rincez|rince|nettoyer|nettoyez|eplucher|epluchez|peler|pelez|couper|coupez|decouper|decoupez|emincer|emincez|hacher|hachez|raper|rapez|trancher|tranchez|tailler|taillez|preparer|preparez|faire cuire|faites cuire|cuire|cuisez|ajouter|ajoutez|melanger|melangez|verser|versez|chauffer|chauffez|prechauffer|prechauffez|enfourner|enfournez|servir|servez|disposer|disposez|reserver|reservez|egoutter|egouttez|essuyer|essuyez|incorporer|incorporez|assaisonner|assaisonnez|porter a ebullition|laisser cuire|laissez cuire|laisser reposer|laissez reposer|faire revenir|faites revenir|faire fondre|faites fondre|mixer|mixez|puis\b|ensuite\b|dans un saladier\b|dans une casserole\b)/i.test(instruction)) return true;
+  if (/\b(?:lavez et sechez|laver et secher|coupez en|couper en|melangez puis|ajoutez puis|faites cuire pendant|laissez cuire pendant|etape de preparation)\b/i.test(instruction)) return true;
   if (/^épices\s*(&|et)?\s*aromates$/i.test(t)) return true;
   if (t.startsWith("(") && t.endsWith(")")) return true;
   return false;
