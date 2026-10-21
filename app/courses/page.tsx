@@ -36,11 +36,14 @@ export default function CoursesPage() {
     window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
     return () => { window.removeEventListener("storage", refresh); window.removeEventListener("assiette-servings-change", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
   }, []);
-  const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences).map((item) => ({
-    id: `${item.aisle}|${item.label}`,
-    title: item.label,
-    group: item.aisle,
-  }));
+  const nonIngredientPattern = /(?:verifier la cuisson|arroser du jus|servir immediatement|cuire au four|prechauffer le four|assaisonner le poisson|repartir les legumes|fruits de mer doivent|pour personnes|une recette ideale pour)/i;
+  const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences)
+    .filter((item) => !nonIngredientPattern.test(item.label.normalize("NFD").replace(/[\\u0300-\\u036f]/g, "")))
+    .map((item) => ({
+      id: `${item.aisle}|${item.label}`,
+      title: item.label,
+      group: item.aisle,
+    }));
 
   return (
     <div className="space-y-5">
