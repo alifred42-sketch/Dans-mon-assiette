@@ -7,7 +7,7 @@ export function WeekPicker({ week, path }: { week: number; path: string }) {
   const router = useRouter();
   const prev = Math.max(1, week - 1);
   const next = Math.min(52, week + 1);
-  const hrefFor = (n: number) => `${path === "/" ? "/" : path}?w=${n}${path === "/semaine" ? "&manual=1" : ""}`;
+  const hrefFor = (n: number) => `${path === "/" ? "/" : path}?w=${n}&manual=1`;
 
   function go(n: number) {
     router.push(hrefFor(n));
