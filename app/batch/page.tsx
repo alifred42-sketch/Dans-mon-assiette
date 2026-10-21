@@ -75,7 +75,10 @@ export default function BatchPage() {
   const [robotPriority, setRobotPriority] = useState(false);
   const [checked, setChecked] = useState<Record<string, boolean>>({});
   const [ready, setReady] = useState(false);
-  const [voiceMode, setVoiceMode] = useState(false);\n  const [voiceStatus, setVoiceStatus] = useState("Mode mains libres désactivé");\n  const [voiceIndex, setVoiceIndex] = useState(0);\n  const recognitionRef = useRef<VoiceRecognition | null>(null);
+  const [voiceMode, setVoiceMode] = useState(false);
+  const [voiceStatus, setVoiceStatus] = useState("Mode mains libres désactivé");
+  const [voiceIndex, setVoiceIndex] = useState(0);
+  const recognitionRef = useRef<VoiceRecognition | null>(null);
 
   useEffect(() => setWeek(clampWeek(requestedWeek ?? String(currentIsoWeek()))), [requestedWeek]);
   useEffect(() => {
