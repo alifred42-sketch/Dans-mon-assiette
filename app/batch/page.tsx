@@ -3,7 +3,7 @@
 import { displayRecipe } from "@/lib/recipe-display";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
+import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { WeekPicker } from "@/components/week-picker";
 
 type Task = { id: string; title: string; detail?: string; timer?: string; group?: string };
@@ -64,6 +64,15 @@ export default function BatchPage() {
     const source = getRecipe(slot.recipeId);
     return { slot, recipe: source ? displayRecipe(source) : undefined };
   }).filter((entry) => entry.recipe);
+  const existingItems = batchForWeek(week, recipeOverrides, preferences).filter((item) => /protéine pivot|proteine pivot|féculent|feculent|soupe de saison|base soupe|base de saison/i.test(`${item.title} ${item.group || ""}`));
+  const existingTask = (item: { id: string; title: string; detail?: string; group?: string; target?: string }): Task => ({
+    id: `carnet-${item.id}`, title: item.title,
+    detail: [item.detail, item.target].filter(Boolean).join(" · ") || undefined,
+    group: item.group,
+  });
+  const existingPrepTasks = existingItems.filter((item) => /organisation|préparation|preparation|découpe|decoupe|laver|éplucher|eplucher|planche|féculent|feculent|protéine pivot|proteine pivot|base de saison|soupe de saison|base soupe/i.test(`${item.title} ${item.group || ""}`)).map(existingTask);
+  const existingCookTasks = existingItems.filter((item) => /four|rôtir|rotir|gratin|cuisson au four|légumes rôtis|legumes rotis|robot|mr cuisine|monsieur cuisine|vitesse|mixage|cuisson vapeur|cuissons? simultanées?/i.test(`${item.title} ${item.group || ""}`)).map(existingTask);
+  const existingStorageTasks = existingItems.filter((item) => /conservation|congél|congel|frigo|réfrigér|refriger|assemblage|jour j|montage|finition|servir/i.test(`${item.title} ${item.group || ""}`)).map(existingTask);
   const vegetablePattern = /courgette|carotte|tomate|poivron|oignon|échalote|echalote|poireau|champignon|brocoli|chou|épinard|epinard|concombre|pomme de terre|patate douce|aubergine|céleri|celeri|radis|navet|asperge|ail|herbes|salade/i;
   const prepTasks: Task[] = useMemo(() => {
     const ingredients = recipes.flatMap(({ recipe }) => (recipe?.ingredients || []).filter((ingredient) => vegetablePattern.test(ingredient)));
@@ -89,7 +98,10 @@ export default function BatchPage() {
     detail: `${prettyDay(slot.day)} soir : répartir en portions dans des contenants propres et fermés. Refroidir rapidement. Si le repas n'est pas prévu dans les 3 jours, congeler dès refroidissement et décongeler au réfrigérateur. Réfrigérateur : 3 jours maximum.`,
     group: `${prettyDay(slot.day)} · ${slot.meal}`,
   }));
-  const tasks = [...prepTasks, ...cookTasks, ...assemblyTasks];
+  const combinedPrepTasks = [...prepTasks, ...existingPrepTasks];
+  const combinedCookTasks = [...cookTasks, ...existingCookTasks];
+  const combinedAssemblyTasks = [...assemblyTasks, ...existingStorageTasks];
+  const tasks = [...combinedPrepTasks, ...combinedCookTasks, ...combinedAssemblyTasks];
   const done = tasks.filter((task) => checked[task.id]).length;
   const progress = tasks.length ? Math.round(done / tasks.length * 100) : 0;
   const prepMinutes = recipes.reduce((sum, entry) => sum + minutes(entry.recipe?.timePrep), 0);
@@ -149,15 +161,15 @@ export default function BatchPage() {
         </div>
         <div id="etape-decoupes" className="space-y-3">
           <div><h3 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Étape 1 — Les découpes</h3><p className="text-sm text-[#555551]">Regroupez les découpes de la semaine avant de lancer les cuissons. Chaque élément a sa propre case.</p></div>
-          {taskList(prepTasks)}
+          {taskList(combinedPrepTasks)}
         </div>
         <div className="border-t border-[#E9E9E4] pt-4">
           <div className="mb-3"><h3 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Étape 2 — Les cuissons multi-feux + timers</h3><p className="text-sm text-[#555551]">Lancez les cuissons compatibles en parallèle. Respectez les températures, durées et réglages écrits dans chaque fiche.</p></div>
-          {taskList(cookTasks)}
+          {taskList(combinedCookTasks)}
         </div>
         <div className="border-t border-[#E9E9E4] pt-4">
           <div className="mb-3"><h3 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Étape 3 — L'assemblage / stockage</h3><p className="text-sm text-[#555551]">Répartissez les portions, fermez et étiquetez les contenants. Réfrigérateur : 3 jours maximum ; congelez les portions destinées à plus tard.</p></div>
-          {taskList(assemblyTasks)}
+          {taskList(combinedAssemblyTasks)}
         </div>
       </section>
 
