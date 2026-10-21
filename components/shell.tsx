@@ -11,10 +11,10 @@ import { BASE_PATH } from "@/lib/base-path";
 const NAV = [
   { href: "/semaine", label: "Semaine", icon: CalendarDays, color: "#203552", activeText: "#FFFFFF" },
   { href: "/recettes", label: "Recettes", icon: UtensilsCrossed, color: "#D6B86A", activeText: "#302400" },
-  { href: "/batch", label: "Batch", icon: CookingPot, color: "#F05B4E", activeText: "#FFFFFF" },
   { href: "/courses", label: "Courses", icon: ShoppingCart, color: "#83D6B0", activeText: "#173C2C" },
-  { href: "/compte", label: "Mon compte", icon: UserRound, color: "#383B3A", activeText: "#FFFFFF" },
+  { href: "/batch", label: "Batch", icon: CookingPot, color: "#F05B4E", activeText: "#FFFFFF" },
   { href: "/mes-recettes?tab=favoris", label: "Mes recettes", icon: BookHeart, color: "#D6B86A", activeText: "#302400" },
+  { href: "/compte", label: "Mon compte", icon: UserRound, color: "#383B3A", activeText: "#383B3A" },
 ];
 
 export function Shell({ children }: { children: React.ReactNode }) {
@@ -37,6 +37,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <div className="mx-auto grid max-w-3xl grid-cols-6 gap-0.5 px-1">
           {NAV.map((item) => {
             const Icon = item.icon;
+            const isAccount = item.href === "/compte";
             const href = `${item.href}${item.href.startsWith("/mes-recettes") ? "" : item.href === "/recettes" ? "" : weekQuery}`;
             const active =
               item.href === "/semaine"
@@ -51,8 +52,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 key={item.href}
                 href={href}
                 aria-current={active ? "page" : undefined}
-                className={`flex min-h-16 min-w-0 flex-col items-center justify-center gap-1 rounded-xl px-0.5 text-[10px] font-bold leading-tight transition-colors sm:text-xs ${active ? "shadow-sm" : "hover:bg-black/5"}`}
-                style={{ backgroundColor: active ? item.color : "transparent", color: active ? item.activeText : item.color }}
+                className={`flex min-h-16 min-w-0 flex-col items-center justify-center gap-1 rounded-xl px-0.5 text-[10px] font-bold leading-tight transition-colors sm:text-xs ${active && !isAccount ? "shadow-sm" : !active ? "hover:bg-black/5" : ""}`}
+                style={{ backgroundColor: active && !isAccount ? item.color : "transparent", color: isAccount ? (active ? item.activeText : "#8A8D8C") : active ? item.activeText : item.color }}
               >
                 <Icon className="size-5 shrink-0 sm:size-6" />
                 {item.label}
@@ -64,4 +65,3 @@ export function Shell({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
