@@ -39,7 +39,6 @@ export default function CoursesPage() {
   const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences).map((item) => ({
     id: `${item.aisle}|${item.label}`,
     title: item.label,
-    detail: item.recipes.join(" · "),
     group: item.aisle,
   }));
 
