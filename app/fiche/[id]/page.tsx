@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CookingWakeLock } from "@/components/cooking-wake-lock";
 import { ListenStep } from "@/components/listen-step";
+import { CookingTimerText } from "@/components/cooking-timer-text";
 import { RecipeTools } from "@/components/recipe-tools";
 import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 import { displayRecipe } from "@/lib/recipe-display";
@@ -69,7 +70,7 @@ export default async function FichePage({
             ))}
           </div>
         )}
-        <div>{linkedInstruction(step)}<ListenStep text={step} /></div>
+        <div><CookingTimerText text={step} /><ListenStep text={step} /></div>
       </div>
     );
   }
@@ -110,7 +111,7 @@ export default async function FichePage({
               <ul className="mt-2 divide-y">
                 {sec.lines.map((line, li) => (
                   <li key={`${si}-${li}`} className="py-2 text-sm leading-relaxed">
-                    {linkedInstruction(line)}
+                    <CookingTimerText text={line} />
                   </li>
                 ))}
               </ul>
