@@ -4,6 +4,7 @@ import { carnet, getCollections } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 import { VeganNavigation } from "@/components/vegan-navigation";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -108,6 +109,7 @@ export default function RecettesPage() {
         <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">{CATEGORY_COPY[filter] || CATEGORY_COPY[""]}</p>
         <p className="mt-1 text-xs text-muted-foreground">{filter ? `${recipes.length} résultat(s) dans cette sélection.` : "Tape un plat ou un ingrédient pour retrouver une fiche."}</p>
       </div>
+      <Link href="/mes-recettes" className="flex min-h-12 items-center justify-center rounded-xl bg-[#D0DBCE] px-4 py-3 text-center text-sm font-bold text-[#2B2B2B] shadow-sm transition hover:shadow-md">Créer ou importer mes recettes personnelles →</Link>
       <div className="flex flex-wrap items-center gap-2">
         {[15, 30, 45].map((minutes) => {
           const active = maxDuration === minutes;
@@ -130,3 +132,4 @@ export default function RecettesPage() {
     </div>
   );
 }
+
