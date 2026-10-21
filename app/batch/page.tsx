@@ -192,6 +192,19 @@ export default function BatchPage() {
     window.speechSynthesis.speak(utterance);
   }
 
+  function goToPreviousStep() {
+    const previous = Math.max(0, voiceIndex - 1);
+    setVoiceIndex(previous);
+    const task = tasks[previous];
+    if (voiceIndex === 0) {
+      setVoiceStatus("Vous êtes déjà à la première étape.");
+      speak("Vous êtes déjà à la première étape.");
+      return;
+    }
+    setVoiceStatus(`Retour à l’étape ${previous + 1} sur ${tasks.length} : ${task?.title || ""}`);
+    speak(`Étape précédente. ${task?.title || ""}. ${task?.detail || ""}. ${task?.timer || ""}`);
+  }
+
   function stopVoiceMode() {
     recognitionRef.current?.stop();
     recognitionRef.current = null;
@@ -322,7 +335,7 @@ export default function BatchPage() {
         <div className="flex flex-wrap gap-2">
           {!voiceMode ? <button type="button" onClick={startVoiceMode} className="rounded-xl bg-[#8FA89B] px-4 py-3 font-extrabold text-white shadow-sm">🎙️ Activer le mode mains libres</button> : <button type="button" onClick={stopVoiceMode} className="rounded-xl bg-[#D98A6C] px-4 py-3 font-extrabold text-white shadow-sm">⏹ Arrêter le mode vocal</button>}
           <button type="button" onClick={() => { setVoiceIndex((index) => { const next = Math.min(index + 1, Math.max(0, tasks.length - 1)); if (tasks[next]) speak(tasks[next].title); return next; }); }} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">Étape suivante</button>
-          <button type="button" onClick={() => { setVoiceIndex((index) => { const previous = Math.max(0, index - 1); if (tasks[previous]) speak(`Étape précédente. ${tasks[previous].title}. ${tasks[previous].detail || ""}`); return previous; }); }} disabled={voiceIndex === 0} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B] disabled:cursor-not-allowed disabled:opacity-40">← Précédent</button>
+          <button type="button" onClick={goToPreviousStep} aria-label="Revenir à l’étape précédente" className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">← Précédent</button>
           <button type="button" onClick={() => speak(currentVoiceTask ? `${currentVoiceTask.title}. ${currentVoiceTask.detail || ""}. ${currentVoiceTask.timer || ""}` : "Aucune étape disponible.")} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">🔊 Répéter</button>
         </div>
         <p aria-live="polite" className="rounded-xl bg-white p-3 text-sm font-semibold text-[#2B2B2B]">{voiceStatus}</p>
