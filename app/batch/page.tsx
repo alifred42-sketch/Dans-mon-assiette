@@ -2,11 +2,19 @@
 
 import { displayRecipe } from "@/lib/recipe-display";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { WeekPicker } from "@/components/week-picker";
 
 type Task = { id: string; title: string; detail?: string; timer?: string; group?: string };
+type VoiceRecognition = {
+  lang: string; continuous: boolean; interimResults: boolean;
+  onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript: string }>> }) => void) | null;
+  onerror: ((event: { error?: string }) => void) | null;
+  onend: (() => void) | null;
+  start: () => void; stop: () => void;
+};
+type VoiceWindow = Window & { SpeechRecognition?: new () => VoiceRecognition; webkitSpeechRecognition?: new () => VoiceRecognition };
 
 function minutes(value?: string): number {
   if (!value) return 0;
@@ -31,7 +39,7 @@ export default function BatchPage() {
   const [preferences, setPreferences] = useState<PlanningPreferences>({});
   const [robotPriority, setRobotPriority] = useState(false);
   const [checked, setChecked] = useState<Record<string, boolean>>({});
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = useState(false);\n  const [voiceMode, setVoiceMode] = useState(false);\n  const [voiceStatus, setVoiceStatus] = useState("Mode mains libres désactivé");\n  const [voiceIndex, setVoiceIndex] = useState(0);\n  const recognitionRef = useRef<VoiceRecognition | null>(null);
 
   useEffect(() => setWeek(clampWeek(requestedWeek ?? String(currentIsoWeek()))), [requestedWeek]);
   useEffect(() => {
@@ -109,6 +117,83 @@ export default function BatchPage() {
   const totalMinutes = prepMinutes + cookMinutes;
   const separateMinutes = recipes.reduce((sum, entry) => sum + minutes(entry.recipe?.timePrep) + minutes(entry.recipe?.timeCook), 0);
   const savedMinutes = Math.max(0, separateMinutes - totalMinutes);
+  const currentVoiceTask = tasks[Math.min(voiceIndex, Math.max(0, tasks.length - 1))];
+
+  function speak(text: string) {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "fr-FR";
+    window.speechSynthesis.speak(utterance);
+  }
+
+  function stopVoiceMode() {
+    recognitionRef.current?.stop();
+    recognitionRef.current = null;
+    setVoiceMode(false);
+    setVoiceStatus("Mode mains libres désactivé");
+    if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
+  }
+
+  function startVoiceMode() {
+    const VoiceRecognitionConstructor = (window as VoiceWindow).SpeechRecognition || (window as VoiceWindow).webkitSpeechRecognition;
+    if (!VoiceRecognitionConstructor) {
+      setVoiceStatus("La reconnaissance vocale n'est pas prise en charge par ce navigateur. Essayez Chrome ou Edge.");
+      return;
+    }
+    const recognition = new VoiceRecognitionConstructor();
+    recognition.lang = "fr-FR";
+    recognition.continuous = true;
+    recognition.interimResults = false;
+    recognition.onresult = (event) => {
+      const transcript = Array.from(event.results).map((result) => result[0]?.transcript || "").join(" ").toLocaleLowerCase("fr");
+      setVoiceStatus(`Commande entendue : « ${transcript} »`);
+      if (/étape suivante|etape suivante|suivant|continue|continuer/.test(transcript)) {
+        setVoiceIndex((index) => {
+          const next = Math.min(index + 1, Math.max(0, tasks.length - 1));
+          const task = tasks[next];
+          speak(next === index ? "Vous êtes déjà à la dernière étape." : `Étape suivante. ${task?.title || ""}. ${task?.detail || ""}. ${task?.timer || ""}`);
+          return next;
+        });
+      } else if (/étape précédente|etape precedente|précédent|precedent|retour/.test(transcript)) {
+        setVoiceIndex((index) => {
+          const previous = Math.max(0, index - 1);
+          speak(previous === index ? "Vous êtes déjà à la première étape." : `Étape précédente. ${tasks[previous]?.title || ""}.`);
+          return previous;
+        });
+      } else if (/répète|repete|répéter|repeter|redis/.test(transcript)) {
+        speak(currentVoiceTask ? `${currentVoiceTask.title}. ${currentVoiceTask.detail || ""}. ${currentVoiceTask.timer || ""}` : "Aucune étape disponible.");
+      } else if (/valide|valider|c'est fait|c est fait|terminé|termine/.test(transcript)) {
+        if (currentVoiceTask) {
+          setChecked((previous) => ({ ...previous, [currentVoiceTask.id]: true }));
+          speak(`Étape validée : ${currentVoiceTask.title}. Dites étape suivante pour continuer.`);
+        }
+      } else if (/arrête|arrete|stop|désactive|desactive/.test(transcript)) {
+        speak("J'arrête le mode mains libres.");
+        stopVoiceMode();
+      } else {
+        speak("Commande non reconnue. Dites étape suivante, étape précédente, répète, valide ou arrête.");
+      }
+    };
+    recognition.onerror = (event) => setVoiceStatus(event.error === "not-allowed" ? "Micro refusé : autorisez l'accès au micro dans votre navigateur." : `Reconnaissance vocale : ${event.error || "erreur"}`);
+    recognition.onend = () => {
+      if (recognitionRef.current === recognition) {
+        try { recognition.start(); } catch { /* arrêt ou redémarrage déjà en cours */ }
+      }
+    };
+    recognitionRef.current = recognition;
+    setVoiceIndex(0);
+    setVoiceMode(true);
+    setVoiceStatus("Micro activé — dites « étape suivante ».");
+    speak(currentVoiceTask ? `Mode mains libres activé. Première étape : ${tasks[0]?.title || currentVoiceTask.title}. Dites étape suivante pour avancer, valide pour cocher, répète pour réécouter, ou arrête pour quitter.` : "Mode mains libres activé, mais aucune tâche n'est disponible.");
+    try { recognition.start(); } catch { setVoiceStatus("Impossible de démarrer le micro. Réessayez."); }
+  }
+
+  useEffect(() => () => {
+    recognitionRef.current?.stop();
+    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+  }, []);
+
   const toggle = (id: string) => setChecked((previous) => ({ ...previous, [id]: !previous[id] }));
 
   function taskList(items: Task[]) {
@@ -136,6 +221,22 @@ export default function BatchPage() {
       </header>
       <WeekPicker week={week} path="/batch" />
       {robotPriority ? <p className="rounded-xl border border-[#8FA89B] bg-[#8FA89B]/15 p-3 text-sm font-bold text-[#2B2B2B]">🤖 Monsieur Cuisine activé : les réglages indiqués dans les fiches sont affichés en priorité.</p> : null}
+
+      <section aria-labelledby="handsfree-title" className="space-y-3 rounded-2xl border-2 border-[#8FA89B] bg-[#F4F7F2] p-4 shadow-sm">
+        <div>
+          <p className="text-xs font-extrabold uppercase tracking-widest text-[#668775]">En cuisine, les mains dans les ingrédients ?</p>
+          <h2 id="handsfree-title" className="font-heading text-xl font-extrabold text-[#1A1A1A]">🎙️ Mode mains libres</h2>
+          <p className="mt-1 text-sm text-[#555551]">Dites « étape suivante » pour avancer sans toucher l'écran. Le navigateur demandera l'autorisation du micro.</p>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {!voiceMode ? <button type="button" onClick={startVoiceMode} className="rounded-xl bg-[#8FA89B] px-4 py-3 font-extrabold text-white shadow-sm">🎙️ Activer le mode mains libres</button> : <button type="button" onClick={stopVoiceMode} className="rounded-xl bg-[#D98A6C] px-4 py-3 font-extrabold text-white shadow-sm">⏹ Arrêter le mode vocal</button>}
+          <button type="button" onClick={() => { setVoiceIndex((index) => { const next = Math.min(index + 1, Math.max(0, tasks.length - 1)); if (tasks[next]) speak(tasks[next].title); return next; }); }} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">Étape suivante</button>
+          <button type="button" onClick={() => speak(currentVoiceTask ? `${currentVoiceTask.title}. ${currentVoiceTask.detail || ""}. ${currentVoiceTask.timer || ""}` : "Aucune étape disponible.")} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">🔊 Répéter</button>
+        </div>
+        <p aria-live="polite" className="rounded-xl bg-white p-3 text-sm font-semibold text-[#2B2B2B]">{voiceStatus}</p>
+        {currentVoiceTask ? <div className="rounded-xl border border-[#8FA89B]/50 bg-white p-3"><p className="text-xs font-bold uppercase tracking-wide text-[#668775]">Étape vocale {Math.min(voiceIndex + 1, tasks.length)} / {tasks.length}</p><p className="mt-1 font-extrabold text-[#2B2B2B]">{currentVoiceTask.title}</p>{currentVoiceTask.timer ? <p className="mt-1 font-bold text-[#8C4C34]">{currentVoiceTask.timer}</p> : null}<p className="mt-1 text-sm text-[#555551]">{currentVoiceTask.detail || ""}</p></div> : null}
+        <p className="text-xs leading-relaxed text-[#555551]">Commandes vocales : « étape suivante », « étape précédente », « répète », « valide » et « arrête ». Fonctionne avec les navigateurs compatibles avec la reconnaissance vocale, généralement Chrome ou Edge. Le mode vocal nécessite une autorisation micro et une connexion sécurisée (HTTPS).</p>
+      </section>
 
       <section aria-labelledby="batch-dashboard" className="space-y-4 rounded-2xl border-2 border-[#8FA89B] bg-[#F4F7F2] p-4 shadow-sm">
         <div>
