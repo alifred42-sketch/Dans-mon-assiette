@@ -3,7 +3,7 @@
 import { displayRecipe } from "@/lib/recipe-display";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
+import { clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { WeekPicker } from "@/components/week-picker";
 
 type Task = { id: string; title: string; detail?: string; timer?: string; group?: string };
