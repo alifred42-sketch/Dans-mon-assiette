@@ -91,7 +91,9 @@ function kindStyle(value: string) {
 export default function BatchPage() {
   const search = useSearchParams();
   const requestedWeek = search.get("w");
-  const [week, setWeek] = useState(() => clampWeek(requestedWeek ?? String(currentIsoWeek())));
+  const manualWeek = search.get("manual") === "1";
+  const [currentWeek, setCurrentWeek] = useState(() => currentIsoWeek());
+  const week = manualWeek && requestedWeek ? clampWeek(requestedWeek) : currentWeek;
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
   const [preferences, setPreferences] = useState<PlanningPreferences>({});
   const [robotPriority, setRobotPriority] = useState(false);
@@ -103,7 +105,18 @@ export default function BatchPage() {
   const [activeTimers, setActiveTimers] = useState<Record<string, number>>({});
   const recognitionRef = useRef<VoiceRecognition | null>(null);
 
-  useEffect(() => setWeek(clampWeek(requestedWeek ?? String(currentIsoWeek()))), [requestedWeek]);
+  useEffect(() => {
+    const refreshCurrentWeek = () => {
+      if (search.get("manual") !== "1") setCurrentWeek(currentIsoWeek());
+    };
+    refreshCurrentWeek();
+    window.addEventListener("focus", refreshCurrentWeek);
+    document.addEventListener("visibilitychange", refreshCurrentWeek);
+    return () => {
+      window.removeEventListener("focus", refreshCurrentWeek);
+      document.removeEventListener("visibilitychange", refreshCurrentWeek);
+    };
+  }, [search]);
   useEffect(() => {
     const refresh = () => {
       try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); }
