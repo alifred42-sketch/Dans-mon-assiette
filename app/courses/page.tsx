@@ -9,7 +9,21 @@ import { WeekPicker } from "@/components/week-picker";
 export default function CoursesPage() {
   const search = useSearchParams();
   const requestedWeek = search.get("w");
-  const week = requestedWeek ? clampWeek(requestedWeek) : currentIsoWeek();
+  const manualWeek = search.get("manual") === "1";
+  const [currentWeek, setCurrentWeek] = useState(() => currentIsoWeek());
+  const week = manualWeek && requestedWeek ? clampWeek(requestedWeek) : currentWeek;
+  useEffect(() => {
+    const refreshCurrentWeek = () => {
+      if (search.get("manual") !== "1") setCurrentWeek(currentIsoWeek());
+    };
+    refreshCurrentWeek();
+    window.addEventListener("focus", refreshCurrentWeek);
+    document.addEventListener("visibilitychange", refreshCurrentWeek);
+    return () => {
+      window.removeEventListener("focus", refreshCurrentWeek);
+      document.removeEventListener("visibilitychange", refreshCurrentWeek);
+    };
+  }, [search]);
   const [servingsByRecipe, setServingsByRecipe] = useState<Record<string, number>>({});
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
   const [preferences, setPreferences] = useState<PlanningPreferences>({});
