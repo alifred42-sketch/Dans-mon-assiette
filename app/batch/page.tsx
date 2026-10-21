@@ -1,211 +1,184 @@
 "use client";
 
 import { displayRecipe } from "@/lib/recipe-display";
-import { BATCH_GUIDES } from "@/data/batch-guides";
-
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-
+import { useEffect, useMemo, useState } from "react";
 import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
-import { CheckList, type CheckItem } from "@/components/check-list";
 import { WeekPicker } from "@/components/week-picker";
 
-function matches(item: CheckItem, pattern: RegExp) {
-  return pattern.test(`${item.group || ""} ${item.title}`);
+type Task = { id: string; title: string; detail?: string; timer?: string; group?: string };
+
+function minutes(value?: string): number {
+  if (!value) return 0;
+  const text = value.toLocaleLowerCase("fr");
+  const hours = Number(text.match(/(\d+)\s*(?:h|heure)/)?.[1] || 0);
+  const mins = Number(text.match(/(\d+)\s*(?:min|minute)/)?.[1] || 0);
+  return hours * 60 + mins;
 }
+function durationLabel(total: number): string {
+  const safe = Math.max(0, Math.round(total));
+  const h = Math.floor(safe / 60);
+  const m = safe % 60;
+  return h ? (m ? `${h} h ${m.toString().padStart(2, "0")}` : `${h} h`) : `${m} min`;
+}
+function prettyDay(day: string) { return day.charAt(0) + day.slice(1).toLowerCase(); }
 
 export default function BatchPage() {
   const search = useSearchParams();
   const requestedWeek = search.get("w");
   const [week, setWeek] = useState(() => clampWeek(requestedWeek ?? String(currentIsoWeek())));
-  useEffect(() => {
-    setWeek(clampWeek(requestedWeek ?? String(currentIsoWeek())));
-  }, [requestedWeek]);
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
   const [preferences, setPreferences] = useState<PlanningPreferences>({});
   const [robotPriority, setRobotPriority] = useState(false);
+  const [checked, setChecked] = useState<Record<string, boolean>>({});
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => setWeek(clampWeek(requestedWeek ?? String(currentIsoWeek()))), [requestedWeek]);
   useEffect(() => {
-    const refresh = () => { try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); } try { const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}"); setPreferences(saved); setRobotPriority(Boolean(saved.robot)); } catch { setPreferences({}); setRobotPriority(false); } };
+    const refresh = () => {
+      try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); }
+      try {
+        const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
+        setPreferences(saved); setRobotPriority(Boolean(saved.robot));
+      } catch { setPreferences({}); setRobotPriority(false); }
+    };
     refresh();
     window.addEventListener("storage", refresh);
     window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
     window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
     return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
   }, []);
-  const changedPlan = weekPlan(week, recipeOverrides, preferences);
-  const allItems = batchForWeek(week, recipeOverrides, preferences).filter((item) => /protéine pivot|proteine pivot|féculent|feculent|soupe de saison|base soupe|base de saison/i.test(`${item.title} ${item.group || ""}`));
-  const assigned = new Set<string>();
-  function take(pattern: RegExp) {
-    const rows = allItems.filter((item) => !assigned.has(item.id) && matches(item, pattern));
-    rows.forEach((item) => assigned.add(item.id));
-    return rows;
-  }
-  const prep = take(/organisation|préparation|preparation|découpe|decoupe|laver|éplucher|eplucher|planche|féculent|feculent|protéine pivot|proteine pivot|base de saison|soupe de saison|base soupe/i);
-  const oven = take(/four|rôtir|rotir|gratin|cuisson au four|légumes rôtis|legumes rotis/i);
-  const robot = take(/robot|mr cuisine|monsieur cuisine|vitesse|mixage|cuisson vapeur|cuissons? simultanées?/i);
-  const storage = take(/conservation|congél|congel|frigo|réfrigér|refriger/i);
-  const assembly = take(/assemblage|jour j|montage|finition|servir/i);
-  const general = allItems.filter((item) => !assigned.has(item.id));
-  const dayName = (day: string) => day.charAt(0) + day.slice(1).toLowerCase();
-  const targetName = (slot: (typeof changedPlan)[number]) => {
-    const recipe = getRecipe(slot.recipeId);
-    return `${recipe?.name || slot.name} du ${dayName(slot.day)} ${slot.meal.toLowerCase()}`;
-  };
-  const targetText = (slots: typeof changedPlan) => `[Pour ${slots.map(targetName).join("; ")}]`;
-  const batchBasePlan = changedPlan.filter((slot) => (slot.day === "MARDI" && slot.meal === "Soir") || (slot.day === "MERCREDI" && slot.meal === "Soir"));
-  const recipeDetails = batchBasePlan.map((slot) => {
+  const storageKey = `cuisine-chic-ouf-batch-v2-${week}`;
+  useEffect(() => {
+    setReady(false);
+    try { setChecked(JSON.parse(localStorage.getItem(storageKey) || "{}")); } catch { setChecked({}); }
+    setReady(true);
+  }, [storageKey]);
+  useEffect(() => {
+    if (ready) { try { localStorage.setItem(storageKey, JSON.stringify(checked)); } catch { /* storage indisponible */ } }
+  }, [checked, ready, storageKey]);
+
+  const plan = weekPlan(week, recipeOverrides, preferences);
+  const baseSlots = plan.filter((slot) => (slot.day === "MARDI" && slot.meal === "Soir") || (slot.day === "MERCREDI" && slot.meal === "Soir"));
+  const recipes = baseSlots.map((slot) => {
     const source = getRecipe(slot.recipeId);
     return { slot, recipe: source ? displayRecipe(source) : undefined };
-  });
-  const prepGuides = recipeDetails.map(({ slot, recipe }) => {
-    const vegetables = (recipe?.ingredients || []).filter((ingredient) =>
-      /courgette|carotte|tomate|poivron|oignon|échalote|echalote|poireau|champignon|brocoli|chou|épinard|epinard|concombre|pomme de terre|patate douce|aubergine|céleri|celeri|radis|navet|asperge|ail|herbes/i.test(ingredient)
-    );
+  }).filter((entry) => entry.recipe);
+  const vegetablePattern = /courgette|carotte|tomate|poivron|oignon|échalote|echalote|poireau|champignon|brocoli|chou|épinard|epinard|concombre|pomme de terre|patate douce|aubergine|céleri|celeri|radis|navet|asperge|ail|herbes|salade/i;
+  const prepTasks: Task[] = useMemo(() => {
+    const ingredients = recipes.flatMap(({ recipe }) => (recipe?.ingredients || []).filter((ingredient) => vegetablePattern.test(ingredient)));
+    const unique = Array.from(new Set(ingredients));
+    if (!unique.length) return recipes.map(({ slot, recipe }) => ({ id: `prep-${slot.day}-${slot.meal}-${slot.recipeId}`, title: `Préparer et peser les ingrédients de ${recipe!.name}`, detail: "Suivre les quantités de la fiche recette." }));
+    return unique.map((ingredient) => ({ id: `cut-${ingredient.toLocaleLowerCase("fr")}`, title: ingredient, detail: "Laver et découper si nécessaire, puis placer dans un récipient propre." }));
+  }, [recipes]);
+  const cookTasks: Task[] = recipes.map(({ slot, recipe }, index) => {
+    const cookMinutes = minutes(recipe?.timeCook);
+    const cookingStep = recipe?.steps.find((step) => /cuire|cuisson|mijot|four|poêle|poele|casserole|bouillir|rôtir|rotir|chauffer|feu/i.test(step));
+    const timer = cookMinutes > 0 ? `Timer : ${cookMinutes} min` : "Timer : durée non renseignée — vérifier la fiche avant de démarrer";
     return {
-      id: `prep-guide-${slot.day}-${slot.meal}-${slot.recipeId}`,
-      title: vegetables.length ? `Laver puis émincer finement : ${vegetables.join(", ")}.` : BATCH_GUIDES.prep.fallback,
-      target: targetText([slot]),
-      group: "Découpes globales",
+      id: `cook-${slot.day}-${slot.meal}-${slot.recipeId}`,
+      title: `Feu ${index + 1} — ${recipe?.name || slot.name}`,
+      timer,
+      detail: [cookingStep, recipe?.robot?.length ? `Option Monsieur Cuisine : ${recipe.robot.join(" → ")}` : ""].filter(Boolean).join(" "),
+      group: "Cuissons en parallèle",
     };
   });
-  const ovenDetails = recipeDetails.filter(({ recipe }) =>
-    recipe && /four|gratin|rôtir|rotir|plaque de cuisson|cuisson au four|180 ?°|200 ?°/i.test([recipe.name, ...recipe.steps].join(" "))
-  );
-  const ovenGuides = ovenDetails.map(({ slot, recipe }) => ({
-    id: `oven-guide-${slot.day}-${slot.meal}-${recipe?.id || slot.recipeId}`,
-    title: BATCH_GUIDES.oven.action,
-    detail: recipe?.steps.find((step) => /four|gratin|rôtir|rotir|plaque|°/i.test(step)) || undefined,
-    target: targetText([slot]),
-    group: "Optimisation du four",
+  const assemblyTasks: Task[] = recipes.map(({ slot, recipe }) => ({
+    id: `assembly-${slot.day}-${slot.meal}-${slot.recipeId}`,
+    title: `Assembler et étiqueter — ${recipe!.name}`,
+    detail: `${prettyDay(slot.day)} soir : répartir en portions dans des contenants propres et fermés. Refroidir rapidement. Si le repas n'est pas prévu dans les 3 jours, congeler dès refroidissement et décongeler au réfrigérateur. Réfrigérateur : 3 jours maximum.`,
+    group: `${prettyDay(slot.day)} · ${slot.meal}`,
   }));
-  const robotGuides = recipeDetails.map(({ slot, recipe }) => ({
-    id: `robot-guide-${slot.day}-${slot.meal}-${recipe?.id || slot.recipeId}`,
-    title: recipe?.robot?.length ? "PESER LES INGRÉDIENTS, INSTALLER L’ACCESSOIRE ET SUIVRE LES RÉGLAGES." : BATCH_GUIDES.robot.fallback.toUpperCase(),
-    detail: recipe?.robot?.length ? recipe.robot.join(" → ").toUpperCase() : undefined,
-    target: targetText([slot]),
-    group: "Dans mon Monsieur Cuisine",
-  }));
-  const storageGuides = recipeDetails.filter(({ slot }) => ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"].includes(dayName(slot.day))).map(({ slot, recipe }) => ({
-    id: `storage-guide-${slot.day}-${slot.meal}-${recipe?.id || slot.recipeId}`,
-    title: `${dayName(slot.day)} — ${getRecipe(slot.recipeId)?.name || slot.name} : ${/lundi|mardi|mercredi/i.test(slot.day) ? "BOÎTE HERMÉTIQUE AU RÉFRIGÉRATEUR" : "BAC ÉTIQUETÉ AU CONGÉLATEUR"}`,
-    target: targetText([slot]),
-    group: `${String(["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"].indexOf(dayName(slot.day)) + 1).padStart(2, "0")} ${dayName(slot.day)}`,
-  }));
-  const assemblyGuides = Array.from(new Set(recipeDetails.map(({ slot }) => slot.day))).map((day) => {
-    const daySlots = recipeDetails.filter(({ slot }) => slot.day === day).map(({ slot }) => slot);
-    return {
-      id: `assembly-guide-${day}`,
-      title: "RÉCHAUFFER LA PORTION. ASSEMBLER. AJOUTER LES HERBES, SAUCE OU GARNITURE AU DERNIER MOMENT.",
-      target: targetText(daySlots),
-      group: dayName(day),
-    };
-  });
-  const withTargets = (items: CheckItem[], slots: typeof changedPlan): CheckItem[] =>
-    items.map((item) => ({ ...item, target: targetText(slots) }));
+  const tasks = [...prepTasks, ...cookTasks, ...assemblyTasks];
+  const done = tasks.filter((task) => checked[task.id]).length;
+  const progress = tasks.length ? Math.round(done / tasks.length * 100) : 0;
+  const prepMinutes = recipes.reduce((sum, entry) => sum + minutes(entry.recipe?.timePrep), 0);
+  const cookMinutes = recipes.reduce((sum, entry) => Math.max(sum, minutes(entry.recipe?.timeCook)), 0);
+  const totalMinutes = prepMinutes + cookMinutes;
+  const separateMinutes = recipes.reduce((sum, entry) => sum + minutes(entry.recipe?.timePrep) + minutes(entry.recipe?.timeCook), 0);
+  const savedMinutes = Math.max(0, separateMinutes - totalMinutes);
+  const toggle = (id: string) => setChecked((previous) => ({ ...previous, [id]: !previous[id] }));
+
+  function taskList(items: Task[]) {
+    if (!items.length) return <p className="rounded-xl bg-[#F9F9F7] p-3 text-sm text-[#555551]">Aucune tâche disponible à partir des fiches de cette semaine.</p>;
+    return <ul className="space-y-2">{items.map((task) => (
+      <li key={task.id} className={checked[task.id] ? "rounded-xl border border-[#8FA89B]/40 bg-[#8FA89B]/10" : "rounded-xl border border-[#E9E9E4] bg-white"}>
+        {task.group ? <p className="rounded-t-xl bg-[#E6DFD3] px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#2B2B2B]">{task.group}</p> : null}
+        <label className="flex cursor-pointer items-start gap-3 p-3">
+          <input type="checkbox" className="mt-1 size-6 shrink-0 accent-[#8FA89B]" checked={Boolean(checked[task.id])} onChange={() => toggle(task.id)} />
+          <span className="min-w-0 flex-1">
+            <span className={checked[task.id] ? "block font-semibold text-[#668775] line-through" : "block font-semibold text-[#2B2B2B]"}>{task.title}</span>
+            {task.timer ? <span className="mt-2 inline-flex rounded-lg bg-[#D98A6C]/15 px-3 py-1 text-sm font-extrabold text-[#8C4C34]">⏱ {task.timer}</span> : null}
+            {task.detail ? <span className="mt-2 block text-sm leading-relaxed text-[#555551]">{task.detail}</span> : null}
+          </span>
+        </label>
+      </li>
+    ))}</ul>;
+  }
 
   return (
     <div className="space-y-5">
-      <div>
-        <h1 className="font-heading text-3xl">Batchcooking</h1>
-        <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">Enfilez votre tablier, allumez les feux (ou votre robot). 2 heures de cuisine le dimanche pour 7 jours de liberté.</p>
-      </div>
+      <header>
+        <h1 className="font-heading text-3xl">Batch Cooking</h1>
+        <p className="mt-1 text-sm leading-relaxed text-[#2B2B2B]">Un fil conducteur en 3 sections pour préparer les bases prévues, cuisiner en parallèle et ranger chaque portion sereinement.</p>
+      </header>
       <WeekPicker week={week} path="/batch" />
-      {robotPriority ? <a href="#mode-cuisson-robot" className="flex items-center gap-3 rounded-2xl border-2 border-[#8FA89B] bg-[#8FA89B]/20 p-4 text-sm font-extrabold text-[#1A1A1A] shadow-[3px_4px_10px_rgba(26,26,26,0.08)]">🤖 Robot Monsieur Cuisine activé — consignes robot en priorité <span className="ml-auto">↓</span></a> : null}
-      <section className="rounded-2xl border-2 border-[#8FA89B] bg-[#F4F7F2] p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#1A1A1A]">✅ Batchcooking des bases chaudes</h2>
-        <p className="mt-1 text-sm leading-relaxed text-[#2B2B2B]">Le dimanche, préparez uniquement les bases réellement réutilisées : la protéine pivot, le féculent et la soupe de saison. Les autres repas se terminent au moment de servir.</p>
-        <div className="mt-3 grid grid-cols-2 gap-2 text-sm font-bold sm:grid-cols-5">
-          <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-decoupe">🔪 Découpe</a>
-          <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-cuisson-four">🔥 Four / feu</a>
-          <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-cuisson-robot">🤖 Robot</a>
-          <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-stockage">📦 Stockage</a>
-          <a className="rounded-xl bg-white p-2 text-center text-[#2B2B2B] shadow-sm" href="#mode-jour-j">🍽️ Jour J</a>
+      {robotPriority ? <p className="rounded-xl border border-[#8FA89B] bg-[#8FA89B]/15 p-3 text-sm font-bold text-[#2B2B2B]">🤖 Monsieur Cuisine activé : les réglages indiqués dans les fiches sont affichés en priorité.</p> : null}
+
+      <section aria-labelledby="batch-dashboard" className="space-y-4 rounded-2xl border-2 border-[#8FA89B] bg-[#F4F7F2] p-4 shadow-sm">
+        <div>
+          <p className="text-xs font-extrabold uppercase tracking-widest text-[#668775]">Section 1</p>
+          <h2 id="batch-dashboard" className="font-heading text-xl font-extrabold text-[#1A1A1A]">⏱️ Le dashboard du temps</h2>
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="rounded-xl bg-white p-3"><p className="text-xs text-[#555551]">Temps total estimé</p><p className="mt-1 text-2xl font-extrabold text-[#2B2B2B]">{durationLabel(totalMinutes)}</p></div>
+          <div className="rounded-xl bg-white p-3"><p className="text-xs text-[#555551]">Étapes validées</p><p className="mt-1 text-2xl font-extrabold text-[#2B2B2B]">{done}/{tasks.length}</p></div>
+        </div>
+        <div>
+          <div className="mb-2 flex justify-between text-sm font-bold text-[#2B2B2B]"><span>Progression de la session</span><span>{progress}%</span></div>
+          <div role="progressbar" aria-label="Progression du batch cooking" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress} className="h-4 overflow-hidden rounded-full bg-white ring-1 ring-[#8FA89B]/50"><div className="h-full rounded-full bg-[#8FA89B] transition-all duration-300" style={{ width: `${progress}%` }} /></div>
+          <p className="mt-2 text-xs text-[#555551]">La jauge progresse à chaque case cochée et conserve votre avancement pour cette semaine sur cet appareil.</p>
         </div>
       </section>
-      <section id="mode-decoupe" className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🔪 Le mode découpe</h2>
-        <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.prep.intro}</p>
-        <CheckList storageKey={`assiette-batch-prep-guides-${week}`} items={prepGuides} />
-        {prep.length ? <CheckList storageKey={`assiette-batch-prep-${week}`} items={withTargets(prep, changedPlan)} /> : null}
+
+      <section aria-labelledby="batch-conductor" className="space-y-5 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
+        <div>
+          <p className="text-xs font-extrabold uppercase tracking-widest text-[#D98A6C]">Section 2</p>
+          <h2 id="batch-conductor" className="font-heading text-xl font-extrabold text-[#1A1A1A]">🧑‍🍳 Le fil conducteur en parallèle</h2>
+          <p className="mt-1 text-sm text-[#555551]">Suivez les étapes dans l'ordre. Les temps affichés viennent des fiches disponibles ; lorsqu'un temps manque, il est signalé plutôt qu'inventé.</p>
+        </div>
+        <div id="etape-decoupes" className="space-y-3">
+          <div><h3 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Étape 1 — Les découpes</h3><p className="text-sm text-[#555551]">Regroupez les découpes de la semaine avant de lancer les cuissons. Chaque élément a sa propre case.</p></div>
+          {taskList(prepTasks)}
+        </div>
+        <div className="border-t border-[#E9E9E4] pt-4">
+          <div className="mb-3"><h3 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Étape 2 — Les cuissons multi-feux + timers</h3><p className="text-sm text-[#555551]">Lancez les cuissons compatibles en parallèle. Respectez les températures, durées et réglages écrits dans chaque fiche.</p></div>
+          {taskList(cookTasks)}
+        </div>
+        <div className="border-t border-[#E9E9E4] pt-4">
+          <div className="mb-3"><h3 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Étape 3 — L'assemblage / stockage</h3><p className="text-sm text-[#555551]">Répartissez les portions, fermez et étiquetez les contenants. Réfrigérateur : 3 jours maximum ; congelez les portions destinées à plus tard.</p></div>
+          {taskList(assemblyTasks)}
+        </div>
       </section>
-      <section id="mode-cuisson-four" className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Le mode cuisson — Au Four / Sur le feu</h2>
-        <p className="text-sm text-muted-foreground">{BATCH_GUIDES.oven.intro}</p>
-        {ovenGuides.length ? <CheckList storageKey={`assiette-batch-oven-guides-${week}`} items={ovenGuides} /> : <p className="text-sm">Aucune recette sélectionnée ne mentionne de cuisson au four dans sa fiche. Ne lancez pas de cuisson au four sans consigne adaptée.</p>}
-        {oven.length ? <CheckList storageKey={`assiette-batch-oven-${week}`} items={withTargets(oven, ovenDetails.length ? ovenDetails.map(({ slot }) => slot) : changedPlan)} /> : null}
+
+      <section aria-labelledby="batch-victory" className="space-y-3 rounded-2xl border-2 border-[#D98A6C]/40 bg-[#F3C6B1]/30 p-4 shadow-sm">
+        <p className="text-xs font-extrabold uppercase tracking-widest text-[#8C4C34]">Section 3</p>
+        <h2 id="batch-victory" className="font-heading text-xl font-extrabold text-[#1A1A1A]">🏆 La victoire !</h2>
+        {progress === 100 && tasks.length > 0 ? (
+          <p className="text-base font-extrabold leading-relaxed text-[#2B2B2B]">Bravo ! Vous avez cuisiné pour toute la semaine et économisé {durationLabel(savedMinutes)} ! 🎉</p>
+        ) : (
+          <p className="text-base font-bold leading-relaxed text-[#2B2B2B]">Chaque case cochée vous rapproche de la victoire ! Il reste {tasks.length - done} étape(s) pour terminer votre session. Temps gagné estimé une fois la session terminée : {durationLabel(savedMinutes)}.</p>
+        )}
+        <div className="flex flex-wrap gap-2">
+          <span className="rounded-full bg-white px-3 py-1 text-sm font-bold text-[#2B2B2B]">Préparation groupée : {durationLabel(totalMinutes)}</span>
+          <span className="rounded-full bg-white px-3 py-1 text-sm font-bold text-[#2B2B2B]">Préparations séparées : {durationLabel(separateMinutes)}</span>
+        </div>
+        <p className="text-xs leading-relaxed text-[#555551]">Le gain est une estimation : temps de préparation additionnés, puis cuisson groupée estimée avec la cuisson la plus longue. Il dépend des recettes et des cuissons réellement compatibles.</p>
       </section>
-      <section id="mode-cuisson-robot" className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🤖 Le mode cuisson — Dans mon Monsieur Cuisine</h2>
-        <p className="text-sm text-muted-foreground">{BATCH_GUIDES.robot.intro}</p>
-        <CheckList storageKey={`assiette-batch-robot-guides-${week}`} items={robotGuides} />
-        {robot.length ? <CheckList storageKey={`assiette-batch-robot-${week}`} items={withTargets(robot, changedPlan)} /> : null}
+      <section className="space-y-2 rounded-2xl border border-[#E9E9E4] bg-white p-4">
+        <h2 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Recettes utilisées pour cette session</h2>
+        {recipes.length ? <ul className="space-y-2">{recipes.map(({ slot, recipe }) => <li key={`${slot.day}-${slot.meal}-${slot.recipeId}`} className="rounded-xl bg-[#F9F9F7] p-3"><p className="font-bold">{prettyDay(slot.day)} · {slot.meal} — {recipe!.name}</p><p className="mt-1 text-xs text-[#555551]">Préparation : {recipe!.timePrep || "non renseignée"} · Cuisson : {recipe!.timeCook || "non renseignée"}{recipe!.servings ? ` · ${recipe!.servings}` : ""}</p></li>)}</ul> : <p className="text-sm text-[#555551]">Aucune fiche repas disponible pour les bases prévues par le batch cooking de cette semaine. Aucune durée ni recette n'a été inventée.</p>}
       </section>
-      <section id="mode-stockage" className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">📦 Le mode stockage</h2>
-        <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.storage.intro}</p>
-        <CheckList storageKey={`assiette-batch-storage-guides-${week}`} items={storageGuides} />
-        {storage.length ? <CheckList storageKey={`assiette-batch-storage-${week}`} items={withTargets(storage, changedPlan)} /> : null}
-      </section>
-      <section id="mode-jour-j" className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#2B2B2B]">🍽️ Au moment de servir (le jour J)</h2>
-        {changedPlan.some((slot) => { const item = getRecipe(slot.recipeId); return item ? displayRecipe(item).name !== item.name : false; }) ? <p className="rounded-xl bg-[#F4EAD4] p-3 text-sm text-[#2B2B2B]"><strong>Assemblage Jour J :</strong> cuire les pâtes fraîches dans une grande casserole d’eau bouillante salée selon le temps indiqué sur le paquet, puis les mélanger à la sauce chaude juste avant de servir.</p> : null}
-        <p className="text-sm leading-relaxed text-muted-foreground">{BATCH_GUIDES.assembly.intro}</p>
-        <CheckList storageKey={`assiette-batch-assembly-guides-${week}`} items={assemblyGuides} />
-        {assembly.length ? <CheckList storageKey={`assiette-batch-assembly-${week}`} items={withTargets(assembly, changedPlan)} /> : null}
-      </section>
-      <section className="space-y-4 rounded-2xl border border-[#8FA89B]/40 bg-[#8FA89B]/10 p-4 shadow-sm">
-        <h2 className="font-heading text-xl font-extrabold text-[#1A1A1A]">📖 Les recettes, étape par étape</h2>
-        <p className="text-sm leading-relaxed text-[#2B2B2B]">Retrouvez ici les ingrédients et les étapes de chaque repas prévu. Cette liste suit automatiquement les recettes sélectionnées dans votre menu, y compris après un remplacement.</p>
-        {recipeDetails.map(({ slot }, i) => {
-          const sourceRecipe = getRecipe(slot.recipeId);
-          const recipe = sourceRecipe ? displayRecipe(sourceRecipe) : undefined;
-          if (!recipe) return (
-            <div key={`batch-recipe-missing-${slot.day}-${slot.meal}-${i}`} className="rounded-xl bg-white p-3">
-              <h3 className="font-bold text-[#1A1A1A]">{slot.day.charAt(0) + slot.day.slice(1).toLowerCase()} · {slot.meal} — {slot.name}</h3>
-              <p className="mt-1 text-sm text-[#555551]">La fiche complète de cette recette n’est pas disponible.</p>
-            </div>
-          );
-          return (
-            <article key={`batch-recipe-${slot.day}-${slot.meal}-${recipe.id}-${i}`} className="rounded-xl border border-[#E9E9E4] bg-white p-4">
-              <h3 className="font-bold text-[#1A1A1A]">{slot.day.charAt(0) + slot.day.slice(1).toLowerCase()} · {slot.meal} — {recipe.name}</h3>
-              {recipe.timePrep || recipe.timeCook || recipe.servings ? (
-                <p className="mt-1 text-xs text-[#555551]">{[recipe.timePrep ? `Préparation : ${recipe.timePrep}` : "", recipe.timeCook ? `Cuisson : ${recipe.timeCook}` : "", recipe.servings ? `Portions : ${recipe.servings}` : ""].filter(Boolean).join(" · ")}</p>
-              ) : null}
-              <div className="mt-3">
-                <h4 className="text-sm font-bold text-[#1A1A1A]">Ingrédients</h4>
-                {recipe.ingredients.length ? (
-                  <ul className="mt-1 list-disc space-y-1 pl-5 text-sm text-[#2B2B2B]">
-                    {recipe.ingredients.map((ingredient, j) => <li key={`ingredient-${recipe.id}-${j}`}>{ingredient}</li>)}
-                  </ul>
-                ) : <p className="mt-1 text-sm text-[#555551]">Ingrédients non renseignés dans la fiche.</p>}
-              </div>
-              <div className="mt-3">
-                <h4 className="text-sm font-bold text-[#1A1A1A]">Préparation</h4>
-                {recipe.steps.length ? (
-                  <ol className="mt-1 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-[#2B2B2B]">
-                    {recipe.steps.map((step, j) => <li key={`step-${recipe.id}-${j}`}>{step} <em>(pour {recipe.name} du {dayName(slot.day)} {slot.meal.toLowerCase()})</em></li>)}
-                  </ol>
-                ) : <p className="mt-1 text-sm text-[#555551]">Étapes de préparation non renseignées dans la fiche.</p>}
-              </div>
-              {recipe.robot?.length ? (
-                <div className="mt-3 rounded-lg bg-[#E5E7EB]/70 p-3">
-                  <h4 className="text-sm font-bold text-[#1A1A1A]">🤖 Monsieur Cuisine</h4>
-                  <ol className="mt-1 list-decimal space-y-1 pl-5 text-sm text-[#2B2B2B]">
-                    {recipe.robot.map((step, j) => <li key={`robot-${recipe.id}-${j}`}>{step} <em>(pour {recipe.name} du {dayName(slot.day)} {slot.meal.toLowerCase()})</em></li>)}
-                  </ol>
-                </div>
-              ) : null}
-            </article>
-          );
-        })}
-      </section>
-      <section className="space-y-2 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <h2 className="font-heading text-lg font-extrabold text-[#2B2B2B]">🍽️ Recettes prévues pour cette semaine</h2>
-        <p className="text-sm text-muted-foreground">Cette liste suit les recettes que vous avez choisies dans le menu.</p>
-        <ul className="list-disc space-y-1 pl-5 text-sm">{changedPlan.map((slot, i) => <li key={`${slot.day}-${slot.meal}-${i}`}><strong>{slot.day.charAt(0) + slot.day.slice(1).toLowerCase()} · {slot.meal} :</strong> {getRecipe(slot.recipeId)?.name || slot.name}</li>)}</ul>
-      </section>
-      {general.length ? <section className="space-y-2"><h2 className="font-heading text-lg font-bold">Autres tâches notées dans le carnet</h2><CheckList storageKey={`assiette-batch-general-${week}`} items={general} /></section> : null}
-      {allItems.length === 0 ? <p className="rounded-2xl bg-[#8FA89B]/10 p-4 text-sm text-[#466653]">Le carnet ne contient pas encore de tâches détaillées pour cette semaine. Utilisez le plan ci-dessus comme trame, et reportez les réglages précis depuis les fiches recettes.</p> : null}
     </div>
   );
 }
