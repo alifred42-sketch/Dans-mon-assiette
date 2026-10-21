@@ -36,16 +36,19 @@ function addIngredientQuantities(step: string | undefined, ingredients: string[]
   if (!step) return step;
   let result = step;
   for (const line of ingredients) {
-    const match = line.match(/^(\d+(?:[.,]\d+)?\s*(?:(?:c\.?\s*à\s*(?:soupe|café))|kg|g|mg|ml|cl|l|tranches?|gousses?|pincées?|branches?|feuilles?)?)\s+(?:(?:de|du|des|d\s*)\s*)?(.+)$/i);
+    const match = line.match(/^(\d+(?:[.,]\d+)?\s*(?:(?:c\.?\s*à\s*(?:soupe|café))|kg|g|mg|ml|cl|l|tranches?|gousses?|pincées?|branches?|feuilles?)?)\s+(?:(?:de|du|des|d)\s*)?(.+)$/i);
     if (!match) continue;
     const quantity = match[1].trim();
-    const ingredientName = match[2].replace(/[(),].*$/, '').trim();
+    const ingredientName = match[2].replace(/[(),].*$/, "").trim();
     const words = ingredientName.split(/\s+/).filter((word) => word.length > 3 && !/^(avec|pour|frais|fraîche|fraiche|concassées|concassees|râpé|rape|coupé|coupee)$/i.test(word));
     const candidates = [ingredientName, ...words].filter(Boolean).sort((a, b) => b.length - a.length);
     for (const candidate of candidates) {
-      const re = new RegExp('\\b(' + candidate.replace(/[.*+?^${}()|[\]\\]/g, '\\function prettyDay(day: string) { return day.charAt(0) + day.slice(1).toLowerCase(); }
-') + ')(?!\\s*\\([^)]*\\))', 'i');
-      if (re.test(result)) { result = result.replace(re, '$1 (' + quantity + ')'); break; }
+      const lower = result.toLocaleLowerCase("fr");
+      const index = lower.indexOf(candidate.toLocaleLowerCase("fr"));
+      if (index >= 0 && !/^\s*\([^)]*\)/.test(result.slice(index + candidate.length))) {
+        result = result.slice(0, index) + result.slice(index, index + candidate.length) + " (" + quantity + ")" + result.slice(index + candidate.length);
+        break;
+      }
     }
   }
   return result;
