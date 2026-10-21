@@ -12,7 +12,7 @@ import { SwitchMeal } from "@/components/switch-meal";
 export default function WeekPage() {
   const search = useSearchParams();
   const requestedWeek = search.get("w");
-  const [currentWeek] = useState(() => currentIsoWeek());
+  const [currentWeek, setCurrentWeek] = useState(() => currentIsoWeek());
   const [weekday, setWeekday] = useState(1);
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
   const [preferences, setPreferences] = useState<PlanningPreferences>({});
