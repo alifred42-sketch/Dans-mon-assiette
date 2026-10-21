@@ -32,6 +32,25 @@ function durationLabel(total: number): string {
 }
 function prettyDay(day: string) { return day.charAt(0) + day.slice(1).toLowerCase(); }
 
+function addIngredientQuantities(step: string | undefined, ingredients: string[] = []): string | undefined {
+  if (!step) return step;
+  let result = step;
+  for (const line of ingredients) {
+    const match = line.match(/^(\d+(?:[.,]\d+)?\s*(?:(?:c\.?\s*à\s*(?:soupe|café))|kg|g|mg|ml|cl|l|tranches?|gousses?|pincées?|branches?|feuilles?)?)\s+(?:(?:de|du|des|d\s*)\s*)?(.+)$/i);
+    if (!match) continue;
+    const quantity = match[1].trim();
+    const ingredientName = match[2].replace(/[(),].*$/, '').trim();
+    const words = ingredientName.split(/\s+/).filter((word) => word.length > 3 && !/^(avec|pour|frais|fraîche|fraiche|concassées|concassees|râpé|rape|coupé|coupee)$/i.test(word));
+    const candidates = [ingredientName, ...words].filter(Boolean).sort((a, b) => b.length - a.length);
+    for (const candidate of candidates) {
+      const re = new RegExp('\\b(' + candidate.replace(/[.*+?^${}()|[\]\\]/g, '\\function prettyDay(day: string) { return day.charAt(0) + day.slice(1).toLowerCase(); }
+') + ')(?!\\s*\\([^)]*\\))', 'i');
+      if (re.test(result)) { result = result.replace(re, '$1 (' + quantity + ')'); break; }
+    }
+  }
+  return result;
+}
+
 function ingredientKind(value: string): "vegetable" | "protein" | "starch" | "storage" | "equipment" | "other" {
   const text = value.toLocaleLowerCase("fr");
   if (/poulet|dinde|bœuf|boeuf|viande|poisson|saumon|cabillaud|œuf|oeuf|thon|jambon|protéine|proteine|crevette|porc|agneau|steak|maquereau/.test(text)) return "protein";
@@ -130,7 +149,7 @@ export default function BatchPage() {
   }, [recipes]);
   const cookTasks: Task[] = recipes.map(({ slot, recipe }, index) => {
     const cookMinutes = minutes(recipe?.timeCook);
-    const cookingStep = recipe?.steps.find((step) => /cuire|cuisson|mijot|four|poêle|poele|casserole|bouillir|rôtir|rotir|chauffer|feu/i.test(step));
+    const cookingStep = addIngredientQuantities(recipe?.steps.find((step) => /cuire|cuisson|mijot|four|poêle|poele|casserole|bouillir|rôtir|rotir|chauffer|feu/i.test(step)), recipe?.ingredients);
     const timer = cookMinutes > 0 ? `Lancer le minuteur · ${cookMinutes} min` : "Durée non renseignée — vérifier la fiche avant de démarrer";
     return {
       id: `cook-${slot.day}-${slot.meal}-${slot.recipeId}`,
