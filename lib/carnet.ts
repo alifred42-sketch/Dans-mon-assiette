@@ -1,5 +1,6 @@
 import data from "@/data/carnet.json";
-import pdfRecipeOverrides from "@/data/recettes-619.json";
+import pdfRecipeOverrides619 from "@/data/recettes-619.json";
+import pdfRecipeOverrides800 from "@/data/recettes-800.json";
 import { trendRecipes } from "@/data/recettes-tendances";
 import type { Breakfast, Carnet, Collection, PlanSlot, Recipe } from "./types";
 
@@ -125,17 +126,35 @@ function recipeMatchKey(value: string): string {
   return normalizedSeasonText(value).replace(/^[0-9]+\.\s*/, "").replace(/[^a-z0-9]+/g, " ").trim();
 }
 
-const pdfOverridesByName = new Map(
-  pdfRecipeOverrides.map((recipe) => [recipeMatchKey(recipe.name), recipe]),
-);
+type PdfRecipeEntry = {
+  recipe: (typeof pdfRecipeOverrides800)[number] | (typeof pdfRecipeOverrides619)[number];
+  source: "RECETTES 619.pdf" | "RECETTES 800.pdf";
+  id: string;
+};
 
-const matchedPdfNames = new Set<string>();
+const pdfRecipeEntries: PdfRecipeEntry[] = [
+  ...pdfRecipeOverrides800.map((recipe) => ({
+    recipe,
+    source: "RECETTES 800.pdf" as const,
+    id: recipe.id || `pdf-800-${recipe.sourceNumber}`,
+  })),
+  ...pdfRecipeOverrides619.map((recipe, index) => ({
+    recipe,
+    source: "RECETTES 619.pdf" as const,
+    id: `pdf-619-${index + 1}-${recipeMatchKey(recipe.name).replace(/\\s+/g, "-")}`,
+  })),
+];
+
+const usedPdfRecipeIds = new Set<string>();
 
 const recipesWithPdfOverrides = [...data.recipes, ...trendRecipes].map((recipe) => {
   const key = recipeMatchKey(recipe.name);
-  const replacement = pdfOverridesByName.get(key);
-  if (!replacement) return recipe;
-  matchedPdfNames.add(key);
+  const replacementEntry = pdfRecipeEntries.find(
+    (entry) => !usedPdfRecipeIds.has(entry.id) && recipeMatchKey(entry.recipe.name) === key,
+  );
+  if (!replacementEntry) return recipe;
+  usedPdfRecipeIds.add(replacementEntry.id);
+  const replacement = replacementEntry.recipe;
   return {
     ...recipe,
     ingredients: replacement.ingredients,
@@ -143,20 +162,20 @@ const recipesWithPdfOverrides = [...data.recipes, ...trendRecipes].map((recipe) 
     timePrep: replacement.timePrep,
     timeCook: replacement.timeCook || "0 min",
     servings: replacement.servings,
-    source: "RECETTES 619.pdf",
+    source: replacementEntry.source,
   };
 });
 
-// Toute fiche du PDF sans correspondance exacte reste disponible dans l'application,
-// plutôt que d'être ignorée ou appliquée à une recette sans rapport.
-const unmatchedPdfRecipes: Recipe[] = pdfRecipeOverrides
-  .filter((recipe) => !matchedPdfNames.has(recipeMatchKey(recipe.name)))
-  .map((recipe) => ({
-    ...recipe,
-    id: `pdf-619-${recipeMatchKey(recipe.name).replace(/\s+/g, "-")}`,
+// Chaque fiche non utilisée pour remplacer un titre strictement identique est ajoutée
+// comme recette distincte, y compris les fiches portant un titre en doublon.
+const unmatchedPdfRecipes: Recipe[] = pdfRecipeEntries
+  .filter((entry) => !usedPdfRecipeIds.has(entry.id))
+  .map((entry) => ({
+    ...entry.recipe,
+    id: entry.id,
     robot: [],
     notes: [],
-    source: "RECETTES 619.pdf",
+    source: entry.source,
   }));
 
 export const carnet = {
