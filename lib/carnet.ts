@@ -129,9 +129,13 @@ const pdfOverridesByName = new Map(
   pdfRecipeOverrides.map((recipe) => [recipeMatchKey(recipe.name), recipe]),
 );
 
+const matchedPdfNames = new Set<string>();
+
 const recipesWithPdfOverrides = [...data.recipes, ...trendRecipes].map((recipe) => {
-  const replacement = pdfOverridesByName.get(recipeMatchKey(recipe.name));
+  const key = recipeMatchKey(recipe.name);
+  const replacement = pdfOverridesByName.get(key);
   if (!replacement) return recipe;
+  matchedPdfNames.add(key);
   return {
     ...recipe,
     ingredients: replacement.ingredients,
@@ -143,7 +147,22 @@ const recipesWithPdfOverrides = [...data.recipes, ...trendRecipes].map((recipe) 
   };
 });
 
-export const carnet = { ...data, recipes: recipesWithPdfOverrides.map(normalizeRecipeForPlanning) } as Carnet;
+// Toute fiche du PDF sans correspondance exacte reste disponible dans l'application,
+// plutôt que d'être ignorée ou appliquée à une recette sans rapport.
+const unmatchedPdfRecipes: Recipe[] = pdfRecipeOverrides
+  .filter((recipe) => !matchedPdfNames.has(recipeMatchKey(recipe.name)))
+  .map((recipe) => ({
+    ...recipe,
+    id: `pdf-619-${recipeMatchKey(recipe.name).replace(/\\s+/g, "-")}`,
+    robot: [],
+    notes: [],
+    source: "RECETTES 619.pdf",
+  }));
+
+export const carnet = {
+  ...data,
+  recipes: [...recipesWithPdfOverrides, ...unmatchedPdfRecipes].map(normalizeRecipeForPlanning),
+} as Carnet;
 
 export const DAYS = [
   "LUNDI",
