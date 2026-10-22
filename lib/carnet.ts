@@ -137,7 +137,7 @@ const recipesWithPdfOverrides = [...data.recipes, ...trendRecipes].map((recipe) 
     ingredients: replacement.ingredients,
     steps: replacement.steps,
     timePrep: replacement.timePrep,
-    timeCook: replacement.timeCook,
+    timeCook: replacement.timeCook || "0 min",
     servings: replacement.servings,
     source: "RECETTES 619.pdf",
   };
