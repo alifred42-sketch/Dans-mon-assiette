@@ -153,7 +153,7 @@ const unmatchedPdfRecipes: Recipe[] = pdfRecipeOverrides
   .filter((recipe) => !matchedPdfNames.has(recipeMatchKey(recipe.name)))
   .map((recipe) => ({
     ...recipe,
-    id: `pdf-619-${recipeMatchKey(recipe.name).replace(/\\s+/g, "-")}`,
+    id: `pdf-619-${recipeMatchKey(recipe.name).replace(/\s+/g, "-")}`,
     robot: [],
     notes: [],
     source: "RECETTES 619.pdf",
