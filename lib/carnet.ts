@@ -122,7 +122,7 @@ function normalizeRecipeForPlanning(recipe: Recipe): Recipe {
 }
 
 function recipeMatchKey(value: string): string {
-  return normalizedSeasonText(value).replace(/^\\d+\\.\\s*/, "").replace(/[^a-z0-9]+/g, " ").trim();
+  return normalizedSeasonText(value).replace(/^[0-9]+\.\s*/, "").replace(/[^a-z0-9]+/g, " ").trim();
 }
 
 const pdfOverridesByName = new Map(
