@@ -23,7 +23,7 @@ const FILTERS: Record<Book, { id: string; label: string; icon: typeof CookingPot
   ],
   "fast-chic": [
     { id: "zero_cuisson", label: "🥗 Zéro cuisson (Salades & Assemblages)", icon: Salad, description: "Des repas frais, sans allumer les plaques." },
-    { id: "bouilloire_grill_pain", label: "☕ Système D (Bouilloire et Grille-pain)", icon: Coffee, description: "Des astuces simples avec le matériel du quotidien." },
+    { id: "bouilloire_grill_pain", label: "☕ Système D (Bouilloire et Grille-pain)", icon: Coffee, description: "Des recettes à la bouilloire ou au grille-pain, selon la fiche." },
     { id: "tendances", label: "✨ Les 12 Recettes Tendances", icon: Sparkles, description: "Douze idées modernes et petit budget." },
   ],
 };
