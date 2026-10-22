@@ -47,7 +47,7 @@ export function FetesNavigation({ showBack = false }: { showBack?: boolean }) {
   const [activeBook, setActiveBook] = useState<BookId | null>(null);
   const [activeSub, setActiveSub] = useState<string | null>(null);
   const selectedBook = BOOKS.find((book) => book.id === activeBook);
-  const selectedRecipes = activeBook && activeSub ? carnet.recipes.filter((recipe) => (activeBook === "annee" ? ["annee", "fetes_annee", "fetes-annee"].includes(recipe.fete || "") : recipe.fete === activeBook) && recipe.sous_fete === (activeBook === "noel" && activeSub === "plats-principaux" ? "plats" : activeBook === "halloween" && activeSub === "aperos-terrifiants" ? "aperos" : activeBook === "halloween" && activeSub === "plats-express" ? "express" : activeBook === "halloween" && activeSub === "atelier-monstres" ? "atelier" : activeSub)) : [];
+  const selectedRecipes = activeBook && activeSub ? carnet.recipes.filter((recipe) => (activeBook === "annee" ? ["annee", "fetes_annee", "fetes-annee"].includes(recipe.fete || "") : recipe.fete === activeBook) && recipe.sous_fete === (activeBook === "noel" && activeSub === "plats-principaux" ? "plats" : activeBook === "halloween" && activeSub === "aperos-terrifiants" ? "aperos" : activeBook === "halloween" && activeSub === "plats-express" ? "express" : activeBook === "halloween" && activeSub === "atelier-monstres" ? "atelier" : activeBook === "halloween" && activeSub === "potions-cocktails" ? "potions" : activeSub)) : [];
 
   return (
     <section className="space-y-5">
@@ -114,3 +114,4 @@ export function FetesNavigation({ showBack = false }: { showBack?: boolean }) {
     </section>
   );
 }
+
