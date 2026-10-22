@@ -88,10 +88,10 @@ export default function EtudiantPetitBudgetPage() {
                   <h3 className="font-bold">{selectedFilter.label}</h3>
                   <p className="mt-1 text-sm">{selectedFilter.description}</p>
                 </div>
-                {selectedFilter.id === "one_pot" ? (
+                {selectedFilter.id === "one_pan" || selectedFilter.id === "one_pot" ? (
                   <RecipeList
                     items={carnet.recipes
-                      .filter((recipe) => { const tagged = recipe as Recipe & { profil?: string; sous_etudiant?: string }; return tagged.profil === "etudiant" && tagged.sous_etudiant === "one_pot"; })
+                      .filter((recipe) => { const tagged = recipe as Recipe & { profil?: string; sous_etudiant?: string }; return tagged.profil === "etudiant" && tagged.sous_etudiant === selectedFilter.id; })
                       .map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }))}
                   />
                 ) : (
