@@ -31,6 +31,7 @@ function normalizeIngredientQuantity(raw: string): string {
   line = line.replace(/[\p{Extended_Pictographic}\uFE0F]/gu, " ").replace(/\s+/g, " ").trim();
   const reverse = line.match(/^(poireaux?|carottes?)\s*:\s*(\d+(?:[.,]\d+)?)$/i);
   if (reverse) return reverse[2] + " " + reverse[1].toLocaleLowerCase("fr");
+  if (/^une pincée\b/i.test(line)) return line;
   if (/^1 quelques rondelles de concombre$/i.test(line)) return "1 concombre (à couper en rondelles)";
   if (/^1 gousse d['’]tilles corail/i.test(line)) return "150 g de lentilles corail";
   if (!line || /^(sel|poivre|sel et poivre|poivre et sel|herbes fraîches|herbes fraiches|herbes de provence|épices|epices|paprika|cumin|curry|origan|basilic|persil|coriandre|menthe|ciboulette|thym|laurier|aneth|romarin|piment|muscade|cannelle)(\b|$)/i.test(line)) return line;
@@ -68,6 +69,8 @@ function inferIngredients(recipe: Partial<Recipe>): string[] {
 }
 
 function normalizeRecipeForPlanning(recipe: Recipe): Recipe {
+  const recipeTags = recipe as Recipe & { sous_etudiant?: string };
+  const isPdfTrendRecipe = recipeTags.sous_etudiant === "tendances" && recipe.source.includes("RECETTES ETUDIANTS - LES 12 RECETTES TENDANCES");
   const notes = [...(recipe.notes || [])];
   let ingredients = (recipe.ingredients || []).map((line) => String(line || "").trim()).filter(Boolean);
   const noteLines = ingredients.filter((line) => /^(➡|🍱|💡|🤖|option |astuce|batch cooking|utilisation|organisation)/i.test(line));
@@ -102,18 +105,18 @@ function normalizeRecipeForPlanning(recipe: Recipe): Recipe {
     steps = [prep, ...rawSteps, cook, finish].slice(0, Math.max(3, rawSteps.length + 2)).map((step, index) => (index + 1) + ". " + step.replace(/^\d+[.)]\s*/, ""));
   }
 
-  const timePrep = normalizedRecipeTime(recipe.timePrep, defaultPrepTime({ ...recipe, ingredients }));
-  const timeCook = normalizedRecipeTime(recipe.timeCook, defaultCookTime({ ...recipe, ingredients }));
+  const timePrep = isPdfTrendRecipe && !recipe.timePrep ? undefined : normalizedRecipeTime(recipe.timePrep, defaultPrepTime({ ...recipe, ingredients }));
+  const timeCook = isPdfTrendRecipe && !recipe.timeCook ? undefined : normalizedRecipeTime(recipe.timeCook, defaultCookTime({ ...recipe, ingredients }));
   const servings = recipe.servings && /\d/.test(recipe.servings) ? recipe.servings : "4 personnes";
   const sections = [...(recipe.sections || [])].map((section) => {
     if (/ingrédients|ingredients|🛒/i.test(section.title || "")) return { ...section, lines: ingredients };
     if (/préparation|preparation|👩‍🍳/i.test(section.title || "")) return { ...section, lines: steps };
-    if (/temps|durée|duree|⏱️/i.test(section.title || "")) return { ...section, lines: ["⏱️ Préparation : " + timePrep, "🔥 Cuisson : " + timeCook, "👥 Pour " + servings] };
+    if (/temps|durée|duree|⏱️/i.test(section.title || "")) return isPdfTrendRecipe ? { ...section, lines: ["👥 Pour " + servings] } : { ...section, lines: ["⏱️ Préparation : " + timePrep, "🔥 Cuisson : " + timeCook, "👥 Pour " + servings] };
     return section;
   });
   if (!sections.some((section) => /ingrédients|ingredients|🛒/i.test(section.title || ""))) sections.push({ title: "🛒 Ingrédients", lines: ingredients });
   if (!sections.some((section) => /préparation|preparation|👩‍🍳/i.test(section.title || ""))) sections.push({ title: "👩‍🍳 Préparation", lines: steps });
-  if (!sections.some((section) => /temps|durée|duree|⏱️/i.test(section.title || ""))) sections.unshift({ title: "⏱️ Temps et portions", lines: ["⏱️ Préparation : " + timePrep, "🔥 Cuisson : " + timeCook, "👥 Pour " + servings] });
+  if (!isPdfTrendRecipe && !sections.some((section) => /temps|durée|duree|⏱️/i.test(section.title || ""))) sections.unshift({ title: "⏱️ Temps et portions", lines: ["⏱️ Préparation : " + timePrep, "🔥 Cuisson : " + timeCook, "👥 Pour " + servings] });
   return { ...recipe, ingredients, steps, timePrep, timeCook, servings, notes, sections };
 }
 
