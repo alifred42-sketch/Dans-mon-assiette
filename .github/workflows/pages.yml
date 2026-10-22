@@ -5,6 +5,10 @@ on:
     branches: [main, travail-cuisine-chic-ouf-design]
   workflow_dispatch:
 
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
