@@ -1,4 +1,5 @@
 import data from "@/data/carnet.json";
+import pdfRecipeOverrides from "@/data/recettes-619.json";
 import { trendRecipes } from "@/data/recettes-tendances";
 import type { Breakfast, Carnet, Collection, PlanSlot, Recipe } from "./types";
 
@@ -120,7 +121,29 @@ function normalizeRecipeForPlanning(recipe: Recipe): Recipe {
   return { ...recipe, ingredients, steps, timePrep, timeCook, servings, notes, sections };
 }
 
-export const carnet = { ...data, recipes: [...data.recipes, ...trendRecipes].map(normalizeRecipeForPlanning) } as Carnet;
+function recipeMatchKey(value: string): string {
+  return normalizedSeasonText(value).replace(/^\\d+\\.\\s*/, "").replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+const pdfOverridesByName = new Map(
+  pdfRecipeOverrides.map((recipe) => [recipeMatchKey(recipe.name), recipe]),
+);
+
+const recipesWithPdfOverrides = [...data.recipes, ...trendRecipes].map((recipe) => {
+  const replacement = pdfOverridesByName.get(recipeMatchKey(recipe.name));
+  if (!replacement) return recipe;
+  return {
+    ...recipe,
+    ingredients: replacement.ingredients,
+    steps: replacement.steps,
+    timePrep: replacement.timePrep,
+    timeCook: replacement.timeCook,
+    servings: replacement.servings,
+    source: "RECETTES 619.pdf",
+  };
+});
+
+export const carnet = { ...data, recipes: recipesWithPdfOverrides.map(normalizeRecipeForPlanning) } as Carnet;
 
 export const DAYS = [
   "LUNDI",
