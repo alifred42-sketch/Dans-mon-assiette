@@ -22,9 +22,9 @@ export function GlutenFreeSafetyNotice() {
   if (!enabled) return null;
   return (
     <aside role="alert" aria-live="polite" className="rounded-2xl border-2 border-amber-500 bg-amber-50 p-4 text-sm leading-relaxed text-amber-950">
-      <h2 className="font-extrabold">⚠️ Important — vérifiez chaque ingrédient</h2>
-      <p className="mt-2">Les substitutions automatiques sont indicatives et ne garantissent pas que la recette soit sans gluten ni adaptée à la maladie cœliaque. Vérifiez systématiquement l’étiquette et la composition de chaque produit, y compris les avertissements de traces éventuelles, et prévenez les contaminations croisées pendant la préparation.</p>
-      <p className="mt-2 font-semibold">En cas de doute, n’utilisez pas le produit. Les mentions et conseils de l’application ne remplacent pas la vérification des emballages ni l’avis d’un professionnel de santé.</p>
+      <h2 className="font-extrabold">💡 Aide à l’adaptation des recettes — sans gluten</h2>
+      <p className="mt-2">Cette option aide à adapter certaines recettes en proposant des substitutions d’ingrédients. Elle ne certifie pas qu’une recette soit sans gluten et ne garantit pas qu’elle convienne aux personnes atteintes de maladie cœliaque. Vérifiez toujours la composition et l’étiquette de chaque produit, y compris les mentions de traces éventuelles, et évitez les contaminations croisées pendant la préparation.</p>
+      <p className="mt-2 font-semibold">En cas de doute, n’utilisez pas le produit. Cette aide ne remplace ni la vérification des emballages ni les conseils d’un professionnel de santé.</p>
     </aside>
   );
 }
