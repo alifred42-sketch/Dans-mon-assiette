@@ -45,12 +45,12 @@ const dailyCards: HomeCard[] = [
 
 const pepsCards: HomeCard[] = [
   { label: "SAUCES", href: "/recettes?filter=sauces", color: "#63358A", Icon: Soup, image: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=900&q=85&v=4" },
-  { label: "MARINADES", href: "/recettes?filter=marinades", color: "#A8CD91", iconColor: "#183B3B", Icon: Paintbrush, image: "https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=900&q=85&v=4" },
+  { label: "MARINADES", href: "/recettes?filter=marinades", color: "#A8CD91", iconColor: "#183B3B", Icon: Paintbrush, image: "https://images.unsplash.com/photo-1765118527220-da9c7a560b13?auto=format&fit=crop&w=900&q=85&v=5" },
   { label: "ÉPICES", href: "/recettes?filter=epices", color: "#E85D4A", Icon: Flame, image: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?auto=format&fit=crop&w=900&q=85&v=4" },
 ];
 
 const moodCards: HomeCard[] = [
-  { label: "EXPRESS", href: "/recettes?filter=express", color: "#F72585", Icon: Timer, image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=85&v=4" },
+  { label: "EXPRESS", href: "/recettes?filter=express", color: "#F72585", Icon: Timer, image: "https://images.unsplash.com/photo-1651773550746-b76fea3cfb70?auto=format&fit=crop&w=900&q=85&v=5" },
   { label: "APÉRO", href: "/recettes?filter=apero", color: "#F46B25", Icon: Martini, image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=85&v=4" },
   { label: "RECEVOIR", href: "/recettes?filter=recevoir", color: "#172554", Icon: Users, image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85&v=4" },
   { label: "JE SUIS FATIGUÉ", href: "/recettes?filter=tired", color: "#C7A6E8", iconColor: "#30213F", Icon: BedDouble, image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=900&q=85&v=4" },
@@ -60,14 +60,14 @@ const seasonCards: HomeCard[] = [
   { label: "PRINTEMPS", href: "/recettes?filter=printemps", color: "#91D477", iconColor: "#173E2C", Icon: Flower2, image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85&v=4" },
   { label: "ÉTÉ", href: "/recettes?filter=ete", color: "#FFD43B", iconColor: "#46390A", Icon: Sun, image: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=900&q=85&v=4" },
   { label: "AUTOMNE", href: "/recettes?filter=automne", color: "#D97732", Icon: Leaf, image: "https://images.unsplash.com/photo-1570586437263-ab629fccc818?auto=format&fit=crop&w=900&q=85&v=4" },
-  { label: "HIVER", href: "/recettes?filter=hiver", color: "#70D7EC", iconColor: "#103C50", Icon: Snowflake, image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85&v=4" },
+  { label: "HIVER", href: "/recettes?filter=hiver", color: "#70D7EC", iconColor: "#103C50", Icon: Snowflake, image: "https://images.unsplash.com/photo-1768238907887-023b7ac9f450?auto=format&fit=crop&w=900&q=85&v=5" },
 ];
 
 const preferenceCards: HomeCard[] = [
   { label: "VÉGAN", href: "/vegan", color: "#237A45", Icon: Sprout, image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85&v=4" },
   { label: "VÉGÉTARIEN", href: "/vegetarien", color: "#A8DFA0", iconColor: "#173E2C", Icon: Carrot, image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=85&v=4" },
-  { label: "ÉTUDIANT", href: "/etudiant-petit-budget", color: "#2563EB", Icon: GraduationCap, image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=85&v=4" },
-  { label: "FÊTES", href: "/fetes", color: "#7F1D3B", Icon: Gift, image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85&v=4" },
+  { label: "ÉTUDIANT", href: "/etudiant-petit-budget", color: "#2563EB", Icon: GraduationCap, image: "https://images.unsplash.com/photo-1651773550746-b76fea3cfb70?auto=format&fit=crop&w=900&q=85&v=5" },
+  { label: "FÊTES", href: "/fetes", color: "#7F1D3B", Icon: Gift, image: "https://images.unsplash.com/photo-1541014597398-cd43df0833c2?auto=format&fit=crop&w=900&q=85&v=5" },
 ];
 
 // Ces raccourcis déjà présents sur l'accueil sont conservés.
