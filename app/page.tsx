@@ -51,7 +51,7 @@ const pepsCards: HomeCard[] = [
 
 const moodCards: HomeCard[] = [
   { label: "EXPRESS", href: "/recettes?filter=express", color: "#F72585", Icon: Timer, image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80" },
-  { label: "APÉRO", href: "/recettes?filter=apero", color: "#F46B25", Icon: Martini, image: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?auto=format&fit=crop&w=600&q=80" },
+  { label: "APÉRO", href: "/recettes?filter=apero", color: "#F46B25", Icon: Martini, image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" },
   { label: "RECEVOIR", href: "/recettes?filter=recevoir", color: "#172554", Icon: Users, image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" },
   { label: "JE SUIS FATIGUÉ", href: "/recettes?filter=tired", color: "#C7A6E8", iconColor: "#30213F", Icon: BedDouble, image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" },
 ];
