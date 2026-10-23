@@ -1,20 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { adaptGlutenFreeText, adaptLactoseFreeText } from "@/lib/ingredient-substitutions";
+import { adaptGlutenFreeText, adaptLactoseFreeText, adaptNutFreeText } from "@/lib/ingredient-substitutions";
 import { CookingTimerText } from "@/components/cooking-timer-text";
 import { ListenStep } from "@/components/listen-step";
 
 function useDietaryAdaptations() {
   const [sansGluten, setSansGluten] = useState(false);
-  const [isLactoseFree, setIsLactoseFree] = useState(false);
+  const [isLactoseFree, setIsLactoseFree] = useState(false);\n  const [isNutFree, setIsNutFree] = useState(false);
   useEffect(() => {
     const refresh = () => {
       try {
         const prefs = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
         setSansGluten(Boolean(prefs.sansGluten));
-        setIsLactoseFree(Boolean(prefs.sansLactose || prefs.isLactoseFree));
-      } catch { setSansGluten(false); setIsLactoseFree(false); }
+        setIsLactoseFree(Boolean(prefs.sansLactose || prefs.isLactoseFree));\n        setIsNutFree(Boolean(prefs.sansFruitsCoque || prefs.isNutFree));
+      } catch { setSansGluten(false); setIsLactoseFree(false); setIsNutFree(false); }
     };
     refresh();
     window.addEventListener("storage", refresh);
@@ -24,7 +24,7 @@ function useDietaryAdaptations() {
       window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh);
     };
   }, []);
-  return { sansGluten, isLactoseFree };
+  return { sansGluten, isLactoseFree, isNutFree };
 }
 
 export function GlutenFreeText({ text }: { text: string }) {
