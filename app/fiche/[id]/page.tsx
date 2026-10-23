@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CookingWakeLock } from "@/components/cooking-wake-lock";
 import { GlutenFreeText, GlutenFreeTimerText } from "@/components/gluten-free-text";
+import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";
 import { RecipeTools } from "@/components/recipe-tools";
 import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 import { displayRecipe } from "@/lib/recipe-display";
@@ -79,6 +80,7 @@ export default async function FichePage({
   return (
     <article className="space-y-6">
       <CookingWakeLock />
+      <GlutenFreeSafetyNotice />
       <header className="space-y-2">
         {recipe.image ? <img src={recipe.image} alt={recipe.imageAlt || recipe.name} className="aspect-[16/9] w-full rounded-2xl object-cover shadow-sm" /> : null}
         <h1 className="font-heading text-3xl leading-tight">{recipe.name}</h1>
