@@ -1,2 +1,2 @@
-:HL["/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design/_next/static/chunks/3nu0_hry223vj.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"qHbzhdoJ06DO--4-a3XUg"}
+:HL["/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design/_next/static/chunks/303a7_19_ch_f.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"Y7Snlox7iw5kdq_GCwI2k"}
