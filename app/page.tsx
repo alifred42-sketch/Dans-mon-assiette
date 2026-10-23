@@ -39,7 +39,7 @@ type HomeCard = {
 
 const dailyCards: HomeCard[] = [
   { label: "RECETTES", href: "/recettes", color: "#F28C28", Icon: BookOpen, image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=85&v=4" },
-  { label: "BATCH", href: "/batch", color: "#FFD928", iconColor: "#183B3B", Icon: Boxes, image: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=900&q=85&v=7" },
+  { label: "BATCH", href: "/batch", color: "#FFD928", iconColor: "#183B3B", Icon: Boxes, image: "https://images.unsplash.com/photo-1606859191214-25806e8e2423?auto=format&fit=crop&w=900&q=85&v=8" },
   { label: "COURSES", href: "/courses", color: "#F5A623", iconColor: "#183B3B", Icon: ShoppingCart, image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85&v=4" },
 ];
 
@@ -66,7 +66,7 @@ const seasonCards: HomeCard[] = [
 const preferenceCards: HomeCard[] = [
   { label: "VÉGAN", href: "/vegan", color: "#237A45", Icon: Sprout, image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85&v=4" },
   { label: "VÉGÉTARIEN", href: "/vegetarien", color: "#A8DFA0", iconColor: "#173E2C", Icon: Carrot, image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=85&v=4" },
-  { label: "ÉTUDIANT", href: "/etudiant-petit-budget", color: "#2563EB", Icon: GraduationCap, image: "https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=900&q=85&v=7" },
+  { label: "ÉTUDIANT", href: "/etudiant-petit-budget", color: "#2563EB", Icon: GraduationCap, image: "https://images.unsplash.com/photo-1770235622226-4b5ad88137d8?auto=format&fit=crop&w=900&q=85&v=8" },
   { label: "FÊTES", href: "/fetes", color: "#7F1D3B", Icon: Gift, image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85&v=6" },
 ];
 
