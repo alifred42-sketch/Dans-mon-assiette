@@ -34,7 +34,8 @@
 * { box-sizing: border-box; }
 html { background: #F9F9F7; }
 body { margin: 0; background: #F9F9F7; color: #2B2B2B; }
-html:has(.home-page), body:has(.home-page) { background-color: #0B5559; }
+html:has(.home-page), body:has(.home-page) { background-color: #0B5559 !important; background-image: radial-gradient(ellipse at 12% 8%, rgba(63,164,158,0.52), transparent 38%), radial-gradient(ellipse at 90% 42%, rgba(29,119,121,0.68), transparent 44%), repeating-linear-gradient(135deg, rgba(255,255,255,0.018) 0px, rgba(255,255,255,0.018) 1px, transparent 1px, transparent 5px) !important; background-attachment: fixed; }
+body:has(.home-page) { min-height: 100vh; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
 
