@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { adaptGlutenFreeText, adaptLactoseFreeText } from "@/lib/ingredient-substitutions";
+import { adaptGlutenFreeText, adaptLactoseFreeText, adaptNutFreeText } from "@/lib/ingredient-substitutions";
 
 type Alternative = { id: string; name: string };
 type IngredientTarget = { id: string; name: string };
@@ -21,7 +21,7 @@ export function RecipeTools({ recipeId, ingredients, alternatives, baseServings 
   const [servings, setServings] = useState(baseServings);
   const [ready, setReady] = useState(false);
   const [sansGluten, setSansGluten] = useState(false);
-  const [isLactoseFree, setIsLactoseFree] = useState(false);
+  const [isLactoseFree, setIsLactoseFree] = useState(false);\n  const [isNutFree, setIsNutFree] = useState(false);
   useEffect(() => {
     const refresh = () => {
       try {
@@ -29,7 +29,7 @@ export function RecipeTools({ recipeId, ingredients, alternatives, baseServings 
         const household = Number(localStorage.getItem("assiette-household-servings") || baseServings);
         const prefs = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
         setSansGluten(Boolean(prefs.sansGluten));
-        setIsLactoseFree(Boolean(prefs.sansLactose || prefs.isLactoseFree));
+        setIsLactoseFree(Boolean(prefs.sansLactose || prefs.isLactoseFree));\n        setIsNutFree(Boolean(prefs.sansFruitsCoque || prefs.isNutFree));
         setServings(saved[recipeId] || (Number.isFinite(household) ? household : baseServings));
       } catch { setServings(baseServings); }
     };
@@ -45,7 +45,7 @@ export function RecipeTools({ recipeId, ingredients, alternatives, baseServings 
   }, [recipeId, baseServings]);
   useEffect(() => { if (!ready) return; try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; saved[recipeId] = servings; localStorage.setItem("assiette-recipe-servings", JSON.stringify(saved)); window.dispatchEvent(new CustomEvent("assiette-servings-change")); } catch {} }, [recipeId, servings, ready]);
   const [showSos, setShowSos] = useState(false);
-  const scaled = useMemo(() => ingredients.map((line) => scaleLine(adaptLactoseFreeText(adaptGlutenFreeText(line, sansGluten), isLactoseFree), servings / baseServings)), [ingredients, servings, baseServings, sansGluten, isLactoseFree]);
+  const scaled = useMemo(() => ingredients.map((line) => scaleLine(adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(line, sansGluten), isLactoseFree), isNutFree), servings / baseServings)), [ingredients, servings, baseServings, sansGluten, isLactoseFree, isNutFree]);
   return (
     <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
       <div className="flex flex-wrap items-center justify-between gap-3">
