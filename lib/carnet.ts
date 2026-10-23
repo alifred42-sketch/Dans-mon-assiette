@@ -359,7 +359,7 @@ const rawValidatedRecipeIds = new Set<string>(
 );
 
 export type PlanningPreferences = {
-  etudiant?: boolean; vegetarien?: boolean; vegan?: boolean; isVegan?: boolean; halal?: boolean;
+  etudiant?: boolean; vegetarien?: boolean; isVegetarian?: boolean; vegan?: boolean; isVegan?: boolean; halal?: boolean;
   sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean;
 };
 
@@ -378,12 +378,21 @@ export function isVeganRecipe(recipe: Recipe): boolean {
   });
 }
 
+
+/** Filtre végétarien strict : les œufs et produits laitiers sont autorisés,
+ * mais les ingrédients de viande, volaille, charcuterie, poisson et fruits de mer sont exclus. */
+export function isVegetarianRecipe(recipe: Recipe): boolean {
+  const ingredients = (recipe.ingredients || []).map((line) => normalizedSeasonText(line));
+  const animalMeatOrSeafood = /\b(viande|boeuf|veau|porc|poulet|dinde|canard|agneau|mouton|lapin|jambon|lardons?|bacon|pancetta|chorizo|saucisse|merguez|charcuterie|steak|escalope|cotelette|boulette de viande|gelatine animale|poisson|saumon|cabillaud|thon|maquereau|sardine|anchois|colin|lieu noir|truite|bar|dorade|haddock|surimi|crevette|gambas|langoustine|homard|crabe|moule|huitre|coquille saint jacques|saint jacques|calamar|seiche|poulpe|fruits de mer)\b/;
+  return ingredients.every((line) => !animalMeatOrSeafood.test(line));
+}
+
 function eligibleForPreferences(recipe: Recipe, preferences: PlanningPreferences): boolean {
   const ingredients = (recipe.ingredients || []).map((line) => normalizedSeasonText(line));
   const text = normalizedSeasonText([recipe.name, ...ingredients].join(" "));
   const regime = normalizedSeasonText(recipe.regime || "");
   if ((preferences.isVegan || preferences.vegan) && !isVeganRecipe(recipe)) return false;
-  if (preferences.vegetarien && regime !== "vegetarien" && regime !== "vegan") return false;
+  if ((preferences.isVegetarian || preferences.vegetarien) && !isVegetarianRecipe(recipe)) return false;
   if (preferences.halal) {
     const halalTagged = regime === "halal" || (recipe as Recipe & { halal?: boolean }).halal === true;
     const plantBasedTagged = regime === "vegan" || regime === "vegetarien";
@@ -421,7 +430,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const season = seasonForWeek(week);
   const used = new Set<string>();
   const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences));
-  const plantProfile = Boolean(preferences.isVegan || preferences.vegan || preferences.vegetarien);
+  const plantProfile = Boolean(preferences.isVegan || preferences.vegan || preferences.isVegetarian || preferences.vegetarien);
   const roleText = (recipe: Recipe) => normalizedSeasonText(recipe.name);
   const chooseRole = (pattern: RegExp, exclude: Set<string> = new Set<string>(), quick = false) => {
     const candidates = eligible.filter((recipe) => {
