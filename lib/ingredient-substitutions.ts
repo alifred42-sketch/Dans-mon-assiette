@@ -45,13 +45,13 @@ export function adaptLactoseFreeText(text: string, enabled = true): string {
  * Les données sources restent intactes ; les substitutions affichées ne garantissent
  * ni l'absence de traces ni la sécurité pour une personne allergique.
  */
-const NUT_FREE_PATTERN = /(?<![\\p{L}])(?:beurre\\s+de\\s+cacahu[eè]te|pur[eé]e\\s+d['’]amande|amandes?(?:\\s+(?:enti[eè]res?|effil[eé]es?|en\\s+poudre))?|noisettes?(?:\\s+(?:enti[eè]res?|concass[eé]es?|en\\s+poudre))?|noix\\s+de\\s+cajou|noix\\s+de\\s+p[eé]can|noix(?!\\s+de\\s+coco)|pesto)(?![\\p{L}])/giu;
+const NUT_FREE_PATTERN = /(?<![\p{L}])(?:beurre\s+de\s+cacahu[eè]te|pur[eé]e\s+d['’]amande|amandes?(?:\s+(?:enti[eè]res?|effil[eé]es?|en\s+poudre))?|noisettes?(?:\s+(?:enti[eè]res?|concass[eé]es?|en\s+poudre))?|noix\s+de\s+cajou|noix\s+de\s+p[eé]can|noix(?!\s+de\s+coco)|pesto)(?![\p{L}])/giu;
 
 /** Remplace les mentions ciblées dans les textes affichés lorsque l'option est active. */
 export function adaptNutFreeText(text: string, enabled = true): string {
   if (!enabled || !text) return text;
   return text.replace(NUT_FREE_PATTERN, (match) => {
-    const normalized = match.toLocaleLowerCase("fr").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").replace(/[’']/g, "'");
+    const normalized = match.toLocaleLowerCase("fr").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[’']/g, "'");
     if (/^(?:beurre de cacahuete|puree d'amande)$/.test(normalized)) return "Purée de sésame (Tahini)";
     if (/^pesto$/.test(normalized)) return "Pesto sans fruits à coque (aux graines de tournesol)";
     if (/^(?:amande|amandes|amande entiere|amandes entieres|amande effilee|amandes effilees|amande en poudre|amandes en poudre|noisette|noisettes|noisette entiere|noisettes entieres|noisette concassee|noisettes concassees|noisette en poudre|noisettes en poudre)$/.test(normalized)) return "Graines de tournesol (ou de courge)";
