@@ -34,45 +34,46 @@ type HomeCard = {
   color: string;
   iconColor?: string;
   Icon: LucideIcon;
+  image: string;
 };
 
 const dailyCards: HomeCard[] = [
-  { label: "RECETTES", href: "/recettes", color: "#F28C28", Icon: BookOpen },
-  { label: "BATCH", href: "/batch", color: "#FFD928", iconColor: "#183B3B", Icon: Boxes },
-  { label: "COURSES", href: "/courses", color: "#F5A623", iconColor: "#183B3B", Icon: ShoppingCart },
+  { label: "RECETTES", href: "/recettes", color: "#F28C28", Icon: BookOpen, image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" },
+  { label: "BATCH", href: "/batch", color: "#FFD928", iconColor: "#183B3B", Icon: Boxes, image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" },
+  { label: "COURSES", href: "/courses", color: "#F5A623", iconColor: "#183B3B", Icon: ShoppingCart, image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" },
 ];
 
 const pepsCards: HomeCard[] = [
-  { label: "SAUCES", href: "/recettes?filter=sauces", color: "#63358A", Icon: Soup },
-  { label: "MARINADES", href: "/recettes?filter=marinades", color: "#A8CD91", iconColor: "#183B3B", Icon: Paintbrush },
-  { label: "ÉPICES", href: "/recettes?filter=epices", color: "#E85D4A", Icon: Flame },
+  { label: "SAUCES", href: "/recettes?filter=sauces", color: "#63358A", Icon: Soup, image: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=600&q=80" },
+  { label: "MARINADES", href: "/recettes?filter=marinades", color: "#A8CD91", iconColor: "#183B3B", Icon: Paintbrush, image: "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=600&q=80" },
+  { label: "ÉPICES", href: "/recettes?filter=epices", color: "#E85D4A", Icon: Flame, image: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?auto=format&fit=crop&w=600&q=80" },
 ];
 
 const moodCards: HomeCard[] = [
-  { label: "EXPRESS", href: "/recettes?filter=express", color: "#F72585", Icon: Timer },
-  { label: "APÉRO", href: "/recettes?filter=apero", color: "#F46B25", Icon: Martini },
-  { label: "RECEVOIR", href: "/recettes?filter=recevoir", color: "#172554", Icon: Users },
-  { label: "JE SUIS FATIGUÉ", href: "/recettes?filter=tired", color: "#C7A6E8", iconColor: "#30213F", Icon: BedDouble },
+  { label: "EXPRESS", href: "/recettes?filter=express", color: "#F72585", Icon: Timer, image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80" },
+  { label: "APÉRO", href: "/recettes?filter=apero", color: "#F46B25", Icon: Martini, image: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?auto=format&fit=crop&w=600&q=80" },
+  { label: "RECEVOIR", href: "/recettes?filter=recevoir", color: "#172554", Icon: Users, image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" },
+  { label: "JE SUIS FATIGUÉ", href: "/recettes?filter=tired", color: "#C7A6E8", iconColor: "#30213F", Icon: BedDouble, image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" },
 ];
 
 const seasonCards: HomeCard[] = [
-  { label: "PRINTEMPS", href: "/recettes?filter=printemps", color: "#91D477", iconColor: "#173E2C", Icon: Flower2 },
-  { label: "ÉTÉ", href: "/recettes?filter=ete", color: "#FFD43B", iconColor: "#46390A", Icon: Sun },
-  { label: "AUTOMNE", href: "/recettes?filter=automne", color: "#D97732", Icon: Leaf },
-  { label: "HIVER", href: "/recettes?filter=hiver", color: "#70D7EC", iconColor: "#103C50", Icon: Snowflake },
+  { label: "PRINTEMPS", href: "/recettes?filter=printemps", color: "#91D477", iconColor: "#173E2C", Icon: Flower2, image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=600&q=80" },
+  { label: "ÉTÉ", href: "/recettes?filter=ete", color: "#FFD43B", iconColor: "#46390A", Icon: Sun, image: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=600&q=80" },
+  { label: "AUTOMNE", href: "/recettes?filter=automne", color: "#D97732", Icon: Leaf, image: "https://images.unsplash.com/photo-1506976785307-8732e854ad03?auto=format&fit=crop&w=600&q=80" },
+  { label: "HIVER", href: "/recettes?filter=hiver", color: "#70D7EC", iconColor: "#103C50", Icon: Snowflake, image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" },
 ];
 
 const preferenceCards: HomeCard[] = [
-  { label: "VÉGAN", href: "/vegan", color: "#237A45", Icon: Sprout },
-  { label: "VÉGÉTARIEN", href: "/vegetarien", color: "#A8DFA0", iconColor: "#173E2C", Icon: Carrot },
-  { label: "ÉTUDIANT", href: "/etudiant-petit-budget", color: "#2563EB", Icon: GraduationCap },
-  { label: "FÊTES", href: "/fetes", color: "#7F1D3B", Icon: Gift },
+  { label: "VÉGAN", href: "/vegan", color: "#237A45", Icon: Sprout, image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" },
+  { label: "VÉGÉTARIEN", href: "/vegetarien", color: "#A8DFA0", iconColor: "#173E2C", Icon: Carrot, image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" },
+  { label: "ÉTUDIANT", href: "/etudiant-petit-budget", color: "#2563EB", Icon: GraduationCap, image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80" },
+  { label: "FÊTES", href: "/fetes", color: "#7F1D3B", Icon: Gift, image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" },
 ];
 
 // Ces raccourcis déjà présents sur l'accueil sont conservés.
 const extraCards: HomeCard[] = [
-  { label: "BONUS", href: "/recettes?filter=bonus", color: "#4D7777", Icon: Sparkles },
-  { label: "MR CUISINE", href: "/recettes?filter=mr-cuisine", color: "#456B87", Icon: Bot },
+  { label: "BONUS", href: "/recettes?filter=bonus", color: "#4D7777", Icon: Sparkles, image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" },
+  { label: "MR CUISINE", href: "/recettes?filter=mr-cuisine", color: "#456B87", Icon: Bot, image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" },
 ];
 
 function getCurrentWeek() {
@@ -99,8 +100,8 @@ function CardRow({
     : "grid-cols-3";
 
   return (
-    <div className={`grid ${gridColumns} gap-2.5 sm:gap-4`}>
-      {cards.map(({ label, href, color, iconColor, Icon }) => {
+    <div className={`grid ${columns === 4 ? "grid-cols-2 sm:grid-cols-4" : gridColumns} gap-2.5 sm:gap-4`}>
+      {cards.map(({ label, href, color, iconColor, Icon, image }) => {
         const destination = href === "/batch" || href === "/courses"
           ? `${href}?w=${currentWeek}`
           : href;
@@ -109,11 +110,11 @@ function CardRow({
             key={label}
             href={destination}
             aria-label={label}
-            className="group flex aspect-square min-w-0 flex-col items-center justify-center gap-2 rounded-2xl px-1.5 py-2 text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:gap-3 sm:rounded-3xl sm:px-3"
+            className="group flex aspect-square min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:rounded-3xl"
             style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}
           >
-            <Icon aria-hidden="true" className="size-6 shrink-0 stroke-[2] sm:size-9" />
-            <span className="text-[10px] font-black leading-tight tracking-wide sm:text-xs md:text-sm">
+            <img src={image} alt="" loading="lazy" className="h-[68%] w-full min-h-0 object-cover transition-transform duration-300 group-hover:scale-105" />
+            <span className="flex min-h-0 flex-1 w-full items-center justify-center px-1 py-1 text-[10px] font-black leading-tight tracking-wide sm:text-xs md:text-sm" style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>
               {label}
             </span>
           </Link>
