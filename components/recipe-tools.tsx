@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { adaptGlutenFreeText } from "@/lib/ingredient-substitutions";
 
 type Alternative = { id: string; name: string };
 type IngredientTarget = { id: string; name: string };
@@ -19,17 +20,26 @@ function scaleLine(line: string, factor: number) {
 export function RecipeTools({ recipeId, ingredients, alternatives, baseServings = 4, ingredientTargets = {} }: { recipeId: string; ingredients: string[]; alternatives: Alternative[]; baseServings?: number; ingredientTargets?: Record<number, IngredientTarget> }) {
   const [servings, setServings] = useState(baseServings);
   const [ready, setReady] = useState(false);
+  const [sansGluten, setSansGluten] = useState(false);
   useEffect(() => {
     const refresh = () => {
       try {
         const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>;
         const household = Number(localStorage.getItem("assiette-household-servings") || baseServings);
+        const prefs = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
+        setSansGluten(Boolean(prefs.sansGluten));
         setServings(saved[recipeId] || (Number.isFinite(household) ? household : baseServings));
       } catch { setServings(baseServings); }
     };
     refresh(); setReady(true);
     window.addEventListener("assiette-servings-change", refresh);
-    return () => window.removeEventListener("assiette-servings-change", refresh);
+    window.addEventListener("storage", refresh);
+    window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
+    return () => {
+      window.removeEventListener("assiette-servings-change", refresh);
+      window.removeEventListener("storage", refresh);
+      window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh);
+    };
   }, [recipeId, baseServings]);
   useEffect(() => { if (!ready) return; try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; saved[recipeId] = servings; localStorage.setItem("assiette-recipe-servings", JSON.stringify(saved)); window.dispatchEvent(new CustomEvent("assiette-servings-change")); } catch {} }, [recipeId, servings, ready]);
   const [showSos, setShowSos] = useState(false);
