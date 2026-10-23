@@ -359,15 +359,30 @@ const rawValidatedRecipeIds = new Set<string>(
 );
 
 export type PlanningPreferences = {
-  etudiant?: boolean; vegetarien?: boolean; vegan?: boolean; halal?: boolean;
+  etudiant?: boolean; vegetarien?: boolean; vegan?: boolean; isVegan?: boolean; halal?: boolean;
   sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean;
 };
+
+/** Le profil vegan n'accepte que les fiches explicitement étiquetées vegan
+ * et dont les ingrédients ne révèlent aucun produit d'origine animale. */
+export function isVeganRecipe(recipe: Recipe): boolean {
+  if (normalizedSeasonText(recipe.regime || "") !== "vegan") return false;
+  const ingredients = (recipe.ingredients || []).map((line) => normalizedSeasonText(line));
+  const animalIngredient = /\\b(viande|boeuf|veau|porc|poulet|dinde|canard|agneau|jambon|lardons?|bacon|pancetta|saucisse|merguez|poisson|saumon|cabillaud|thon|maquereau|crevette|crevettes|moule|moules|huitre|huitres|oeuf|oeufs|miel|gelatine|gelatine animale|lait|beurre|fromage|parmesan|mozzarella|feta|chevre|yaourt|skyr|fromage blanc|creme fraiche|lactose|lard)\\b/;
+  return ingredients.every((line) => {
+    if (/\\b(lait|yaourt|creme)\\b/.test(line) && /\\b(vegetal|soja|amande|avoine|coco|riz)\\b/.test(line)) return !/\\b(oeuf|miel|gelatine|viande|poisson|fromage|beurre|lard|lait\\s+(?!de\\s+(soja|coco|amande|avoine|riz)))/.test(line);
+    if (/\\b(beurre)\\b/.test(line) && /\\b(cacahuete|amande|noisette|noix)\\b/.test(line)) return !/\\b(oeuf|miel|gelatine|viande|poisson|lait|fromage|beurre laitier)\\b/.test(line);
+    if (/\\b(fromage)\\b/.test(line) && /\\b(vegan|vegetal)\\b/.test(line)) return !/\\b(oeuf|miel|gelatine|viande|poisson|lait)\\b/.test(line);
+    if (/\\b(creme)\\b/.test(line) && /\\b(soja|coco|vegetale|vegetal)\\b/.test(line)) return !/\\b(oeuf|miel|gelatine|viande|poisson|lait|fromage|beurre)\\b/.test(line);
+    return !animalIngredient.test(line);
+  });
+}
 
 function eligibleForPreferences(recipe: Recipe, preferences: PlanningPreferences): boolean {
   const ingredients = (recipe.ingredients || []).map((line) => normalizedSeasonText(line));
   const text = normalizedSeasonText([recipe.name, ...ingredients].join(" "));
   const regime = normalizedSeasonText(recipe.regime || "");
-  if (preferences.vegan && regime !== "vegan") return false;
+  if ((preferences.isVegan || preferences.vegan) && !isVeganRecipe(recipe)) return false;
   if (preferences.vegetarien && regime !== "vegetarien" && regime !== "vegan") return false;
   if (preferences.halal) {
     const halalTagged = regime === "halal" || (recipe as Recipe & { halal?: boolean }).halal === true;
@@ -406,7 +421,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const season = seasonForWeek(week);
   const used = new Set<string>();
   const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences));
-  const plantProfile = Boolean(preferences.vegan || preferences.vegetarien);
+  const plantProfile = Boolean(preferences.isVegan || preferences.vegan || preferences.vegetarien);
   const roleText = (recipe: Recipe) => normalizedSeasonText(recipe.name);
   const chooseRole = (pattern: RegExp, exclude: Set<string> = new Set<string>(), quick = false) => {
     const candidates = eligible.filter((recipe) => {
