@@ -3,7 +3,8 @@
 import { displayRecipe } from "@/lib/recipe-display";
 import { adaptGlutenFreeText, adaptLactoseFreeText, adaptNutFreeText } from "@/lib/ingredient-substitutions";
 import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";
-import { LactoseFreeSafetyNotice } from "@/components/lactose-free-safety-notice";\nimport { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
+import { LactoseFreeSafetyNotice } from "@/components/lactose-free-safety-notice";
+import { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
