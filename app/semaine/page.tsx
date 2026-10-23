@@ -9,7 +9,7 @@ import { DAYS, DAY_LABEL, clampWeek, currentIsoWeek, getRecipe, seasonLabel, wee
 import { SwitchMeal } from "@/components/switch-meal";
 
 const TURQUOISE = "#4A9290";
-const SOS_CORAL = "#F46B25";
+const SOS_CORAL = "#EFA778";
 const FALLBACK_MEAL_IMAGE = "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=240&q=80";
 const DAY_COLORS: Record<string, string> = { Lundi: "#F28C28", Mardi: "#E85D4A", Mercredi: "#8FAF9B", Jeudi: "#7C5CBF", Vendredi: "#F0B429", Samedi: "#E879A9", Dimanche: "#4A9290" };
 
@@ -100,7 +100,7 @@ export default function WeekPage() {
           ><ChevronRight className="size-6" /></button>
         </div>
 
-        <section className="rounded-[20px] bg-white p-3 text-[#2B2B2B] shadow-[0_6px_18px_rgba(0,0,0,0.14)] sm:p-4">
+        <section>
           <button type="button" aria-expanded={showSosIdeas} onClick={() => setShowSosIdeas((shown) => !shown)} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl px-3 py-3 text-center text-sm font-black leading-snug text-white shadow-sm transition hover:brightness-105 active:scale-[0.99] sm:text-base" style={{ backgroundColor: SOS_CORAL }}><Flame className="size-6 shrink-0" /> SOS FLEMME : 3 idées simples <ChevronDown className={`size-4 shrink-0 transition-transform ${showSosIdeas ? "rotate-180" : ""}`} /></button>
           {showSosIdeas ? <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3"><Link href="/recettes?filter=express" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">⚡ EXPRESS</Link><Link href="/recettes?filter=tired" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">😮‍💨 JE SUIS FATIGUÉ</Link><Link href="/recettes?filter=easy" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">🍽️ REPAS TOUT SIMPLE</Link></div> : null}
         </section>
@@ -117,10 +117,10 @@ export default function WeekPage() {
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => setOpenDay(isOpen ? "" : day)}
-                  className={`flex min-h-12 w-full items-center justify-between gap-3 border-b-[5px] px-4 py-3 text-left transition ${isOpen ? "" : "hover:bg-[#F7FAF9]"}`}
+                  className={`flex min-h-14 w-full items-center justify-between gap-3 border-b-[5px] px-5 py-4 text-left transition sm:min-h-16 sm:px-6 ${isOpen ? "" : "hover:bg-[#F7FAF9]"}`}
                   style={{ borderBottomColor: DAY_COLORS[day] || "#4A9290" }}
                 >
-                  <span className="text-sm font-black uppercase tracking-[0.08em]">{dayName}</span>
+                  <span className="text-base font-black uppercase tracking-[0.08em] sm:text-lg">{dayName}</span>
                   <ChevronDown className={`size-5 shrink-0 text-[#4A9290] transition-transform ${isOpen ? "rotate-180" : ""}`} />
                 </button>
                 {isOpen ? (
@@ -134,7 +134,7 @@ export default function WeekPage() {
           })}
         </section>
 
-        <section aria-label="Raccourcis de la semaine" className="grid grid-cols-2 gap-3 pt-1"><Link href={`/courses?w=${week}`} className="flex aspect-square min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:rounded-3xl" style={{ backgroundColor: "#F5A623", color: "#183B3B" }}><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85&v=4" alt="" loading="lazy" className="h-[68%] w-full min-h-0 object-cover" /><span className="flex min-h-0 flex-1 items-center justify-center gap-2 px-1 py-2 text-xs font-black sm:text-sm"><ShoppingCart className="size-4" /> MA LISTE DE COURSE</span></Link><Link href={`/batch?w=${week}`} className="flex aspect-square min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:rounded-3xl" style={{ backgroundColor: "#FFD928", color: "#183B3B" }}><img src="https://images.unsplash.com/photo-1606859191214-25806e8e2423?auto=format&fit=crop&w=900&q=85&v=8" alt="" loading="lazy" className="h-[68%] w-full min-h-0 object-cover" /><span className="flex min-h-0 flex-1 items-center justify-center gap-2 px-1 py-2 text-xs font-black sm:text-sm"><Boxes className="size-4" /> MON BATCH</span></Link></section>
+        <section aria-label="Raccourcis de la semaine" className="mx-auto grid w-full max-w-xl grid-cols-2 gap-3 pt-1"><Link href={`/courses?w=${week}`} className="flex h-36 min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:h-40 sm:rounded-3xl" style={{ backgroundColor: "#F5A623", color: "#183B3B" }}><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85&v=4" alt="" loading="lazy" className="h-[58%] w-full min-h-0 object-cover" /><span className="flex min-h-0 flex-1 items-center justify-center gap-1 px-1 py-2 text-[10px] font-black sm:text-xs"><ShoppingCart className="size-4" /> MA LISTE DE COURSE</span></Link><Link href={`/batch?w=${week}`} className="flex h-36 min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:h-40 sm:rounded-3xl" style={{ backgroundColor: "#FFD928", color: "#183B3B" }}><img src="https://images.unsplash.com/photo-1606859191214-25806e8e2423?auto=format&fit=crop&w=900&q=85&v=8" alt="" loading="lazy" className="h-[58%] w-full min-h-0 object-cover" /><span className="flex min-h-0 flex-1 items-center justify-center gap-1 px-1 py-2 text-[10px] font-black sm:text-xs"><Boxes className="size-4" /> MON BATCH</span></Link></section>
       </div>
 
       <nav aria-label="Navigation principale" className="fixed inset-x-0 bottom-0 z-40 border-t border-white/25 bg-[#245F5D]/95 px-2 pb-[max(env(safe-area-inset-bottom),8px)] pt-2 shadow-[0_-6px_20px_rgba(0,0,0,0.16)] backdrop-blur-md">
