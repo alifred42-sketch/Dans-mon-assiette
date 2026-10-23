@@ -1,18 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { adaptGlutenFreeText } from "@/lib/ingredient-substitutions";
+import { adaptGlutenFreeText, adaptLactoseFreeText } from "@/lib/ingredient-substitutions";
 import { CookingTimerText } from "@/components/cooking-timer-text";
 import { ListenStep } from "@/components/listen-step";
 
-function useSansGluten() {
-  const [enabled, setEnabled] = useState(false);
+function useDietaryAdaptations() {
+  const [sansGluten, setSansGluten] = useState(false);
+  const [isLactoseFree, setIsLactoseFree] = useState(false);
   useEffect(() => {
     const refresh = () => {
       try {
         const prefs = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
-        setEnabled(Boolean(prefs.sansGluten));
-      } catch { setEnabled(false); }
+        setSansGluten(Boolean(prefs.sansGluten));
+        setIsLactoseFree(Boolean(prefs.sansLactose || prefs.isLactoseFree));
+      } catch { setSansGluten(false); setIsLactoseFree(false); }
     };
     refresh();
     window.addEventListener("storage", refresh);
@@ -22,16 +24,16 @@ function useSansGluten() {
       window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh);
     };
   }, []);
-  return enabled;
+  return { sansGluten, isLactoseFree };
 }
 
 export function GlutenFreeText({ text }: { text: string }) {
-  const enabled = useSansGluten();
-  return <>{adaptGlutenFreeText(text, enabled)}</>;
+  const { sansGluten, isLactoseFree } = useDietaryAdaptations();
+  return <>{adaptLactoseFreeText(adaptGlutenFreeText(text, sansGluten), isLactoseFree)}</>;
 }
 
 export function GlutenFreeTimerText({ text }: { text: string }) {
-  const enabled = useSansGluten();
-  const adapted = adaptGlutenFreeText(text, enabled);
+  const { sansGluten, isLactoseFree } = useDietaryAdaptations();
+  const adapted = adaptLactoseFreeText(adaptGlutenFreeText(text, sansGluten), isLactoseFree);
   return <><CookingTimerText text={adapted} /><ListenStep text={adapted} /></>;
 }
