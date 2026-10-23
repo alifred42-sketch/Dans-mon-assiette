@@ -34,7 +34,7 @@ export default function CoursesPage() {
     window.addEventListener("assiette-servings-change", refresh);
     window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
     window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
-    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("assiette-servings-change", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
+    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("assiette-servicings-change", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
   }, []);
   const nonIngredientPattern = /(?:verifier la cuisson|arroser du jus|servir immediatement|cuire au four|prechauffer le four|assaisonner le poisson|repartir les legumes|fruits de mer doivent|pour personnes|une recette ideale pour)/i;
   const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences)
@@ -46,14 +46,16 @@ export default function CoursesPage() {
     }));
 
   return (
-    <div className="space-y-5">
-      <div>
-        <h1 className="font-heading text-3xl">Courses</h1>
-        <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">Votre panier trié par rayons automatiquement. Cochez ce que vous avez, le reste remonte en vert. Vos courses en 3 minutes chrono !</p>
-        <p className="mt-1 text-xs text-muted-foreground">Semaine {week} · quantités regroupées à partir des fiches recettes.</p>
+    <main className="min-h-dvh w-full bg-[#E6DFD3] px-4 py-5 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-5xl space-y-5">
+        <div>
+          <h1 className="font-heading text-3xl">Courses</h1>
+          <p className="mt-1 text-sm font-normal leading-relaxed text-[#2B2B2B]">Votre panier trié par rayons automatiquement. Cochez ce que vous avez, le reste remonte en vert. Vos courses en 3 minutes chrono !</p>
+          <p className="mt-1 text-xs text-muted-foreground">Semaine {week} · quantités regroupées à partir des fiches recettes.</p>
+        </div>
+        <WeekPicker week={week} path="/courses" />
+        <CheckList storageKey={`assiette-courses-${week}`} items={items} />
       </div>
-      <WeekPicker week={week} path="/courses" />
-      <CheckList storageKey={`assiette-courses-${week}`} items={items} />
-    </div>
+    </main>
   );
 }
