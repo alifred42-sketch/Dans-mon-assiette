@@ -89,7 +89,10 @@ export default async function FichePage({
         )}
         {meta && <p className="text-sm text-muted-foreground">{meta}</p>}
         <div className="flex flex-wrap items-center gap-3">
-          <span className="text-sm text-muted-foreground" aria-label="Note collective">⭐ Notes collectives à venir</span>
+          <div className="flex flex-wrap items-center gap-2" aria-label="Évaluation collective de la recette, bientôt disponible">
+            <span className="text-xl tracking-wide text-[#E8AD35]" aria-hidden="true">☆☆☆☆☆</span>
+            <span className="text-sm text-muted-foreground">Notes collectives bientôt disponibles</span>
+          </div>
           <a
             href="#commentaires"
             className="inline-flex items-center gap-2 rounded-full border border-[#8FA89B]/50 bg-[#8FA89B]/10 px-4 py-2 text-sm font-semibold text-[#2B2B2B] transition hover:bg-[#8FA89B]/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#668775]"
