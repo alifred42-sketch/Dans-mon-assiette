@@ -34,7 +34,7 @@ export default function CoursesPage() {
     window.addEventListener("assiette-servings-change", refresh);
     window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
     window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
-    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("assiette-servicings-change", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
+    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("assiette-servings-change", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
   }, []);
   const nonIngredientPattern = /(?:verifier la cuisson|arroser du jus|servir immediatement|cuire au four|prechauffer le four|assaisonner le poisson|repartir les legumes|fruits de mer doivent|pour personnes|une recette ideale pour)/i;
   const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences)
