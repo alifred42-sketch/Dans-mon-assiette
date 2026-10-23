@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 import { Apple, Carrot, ChevronDown, ChevronLeft, ChevronRight, Fish, ShoppingCart, Container } from "lucide-react";
 import { clampWeek, currentIsoWeek, getRecipe, shoppingForWeek, weekPlan, DAYS, DAY_LABEL, type PlanningPreferences } from "@/lib/carnet";
 import { CheckList } from "@/components/check-list";
-import { BASE_PATH } from "@/lib/base-path";
 import { adaptGlutenFreeText, adaptLactoseFreeText, adaptNutFreeText } from "@/lib/ingredient-substitutions";
 import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";
 import { LactoseFreeSafetyNotice } from "@/components/lactose-free-safety-notice";
 import { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
+import { BASE_PATH } from "@/lib/base-path";
 
 function dateRangeForIsoWeek(week: number) {
   const now = new Date();
@@ -68,7 +68,7 @@ export default function CoursesPage() {
   const nonIngredientPattern = /(?:verifier la cuisson|arroser du jus|servir immediatement|cuire au four|prechauffer le four|assaisonner le poisson|repartir les legumes|fruits de mer doivent|pour personnes|une recette ideale pour)/i;
   const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences)
     .filter((item) => !nonIngredientPattern.test(item.label.normalize("NFD").replace(/[\u0300-\u036f]/g, "")))
-    .map((item) => ({ id: `${item.aisle}|${item.label}`, title: `${adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(item.label, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose || (preferences as PlanningPreferences & { isLactoseFree?: boolean }).isLactoseFree)), Boolean((preferences as PlanningPreferences & { isNutFree?: boolean; sansFruitsCoque?: boolean }).isNutFree || (preferences as PlanningPreferences & { sansFruitsCoque?: boolean }).sansFruitsCoque))}${((preferences as PlanningPreferences & { isNutFree?: boolean; sansFruitsCoque?: boolean }).isNutFree || (preferences as PlanningPreferences & { sansFruitsCoque?: boolean }).sansFruitsCoque) && /chocolat|biscuit|p[eâ]tisserie|pr[eé]paration|p[eé]pites|cacao|p[aâ]te\s+[aà]\s+tartiner|granola|muesli|c[eé]r[eé]ales|levure\s+chimique|sucre\s+glace|d[eé]corations?|pralin[eé]/i.test(item.label) ? " (⚠️ VÉRIFIER L’ABSENCE DE TRACES DE FRUITS À COQUE SUR L’ÉTIQUETTE)" : ""}`, group: item.aisle }));
+    .map((item) => ({ id: `${item.aisle}|${item.label}`, title: adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(item.label, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose)), Boolean(preferences.sansFruitsCoque)), group: item.aisle }));
 
   const slots = weekPlan(week, recipeOverrides, preferences);
   const daySlots = DAYS.filter((day) => day !== "LUNDI").map((day) => ({
@@ -110,7 +110,7 @@ export default function CoursesPage() {
         </section>
 
         <section className="space-y-2" aria-label="Ingrédients par jour">
-          <h2 className="px-1 text-lg font-black uppercase tracking-wide text-[#2B2B2B]">Détail des menus par jour</h2>
+          <h2 className="px-1 text-lg font-black uppercase tracking-wide text-white">Détail des menus par jour</h2>
           {daySlots.map(({ day, meals }) => {
             const expanded = openDay === day;
             return (

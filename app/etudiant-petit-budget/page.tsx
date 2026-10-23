@@ -34,7 +34,7 @@ export default function EtudiantPetitBudgetPage() {
   const selectedFilter = activeBook ? FILTERS[activeBook].find((item) => item.id === activeFilter) : null;
 
   return (
-    <main className="min-h-dvh bg-transparent px-5 py-6 sm:px-8">
+    <main className="min-h-dvh bg-[#F9F9F7] px-5 py-6 sm:px-8">
       <div className="mx-auto w-full max-w-4xl space-y-6">
         <Link href="/" className="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-[#1A1A1A] transition hover:bg-[#E6DFD3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8FA89B]">
           <ArrowLeft aria-hidden="true" className="size-4" /> Retour

@@ -113,7 +113,7 @@ function CardRow({
             className="group flex aspect-square min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:rounded-3xl"
             style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}
           >
-            <img src={image} alt="" loading="lazy" className="h-[68%] w-full min-h-0 object-cover transition-transform duration-300 group-hover:scale-105" />
+            <img src={image} alt="" loading="lazy" className="mx-auto mt-1 h-[64%] w-[calc(100%-0.5rem)] min-h-0 rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02] sm:rounded-2xl" />
             <span className="flex min-h-0 flex-1 w-full items-center justify-center px-1 py-1 text-[10px] font-black leading-tight tracking-wide sm:text-xs md:text-sm" style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>
               {label}
             </span>
@@ -137,7 +137,7 @@ function HomeSection({
 }) {
   return (
     <section className="w-full">
-      <h2 className="mb-3 text-center text-xl font-black tracking-tight text-[#2B2B2B] sm:mb-4 sm:text-2xl">
+      <h2 className="mb-3 text-center text-xl font-black tracking-tight text-white sm:mb-4 sm:text-2xl">
         {title}
       </h2>
       <CardRow cards={cards} columns={columns} currentWeek={currentWeek} />
@@ -175,7 +175,7 @@ export default function HomePage() {
           <p className="mt-5 max-w-2xl text-sm font-medium leading-6 text-[#2B2B2B]/90 sm:text-base sm:leading-7">
             52 semaines de menus, du batchcooking simple et vos listes de courses automatisées. Cuisinez chic, respirez...OUF !
           </p>
-          <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-3 text-3xl font-black tracking-tight text-[#2B2B2B] sm:text-5xl">
             CUISINE CHIC OUF !
           </h1>
           <div className="mt-6 flex w-full max-w-lg flex-col gap-3">

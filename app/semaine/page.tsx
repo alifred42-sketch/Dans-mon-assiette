@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { ChevronDown, ChevronLeft, ChevronRight, House, CalendarDays, ShoppingBasket, UserRound, Repeat2, Leaf, Flame, Boxes, ShoppingCart } from "lucide-react";
 import { BASE_PATH } from "@/lib/base-path";
-import { DAYS, DAY_LABEL, clampWeek, currentIsoWeek, getRecipe, seasonLabel, weekPlan, type PlanningPreferences } from "@/lib/carnet";
-import { SwitchMeal } from "@/components/switch-meal";
-import { InstallApp } from "@/components/install-app";
+import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, currentIsoWeek, getRecipe, seasonLabel, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { MealReminders } from "@/components/meal-reminders";
+import { WeekPicker } from "@/components/week-picker";
+import { SwitchMeal } from "@/components/switch-meal";
 
 const TURQUOISE = "#4A9290";
 const SOS_CORAL = "#F2A08F";
@@ -68,16 +68,18 @@ export default function WeekPage() {
   const season = seasonLabel(week);
   const previousWeek = Math.max(1, week - 1);
   const nextWeek = Math.min(52, week + 1);
+  const breakfast = breakfastForWeek(week);
+  const validatedSlotCount = slots.filter((slot) => Boolean(slot.recipeId)).length;
+  const activeProfiles = [preferences.etudiant && "Étudiant", preferences.vegan && "Végan", preferences.vegetarien && "Végétarien", preferences.sansGluten && "Sans gluten", preferences.sansLactose && "Sans lactose", preferences.sansFruitsCoque && "Sans fruits à coque"].filter(Boolean);
 
   return (
     <main
       className="min-h-dvh w-full overflow-x-hidden bg-transparent pb-28 text-[#2B2B2B]"
     >
       <div className="mx-auto flex w-full max-w-3xl flex-col gap-5 px-4 pb-8 pt-6 sm:px-6 sm:pt-8">
-        <InstallApp />
         <header className="text-center">
           <img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="CUISINE CHIC OUF !" className="mx-auto mb-4 block h-auto w-[min(48vw,190px)] rounded-[20px] bg-[#F9F6EC] object-contain shadow-[0_8px_24px_rgba(0,0,0,0.2)]" loading="eager" />
-          <h1 className="text-2xl font-black uppercase leading-tight tracking-tight sm:text-3xl">Semaine du {dateRange}</h1>
+          <h1 className="text-2xl font-black uppercase leading-tight tracking-tight text-[#2B2B2B] sm:text-3xl">Semaine du {dateRange}</h1>
           <span className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#2B2B2B]/20 bg-white/60 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-[#2B2B2B] shadow-sm"><Leaf className="size-4" /> Sélection {season}</span>
         </header>
 
@@ -104,8 +106,10 @@ export default function WeekPage() {
           {showSosIdeas ? <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3"><Link href="/recettes?filter=express" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">⚡ EXPRESS</Link><Link href="/recettes?filter=tired" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">😮‍💨 JE SUIS FATIGUÉ</Link><Link href="/recettes?filter=easy" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">🍽️ REPAS TOUT SIMPLE</Link></div> : null}
         </section>
 
+        <WeekPicker week={week} path="/semaine" />
+        <aside className="rounded-2xl border border-[#2B2B2B]/15 bg-white/65 p-3 text-sm text-[#2B2B2B]"><strong>Planning vérifié :</strong> {validatedSlotCount}/{slots.length} créneaux utilisent une recette complète.{activeProfiles.length ? <span> Préférences : {activeProfiles.join(", ")}.</span> : null}</aside>
         <MealReminders />
-
+        {breakfast && breakfast.lines.length > 0 ? <section className="rounded-2xl bg-white p-4 text-[#214E4B] shadow-sm"><h2 className="text-lg font-black">Petit-déjeuner</h2><ul className="mt-2 space-y-1 text-sm">{breakfast.lines.map((line, index) => <li key={index}>{line}</li>)}</ul></section> : null}
         <section aria-label="Planning des repas" className="space-y-2.5">
           {DAYS.map((day) => {
             const dayName = DAY_LABEL[day];

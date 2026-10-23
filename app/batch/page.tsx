@@ -377,13 +377,13 @@ export default function BatchPage() {
   };
 
   return (
-    <main className="min-h-dvh bg-transparent px-3 pb-28 pt-3 text-[#243B35] sm:px-5 sm:pb-28">
+    <main className="min-h-dvh bg-[#EAF5F1] px-3 pb-28 pt-3 text-[#243B35] sm:px-5 sm:pb-28">
       <div className="mx-auto w-full max-w-4xl space-y-4">
         <GlutenFreeSafetyNotice />
         <LactoseFreeSafetyNotice />
         <NutFreeSafetyNotice />
 
-        <header className="sticky top-0 z-30 -mx-3 space-y-3 border-b border-[#C8DDD5] bg-[#EAF5F1]/95 px-3 pb-3 pt-2 backdrop-blur-md sm:-mx-5 sm:px-5">
+        <header className="sticky top-0 z-30 -mx-3 space-y-3 border-b border-[#C8DDD5] bg-[#4A9290]/95 px-3 pb-3 pt-2 backdrop-blur-md sm:-mx-5 sm:px-5">
           <div className="flex justify-center"><img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="Cuisine Chic Ouf !" className="h-auto w-28 rounded-xl sm:w-32" /></div>
           <h1 className="text-center font-heading text-2xl font-extrabold tracking-wide text-[#176B5B] sm:text-3xl">MON BATCH COOKING</h1>
           <div className="mx-auto flex max-w-lg items-center justify-between gap-2 rounded-full border border-[#D9E8E2] bg-white px-2 py-1 shadow-sm">
