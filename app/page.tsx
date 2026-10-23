@@ -163,9 +163,9 @@ export default function HomePage() {
     <main
       className="home-page min-h-dvh w-full overflow-hidden text-white"
       style={{
-        backgroundColor: "#0B5559",
+        backgroundColor: "#4A9290",
         backgroundImage:
-          "radial-gradient(ellipse at 12% 8%, rgba(63,164,158,0.52), transparent 38%), radial-gradient(ellipse at 90% 42%, rgba(29,119,121,0.68), transparent 44%), repeating-linear-gradient(135deg, rgba(255,255,255,0.018) 0px, rgba(255,255,255,0.018) 1px, transparent 1px, transparent 5px)",
+          "radial-gradient(ellipse at 12% 8%, rgba(190,235,220,0.62), transparent 42%), radial-gradient(ellipse at 90% 42%, rgba(112,196,187,0.58), transparent 48%), repeating-linear-gradient(135deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 5px)",
       }}
     >
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-4 py-6 pb-12 sm:gap-10 sm:px-8 sm:py-9">
