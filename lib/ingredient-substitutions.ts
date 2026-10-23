@@ -24,17 +24,17 @@ export function adaptGlutenFreeText(text: string, enabled = true): string {
  * Aide d'affichage pour adapter certaines recettes en mode sans lactose.
  * Le texte source est conservé : seules les chaînes affichées sont modifiées.
  */
-const LACTOSE_FREE_PATTERN = /(?<![\p{L}])(?:lait\s+de\s+vache|lait(?!\s+(?:de\s+(?:coco|soja|riz|vache|chèvre|chevre|brebis)|d['’]?(?:amande|avoine|noisette)|sans\s+lactose|végétal|vegetal))|crème\s+fraîche|crème\s+liquide|crème(?!\s+(?:de\s+soja|végétale|vegetale|sans\s+lactose))|beurre(?!\s+de\s+(?:cacahuète|cacahuete|noix|karité|karite))|yaourt(?!\s+(?:sans\s+lactose|au\s+soja|végétal|vegetal))|fromage\s+blanc(?!\s+sans\s+lactose)|emmental\s+râpé|fromage\s+râpé|gruyère)(?![\p{L}])/giu;
+const LACTOSE_FREE_PATTERN = /(?<![\p{L}])(?:lait\s+de\s+vache|lait(?:\s+(?:entier|demi[- ]?écrémé|écrémé))?(?!\s+(?:de\s+(?:coco|soja|riz|vache|chèvre|chevre|brebis)|d['’]?(?:amande|avoine|noisette)|sans\s+lactose|végétal|vegetal))|crème\s+fraîche(?:\s+épaisse)?|crème\s+liquide(?:\s+entière)?|crème(?!\s+(?:de\s+soja|végétale|vegetale|sans\s+lactose))|beurre(?:\s+(?:doux|fondu|salé|sale|demi[- ]?sel))?(?!\s+de\s+(?:cacahuète|cacahuete|noix|karité|karite))|yaourt(?:\s+nature)?(?!\s+(?:sans\s+lactose|au\s+soja|végétal|vegetal))|fromage\s+blanc(?!\s+sans\s+lactose)|emmental\s+râpé|fromage\s+râpé|gruyère(?:\s+râpé)?)(?![\p{L}])/giu;
 
 export function adaptLactoseFreeText(text: string, enabled = true): string {
   if (!enabled || !text) return text;
   return text.replace(LACTOSE_FREE_PATTERN, (match) => {
     const normalized = match.toLocaleLowerCase("fr").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    if (/^lait(?: de vache)?$/.test(normalized)) return "Lait sans lactose (ou lait végétal)";
-    if (/^creme(?: fraiche| liquide)?$/.test(normalized)) return "Crème sans lactose (ou crème de soja)";
-    if (/^beurre$/.test(normalized)) return "Margarine végétale (ou beurre sans lactose)";
-    if (/^(?:yaourt|fromage blanc)$/.test(normalized)) return "Yaourt sans lactose (ou au soja)";
-    if (/^(?:fromage rape|emmental rape|gruyere)$/.test(normalized)) return "Fromage râpé sans lactose";
+    if (/^lait(?: de vache| entier| demi[- ]?ecreme| ecreme)?$/.test(normalized)) return "Lait sans lactose (ou lait végétal)";
+    if (/^creme(?: fraiche(?: epaisse)?| liquide(?: entiere)?| epaisse)?$/.test(normalized)) return "Crème sans lactose (ou crème de soja)";
+    if (/^beurre(?: doux| fondu| sale| demi[- ]?sel)?$/.test(normalized)) return "Margarine végétale (ou beurre sans lactose)";
+    if (/^(?:yaourt(?: nature)?|fromage blanc)$/.test(normalized)) return "Yaourt sans lactose (ou au soja)";
+    if (/^(?:fromage rape|emmental rape|gruyere(?: rape)?)$/.test(normalized)) return "Fromage râpé sans lactose";
     return match;
   });
 }
