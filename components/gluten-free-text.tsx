@@ -7,13 +7,15 @@ import { ListenStep } from "@/components/listen-step";
 
 function useDietaryAdaptations() {
   const [sansGluten, setSansGluten] = useState(false);
-  const [isLactoseFree, setIsLactoseFree] = useState(false);\n  const [isNutFree, setIsNutFree] = useState(false);
+  const [isLactoseFree, setIsLactoseFree] = useState(false);
+  const [isNutFree, setIsNutFree] = useState(false);
   useEffect(() => {
     const refresh = () => {
       try {
         const prefs = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
         setSansGluten(Boolean(prefs.sansGluten));
-        setIsLactoseFree(Boolean(prefs.sansLactose || prefs.isLactoseFree));\n        setIsNutFree(Boolean(prefs.sansFruitsCoque || prefs.isNutFree));
+        setIsLactoseFree(Boolean(prefs.sansLactose || prefs.isLactoseFree));
+        setIsNutFree(Boolean(prefs.sansFruitsCoque || prefs.isNutFree));
       } catch { setSansGluten(false); setIsLactoseFree(false); setIsNutFree(false); }
     };
     refresh();
