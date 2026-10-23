@@ -112,12 +112,12 @@ export default function WeekPage() {
             const midi = slots.find((slot) => slot.day === day && slot.meal.toLowerCase() === "midi");
             const soir = slots.find((slot) => slot.day === day && slot.meal.toLowerCase() === "soir");
             return (
-              <section key={day} className="overflow-hidden rounded-[20px] bg-white text-[#2B2B2B] shadow-[0_5px_16px_rgba(0,0,0,0.13)]">
+              <section key={day} className="overflow-hidden rounded-[20px] bg-transparent text-white shadow-[0_5px_16px_rgba(0,0,0,0.13)]">
                 <button
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => setOpenDay(isOpen ? "" : day)}
-                  className={`flex min-h-14 w-full items-center justify-between gap-3 border-b-[5px] bg-[#FFFFFF]/10 px-5 py-4 text-left transition sm:min-h-16 sm:px-6 ${isOpen ? "" : "hover:bg-white/15"}`}
+                  className={`flex min-h-14 w-full items-center justify-between gap-3 border-b-[5px] bg-white/[0.04] px-5 py-4 text-left transition sm:min-h-16 sm:px-6 ${isOpen ? "" : "hover:bg-white/[0.08]"}`}
                   style={{ borderBottomColor: DAY_COLORS[day] || "#4A9290" }}
                 >
                   <span className="text-left text-lg font-black uppercase tracking-[0.08em] text-white sm:text-xl">{dayName}</span>
