@@ -9,7 +9,7 @@ import { DAYS, DAY_LABEL, clampWeek, currentIsoWeek, getRecipe, seasonLabel, wee
 import { SwitchMeal } from "@/components/switch-meal";
 
 const TURQUOISE = "#4A9290";
-const SOS_CORAL = "#EFA778";
+const SOS_CORAL = "#F2A08F";
 const FALLBACK_MEAL_IMAGE = "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=240&q=80";
 const DAY_COLORS: Record<string, string> = { Lundi: "#F28C28", Mardi: "#E85D4A", Mercredi: "#8FAF9B", Jeudi: "#7C5CBF", Vendredi: "#F0B429", Samedi: "#E879A9", Dimanche: "#4A9290" };
 
@@ -117,10 +117,10 @@ export default function WeekPage() {
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => setOpenDay(isOpen ? "" : day)}
-                  className={`flex min-h-14 w-full items-center justify-between gap-3 border-b-[5px] px-5 py-4 text-left transition sm:min-h-16 sm:px-6 ${isOpen ? "" : "hover:bg-[#F7FAF9]"}`}
+                  className={`flex min-h-14 w-full items-center justify-between gap-3 border-b-[5px] bg-[#FFFFFF]/10 px-5 py-4 text-left transition sm:min-h-16 sm:px-6 ${isOpen ? "" : "hover:bg-white/15"}`}
                   style={{ borderBottomColor: DAY_COLORS[day] || "#4A9290" }}
                 >
-                  <span className="text-base font-black uppercase tracking-[0.08em] sm:text-lg">{dayName}</span>
+                  <span className="text-left text-lg font-black uppercase tracking-[0.08em] text-white sm:text-xl">{dayName}</span>
                   <ChevronDown className={`size-5 shrink-0 text-[#4A9290] transition-transform ${isOpen ? "rotate-180" : ""}`} />
                 </button>
                 {isOpen ? (
@@ -134,7 +134,7 @@ export default function WeekPage() {
           })}
         </section>
 
-        <section aria-label="Raccourcis de la semaine" className="mx-auto grid w-full max-w-xl grid-cols-2 gap-3 pt-1"><Link href={`/courses?w=${week}`} className="flex h-36 min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:h-40 sm:rounded-3xl" style={{ backgroundColor: "#F5A623", color: "#183B3B" }}><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85&v=4" alt="" loading="lazy" className="h-[58%] w-full min-h-0 object-cover" /><span className="flex min-h-0 flex-1 items-center justify-center gap-1 px-1 py-2 text-[10px] font-black sm:text-xs"><ShoppingCart className="size-4" /> MA LISTE DE COURSE</span></Link><Link href={`/batch?w=${week}`} className="flex h-36 min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:h-40 sm:rounded-3xl" style={{ backgroundColor: "#FFD928", color: "#183B3B" }}><img src="https://images.unsplash.com/photo-1606859191214-25806e8e2423?auto=format&fit=crop&w=900&q=85&v=8" alt="" loading="lazy" className="h-[58%] w-full min-h-0 object-cover" /><span className="flex min-h-0 flex-1 items-center justify-center gap-1 px-1 py-2 text-[10px] font-black sm:text-xs"><Boxes className="size-4" /> MON BATCH</span></Link></section>
+        <section aria-label="Raccourcis de la semaine" className="mx-auto flex w-full max-w-2xl flex-row gap-3 pt-1"><Link href={`/courses?w=${week}`} className="flex h-24 min-w-0 flex-1 flex-row items-center overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:h-28 sm:rounded-2xl" style={{ backgroundColor: "#F5A623", color: "#183B3B" }}><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85&v=4" alt="" loading="lazy" className="h-full w-[38%] min-w-0 object-cover" /><span className="flex min-w-0 flex-1 items-center justify-center gap-1 px-1 py-2 text-[10px] font-black sm:text-xs"><ShoppingCart className="size-4" /> MA LISTE DE COURSE</span></Link><Link href={`/batch?w=${week}`} className="flex h-24 min-w-0 flex-1 flex-row items-center overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:h-28 sm:rounded-2xl" style={{ backgroundColor: "#FFD928", color: "#183B3B" }}><img src="https://images.unsplash.com/photo-1606859191214-25806e8e2423?auto=format&fit=crop&w=900&q=85&v=8" alt="" loading="lazy" className="h-full w-[38%] min-w-0 object-cover" /><span className="flex min-w-0 flex-1 items-center justify-center gap-1 px-1 py-2 text-[10px] font-black sm:text-xs"><Boxes className="size-4" /> MON BATCH</span></Link></section>
       </div>
 
       <nav aria-label="Navigation principale" className="fixed inset-x-0 bottom-0 z-40 border-t border-white/25 bg-[#245F5D]/95 px-2 pb-[max(env(safe-area-inset-bottom),8px)] pt-2 shadow-[0_-6px_20px_rgba(0,0,0,0.16)] backdrop-blur-md">
