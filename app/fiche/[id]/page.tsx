@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CookingWakeLock } from "@/components/cooking-wake-lock";
-import { ListenStep } from "@/components/listen-step";
-import { CookingTimerText } from "@/components/cooking-timer-text";
+import { GlutenFreeText, GlutenFreeTimerText } from "@/components/gluten-free-text";
 import { RecipeTools } from "@/components/recipe-tools";
 import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 import { displayRecipe } from "@/lib/recipe-display";
@@ -65,12 +64,12 @@ export default async function FichePage({
           <div className="flex flex-wrap gap-2" aria-label="Ingrédients et quantités de cette étape">
             {matched.map((ingredient, index) => (
               <span key={key + "-ingredient-" + index} className="inline-flex rounded-xl border-2 border-[#8FA89B]/60 bg-[#8FA89B]/15 px-3 py-2 text-base font-extrabold leading-snug text-[#24372C] sm:text-lg">
-                {ingredient.toLocaleUpperCase("fr")}
+                <GlutenFreeText text={ingredient.toLocaleUpperCase("fr")} />
               </span>
             ))}
           </div>
         )}
-        <div><CookingTimerText text={step} /><ListenStep text={step} /></div>
+        <div><GlutenFreeTimerText text={step} /></div>
       </div>
     );
   }
@@ -125,7 +124,7 @@ export default async function FichePage({
               <ul className="mt-2 divide-y">
                 {sec.lines.map((line, li) => (
                   <li key={`${si}-${li}`} className="py-2 text-sm leading-relaxed">
-                    <CookingTimerText text={line} />
+                    <GlutenFreeTimerText text={line} />
                   </li>
                 ))}
               </ul>
