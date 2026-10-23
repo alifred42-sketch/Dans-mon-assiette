@@ -1,5 +1,7 @@
 name: Pages
 
+# Preview visuel de travail : cette branche republie le lien de contrôle permanent existant.
+
 on:
   push:
     branches: [main, travail-cuisine-chic-ouf-design, refonte-accueil-visuelle]
