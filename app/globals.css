@@ -33,7 +33,7 @@
 
 * { box-sizing: border-box; }
 
-/* Fond unique sur toute l'application : les pages et les images se posent au-dessus. */
+/* Fond de référence partagé par toutes les pages, exactement comme le splash. */
 :root {
   --app-page-background: #4A9290;
   --app-page-background-image:
@@ -41,53 +41,57 @@
     radial-gradient(ellipse at 90% 42%, rgba(112,196,187,0.58), transparent 48%),
     repeating-linear-gradient(135deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 5px);
 }
-html, body {
+html {
   min-height: 100%;
   margin: 0;
-  background-color: var(--app-page-background) !important;
-  background-image: var(--app-page-background-image) !important;
-  background-position: center top !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
-  color: #2B2B2B;
+  background: #4A9290;
 }
 body {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
   min-height: 100dvh;
   width: 100%;
-  isolation: isolate;
+  margin: 0;
+  background: #4A9290 !important;
+  color: #2B2B2B;
 }
 
-/* Le fond de référence est celui de l'écran d'accueil et du splash de 5 secondes.
-   Il reste fixe sur toute la largeur et toute la hauteur, même au défilement. */
+/* Couche fixe indépendante de la hauteur du contenu : couvre toujours tout l'écran.
+   Elle reste derrière le contenu pendant le défilement, comme le fond du splash. */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   background-color: var(--app-page-background);
   background-image: var(--app-page-background-image);
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
-/* Chaque page reprend le fond de référence; les cartes et photos restent au-dessus. */
+/* Les éléments directs du body se placent au-dessus de la couche de fond. */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Les pages principales ne peignent plus leur propre fond : cela évite les aplats
+   différents et laisse apparaître le même dégradé de haut en bas et de gauche à droite. */
 body main,
 body main.home-page {
   display: flow-root;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: var(--app-page-background) !important;
-  background-image: var(--app-page-background-image) !important;
-  background-position: center top !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  background-attachment: initial !important;
 }
+
 button, a { -webkit-tap-highlight-color: transparent; }
 
 
