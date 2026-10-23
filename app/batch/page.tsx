@@ -9,7 +9,8 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { WeekPicker } from "@/components/week-picker";
-import { Beef, Blender, Carrot, CookingPot, Container, Flame, Refrigerator, Utensils, Wheat } from "lucide-react";
+import { Beef, Blender, Carrot, CookingPot, Container, Flame, Refrigerator, Utensils, Wheat, ShoppingCart, ChevronLeft, ChevronRight, ChefHat } from "lucide-react";
+import { BASE_PATH } from "@/lib/base-path";
 
 type Task = { id: string; title: string; detail?: string; timer?: string; timerMinutes?: number; group?: string };
 type VoiceRecognition = {
@@ -85,8 +86,8 @@ function taskIcon(value: string) {
 function kindStyle(value: string) {
   const kind = ingredientKind(value);
   if (kind === "vegetable") return { label: "Légumes", classes: "bg-[#E0EFDF] text-[#2F6B3B] ring-[#A8CBA5]" };
-  if (kind === "protein") return { label: "Protéines", classes: "bg-[#FBE3DF] text-[#A63D35] ring-[#E7AAA2]" };
-  if (kind === "starch") return { label: "Féculents", classes: "bg-[#DFEAFB] text-[#315F9E] ring-[#A8C2E8]" };
+  if (kind === "protein") return { label: "Protéines", classes: "bg-[#DFEAFB] text-[#315F9E] ring-[#A8C2E8]" };
+  if (kind === "starch") return { label: "Féculents", classes: "bg-[#FFF1C9] text-[#80600A] ring-[#E8D18A]" };
   if (kind === "storage") return { label: "Contenants", classes: "bg-[#E6DFD3] text-[#625747] ring-[#C8BDAA]" };
   if (kind === "equipment") return { label: "Matériel / cuisson", classes: "bg-[#F3E5D9] text-[#8C4C34] ring-[#DDB69F]" };
   return { label: "Préparation", classes: "bg-[#F2F2EE] text-[#555551] ring-[#DEDED7]" };
@@ -346,93 +347,83 @@ export default function BatchPage() {
             {displayDetail ? <span className="mt-2 block text-sm leading-relaxed text-[#555551]">{displayDetail}</span> : null}
           </span>
         </label>
+        <div className="flex justify-end px-3 pb-3"><button type="button" onClick={() => { const index = tasks.findIndex((candidate) => candidate.id === task.id); if (index >= 0) { setVoiceIndex(index); setVoiceStatus(`Étape sélectionnée : ${task.title}`); speak(`${task.title}. ${task.detail || ""}`); } }} className="rounded-lg bg-[#176B5B] px-4 py-2 text-xs font-extrabold text-white">Préparer</button></div>
       </li>
     ); })}</ul>;
   }
 
+  const weekRangeLabel = (weekNumber: number) => {
+    const jan4 = new Date(Date.UTC(new Date().getUTCFullYear(), 0, 4));
+    const monday = new Date(jan4);
+    monday.setUTCDate(jan4.getUTCDate() - ((jan4.getUTCDay() + 6) % 7) + (weekNumber - 1) * 7);
+    const sunday = new Date(monday);
+    sunday.setUTCDate(monday.getUTCDate() + 6);
+    const fmt = (date: Date) => new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "long", timeZone: "UTC" }).format(date).toLocaleUpperCase("fr-FR");
+    return `${fmt(monday)} - ${fmt(sunday)} (SEM ${weekNumber})`;
+  };
+  const currentStep = currentVoiceTask;
+  const previousTask = () => {
+    if (voiceIndex <= 0) { setVoiceStatus("Vous êtes déjà à la première étape."); return; }
+    const next = voiceIndex - 1;
+    setVoiceIndex(next);
+    const task = tasks[next];
+    if (task) speak(`Étape précédente. ${task.title}. ${task.detail || ""}`);
+  };
+  const nextTask = () => {
+    const next = Math.min(voiceIndex + 1, Math.max(0, tasks.length - 1));
+    setVoiceIndex(next);
+    const task = tasks[next];
+    if (task) speak(next === voiceIndex ? "Vous êtes déjà à la dernière étape." : `Étape suivante. ${task.title}. ${task.detail || ""}`);
+  };
+
   return (
-    <div className="space-y-5">
-      <GlutenFreeSafetyNotice />
-      <LactoseFreeSafetyNotice />
-      <header>
-        <h1 className="font-heading text-3xl">Batch Cooking</h1>
-        <p className="mt-1 text-sm leading-relaxed text-[#2B2B2B]">Un fil conducteur en 3 sections pour préparer les bases prévues, cuisiner en parallèle et ranger chaque portion sereinement.</p>
-      </header>
-      <WeekPicker week={week} path="/batch" />
-      {robotPriority ? <p className="rounded-xl border border-[#8FA89B] bg-[#8FA89B]/15 p-3 text-sm font-bold text-[#2B2B2B]">🤖 Monsieur Cuisine activé : les réglages indiqués dans les fiches sont affichés en priorité.</p> : null}
+    <main className="min-h-dvh bg-[#EAF5F1] px-3 pb-28 pt-3 text-[#243B35] sm:px-5 sm:pb-28">
+      <div className="mx-auto w-full max-w-4xl space-y-4">
+        <GlutenFreeSafetyNotice />
+        <LactoseFreeSafetyNotice />
+        <NutFreeSafetyNotice />
 
-      <section aria-labelledby="handsfree-title" className="space-y-3 rounded-2xl border-2 border-[#8FA89B] bg-[#F4F7F2] p-4 shadow-sm">
-        <div>
-          <p className="text-xs font-extrabold uppercase tracking-widest text-[#668775]">En cuisine, les mains dans les ingrédients ?</p>
-          <h2 id="handsfree-title" className="font-heading text-xl font-extrabold text-[#1A1A1A]">🎙️ Mode mains libres</h2>
-          <p className="mt-1 text-sm text-[#555551]">Dites « étape OK » pour cocher l’étape terminée, puis « étape suivante » pour afficher la prochaine sans toucher l’écran. Le navigateur demandera l’autorisation du micro.</p>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {!voiceMode ? <button type="button" onClick={startVoiceMode} className="rounded-xl bg-[#8FA89B] px-4 py-3 font-extrabold text-white shadow-sm">🎙️ Activer le mode mains libres</button> : <button type="button" onClick={stopVoiceMode} className="rounded-xl bg-[#D98A6C] px-4 py-3 font-extrabold text-white shadow-sm">⏹ Arrêter le mode vocal</button>}
-          <button type="button" onClick={validateCurrentVoiceTask} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">✓ Étape OK</button>
-          <button type="button" onClick={() => { setVoiceIndex((index) => { const next = Math.min(index + 1, Math.max(0, tasks.length - 1)); if (tasks[next]) speak(tasks[next].title); return next; }); }} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">Étape suivante</button>
-          <button type="button" onClick={goToPreviousStep} aria-label="Revenir à l’étape précédente" className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">← Précédent</button>
-          <button type="button" onClick={() => speak(currentVoiceTask ? `${currentVoiceTask.title}. ${currentVoiceTask.detail || ""}. ${currentVoiceTask.timer || ""}` : "Aucune étape disponible.")} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">🔊 Répéter</button>
-        </div>
-        <p aria-live="polite" className="rounded-xl bg-white p-3 text-sm font-semibold text-[#2B2B2B]">{voiceStatus}</p>
-        {currentVoiceTask ? <div className="rounded-xl border border-[#8FA89B]/50 bg-white p-3"><p className="text-xs font-bold uppercase tracking-wide text-[#668775]">Étape vocale {Math.min(voiceIndex + 1, tasks.length)} / {tasks.length}</p><p className="mt-1 font-extrabold text-[#2B2B2B]">{currentVoiceTask.title}</p>{currentVoiceTask.timer ? <p className="mt-1 font-bold text-[#8C4C34]">{currentVoiceTask.timer}</p> : null}<p className="mt-1 text-sm text-[#555551]">{currentVoiceTask.detail || ""}</p></div> : null}
-        <p className="text-xs leading-relaxed text-[#555551]">Commandes vocales : « étape OK » pour cocher l’étape en cours, « étape suivante » pour avancer, « étape précédente », « répète » et « arrête ». Les boutons restent disponibles en secours. Fonctionne avec les navigateurs compatibles avec la reconnaissance vocale, généralement Chrome ou Edge. Le mode vocal nécessite une autorisation micro et une connexion sécurisée (HTTPS).</p>
-      </section>
+        <header className="sticky top-0 z-30 -mx-3 space-y-3 border-b border-[#C8DDD5] bg-[#EAF5F1]/95 px-3 pb-3 pt-2 backdrop-blur-md sm:-mx-5 sm:px-5">
+          <div className="flex justify-center"><img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="Cuisine Chic Ouf !" className="h-auto w-28 rounded-xl sm:w-32" /></div>
+          <h1 className="text-center font-heading text-2xl font-extrabold tracking-wide text-[#176B5B] sm:text-3xl">MON BATCH COOKING</h1>
+          <div className="mx-auto flex max-w-lg items-center justify-between gap-2 rounded-full border border-[#D9E8E2] bg-white px-2 py-1 shadow-sm">
+            <a href={week > 1 ? `?w=${week - 1}&manual=1` : "#"} aria-label="Semaine précédente" onClick={(event) => { if (week <= 1) event.preventDefault(); }} className={`flex size-9 shrink-0 items-center justify-center rounded-full ${week > 1 ? "text-[#176B5B] hover:bg-[#EAF5F1]" : "text-gray-300"}`}><ChevronLeft className="size-5" /></a>
+            <div className="min-w-0 text-center"><p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#668078]">Votre planning de la semaine</p><p className="truncate text-xs font-extrabold text-[#176B5B] sm:text-sm">{weekRangeLabel(week)}</p></div>
+            <a href={week < 52 ? `?w=${week + 1}&manual=1` : "#"} aria-label="Semaine suivante" onClick={(event) => { if (week >= 52) event.preventDefault(); }} className={`flex size-9 shrink-0 items-center justify-center rounded-full ${week < 52 ? "text-[#176B5B] hover:bg-[#EAF5F1]" : "text-gray-300"}`}><ChevronRight className="size-5" /></a>
+          </div>
+          <div className="rounded-2xl border border-[#C8DDD5] bg-white px-4 py-3 shadow-sm">
+            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[11px] font-extrabold uppercase tracking-wide text-[#45645A] sm:text-xs"><span>Temps total estimé : {durationLabel(totalMinutes)}</span><span>Étapes validées : {done}/{tasks.length}</span></div>
+            <div className="mt-2 flex items-center gap-3"><div role="progressbar" aria-label="Progression du batch cooking" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress} className="h-3.5 min-w-0 flex-1 overflow-hidden rounded-full bg-[#E3EEE9]"><div className="h-full rounded-full bg-[#197765] transition-all duration-300" style={{ width: `${progress}%` }} /></div><span className="w-10 text-right text-sm font-extrabold text-[#176B5B]">{progress}%</span></div>
+          </div>
+          {robotPriority ? <p className="rounded-xl border border-[#9AC7B8] bg-white p-3 text-sm font-bold text-[#176B5B]">🤖 Monsieur Cuisine activé : les réglages des fiches sont affichés en priorité.</p> : null}
+        </header>
 
-      <section aria-labelledby="batch-dashboard" className="space-y-4 rounded-2xl border-2 border-[#8FA89B] bg-[#F4F7F2] p-4 shadow-sm">
-        <div>
-          <p className="text-xs font-extrabold uppercase tracking-widest text-[#668775]">Section 1</p>
-          <h2 id="batch-dashboard" className="font-heading text-xl font-extrabold text-[#1A1A1A]">⏱️ Le dashboard du temps</h2>
-        </div>
-        <div className="grid grid-cols-2 gap-3">
-          <div className="rounded-xl bg-white p-3"><p className="text-xs text-[#555551]">Temps total estimé</p><p className="mt-1 text-2xl font-extrabold text-[#2B2B2B]">{durationLabel(totalMinutes)}</p></div>
-          <div className="rounded-xl bg-white p-3"><p className="text-xs text-[#555551]">Étapes validées</p><p className="mt-1 text-2xl font-extrabold text-[#2B2B2B]">{done}/{tasks.length}</p></div>
-        </div>
-        <div>
-          <div className="mb-2 flex justify-between text-sm font-bold text-[#2B2B2B]"><span>Progression de la session</span><span>{progress}%</span></div>
-          <div role="progressbar" aria-label="Progression du batch cooking" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress} className="h-4 overflow-hidden rounded-full bg-white ring-1 ring-[#8FA89B]/50"><div className="h-full rounded-full bg-[#8FA89B] transition-all duration-300" style={{ width: `${progress}%` }} /></div>
-          <p className="mt-2 text-xs text-[#555551]">La jauge progresse à chaque case cochée et conserve votre avancement pour cette semaine sur cet appareil.</p>
-        </div>
-      </section>
+        <section aria-labelledby="handsfree-title" className="space-y-4 rounded-3xl border border-[#C8DDD5] bg-white p-4 shadow-sm sm:p-5">
+          <div><p className="text-xs font-extrabold uppercase tracking-[0.14em] text-[#197765]">SECTION 1</p><h2 id="handsfree-title" className="mt-1 font-heading text-xl font-extrabold text-[#176B5B] sm:text-2xl">EN CUISINE</h2><p className="mt-1 text-xs leading-relaxed text-[#557067]">Mode mains libres actif : dites « ÉTAPE SUIVANTE » pour avancer sans toucher l’écran.</p></div>
+          <div className="flex justify-center">
+            {!voiceMode ? <button type="button" onClick={startVoiceMode} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-[#176B5B] px-4 py-3 text-sm font-extrabold text-white shadow-sm transition hover:bg-[#105447] sm:w-auto sm:min-w-72"><span aria-hidden="true">🎙️</span> ACTIVER LE MODE MAINS LIBRES</button> : <button type="button" onClick={stopVoiceMode} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-[#A64E42] px-4 py-3 text-sm font-extrabold text-white sm:w-auto sm:min-w-72">⏹ ARRÊTER LE MODE VOCAL</button>}
+          </div>
+          <div className="grid grid-cols-2 gap-3"><button type="button" onClick={previousTask} disabled={voiceIndex === 0} className="flex min-h-11 items-center justify-center gap-1 rounded-xl border border-[#B7D2C8] bg-white px-3 py-2 text-sm font-extrabold text-[#176B5B] disabled:opacity-40"><ChevronLeft className="size-4" /> PRÉCÉDENT</button><button type="button" onClick={nextTask} disabled={!tasks.length || voiceIndex >= tasks.length - 1} className="flex min-h-11 items-center justify-center gap-1 rounded-xl bg-[#176B5B] px-3 py-2 text-sm font-extrabold text-white disabled:opacity-40">SUIVANT <ChevronRight className="size-4" /></button></div>
+          <div className="rounded-2xl border border-[#B7D2C8] bg-[#F8FCFA] p-4">
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#197765]">ÉTAPE {tasks.length ? Math.min(voiceIndex + 1, tasks.length) : 0}/{tasks.length}</p>
+            {currentStep ? <><div className="mt-2 flex items-start gap-3"><span className={`flex size-10 shrink-0 items-center justify-center rounded-xl ring-1 ${kindStyle(`${currentStep.title} ${currentStep.detail || ""}`).classes}`}>{taskIcon(`${currentStep.title} ${currentStep.detail || ""}`)}</span><div className="min-w-0"><p className="font-extrabold leading-relaxed text-[#243B35]">{adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(currentStep.title, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose || (preferences as PlanningPreferences & { isLactoseFree?: boolean }).isLactoseFree)), Boolean((preferences as PlanningPreferences & { isNutFree?: boolean; sansFruitsCoque?: boolean }).isNutFree || (preferences as PlanningPreferences & { sansFruitsCoque?: boolean }).sansFruitsCoque))}</p>{currentStep.detail ? <p className="mt-2 text-sm leading-relaxed text-[#557067]">{currentStep.detail}</p> : null}{currentStep.timer ? <button type="button" disabled={!currentStep.timerMinutes} onClick={() => setActiveTimers((current) => ({ ...current, [currentStep.id]: (currentStep.timerMinutes || 0) * 60 }))} className="mt-3 rounded-xl bg-[#FFF1C9] px-3 py-2 text-sm font-extrabold text-[#80600A] disabled:opacity-50">⏱ {currentStep.timer}</button> : null}{activeTimers[currentStep.id] !== undefined ? <p role="timer" className="mt-2 font-mono text-lg font-extrabold text-[#176B5B]">{Math.floor(activeTimers[currentStep.id] / 60)}:{String(activeTimers[currentStep.id] % 60).padStart(2, "0")}</p> : null}<p aria-live="polite" className="mt-3 text-xs font-semibold text-[#557067]">{voiceStatus}</p></div></div><button type="button" onClick={() => toggle(currentStep.id)} className={`mt-4 w-full rounded-xl px-4 py-3 text-sm font-extrabold ${checked[currentStep.id] ? "bg-[#E3EEE9] text-[#176B5B]" : "bg-[#176B5B] text-white"}`}>{checked[currentStep.id] ? "✓ ÉTAPE VALIDÉE — ANNULER" : "✓ VALIDER CETTE ÉTAPE"}</button></> : <p className="text-sm text-[#557067]">Aucune tâche disponible à partir des fiches de cette semaine.</p>}
+          </div>
+        </section>
 
-      <section aria-labelledby="batch-conductor" className="space-y-5 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
-        <div>
-          <p className="text-xs font-extrabold uppercase tracking-widest text-[#D98A6C]">Section 2</p>
-          <h2 id="batch-conductor" className="font-heading text-xl font-extrabold text-[#1A1A1A]">🧑‍🍳 Le fil conducteur en parallèle</h2>
-          <p className="mt-1 text-sm text-[#555551]">Suivez les étapes dans l'ordre. Les temps affichés viennent des fiches disponibles ; lorsqu'un temps manque, il est signalé plutôt qu'inventé.</p>
-        </div>
-        <div id="etape-decoupes" className="space-y-3">
-          <div><h3 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Étape 1 — Les découpes</h3><p className="text-sm text-[#555551]">Regroupez les découpes de la semaine avant de lancer les cuissons. Chaque élément a sa propre case.</p></div>
-          {taskList(combinedPrepTasks)}
-        </div>
-        <div className="border-t border-[#E9E9E4] pt-4">
-          <div className="mb-3"><h3 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Étape 2 — Les cuissons multi-feux + timers</h3><p className="text-sm text-[#555551]">Lancez les cuissons compatibles en parallèle. Respectez les températures, durées et réglages écrits dans chaque fiche.</p></div>
-          {taskList(combinedCookTasks)}
-        </div>
-        <div className="border-t border-[#E9E9E4] pt-4">
-          <div className="mb-3"><h3 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Étape 3 — L'assemblage / stockage</h3><p className="text-sm text-[#555551]">Répartissez les portions, fermez et étiquetez les contenants. Réfrigérateur : 3 jours maximum ; congelez les portions destinées à plus tard.</p></div>
-          {taskList(combinedAssemblyTasks)}
-        </div>
-      </section>
+        <details className="overflow-hidden rounded-3xl border border-[#C8DDD5] bg-white shadow-sm" open><summary className="cursor-pointer list-none bg-[#176B5B] px-4 py-4 text-base font-extrabold text-white marker:hidden sm:px-5">SECTION 2 : LE FIL CONDUCTEUR EN PARALLÈLE <span className="float-right">⌄</span></summary><div className="space-y-5 p-4 sm:p-5">
+          <div id="etape-decoupes" className="space-y-3"><div><h3 className="font-heading text-lg font-extrabold text-[#176B5B]">ÉTAPE 1 — LES DÉCOUPES</h3><p className="text-sm text-[#557067]">Préparez les ingrédients en une seule fois. Cochez chaque tâche ou touchez « Préparer » pour l’afficher dans la section cuisine.</p></div>{taskList(combinedPrepTasks)}</div>
+          <div className="border-t border-[#DCEAE4] pt-4"><div className="mb-3"><h3 className="font-heading text-lg font-extrabold text-[#176B5B]">ÉTAPE 2 — LES CUISSONS MULTI-FEUX + TIMERS</h3><p className="text-sm text-[#557067]">Lancez les cuissons compatibles en parallèle et utilisez les minuteurs des fiches.</p></div>{taskList(combinedCookTasks)}</div>
+          <div className="border-t border-[#DCEAE4] pt-4"><div className="mb-3"><h3 className="font-heading text-lg font-extrabold text-[#176B5B]">ÉTAPE 3 — L’ASSEMBLAGE / STOCKAGE</h3><p className="text-sm text-[#557067]">Répartissez les portions, fermez et étiquetez les contenants. Réfrigérateur : 3 jours maximum ; congelez les portions destinées à plus tard.</p></div>{taskList(combinedAssemblyTasks)}</div>
+        </div></details>
 
-      <section aria-labelledby="batch-victory" className="space-y-3 rounded-2xl border-2 border-[#D98A6C]/40 bg-[#F3C6B1]/30 p-4 shadow-sm">
-        <p className="text-xs font-extrabold uppercase tracking-widest text-[#8C4C34]">Section 3</p>
-        <h2 id="batch-victory" className="font-heading text-xl font-extrabold text-[#1A1A1A]">🏆 La victoire !</h2>
-        {progress === 100 && tasks.length > 0 ? (
-          <p className="text-base font-extrabold leading-relaxed text-[#2B2B2B]">Bravo ! Vous avez cuisiné pour toute la semaine et économisé {durationLabel(savedMinutes)} ! 🎉</p>
-        ) : (
-          <p className="text-base font-bold leading-relaxed text-[#2B2B2B]">Chaque case cochée vous rapproche de la victoire ! Il reste {tasks.length - done} étape(s) pour terminer votre session. Temps gagné estimé une fois la session terminée : {durationLabel(savedMinutes)}.</p>
-        )}
-        <div className="flex flex-wrap gap-2">
-          <span className="rounded-full bg-white px-3 py-1 text-sm font-bold text-[#2B2B2B]">Préparation groupée : {durationLabel(totalMinutes)}</span>
-          <span className="rounded-full bg-white px-3 py-1 text-sm font-bold text-[#2B2B2B]">Préparations séparées : {durationLabel(separateMinutes)}</span>
-        </div>
-        <p className="text-xs leading-relaxed text-[#555551]">Le gain est une estimation : temps de préparation additionnés, puis cuisson groupée estimée avec la cuisson la plus longue. Il dépend des recettes et des cuissons réellement compatibles.</p>
-      </section>
-      <section className="space-y-2 rounded-2xl border border-[#E9E9E4] bg-white p-4">
-        <h2 className="font-heading text-lg font-extrabold text-[#2B2B2B]">Recettes utilisées pour cette session</h2>
-        {recipes.length ? <ul className="space-y-2">{recipes.map(({ slot, recipe }) => <li key={`${slot.day}-${slot.meal}-${slot.recipeId}`} className="rounded-xl bg-[#F9F9F7] p-3"><p className="font-bold">{prettyDay(slot.day)} · {slot.meal} — {recipe!.name}</p><p className="mt-1 text-xs text-[#555551]">Préparation : {recipe!.timePrep || "non renseignée"} · Cuisson : {recipe!.timeCook || "non renseignée"}{recipe!.servings ? ` · ${recipe!.servings}` : ""}</p></li>)}</ul> : <p className="text-sm text-[#555551]">Aucune fiche repas disponible pour les bases prévues par le batch cooking de cette semaine. Aucune durée ni recette n'a été inventée.</p>}
-      </section>
-    </div>
+        <details className="overflow-hidden rounded-3xl border border-[#C8DDD5] bg-white shadow-sm"><summary className="cursor-pointer list-none bg-[#176B5B] px-4 py-4 text-base font-extrabold text-white marker:hidden sm:px-5">SECTION 3 : LA VICTOIRE 🏆 <span className="float-right">⌄</span></summary><div className="space-y-4 p-4 sm:p-5">
+          {progress === 100 && tasks.length > 0 ? <p className="text-base font-extrabold leading-relaxed text-[#176B5B]">Bravo ! Vous avez terminé la session et économisé {durationLabel(savedMinutes)} ! 🎉</p> : <p className="text-sm font-bold leading-relaxed text-[#243B35]">Il reste {tasks.length - done} étape(s) pour terminer votre session. Temps gagné estimé une fois la session terminée : {durationLabel(savedMinutes)}.</p>}
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2"><div className="rounded-2xl bg-[#EAF5F1] p-3"><p className="text-xs font-bold text-[#557067]">Préparation groupée</p><p className="mt-1 text-lg font-extrabold text-[#176B5B]">{durationLabel(totalMinutes)}</p></div><div className="rounded-2xl bg-[#EAF5F1] p-3"><p className="text-xs font-bold text-[#557067]">Préparations séparées</p><p className="mt-1 text-lg font-extrabold text-[#176B5B]">{durationLabel(separateMinutes)}</p></div></div>
+          <p className="text-xs leading-relaxed text-[#557067]">Le gain est une estimation calculée à partir des durées présentes dans les fiches de recettes.</p>
+          <div className="border-t border-[#DCEAE4] pt-4"><h3 className="font-heading text-lg font-extrabold text-[#176B5B]">RECETTES UTILISÉES POUR CETTE SESSION</h3>{recipes.length ? <ul className="mt-3 space-y-2">{recipes.map(({ slot, recipe }) => <li key={`${slot.day}-${slot.meal}-${slot.recipeId}`} className="rounded-xl bg-[#F4FAF7] p-3"><p className="font-bold text-[#243B35]">{prettyDay(slot.day)} SOIR : {recipe!.name}</p><p className="mt-1 text-xs text-[#557067]">Préparation : {recipe!.timePrep || "non renseignée"} · Cuisson : {recipe!.timeCook || "non renseignée"}{recipe!.servings ? ` · ${recipe!.servings}` : ""}</p></li>)}</ul> : <p className="mt-2 text-sm text-[#557067]">Aucune fiche repas disponible pour les bases prévues cette semaine.</p>}</div>
+        </div></details>
+      </div>
+      <nav aria-label="Navigation principale" className="fixed inset-x-0 bottom-0 z-40 border-t border-[#C8DDD5] bg-white/95 px-3 pb-[max(env(safe-area-inset-bottom),0.5rem)] pt-2 backdrop-blur-md"><div className="mx-auto grid max-w-4xl grid-cols-2 gap-3"><a href="../courses/" className="flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#B7D2C8] bg-white px-3 py-2 text-xs font-extrabold text-[#176B5B] shadow-sm sm:text-sm"><ShoppingCart className="size-4" /> MA LISTE DE COURSES</a><a href="./" aria-current="page" className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#176B5B] px-3 py-2 text-xs font-extrabold text-white shadow-sm sm:text-sm"><ChefHat className="size-4" /> MON BATCH COOKING</a></div></nav>
+    </main>
   );
 }
