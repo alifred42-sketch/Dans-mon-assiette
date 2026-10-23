@@ -1,8 +1,9 @@
 "use client";
 
 import { displayRecipe } from "@/lib/recipe-display";
-import { adaptGlutenFreeText } from "@/lib/ingredient-substitutions";
+import { adaptGlutenFreeText, adaptLactoseFreeText } from "@/lib/ingredient-substitutions";
 import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";
+import { LactoseFreeSafetyNotice } from "@/components/lactose-free-safety-notice";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
@@ -326,9 +327,9 @@ export default function BatchPage() {
   function taskList(items: Task[]) {
     if (!items.length) return <p className="rounded-xl bg-[#F9F9F7] p-3 text-sm text-[#555551]">Aucune tâche disponible à partir des fiches de cette semaine.</p>;
     return <ul className="space-y-2">{items.map((task) => {
-      const displayTitle = adaptGlutenFreeText(task.title, Boolean(preferences.sansGluten));
-      const displayDetail = task.detail ? adaptGlutenFreeText(task.detail, Boolean(preferences.sansGluten)) : undefined;
-      const displayGroup = task.group ? adaptGlutenFreeText(task.group, Boolean(preferences.sansGluten)) : undefined;
+      const displayTitle = adaptLactoseFreeText(adaptGlutenFreeText(task.title, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose || (preferences as PlanningPreferences & { isLactoseFree?: boolean }).isLactoseFree));
+      const displayDetail = task.detail ? adaptLactoseFreeText(adaptGlutenFreeText(task.detail, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose || (preferences as PlanningPreferences & { isLactoseFree?: boolean }).isLactoseFree)) : undefined;
+      const displayGroup = task.group ? adaptLactoseFreeText(adaptGlutenFreeText(task.group, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose || (preferences as PlanningPreferences & { isLactoseFree?: boolean }).isLactoseFree)) : undefined;
       return (
       <li key={task.id} className={checked[task.id] ? "rounded-xl border border-[#8FA89B]/40 bg-[#8FA89B]/10" : "rounded-xl border border-[#E9E9E4] bg-white"}>
         {displayGroup ? <p className="rounded-t-xl bg-[#E6DFD3] px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#2B2B2B]">{displayGroup}</p> : null}
@@ -351,6 +352,7 @@ export default function BatchPage() {
   return (
     <div className="space-y-5">
       <GlutenFreeSafetyNotice />
+      <LactoseFreeSafetyNotice />
       <header>
         <h1 className="font-heading text-3xl">Batch Cooking</h1>
         <p className="mt-1 text-sm leading-relaxed text-[#2B2B2B]">Un fil conducteur en 3 sections pour préparer les bases prévues, cuisiner en parallèle et ranger chaque portion sereinement.</p>
