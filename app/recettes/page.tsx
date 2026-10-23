@@ -1,6 +1,6 @@
 "use client";
 
-import { carnet, getCollections } from "@/lib/carnet";
+import { carnet, getCollections, isVeganRecipe } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 import { VeganNavigation } from "@/components/vegan-navigation";
@@ -45,6 +45,22 @@ function durationMinutes(value?: string): number | null {
 
 export default function RecettesPage() {
   const [maxDuration, setMaxDuration] = useState<number | null>(null);
+  const [veganProfile, setVeganProfile] = useState(false);
+  useEffect(() => {
+    const refreshPreferences = () => {
+      try {
+        const prefs = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
+        setVeganProfile(Boolean(prefs.isVegan || prefs.vegan));
+      } catch { setVeganProfile(false); }
+    };
+    refreshPreferences();
+    window.addEventListener("storage", refreshPreferences);
+    window.addEventListener("cuisine-chic-ouf-preferences-change", refreshPreferences);
+    return () => {
+      window.removeEventListener("storage", refreshPreferences);
+      window.removeEventListener("cuisine-chic-ouf-preferences-change", refreshPreferences);
+    };
+  }, []);
   const router = useRouter();
   const searchParams = useSearchParams();
   const filter = searchParams.get("filter") || "";
@@ -78,6 +94,7 @@ export default function RecettesPage() {
     }
   };
   const matchingRecipes = carnet.recipes
+    .filter((recipe) => !veganProfile || isVeganRecipe(recipe))
     .filter((recipe) => !filter || (selectedIds ? selectedIds.has(recipe.id) : fallbackFilter(recipe)))
     .filter((recipe) => filter !== "tired" || (
       recipe.ingredients.filter((line) => line.trim() && !/^ingr[ée]dients à prévoir/i.test(line)).length >= 2 &&
