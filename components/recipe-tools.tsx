@@ -21,7 +21,8 @@ export function RecipeTools({ recipeId, ingredients, alternatives, baseServings 
   const [servings, setServings] = useState(baseServings);
   const [ready, setReady] = useState(false);
   const [sansGluten, setSansGluten] = useState(false);
-  const [isLactoseFree, setIsLactoseFree] = useState(false);\n  const [isNutFree, setIsNutFree] = useState(false);
+  const [isLactoseFree, setIsLactoseFree] = useState(false);
+  const [isNutFree, setIsNutFree] = useState(false);
   useEffect(() => {
     const refresh = () => {
       try {
@@ -29,7 +30,8 @@ export function RecipeTools({ recipeId, ingredients, alternatives, baseServings 
         const household = Number(localStorage.getItem("assiette-household-servings") || baseServings);
         const prefs = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
         setSansGluten(Boolean(prefs.sansGluten));
-        setIsLactoseFree(Boolean(prefs.sansLactose || prefs.isLactoseFree));\n        setIsNutFree(Boolean(prefs.sansFruitsCoque || prefs.isNutFree));
+        setIsLactoseFree(Boolean(prefs.sansLactose || prefs.isLactoseFree));
+        setIsNutFree(Boolean(prefs.sansFruitsCoque || prefs.isNutFree));
         setServings(saved[recipeId] || (Number.isFinite(household) ? household : baseServings));
       } catch { setServings(baseServings); }
     };
