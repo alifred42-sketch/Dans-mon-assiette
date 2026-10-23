@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Heart, Share2, Users, Bot, UserRound, Leaf, Wheat, Milk, Nut, GraduationCap } from "lucide-react";
 import { carnet } from "@/lib/carnet";
-import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";
+import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";\nimport { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
 const DEFAULT_PREFS = { etudiant:false, vegetarien:false, vegan:false, sansGluten:false, sansLactose:false, sansFruitsCoque:false, robot:false };
 type Prefs = typeof DEFAULT_PREFS;
 function Toggle({label,checked,onChange,icon}:{label:string;checked:boolean;onChange:(v:boolean)=>void;icon?:React.ReactNode}) {
@@ -27,7 +27,7 @@ export default function ComptePage(){
  <div className="space-y-2"><h3 className="text-xs font-extrabold uppercase tracking-wider text-[#686862]">Mode de vie & budget</h3><Toggle label="Étudiant" checked={prefs.etudiant} onChange={v=>updatePref("etudiant",v)} icon={<GraduationCap className="size-5"/>}/></div>
  <div className="space-y-2"><h3 className="text-xs font-extrabold uppercase tracking-wider text-[#686862]">Régimes</h3><Toggle label="Végétarien" checked={prefs.vegetarien} onChange={v=>updatePref("vegetarien",v)} icon={<Leaf className="size-5"/>}/><Toggle label="Végan" checked={prefs.vegan} onChange={v=>updatePref("vegan",v)} icon={<Leaf className="size-5"/>}/></div>
  <div className="space-y-2"><h3 className="text-xs font-extrabold uppercase tracking-wider text-[#686862]">Allergies & intolérances</h3><Toggle label="Aide à l’adaptation sans gluten" checked={prefs.sansGluten} onChange={v=>updatePref("sansGluten",v)} icon={<Wheat className="size-5"/>}/><GlutenFreeSafetyNotice /><Toggle label="Intolérant au Lactose" checked={prefs.sansLactose} onChange={v=>updatePref("sansLactose",v)} icon={<Milk className="size-5"/>}/>
- <p className="text-xs leading-relaxed text-[#666660]">Cette option aide à adapter certaines recettes ; elle ne garantit pas que chaque produit soit sans lactose.</p><Toggle label="Sans Fruits à coque" checked={prefs.sansFruitsCoque} onChange={v=>updatePref("sansFruitsCoque",v)} icon={<Nut className="size-5"/>}/></div>
+ <p className="text-xs leading-relaxed text-[#666660]">Cette option aide à adapter certaines recettes ; elle ne garantit pas que chaque produit soit sans lactose.</p><Toggle label="Sans Fruits à Coque" checked={prefs.sansFruitsCoque} onChange={v=>updatePref("sansFruitsCoque",v)} icon={<Nut className="size-5"/>}/><NutFreeSafetyNotice /><p className="text-xs leading-relaxed text-red-800">Les substitutions sont indicatives et ne garantissent pas l’absence de fruits à coque ou de traces. Vérifiez chaque étiquette ; en cas d’allergie, n’utilisez pas un produit dont la sécurité n’est pas confirmée.</p></div>
  </section>
  <section className="space-y-3 rounded-3xl border border-white bg-[#F9F9F7] p-4 shadow-[7px_7px_18px_rgba(26,26,26,0.07),-5px_-5px_14px_rgba(255,255,255,0.95)]">
  <div className="flex items-center gap-3"><span className="flex size-11 items-center justify-center rounded-2xl bg-[#8FA89B]/20"><Heart className="size-6"/></span><h2 className="font-heading text-xl font-bold">Mon espace & infos</h2></div>
