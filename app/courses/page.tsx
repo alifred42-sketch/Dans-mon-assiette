@@ -46,7 +46,7 @@ export default function CoursesPage() {
     }));
 
   return (
-    <main className="min-h-dvh w-full bg-[#E6DFD3] px-4 py-5 sm:px-6 lg:px-8">
+    <main className="min-h-dvh w-full bg-[#F9F9F7] px-4 py-5 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-5xl space-y-5">
         <div>
           <h1 className="font-heading text-3xl">Courses</h1>
