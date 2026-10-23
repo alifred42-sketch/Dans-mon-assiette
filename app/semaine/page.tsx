@@ -117,8 +117,8 @@ export default function WeekPage() {
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => setOpenDay(isOpen ? "" : day)}
-                  className={`flex min-h-14 w-full items-center justify-between gap-3 border-b-[5px] bg-white/[0.04] px-5 py-4 text-left transition sm:min-h-16 sm:px-6 ${isOpen ? "" : "hover:bg-white/[0.08]"}`}
-                  style={{ borderBottomColor: DAY_COLORS[day] || "#4A9290" }}
+                  className="flex min-h-14 w-full items-center justify-between gap-3 border-b-[5px] bg-transparent px-5 py-4 text-left transition sm:min-h-16 sm:px-6 hover:bg-transparent"
+                  style={{ borderBottomColor: DAY_COLORS[day] || "#4A9290", backgroundColor: "transparent" }}
                 >
                   <span className="text-left text-lg font-black uppercase tracking-[0.08em] text-white sm:text-xl">{dayName}</span>
                   <ChevronDown className={`size-5 shrink-0 text-[#4A9290] transition-transform ${isOpen ? "rotate-180" : ""}`} />
