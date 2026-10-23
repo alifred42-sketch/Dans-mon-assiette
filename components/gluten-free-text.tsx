@@ -30,12 +30,12 @@ function useDietaryAdaptations() {
 }
 
 export function GlutenFreeText({ text }: { text: string }) {
-  const { sansGluten, isLactoseFree } = useDietaryAdaptations();
-  return <>{adaptLactoseFreeText(adaptGlutenFreeText(text, sansGluten), isLactoseFree)}</>;
+  const { sansGluten, isLactoseFree, isNutFree } = useDietaryAdaptations();
+  return <>{adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(text, sansGluten), isLactoseFree), isNutFree)}</>;
 }
 
 export function GlutenFreeTimerText({ text }: { text: string }) {
-  const { sansGluten, isLactoseFree } = useDietaryAdaptations();
-  const adapted = adaptLactoseFreeText(adaptGlutenFreeText(text, sansGluten), isLactoseFree);
+  const { sansGluten, isLactoseFree, isNutFree } = useDietaryAdaptations();
+  const adapted = adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(text, sansGluten), isLactoseFree), isNutFree);
   return <><CookingTimerText text={adapted} /><ListenStep text={adapted} /></>;
 }
