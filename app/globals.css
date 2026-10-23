@@ -34,6 +34,26 @@
 * { box-sizing: border-box; }
 html { background: #F9F9F7; }
 body { margin: 0; background: #F9F9F7; color: #2B2B2B; }
+html:has(.home-page),
+body:has(.home-page),
+body:has(.home-page) > *,
+.home-page {
+  min-height: 100%;
+  margin: 0 !important;
+  background: #4A9290 !important;
+  background-image: none !important;
+  background-color: #4A9290 !important;
+}
+body:has(.home-page) {
+  min-height: 100vh;
+  width: 100%;
+}
+.home-page {
+  display: flow-root;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
 button, a { -webkit-tap-highlight-color: transparent; }
 
 
