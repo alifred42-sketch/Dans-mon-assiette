@@ -21,6 +21,7 @@
 }
 
 :root {
+  --app-gradient: linear-gradient(135deg, #DDF4F0 0%, #BCE7E1 48%, #91D0CB 100%);
   --background: #F9F9F7;
   --foreground: #2B2B2B;
   --card: #FFFFFF;
@@ -32,8 +33,8 @@
 }
 
 * { box-sizing: border-box; }
-html { background: #F9F9F7; }
-body { margin: 0; background: #F9F9F7; color: #2B2B2B; }
+html { min-height: 100%; background: var(--app-gradient); background-attachment: fixed; }
+body { min-height: 100%; margin: 0; background: var(--app-gradient); background-attachment: fixed; color: #2B2B2B; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
 

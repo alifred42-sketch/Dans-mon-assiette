@@ -377,7 +377,7 @@ export default function BatchPage() {
   };
 
   return (
-    <main className="min-h-dvh bg-[#EAF5F1] px-3 pb-28 pt-3 text-[#243B35] sm:px-5 sm:pb-28">
+    <main className="min-h-dvh bg-transparent px-3 pb-28 pt-3 text-[#243B35] sm:px-5 sm:pb-28">
       <div className="mx-auto w-full max-w-4xl space-y-4">
         <GlutenFreeSafetyNotice />
         <LactoseFreeSafetyNotice />

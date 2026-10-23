@@ -48,7 +48,7 @@ export default function WeekPage() {
   const breakfast = breakfastForWeek(week);
 
   return (
-    <main className="min-h-dvh w-full bg-[#8FA89B] px-4 py-5 sm:px-6 lg:px-8">
+    <main className="min-h-dvh w-full bg-transparent px-4 py-5 sm:px-6 lg:px-8">
     <div className="mx-auto w-full max-w-5xl space-y-5">
       <div>
         <h1 className="font-heading text-3xl leading-tight">Semaine du {dateRange}</h1>\n        <p className="mt-2 inline-flex rounded-full bg-[#F3C6B1] px-3 py-1 text-sm font-semibold text-[#1A1A1A]">Menus de saison : {seasonLabel(week)}</p>

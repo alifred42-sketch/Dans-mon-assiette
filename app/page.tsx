@@ -54,7 +54,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main className="min-h-dvh bg-[#F9F9F7]">
+    <main className="min-h-dvh bg-transparent">
       <div className="mx-auto flex w-full max-w-3xl flex-col items-center px-5 py-8 pb-14 text-center sm:px-8">
         <img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="CUISINE CHIC OUF !" className="block h-auto w-[min(82vw,340px)] max-w-full shrink-0 rounded-[28px] bg-[#F9F6EC] object-contain drop-shadow-[0_5px_12px_rgba(43,43,43,0.10)]" loading="eager" fetchPriority="high" />
         <p className="mt-5 max-w-xl text-base font-normal leading-7 text-[#2B2B2B] sm:text-lg">52 semaines de menus, du batchcooking simple et vos listes de courses automatisées.<br /><strong>Cuisinez chic, respirez... OUF !</strong></p>
