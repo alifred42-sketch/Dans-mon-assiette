@@ -3,7 +3,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Heart, Share2, Users, Bot, UserRound, Leaf, Wheat, Milk, Nut, GraduationCap } from "lucide-react";
 import { carnet } from "@/lib/carnet";
-import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";\nimport { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
+import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";
+import { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
 const DEFAULT_PREFS = { etudiant:false, vegetarien:false, vegan:false, sansGluten:false, sansLactose:false, sansFruitsCoque:false, robot:false };
 type Prefs = typeof DEFAULT_PREFS;
 function Toggle({label,checked,onChange,icon}:{label:string;checked:boolean;onChange:(v:boolean)=>void;icon?:React.ReactNode}) {
