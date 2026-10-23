@@ -2,6 +2,7 @@
 
 import { displayRecipe } from "@/lib/recipe-display";
 import { adaptGlutenFreeText } from "@/lib/ingredient-substitutions";
+import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
@@ -349,6 +350,7 @@ export default function BatchPage() {
 
   return (
     <div className="space-y-5">
+      <GlutenFreeSafetyNotice />
       <header>
         <h1 className="font-heading text-3xl">Batch Cooking</h1>
         <p className="mt-1 text-sm leading-relaxed text-[#2B2B2B]">Un fil conducteur en 3 sections pour préparer les bases prévues, cuisiner en parallèle et ranger chaque portion sereinement.</p>
