@@ -161,7 +161,7 @@ export default function HomePage() {
 
   return (
     <main
-      className="min-h-dvh overflow-hidden text-white"
+      className="home-page min-h-dvh w-full overflow-hidden text-white"
       style={{
         backgroundColor: "#0B5559",
         backgroundImage:
