@@ -376,7 +376,8 @@ function eligibleForPreferences(recipe: Recipe, preferences: PlanningPreferences
     const unverifiedMeat = /\bpoulet\b|\bdinde\b|\bboeuf\b|\bveau\b|\bagneau\b|\bporc\b|\bcanard\b|\bjambon\b|\blardons?\b|\bsaucisse\b|\bmerguez\b|\bsteak\b|\bviande\b/.test(text);
     if (!halalTagged && !plantBasedTagged && (forbidden || unverifiedMeat)) return false;
   }
-  // Sans Gluten adapte les ingrédients à l’affichage au lieu d’exclure la recette du planning.
+  // Les ingrédients couverts par le dictionnaire sont adaptés à l’affichage ; les sources de gluten non couvertes restent exclues du planning.
+  if (preferences.sansGluten && /wrap|tortilla|nouilles de ble|couscous|semoule de ble|seitan|orge|seigle|boulgour/.test(text)) return false;
   if (preferences.sansLactose && ingredients.some((line) =>
     /lait|creme fraiche|beurre|fromage|parmesan|mozzarella|feta|skyr|yaourt|lactose/.test(line) &&
     !/lait d amande|lait de soja|lait de coco|creme de soja|fromage vegan|yaourt vegetal|yaourt de soja|margarine vegetale/.test(line)
