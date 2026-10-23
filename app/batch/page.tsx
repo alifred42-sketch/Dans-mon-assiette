@@ -205,6 +205,18 @@ export default function BatchPage() {
     window.speechSynthesis.speak(utterance);
   }
 
+  function validateCurrentVoiceTask() {
+    const task = currentVoiceTaskRef.current;
+    if (!task) {
+      setVoiceStatus("Aucune étape à valider.");
+      speak("Aucune étape à valider.");
+      return;
+    }
+    setChecked((previous) => ({ ...previous, [task.id]: true }));
+    setVoiceStatus(`Étape validée : ${task.title}. Dites « étape suivante » pour continuer.`);
+    speak(`Étape validée : ${task.title}. Dites étape suivante pour continuer.`);
+  }
+
   function goToPreviousStep() {
     const previous = Math.max(0, voiceIndex - 1);
     setVoiceIndex(previous);
@@ -275,8 +287,8 @@ export default function BatchPage() {
     recognitionRef.current = recognition;
     setVoiceIndex(0);
     setVoiceMode(true);
-    setVoiceStatus("Micro activé — dites « étape suivante ».");
-    speak(currentVoiceTask ? `Mode mains libres activé. Première étape : ${tasks[0]?.title || currentVoiceTask.title}. Dites étape suivante pour avancer, valide pour cocher, répète pour réécouter, ou arrête pour quitter.` : "Mode mains libres activé, mais aucune tâche n'est disponible.");
+    setVoiceStatus("Micro activé — dites « étape OK » pour cocher, puis « étape suivante » pour avancer.");
+    speak(currentVoiceTask ? `Mode mains libres activé. Première étape : ${tasks[0]?.title || currentVoiceTask.title}. Dites étape OK pour cocher cette étape, puis étape suivante pour avancer. Dites répète pour réécouter, ou arrête pour quitter.` : "Mode mains libres activé, mais aucune tâche n'est disponible.");
     try { recognition.start(); } catch { setVoiceStatus("Impossible de démarrer le micro. Réessayez."); }
   }
 
@@ -343,17 +355,18 @@ export default function BatchPage() {
         <div>
           <p className="text-xs font-extrabold uppercase tracking-widest text-[#668775]">En cuisine, les mains dans les ingrédients ?</p>
           <h2 id="handsfree-title" className="font-heading text-xl font-extrabold text-[#1A1A1A]">🎙️ Mode mains libres</h2>
-          <p className="mt-1 text-sm text-[#555551]">Dites « étape suivante » pour avancer sans toucher l'écran. Le navigateur demandera l'autorisation du micro.</p>
+          <p className="mt-1 text-sm text-[#555551]">Dites « étape OK » pour cocher l’étape terminée, puis « étape suivante » pour afficher la prochaine sans toucher l’écran. Le navigateur demandera l’autorisation du micro.</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {!voiceMode ? <button type="button" onClick={startVoiceMode} className="rounded-xl bg-[#8FA89B] px-4 py-3 font-extrabold text-white shadow-sm">🎙️ Activer le mode mains libres</button> : <button type="button" onClick={stopVoiceMode} className="rounded-xl bg-[#D98A6C] px-4 py-3 font-extrabold text-white shadow-sm">⏹ Arrêter le mode vocal</button>}
+          <button type="button" onClick={validateCurrentVoiceTask} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">✓ Étape OK</button>
           <button type="button" onClick={() => { setVoiceIndex((index) => { const next = Math.min(index + 1, Math.max(0, tasks.length - 1)); if (tasks[next]) speak(tasks[next].title); return next; }); }} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">Étape suivante</button>
           <button type="button" onClick={goToPreviousStep} aria-label="Revenir à l’étape précédente" className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">← Précédent</button>
           <button type="button" onClick={() => speak(currentVoiceTask ? `${currentVoiceTask.title}. ${currentVoiceTask.detail || ""}. ${currentVoiceTask.timer || ""}` : "Aucune étape disponible.")} className="rounded-xl border border-[#8FA89B] bg-white px-4 py-3 font-bold text-[#2B2B2B]">🔊 Répéter</button>
         </div>
         <p aria-live="polite" className="rounded-xl bg-white p-3 text-sm font-semibold text-[#2B2B2B]">{voiceStatus}</p>
         {currentVoiceTask ? <div className="rounded-xl border border-[#8FA89B]/50 bg-white p-3"><p className="text-xs font-bold uppercase tracking-wide text-[#668775]">Étape vocale {Math.min(voiceIndex + 1, tasks.length)} / {tasks.length}</p><p className="mt-1 font-extrabold text-[#2B2B2B]">{currentVoiceTask.title}</p>{currentVoiceTask.timer ? <p className="mt-1 font-bold text-[#8C4C34]">{currentVoiceTask.timer}</p> : null}<p className="mt-1 text-sm text-[#555551]">{currentVoiceTask.detail || ""}</p></div> : null}
-        <p className="text-xs leading-relaxed text-[#555551]">Commandes vocales : « étape suivante », « étape précédente », « répète », « valide » et « arrête ». Fonctionne avec les navigateurs compatibles avec la reconnaissance vocale, généralement Chrome ou Edge. Le mode vocal nécessite une autorisation micro et une connexion sécurisée (HTTPS).</p>
+        <p className="text-xs leading-relaxed text-[#555551]">Commandes vocales : « étape OK » pour cocher l’étape en cours, « étape suivante » pour avancer, « étape précédente », « répète » et « arrête ». Les boutons restent disponibles en secours. Fonctionne avec les navigateurs compatibles avec la reconnaissance vocale, généralement Chrome ou Edge. Le mode vocal nécessite une autorisation micro et une connexion sécurisée (HTTPS).</p>
       </section>
 
       <section aria-labelledby="batch-dashboard" className="space-y-4 rounded-2xl border-2 border-[#8FA89B] bg-[#F4F7F2] p-4 shadow-sm">
