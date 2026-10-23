@@ -78,18 +78,23 @@ body > * {
   z-index: 1;
 }
 
-/* Les pages principales ne peignent plus leur propre fond : cela évite les aplats
-   différents et laisse apparaître le même dégradé de haut en bas et de gauche à droite. */
+/* Fond appliqué DIRECTEMENT à chaque page principale.
+   Le fond n'est pas seulement derrière le body : il remplit toute la surface du main,
+   y compris sous les images/cartes et sur toute la hauteur du contenu. */
 body main,
 body main.home-page {
   display: flow-root;
+  position: relative;
+  z-index: 1;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  background-attachment: initial !important;
+  background-color: var(--app-page-background) !important;
+  background-image: var(--app-page-background-image) !important;
+  background-position: center top !important;
+  background-repeat: repeat-y !important;
+  background-size: 100% 100vh !important;
+  background-attachment: scroll !important;
 }
 
 button, a { -webkit-tap-highlight-color: transparent; }
