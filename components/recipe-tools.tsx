@@ -43,7 +43,7 @@ export function RecipeTools({ recipeId, ingredients, alternatives, baseServings 
   }, [recipeId, baseServings]);
   useEffect(() => { if (!ready) return; try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; saved[recipeId] = servings; localStorage.setItem("assiette-recipe-servings", JSON.stringify(saved)); window.dispatchEvent(new CustomEvent("assiette-servings-change")); } catch {} }, [recipeId, servings, ready]);
   const [showSos, setShowSos] = useState(false);
-  const scaled = useMemo(() => ingredients.map((line) => scaleLine(line, servings / baseServings)), [ingredients, servings]);
+  const scaled = useMemo(() => ingredients.map((line) => scaleLine(adaptGlutenFreeText(line, sansGluten), servings / baseServings)), [ingredients, servings, baseServings, sansGluten]);
   return (
     <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
       <div className="flex flex-wrap items-center justify-between gap-3">
