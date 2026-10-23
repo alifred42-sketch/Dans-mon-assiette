@@ -162,7 +162,7 @@ export default function WeekPage() {
           <Link href={`/courses?w=${week}`} className="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl text-white/85 transition hover:bg-white/10" aria-label="Liste de courses">
             <ShoppingBasket className="size-5" /><span className="text-[10px] font-bold sm:text-xs">Liste de courses</span>
           </Link>
-          <Link href="/profil" className="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl text-white/85 transition hover:bg-white/10" aria-label="Profil">
+          <Link href="/compte" className="flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl text-white/85 transition hover:bg-white/10" aria-label="Profil">
             <UserRound className="size-5" /><span className="text-[10px] font-bold sm:text-xs">Profil</span>
           </Link>
         </div>
