@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { clampWeek, currentIsoWeek, shoppingForWeek, type PlanningPreferences } from "@/lib/carnet";
 import { CheckList } from "@/components/check-list";
+import { adaptGlutenFreeText } from "@/lib/ingredient-substitutions";
 import { WeekPicker } from "@/components/week-picker";
 
 export default function CoursesPage() {
@@ -41,7 +42,7 @@ export default function CoursesPage() {
     .filter((item) => !nonIngredientPattern.test(item.label.normalize("NFD").replace(/[\u0300-\u036f]/g, "")))
     .map((item) => ({
       id: `${item.aisle}|${item.label}`,
-      title: item.label,
+      title: adaptGlutenFreeText(item.label, Boolean(preferences.sansGluten)),
       group: item.aisle,
     }));
 
