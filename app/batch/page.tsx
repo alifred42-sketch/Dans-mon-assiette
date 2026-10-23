@@ -1,6 +1,7 @@
 "use client";
 
 import { displayRecipe } from "@/lib/recipe-display";
+import { adaptGlutenFreeText } from "@/lib/ingredient-substitutions";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
@@ -323,23 +324,27 @@ export default function BatchPage() {
 
   function taskList(items: Task[]) {
     if (!items.length) return <p className="rounded-xl bg-[#F9F9F7] p-3 text-sm text-[#555551]">Aucune tâche disponible à partir des fiches de cette semaine.</p>;
-    return <ul className="space-y-2">{items.map((task) => (
+    return <ul className="space-y-2">{items.map((task) => {
+      const displayTitle = adaptGlutenFreeText(task.title, Boolean(preferences.sansGluten));
+      const displayDetail = task.detail ? adaptGlutenFreeText(task.detail, Boolean(preferences.sansGluten)) : undefined;
+      const displayGroup = task.group ? adaptGlutenFreeText(task.group, Boolean(preferences.sansGluten)) : undefined;
+      return (
       <li key={task.id} className={checked[task.id] ? "rounded-xl border border-[#8FA89B]/40 bg-[#8FA89B]/10" : "rounded-xl border border-[#E9E9E4] bg-white"}>
-        {task.group ? <p className="rounded-t-xl bg-[#E6DFD3] px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#2B2B2B]">{task.group}</p> : null}
+        {displayGroup ? <p className="rounded-t-xl bg-[#E6DFD3] px-3 py-2 text-xs font-bold uppercase tracking-wide text-[#2B2B2B]">{displayGroup}</p> : null}
         <label className="flex cursor-pointer items-start gap-3 p-3">
           <input type="checkbox" className="mt-1 size-6 shrink-0 accent-[#8FA89B]" checked={Boolean(checked[task.id])} onChange={() => toggle(task.id)} />
           <span className="min-w-0 flex-1">
             <span className="flex flex-wrap items-center gap-2">
-              <span className={`flex size-9 shrink-0 items-center justify-center rounded-xl ring-1 ${kindStyle(`${task.title} ${task.detail || ""}`).classes}`}>{taskIcon(`${task.title} ${task.detail || ""}`)}</span>
-              <span className={checked[task.id] ? "font-semibold text-[#668775] line-through" : "font-semibold text-[#2B2B2B]"}>{task.title}</span>
+              <span className={`flex size-9 shrink-0 items-center justify-center rounded-xl ring-1 ${kindStyle(`${displayTitle} ${displayDetail || ""}`).classes}`}>{taskIcon(`${task.title} ${task.detail || ""}`)}</span>
+              <span className={checked[task.id] ? "font-semibold text-[#668775] line-through" : "font-semibold text-[#2B2B2B]"}>{displayTitle}</span>
               <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold ring-1 ${kindStyle(`${task.title} ${task.detail || ""}`).classes}`}><span aria-hidden="true" className="size-2 rounded-full bg-current" />{kindStyle(`${task.title} ${task.detail || ""}`).label}</span>
             </span>
             {task.timer ? <span className="mt-2 flex flex-wrap items-center gap-2"><button type="button" disabled={!task.timerMinutes} onClick={() => setActiveTimers((current) => ({ ...current, [task.id]: (task.timerMinutes || 0) * 60 }))} className="inline-flex rounded-lg bg-[#D98A6C]/15 px-3 py-2 text-sm font-extrabold text-[#8C4C34] disabled:cursor-not-allowed disabled:opacity-50">⏱ {activeTimers[task.id] !== undefined ? "Redémarrer" : task.timer}</button>{activeTimers[task.id] !== undefined ? <><span role="timer" aria-live="off" className="rounded-lg bg-[#FBE3DF] px-3 py-2 font-mono text-sm font-extrabold text-[#A63D35]">{Math.floor(activeTimers[task.id] / 60)}:{String(activeTimers[task.id] % 60).padStart(2, "0")}</span><button type="button" onClick={() => setActiveTimers((current) => { const next = { ...current }; delete next[task.id]; return next; })} className="rounded-lg border border-[#E7AAA2] px-3 py-2 text-xs font-bold text-[#A63D35]">Réinitialiser</button></> : null}</span> : null}
-            {task.detail ? <span className="mt-2 block text-sm leading-relaxed text-[#555551]">{task.detail}</span> : null}
+            {displayDetail ? <span className="mt-2 block text-sm leading-relaxed text-[#555551]">{displayDetail}</span> : null}
           </span>
         </label>
       </li>
-    ))}</ul>;
+    ); })}</ul>;
   }
 
   return (
