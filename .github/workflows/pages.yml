@@ -2,7 +2,7 @@ name: Pages
 
 on:
   push:
-    branches: [main, travail-cuisine-chic-ouf-design, integration-visuel-fonctionnel]
+    branches: [main, travail-cuisine-chic-ouf-design]
   workflow_dispatch:
 
 concurrency:
@@ -26,7 +26,7 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ github.ref == 'refs/heads/main' && '/Dans-mon-assiette' || '/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design' }}
       - uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/travail-cuisine-chic-ouf-design' || github.ref == 'refs/heads/integration-visuel-fonctionnel'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/travail-cuisine-chic-ouf-design'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out

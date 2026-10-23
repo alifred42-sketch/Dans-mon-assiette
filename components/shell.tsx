@@ -24,8 +24,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const weekQuery = week ? `?w=${week}` : "";
 
   return (
-    <div className="flex min-h-dvh flex-col bg-[#F9F9F7]">
-      <header className="sticky top-0 z-40 border-b border-[#E9E9E4] bg-[#F9F9F7]/95 backdrop-blur-md">
+    <div className="flex min-h-dvh flex-col bg-transparent">
+      <header className="sticky top-0 z-40 border-b border-[#E9E9E4] bg-white/35 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-3xl items-center justify-center px-4">
           <Link href="/" aria-label="CUISINE CHIC OUF !">
             <img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="Logo officiel CUISINE CHIC OUF !" className="block h-12 w-auto max-w-[200px] rounded-[14px] bg-[#F9F6EC] object-contain drop-shadow-[0_2px_6px_rgba(43,43,43,0.07)]" loading="eager" fetchPriority="high" />
