@@ -382,7 +382,8 @@ export function isVeganRecipe(recipe: Recipe): boolean {
 /** Filtre végétarien strict : les œufs et produits laitiers sont autorisés,
  * mais les ingrédients de viande, volaille, charcuterie, poisson et fruits de mer sont exclus. */
 export function isVegetarianRecipe(recipe: Recipe): boolean {
-  const ingredients = (recipe.ingredients || []).map((line) => normalizedSeasonText(line));
+  const ingredients = (recipe.ingredients || []).map((line) => normalizedSeasonText(line)).filter(Boolean);
+  if (ingredients.length === 0) return false; // Une fiche sans ingrédients vérifiables ne passe pas le filtre strict.
   const animalMeatOrSeafood = /\b(viande|boeuf|veau|porc|poulet|dinde|canard|agneau|mouton|lapin|jambon|lardons?|bacon|pancetta|chorizo|saucisse|merguez|charcuterie|steak|escalope|cotelette|boulette de viande|gelatine animale|poisson|saumon|cabillaud|thon|maquereau|sardine|anchois|colin|lieu noir|truite|bar|dorade|haddock|surimi|crevette|gambas|langoustine|homard|crabe|moule|huitre|coquille saint jacques|saint jacques|calamar|seiche|poulpe|fruits de mer)\b/;
   return ingredients.every((line) => !animalMeatOrSeafood.test(line));
 }
