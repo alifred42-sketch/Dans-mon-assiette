@@ -136,7 +136,7 @@ function HomeSection({
 }) {
   return (
     <section className="w-full">
-      <h2 className="mb-3 text-left text-xl font-black tracking-tight text-white sm:mb-4 sm:text-2xl">
+      <h2 className="mb-3 text-center text-xl font-black tracking-tight text-white sm:mb-4 sm:text-2xl">
         {title}
       </h2>
       <CardRow cards={cards} columns={columns} currentWeek={currentWeek} />
@@ -162,9 +162,9 @@ export default function HomePage() {
     <main
       className="min-h-dvh overflow-hidden text-white"
       style={{
-        backgroundColor: "#073F43",
+        backgroundColor: "#0B5559",
         backgroundImage:
-          "radial-gradient(ellipse at 12% 8%, rgba(42,133,132,0.48), transparent 38%), radial-gradient(ellipse at 90% 42%, rgba(13,91,94,0.68), transparent 44%), repeating-linear-gradient(135deg, rgba(255,255,255,0.018) 0px, rgba(255,255,255,0.018) 1px, transparent 1px, transparent 5px)",
+          "radial-gradient(ellipse at 12% 8%, rgba(63,164,158,0.52), transparent 38%), radial-gradient(ellipse at 90% 42%, rgba(29,119,121,0.68), transparent 44%), repeating-linear-gradient(135deg, rgba(255,255,255,0.018) 0px, rgba(255,255,255,0.018) 1px, transparent 1px, transparent 5px)",
       }}
     >
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-4 py-6 pb-12 sm:gap-10 sm:px-8 sm:py-9">
