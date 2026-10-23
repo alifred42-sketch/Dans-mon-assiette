@@ -254,7 +254,7 @@ export default function BatchPage() {
         });
       } else if (/répète|repete|répéter|repeter|redis/.test(transcript)) {
         speak(currentVoiceTaskRef.current ? `${currentVoiceTaskRef.current.title}. ${currentVoiceTaskRef.current.detail || ""}. ${currentVoiceTaskRef.current.timer || ""}` : "Aucune étape disponible.");
-      } else if (/valide|valider|c'est fait|c est fait|terminé|termine/.test(transcript)) {
+      } else if (/étape\s*(ok|okay)|etape\s*(ok|okay)|valide|valider|c'est fait|c est fait|terminé|termine/.test(transcript)) {
         if (currentVoiceTaskRef.current) {
           setChecked((previous) => ({ ...previous, [currentVoiceTaskRef.current!.id]: true }));
           speak(`Étape validée : ${currentVoiceTaskRef.current.title}. Dites étape suivante pour continuer.`);
