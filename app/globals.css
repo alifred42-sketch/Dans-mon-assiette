@@ -32,27 +32,36 @@
 }
 
 * { box-sizing: border-box; }
-html { background: #F9F9F7; }
-body { margin: 0; background: #F9F9F7; color: #2B2B2B; }
-html:has(.home-page),
-body:has(.home-page),
-body:has(.home-page) > *,
-.home-page {
-  min-height: 100%;
-  margin: 0 !important;
-  background: #4A9290 !important;
-  background-image: none !important;
-  background-color: #4A9290 !important;
+
+/* Fond unique sur toute l'application : les pages et les images se posent au-dessus. */
+:root {
+  --app-page-background: #4A9290;
+  --app-page-background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(190,235,220,0.62), transparent 42%),
+    radial-gradient(ellipse at 90% 42%, rgba(112,196,187,0.58), transparent 48%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 5px);
 }
-body:has(.home-page) {
-  min-height: 100vh;
-  width: 100%;
+html, body {
+  min-height: 100%;
+  margin: 0;
+  background-color: var(--app-page-background) !important;
+  background-image: var(--app-page-background-image) !important;
+  color: #2B2B2B;
+}
+body { min-height: 100vh; min-height: 100dvh; width: 100%; }
+
+/* Neutralise les anciens fonds de page différents, sans toucher aux cartes ni aux photos. */
+body main {
+  background-color: var(--app-page-background) !important;
+  background-image: var(--app-page-background-image) !important;
 }
 .home-page {
   display: flow-root;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
+  background-color: var(--app-page-background) !important;
+  background-image: var(--app-page-background-image) !important;
 }
 button, a { -webkit-tap-highlight-color: transparent; }
 
