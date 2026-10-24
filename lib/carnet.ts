@@ -182,7 +182,7 @@ const unmatchedPdfRecipes: Recipe[] = pdfRecipeEntries
 
 export const carnet = {
   ...data,
-  recipes: [...recipesWithPdfOverrides, ...unmatchedPdfRecipes, ...springFestivalRecipes].map(normalizeRecipeForPlanning),
+  recipes: [...recipesWithPdfOverrides, ...unmatchedPdfRecipes, ...springFestivalRecipes, ...summerFestivalRecipes].map(normalizeRecipeForPlanning),
 } as Carnet;
 
 export const DAYS = [
