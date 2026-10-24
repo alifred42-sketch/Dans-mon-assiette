@@ -909,5 +909,230 @@
     "source": "RECETTES 899.pdf",
     "sourceNumber": 840,
     "id": "pdf-899-840"
+  },
+  {
+    "name": "Shakshuka Étudiante aux Œufs",
+    "timePrep": "5 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Tomates concassées : 400 g (1 boîte)",
+      "Œufs frais : 4 pièces",
+      "Oignon jaune : 1/2 pièce émincée",
+      "Cumin en poudre : 1/2 cuillère à café",
+      "Huile d'olive : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le départ : Faites revenir l'oignon émincé et le cumin dans une poêle huilée pendant 3 minutes.",
+      "La sauce : Versez la boîte de tomates concassées, salez et laissez frémir pendant 3 minutes.",
+      "Les puits : Formez 4 petits creux dans la sauce tomate chaude à l'aide d'une cuillère.",
+      "Les œufs : Cassez un œuf frais délicatement à l'intérieur de chaque emplacement.",
+      "Le pochage : Couvrez la poêle et laissez cuire à feu doux pendant 4 minutes jusqu'à ce que le blanc fige."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 841,
+    "id": "pdf-899-841"
+  },
+  {
+    "name": "Gnocchis Croustillants au Bacon et Crème",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Gnocchis frais (à poêler) : 400 g",
+      "Tranches de bacon : 4 pièces coupées en lanières",
+      "Crème fraîche liquide : 150 ml",
+      "Huile de tournesol : 1 cuillère à café",
+      "Poivre noir : 1 tour"
+    ],
+    "steps": [
+      "Le bacon : Faites griller les lanières de bacon à sec dans une poêle chaude pendant 2 minutes ; retirez.",
+      "Le croustillant : Versez la cuillère d'huile et faites sauter les gnocchis frais pendant 4 minutes pour les dorer.",
+      "La crème : Versez la crème liquide directement sur les gnocchis bien croustillants.",
+      "L'union : Rajoutez les lanières de bacon grillées et baissez le feu au minimum.",
+      "La réduction : Laissez la crème napper les gnocchis pendant 2 minutes, poivrez et servez chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 842,
+    "id": "pdf-899-842"
+  },
+  {
+    "name": "Omelette Paysanne aux Pommes de Terre",
+    "timePrep": "5 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Œufs frais : 6 pièces",
+      "Pommes de terre cuites (reste) : 2 pièces coupées en dés",
+      "Lardons nature : 75 g",
+      "Huile de tournesol : 1 cuillère à café"
+    ],
+    "steps": [
+      "Le rissolage : Faites griller les lardons et les dés de pommes de terre dans la poêle huilée pendant 5 minutes.",
+      "Le fouettage : Pendant ce temps, battez les œufs entiers en omelette dans un bol avec du sel.",
+      "Le versement : Coulez les œufs battus directement sur la garniture paysanne rissolée.",
+      "La cuisson : Laissez cuire à feu moyen pendant 4 minutes en soulevant les bords de l'omelette.",
+      "Le pliage : Pliez l'omelette en deux dans la poêle et servez chaud immédiatement."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 843,
+    "id": "pdf-899-843"
+  },
+  {
+    "name": "Quesadilla Express Jambon & Fromage",
+    "timePrep": "5 min",
+    "timeCook": "4 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Grandes tortillas de blé : 4 pièces",
+      "Tranches de jambon blanc : 2 pièces coupées en deux",
+      "Fromage râpé (type Emmental) : 100 g",
+      "Beurre : 10 g (pour la poêle)"
+    ],
+    "steps": [
+      "Le montage : Déposez une demi-tranche de jambon et une poignée de fromage râpé sur une moitié de chaque tortilla.",
+      "La fermeture : Rabattez la tortilla en deux pour former un demi-lune et pressez fermement.",
+      "La cuisson : Faites fondre le beurre dans une poêle et déposez-y les quesadillas.",
+      "Le dorage : Laissez colorer 2 minutes de chaque côté jusqu'à ce que la galette soit bien croustillante.",
+      "Le service : Coupez les triangles chauds au couteau et dégustez avec le fromage filant."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 844,
+    "id": "pdf-899-844"
+  },
+  {
+    "name": "Émincé de Poulet au Curry et Lait de Coco",
+    "timePrep": "10 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Blancs de poulet : 400 g coupés en fines lanières",
+      "Lait de coco : 250 ml",
+      "Poudre de curry : 1 cuillère à soupe",
+      "Oignon jaune : 1/2 pièce émincée",
+      "Huile de tournesol : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "La saisie : Saisissez les lanières de poulet et l'oignon émincé dans la poêle huilée pendant 5 minutes.",
+      "L'épice : Saupoudrez le curry en poudre uniformément sur la viande bien chaude.",
+      "Le mouillage : Versez le lait de coco directement dans la poêle en grattant les sucs de cuisson.",
+      "Le mijotage : Laissez frémir à feu doux pendant 5 minutes pour épaissir la sauce crémeuse.",
+      "Le service : Rectifiez l'assaisonnement et servez chaud avec du riz micro-ondes rapide."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 845,
+    "id": "pdf-899-845"
+  },
+  {
+    "name": "Grilled-Cheese Façon Pain Perdu Salé",
+    "timePrep": "5 min",
+    "timeCook": "6 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de mie blanc : 8 tranches",
+      "Tranches de fromage fondant (type Toastinette ou Gouda) : 4 pièces",
+      "Œuf frais : 1 pièce battue avec 50 ml de lait",
+      "Beurre : 15 g"
+    ],
+    "steps": [
+      "Le sandwich : Prenez 4 tranches de pain, déposez le fromage et refermez avec les 4 tranches restantes.",
+      "Le trempage : Plongez rapidement les sandwichs des deux côtés dans le mélange d'œuf et de lait.",
+      "Le chauffage : Faites fondre le beurre dans une poêle large sur feu moyen.",
+      "La cuisson poêle : Saisissez les sandwichs dorés pendant 3 minutes sur la première face.",
+      "Le fromage filant : Retournez et laissez cuire encore 3 minutes jusqu'à ce que le fromage soit fondu."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 846,
+    "id": "pdf-899-846"
+  },
+  {
+    "name": "Chili Con Carne Minute",
+    "timePrep": "5 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Bœuf haché : 300 g",
+      "Haricots rouges cuits : 250 g (en conserve égouttés)",
+      "Coulis de tomates : 200 ml",
+      "Épices Chili en poudre : 1 cuillère à café",
+      "Huile de tournesol : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "La viande : Faites revenir le bœuf haché dans une poêle huilée bien chaude pendant 4 minutes.",
+      "L'épice : Saupoudrez la poudre de chili sur la viande hachée cuite et mélangez bien.",
+      "Le rouge : Versez le coulis de tomates rouge vif directement dans la poêle.",
+      "L'assemblage : Intégrez les haricots rouges égouttés au mélange frémissant.",
+      "Le final : Laissez mijoter à feu moyen pendant 6 minutes à découvert pour épaissir la sauce."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 847,
+    "id": "pdf-899-847"
+  },
+  {
+    "name": "Poêlée Forestière aux Œufs Cocotte",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Poêlée de champignons de Paris (en conserve ou surgelée) : 300 g égouttée",
+      "Œufs frais : 4 pièces",
+      "Crème fraîche épaisse : 2 cuillères à soupe",
+      "Persil sec : 1 pincée",
+      "Huile d'olive : 1 cuillère à café"
+    ],
+    "steps": [
+      "Les champignons : Faites sauter les champignons dans la poêle huilée pendant 4 minutes à feu vif.",
+      "L'onctuosité : Incorporez la crème fraîche épaisse et mélangez à la spatule sur le feu.",
+      "Les puits : Formez 4 cavités espacées dans la crème de champignons chaude.",
+      "Les œufs : Cassez délicatement un œuf frais à l'intérieur de chaque emplacement.",
+      "Le pochage : Couvrez la poêle et laissez cuire à feu doux pendant 4 minutes jusqu'à ce que les blancs figent."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 848,
+    "id": "pdf-899-848"
+  },
+  {
+    "name": "Gnocchis à la Provençale et au Thon",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Gnocchis frais : 400 g",
+      "Sauce tomate cuisinée (type provençale) : 200 g",
+      "Thon au naturel en boîte : 140 g égoutté et émietté",
+      "Huile d'olive : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le croustillant : Faites dorer les gnocchis frais dans la poêle huilée pendant 4 minutes à feu vif.",
+      "Le poisson : Ajoutez les miettes de thon au naturel directement sur les gnocchis croustillants.",
+      "La sauce : Versez la sauce tomate à la provençale sur l'ensemble de la préparation.",
+      "L'enrobage : Remuez délicatement à la spatule pour napper le thon et les gnocchis.",
+      "Le service : Laissez frémir pendant 4 minutes supplémentaires à feu très doux et servez chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 849,
+    "id": "pdf-899-849"
+  },
+  {
+    "name": "Poêlée de Francfort aux Pommes de Terre",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Saucisses de Francfort ou Knacks : 4 pièces coupées en rondelles",
+      "Pommes de terre cuites (reste) : 3 pièces coupées en cubes",
+      "Moutarde fine : 1 cuillère à café",
+      "Huile de tournesol : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le rissolage : Faites sauter les cubes de pommes de terre dans la poêle huilée pendant 4 minutes.",
+      "Les saucisses : Ajoutez les rondelles de Francfort dans la poêle bien chaude.",
+      "La saisie : Laissez griller le tout pendant 2 minutes en remuant régulièrement.",
+      "La liaison : Incorporez la cuillère de moutarde hors du feu et mélangez bien pour enrober les cubes.",
+      "Le service : Remettez sur le feu 2 minutes pour servir l'ensemble croustillant et chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 850,
+    "id": "pdf-899-850"
   }
 ]
