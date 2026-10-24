@@ -121,7 +121,7 @@ export default async function FichePage({
 
       <RecipeTools recipeId={recipe.id} ingredients={shopIngs} alternatives={alternatives} baseServings={Number.parseInt(recipe.servings || "4", 10) || 4} ingredientTargets={ingredientTargets} />
 
-      {recipe.steps.length > 0 ? <section aria-label="Commandes vocales de préparation"><RecipeHandsFree steps={recipe.steps} /></section> : null}
+      <section aria-label="Commandes vocales de préparation"><RecipeHandsFree steps={recipe.steps} /></section>
 
       {sections.length > 0 ? (
         sections.map((sec, si) => (
