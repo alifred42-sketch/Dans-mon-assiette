@@ -17,7 +17,7 @@ export function RecipeHandsFree({ steps }: { steps: string[] }) {
   const [playing, setPlaying] = useState(false);
   const [index, setIndex] = useState(0);
   const [done, setDone] = useState<Record<number, boolean>>({});
-  const [status, setStatus] = useState("Appuyez sur le micro pour activer les commandes vocales.");
+  const [status, setStatus] = useState(steps.length ? "Appuyez sur le micro pour activer les commandes vocales." : "Aucune étape de préparation disponible pour cette recette.");
   const recognitionRef = useRef<Recognition | null>(null);
   const indexRef = useRef(0);
   const activeRef = useRef(false);
@@ -50,6 +50,7 @@ export function RecipeHandsFree({ steps }: { steps: string[] }) {
     setStatus("Mode mains libres désactivé.");
   }
   function toggleMode() {
+    if (!steps.length) { setStatus("Aucune étape de préparation disponible pour cette recette."); return; }
     if (active) { stopMode(); return; }
     const Ctor = (window as SpeechWindow).SpeechRecognition || (window as SpeechWindow).webkitSpeechRecognition;
     if (!Ctor) { setStatus("La reconnaissance vocale n’est pas disponible dans ce navigateur. Essayez Chrome ou Edge."); return; }
@@ -73,11 +74,12 @@ export function RecipeHandsFree({ steps }: { steps: string[] }) {
 
   return <div className="my-4 rounded-2xl border border-[#D8E3D9] bg-[#F8FAF6] p-3 sm:p-4">
     <p className="mb-3 text-xs font-bold uppercase tracking-wide text-[#557067]">Commandes de préparation</p>
+    {!steps.length && <p className="mb-3 text-center text-sm text-[#557067]">Cette fiche ne contient pas d’étapes détaillées. Les commandes sont désactivées pour ne rien inventer.</p>}
     <div className="flex items-center justify-center gap-4">
       <button type="button" aria-label="Étape précédente" title="Étape précédente" onClick={() => go(index - 1)} disabled={!steps.length || index === 0} className="flex size-12 items-center justify-center rounded-full bg-[#8FA89B] text-white shadow-sm disabled:opacity-40"><SkipBack size={20}/></button>
       <button type="button" aria-label={playing ? "Mettre en pause" : "Lire les instructions"} title={playing ? "Pause" : "Lecture"} onClick={() => { if (playing) { window.speechSynthesis.cancel(); setPlaying(false); setStatus("Lecture en pause. Appuyez sur Lecture pour reprendre."); } else speak(step); }} disabled={!steps.length} className="flex size-14 items-center justify-center rounded-full bg-[#8FA89B] text-white shadow-sm disabled:opacity-40">{playing ? <Pause size={24}/> : <Play size={24}/>}</button>
       <button type="button" aria-label="Étape suivante" title="Étape suivante" onClick={() => go(index + 1)} disabled={!steps.length || index >= steps.length - 1} className="flex size-12 items-center justify-center rounded-full bg-[#8FA89B] text-white shadow-sm disabled:opacity-40"><SkipForward size={20}/></button>
-      <button type="button" onClick={toggleMode} aria-label={active ? "Désactiver le mode mains libres" : "Activer le mode mains libres"} title={active ? "Désactiver le mode mains libres" : "Activer le mode mains libres"} className={`flex size-12 items-center justify-center rounded-full shadow-sm ring-2 ring-offset-2 ${active ? "bg-[#DCEBDD] text-[#267443] ring-[#8FA89B]" : "bg-[#F0F0ED] text-[#737873] ring-transparent"}`}>{active ? <Mic size={21}/> : <MicOff size={21}/>}</button>
+      <button type="button" onClick={toggleMode} aria-label={active ? "Désactiver le mode mains libres" : "Activer le mode mains libres"} title={active ? "Désactiver le mode mains libres" : "Activer le mode mains libres"} disabled={!steps.length} className={`flex size-12 items-center justify-center rounded-full shadow-sm ring-2 ring-offset-2 disabled:opacity-40 ${active ? "bg-[#DCEBDD] text-[#267443] ring-[#8FA89B]" : "bg-[#F0F0ED] text-[#737873] ring-transparent"}`}>{active ? <Mic size={21}/> : <MicOff size={21}/>}</button>
     </div>
     <div className="mt-3 text-center text-xs leading-relaxed text-[#557067]">◀ Précédent · <strong>Lecture / Pause</strong> · Suivant ▶</div>
     <p className="mt-2 text-center text-xs leading-relaxed text-[#557067]">À la voix : <strong>« Lecture » · « Pause » · « Étape OK » · « Étape suivante » · « Relis l’étape »</strong></p>
