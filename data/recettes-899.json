@@ -113,5 +113,120 @@
     "source": "RECETTES 899.pdf",
     "sourceNumber": 805,
     "id": "pdf-899-805"
+  },
+  {
+    "name": "Polenta Crémeuse aux Champignons Poêlés au Persil",
+    "timePrep": "10 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Polenta précuite : 200 g",
+      "Champignons de Paris : 250 g coupés en lamelles",
+      "Persil plat : 1/2 botte hachée menu",
+      "Lait végétal ou classique : 400 ml",
+      "Eau : 400 ml"
+    ],
+    "steps": [
+      "La poêlée : Saisissez les champignons et le persil dans une poêle huilée pendant 6 minutes ; réservez.",
+      "La base : Portez le lait et l'eau à ébullition dans une casserole à fond épais.",
+      "Le grain : Versez la polenta en pluie tout en remuant vigoureusement au fouet sur feu doux.",
+      "Le crémeux : Laissez épaissir pendant 4 minutes sans cesser de mélanger à la cuillère en bois.",
+      "Le dressage : Étalez la polenta crémeuse dans les assiettes et déposez les champignons chauds par-dessus."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 806,
+    "id": "pdf-899-806"
+  },
+  {
+    "name": "Mijoté de Patates Douces et Pois Chiches à la Marocaine",
+    "timePrep": "15 min",
+    "timeCook": "20 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Patates douces : 2 pièces coupées en cubes",
+      "Pois chiches cuits : 400 g",
+      "Tomates concassées : 400 g (1 boîte)",
+      "Épices Ras el Hanout : 1 cuillère à soupe",
+      "Oignon jaune : 1 pièce émincée",
+      "Eau : 150 ml"
+    ],
+    "steps": [
+      "La base : Faites suer l'oignon émincé et les épices marocaines dans une cocotte huilée pendant 3 minutes.",
+      "L'assemblage : Ajoutez les dés de patates douces et les pois chiches bien égouttés.",
+      "Le mouillage : Versez la boîte de tomates concassées et le volume d'eau.",
+      "Le mijotage : Couvrez la cocotte et laissez cuire à feu moyen pendant 15 minutes.",
+      "Le service : Retirez le couvercle les 2 dernières minutes pour épaissir la sauce et servez chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 807,
+    "id": "pdf-899-807"
+  },
+  {
+    "name": "One Pot Pasta d'Automne (Courge, Épinards et Noix)",
+    "timePrep": "10 min",
+    "timeCook": "12 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pâtes courtes (type Fusilli) : 300 g",
+      "Courge butternut : 200 g coupée en tout petits dés",
+      "Pousses d'épinards fraîches : 100 g",
+      "Cerneaux de noix : 30 g concassés",
+      "Eau : 700 ml"
+    ],
+    "steps": [
+      "Le rangement : Disposez les pâtes crues et les micro-dés de butternut au fond d'une grande sauteuse.",
+      "Le mouillage : Versez la totalité de l'eau froide directement sur l'ensemble.",
+      "La cuisson : Portez à forte ébullition et laissez cuire pendant 10 minutes en remuant très régulièrement.",
+      "Le vert : Incorporez les pousses d'épinards fraîches lors de la dernière minute de cuisson pour les faire fondre.",
+      "Le final : Retirez du feu, parsemez d'éclats de noix croquantes et servez immédiatement."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 808,
+    "id": "pdf-899-808"
+  },
+  {
+    "name": "Chou Rouge Mijoté aux Pommes et Vinaigre de Cidre",
+    "timePrep": "15 min",
+    "timeCook": "35 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Chou rouge : 1/2 chou émincé finement",
+      "Pommes de type Gala : 2 pièces pelées et coupées en dés",
+      "Vinaigre de cidre : 3 cuillères à soupe",
+      "Sucre roux : 1 cuillère à soupe",
+      "Eau : 150 ml"
+    ],
+    "steps": [
+      "La cocotte : Disposez le chou rouge émincé et les dés de pommes dans une grande cocotte.",
+      "L'assaisonnement : Ajoutez le sucre roux, le vinaigre de cidre et mouillez avec le volume d'eau.",
+      "Le mijotage : Couvrez la cocotte et laissez confire à feu très doux pendant 30 minutes.",
+      "La liaison : Remuez de temps en temps pour veiller à ce que le chou rouge n'attache pas.",
+      "Le service : Servez ce mijoté bien tendre et acidulé chaud en accompagnement."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 809,
+    "id": "pdf-899-809"
+  },
+  {
+    "name": "Salade de Quinoa Tiède au Potimarron Rôti et Pesto de Mâche",
+    "timePrep": "15 min",
+    "timeCook": "20 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Quinoa blanc : 200 g",
+      "Potimarron : 300 g coupé en petits dés (avec la peau bio)",
+      "Salade mâche : 100 g (mixée avec 3 cuillères d'huile d'olive pour le pesto)",
+      "Huile d'olive : 2 cuillères à soupe (pour le rôti)"
+    ],
+    "steps": [
+      "Le four : Enrobez les dés de potimarron d'huile d'olive et enfournez-les à 200°C pendant 20 minutes.",
+      "La cuisson : Faites cuire le quinoa dans de l'eau bouillante salée pendant 12 minutes, puis égouttez-le.",
+      "L'assemblage : Versez le quinoa tiède dans un grand saladier avec le pesto de mâche vert.",
+      "L'union : Ajoutez délicatement les dés de potimarron rôtis bien dorés.",
+      "Le mélange : Brassez doucement à la fourchette pour enrober le quinoa et servez sans attendre."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 810,
+    "id": "pdf-899-810"
   }
 ]
