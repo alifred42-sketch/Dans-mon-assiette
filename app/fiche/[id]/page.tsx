@@ -52,16 +52,16 @@ export default async function FichePage({
     return <Link href={"/fiche/" + target.id} className="font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">{line}</Link>;
   }
   function instructionWithIngredients(step: string, key: string) {
-    // Ajoute les quantités discrètement dans la phrase, sans répéter les cartes d'ingrédients.
+    // Intègre les quantités à la phrase, sans répéter les cartes d'ingrédients.
     const entries = shopIngs.map((line) => {
-      const parts = line.split(/:\\s*/, 2);
+      const parts = line.split(/:\s*/, 2);
       if (parts.length < 2) return null;
       const name = parts[0].trim();
       const detail = parts[1].trim();
-      const quantityMatch = detail.match(/^(\\d+(?:[.,]\\d+)?\\s*(?:kg|g|mg|l|cl|ml|cuillères? à soupe|cuillères? à café|c\.\\s*à\\s*c\.|c\.\\s*à\\s*s\.|pincées?|gousses?|filets?|tranches?|branches?|feuilles?|œufs?|oignons?|doses?|boîtes?|sachets?|pots?|verres?|bouquets?|brins?|noix|d\w+)?)/i);
+      const quantityMatch = detail.match(/^(\d+(?:[.,]\d+)?\s*(?:kg|g|mg|l|cl|ml|cuillères? à soupe|cuillères? à café|c\.\s*à\s*c\.|c\.\s*à\s*s\.|pincées?|gousses?|filets?|tranches?|branches?|feuilles?|œufs?|oignons?|doses?|boîtes?|sachets?|pots?|verres?|bouquets?|brins?|noix|d\w+)?)/i);
       if (!quantityMatch) return null;
-      let shortName = name.replace(/\\s*\\([^)]*\\)\\s*/g, " ").trim();
-      shortName = shortName.replace(/\\s+(?:frais|fraîche|fraîches|frais|allégé|allégée|allégés|allégées|râpé|râpée|râpés|râpées|émincé|émincée|émincés|émincées|haché|hachée|hachés|hachées|coupé|coupée|coupés|coupées|en dés|en morceaux|pour la cuisson|pour la finition).*$/i, "").trim();
+      let shortName = name.replace(/\s*\([^)]*\)\s*/g, " ").trim();
+      shortName = shortName.replace(/\s+(?:frais|fraîche|fraîches|allégé|allégée|allégés|allégées|râpé|râpée|râpés|râpées|émincé|émincée|émincés|émincées|haché|hachée|hachés|hachées|coupé|coupée|coupés|coupées|en dés|en morceaux|pour la cuisson|pour la finition).*$/i, "").trim();
       return shortName.length >= 3 ? { name: shortName, quantity: quantityMatch[1].trim() } : null;
     }).filter((entry): entry is { name: string; quantity: string } => Boolean(entry))
       .sort((a, b) => b.name.length - a.name.length);
@@ -69,20 +69,20 @@ export default async function FichePage({
     let output = step;
     const applied: { start: number; end: number; value: string }[] = [];
     for (const entry of entries) {
-      const escaped = entry.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const escaped = entry.name.replace(/[.*+?^\${}()|[\]\\]/g, "\\$&");
       const pattern = new RegExp("(?<![\\p{L}\\p{N}])(" + escaped + ")(?![\\p{L}\\p{N}])", "giu");
       const match = pattern.exec(output);
-      if (match && !/\\(\\s*\\d/.test(output.slice(match.index + match[0].length, match.index + match[0].length + 12))) {
+      if (match && !/\(\s*\d/.test(output.slice(match.index + match[0].length, match.index + match[0].length + 12))) {
         applied.push({ start: match.index + match[0].length, end: match.index + match[0].length, value: " (" + entry.quantity + ")" });
       }
     }
     for (const item of applied.sort((a, b) => b.start - a.start)) {
       output = output.slice(0, item.start) + item.value + output.slice(item.end);
     }
-    const chunks = output.split(/(\\([^()]+\\))/g);
+    const chunks = output.split(/(\([^()]+\))/g);
     return (
       <span key={key}>
-        {chunks.map((chunk, i) => /^\\([^()]+\\)$/.test(chunk)
+        {chunks.map((chunk, i) => /^\s*\([^()]+\)$/.test(chunk)
           ? <strong key={i}>{chunk}</strong>
           : <GlutenFreeTimerText key={i} text={chunk} />)}
       </span>
