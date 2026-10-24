@@ -28,12 +28,12 @@ export function displayRecipe(recipe: Recipe): Recipe {
   const normalizedText = (value: string) => value
     .toLocaleLowerCase("fr")
     .normalize("NFD")
-    .replace(/[\\u0300-\\u036f]/g, "")
-    .replace(/^\\s*\\d+[.)-]\\s*/, "")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/^\s*\d+[.)-]\s*/, "")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
   const ingredientNames = ingredients.map((line) => {
-    const withoutQuantity = line.replace(/^\\s*(?:\\d+(?:[.,]\\d+)?\\s*)?(?:kg|g|mg|l|cl|ml)?\\s*/i, "");
+    const withoutQuantity = line.replace(/^\s*(?:\d+(?:[.,]\d+)?\s*)?(?:kg|g|mg|l|cl|ml)?\s*/i, "");
     return normalizedText(withoutQuantity.split(/[:(]/, 1)[0]);
   }).filter((line) => line.length >= 3);
   const rawSteps = (recipe.steps || []).filter((line) => line.trim());
