@@ -132,7 +132,7 @@ function recipeMatchKey(value: string): string {
 
 type PdfRecipeEntry = {
   recipe: (typeof pdfRecipeOverrides800)[number] | (typeof pdfRecipeOverrides619)[number] | (typeof pdfRecipeOverrides899)[number];
-  source: "RECETTES 619.pdf" | "RECETTES 800.pdf";
+  source: "RECETTES 619.pdf" | "RECETTES 800.pdf" | "RECETTES 899.pdf";
   id: string;
 };
 
