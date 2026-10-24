@@ -62,7 +62,7 @@ export default function WeekPage() {
   }, []);
 
   const requestedWeek = search.get("w");
-  const week = requestedWeek && search.get("manual") === "1" ? clampWeek(requestedWeek) : (requestedWeek ? clampWeek(requestedWeek) : currentWeek);
+  const week = requestedWeek && search.get("manual") === "1" ? clampWeek(requestedWeek) : currentWeek;
   const slots = weekPlan(week, recipeOverrides, preferences);
   const dateRange = dateForIsoWeek(week);
   const season = seasonLabel(week);
@@ -79,27 +79,13 @@ export default function WeekPage() {
       <div className="mx-auto flex w-full max-w-3xl flex-col gap-5 px-4 pb-8 pt-6 sm:px-6 sm:pt-8">
         <header className="text-center">
           <img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="CUISINE CHIC OUF !" className="mx-auto mb-4 block h-auto w-[min(48vw,190px)] rounded-[20px] bg-[#F9F6EC] object-contain shadow-[0_8px_24px_rgba(0,0,0,0.2)]" loading="eager" />
-          <h1 className="text-2xl font-black uppercase leading-tight tracking-tight text-[#2B2B2B] sm:text-3xl">Semaine du {dateRange}</h1>
+          <div className="flex items-center justify-between gap-2">
+            <button type="button" aria-label="Semaine précédente" disabled={week <= 1} onClick={() => { window.location.href = `/semaine?w=${previousWeek}&manual=1`; }} className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/75 text-[#214E4B] shadow-sm transition hover:bg-white disabled:opacity-30"><ChevronLeft className="size-5" /></button>
+            <h1 className="flex-1 text-xl font-black uppercase leading-tight tracking-tight text-[#2B2B2B] sm:text-3xl">Semaine du {dateRange}</h1>
+            <button type="button" aria-label="Semaine suivante" disabled={week >= 52} onClick={() => { window.location.href = `/semaine?w=${nextWeek}&manual=1`; }} className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/75 text-[#214E4B] shadow-sm transition hover:bg-white disabled:opacity-30"><ChevronRight className="size-5" /></button>
+          </div>
           <span className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#2B2B2B]/20 bg-white/60 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-[#2B2B2B] shadow-sm"><Leaf className="size-4" /> Sélection {season}</span>
         </header>
-
-        <div className="flex items-center justify-between gap-2 rounded-2xl bg-white px-2 py-2 text-[#214E4B] shadow-[0_6px_18px_rgba(0,0,0,0.14)]">
-          <button
-            type="button"
-            aria-label="Semaine précédente"
-            disabled={week <= 1}
-            onClick={() => { window.location.href = `/semaine?w=${previousWeek}&manual=1`; }}
-            className="flex size-11 shrink-0 items-center justify-center rounded-xl transition hover:bg-[#EAF4F1] disabled:opacity-30"
-          ><ChevronLeft className="size-6" /></button>
-          <p className="text-center text-base font-black uppercase tracking-wide sm:text-lg">Semaine {week}</p>
-          <button
-            type="button"
-            aria-label="Semaine suivante"
-            disabled={week >= 52}
-            onClick={() => { window.location.href = `/semaine?w=${nextWeek}&manual=1`; }}
-            className="flex size-11 shrink-0 items-center justify-center rounded-xl transition hover:bg-[#EAF4F1] disabled:opacity-30"
-          ><ChevronRight className="size-6" /></button>
-        </div>
 
         <section>
           <button type="button" aria-expanded={showSosIdeas} onClick={() => setShowSosIdeas((shown) => !shown)} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl px-3 py-3 text-center text-sm font-black leading-snug text-white shadow-sm transition hover:brightness-105 active:scale-[0.99] sm:text-base" style={{ backgroundColor: SOS_CORAL }}><Flame className="size-6 shrink-0" /> SOS FLEMME : 3 idées simples <ChevronDown className={`size-4 shrink-0 transition-transform ${showSosIdeas ? "rotate-180" : ""}`} /></button>
