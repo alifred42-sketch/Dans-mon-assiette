@@ -113,7 +113,7 @@ function CardRow({
             className="group flex aspect-square min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:rounded-3xl"
             style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}
           >
-            <img src={image} alt="" loading="lazy" className="mx-auto mt-1 h-[64%] w-[calc(100%-0.5rem)] min-h-0 rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.02] sm:rounded-2xl" />
+            <img src={image} alt="" loading="lazy" className="h-[68%] w-full min-h-0 object-cover transition-transform duration-300 group-hover:scale-105" />
             <span className="flex min-h-0 flex-1 w-full items-center justify-center px-1 py-1 text-[10px] font-black leading-tight tracking-wide sm:text-xs md:text-sm" style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>
               {label}
             </span>
@@ -161,7 +161,7 @@ export default function HomePage() {
 
   return (
     <main
-      className="home-page min-h-dvh w-full overflow-hidden bg-transparent text-[#2B2B2B]"
+      className="home-page min-h-dvh w-full overflow-hidden text-white"
     >
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-4 py-6 pb-12 sm:gap-10 sm:px-8 sm:py-9">
         <header className="flex w-full flex-col items-center text-center">
@@ -172,10 +172,10 @@ export default function HomePage() {
             loading="eager"
             fetchPriority="high"
           />
-          <p className="mt-5 max-w-2xl text-sm font-medium leading-6 text-[#2B2B2B]/90 sm:text-base sm:leading-7">
+          <p className="mt-5 max-w-2xl text-sm font-medium leading-6 text-white/90 sm:text-base sm:leading-7">
             52 semaines de menus, du batchcooking simple et vos listes de courses automatisées. Cuisinez chic, respirez...OUF !
           </p>
-          <h1 className="mt-3 text-3xl font-black tracking-tight text-[#2B2B2B] sm:text-5xl">
+          <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-5xl">
             CUISINE CHIC OUF !
           </h1>
           <div className="mt-6 flex w-full max-w-lg flex-col gap-3">
@@ -195,7 +195,7 @@ export default function HomePage() {
           </div>
         </header>
 
-        <p className="text-center text-base font-bold text-[#2B2B2B]/90 sm:text-lg">
+        <p className="text-center text-base font-bold text-white/90 sm:text-lg">
           Tout est là pour vous simplifier la vie
         </p>
 
