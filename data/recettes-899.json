@@ -1590,5 +1590,234 @@
     "source": "RECETTES 899.pdf",
     "sourceNumber": 870,
     "id": "pdf-899-870"
+  },
+  {
+    "name": "Poisson blanc express à la tomate et aux olives",
+    "timePrep": "5 min",
+    "timeCook": "12 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Filets de poisson blanc (type cabillaud ou colin) : 4 pièces",
+      "Coulis de tomates : 400 ml",
+      "Olives vertes dénoyautées : 15 pièces coupées en deux",
+      "Herbes de Provence : 1 cuillère à café",
+      "Huile d'olive : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "La base : Versez l'huile d'olive et le coulis de tomates au fond d'une grande sauteuse large.",
+      "Les arômes : Intégrez les demi-olives vertes et les herbes de Provence, puis portez à frémissement doux.",
+      "L'immersion : Déposez délicatement les filets de poisson blanc crus au cœur de la sauce tomate.",
+      "La cuisson douce : Couvrez la sauteuse et laissez pocher le poisson à feu doux pendant 10 minutes.",
+      "Le service : Arrosez le poisson de sauce rouge onctueuse, donnez un tour de poivre et servez chaud avec du riz."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 871,
+    "id": "pdf-899-871"
+  },
+  {
+    "name": "Tartine \"Carbonara\" à la poêle",
+    "timePrep": "5 min",
+    "timeCook": "6 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de campagne ou pain de mie épais : 4 grandes tranches",
+      "Lardons fumés : 100 g",
+      "Crème fraîche épaisse : 4 cuillères à soupe",
+      "Emmental ou parmesan râpé : 80 g",
+      "Poivre noir du moulin : 1 généreux tour"
+    ],
+    "steps": [
+      "Le dorage : Faites rissoler les lardons fumés dans une poêle sèche pendant 3 minutes, puis égouttez l'excès de gras.",
+      "Le mélange : Dans un bol, combinez la crème fraîche épaisse, le fromage râpé et les lardons tièdes.",
+      "Le tartinage : Étalez une couche généreuse de cette crème aux lardons sur une face de chaque tranche de pain.",
+      "Le poivre : Ajoutez un bon tour de moulin à poivre noir sur le dessus.",
+      "La cuisson poêle : Déposez les tartines dans la poêle chaude, couvrez et laissez chauffer 3 minutes à feu doux jusqu'à ce que le fromage fonde."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 872,
+    "id": "pdf-899-872"
+  },
+  {
+    "name": "Couscous minute aux merguez",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Semoule de blé moyenne : 200 g",
+      "Merguez : 8 pièces coupées en morceaux",
+      "Eau bouillante salée : 200 ml",
+      "Concentré de tomates : 1 cuillère à soupe",
+      "Beurre : 15 g"
+    ],
+    "steps": [
+      "Le grain : Versez la semoule crue dans un grand plat creux avec le beurre coupé en morceaux.",
+      "Le gonflement : Diluez le concentré de tomates dans l'eau bouillante salée, versez sur la semoule, couvrez et laissez gonfler 5 minutes.",
+      "La viande : Pendant ce temps, faites griller les morceaux de merguez dans une poêle sans matière grasse pendant 6 minutes.",
+      "L'égrenage : Détachez les grains de semoule cuite à l'aide d'une fourchette.",
+      "L'assemblage : Ajoutez les merguez grillées et leur jus parfumé dans la semoule, mélangez bien et servez immédiatement."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 873,
+    "id": "pdf-899-873"
+  },
+  {
+    "name": "Poêlée de thon surprise au maïs et œuf miroir",
+    "timePrep": "5 min",
+    "timeCook": "6 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Thon au naturel (en boîte) : 200 g égoutté et émietté",
+      "Maïs en grains : 150 g égoutté",
+      "Œufs frais : 4 pièces",
+      "Oignon jaune : 1/2 pièce émincée",
+      "Huile de tournesol : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le rissolage : Faites revenir la moitié d'oignon émincé dans la poêle huilée pendant 2 minutes.",
+      "Le mélange : Ajoutez les miettes de thon et les grains de maïs, puis mélangez bien sur feu moyen pendant 2 minutes.",
+      "Les puits : Formez 4 petits creux dans la garniture à l'aide d'une cuillère en bois.",
+      "Les œufs : Cassez délicatement un œuf frais dans chaque espace ainsi libéré.",
+      "La cuisson miroir : Couvrez la poêle et laissez cuire 2 minutes supplémentaires jusqu'à ce que le blanc des œufs soit pris. Servez chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 874,
+    "id": "pdf-899-874"
+  },
+  {
+    "name": "Galettes croustillantes de thon et maïs",
+    "timePrep": "10 min",
+    "timeCook": "6 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Thon au naturel (en boîte) : 200 g égoutté et émietté",
+      "Maïs en grains : 100 g égoutté",
+      "Œufs frais : 2 pièces battus",
+      "Farine de blé : 3 cuillères à soupe",
+      "Huile de tournesol : 2 cuillères à soupe (cuisson)"
+    ],
+    "steps": [
+      "La pâte : Dans un saladier, mélangez vigoureusement le thon émietté, le maïs, les œufs battus et la farine.",
+      "L'assaisonnement : Salez et poivrez généreusement la préparation pour lui donner du goût.",
+      "Le chauffage : Faites chauffer l'huile de tournesol dans une grande poêle antiadhésive.",
+      "Le façonnage : Déposez 4 petits tas de pâte dans la poêle chaude et aplatissez-les légèrement avec le dos de la cuillère.",
+      "Le croustillant : Laissez dorer les galettes pendant 3 minutes par face jusqu'à ce qu'elles soient bien fermes et croustillantes."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 875,
+    "id": "pdf-899-875"
+  },
+  {
+    "name": "Gnocchis crémeux à la feta et tomates cerises",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Gnocchis de pommes de terre frais : 500 g",
+      "Tomates cerises : 200 g entières",
+      "Fromage Feta : 100 g coupé en petits dés",
+      "Huile d'olive : 2 cuillères à soupe",
+      "Herbes de Provence : 1 pincée"
+    ],
+    "steps": [
+      "Le dorage : Saisissez les gnocchis frais dans la poêle avec l'huile d'olive à feu vif pendant 4 minutes pour les rendre croustillants.",
+      "Les légumes : Jetez les tomates cerises entières dans la poêle directement avec les gnocchis.",
+      "Le flétrissement : Poursuivez la cuisson pendant 2 minutes ; la peau des tomates doit commencer à éclater doucement.",
+      "Le fromage : Baissez le feu au minimum et intégrez les dés de feta et les herbes de Provence.",
+      "La fusion : Remuez délicatement pendant 2 minutes jusqu'à ce que la feta devienne crémeuse et nappe le tout. Servez chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 876,
+    "id": "pdf-899-876"
+  },
+  {
+    "name": "One-Pan Pasta façon Tartiflette étudiante",
+    "timePrep": "10 min",
+    "timeCook": "14 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pâtes courtes (type penne ou rigatoni) : 300 g",
+      "Fromage à reblochon (ou fromage pour tartiflette) : 150 g coupé en tranches",
+      "Lardons fumés : 100 g",
+      "Oignon jaune : 1 pièce émincée",
+      "Eau : 700 ml"
+    ],
+    "steps": [
+      "L'assemblage : Mettez les pâtes crues, les lardons fumés et l'oignon émincé au fond d'une grande sauteuse large.",
+      "Le mouillage : Versez la totalité de l'eau froide directement sur l'ensemble de la préparation.",
+      "La cuisson : Portez à forte ébullition et laissez cuire à découvert pendant 10 minutes en remuant régulièrement.",
+      "Le fromage : Disposez les tranches de reblochon sur le dessus des pâtes presque cuites (l'eau doit être presque absorbée).",
+      "La fonte : Couvrez la sauteuse, coupez le feu et laissez reposer 4 minutes pour que le fromage fonde intégralement. Servir bien chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 877,
+    "id": "pdf-899-877"
+  },
+  {
+    "name": "Œufs brouillés à la mexicaine",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Œufs frais : 6 pièces",
+      "Tomate : 1 pièce coupée en petits dés",
+      "Haricots rouges cuits : 100 g (en conserve égouttés)",
+      "Épices Chili ou piment doux : 1/2 cuillère à café",
+      "Huile de tournesol : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le fouettage : Battez les œufs en omelette dans un bol avec les épices Chili, du sel et du poivre.",
+      "La saisie : Faites chauffer l'huile dans une poêle et jetez-y les dés de tomate et les haricots rouges pendant 2 minutes.",
+      "Le versement : Versez les œufs battus directement sur les légumes chauds dans la poêle.",
+      "Le brouillage : Remuez constamment à la spatule à feu doux pendant 3 minutes jusqu'à l'obtention d'une texture crémeuse.",
+      "Le service : Retirez immédiatement du feu pour stopper la cuisson et servez chaud avec des toasts."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 878,
+    "id": "pdf-899-878"
+  },
+  {
+    "name": "Riz sauté au poulet et sauce soja",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Riz blanc cuit : 300 g (froid de la veille)",
+      "Filets de poulet : 300 g coupés en fines lanières",
+      "Sauce soja salée : 3 cuillères à soupe",
+      "Huile de tournesol ou de sésame : 2 cuillères à soupe"
+    ],
+    "steps": [
+      "La viande : Saisissez les lanières de poulet dans l'huile bien chaude au fond d'un wok ou d'une poêle pendant 4 minutes.",
+      "Le riz : Jetez le riz blanc cuit froid directement sur le poulet doré.",
+      "Le saut : Faites sauter l'ensemble à feu très vif pendant 2 minutes pour bien détacher les grains de riz.",
+      "Le laquage : Versez la sauce soja salée en filet continu tout en remuant énergiquement à la spatule.",
+      "Le final : Poursuivez la cuisson 2 minutes de plus pour que le riz absorbe la sauce et servez instantanément."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 879,
+    "id": "pdf-899-879"
+  },
+  {
+    "name": "Tortilla roulée croustillante Bœuf & Fromage (Fajita Express)",
+    "timePrep": "5 min",
+    "timeCook": "6 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Grandes tortillas de blé : 4 pièces",
+      "Viande hachée de bœuf : 300 g",
+      "Fromage végétal ou emmental râpé : 100 g",
+      "Épices mexicaines : 1 cuillère à café",
+      "Huile de tournesol : 1 cuillère à café"
+    ],
+    "steps": [
+      "La viande : Faites revenir la viande hachée dans une poêle avec les épices mexicaines pendant 3 minutes à feu vif.",
+      "Le montage : Répartissez la viande cuite au centre de chaque tortilla de blé et saupoudrez de fromage râpé.",
+      "Le roulage : Rabattez les deux côtés opposés des tortillas et roulez-les serré pour former des burritos compacts.",
+      "Le toastage : Faites chauffer l'huile dans la poêle essuyée et déposez-y les tortillas roulées côté fermeture vers le bas.",
+      "Le croustillant : Laissez dorer 1 minute et demi de chaque côté pour rendre la galette croustillante et faire fondre le fromage."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 880,
+    "id": "pdf-899-880"
   }
 ]
