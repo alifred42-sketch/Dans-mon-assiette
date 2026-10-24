@@ -130,7 +130,7 @@ export default async function FichePage({
             {sec.lines.length === 0 ? null : (
               <ul className="mt-2 divide-y">
                 {sec.lines.map((line, li) => (
-                  <li key={`${si}-${li}`} className="py-2 text-sm leading-relaxed">
+                  <li key={`${si}-${li}`} className="py-3 text-base leading-relaxed">
                     <GlutenFreeTimerText text={line} />
                   </li>
                 ))}
@@ -143,7 +143,7 @@ export default async function FichePage({
           <section>
             <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
             {recipe.steps.length > 0 ? (
-              <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+              <ol className="mt-3 list-decimal space-y-3 pl-5 text-base leading-relaxed">
                 {recipe.steps.map((step, i) => (
                   <li key={`step-${i}`}>{instructionWithIngredients(step, `step-${i}`)}</li>
                 ))}
@@ -157,7 +157,7 @@ export default async function FichePage({
           {recipe.robot.length > 0 && (
             <section>
               <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
-              <ul className="mt-2 space-y-1 text-sm">
+              <ul className="mt-3 space-y-2 text-base leading-relaxed">
                 {recipe.robot.map((line, i) => (
                   <li key={`robot-${i}`}>{instructionWithIngredients(line, `robot-${i}`)}</li>
                 ))}
@@ -170,7 +170,7 @@ export default async function FichePage({
       {sections.length > 0 && recipe.steps.length > 0 && !sections.some((sec) => /préparation|preparation|étapes|etapes|instructions/i.test(sec.title)) ? (
         <section>
           <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
-          <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+          <ol className="mt-3 list-decimal space-y-3 pl-5 text-base leading-relaxed">
             {recipe.steps.map((step, i) => <li key={`step-extra-${i}`}>{instructionWithIngredients(step, `step-extra-${i}`)}</li>)}
           </ol>
         </section>
@@ -178,7 +178,7 @@ export default async function FichePage({
       {sections.length > 0 && recipe.robot.length > 0 && !sections.some((sec) => /mr cuisine|robot/i.test(sec.title)) ? (
         <section>
           <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
-          <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+          <ol className="mt-3 list-decimal space-y-3 pl-5 text-base leading-relaxed">
             {recipe.robot.map((line, i) => <li key={`robot-extra-${i}`}>{instructionWithIngredients(line, `robot-extra-${i}`)}</li>)}
           </ol>
         </section>
