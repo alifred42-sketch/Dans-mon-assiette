@@ -51,31 +51,41 @@ export default async function FichePage({
     if (!target) return line;
     return <Link href={"/fiche/" + target.id} className="font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">{line}</Link>;
   }
-  function ingredientsForStep(step: string) {
-    const normalizedStep = cleanMatch(step);
-    const ignored = new Set(["avec", "dans", "pour", "deux", "trois", "quatre", "cinq", "puis", "ajouter", "ajoutez", "mettre", "mettez", "verser", "versez", "incorporer", "incorporez", "melanger", "melangez", "couper", "coupez", "faire", "faites", "cuire", "cuisez", "jusque", "jusqu", "minutes", "minute", "gramme", "grammes", "cuillere", "soupe", "cafe", "pincee", "filet", "gousse"]);
-    const stepWords = new Set(normalizedStep.split(" "));
-    return shopIngs.filter((ingredient) => {
-      const name = cleanMatch(ingredient.replace(/^\s*\d+(?:[.,]\d+)?\s*(?:g|kg|mg|ml|cl|l)?\s*/i, "").replace(/\([^)]*\)/g, ""));
-      const words = name.split(" ").filter((word) => word.length >= 4 && !ignored.has(word) && !/^\d+$/.test(word));
-      return words.some((word) => stepWords.has(word));
-    });
-  }
   function instructionWithIngredients(step: string, key: string) {
-    const matched = ingredientsForStep(step);
+    // Ajoute les quantités discrètement dans la phrase, sans répéter les cartes d'ingrédients.
+    const entries = shopIngs.map((line) => {
+      const parts = line.split(/:\\s*/, 2);
+      if (parts.length < 2) return null;
+      const name = parts[0].trim();
+      const detail = parts[1].trim();
+      const quantityMatch = detail.match(/^(\\d+(?:[.,]\\d+)?\\s*(?:kg|g|mg|l|cl|ml|cuillères? à soupe|cuillères? à café|c\.\\s*à\\s*c\.|c\.\\s*à\\s*s\.|pincées?|gousses?|filets?|tranches?|branches?|feuilles?|œufs?|oignons?|doses?|boîtes?|sachets?|pots?|verres?|bouquets?|brins?|noix|d\w+)?)/i);
+      if (!quantityMatch) return null;
+      let shortName = name.replace(/\\s*\\([^)]*\\)\\s*/g, " ").trim();
+      shortName = shortName.replace(/\\s+(?:frais|fraîche|fraîches|frais|allégé|allégée|allégés|allégées|râpé|râpée|râpés|râpées|émincé|émincée|émincés|émincées|haché|hachée|hachés|hachées|coupé|coupée|coupés|coupées|en dés|en morceaux|pour la cuisson|pour la finition).*$/i, "").trim();
+      return shortName.length >= 3 ? { name: shortName, quantity: quantityMatch[1].trim() } : null;
+    }).filter((entry): entry is { name: string; quantity: string } => Boolean(entry))
+      .sort((a, b) => b.name.length - a.name.length);
+
+    let output = step;
+    const applied: { start: number; end: number; value: string }[] = [];
+    for (const entry of entries) {
+      const escaped = entry.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const pattern = new RegExp("(?<![\\p{L}\\p{N}])(" + escaped + ")(?![\\p{L}\\p{N}])", "giu");
+      const match = pattern.exec(output);
+      if (match && !/\\(\\s*\\d/.test(output.slice(match.index + match[0].length, match.index + match[0].length + 12))) {
+        applied.push({ start: match.index + match[0].length, end: match.index + match[0].length, value: " (" + entry.quantity + ")" });
+      }
+    }
+    for (const item of applied.sort((a, b) => b.start - a.start)) {
+      output = output.slice(0, item.start) + item.value + output.slice(item.end);
+    }
+    const chunks = output.split(/(\\([^()]+\\))/g);
     return (
-      <div key={key} className="space-y-2">
-        {matched.length > 0 && (
-          <div className="flex flex-wrap gap-2" aria-label="Ingrédients et quantités de cette étape">
-            {matched.map((ingredient, index) => (
-              <span key={key + "-ingredient-" + index} className="inline-flex rounded-xl border-2 border-[#8FA89B]/60 bg-[#8FA89B]/15 px-3 py-2 text-base font-extrabold leading-snug text-[#24372C] sm:text-lg">
-                <GlutenFreeText text={ingredient.toLocaleUpperCase("fr")} />
-              </span>
-            ))}
-          </div>
-        )}
-        <div><GlutenFreeTimerText text={step} /></div>
-      </div>
+      <span key={key}>
+        {chunks.map((chunk, i) => /^\\([^()]+\\)$/.test(chunk)
+          ? <strong key={i}>{chunk}</strong>
+          : <GlutenFreeTimerText key={i} text={chunk} />)}
+      </span>
     );
   }
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
