@@ -127,7 +127,7 @@ export default function RecettesPage() {
       </div>
       {filter ? <a href="/recettes" className="inline-flex rounded-xl bg-[#8FA89B]/15 px-3 py-2 text-sm font-semibold text-[#668775]">Voir toutes les recettes</a> : null}
       {maxDuration !== null ? <p className="text-xs text-muted-foreground">{recipes.length} recette(s) en {maxDuration} minutes maximum. Clique à nouveau sur le filtre actif pour tout afficher.</p> : null}
-      <RecipeList items={recipes} collections={filter ? undefined : collections} />
+      <RecipeList items={recipes} collections={filter ? undefined : collections} homeStyleCollections={!filter} />
     </div>
   );
 }
