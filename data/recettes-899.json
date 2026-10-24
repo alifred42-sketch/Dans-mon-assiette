@@ -457,5 +457,234 @@
     "source": "RECETTES 899.pdf",
     "sourceNumber": 820,
     "id": "pdf-899-820"
+  },
+  {
+    "name": "Shepherd’s Pie au Haché de Protéines de Soja et Purée de Céleri-Rave",
+    "timePrep": "20 min",
+    "timeCook": "25 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Protéines de soja texturées (PST fines) : 80 g (réhydratées et essorées)",
+      "Coulis de tomates : 250 ml",
+      "Céleri-rave : 500 g pelé et coupé en cubes (pour la purée)",
+      "Crème liquide végétale : 50 ml",
+      "Oignon jaune : 1 pièce émincée",
+      "Huile d'olive : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le haché : Faites revenir l'oignon et les PST essorées dans l'huile pendant 5 minutes, ajoutez le coulis de tomates ; disposez au fond d'un plat.",
+      "La cuisson : Faites cuire les cubes de céleri-rave dans de l'eau bouillante salée pendant 15 minutes.",
+      "La purée : Égouttez le céleri et écrasez-le au presse-purée avec la crème végétale.",
+      "Le montage : Étalez la purée de céleri de manière homogène sur la couche de haché de soja.",
+      "Le gratin : Enfournez à 200°C pendant 10 minutes sous le grill pour dorer le dessus du hachis."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 821,
+    "id": "pdf-899-821"
+  },
+  {
+    "name": "Sarrasin Grillé (Kasha) aux Légumes Racines Rôtis",
+    "timePrep": "15 min",
+    "timeCook": "20 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Sarrasin grillé (Kasha) : 200 g",
+      "Panais : 1 pièce coupée en dés",
+      "Carotte : 1 pièce coupée en dés",
+      "Bouillon de légumes de qualité : 400 ml",
+      "Huile d'olive : 2 cuillères à soupe (pour le rôti)"
+    ],
+    "steps": [
+      "Le four : Enrobez les dés de panais et de carotte d'huile d'olive et enfournez-les 20 minutes à 200°C.",
+      "Le grain : Pendant ce temps, versez le kasha dans le bouillon de légumes bouillant.",
+      "La cuisson rapide : Laissez cuire à feu doux pendant 10 minutes jusqu'à absorption complète du liquide.",
+      "L'assemblage : Réunissez le sarrasin chaud et les légumes racines rôtis dorés dans un plat.",
+      "Le service : Mélangez délicatement à la fourchette pour détacher les grains et servez chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 822,
+    "id": "pdf-899-822"
+  },
+  {
+    "name": "Frittata Végétale aux Épinards et à la Farine de Pois",
+    "timePrep": "10 min",
+    "timeCook": "12 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Farine de pois chiches : 150 g",
+      "Eau tiède : 300 ml",
+      "Pousses d'épinards fraîches : 150 g",
+      "Oignon jaune : 1/2 pièce émincée",
+      "Huile d'olive : 2 cuillères à soupe"
+    ],
+    "steps": [
+      "La pâte : Fouettez la farine de pois chiches et l'eau dans un bol pour obtenir un appareil lisse.",
+      "La tombée : Faites suer l'oignon et les épinards dans une poêle huilée pendant 4 minutes.",
+      "Le versement : Coulez l'appareil à la farine de pois chiches directement sur les légumes cuits.",
+      "La cuisson poêle : Laissez figer à feu très doux pendant 5 minutes de ce côté.",
+      "Le retournement : Retournez la frittata végétale délicatement et poursuivez la cuisson 3 minutes."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 823,
+    "id": "pdf-899-823"
+  },
+  {
+    "name": "Pâtes au Ragoût de Lentilles Brunes (Style Bolognaise)",
+    "timePrep": "10 min",
+    "timeCook": "25 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pâtes (type Spaghetti) : 300 g",
+      "Lentilles brunes cuites : 250 g",
+      "Coulis de tomates de qualité : 400 ml",
+      "Oignon jaune : 1 pièce émincée",
+      "Herbes de Provence : 1 cuillère à café"
+    ],
+    "steps": [
+      "Les pâtes : Faites cuire les spaghettis dans l'eau bouillante salée en suivant les instructions.",
+      "Le ragoût : Faites revenir l'oignon émincé dans une sauteuse huilée pendant 3 minutes.",
+      "L'assemblage : Ajoutez les lentilles brunes égouttées et versez le coulis de tomates.",
+      "Les aromates : Saupoudrez les herbes de Provence et laissez mijoter à feu doux pendant 10 minutes.",
+      "L'union : Égouttez les pâtes et nappez-les généreusement avec ce ragoût épais de lentilles."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 824,
+    "id": "pdf-899-824"
+  },
+  {
+    "name": "Chou Vert Frisé Farci au Riz et Canneberges",
+    "timePrep": "20 min",
+    "timeCook": "20 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Grandes feuilles de chou vert frisé : 4 pièces",
+      "Riz blanc déjà cuit : 200 g",
+      "Canneberges séchées : 40 g",
+      "Bouillon de légumes : 200 ml",
+      "Huile d'olive : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le blanchiment : Plongez les feuilles de chou dans de l'eau bouillante pendant 3 minutes pour les assouplir.",
+      "La farce : Mélangez le riz cuit et les canneberges entières dans un saladier avec l'huile.",
+      "Le montage : Déposez une belle cuillère de farce au centre de chaque feuille de chou blanchie.",
+      "Le pliage : Rabattez les côtés de la feuille et roulez-la serrée pour former des petits paquets.",
+      "Le mijotage : Disposez les choux farcis dans un plat, versez le bouillon et enfournez 17 minutes à 180°C."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 825,
+    "id": "pdf-899-825"
+  },
+  {
+    "name": "Salade Repas d'Hiver : Mâche, Betterave Rôtie et Croutons",
+    "timePrep": "15 min",
+    "timeCook": "20 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Salade mâche : 150 g lavée",
+      "Betterave crue : 1 grosse pièce coupée en dés (pour le rôti)",
+      "Tranches de pain de campagne : 2 pièces coupées en cubes",
+      "Huile d'olive : 3 cuillères à soupe",
+      "Vinaigre balsamique : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le four : Enrobez les dés de betterave d'une cuillère d'huile d'olive et enfournez 20 minutes à 200°C.",
+      "Les croûtons : Faites dorer les dés de pain à la poêle avec un filet d'huile pendant 4 minutes.",
+      "Le saladier : Disposez le lit de mâche fraîche au fond de votre grand plat de service.",
+      "L'assemblage : Ajoutez les dés de betterave rôtie refroidis et les croûtons croustillants.",
+      "L'assaisonnement : Arrosez le tout avec le reste d'huile d'olive et le vinaigre balsamique noir."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 826,
+    "id": "pdf-899-826"
+  },
+  {
+    "name": "Tartines d'Hiver au Radis Noir, Avocat et Gomasio",
+    "timePrep": "10 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de seigle : 4 tranches épaisses",
+      "Avocats bien mûrs : 2 pièces",
+      "Radis noir : 1/2 pièce lavée (non pelée)",
+      "Gomasio (sésame et sel) : 1 cuillère à soupe",
+      "Jus de citron : 1 cuillère à café"
+    ],
+    "steps": [
+      "L'écrasé : Écrasez la chair des avocats à la fourchette dans un bol avec le jus de citron.",
+      "Le tranchage : Taillez le radis noir en rondelles très fines à l'aide d'une mandoline.",
+      "Le tartinage : Étalez la purée d'avocat verte de manière homogène sur les tranches de pain.",
+      "Le montage : Disposez les rosaces de rondelles de radis noir croquantes sur l'avocat.",
+      "Le final : Saupoudrez le gomasio généreusement sur chaque tartine et servez immédiatement."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 827,
+    "id": "pdf-899-827"
+  },
+  {
+    "name": "Mijoté de Seitan aux Carottes et Pruneaux",
+    "timePrep": "15 min",
+    "timeCook": "35 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Seitan nature : 300 g coupé en morceaux",
+      "Carottes : 3 pièces coupées en rondelles",
+      "Pruneaux d'Agen dénoyautés : 8 pièces entières",
+      "Bouillon de légumes aromatique : 400 ml",
+      "Oignon jaune : 1 pièce émincée"
+    ],
+    "steps": [
+      "Le dorage : Saisissez les morceaux de seitan et l'oignon émincé dans une cocotte huilée pendant 5 minutes.",
+      "Les carottes : Ajoutez les rondelles de carottes de saison dans la cocotte chaude.",
+      "Le mouillage : Versez la totalité du bouillon de légumes chaud pour mouiller à hauteur.",
+      "Le sucré : Intégrez les pruneaux entiers, couvrez et laissez mijoter à feu doux pendant 25 minutes.",
+      "Le service : Retirez le couvercle les 5 dernières minutes pour faire réduire le jus confit. Servir chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 828,
+    "id": "pdf-899-828"
+  },
+  {
+    "name": "L'Élixir du Vampire au Cranberry (Sans Alcool)",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Jus de cranberry (canneberge) : 600 ml",
+      "Jus de grenade pure : 200 ml",
+      "Sirop de grenadine : 4 cuillères à soupe",
+      "Glaçons : 8 pièces"
+    ],
+    "steps": [
+      "Le contenant : Prenez une grande carafe transparente ou un saladier de service.",
+      "Les jus rouges : Versez le jus de cranberry et le jus de grenade pour une couleur rouge sang intense.",
+      "Le sucre : Ajoutez le sirop de grenadine qui va couler lourdement au fond du récipient.",
+      "Le frais : Jetez les glaçons dans l'élixir pour garantir une fraîcheur immédiate.",
+      "Le service : Remuez doucement juste avant de verser dans des verres givrés de sucre rouge."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 829,
+    "id": "pdf-899-829"
+  },
+  {
+    "name": "Le Philtre Vert de la Sorcière (Sans Alcool)",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Sirop de menthe verte : 4 cuillères à soupe",
+      "Jus de pomme limpide : 600 ml",
+      "Eau gazeuse très fraîche : 200 ml",
+      "Rondelles de citron vert : 4 pièces"
+    ],
+    "steps": [
+      "La base : Versez une cuillère à soupe de sirop de menthe au fond de 4 grands verres.",
+      "Le mélange : Ajoutez le jus de pomme limpide de manière égale dans chaque contenant.",
+      "Les bulles : Complétez les verres avec l'eau gazeuse bien fraîche pour l'effet moussant.",
+      "Le décor : Déposez une rondelle de citron vert sur le bord de chaque verre de potion.",
+      "Le service : Servez immédiatement avec une paille pour mélanger le dégradé de vert."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 830,
+    "id": "pdf-899-830"
   }
 ]
