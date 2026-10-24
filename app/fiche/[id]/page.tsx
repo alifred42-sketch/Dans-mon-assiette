@@ -6,6 +6,7 @@ import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";
 import { LactoseFreeSafetyNotice } from "@/components/lactose-free-safety-notice";
 import { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
 import { RecipeTools } from "@/components/recipe-tools";
+import { RecipeComments, RecipeFeedbackSummary } from "@/components/recipe-feedback";
 import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 import { displayRecipe } from "@/lib/recipe-display";
 
@@ -93,20 +94,7 @@ export default async function FichePage({
           <p className="text-sm text-muted-foreground">Au menu : {menuNames.join(" · ")}</p>
         )}
         {meta && <p className="text-sm text-muted-foreground">{meta}</p>}
-        <div className="flex flex-wrap items-center gap-3">
-          <div className="flex flex-wrap items-center gap-2" aria-label="Évaluation collective de la recette, bientôt disponible">
-            <span className="text-xl tracking-wide text-[#E8AD35]" aria-hidden="true">☆☆☆☆☆</span>
-            <span className="text-sm text-muted-foreground">Notes collectives bientôt disponibles</span>
-          </div>
-          <a
-            href="#commentaires"
-            className="inline-flex items-center gap-2 rounded-full border border-[#8FA89B]/50 bg-[#8FA89B]/10 px-4 py-2 text-sm font-semibold text-[#2B2B2B] transition hover:bg-[#8FA89B]/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#668775]"
-            aria-label="Aller directement aux commentaires en bas de la recette"
-          >
-            💬 Commentaires (0)
-            <span aria-hidden="true">↓</span>
-          </a>
-        </div>
+        <RecipeFeedbackSummary recipeId={recipe.id} />
         <aside className="rounded-2xl border border-[#8FA89B]/40 bg-[#8FA89B]/10 p-3 text-sm text-[#2B2B2B]">
           <p className="font-bold">🍽️ À adapter selon votre faim</p>
           <p className="mt-1"><strong>Option ☀️ Midi copieux :</strong> ajoutez un féculent adapté (riz, pommes de terre, pâtes ou pain) si besoin.</p>
@@ -185,17 +173,7 @@ export default async function FichePage({
       {ings.length > 0 && shopIngs.length === 0 && (
         <p className="text-xs text-muted-foreground">Rien de cette fiche n’est ajouté aux courses.</p>
       )}
-      <section id="commentaires" className="scroll-mt-6 space-y-3 border-t border-border pt-6" aria-labelledby="commentaires-title">
-        <div className="space-y-1">
-          <h2 id="commentaires-title" className="font-heading text-xl">💬 Commentaires de la communauté</h2>
-          <p className="text-sm text-muted-foreground">
-            Partagez vos adaptations, vos astuces et les photos de votre plat une fois la recette cuisinée.
-          </p>
-        </div>
-        <div className="rounded-2xl border border-dashed border-[#8FA89B]/60 bg-[#8FA89B]/5 p-4 text-sm text-muted-foreground">
-          Les commentaires, les photos et les notes collectives seront disponibles lorsque leur système de publication partagé sera connecté.
-        </div>
-      </section>
+      <RecipeComments recipeId={recipe.id} />
     </article>
   );
 }
