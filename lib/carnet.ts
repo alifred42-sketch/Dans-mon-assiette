@@ -2,6 +2,7 @@ import data from "@/data/carnet.json";
 import pdfRecipeOverrides619 from "@/data/recettes-619.json";
 import pdfRecipeOverrides800 from "@/data/recettes-800.json";
 import { trendRecipes } from "@/data/recettes-tendances";
+import { springFestivalRecipes } from "@/data/recettes-fetes-printemps";
 import type { Breakfast, Carnet, Collection, PlanSlot, Recipe } from "./types";
 
 function normalizedRecipeTime(value: unknown, fallback: number): string {
@@ -180,7 +181,7 @@ const unmatchedPdfRecipes: Recipe[] = pdfRecipeEntries
 
 export const carnet = {
   ...data,
-  recipes: [...recipesWithPdfOverrides, ...unmatchedPdfRecipes].map(normalizeRecipeForPlanning),
+  recipes: [...recipesWithPdfOverrides, ...unmatchedPdfRecipes, ...springFestivalRecipes].map(normalizeRecipeForPlanning),
 } as Carnet;
 
 export const DAYS = [
