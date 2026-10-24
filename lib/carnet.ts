@@ -3,6 +3,7 @@ import pdfRecipeOverrides619 from "@/data/recettes-619.json";
 import pdfRecipeOverrides800 from "@/data/recettes-800.json";
 import { trendRecipes } from "@/data/recettes-tendances";
 import { springFestivalRecipes } from "@/data/recettes-fetes-printemps";
+import { summerFestivalRecipes } from "@/data/recettes-fetes-ete";
 import type { Breakfast, Carnet, Collection, PlanSlot, Recipe } from "./types";
 
 function normalizedRecipeTime(value: unknown, fallback: number): string {
