@@ -1819,5 +1819,235 @@
     "source": "RECETTES 899.pdf",
     "sourceNumber": 880,
     "id": "pdf-899-880"
+  },
+  {
+    "name": "Poêlée de gnocchis au jambon cru et copeaux de fromage",
+    "timePrep": "5 min",
+    "timeCook": "6 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Gnocchis de pommes de terre frais : 500 g",
+      "Jambon cru : 4 tranches coupées en lanières",
+      "Fromage à pâte dure (type parmesan) : 50 g en copeaux",
+      "Huile d'olive : 1 cuillère à soupe",
+      "Poivre noir du moulin : 1 tour"
+    ],
+    "steps": [
+      "Le dorage : Saisissez les gnocchis frais dans une poêle avec l'huile d'olive pendant 4 minutes jusqu'à ce qu'ils soient bien dorés.",
+      "Le feu éteint : Retirez la poêle du feu pour stopper la cuisson des gnocchis.",
+      "L'assemblage : Ajoutez immédiatement les lanières de jambon cru directement sur les gnocchis brûlants.",
+      "Le fromage : Parsemez les copeaux de fromage sur l'ensemble de la poêlée.",
+      "Le poivre : Ajoutez un tour de moulin à poivre noir, mélangez délicatement et servez chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 881,
+    "id": "pdf-899-881"
+  },
+  {
+    "name": "Thon chaud à la crème, ail et pâtes",
+    "timePrep": "5 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pâtes (type coquillettes ou penne) : 300 g",
+      "Thon au naturel (en boîte) : 200 g égoutté et émietté",
+      "Crème fraîche liquide : 200 ml",
+      "Gousse d'ail : 1 pièce écrasée hachée",
+      "Huile d'olive : 1 cuillère à soupe",
+      "Persil haché : 1 cuillère à café"
+    ],
+    "steps": [
+      "Les pâtes : Faites cuire les pâtes al dente dans une grande casserole d'eau bouillante salée.",
+      "La sauce minute : Pendant ce temps, faites revenir l'ail haché dans l'huile d'olive dans une poêle pendant 1 minute.",
+      "L'onctuosité : Ajoutez le thon émietté et versez la crème fraîche liquide, puis laissez frémir 2 minutes à feu doux.",
+      "L'union : Égouttez les pâtes et versez-les directement dans la poêle contenant la crème de thon à l'ail.",
+      "Le final : Remuez bien pendant 1 minute pour enrober les pâtes, parsemez de persil et servez immédiatement."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 882,
+    "id": "pdf-899-882"
+  },
+  {
+    "name": "Poêlée de pois chiches au chorizo",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pois chiches cuits : 400 g (en conserve rincés)",
+      "Chorizo doux ou fort : 100 g coupé en fines rondelles",
+      "Oignon jaune : 1 pièce émincée",
+      "Sauce tomate ou coulis : 2 cuillères à soupe"
+    ],
+    "steps": [
+      "Le départ : Jetez les rondelles de chorizo et l'oignon émincé dans une poêle sèche sur feu vif.",
+      "Le rissolage : Laissez cuire pendant 3 minutes pour que le chorizo libère son huile parfumée et colore l'oignon.",
+      "L'assemblage : Ajoutez les pois chiches parfaitement égouttés dans la poêle chaude.",
+      "La liaison : Intégrez les cuillères de sauce tomate pour lier et apporter du moelleux à la préparation.",
+      "Le mijotage : Laissez cuire à feu doux pendant 5 minutes en remuant régulièrement à la spatule. Servez chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 883,
+    "id": "pdf-899-883"
+  },
+  {
+    "name": "One-Pot Pasta crémeux Tomate & Épinards",
+    "timePrep": "5 min",
+    "timeCook": "12 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pâtes courtes (type penne) : 300 g",
+      "Tomates concassées : 400 g (1 boîte)",
+      "Pousses d'épinards fraîches : 100 g",
+      "Fromage frais (type St Môret) : 2 cuillères à soupe",
+      "Eau : 600 ml"
+    ],
+    "steps": [
+      "L'assemblage : Mettez les penne crues et la boîte de tomates concassées au fond d'une grande sauteuse.",
+      "Le mouillage : Versez la totalité de l'eau froide directement sur l'ensemble de la préparation.",
+      "La cuisson : Portez à ébullition et laissez cuire à découvert pendant 10 minutes en remuant régulièrement.",
+      "Le liant : Ajoutez le fromage frais St Môret hors du feu et remuez vivement pour créer une sauce rose crémeuse.",
+      "Le vert : Incorporez les pousses d'épinards fraîches, mélangez pendant 2 minutes pour les faire fondre et servez chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 884,
+    "id": "pdf-899-884"
+  },
+  {
+    "name": "Riz dinde-curry minute au lait de coco",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Riz blanc cuit : 300 g (froid)",
+      "Filets de dinde : 300 g coupés en fins dés",
+      "Lait de coco : 200 ml",
+      "Curry en poudre : 1 cuillère à soupe",
+      "Huile de tournesol : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "La viande : Saisissez les dés de dinde dans l'huile bien chaude dans une poêle pendant 4 minutes.",
+      "L'épice : Saupoudrez la cuillère de curry en poudre sur la viande et remuez bien pendant 30 secondes.",
+      "Le mouillage : Versez le lait de coco liquide directement sur la dinde épicée.",
+      "L'assemblage : Ajoutez le riz blanc cuit froid au cœur de la sauce au curry crémeuse.",
+      "Le saut final : Remuez constamment sur feu doux pendant 3 minutes pour réchauffer le riz et servez."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 885,
+    "id": "pdf-899-885"
+  },
+  {
+    "name": "Soupe repas express Ramen, Œuf & Thon",
+    "timePrep": "5 min",
+    "timeCook": "4 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Nouilles instantanées de type Ramen : 250 g",
+      "Thon au naturel (en boîte) : 200 g égoutté et émietté",
+      "Œufs frais : 2 pièces",
+      "Sauce soja salée : 2 cuillères à soupe",
+      "Eau bouillante : 1 litre"
+    ],
+    "steps": [
+      "Le bouillon : Versez l'eau bouillante et la sauce soja dans une casserole (utilisez le sachet d'épices des nouilles si désiré).",
+      "Les nouilles : Jetez les blocs de nouilles ramen directement dans le bouillon frémissant pendant 2 minutes.",
+      "L'œuf : Cassez les œufs entiers directement dans la casserole et remuez doucement pour créer des filaments de blanc cuit.",
+      "Les protéines : Intégrez les miettes de thon égoutté dans la soupe chaude.",
+      "Le service : Laissez chauffer le tout pendant encore 2 minutes, répartissez dans 4 grands bols et servez fumant."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 886,
+    "id": "pdf-899-886"
+  },
+  {
+    "name": "Purée forestière aux saucisses (zéro vaisselle)",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Flocons de purée instantanée (type Mousline) : 1 sachet",
+      "Saucisses de Francfort : 4 pièces coupées en rondelles",
+      "Champignons de Paris émincés (en boîte) : 100 g égouttés",
+      "Lait : 400 ml",
+      "Eau : 400 ml"
+    ],
+    "steps": [
+      "Les liquides : Versez le lait et l'eau dans une grande casserole à fond épais.",
+      "La garniture : Ajoutez directement les rondelles de saucisses et les champignons émincés égouttés.",
+      "La chauffe : Portez l'ensemble à frémissement doux sur feu moyen pendant 4 minutes.",
+      "La magie : Retirez la casserole du feu et versez les flocons de purée en pluie en mélangeant immédiatement.",
+      "L'onctuosité : Laissez gonfler 1 minute, donnez un coup de spatule vigoureux et servez chaud dans la foulée."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 887,
+    "id": "pdf-899-887"
+  },
+  {
+    "name": "One-Pot de pois chiches à la tomate et au chorizo",
+    "timePrep": "5 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pois chiches cuits : 400 g (en conserve rincés)",
+      "Coulis de tomates : 300 ml",
+      "Chorizo doux : 100 g coupé en petits morceaux",
+      "Eau : 100 ml",
+      "Herbes de Provence : 1 pincée"
+    ],
+    "steps": [
+      "Le montage : Déposez les pois chiches égouttés et les morceaux de chorizo au fond d'une casserole.",
+      "Les liquides : Versez le coulis de tomates rouge et les 100 ml d'eau froide.",
+      "L'aromate : Saupoudrez la pincée d'herbes de Provence sur l'ensemble de la préparation.",
+      "La cuisson : Portez à ébullition, puis baissez le feu et laissez mijoter doucement pendant 10 minutes.",
+      "Le service : Le chorizo va infuser la sauce tomate ; servez ce plat complet bien chaud dans des écuelles."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 888,
+    "id": "pdf-899-888"
+  },
+  {
+    "name": "Polenta crémeuse au jambon et fromage",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Polenta précuite (semoule de maïs express) : 150 g",
+      "Jambon blanc : 4 tranches coupées en lanières",
+      "Fromage râpé (emmental ou parmesan) : 80 g",
+      "Lait : 400 ml",
+      "Eau : 400 ml"
+    ],
+    "steps": [
+      "Le liquide : Portez le lait et l'eau à ébullition dans une casserole avec une pincée de sel.",
+      "Le versement : Jetez la polenta en pluie tout en remuant énergiquement au fouet.",
+      "La cuisson flash : Laissez épaissir sur feu très doux pendant 3 minutes sans cesser de mélanger à la cuillère.",
+      "La gourmandise : Hors du feu, intégrez les lanières de jambon blanc et le fromage râpé.",
+      "L'enrobage : Brassez vivement pour faire fondre le fromage dans la polenta crémeuse et servez chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 889,
+    "id": "pdf-899-889"
+  },
+  {
+    "name": "Dhal de lentilles corail express",
+    "timePrep": "5 min",
+    "timeCook": "15 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Lentilles corail : 200 g parfaitement rincées",
+      "Coulis de tomates : 200 ml",
+      "Lait de coco : 200 ml",
+      "Eau : 200 ml",
+      "Poudre de curry : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le départ : Mettez les lentilles corail crues bien rincées et la cuillère de curry au fond d'une casserole.",
+      "Le mouillage : Versez le coulis de tomates, le lait de coco et le volume d'eau froide d'un coup sec.",
+      "La cuisson : Portez à ébullition, puis baissez immédiatement le feu au minimum.",
+      "Le mijotage doux : Laissez cuire à découvert pendant 15 minutes en remuant très souvent à la spatule.",
+      "La consistance : Retirez du feu dès que les lentilles sont fondues en une purée épaisse et servez bien chaud."
+    ],
+    "source": "RECETTES 899.pdf",
+    "sourceNumber": 890,
+    "id": "pdf-899-890"
   }
 ]
