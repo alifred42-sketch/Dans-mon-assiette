@@ -1,6 +1,7 @@
 import data from "@/data/carnet.json";
 import pdfRecipeOverrides619 from "@/data/recettes-619.json";
 import pdfRecipeOverrides800 from "@/data/recettes-800.json";
+import pdfRecipeOverrides899 from "@/data/recettes-899.json";
 import { trendRecipes } from "@/data/recettes-tendances";
 import { springFestivalRecipes } from "@/data/recettes-fetes-printemps";
 import { summerFestivalRecipes } from "@/data/recettes-fetes-ete";
@@ -130,7 +131,7 @@ function recipeMatchKey(value: string): string {
 }
 
 type PdfRecipeEntry = {
-  recipe: (typeof pdfRecipeOverrides800)[number] | (typeof pdfRecipeOverrides619)[number];
+  recipe: (typeof pdfRecipeOverrides800)[number] | (typeof pdfRecipeOverrides619)[number] | (typeof pdfRecipeOverrides899)[number];
   source: "RECETTES 619.pdf" | "RECETTES 800.pdf";
   id: string;
 };
@@ -140,6 +141,11 @@ const pdfRecipeEntries: PdfRecipeEntry[] = [
     recipe,
     source: "RECETTES 800.pdf" as const,
     id: recipe.id || `pdf-800-${recipe.sourceNumber}`,
+  })),
+  ...pdfRecipeOverrides899.map((recipe) => ({
+    recipe,
+    source: "RECETTES 899.pdf" as const,
+    id: recipe.id || `pdf-899-${recipe.sourceNumber}`,
   })),
   ...pdfRecipeOverrides619.map((recipe, index) => ({
     recipe,
@@ -172,7 +178,7 @@ const recipesWithPdfOverrides = [...data.recipes, ...trendRecipes].map((recipe) 
 // Chaque fiche non utilisée pour remplacer un titre strictement identique est ajoutée
 // comme recette distincte, y compris les fiches portant un titre en doublon.
 const unmatchedPdfRecipes: Recipe[] = pdfRecipeEntries
-  .filter((entry) => !usedPdfRecipeIds.has(entry.id))
+  .filter((entry) => !usedPdfRecipeIds.has(entry.id) && entry.source !== "RECETTES 899.pdf")
   .map((entry) => ({
     ...entry.recipe,
     id: entry.id,
