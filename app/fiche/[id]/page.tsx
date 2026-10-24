@@ -9,6 +9,7 @@ import { RecipeTools } from "@/components/recipe-tools";
 import { RecipeComments, RecipeFeedbackSummary } from "@/components/recipe-feedback";
 import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 import { displayRecipe } from "@/lib/recipe-display";
+import { RecipeHandsFree } from "@/components/recipe-hands-free";
 
 export function generateStaticParams() {
   return carnet.recipes.map((recipe) => ({ id: recipe.id }));
@@ -109,6 +110,8 @@ export default async function FichePage({
       </header>
 
       <RecipeTools recipeId={recipe.id} ingredients={shopIngs} alternatives={alternatives} baseServings={Number.parseInt(recipe.servings || "4", 10) || 4} ingredientTargets={ingredientTargets} />
+
+      {recipe.steps.length > 0 ? <section aria-label="Commandes vocales de préparation"><RecipeHandsFree steps={recipe.steps} /></section> : null}
 
       {sections.length > 0 ? (
         sections.map((sec, si) => (
