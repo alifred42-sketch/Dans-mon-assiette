@@ -1712,13 +1712,105 @@ for rid, values in priority_cards.items():
     priority_updated += 1
 # 4) Replace remaining generic instructions with method-specific steps.
 GENERIC_STEP_RE = re.compile(
-    r"Préparez les ingrédients|Hachez finement les aromates|Versez l’huile ou le liquide petit à petit|"
+    r"Préparez les ingrédients|Hachez finement les aromates|Versez l’huile ou le liquide petit à petit|Préchauffez le four à 180 °C\. Lavez et coupez les légumes|Préparez la base prévue \(pâte, plaques ou légumes en couches\)|"
     r"Goûtez, rectifiez l’assaisonnement|mélangez la base indiquée dans la liste|Préparez tous les ingrédients listés|"
     r"Commencez par cuire les ingrédients demandant le plus de temps|Ajoutez les autres ingrédients et les liquides prévus|"
     r"Préparez les ingrédients de la fiche|Faites chauffer l’huile indiquée dans une poêle ou une casserole adaptée|"
     r"Incorporez les liquides, épices et autres ingrédients de la fiche", re.I
 )
 def tailored_steps(r):
+    name = norm(r.get("name", ""))
+    ing = r.get("ingredients", [])
+    # Corrections ciblées des dernières familles encore couvertes par un gabarit trop vague.
+    if re.search(r"pate a pizza", name):
+        return [
+          "1. Mélangez la farine, la levure boulangère et le sel prévus. Ajoutez l’eau tiède et l’huile indiquées, puis mélangez jusqu’à former une pâte.",
+          "2. Pétrissez 8 à 10 minutes jusqu’à ce que la pâte soit souple et élastique. Couvrez le saladier.",
+          "3. Laissez lever dans un endroit tiède jusqu’à ce que la pâte double de volume, environ 1 heure selon la température.",
+          "4. Dégazez la pâte, étalez-la sur une plaque farinée et garnissez-la avec les ingrédients prévus dans la fiche.",
+          "5. Préchauffez le four à 230 °C et faites cuire la pizza garnie 10 à 15 minutes, jusqu’à ce que la pâte soit dorée et cuite dessous."
+        ]
+    if re.search(r"bechamel", name):
+        return [
+          "1. Mesurez le lait, le beurre et la farine indiqués. Faites fondre le beurre dans une casserole à feu moyen sans le laisser brunir.",
+          "2. Ajoutez la farine d’un seul coup et fouettez 1 à 2 minutes pour former un roux homogène.",
+          "3. Versez le lait progressivement en fouettant sans arrêt pour éviter les grumeaux.",
+          "4. Faites épaissir à feu moyen-doux pendant 5 à 8 minutes en remuant le fond et les bords de la casserole.",
+          "5. Ajoutez sel, poivre et muscade uniquement s’ils figurent dans la liste. La sauce est prête lorsqu’elle nappe la cuillère."
+        ]
+    if re.search(r"appareil a quiche|quiche lorraine", name):
+        return [
+          "1. Préchauffez le four à 180 °C. Étalez la pâte prévue dans un moule et piquez le fond avec une fourchette.",
+          "2. Si la liste contient des lardons, faites-les revenir 4 à 5 minutes puis égouttez-les. Répartissez-les avec le fromage prévu sur le fond de tarte.",
+          "3. Fouettez les œufs avec la crème ou le lait indiqués. Ajoutez poivre et muscade uniquement s’ils sont prévus.",
+          "4. Versez l’appareil sur la garniture sans remplir le moule jusqu’au bord.",
+          "5. Enfournez 30 à 40 minutes, jusqu’à ce que le centre soit pris et le dessus doré. Laissez reposer 5 minutes avant de couper."
+        ]
+    if re.search(r"flan patissier", name):
+        return [
+          "1. Préchauffez le four à 180 °C. Foncez le moule avec la pâte prévue et réservez au frais.",
+          "2. Faites chauffer le lait avec la vanille si elle est indiquée. Fouettez les œufs avec le sucre et la fécule prévus jusqu’à ce que le mélange soit lisse.",
+          "3. Versez progressivement le lait chaud sur le mélange en fouettant, puis reversez dans la casserole.",
+          "4. Faites épaissir à feu moyen en remuant constamment, puis versez la crème dans le fond de pâte.",
+          "5. Enfournez 40 à 50 minutes jusqu’à ce que le dessus soit coloré. Laissez refroidir complètement puis réfrigérez au moins 3 heures."
+        ]
+    if re.search(r"gratin|lasagne", name):
+        return [
+          "1. Préchauffez le four à 180 °C. Lavez et coupez les légumes en tranches fines ou en dés réguliers; préparez les autres ingrédients.",
+          "2. Faites revenir l’oignon et les légumes qui rendent beaucoup d’eau dans l’huile prévue pendant 5 à 8 minutes. Faites cuire complètement à part la viande crue si la fiche en contient.",
+          "3. Dans un plat, alternez les couches de légumes, de garniture et de sauce indiquées. Pour des lasagnes, alternez les plaques et la sauce; pour un gratin, répartissez uniformément les légumes.",
+          "4. Terminez avec la béchamel, la crème ou le fromage prévu dans la liste, sans ajouter d’ingrédients absents de la recette.",
+          "5. Enfournez 25 à 40 minutes selon l’épaisseur. Vérifiez que les légumes sont tendres, le centre bien chaud et le dessus doré; laissez reposer 5 minutes."
+        ]
+    if re.search(r"pomme de terre en robe|oeuf cocotte|oeufs brouilles|oeufs au plat|sans poele|micro-ondes|micro ondes|en mug", name):
+        if re.search(r"oeuf cocotte", name):
+            return [
+              "1. Déposez le jambon coupé en petits morceaux et la crème prévue dans un mug ou ramequin compatible avec le micro-ondes.",
+              "2. Cassez l’œuf dans le récipient et percez délicatement le jaune avec la pointe d’un couteau.",
+              "3. Couvrez sans fermer hermétiquement et faites cuire à puissance moyenne par tranches de 20 secondes, jusqu’à ce que le blanc soit pris.",
+              "4. Laissez reposer 30 secondes. Prolongez par tranches de 10 secondes si nécessaire, en vérifiant la cuisson.",
+              "5. Servez aussitôt en faisant attention au récipient très chaud."
+            ]
+        if re.search(r"oeufs brouilles", name):
+            return [
+              "1. Battez les œufs avec le lait ou la crème prévus et assaisonnez selon la liste.",
+              "2. Versez dans un récipient large compatible avec le micro-ondes, sans le remplir au-delà des deux tiers.",
+              "3. Faites chauffer 20 à 30 secondes à puissance moyenne, puis remuez soigneusement.",
+              "4. Répétez par tranches de 15 à 20 secondes en remuant entre chaque, jusqu’à ce que les œufs soient crémeux et bien cuits.",
+              "5. Laissez reposer 30 secondes et servez immédiatement."
+            ]
+        if re.search(r"pomme de terre en robe", name):
+            return [
+              "1. Lavez la pomme de terre et piquez sa peau plusieurs fois avec une fourchette.",
+              "2. Placez-la sur une assiette compatible avec le micro-ondes et faites cuire à puissance élevée 4 à 6 minutes selon sa taille, en la retournant à mi-cuisson.",
+              "3. Vérifiez avec la pointe d’un couteau qu’elle est tendre; poursuivez par tranches d’une minute si nécessaire.",
+              "4. Laissez reposer une minute avant de l’ouvrir. Ajoutez uniquement les garnitures prévues dans la fiche.",
+              "5. Servez chaud en faisant attention à la vapeur qui s’échappe à l’ouverture."
+            ]
+    if re.search(r"riz au lait|tapioca|yaourt vegetal gourmand", name):
+        if re.search(r"yaourt vegetal", name):
+            return [
+              "1. Répartissez le yaourt végétal dans un bol ou des verrines propres.",
+              "2. Lavez les figues, séchez-les et coupez-les en quartiers.",
+              "3. Répartissez les figues et les noix concassées prévues sur le yaourt.",
+              "4. Ajoutez le sirop ou les épices uniquement s’ils figurent dans la liste, puis servez frais."
+            ]
+        if re.search(r"tapioca", name):
+            return [
+              "1. Versez le lait prévu dans une casserole et faites-le chauffer jusqu’au frémissement.",
+              "2. Ajoutez les perles de tapioca en pluie en remuant pour éviter qu’elles collent.",
+              "3. Faites cuire à feu doux selon les indications du paquet, généralement 10 à 15 minutes, en remuant souvent jusqu’à ce que les perles deviennent translucides.",
+              "4. Ajoutez la vanille ou le sucre uniquement s’ils figurent dans la liste. Laissez épaissir quelques minutes.",
+              "5. Répartissez dans des bols et servez tiède ou laissez refroidir puis réfrigérez."
+            ]
+        return [
+          "1. Versez le riz et le lait indiqués dans une casserole à fond épais.",
+          "2. Portez doucement à frémissement en remuant, puis baissez le feu au minimum.",
+          "3. Faites cuire 25 à 35 minutes en remuant très régulièrement, jusqu’à ce que le riz soit tendre et la préparation crémeuse.",
+          "4. Ajoutez le sucre et la vanille ou la fleur d’oranger uniquement s’ils sont prévus; laissez tiédir.",
+          "5. Ajoutez les fruits prévus dans la fiche et servez tiède ou froid."
+        ]
+
     name = norm(r.get("name", ""))
     ing = r.get("ingredients", [])
     joined = norm(" ".join(str(x) for x in ing))
