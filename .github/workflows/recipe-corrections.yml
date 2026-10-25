@@ -66,3 +66,5 @@ jobs:
           fi
 
 # Relance des corrections ciblées après ajout des règles de fiches spécifiques.
+
+# Exécution des règles de remplacement des étapes génériques, vague suivante.
