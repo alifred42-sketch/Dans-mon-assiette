@@ -29,7 +29,7 @@ def make_steps(r):
             out.append("2. Égouttez le poisson en conserve si nécessaire; coupez le poisson fumé ou déjà cuit en portions. Gardez-le au frais et ne le recuisez pas.")
         else:
             out.append("2. Séchez les filets avec du papier absorbant. Faites chauffer l'huile listée dans une poêle et cuisez le poisson à feu moyen environ 3 à 5 min par face selon l'épaisseur, jusqu'à ce que la chair soit opaque et se détache facilement.")
-        out.append("3. Faites cuire les légumes prévus séparément : commencez par les plus fermes, puis ajoutez les plus tendres. Remuez régulièrement et vérifiez qu'ils restent fondants sans se défaire.")
+        out.append(f"3. Faites revenir {vegnames} dans la poêle avec l’huile listée : commencez par les carottes, poireaux ou oignons s’ils sont présents, puis ajoutez les courgettes, tomates ou épinards. Cuisez 5 à 10 min selon la taille des morceaux.")
         out.append("4. Mélangez les ingrédients de sauce présents ("+", ".join(sauce[:4])+") dans un bol." if sauce else "4. Vérifiez la cuisson au centre du poisson, puis servez avec les légumes et l'accompagnement indiqués.")
         if sauce: out[-1]+=" Ajoutez le citron progressivement et goûtez avant de saler; servez avec le poisson et les légumes."
     elif has(r"salade|bowl|buddha|tartine|sandwich|burger"):
@@ -49,13 +49,13 @@ def make_steps(r):
              "4. Goûtez, rectifiez avec les assaisonnements présents dans la fiche et servez chaud."]
     elif has(r"légume|legume|ratatouille|poêlée|poelee|wok"):
         out=[f"1. Lavez les légumes listés ({vegnames}); coupez-les en morceaux réguliers et émincez l'oignon s'il est indiqué.",
-             "2. Faites chauffer l'huile listée dans une sauteuse. Faites revenir l'oignon 2 à 3 min, puis ajoutez les légumes les plus fermes et faites cuire 5 min en remuant.",
+             f"2. Faites chauffer l'huile listée dans une sauteuse. Faites revenir l'oignon s'il figure dans la liste pendant 2 à 3 min, puis ajoutez {vegnames} et cuisez en remuant.",
              "3. Ajoutez les légumes plus tendres et les tomates ou le bouillon uniquement s'ils sont listés. Couvrez partiellement et poursuivez 8 à 15 min à feu moyen-doux jusqu'à ce que les légumes soient tendres.",
              "4. Ajoutez les herbes, épices ou le fromage listés en fin de cuisson. Goûtez et servez sans ajouter d'ingrédient absent de la fiche."]
     elif has(r"poulet|dinde|bœuf|boeuf|viande|merguez|boulettes|steak|porc"):
         out=[f"1. Préparez les légumes listés ({vegnames}); coupez-les régulièrement. Séchez la viande crue et détaillez-la si nécessaire.",
              "2. Faites chauffer l'huile listée dans une sauteuse. Faites dorer la viande en plusieurs fois si nécessaire, en retournant les morceaux pour colorer les faces.",
-             "3. Ajoutez l'oignon et les légumes les plus fermes; faites revenir 5 à 8 min. Incorporez tomates, bouillon ou sauce uniquement s'ils sont indiqués dans les ingrédients.",
+             f"3. Ajoutez {vegnames} à la viande dorée. Faites revenir 5 à 8 min en remuant, puis incorporez tomates, bouillon ou sauce uniquement s’ils figurent dans la liste.",
              "4. Couvrez et laissez mijoter 15 à 25 min à feu doux selon la taille des morceaux, jusqu'à ce que la viande soit cuite à cœur et les légumes tendres. Remuez de temps en temps.",
              "5. Ajoutez le produit laitier ou le fromage listé en fin de cuisson à feu doux. Servez avec l'accompagnement explicitement indiqué."]
     else:
