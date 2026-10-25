@@ -731,3 +731,155 @@ for r in recipes:
 
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"ingredient_rows_normalized={ingredient_rows_normalized}; non_food_accessories_removed={accessory_rows_removed}")
+
+
+# Harmonize no-cook metadata and remaining common ingredient placeholders.
+def specific_spice_for(title):
+    t = norm(title)
+    if re.search(r"curry|tik ka|masala", t): return "1 c. à café de curry doux"
+    if re.search(r"pizza|italien|lasagne", t): return "1 c. à café d’origan"
+    if re.search(r"chili|taco|tex.?mex|mexicain|burrito", t): return "1 c. à café de cumin"
+    if re.search(r"paprika", t): return "1 c. à café de paprika doux"
+    if re.search(r"poisson|saumon|cabillaud|thon|maquereau", t): return "1 c. à café d’aneth ou d’herbes de Provence"
+    return "1 c. à café d’herbes de Provence"
+
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    title = r.get("name", "")
+    ing = []
+    for raw in r.get("ingredients", []):
+        item = str(raw).strip()
+        if re.fullmatch(r"Épices ou aromates(?:\s*\([^)]*\))?", item, re.I):
+            item = specific_spice_for(title)
+        elif re.fullmatch(r"Herbes aromatiques(?:\s*\([^)]*\))?", item, re.I):
+            item = "5 g d’herbes aromatiques"
+        elif re.fullmatch(r"Basilic frais(?:\s*\([^)]*\))?", item, re.I):
+            item = "5 g de basilic frais"
+        elif re.fullmatch(r"Ciboulette(?:\s*\([^)]*\))?", item, re.I):
+            item = "5 g de ciboulette fraîche"
+        elif re.fullmatch(r"thym\s*\([^)]*\)", item, re.I):
+            item = "10 g de thym frais"
+        elif re.fullmatch(r"1\s+courgettes?", item, re.I):
+            item = "1 courgette"
+        elif re.fullmatch(r"2\s+oignon", item, re.I):
+            item = "2 oignons"
+        elif re.fullmatch(r"1\s+poireaux?", item, re.I):
+            item = "1 poireau"
+        elif re.fullmatch(r"2\s+pomme de terre", item, re.I):
+            item = "2 pommes de terre"
+        elif re.fullmatch(r"1\s+salade", item, re.I):
+            item = "100 g de salade verte"
+        elif re.fullmatch(r"1\s+maïs", item, re.I):
+            item = "100 g de maïs égoutté"
+        elif re.fullmatch(r"1\s+olives vertes", item, re.I):
+            item = "100 g d’olives vertes dénoyautées"
+        elif re.fullmatch(r"1\s+béchamel", item, re.I):
+            item = "300 ml de béchamel légère"
+        elif re.fullmatch(r"1\s+plaques? de lasagnes?", item, re.I):
+            item = "8 plaques de lasagnes"
+        elif re.fullmatch(r"2\s+sauce tomate maison", item, re.I):
+            item = "150 g de sauce tomate maison"
+        elif re.fullmatch(r"1\s+œufs durs?", item, re.I):
+            item = "2 œufs durs"
+        elif re.fullmatch(r"2\s+poivron", item, re.I):
+            item = "2 poivrons"
+        elif re.fullmatch(r"2\s+champignons?", item, re.I):
+            item = "200 g de champignons de Paris"
+        elif re.fullmatch(r"1\s+champignons?", item, re.I):
+            item = "150 g de champignons de Paris"
+        elif re.fullmatch(r"2\s+tomates séchées\s*\(petite quantité\)", item, re.I):
+            item = "40 g de tomates séchées"
+        elif re.fullmatch(r"30\s*g/personne de 100\s*g de mozzarella ou chèvre", item, re.I):
+            item = "100 g de mozzarella râpée"
+        elif re.fullmatch(r"600\s*g coupés en gros dés de blancs de poulet", item, re.I):
+            item = "600 g de blancs de poulet coupés en gros dés"
+        elif re.fullmatch(r"150\s*ml de un peu de lait", item, re.I):
+            item = "150 ml de lait demi-écrémé"
+        elif re.fullmatch(r"1\s+boulettes cuites de la semaine", item, re.I):
+            item = "200 g de boulettes cuites"
+        elif re.fullmatch(r"1\s+Légumes rôtis restants", item, re.I):
+            item = "150 g de légumes rôtis"
+        elif re.fullmatch(r"2\s+Champignons ou légumes rôtis restants", item, re.I):
+            item = "200 g de champignons de Paris"
+        elif re.fullmatch(r"8\s*/\s*22\s*>", item):
+            item = ""
+        if item: ing.append(item)
+    # Remove exact repeated ingredient rows without touching Vide-Frigo cards.
+    seen, unique = set(), []
+    for item in ing:
+        key = norm(item)
+        if key not in seen:
+            seen.add(key); unique.append(item)
+    r["ingredients"] = unique
+    if re.search(r"^(?:Sans cuisson|Aucune cuisson|Pas de cuisson)$", str(r.get("timeCook","")).strip(), re.I):
+        r["timeCook"] = "0 min"
+    if re.search(r"^(?:variable|à définir|a definir|selon recette)$", str(r.get("timeCook","")).strip(), re.I):
+        r["timeCook"] = "20 min"
+    sync_sections(r)
+
+# Correct obvious copied-content and sauce-as-meal mistakes in weekly slots.
+apply("r-8ab1afdf0b", "Parmentier de poulet aux légumes fondants",
+ ["500 g de blancs de poulet","600 g de pommes de terre","2 carottes","200 g de poireaux","1 oignon","150 ml de lait demi-écrémé","100 g de fromage râpé léger","1 c. à soupe d’huile d’olive","1 c. à café d’herbes de Provence","Sel et poivre"],
+ ["1. Épluchez les pommes de terre et les carottes; coupez-les en morceaux et émincez les poireaux et l’oignon.","2. Faites cuire les pommes de terre dans l’eau bouillante 15 à 20 minutes, jusqu’à ce qu’elles soient tendres; égouttez et écrasez avec le lait.","3. Coupez le poulet en petits dés. Faites revenir l’oignon, les carottes et les poireaux dans l’huile, ajoutez le poulet et faites cuire jusqu’à ce qu’il soit bien cuit.","4. Répartissez la préparation au poulet dans un plat, couvrez avec la purée, ajoutez le fromage râpé et enfournez à 190 °C pendant 15 à 20 minutes jusqu’à ce que le dessus soit doré."], "25 min","35 min",4)
+apply("r-7cb0cfd0a6", "Blanquette de poulet ultra facile",
+ ["800 g de poulet en morceaux","500 g de champignons de Paris","2 carottes","1 poireau","2 oignons","150 ml de bouillon de volaille","200 g de fromage blanc nature","1 citron","1 c. à soupe de moutarde douce","10 g de thym frais","2 feuilles de laurier","Sel et poivre"],
+ ["1. Émincez les oignons et les champignons; coupez les carottes et le poireau en rondelles.","2. Faites dorer le poulet dans une cocotte avec un filet d’huile, puis ajoutez les légumes.","3. Versez le bouillon, ajoutez le thym et le laurier, couvrez et laissez mijoter 20 à 25 minutes jusqu’à ce que le poulet soit cuit.","4. Mélangez le fromage blanc avec la moutarde et un peu de jus de citron; incorporez hors du feu sans faire bouillir. Retirez le laurier et servez."], "15 min","25 min",4)
+apply("r-9876a3ed85", "Blanquette légère de poulet aux légumes",
+ ["700 g de poulet en morceaux","2 carottes","1 poireau","200 g de champignons de Paris","2 oignons","200 g de fromage blanc nature","1 citron","1 c. à soupe de moutarde douce","150 ml de bouillon de volaille","10 g de thym frais","2 feuilles de laurier","Sel et poivre"],
+ ["1. Coupez les carottes, le poireau et les champignons; émincez les oignons.","2. Faites dorer le poulet dans une cocotte avec un filet d’huile, puis ajoutez les légumes.","3. Ajoutez le bouillon, le thym et le laurier. Couvrez et laissez mijoter 20 à 25 minutes jusqu’à cuisson complète du poulet.","4. Mélangez le fromage blanc, la moutarde et le jus de citron; incorporez hors du feu. Retirez le laurier et servez."], "15 min","25 min",4)
+apply("r-957c974540", "Poulet au paprika fumé et légumes rôtis",
+ ["600 g de poulet en morceaux","2 courgettes","3 carottes","1 oignon","1 c. à soupe d’huile d’olive","1 c. à café de paprika fumé","1 c. à café d’herbes de Provence","Sel et poivre"],
+ ["1. Préchauffez le four à 200 °C. Coupez les courgettes et les carottes en morceaux et émincez l’oignon.","2. Mélangez le poulet et les légumes avec l’huile, le paprika fumé, les herbes, le sel et le poivre.","3. Étalez sur une plaque et enfournez 25 à 35 minutes, en remuant à mi-cuisson, jusqu’à ce que le poulet soit cuit et les légumes dorés.","4. Vérifiez la cuisson à cœur du poulet et servez chaud."], "15 min","35 min",4)
+apply("r-1aff5ca09b", "Lasagnes bolognaises maison",
+ ["8 plaques de lasagnes","400 g de viande hachée","2 tomates","2 carottes","2 oignons","300 ml de béchamel légère","100 g de fromage râpé","5 g de basilic frais","1 c. à café d’origan","Sel et poivre"],
+ ["1. Préchauffez le four à 190 °C. Émincez les oignons et râpez les carottes; coupez les tomates en dés.","2. Faites revenir les oignons et les carottes, ajoutez la viande hachée et faites-la cuire en l’émiettant.","3. Ajoutez les tomates, le basilic, l’origan, le sel et le poivre; laissez mijoter 10 minutes.","4. Alternez dans un plat les feuilles de lasagnes, la sauce bolognaise et la béchamel. Terminez par le fromage râpé.","5. Enfournez 30 à 35 minutes jusqu’à ce que les pâtes soient tendres et le dessus doré."], "20 min","35 min",4)
+apply("r-5943623be0", "Brandade légère de cabillaud aux légumes",
+ ["600 g de cabillaud","800 g de pommes de terre","200 g de poireaux","2 carottes","1 gousse d’ail","1 citron","150 g de fromage blanc nature","150 ml de lait demi-écrémé","1 c. à soupe de persil frais","1 c. à soupe d’huile d’olive","Sel et poivre"],
+ ["1. Épluchez les pommes de terre et les carottes; coupez les légumes en morceaux et émincez les poireaux.","2. Faites cuire les pommes de terre et les carottes dans l’eau bouillante jusqu’à ce qu’elles soient tendres; ajoutez les poireaux pour les 10 dernières minutes.","3. Faites pocher le cabillaud dans le lait à feu doux pendant 8 à 10 minutes, jusqu’à ce qu’il se défasse facilement; égouttez et émiettez-le en vérifiant l’absence d’arêtes.","4. Écrasez les légumes avec le fromage blanc, l’huile, l’ail haché, le persil et un peu de jus de citron; incorporez le poisson.","5. Salez, poivrez et servez chaud."], "15 min","20 min",4)
+apply("r-261284b831", "Poulet citron et courgettes",
+ ["600 g de blancs de poulet coupés en gros dés","2 courgettes coupées en demi-rondelles","2 citrons jaunes (jus et zestes d’un demi-citron)","2 gousses d’ail pressées","1 c. à soupe d’huile d’olive","1 c. à café d’origan séché","Sel et poivre"],
+ ["1. Mélangez le jus des citrons, les zestes, l’ail, l’huile, l’origan, le sel et le poivre.","2. Coupez le poulet et les courgettes; faites chauffer une grande poêle.","3. Faites dorer le poulet 5 à 7 minutes, ajoutez les courgettes et la marinade, puis poursuivez 7 à 10 minutes jusqu’à ce que le poulet soit cuit.","4. Goûtez, ajustez l’assaisonnement et servez chaud."], "10 min","15 min",4)
+apply("r-65f878753c", "Wrap façon pizza jambon et mozzarella",
+ ["4 wraps complets","150 g de sauce tomate maison","400 g de jambon blanc","100 g de mozzarella","200 g de champignons de Paris","1 c. à café d’origan","Poivre"],
+ ["1. Préchauffez le four à 200 °C. Étalez la sauce tomate sur les wraps.","2. Répartissez le jambon coupé en lanières, les champignons émincés et la mozzarella en morceaux.","3. Parsemez d’origan et de poivre, puis enfournez 8 à 10 minutes jusqu’à ce que le fromage fonde et que les bords soient croustillants.","4. Servez immédiatement."], "10 min","10 min",4)
+apply("r-854fcca6a9", "Burger maison de poulet façon bistrot",
+ ["4 pains burgers complets","600 g de poulet haché","1 salade verte (environ 100 g)","2 tomates","4 cornichons","1 oignon rouge","1 c. à café de paprika fumé","1 gousse d’ail","1/2 c. à café d’oignon en poudre","1 c. à soupe d’huile d’olive","Sel et poivre"],
+ ["1. Lavez la salade et coupez les tomates et les cornichons en rondelles; émincez l’oignon.","2. Mélangez le poulet haché avec le paprika, l’ail haché, l’oignon en poudre, le sel et le poivre. Formez quatre steaks.","3. Faites cuire les steaks dans une poêle huilée jusqu’à ce qu’ils soient cuits à cœur.","4. Réchauffez les pains et garnissez-les avec le poulet, la salade, les tomates, les cornichons et l’oignon."], "15 min","20 min",4)
+apply("test-pizza-s1", "Pizza maison express du vendredi soir",
+ ["1 pâte à pizza","150 g de coulis de tomate","125 g de mozzarella","200 g de champignons de Paris","1 c. à café d’origan","Poivre"],
+ ["1. Préchauffez le four à 220 °C. Étalez le coulis de tomate sur la pâte à pizza.","2. Répartissez les champignons émincés et la mozzarella en morceaux.","3. Parsemez d’origan et de poivre.","4. Enfournez 12 à 15 minutes jusqu’à ce que la pâte soit cuite et le fromage fondu."], "10 min","15 min",2)
+apply("test-pizza-s2", "Pizza express aux boulettes et légumes",
+ ["1 pâte à pizza","150 g de coulis de tomate","200 g de boulettes cuites","150 g de légumes rôtis","125 g de mozzarella","1 c. à café d’origan","Poivre"],
+ ["1. Préchauffez le four à 220 °C. Étalez le coulis de tomate sur la pâte.","2. Coupez les boulettes cuites en deux si elles sont grosses et répartissez-les sur la pâte avec les légumes rôtis.","3. Ajoutez la mozzarella, l’origan et le poivre.","4. Enfournez 12 à 15 minutes jusqu’à ce que la pâte soit cuite et le fromage fondu."], "10 min","15 min",2)
+
+# Set genuinely no-cook dishes to 0 min and replace sauce/spice-only meal slots with real meal cards.
+for rid in ["r-dfd656eac7","r-88b14a0c0e","r-76f65ddf01","r-74591fafac","r-925e0ae075","r-2e9d82d053","r-27adcd34e6","r-8c184093d0","r-8aa6f62f61","r-77321f17d7","r-50fe0c5f4f","r-cc72756102","r-5683efa1c7","r-0590c1550b","r-0fb1660969"]:
+    if rid in by and re.search(r"Sans cuisson", str(by[rid].get("timeCook","")), re.I):
+        by[rid]["timeCook"] = "0 min"
+        sync_sections(by[rid])
+replacement = {
+ "r-3377862991":"r-27adcd34e6",
+ "r-b0d7f88c40":"test-burger-s2",
+ "r-8cfb8fe28b":"test-pizza-s1",
+ "r-ffab58c92c":"r-b03b260268",
+ "r-a46551cd3f":"r-a9558230ac",
+ "r-0fb1660969":"test-pizza-s2",
+}
+for slot in (d.get("plan", {}).values() if isinstance(d.get("plan", {}), dict) else d.get("plan", [])):
+    old_id = slot.get("recipeId")
+    if old_id in replacement and replacement[old_id] in by:
+        new_recipe = by[replacement[old_id]]
+        slot["recipeId"] = new_recipe["id"]
+        slot["name"] = new_recipe.get("name", slot.get("name", ""))
+# Repair generic Burger steps/ingredients used as replacements.
+for rid, name in [("r-b03b260268","Burger maison équilibré et frites de légumes"),("r-a9558230ac","Burger maison façon barbecue")]:
+    if rid in by:
+        apply(rid, name,
+          ["4 pains à burger","4 steaks hachés de bœuf","4 tranches de fromage","100 g de salade verte","2 tomates","4 cornichons","2 c. à soupe de sauce burger","Sel et poivre"],
+          ["1. Lavez et essorez la salade; coupez les tomates et les cornichons en rondelles.","2. Assaisonnez les steaks et faites-les cuire dans une poêle chaude jusqu’à cuisson complète.","3. Réchauffez légèrement les pains et ajoutez la sauce, le fromage, les steaks, la tomate, la salade et les cornichons.","4. Servez les burgers avec les frites de légumes si elles figurent dans la fiche."], "15 min","20 min",4)
+
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    sync_sections(r)
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Plats du planning réparés; temps sans cuisson normalisés; six entrées sauce/épices remplacées par de vrais repas.")
