@@ -1709,3 +1709,5 @@ for rid, values in priority_cards.items():
     priority_updated += 1
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"Direct priority data edits written={priority_updated}/{len(priority_cards)}.")
+
+# Déclenchement réel demandé le 25 octobre 2026 : appliquer et enregistrer les corrections sur la branche de test.
