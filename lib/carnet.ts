@@ -502,7 +502,6 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     : meatPattern;
   const pivot = overrideRecipe("MARDI", "Soir", pivotPattern) ||
     overrideRecipe("MERCREDI", "Midi", pivotPattern) ||
-    overrideRecipe("JEUDI", "Soir", pivotPattern) ||
     chooseRole(pivotPattern, reserved);
   if (pivot) reserved.add(pivot.id);
 
@@ -510,11 +509,18 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const seasonalBase = overrideRecipe("MERCREDI", "Soir", soupPattern) || chooseRole(soupPattern, reserved);
   if (seasonalBase) reserved.add(seasonalBase.id);
 
-  const pantryPattern = /vide.?frigo|restes|anti.?gaspi|fond de placard/;
-  const pantry = overrideRecipe("VENDREDI", "Midi", pantryPattern) || chooseRole(pantryPattern, reserved)
-    || chooseRole(/salade|omelette|wrap|poelee|quiche|tarte|frittata|gratin/, reserved)
-    || chooseRole(/./, reserved);
-  if (pantry) reserved.add(pantry.id);
+  // Le dîner du jeudi transforme le même ingrédient pivot dans une recette différente.
+  const pivotText = pivot ? normalizedSeasonText([pivot.name, ...(pivot.ingredients || [])].join(" ")) : "";
+  const pivotTokens = ["pois chiches", "lentilles", "haricots", "poulet", "dinde", "bœuf", "boeuf", "veau", "porc", "agneau", "saumon", "cabillaud", "thon", "maquereau", "colin", "lieu", "crevette", "tofu", "falafel", "œuf", "oeuf"];
+  const pivotToken = pivotTokens.find((token) => pivotText.includes(normalizedSeasonText(token)));
+  const thursdayOverride = overrideRecipe("JEUDI", "Soir");
+  const transformedCandidates = eligible
+    .filter((recipe) => !reserved.has(recipe.id) && recipe.id !== pivot?.id && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
+    .filter((recipe) => pivotToken && normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" ")).includes(normalizedSeasonText(pivotToken)))
+    .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+  const transformedPivot = thursdayOverride || transformedCandidates[(Math.max(1, week) - 1) % Math.max(1, transformedCandidates.length)]
+    || chooseRole(plantProfile ? plantPattern : meatPattern, reserved);
+  if (transformedPivot) reserved.add(transformedPivot.id);
 
   const pleasurePool = eligible
     .filter((recipe) => !reserved.has(recipe.id) && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
@@ -526,7 +532,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     ...topPool.slice(start), ...topPool.slice(0, start),
     ...pleasurePool.filter((recipe) => seasonalScore(recipe, season) !== topScore),
   ];
-  const weekendKeys: [string, string][] = [["SAMEDI", "Midi"], ["SAMEDI", "Soir"], ["DIMANCHE", "Midi"], ["DIMANCHE", "Soir"]];
+  const weekendKeys: [string, string][] = [["VENDREDI", "Soir"], ["SAMEDI", "Soir"], ["DIMANCHE", "Soir"]];
   const weekendPleasures: (Recipe | undefined)[] = [];
   for (const [day, meal] of weekendKeys) {
     const override = overrideRecipe(day, meal);
@@ -544,12 +550,10 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   setRole("MARDI", "Soir", pivot, "Aucun pivot protéiné complet validé");
   setRole("MERCREDI", "Midi", pivot, "Aucune portion pivot validée");
   setRole("MERCREDI", "Soir", seasonalBase, "Aucun plat de saison complet validé");
-  setRole("JEUDI", "Soir", pivot, "Seconde vie du pivot indisponible", pivot ? `Seconde vie — ${pivot.name}` : undefined);
-  setRole("VENDREDI", "Midi", pantry, "Aucune recette Vide-Frigo complète validée", pantry ? "Vide-frigo — " + pantry.name : undefined);
-  setRole("SAMEDI", "Midi", weekendPleasures[0], "Aucun repas plaisir validé");
+  setRole("JEUDI", "Soir", transformedPivot, "Aucune transformation différente du pivot validée");
+  setRole("VENDREDI", "Soir", weekendPleasures[0], "Aucun repas plaisir validé");
   setRole("SAMEDI", "Soir", weekendPleasures[1], "Aucun repas plaisir validé");
-  setRole("DIMANCHE", "Midi", weekendPleasures[2], "Aucun repas plaisir validé");
-  setRole("DIMANCHE", "Soir", weekendPleasures[3], "Aucun repas plaisir validé");
+  setRole("DIMANCHE", "Soir", weekendPleasures[2], "Aucun repas plaisir validé");
 
   const result = slots.map((slot) => {
     const matrixSelection = matrix.get(`${slot.day}|${slot.meal}`);
