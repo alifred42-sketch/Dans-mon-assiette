@@ -28,7 +28,7 @@ def sync_sections(r):
         title = sec.get("title", "")
         if re.search(r"Ingrédients", title, re.I):
             sec["lines"] = ingredients[:]
-        elif re.search(r"Préparation classique|Préparation pas à pas|Étapes de préparation", title, re.I):
+        elif re.search(r"Préparation", title, re.I) and not re.search(r"temps|durée|⏱️", title, re.I):
             sec["lines"] = steps[:]
         elif re.search(r"Temps de préparation|⏱️ Préparation", title, re.I):
             if r.get("timePrep"): sec["title"] = "⏱️ Préparation : " + str(r["timePrep"])
@@ -144,6 +144,13 @@ apply("r-f8fd15f1a2", "Riz sauté thaï au poulet et aux légumes",
 apply("r-5d51982087", "Tartines de tomates, œufs et fromage frais",
  ["4 grandes tranches de pain complet","2 tomates","4 œufs","100 g de fromage frais","1 c. à soupe d’herbes fraîches","Paprika doux (facultatif)","Sel et poivre"],
  ["1. Faites cuire les œufs 9 à 10 minutes dans l’eau bouillante, puis refroidissez-les et écalez-les.","2. Faites griller les tranches de pain.","3. Étalez le fromage frais sur le pain et ajoutez les tomates coupées en rondelles.","4. Coupez les œufs en quartiers, répartissez-les sur les tartines et assaisonnez avec les herbes, le paprika, le sel et le poivre."], "10 min","10 min",4)
+apply("r-7d7c6a6118", "Merguez à la sauce tomate façon orientale",
+ ["4 merguez","4 tomates mûres","2 poivrons","1 oignon","1 courgette","1 c. à soupe d’huile d’olive","1 c. à café de cumin","1 c. à café de paprika doux","5 g de coriandre fraîche","Sel et poivre"],
+ ["1. Émincez l’oignon et coupez les poivrons, la courgette et les tomates en morceaux.","2. Faites dorer les merguez dans une poêle, puis réservez-les.","3. Faites revenir l’oignon et les poivrons dans l’huile pendant 5 minutes.","4. Ajoutez la courgette, les tomates, le cumin, le paprika, le sel et le poivre. Laissez mijoter 10 minutes.","5. Remettez les merguez et poursuivez la cuisson 10 à 12 minutes, jusqu’à ce qu’elles soient bien cuites. Parsemez de coriandre."], "15 min","25 min",4)
+apply("r-3ad7aa939f", "Poivrons farcis à la viande et au riz",
+ ["4 poivrons","400 g de viande hachée","200 g de riz cru","2 tomates","1 oignon","1 gousse d’ail","1 c. à soupe de basilic frais","1 c. à soupe d’huile d’olive","Sel et poivre"],
+ ["1. Préchauffez le four à 190 °C. Faites cuire le riz selon les indications du paquet, puis égouttez-le.","2. Coupez le haut des poivrons et retirez les graines. Émincez l’oignon et l’ail; coupez les tomates en dés.","3. Faites revenir l’oignon et l’ail dans l’huile, ajoutez la viande hachée et faites-la cuire en l’émiettant.","4. Mélangez la viande avec le riz, les tomates, le basilic, le sel et le poivre.","5. Garnissez les poivrons, placez-les dans un plat avec un petit fond d’eau et enfournez 35 à 45 minutes, jusqu’à ce que les poivrons soient tendres et la farce bien cuite."], "20 min","45 min",4)
+
 # Generic placeholder labels that are not a recipe title are corrected to coherent named preparations above.
 for r in recipes:
     if re.search(r"vide.?frigo", r.get("name",""), re.I): continue
