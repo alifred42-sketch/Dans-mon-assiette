@@ -1149,3 +1149,15 @@ if "r-c2e2da7c3e" in by:
 
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"prepared-ahead recipe number references removed={legacy_batch_refs_removed}")
+
+
+# Remove the final numeric references in the two duplicated vegetarian/vegan socca cards.
+for rid in ("veg-pe-022", "vegan-pe-007"):
+    if rid in by:
+        by[rid]["ingredients"] = [
+          "200 g de légumes grillés ou rôtis au four préparés à l’avance" if re.search(r"Reste de légumes grillés.*recette\s+\d+", str(item), re.I) else item
+          for item in by[rid].get("ingredients", [])
+        ]
+        sync_sections(by[rid])
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Dernières références numériques supprimées des fiches de socca.")
