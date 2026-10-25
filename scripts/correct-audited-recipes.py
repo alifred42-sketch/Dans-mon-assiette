@@ -2501,37 +2501,41 @@ last_manual_steps = {
   "5. Goûtez, rectifiez le sel et le poivre et servez chaud."
  ]
 }
-for (const [rid, steps] of Object.entries(last_manual_steps)) {
- const r = by.get(rid);
- if (!r || /vide.?frigo/i.test(r.get("name", ""))) continue;
- r["steps"] = steps;
- sync_sections(r);
-}
-const ingredientFixes = [
- [/d’coriandre ou persil/gi, "de coriandre ou de persil"],
- [/d’persil ou coriandre/gi, "de persil ou de coriandre"],
- [/d’coriandre/gi, "de coriandre"],
- [/d’persil/gi, "de persil"],
- [/d’thym/gi, "de thym"],
- [/d’huile olive/gi, "d’huile d’olive"],
- [/d’huile colza/gi, "d’huile de colza"],
- [/de escalopes/gi, "d’escalopes"],
- [/1 aubergines/gi, "1 aubergine"],
- [/1 courgette râpées/gi, "1 courgette râpée"],
- [/1 olives noires/gi, "1 olive noire"]
-];
-for (const r of recipes) {
- if (/vide.?frigo/i.test(r.get("name", ""))) continue;
- const old = r.get("ingredients", []);
- if (!Array.isArray(old)) continue;
- const next = old.map(item => {
-  let s = String(item);
-  for (const [re, replacement] of ingredientFixes) s = s.replace(re, replacement);
-  return s;
- });
- if (JSON.stringify(next) !== JSON.stringify(old)) r["ingredients"] = next;
- sync_sections(r);
-}
+for rid, steps in last_manual_steps.items():
+    r = by.get(rid)
+    if not r or re.search(r"vide.?frigo", r.get("name", ""), re.I):
+        continue
+    r["steps"] = steps
+    sync_sections(r)
+
+ingredient_fixes = [
+    (r"d’coriandre ou persil", "de coriandre ou de persil"),
+    (r"d’persil ou coriandre", "de persil ou de coriandre"),
+    (r"d’coriandre", "de coriandre"),
+    (r"d’persil", "de persil"),
+    (r"d’thym", "de thym"),
+    (r"d’huile olive", "d’huile d’olive"),
+    (r"d’huile colza", "d’huile de colza"),
+    (r"de escalopes", "d’escalopes"),
+    (r"1 aubergines", "1 aubergine"),
+    (r"1 courgette râpées", "1 courgette râpée"),
+    (r"1 olives noires", "1 olive noire"),
+]
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I):
+        continue
+    ingredients = r.get("ingredients", [])
+    if not isinstance(ingredients, list):
+        continue
+    fixed = []
+    for item in ingredients:
+        value = str(item)
+        for pattern, replacement in ingredient_fixes:
+            value = re.sub(pattern, replacement, value, flags=re.I)
+        fixed.append(value)
+    if fixed != ingredients:
+        r["ingredients"] = fixed
+    sync_sections(r)
 
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Les 38 fiches ciblées ont été réécrites après les autres passes et enregistrées.")
