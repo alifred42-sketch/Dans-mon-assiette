@@ -1212,7 +1212,7 @@ final_fix("r-9b996df25a",
 
 final_fix("r-35f1833eb2",
  ["4 gros œufs","4 c. à soupe de coulis de tomate","4 c. à soupe de crème fraîche légère (15 % MG)","Poivre noir","1 petite pincée de sel"],
- null)
+ None)
 
 final_fix("r-c2e31d66fb",
  ["8 gros œufs","200 g de légumes cuits coupés en dés (courgettes, poivrons ou champignons)","40 g de comté ou d’emmental râpé","2 c. à soupe de lait demi-écrémé","1 c. à café d’huile d’olive","2 pincées de sel","Poivre"],
@@ -1220,23 +1220,23 @@ final_fix("r-c2e31d66fb",
 
 final_fix("test-croques-s2",
  ["8 tranches de pain de mie complet","4 c. à soupe de sauce épaisse aux légumes rôtis","60 g de comté ou de gruyère râpé","4 c. à soupe de fromage frais nature","Poivre noir"],
- null)
+ None)
 
 final_fix("student-one-pan-002",
  ["150 g de riz nature précuit (ou 150 g de riz déjà cuit)","1 petite boîte de thon au naturel (environ 80 g), égouttée","50 g de petits pois surgelés","1 œuf","1 c. à soupe de sauce soja","1 c. à soupe d’huile neutre"],
- null,"5 min","8 min","1 portion — quantités adaptables ×4 pour 4 personnes")
+ None,"5 min","8 min","1 portion — quantités adaptables ×4 pour 4 personnes")
 
 final_fix("student-one-pan-023",
  ["150 g de riz nature précuit (ou 150 g de riz déjà cuit)","100 g de champignons de Paris égouttés (ou frais émincés)","1/2 oignon","5 cl de crème fraîche","20 g de parmesan râpé","10 cl de bouillon préparé","1 petite noisette de beurre"],
- null,"5 min","10 min","1 portion — quantités adaptables ×4 pour 4 personnes")
+ None,"5 min","10 min","1 portion — quantités adaptables ×4 pour 4 personnes")
 
 final_fix("student-one-pan-034",
  ["150 g de riz nature précuit (ou 150 g de riz déjà cuit)","2 œufs","50 g de petits pois surgelés","1/2 oignon","1 c. à café de curry en poudre","1 c. à soupe d’huile neutre","Sel et poivre"],
- null,"5 min","8 min","1 portion — quantités adaptables ×4 pour 4 personnes")
+ None,"5 min","8 min","1 portion — quantités adaptables ×4 pour 4 personnes")
 
 final_fix("student-one-pan-045",
  ["150 g de riz nature précuit (ou 150 g de riz déjà cuit)","1 petit blanc de poulet (environ 150 g)","1 c. à soupe de sauce soja","1 c. à soupe d’huile neutre","Sel et poivre","1 c. à café de graines de sésame (facultatif)"],
- null,"5 min","10 min","1 portion — quantités adaptables ×4 pour 4 personnes")
+ None,"5 min","10 min","1 portion — quantités adaptables ×4 pour 4 personnes")
 
 final_fix("student-microwave-007",
  ["1/2 courgette","1/2 poivron rouge","4 c. à soupe de coulis de tomate","1 c. à café d’huile d’olive","1 c. à café d’herbes de Provence","Sel et poivre"],
