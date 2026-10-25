@@ -1,0 +1,34 @@
+name: Correct audited recipes
+on:
+  push:
+    branches:
+      - travail-cuisine-chic-ouf-design
+    paths:
+      - ".github/workflows/correct-audited-recipes.yml"
+      - "scripts/correct-audited-recipes.py"
+permissions:
+  contents: write
+jobs:
+  correct:
+    if: "!startsWith(github.event.head_commit.message, 'bot: apply audited recipe corrections')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: travail-cuisine-chic-ouf-design
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/correct-audited-recipes.py
+      - name: Commit corrections
+        run: |
+          if git diff --quiet; then
+            echo "No corrections needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/carnet.json
+          git commit -m "bot: apply audited recipe corrections"
+          git push origin travail-cuisine-chic-ouf-design
