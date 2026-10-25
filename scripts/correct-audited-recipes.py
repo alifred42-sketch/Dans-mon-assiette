@@ -2562,3 +2562,5 @@ print("Les 38 fiches ciblées ont été réécrites après les autres passes et 
 # Déclenchement de la passe finale de corrections vérifiables — 25/10/2026.
 
 # Relancer le correcteur après élargissement de la détection des gabarits.
+
+# Déclenchement explicite du correcteur final depuis la branche de test.
