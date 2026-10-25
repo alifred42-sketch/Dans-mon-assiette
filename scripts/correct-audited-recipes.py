@@ -1115,3 +1115,5 @@ if "halloween-potions-035" in by:
 
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"visible_legacy_recipe_numbers_removed={legacy_refs_removed}")
+
+# Relance de la synchronisation après les changements de validation de lib/carnet.ts.
