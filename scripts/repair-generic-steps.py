@@ -16,21 +16,32 @@ PATTERNS = (
  "Faites chauffer une poêle à feu moyen avec l’huile prévue",
  "Coupez les légumes et les protéines indiqués en petits morceaux.",
  "Faites cuire les légumes selon la méthode adaptée au plat :",
+ "Préparez les ingrédients de la liste : lavez et coupez",
+ "Faites chauffer l’huile prévue dans une sauteuse. Faites dorer la viande",
+ "Ajoutez les légumes et les aromates; faites revenir",
+ "Laissez cuire 35 minutes à feu doux, en remuant régulièrement",
+ "Ajoutez le skyr, la crème ou le fromage en fin de cuisson si la recette en prévoit",
+ "Rincez les lentilles ou céréales si nécessaire.",
+ "Faites revenir les aromates dans l’huile prévue pendant 3 à 5 minutes",
+ "Ajoutez les légumes, les tomates, le bouillon et les légumineuses indiqués",
+ "Préparez les légumes prévus; émincez les aromates prévus",
+ "Ajoutez les œufs et cuisez à feu doux",
+ "Préchauffez le four à 190 °C si une cuisson au four est prévue",
 )
 def family(name, ing):
  n=name.lower(); s=" ".join(ing).lower()
- if re.search(r"wrap|burger|tartine|sandwich|tortilla wrap",n): return "wrap"
- if re.search(r"salade|bowl|assiette fraîcheur|taboulé",n) and "chaud" not in n: return "cold"
+ if re.search(r"wrap|burger|tartine|sandwich|tortilla wrap|tacos|quesadilla",n): return "wrap"
+ if re.search(r"salade|bowl|assiette fraîcheur|taboulé|tartare|guacamole|crudités",n) and "chaud" not in n: return "cold"
  if re.search(r"pancake|crêpe|pâte à crêpes",n): return "pancake"
- if re.search(r"purée|écrasé",n): return "puree"
- if re.search(r"lasagne|gratin|tian",n): return "bake"
+ if re.search(r"compote",n): return "compote"\n if re.search(r"pommes de terre grenaille|fondue de poireaux|ratatouille|légumes rôtis",n): return "side"\n if re.search(r"purée|écrasé",n): return "puree"
+ if re.search(r"lasagne|gratin|tian|moussaka",n): return "bake"
  if "risotto" in n: return "risotto"
- if re.search(r"riz cantonais|riz sauté|paëlla|riz façon|riz.*poulet",n): return "rice"
+ if re.search(r"riz cantonais|riz sauté|paëlla|paella|riz façon|riz.*poulet",n): return "rice"
  if re.search(r"pâtes|penne|mac and cheese|one pot|nouilles|wok|blé façon",n): return "pasta"
  if re.search(r"omelette|œufs|oeufs|tortilla espagnole",n): return "egg"
  if re.search(r"soupe|velouté",n): return "soup"
  if re.search(r"poisson|cabillaud|saumon|thon|maquereau|brandade",n): return "fish"
- if re.search(r"curry|chili|blanquette|couscous|bolognaise|ratatouille|basquaise|poivrons farcis|sauté|mijoté|merguez|boulettes",n): return "stew"
+ if re.search(r"curry|chili|blanquette|couscous|bolognaise|basquaise|poivrons farcis|sauté|mijoté|merguez|boulettes|osso bucco",n): return "stew"
  if re.search(r"poulet|porc|bœuf|boeuf|veau|viande|escalope",n) and re.search(r"courgette|carotte|poivron|tomate|légume|pomme de terre",s): return "meatveg"
  return "pan"
 def details(ing):
@@ -49,6 +60,20 @@ def steps_for(r):
   return ["1. Faites cuire les ingrédients qui doivent être servis froids (riz, pommes de terre, œufs ou céréales lorsqu’ils figurent dans la liste), puis laissez-les refroidir rapidement.",f"2. Lavez et séchez les crudités. Coupez {veg} en morceaux réguliers et égouttez les conserves ou ingrédients en bocal.","3. Mélangez l’huile, le citron ou vinaigre et les herbes présents dans la liste; goûtez avant d’ajouter le sel.","4. Répartissez les éléments dans les assiettes ou bols, ajoutez la sauce juste avant de servir et gardez au réfrigérateur si le repas est préparé à l’avance."]
  if f=="pancake":
   return ["1. Versez la farine et le sel dans un saladier. Ajoutez les œufs indiqués et fouettez jusqu’à ce que la pâte commence à se former.","2. Incorporez progressivement le lait et le fromage blanc ou yaourt s’ils figurent dans la liste. Fouettez jusqu’à obtenir une pâte homogène sans grumeaux.","3. Laissez reposer 5 à 10 minutes si le temps le permet.","4. Chauffez une poêle antiadhésive légèrement huilée. Versez une petite louche de pâte et faites cuire 1 à 2 minutes par face, jusqu’à ce que le dessous soit doré et le dessus non liquide."]
+ if f=="compote":
+  fruit_lines=[str(x) for x in ing if re.search(r"pomme|poire|rhubarbe|fraise|abricot|banane|pêche|peche|prune",str(x),re.I)]
+  fruit_text=", ".join(fruit_lines) if fruit_lines else "les fruits indiqués dans la liste"
+  robot_lines=r.get("robot",[]) if isinstance(r.get("robot",[]),list) else []
+  robot_text=" ".join(str(x) for x in robot_lines)
+  if robot_text:
+   return [f"1. Préparez {fruit_text} comme indiqué dans la liste : épluchez et épépinez si nécessaire, puis coupez en morceaux réguliers.","2. Placez les fruits dans le bol du Mr Cuisine et ajoutez uniquement le citron, le sucre, la cannelle ou la vanille qui figurent dans les ingrédients.",f"3. Lancez la cuisson avec les réglages indiqués dans la rubrique Robot de cette fiche : {robot_text}","4. Vérifiez que les fruits sont tendres, puis mixez avec la vitesse et la durée prévues pour garder des morceaux ou obtenir une texture lisse.","5. Laissez refroidir avant de mettre en pot et conservez au réfrigérateur dans un récipient fermé."]
+  return [f"1. Préparez {fruit_text} : lavez, épluchez et épépinez les fruits si nécessaire, puis coupez-les en morceaux réguliers.","2. Déposez les fruits dans une casserole à fond épais avec uniquement le citron, le sucre et les épices indiqués dans la liste.","3. Couvrez et faites cuire à feu doux 12 à 15 minutes, en remuant régulièrement jusqu’à ce que les fruits soient très tendres; ajoutez une cuillère d’eau seulement si le fond accroche.","4. Écrasez à la fourchette pour garder des morceaux ou mixez jusqu’à la texture souhaitée.","5. Laissez refroidir puis conservez au réfrigérateur dans un récipient fermé."]
+ if f=="side":
+  if "fondue de poireaux" in name:
+   return ["1. Rincez soigneusement les poireaux, retirez les feuilles abîmées et coupez les blancs et parties tendres en fines rondelles.","2. Faites fondre le beurre ou chauffez l’huile uniquement si cet ingrédient figure dans la liste. Ajoutez les poireaux et remuez 2 minutes.","3. Couvrez et laissez cuire à feu doux 12 à 15 minutes en remuant régulièrement, jusqu’à ce que les poireaux soient tendres.","4. Incorporez la crème ou le produit laitier uniquement s’il figure dans les ingrédients; laissez épaissir 2 minutes sans faire bouillir.","5. Poivrez et salez selon la liste, puis servez chaud."]
+  if "ratatouille" in name:
+   return ["1. Lavez les courgettes, poivrons, tomates et aubergines présents dans la liste, puis coupez-les en dés de taille proche. Émincez les oignons et hachez l’ail.","2. Faites chauffer l’huile prévue dans une grande sauteuse. Faites revenir les oignons 3 minutes, puis ajoutez les poivrons et l’aubergine s’ils sont listés; faites cuire 5 minutes.","3. Ajoutez les courgettes et les tomates, mélangez et couvrez partiellement.","4. Laissez mijoter 20 à 25 minutes à feu doux en remuant de temps en temps, jusqu’à ce que les légumes soient tendres.","5. Ajoutez le thym, les herbes de Provence ou le basilic uniquement s’ils figurent dans la liste; goûtez et servez chaud ou tiède."]
+  return ["1. Préchauffez le four à 200 °C. Lavez les pommes de terre grenaille ou légumes prévus et coupez les plus gros morceaux en deux pour une cuisson uniforme.","2. Mélangez les légumes avec l’huile, les herbes, le sel et le poivre uniquement s’ils sont listés.","3. Étalez en une seule couche sur une plaque recouverte de papier cuisson, sans trop serrer les morceaux.","4. Faites rôtir 25 à 40 minutes selon la taille, en retournant à mi-cuisson, jusqu’à ce que les morceaux soient tendres au centre et dorés dehors.","5. Goûtez, ajustez uniquement avec les assaisonnements prévus et servez chaud."]
  if f=="puree":
   return ["1. Épluchez les pommes de terre et les carottes ou poireaux mentionnés, puis coupez-les en dés de 2 à 3 cm pour une cuisson uniforme.","2. Déposez-les dans une casserole d’eau froide salée, portez à ébullition puis laissez cuire 15 à 20 minutes, jusqu’à ce qu’un couteau traverse facilement les morceaux.","3. Égouttez soigneusement. Ajoutez le lait et le beurre indiqués petit à petit, puis écrasez au presse-purée ou à la fourchette jusqu’à la texture souhaitée.","4. Incorporez les herbes et le poivre listés, goûtez et rectifiez l’assaisonnement. Servez chaud."]
  if f=="bake":
@@ -82,4 +107,4 @@ for r in data.get("recipes",[]):
  changed+=1
 print(f"Étapes corrigées: {changed}")
 if changed < 100: raise SystemExit("Arrêt de sécurité: trop peu de fiches reconnues.")
-p.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+p.write_text(json.dumps(data,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
