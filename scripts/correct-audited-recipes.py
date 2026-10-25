@@ -1391,3 +1391,91 @@ for r in recipes:
             sec["lines"] = r.get("steps", [])[:]
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"Generic-step pass complete: {_generic_changed} cards updated; Vide-Frigo cards skipped.")
+
+
+# Dernière passe ciblée : remplace les étapes de gabarit encore présentes par des étapes adaptées au plat.
+_final_steps = {
+ "r-e8952bdaf2": [
+  "1. Épluchez les pommes et les poires, retirez les cœurs puis coupez les fruits en petits dés.",
+  "2. Déposez les fruits dans une casserole avec 3 à 4 cuillères à soupe d’eau et la cannelle. Ajoutez la vanille si vous l’utilisez.",
+  "3. Couvrez et faites compoter à feu doux 15 à 20 minutes en remuant de temps en temps; ajoutez un peu d’eau si le fond accroche.",
+  "4. Écrasez à la fourchette ou mixez selon la texture souhaitée. Laissez refroidir avant de servir ou de mettre au frais."
+ ],
+ "r-d6a6f34570": [
+  "1. Écrasez les biscuits et répartissez-les au fond de petits pots ou d’un moule. Humidifiez légèrement avec un peu d’eau ou de lait si nécessaire.",
+  "2. Mélangez le skyr, le fromage frais, la vanille et le zeste de citron jusqu’à obtenir une crème lisse.",
+  "3. Préparez la gélatine ou l’agar-agar en suivant exactement les indications du paquet, puis incorporez-la à la crème sans laisser de grumeaux.",
+  "4. Versez la crème sur la base biscuitée, ajoutez les fruits rouges et placez au réfrigérateur au moins 4 heures, jusqu’à ce que la préparation soit prise."
+ ],
+ "r-a10bc58641": [
+  "1. Faites fondre le chocolat doucement au bain-marie ou par courtes séquences au micro-ondes, puis laissez-le tiédir.",
+  "2. Mélangez le skyr avec le cacao tamisé et la vanille jusqu’à obtenir une préparation homogène.",
+  "3. Incorporez progressivement le chocolat fondu tiède. Ajoutez les noisettes concassées et une pincée de fleur de sel si souhaité.",
+  "4. Répartissez dans des ramequins et réservez au frais au moins 30 minutes. Gardez au réfrigérateur jusqu’au service."
+ ],
+ "r-6e0eb13534": [
+  "1. Mélangez le skyr avec le mascarpone, la vanille et le zeste de citron jusqu’à obtenir une crème souple.",
+  "2. Lavez et séchez les fruits rouges; gardez-en quelques-uns pour la finition.",
+  "3. Dans des verrines, alternez une couche de biscuits à la cuillère, une couche de crème et une couche de fruits. Répétez selon la taille des verrines.",
+  "4. Couvrez et placez au réfrigérateur au moins 2 heures pour que les biscuits s’attendrissent. Ajoutez les fruits réservés juste avant de servir."
+ ],
+ "r-8c62c53b61": [
+  "1. Épluchez les pommes, retirez les pépins et coupez-les en petits morceaux.",
+  "2. Placez-les dans une casserole avec 3 cuillères à soupe d’eau et la vanille si vous en utilisez.",
+  "3. Couvrez et faites cuire à feu doux 15 à 20 minutes, en remuant de temps en temps, jusqu’à ce que les pommes soient fondantes.",
+  "4. Écrasez ou mixez selon la texture souhaitée. Ajoutez une petite pincée de cannelle, laissez refroidir puis réservez au frais."
+ ],
+ "r-1a027a4e41": [
+  "1. Préparez les garnitures séparément : faites revenir les champignons avec un peu d’huile jusqu’à évaporation de leur eau, puis ajoutez le jambon coupé en morceaux.",
+  "2. Faites fondre les poireaux émincés dans une poêle avec un peu d’eau, jusqu’à ce qu’ils soient tendres. Ajoutez le saumon en morceaux et faites-le cuire complètement.",
+  "3. Réchauffez les crêpes déjà préparées, répartissez la garniture jambon-champignons sur certaines et la garniture saumon-poireaux sur les autres.",
+  "4. Repliez les crêpes et servez aussitôt. Vérifiez que le saumon est bien cuit à cœur."
+ ],
+ "vegan-express-050": [
+  "1. Coupez les avocats en deux, retirez les noyaux et récupérez la chair.",
+  "2. Placez la chair, le cacao et le sirop d’érable dans un mixeur. Mixez jusqu’à ce que la préparation commence à devenir lisse.",
+  "3. Ajoutez progressivement le lait d’amande et mixez de nouveau jusqu’à obtenir une mousse homogène, en raclant les parois si nécessaire.",
+  "4. Répartissez dans des ramequins et servez immédiatement ou laissez raffermir 20 à 30 minutes au réfrigérateur."
+ ],
+ "vegan-robot-008": [
+  "1. Dans une casserole hors du feu, mélangez la fécule et le sucre avec un peu de lait d’amande pour former une pâte sans grumeaux.",
+  "2. Ajoutez le reste du lait végétal et le chocolat en morceaux. Mélangez au fouet.",
+  "3. Faites chauffer à feu moyen en remuant constamment jusqu’à ce que le chocolat soit fondu et que la crème épaississe; laissez frémir doucement quelques secondes.",
+  "4. Versez dans des ramequins. Laissez refroidir puis placez au réfrigérateur au moins 2 heures."
+ ],
+ "student-microwave-010": [
+  "1. Dans une grande tasse compatible avec le micro-ondes, faites fondre le chocolat et le beurre par séquences de 15 à 20 secondes, en mélangeant entre chaque.",
+  "2. Incorporez la farine, le sucre et le lait. Mélangez jusqu’à disparition des grumeaux.",
+  "3. Faites cuire au micro-ondes environ 40 à 60 secondes à puissance élevée; adaptez par tranches de 10 secondes selon l’appareil et arrêtez lorsque le centre est juste pris.",
+  "4. Laissez reposer 1 minute avant de déguster, car la tasse et le chocolat sont très chauds."
+ ],
+ "student-microwave-020": [
+  "1. Faites fondre le beurre dans une grande tasse compatible avec le micro-ondes pendant 10 à 15 secondes.",
+  "2. Incorporez les sucres, le lait, puis la farine. Ajoutez les morceaux de chocolat et mélangez juste assez pour répartir la pâte.",
+  "3. Faites cuire au micro-ondes 40 à 60 secondes à puissance élevée; surveillez la texture et ajoutez seulement 10 secondes si le centre est encore liquide.",
+  "4. Laissez reposer 1 à 2 minutes dans la tasse avant de manger."
+ ],
+ "student-microwave-030": [
+  "1. Épluchez la pomme, retirez le cœur et coupez-la en petits dés dans une tasse compatible avec le micro-ondes.",
+  "2. Ajoutez le sucre et mélangez. Émiettez les spéculoos par-dessus et répartissez le beurre en petits morceaux.",
+  "3. Faites cuire au micro-ondes 60 à 90 secondes à puissance élevée, jusqu’à ce que la pomme soit tendre; prolongez par séquences de 10 secondes si nécessaire.",
+  "4. Laissez reposer 1 minute avant de servir, éventuellement avec une cuillerée de yaourt si vous en avez."
+ ],
+ "student-microwave-040": [
+  "1. Dans une grande tasse compatible avec le micro-ondes, mélangez la farine, le sucre et la levure.",
+  "2. Ajoutez l’œuf, l’huile et le jus de citron. Fouettez jusqu’à obtenir une pâte homogène en raclant le fond de la tasse.",
+  "3. Faites cuire au micro-ondes 50 à 70 secondes à puissance élevée; le gâteau doit être pris au centre. Ajoutez 10 secondes si nécessaire.",
+  "4. Laissez reposer 1 minute avant de déguster. La tasse peut être très chaude."
+ ],
+ "student-microwave-050": [
+  "1. Dans une grande tasse compatible avec le micro-ondes, faites fondre le chocolat et le beurre par séquences de 15 à 20 secondes en mélangeant entre chaque.",
+  "2. Incorporez le sucre, la farine et le lait. Ajoutez les noix si vous le souhaitez et mélangez sans trop travailler la pâte.",
+  "3. Faites cuire au micro-ondes 35 à 55 secondes à puissance élevée pour garder un cœur fondant; ajoutez 10 secondes si le centre reste trop liquide.",
+  "4. Laissez reposer 1 à 2 minutes avant de déguster. Vérifiez que la préparation est chaude et ne consommez pas directement à la sortie du micro-ondes."
+ ]
+}
+for _r in recipes:
+    if _r.get("id") in _final_steps and not re.search(r"vide.?frigo", _r.get("name", ""), re.I):
+        _r["steps"] = _final_steps[_r["id"]]
+        sync_sections(_r)
+print(f"Final targeted step repair: {sum(1 for _r in recipes if _r.get('id') in _final_steps)} cards.")
