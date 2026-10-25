@@ -5,7 +5,7 @@ import json, re, subprocess
 from pathlib import Path
 P=Path("data/carnet.json")
 d=json.loads(P.read_text(encoding="utf-8"))
-bad=re.compile(r"la base crémeuse|la protéine si elle est crue|les ingrédients prévus|rectifiez uniquement|si la cuisson est au four|s’il est listé|s'il est listé|selon leur temps de cuisson|avec les seuls ingrédients prévus|les légumes prévus|la sauce ou les condiments indiqués|les assaisonnements prévus|faites cuire complètement les ingrédients crus|mélangez la base crémeuse|dans les assiettes, les wraps ou les contenants|coupez les légumes et les garnitures en morceaux adaptés",re.I)
+bad=re.compile(r"la base crémeuse|la protéine si elle est crue|les ingrédients prévus|rectifiez uniquement|si la cuisson est au four|s’il est listé|s'il est listé|selon leur temps de cuisson|avec les seuls ingrédients prévus|les légumes prévus|la sauce ou les condiments indiqués|les assaisonnements prévus|faites cuire complètement les ingrédients crus|mélangez la base crémeuse|dans les assiettes, les wraps ou les contenants|coupez les légumes et les garnitures en morceaux adaptés|ingrédients listés|s'ils sont présents|produit laitier listé|aromates listés|incorporez progressivement les ingrédients listés|préparation homogène|assaisonnements listés|selon les indications|préchauffez le four à 190 °C si nécessaire|matière grasse prévue|jusqu’à ce que les éléments soient cuits|vérifiez la cuisson et la texture",re.I)
 def clean(x): return re.sub(r"^\s*\d+\.\s*","",str(x or "")).strip()
 def pick(a,pat,fb):
     return next((clean(x) for x in a if re.search(pat,x,re.I)),fb)
@@ -20,7 +20,7 @@ def make(r):
     dairy=pick(a,r"skyr|yaourt|fromage blanc|crème|parmesan|mozzarella|chèvre|fromage frais|béchamel","le produit laitier listé")
     cit=pick(a,r"citron",""); oil=pick(a,r"huile","la matière grasse listée")
     herbs=picks(a,r"herbe|basilic|persil|ciboulette|aneth|menthe|origan|paprika|curry|épice|moutarde|poivre|sel","les aromates listés")
-    if re.search(r"sauce|marinade|tzatziki|béchamel|pesto|tartinade|vinaigrette|rillettes",n):
+    if re.search(r"^(?:sauce|marinade|tzatziki|béchamel|bechamel|pesto|tartinade|vinaigrette|rillettes)",n):
         return [f"1. Préparez les ingrédients listés : hachez les herbes et l’ail s’ils sont présents; râpez et pressez les légumes aqueux avant de les incorporer.",f"2. Dans un bol, mélangez {dairy} avec {(cit.lower()+' et ') if cit else ''}{herbs.lower()}.", "3. Incorporez progressivement les ingrédients listés en fouettant jusqu’à obtenir une préparation homogène.", "4. Goûtez, ajustez avec les assaisonnements listés, couvrez et réservez au frais jusqu’au service."]
     if re.search(r"wrap|tartine|burger|sandwich|panini",n):
         return [f"1. Égouttez les conserves si la recette en contient. Lavez puis détaillez {v} en morceaux ou fines lamelles.",f"2. Si {p.lower()} est cru, faites-le cuire à cœur dans une poêle chaude avec {oil.lower()}, puis laissez reposer 3 minutes avant de le couper.", "3. Mélangez les ingrédients de sauce listés. Réchauffez le pain ou les galettes 30 à 60 secondes à la poêle si le plat est chaud.",f"4. Répartissez {p.lower()} et {v} sur le pain ou les galettes, ajoutez les garnitures et la sauce, puis roulez ou refermez juste avant de servir."]
