@@ -1479,3 +1479,7 @@ for _r in recipes:
         _r["steps"] = _final_steps[_r["id"]]
         sync_sections(_r)
 print(f"Final targeted step repair: {sum(1 for _r in recipes if _r.get('id') in _final_steps)} cards.")
+
+# Persiste également les étapes ciblées définies dans la passe finale ci-dessus.
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\\n", encoding="utf-8")
+print("Final targeted steps persisted to data/carnet.json.")
