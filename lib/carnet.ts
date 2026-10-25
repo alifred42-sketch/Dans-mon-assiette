@@ -306,8 +306,8 @@ function isSeasonCompatible(recipe: Recipe, season: Season): boolean {
   const summerOnly = /gaspacho|gazpacho|soupe froide|soupe glacee|veloute froid|melon|pasteque|estival|estivale|\bd ete\b|\bde ete\b|aux legumes du soleil/i;
   const winterOnly = /hivernal|hivernale|\bd hiver\b|\bde hiver\b|de noel|potimarron|chataigne|chataignes|endive|chou de bruxelles/i;
   if (season !== "ete" && summerOnly.test(title)) return false;
-  if (season === "ete" && winterOnly.test(title)) return false;
-  if (season === "printemps" && /gaspacho|gazpacho|soupe froide|soupe glacee|de noel/i.test(title)) return false;
+  if ((season === "ete" || season === "printemps") && winterOnly.test(title)) return false;
+  if (season === "printemps" && /de noel/i.test(title)) return false;
   return true;
 }
 
