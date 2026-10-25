@@ -1661,3 +1661,51 @@ final_fix("student-microwave-034",
  ["1. Coupez le jambon en petits dés et les olives en rondelles.","2. Dans un grand mug compatible avec le micro-ondes, mélangez la farine, la levure, l’œuf, l’huile et le lait jusqu’à disparition des grumeaux.","3. Incorporez le jambon, les olives, le fromage râpé, le sel et le poivre. Ne remplissez pas le mug au-delà des deux tiers.","4. Faites cuire au micro-ondes à puissance élevée pendant environ 1 min 30 à 2 min. Vérifiez que le centre est pris; prolongez par tranches de 10 secondes si nécessaire.","5. Laissez reposer une minute avant de manger : le mug est très chaud."], "4 min","2 min",1)
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Priority dessert and mug-cake corrections reapplied using final_fix.")
+
+
+# Écriture directe finale des fiches prioritaires dans l'objet JSON réellement sérialisé.
+priority_cards = {
+ "r-3822ce960b": {
+  "ingredients":["100 g de chocolat noir","150 g de skyr nature","2 œufs","50 g de farine complète","20 g de cacao non sucré","1 c. à soupe de miel (facultatif)"],
+  "steps":["1. Préchauffez le four à 180 °C et chemisez un petit moule.","2. Faites fondre le chocolat doucement, puis laissez-le tiédir.","3. Fouettez le skyr avec les œufs et le miel. Incorporez le chocolat fondu.","4. Ajoutez la farine et le cacao tamisés; mélangez juste assez pour obtenir une pâte homogène.","5. Versez dans le moule et faites cuire 12 à 15 minutes : le centre doit rester légèrement fondant. Laissez tiédir avant de couper."],"timePrep":"10 min","timeCook":"15 min"},
+ "r-d319909cc0": {
+  "ingredients":["150 g de chocolat noir","300 g de skyr nature","2 blancs d’œufs pasteurisés","1 c. à café d’extrait de vanille","1 pincée de fleur de sel"],
+  "steps":["1. Faites fondre le chocolat au bain-marie ou par courtes séquences au micro-ondes, puis laissez-le tiédir.","2. Mélangez le skyr avec la vanille et la fleur de sel.","3. Incorporez le chocolat fondu au mélange de skyr en plusieurs fois.","4. Montez les blancs d’œufs pasteurisés en neige ferme, puis incorporez-les délicatement à la préparation.","5. Répartissez dans quatre verrines et réservez au réfrigérateur au moins 2 heures."],"timePrep":"15 min","timeCook":"5 min"},
+ "r-c5820b31fc": {
+  "ingredients":["100 g de chocolat noir","150 g de skyr nature","2 œufs","80 g de farine complète","20 g de cacao non sucré","30 g de miel ou de sucre (facultatif)"],
+  "steps":["1. Préchauffez le four à 180 °C et chemisez un petit moule carré.","2. Faites fondre le chocolat et laissez-le tiédir.","3. Fouettez les œufs avec le skyr et le miel ou le sucre si utilisé, puis ajoutez le chocolat fondu.","4. Incorporez la farine et le cacao tamisés sans trop travailler la pâte.","5. Versez dans le moule et faites cuire 15 à 20 minutes. Laissez refroidir avant de découper en carrés."],"timePrep":"10 min","timeCook":"20 min"},
+ "r-a10bc58641": {
+  "ingredients":["500 g de skyr nature","100 g de chocolat noir","20 g de cacao non sucré","1 c. à café d’extrait de vanille","20 g de noisettes concassées (facultatif)","1 pincée de fleur de sel (facultatif)"],
+  "steps":["1. Faites fondre le chocolat au bain-marie ou par courtes séquences au micro-ondes, puis laissez-le tiédir.","2. Mélangez le skyr avec le cacao tamisé, la vanille et la fleur de sel si utilisée.","3. Incorporez le chocolat fondu en plusieurs fois jusqu’à obtenir une crème homogène.","4. Répartissez dans quatre ramequins et parsemez de noisettes si souhaité.","5. Réservez au réfrigérateur au moins 30 minutes avant de servir."],"timePrep":"10 min","timeCook":"5 min"},
+ "r-4ce28d774d": {
+  "ingredients":["500 ml de lait","100 g de chocolat noir","2 œufs","20 g de cacao non sucré","20 g de fécule de maïs","20 g de sucre (facultatif)"],
+  "steps":["1. Dans un saladier, fouettez les œufs avec le cacao, la fécule et le sucre si utilisé.","2. Faites chauffer le lait dans une casserole. Ajoutez le chocolat en morceaux et remuez jusqu’à ce qu’il soit fondu.","3. Versez progressivement le lait chocolaté chaud sur le mélange aux œufs en fouettant.","4. Reversez dans la casserole et faites épaissir à feu doux sans cesser de remuer; ne laissez pas bouillir fortement.","5. Répartissez dans quatre verrines, laissez refroidir puis réfrigérez au moins 2 heures."],"timePrep":"10 min","timeCook":"10 min"},
+ "r-e6ef289c1b": {
+  "ingredients":["150 g de chocolat noir","4 œufs frais extra-frais (blancs et jaunes séparés)","1 pincée de sel"],
+  "steps":["1. Faites fondre le chocolat au bain-marie puis laissez-le tiédir sans le laisser durcir.","2. Séparez les blancs des jaunes. Incorporez les jaunes un à un au chocolat tiède.","3. Montez les blancs en neige avec la pincée de sel jusqu’à ce qu’ils soient fermes.","4. Incorporez délicatement les blancs au chocolat en plusieurs fois pour garder la mousse aérienne.","5. Répartissez dans quatre verrines et réservez au réfrigérateur au moins 3 heures. Pour les personnes fragiles, utilisez des œufs pasteurisés."],"timePrep":"15 min","timeCook":"5 min"},
+ "student-microwave-034": {
+  "ingredients":["3 c. à soupe de farine","1/2 c. à café de levure chimique","1 œuf","1 c. à soupe d’huile","1 c. à soupe de lait","1/2 tranche de jambon","3 olives dénoyautées","1 c. à soupe de fromage râpé","Sel et poivre"],
+  "steps":["1. Coupez le jambon en petits dés et les olives en rondelles.","2. Dans un grand mug compatible avec le micro-ondes, mélangez la farine, la levure, l’œuf, l’huile et le lait jusqu’à disparition des grumeaux.","3. Incorporez le jambon, les olives, le fromage râpé, le sel et le poivre. Ne remplissez pas le mug au-delà des deux tiers.","4. Faites cuire au micro-ondes à puissance élevée pendant environ 1 min 30 à 2 min. Vérifiez que le centre est pris; prolongez par tranches de 10 secondes si nécessaire.","5. Laissez reposer une minute avant de manger : le mug est très chaud."],"timePrep":"4 min","timeCook":"2 min"}
+}
+priority_by_id = {r.get("id"): r for r in d.get("recipes", [])}
+priority_updated = 0
+for rid, values in priority_cards.items():
+    r = priority_by_id.get(rid)
+    if not r:
+        print("PRIORITY CARD NOT FOUND:", rid)
+        continue
+    r["ingredients"] = values["ingredients"]
+    r["steps"] = values["steps"]
+    r["timePrep"] = values["timePrep"]
+    r["timeCook"] = values["timeCook"]
+    if rid == "student-microwave-034":
+        r["servings"] = "1 portion"
+    for sec in r.get("sections", []):
+        title = sec.get("title", "")
+        if re.search(r"Ingrédients", title, re.I):
+            sec["lines"] = r["ingredients"][:]
+        elif re.search(r"Préparation|Etapes|Étapes", title, re.I) and not re.search(r"astuce|conseil|robot|version|batch", title, re.I):
+            sec["lines"] = r["steps"][:]
+    priority_updated += 1
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print(f"Direct priority data edits written={priority_updated}/{len(priority_cards)}.")
