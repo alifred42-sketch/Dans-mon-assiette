@@ -518,8 +518,11 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     .filter((recipe) => !reserved.has(recipe.id) && recipe.id !== pivot?.id && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
     .filter((recipe) => pivotToken && normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" ")).includes(normalizedSeasonText(pivotToken)))
     .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
-  const transformedPivot = thursdayOverride || transformedCandidates[(Math.max(1, week) - 1) % Math.max(1, transformedCandidates.length)]
-    || chooseRole(plantProfile ? plantPattern : meatPattern, reserved);
+  const fallbackTransformations = eligible
+    .filter((recipe) => !reserved.has(recipe.id) && recipe.id !== pivot?.id && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
+    .filter((recipe) => (plantProfile ? plantPattern : meatPattern).test(roleText(recipe)))
+    .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+  const transformedPivot = thursdayOverride || transformedCandidates[(Math.max(1, week) - 1) % Math.max(1, transformedCandidates.length)] || fallbackTransformations[0];
   if (transformedPivot) reserved.add(transformedPivot.id);
 
   const pleasurePool = eligible
