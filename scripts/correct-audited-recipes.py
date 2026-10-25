@@ -243,3 +243,24 @@ for r in recipes:
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 
 # Trigger a final verified correction pass on the test branch.
+
+
+# Split extracted sauce/dressing text into real ingredient rows for correct shopping aggregation.
+def replace_ings(rid, items):
+    r=by.get(rid)
+    if not r:return
+    r["ingredients"]=items
+    sync_sections(r)
+replace_ings("veg-pe-017",["200 g de pois gourmands","6 radis","1 avocat","1 c. à soupe de moutarde de Dijon","1 c. à soupe d’huile d’olive","2 c. à soupe d’eau tiède","Sel et poivre"])
+replace_ings("vegan-pe-005",["200 g de pois gourmands","6 radis","1 avocat","1 c. à soupe de moutarde de Dijon","1 c. à soupe d’huile d’olive","2 c. à soupe d’eau tiède","Sel et poivre"])
+replace_ings("vegan-robot-009",["600 g de pommes de terre","1 chou-fleur","150 ml de crème de soja","2 c. à soupe de moutarde à l’ancienne","1 c. à soupe de jus de citron","Sel et poivre"])
+replace_ings("vegan-robot-015",["300 g de macaronis cuits à part","300 g de potimarron","150 ml de lait végétal","2 c. à soupe de levure maltée","1 c. à café de moutarde","Sel et poivre"])
+replace_ings("vegan-automne-hiver-010",["500 g de panais","300 g de carottes","80 g de farine de blé ou d’épeautre","40 g de poudre de noisettes","40 g de noisettes concassées","4 c. à soupe d’huile d’olive","Sel"])
+replace_ings("vegan-automne-hiver-016",["300 g de chou kale","1 patate douce","3 c. à soupe de beurre de cacahuète","2 c. à soupe de sauce soja","1 c. à soupe de sirop d’érable","4 à 5 c. à soupe d’eau chaude"])
+replace_ings("vegan-automne-hiver-018",["250 g de lentilles vertes cuites","2 pommes","40 g de noix","3 c. à soupe d’huile de noix ou d’olive","1 c. à soupe de vinaigre de cidre","1 c. à café de moutarde à l’ancienne","Sel et poivre"])
+replace_ings("vegan-automne-hiver-020",["4 pains pita","300 g de chou rouge","250 g de pois chiches rôtis","4 c. à soupe de yaourt de soja nature","1 c. à soupe de jus de citron","Sel et poivre"])
+replace_ings("vegan-automne-hiver-030",["200 g de quinoa cru","300 g de potimarron","100 g de mâche","30 g de graines de tournesol","1 gousse d’ail","4 c. à soupe d’huile d’olive","Sel"])
+replace_ings("vegan-automne-hiver-035",["250 g de pois cassés","1 oignon","1 carotte","1 litre de bouillon de légumes","2 tranches de pain rassis","1 gousse d’ail","1 c. à soupe d’huile d’olive","Sel et poivre"])
+replace_ings("vegan-automne-hiver-040",["300 g de chou-fleur râpé","80 g de grenade","30 g de pignons de pin","3 c. à soupe d’huile d’olive","2 c. à soupe de jus de citron","Sel et poivre"])
+replace_ings("vegan-automne-hiver-048",["150 g de mâche","2 betteraves cuites","2 tranches de pain complet","3 c. à soupe d’huile de colza","1 c. à soupe de vinaigre de cidre","1 c. à café de sirop d’érable","Sel et poivre"])
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
