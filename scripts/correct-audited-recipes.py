@@ -1283,3 +1283,109 @@ for rid, replacements in {
             sec["lines"] = r.get("ingredients", [])[:]
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Références numériques résiduelles supprimées des fiches repas classiques.")
+
+
+# Final generic-step rewrite: replace placeholder instructions with usable, title-aware methods.
+# Opération Vide-Frigo cards are intentionally excluded from every change below.
+d = json.loads(p.read_text(encoding="utf-8"))
+recipes = d.get("recipes", [])
+def _generic_steps_for(r):
+    name = norm(r.get("name", ""))
+    ingredients = " ".join(map(str, r.get("ingredients", []))).lower()
+    full = name + " " + norm(ingredients)
+    if re.search(r"vide.?frigo", name, re.I):
+        return None
+    if re.search(r"sauce|vinaigrette|marinade|pesto|tartinade|dip", name):
+        return [
+          "1. Préparez les ingrédients listés : lavez les herbes, épluchez l’ail ou l’échalote s’ils sont prévus et égouttez les conserves.",
+          "2. Hachez les ingrédients solides. Mélangez-les dans un bol ou un mixeur avec les liquides et condiments indiqués dans la liste.",
+          "3. Incorporez progressivement l’huile, le citron, le vinaigre ou le produit laitier uniquement s’ils figurent parmi les ingrédients. Mixez ou fouettez jusqu’à la texture souhaitée.",
+          "4. Goûtez, ajustez avec les assaisonnements prévus et réservez au frais dans un récipient fermé si la sauce n’est pas servie immédiatement."
+        ]
+    if re.search(r"soupe|velout[eé]|potage|cr[eè]me de l[eé]gumes", name):
+        return [
+          "1. Lavez, épluchez si nécessaire et coupez les légumes listés en morceaux réguliers. Émincez l’oignon ou l’ail s’ils sont prévus.",
+          "2. Faites revenir les aromates dans la matière grasse indiquée, puis ajoutez les légumes et le bouillon ou l’eau prévus dans la liste.",
+          "3. Couvrez et laissez mijoter jusqu’à ce que les légumes soient tendres. Vérifiez avec la pointe d’un couteau.",
+          "4. Mixez jusqu’à obtenir la texture souhaitée. Ajoutez seulement les produits laitiers ou garnitures prévus, rectifiez l’assaisonnement et servez chaud."
+        ]
+    if re.search(r"poisson|cabillaud|saumon|thon|colin|truite|sardine|maquereau|crevette|moule|fruits de mer", name):
+        return [
+          "1. Préparez le poisson ou les fruits de mer et les accompagnements listés. Coupez les légumes et mesurez les condiments.",
+          "2. Faites cuire d’abord les légumes ou féculents prévus, en respectant leur temps de cuisson. Préparez la sauce avec les ingrédients indiqués.",
+          "3. Faites cuire le poisson à la poêle, au four ou à la vapeur selon la recette, jusqu’à ce que la chair soit opaque et se détache facilement. Faites cuire complètement les fruits de mer.",
+          "4. Réchauffez doucement la sauce si besoin, sans faire bouillir une sauce au skyr ou à la crème. Vérifiez la cuisson et servez avec les accompagnements prévus."
+        ]
+    if re.search(r"omelette|œuf|oeuf|frittata|shakshuka", name) or re.search(r"œufs|oeufs", full):
+        return [
+          "1. Lavez et coupez les légumes prévus en petits morceaux. Battez les œufs avec les assaisonnements listés.",
+          "2. Faites revenir les légumes dans la matière grasse indiquée jusqu’à ce qu’ils commencent à devenir tendres.",
+          "3. Versez les œufs battus sur la garniture et ajoutez le fromage s’il est prévu. Faites cuire à feu doux, en couvrant si nécessaire.",
+          "4. Poursuivez jusqu’à ce que les œufs soient pris et cuits à cœur. Vérifiez la cuisson avant de servir."
+        ]
+    if re.search(r"pizza|tarte|quiche|gratin|lasagne|feuillet[eé]|cake sal[eé]", name):
+        return [
+          "1. Préchauffez le four à 180 °C, ou à la température précisée dans la recette. Préparez les ingrédients listés.",
+          "2. Précuisez à la poêle les viandes et légumes qui en ont besoin. Égouttez les ingrédients humides afin de ne pas détremper la pâte ou le plat.",
+          "3. Disposez la pâte ou les ingrédients dans le plat adapté, puis répartissez la garniture, le fromage et les assaisonnements prévus.",
+          "4. Enfournez et surveillez la cuisson : la garniture doit être cuite à cœur et le dessus doré. Prolongez si nécessaire."
+        ]
+    if re.search(r"salade|wrap|sandwich|tartine|bruschetta|verrine froide", name):
+        return [
+          "1. Lavez et essorez les crudités. Coupez les légumes et les garnitures en morceaux adaptés; égouttez les conserves si la liste en prévoit.",
+          "2. Faites cuire complètement les ingrédients crus qui nécessitent une cuisson, puis laissez-les refroidir avant de les ajouter à une préparation froide.",
+          "3. Répartissez les ingrédients listés dans les assiettes, les wraps ou les contenants. Mélangez séparément la sauce avec les seuls ingrédients prévus.",
+          "4. Ajoutez la sauce au dernier moment, goûtez et ajustez l’assaisonnement avec les éléments de la recette. Gardez au frais jusqu’au service."
+        ]
+    if re.search(r"p[aâ]tes|spaghetti|nouilles|wok|riz saut[eé]|risotto|pa[eë]lla", name) or re.search(r"p[aâ]tes|nouilles|riz cru", full):
+        return [
+          "1. Préparez et coupez les légumes, aromates et protéines listés. Portez une casserole d’eau à ébullition si les pâtes ou nouilles sont prévues.",
+          "2. Faites cuire les pâtes, le riz ou les nouilles selon les indications du paquet. Égouttez si nécessaire et réservez.",
+          "3. Faites revenir les aromates et les autres ingrédients dans la matière grasse indiquée; ajoutez la sauce ou le liquide prévus et faites cuire complètement les protéines.",
+          "4. Ajoutez les féculents cuits, mélangez jusqu’à ce que l’ensemble soit chaud et homogène, puis rectifiez l’assaisonnement avec les condiments prévus."
+        ]
+    if re.search(r"g[aâ]teau|cake|muffin|cr[eê]pe|pancake|dessert|compote|tiramisu|mousse|flan|pudding|biscuit|cookies|tarte sucr[eé]e", name):
+        return [
+          "1. Pesez les ingrédients de la liste. Préchauffez le four si la recette comporte une cuisson et préparez le moule ou les contenants.",
+          "2. Mélangez les ingrédients secs ensemble, puis incorporez les ingrédients liquides et les œufs lorsqu’ils sont prévus. Mélangez jusqu’à obtenir une préparation homogène.",
+          "3. Ajoutez les fruits, le chocolat ou les garnitures uniquement s’ils figurent dans la liste. Versez dans le moule ou répartissez dans les contenants.",
+          "4. Faites cuire à la température et pendant la durée prévues par la recette, en contrôlant la texture au centre. Pour une préparation sans cuisson, placez au frais jusqu’à la prise."
+        ]
+    if re.search(r"bœuf|boeuf|poulet|dinde|porc|veau|agneau|merguez|boulettes|chili|curry|rago[uû]t|tajine|blanquette|bolognaise|viande", name):
+        return [
+          "1. Coupez les légumes et aromates listés. Détaillez la viande en morceaux réguliers si nécessaire et préparez les épices et liquides prévus.",
+          "2. Faites dorer la viande dans la matière grasse indiquée, en plusieurs fois si nécessaire. Ajoutez les aromates et faites revenir brièvement sans les brûler.",
+          "3. Ajoutez les légumes, épices, tomates ou liquide figurant dans la liste. Couvrez partiellement et laissez cuire jusqu’à ce que la viande soit cuite à cœur.",
+          "4. Vérifiez la cuisson, goûtez et rectifiez l’assaisonnement avec les ingrédients prévus. Servez avec l’accompagnement mentionné dans la recette."
+        ]
+    if re.search(r"pur[eé]e|[ée]cras[eé]|parmentier|l[eé]gumes r[oô]tis|po[eê]l[eé]e de l[eé]gumes|ratatouille", name):
+        return [
+          "1. Lavez et coupez les légumes listés en morceaux de taille régulière. Préchauffez le four si la recette prévoit une cuisson au four.",
+          "2. Faites cuire les légumes selon la méthode adaptée au plat : à la vapeur ou dans l’eau pour une purée, à la poêle ou au four pour une poêlée ou des légumes rôtis.",
+          "3. Poursuivez jusqu’à ce que les légumes soient tendres et cuits à cœur. Ajoutez uniquement les liquides, la matière grasse et les assaisonnements prévus dans la liste.",
+          "4. Écrasez ou mélangez si la recette le demande, goûtez et rectifiez l’assaisonnement avec les ingrédients prévus. Servez chaud."
+        ]
+    return [
+      "1. Préparez tous les ingrédients listés : lavez et coupez les légumes, émincez les aromates et mesurez les condiments et liquides prévus.",
+      "2. Commencez par cuire les ingrédients demandant le plus de temps, avec la matière grasse indiquée. Faites dorer les protéines crues séparément si nécessaire.",
+      "3. Ajoutez les autres ingrédients et les liquides prévus dans la liste. Faites cuire en remuant régulièrement jusqu’à ce que les légumes soient tendres et les protéines cuites à cœur.",
+      "4. Goûtez, rectifiez l’assaisonnement uniquement avec les éléments prévus dans la recette et servez avec l’accompagnement indiqué."
+    ]
+
+_generic_rx = re.compile(r"de la fiche|dans la fiche|indiqu[eé]s? dans la recette|selon le mat[eé]riel disponible|passez directement [àa] l['’]e[té]tape suivante|m[eé]langez les ingr[eé]dients|ingr[eé]dients qui n[eé]cessitent une cuisson|faites cuire s[eé]par[eé]ment|adaptez la dur[eé]e [àa] la taille|selon votre go[uû]t|en adaptant la dur[eé]e|selon la texture souhait[eé]e", re.I)
+_generic_changed = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I):
+        continue
+    steps = r.get("steps", [])
+    if isinstance(steps, list) and steps and any(_generic_rx.search(str(step)) for step in steps):
+        r["steps"] = _generic_steps_for(r)
+        _generic_changed += 1
+    for sec in r.get("sections", []):
+        title = sec.get("title", "")
+        if re.search(r"Ingrédients", title, re.I):
+            sec["lines"] = r.get("ingredients", [])[:]
+        elif re.search(r"Préparation", title, re.I) and not re.search(r"temps|durée|⏱️|robot|batch|sauce", title, re.I):
+            sec["lines"] = r.get("steps", [])[:]
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print(f"Generic-step pass complete: {_generic_changed} cards updated; Vide-Frigo cards skipped.")
