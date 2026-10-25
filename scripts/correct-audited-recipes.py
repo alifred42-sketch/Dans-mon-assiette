@@ -195,6 +195,135 @@ for r in recipes:
     r["name"] = clean_numbered_name(r.get("name",""))
     sync_sections(r)
 
+
+# 4) Replace remaining generic instructions with method-specific steps.
+GENERIC_STEP_RE = re.compile(
+    r"Préparez les ingrédients|Hachez finement les aromates|Versez l’huile ou le liquide petit à petit|"
+    r"Goûtez, rectifiez l’assaisonnement|mélangez la base indiquée dans la liste|Préparez tous les ingrédients listés|"
+    r"Commencez par cuire les ingrédients demandant le plus de temps|Ajoutez les autres ingrédients et les liquides prévus|"
+    r"Préparez les ingrédients de la fiche|Faites chauffer l’huile indiquée dans une poêle ou une casserole adaptée|"
+    r"Incorporez les liquides, épices et autres ingrédients de la fiche", re.I
+)
+def tailored_steps(r):
+    name = norm(r.get("name", ""))
+    ing = r.get("ingredients", [])
+    joined = norm(" ".join(str(x) for x in ing))
+    def find(pattern, fallback):
+        return next((str(x) for x in ing if re.search(pattern, norm(x))), fallback)
+    onion = find(r"oignon|echalote", "les aromates prévus")
+    garlic = find(r"ail", "l’ail prévu")
+    tomato = find(r"tomate", "les tomates prévues")
+    veg = [str(x) for x in ing if re.search(r"courgette|carotte|poivron|poireau|champignon|chou|brocoli|haricot|epinard|tomate|salade|concombre", norm(x))][:3]
+    veg_text = ", ".join(veg) if veg else "les légumes indiqués dans la liste"
+    cook_match = re.search(r"(\d+)", str(r.get("timeCook", "")))
+    cook = int(cook_match.group(1)) if cook_match else 20
+    starch = find(r"pates|nouilles|riz|semoule|pommes de terre|gnocchi|ravioles", "l’accompagnement prévu")
+    if re.search(r"sauce|vinaigrette|tzatziki|pesto|tartinade|marinade", name) and not re.search(r"poisson.*sauce|poulet.*sauce|boulette.*sauce|viande.*sauce", name):
+        if "tzatziki" in name:
+            return ["1. Râpez le concombre puis pressez-le soigneusement pour retirer son excès d’eau.",
+                    "2. Mélangez le skyr ou yaourt avec l’ail, le citron et les herbes prévus dans la liste.",
+                    "3. Incorporez le concombre égoutté et mélangez jusqu’à obtenir une sauce homogène.",
+                    "4. Poivrez selon la liste, couvrez et réservez au frais au moins 15 minutes avant de servir."]
+        if "tomate" in name:
+            return [f"1. Émincez {onion.lower()} et hachez {garlic.lower()}.",
+                    "2. Faites chauffer l’huile prévue dans une casserole et faites suer les aromates 3 à 4 minutes sans les brûler.",
+                    f"3. Ajoutez {tomato.lower()} ainsi que les herbes et épices listées. Laissez mijoter {max(10, cook)} minutes en remuant de temps en temps.",
+                    "4. Mixez si une texture lisse est souhaitée, goûtez puis rectifiez uniquement avec les assaisonnements prévus. Laissez refroidir avant de mettre en pot."]
+        return ["1. Lavez, séchez et hachez les herbes ou légumes prévus; râpez les aromates si nécessaire.",
+                "2. Dans un bol, mélangez la base crémeuse ou liquide indiquée avec les ingrédients prévus.",
+                "3. Incorporez progressivement le citron, l’huile, les épices et les herbes listés en fouettant jusqu’à obtenir une texture homogène.",
+                "4. Goûtez, rectifiez uniquement avec les assaisonnements prévus, couvrez et réservez au frais jusqu’au service."]
+    if re.search(r"overnight|porridge|bowl petit.dejeuner|petit.dejeuner|flocons d.avoine", name):
+        return ["1. Versez les flocons ou céréales prévus dans un bol ou un bocal propre.",
+                "2. Ajoutez le skyr ou yaourt et le lait indiqués, puis mélangez jusqu’à ce que les flocons soient bien humidifiés.",
+                "3. Lavez et coupez les fruits prévus; ajoutez-les avec les noix, graines ou épices listées.",
+                "4. Pour une version overnight, fermez et placez au réfrigérateur au moins 4 heures, idéalement une nuit; sinon dégustez aussitôt."]
+    if re.search(r"crepe|pancake|gaufre", name):
+        return ["1. Dans un saladier, mélangez la farine et la levure prévues. Faites un puits et ajoutez les œufs.",
+                "2. Versez le lait progressivement en fouettant pour obtenir une pâte lisse; incorporez le yaourt ou fromage blanc s’il est indiqué.",
+                "3. Laissez reposer la pâte 5 à 10 minutes si possible.",
+                "4. Faites chauffer une poêle antiadhésive légèrement huilée et cuisez de petites portions 1 à 2 minutes par face, jusqu’à ce qu’elles soient dorées et cuites à cœur."]
+    if re.search(r"gateau|banana bread|brownie|muffin|cake|tarte sucree|crumble|cookies|biscuit|fondant|moelleux|pommes au four|poires roties|peches roties|fruit roti", name):
+        return ["1. Préchauffez le four à 180 °C. Préparez un moule ou un plat adapté et chemisez-le si nécessaire.",
+                "2. Lavez et coupez les fruits ou écrasez les bananes prévues. Mélangez les œufs et les ingrédients humides indiqués.",
+                "3. Incorporez la farine, la levure, les épices et les autres ingrédients secs prévus; mélangez juste assez pour obtenir une préparation homogène.",
+                f"4. Versez dans le moule ou répartissez dans le plat. Faites cuire environ {max(15, cook)} minutes, en vérifiant la cuisson au centre avec la pointe d’un couteau.",
+                "5. Laissez tiédir avant de démouler ou de servir."]
+    if re.search(r"verrine|mousse|creme dessert", name):
+        return ["1. Mesurez les ingrédients. Faites fondre le chocolat s’il figure dans la liste, puis laissez-le tiédir.",
+                "2. Fouettez les œufs, le skyr ou le lait et le sucre prévus jusqu’à obtenir un mélange homogène.",
+                "3. Incorporez les ingrédients secs ou le chocolat sans laisser de grumeaux, puis répartissez dans les verrines.",
+                "4. Laissez refroidir puis réfrigérez au moins 2 heures avant de servir."]
+    if re.search(r"wrap|burger|sandwich|tartine|bowl froid|salade|taboule|crudites|saumon fume|assiette composee", name):
+        return [f"1. Lavez et essorez les légumes prévus; coupez {veg_text} en morceaux ou en fines lamelles.",
+                "2. Faites cuire complètement la protéine si elle est crue, puis laissez-la reposer quelques minutes avant de la couper; si elle est déjà cuite, détaillez-la simplement.",
+                "3. Mélangez la sauce ou les condiments indiqués. Réchauffez légèrement le pain ou les wraps si souhaité.",
+                "4. Assemblez le plat en répartissant les ingrédients et la sauce; roulez les wraps bien serrés ou dressez dans les assiettes juste avant de servir."]
+    if re.search(r"poisson|saumon|cabillaud|colin|thon|truite|crevette|moule|brandade", name) or re.search(r"poisson|saumon|cabillaud|colin|thon|crevette", joined):
+        return [f"1. Préchauffez le four à 190 °C si la cuisson est au four. Lavez et coupez {veg_text}; séchez le poisson et assaisonnez-le avec les ingrédients prévus.",
+                "2. Faites revenir les légumes 5 minutes à la poêle ou déposez-les dans un plat avec l’huile indiquée.",
+                f"3. Ajoutez le poisson et faites cuire {max(10, min(cook, 30))} minutes au four, ou à la poêle à feu moyen selon l’épaisseur, jusqu’à ce que la chair soit opaque et se détache facilement.",
+                "4. Mélangez à part le skyr, la crème ou les herbes prévus pour la sauce; ajoutez le citron en fin de préparation et évitez de faire bouillir une sauce au produit laitier.",
+                f"5. Servez avec {starch.lower()} s’il est listé et vérifiez que tous les éléments sont bien chauds."]
+    if re.search(r"pates|ravioli|ravioles|lasagne|spaghetti|risotto|gnocchi|nouilles", name):
+        return ["1. Portez une grande casserole d’eau salée à ébullition et faites cuire les pâtes ou nouilles selon le paquet. Égouttez en réservant un peu d’eau de cuisson.",
+                f"2. Pendant ce temps, émincez {onion.lower()} et préparez {veg_text}. Faites revenir les aromates dans l’huile prévue 3 à 4 minutes.",
+                f"3. Ajoutez {tomato.lower()} ou la sauce et le fromage listés; laissez chauffer {max(5, min(cook, 20))} minutes à feu doux et cuisez complètement les légumes ou la protéine prévue.",
+                "4. Mélangez les pâtes avec la sauce. Détendez avec une cuillère d’eau de cuisson si nécessaire, puis ajoutez les herbes ou le fromage prévus juste avant de servir."]
+    if re.search(r"dahl|lentille|chili|curry|couscous|tajine|haricot|pois chiche|ragout|mijote|bourguignon|pot.au.feu|soupe|veloute", name):
+        return [f"1. Rincez les lentilles ou céréales si nécessaire. Émincez {onion.lower()}, hachez {garlic.lower()} et coupez {veg_text}.",
+                "2. Faites revenir les aromates dans l’huile prévue pendant 3 à 5 minutes; ajoutez les épices et remuez 30 secondes.",
+                f"3. Ajoutez les légumes, les tomates, le bouillon et les légumineuses indiqués. Couvrez et laissez mijoter {max(20, cook)} minutes à feu doux, en remuant et en ajoutant un peu d’eau si nécessaire.",
+                "4. Vérifiez que les légumes et légumineuses sont tendres et que la viande éventuelle est cuite. Ajoutez le lait de coco ou le produit crémeux en fin de cuisson s’il est prévu.",
+                f"5. Goûtez, rectifiez avec les assaisonnements listés et servez avec {starch.lower()} si indiqué."]
+    if re.search(r"oeuf|omelette|shakshuka|frittata", name):
+        return [f"1. Émincez {onion.lower()} et coupez {veg_text} en petits morceaux.",
+                "2. Faites revenir les légumes dans l’huile prévue 5 à 7 minutes, jusqu’à ce qu’ils commencent à s’attendrir.",
+                "3. Ajoutez les tomates ou autres ingrédients prévus et les épices; laissez mijoter quelques minutes pour évaporer l’excès de liquide.",
+                "4. Ajoutez les œufs et cuisez à feu doux, à couvert si nécessaire, jusqu’à ce que les blancs soient pris. Parsemez des herbes ou du fromage prévus et servez chaud."]
+    if re.search(r"farci|farcies|farcis", name):
+        return ["1. Préchauffez le four à 180 °C. Lavez les légumes à farcir, coupez leur chapeau et évidez-les délicatement.",
+                f"2. Hachez {onion.lower()} et {garlic.lower()}. Faites revenir les aromates et la chair des légumes dans l’huile prévue, puis ajoutez la viande ou la garniture listée.",
+                "3. Mélangez avec les herbes, céréales ou fromage prévus. Garnissez les légumes sans trop tasser et replacez les chapeaux.",
+                f"4. Disposez dans un plat avec le liquide ou les tomates prévus et faites cuire {max(30, cook)} minutes, jusqu’à ce que les légumes soient tendres et la farce cuite à cœur."]
+    if re.search(r"pizza|quiche|tarte salee|brick|samoussa|feuillete", name):
+        return ["1. Préchauffez le four à 220 °C pour une pizza ou 190 °C pour une tarte ou des bricks. Préparez la pâte et coupez les légumes.",
+                "2. Faites revenir les viandes ou légumes qui en ont besoin 5 à 8 minutes à la poêle, puis égouttez l’excès de liquide.",
+                "3. Garnissez la pâte avec la sauce, les légumes, la protéine et le fromage prévus; pliez les bricks ou samoussas si nécessaire.",
+                f"4. Enfournez {max(12, min(cook, 35))} minutes, jusqu’à ce que la pâte soit dorée et la garniture cuite. Laissez reposer 3 minutes."]
+    if re.search(r"boulette", name):
+        return ["1. Mélangez la viande hachée avec l’œuf, la chapelure, les herbes et les assaisonnements indiqués. Formez des boulettes régulières.",
+                "2. Faites chauffer l’huile prévue dans une sauteuse et faites dorer les boulettes sur plusieurs faces pendant 5 à 7 minutes.",
+                f"3. Faites revenir {onion.lower()} et {garlic.lower()}, puis ajoutez {tomato.lower()} ou la sauce prévue. Laissez frémir 5 minutes.",
+                f"4. Remettez les boulettes dans la sauce, couvrez et laissez cuire {max(15, min(cook, 35))} minutes à feu doux. Vérifiez la cuisson à cœur avant de servir."]
+    if re.search(r"poulet|dinde|boeuf|veau|porc|steak|viande|merguez|saucisse|lardons|paupiette|roti", name) or re.search(r"poulet|dinde|boeuf|veau|porc|viande hachee|merguez|saucisse", joined):
+        return [f"1. Coupez {veg_text} et émincez {onion.lower()} ainsi que {garlic.lower()}. Préparez les autres ingrédients de la liste.",
+                "2. Faites chauffer l’huile prévue dans une sauteuse. Faites dorer la viande sur toutes les faces ou jusqu’à ce que la viande hachée ne soit plus rosée.",
+                "3. Ajoutez les légumes et les aromates; faites revenir 5 à 8 minutes. Incorporez la sauce, les tomates ou le bouillon prévus.",
+                f"4. Laissez cuire {max(10, cook)} minutes à feu doux, en remuant régulièrement et en ajoutant un peu de liquide si nécessaire. Vérifiez que la viande est cuite à cœur.",
+                "5. Ajoutez le skyr, la crème ou le fromage en fin de cuisson si la recette en prévoit, à feu doux. Servez avec l’accompagnement indiqué."]
+    if re.search(r"wok|poelee|sauté", name):
+        return [f"1. Coupez {veg_text} en morceaux réguliers et émincez les aromates avant de commencer.",
+                "2. Faites chauffer l’huile prévue dans une grande poêle ou un wok. Saisissez la viande ou la protéine 2 à 4 minutes puis réservez-la.",
+                "3. Faites sauter les légumes 5 à 8 minutes à feu vif en remuant souvent; ils doivent rester légèrement croquants.",
+                "4. Remettez la protéine, ajoutez la sauce soja, les épices et les liquides listés, puis mélangez 2 à 3 minutes jusqu’à cuisson complète.",
+                "5. Incorporez les nouilles ou le riz déjà cuits s’ils sont prévus et servez immédiatement."]
+    return [f"1. Préparez les ingrédients de la liste : lavez et coupez {veg_text}; émincez {onion.lower()} et hachez {garlic.lower()} si présents.",
+            "2. Faites chauffer la matière grasse indiquée dans une poêle ou une casserole adaptée. Faites revenir les aromates 3 à 5 minutes sans les laisser brûler.",
+            f"3. Ajoutez les ingrédients principaux et le liquide ou la sauce prévus. Faites cuire {max(10, cook)} minutes à feu moyen-doux, en remuant et en vérifiant la cuisson.",
+            "4. Incorporez les herbes, les produits laitiers ou les éléments fragiles en fin de cuisson s’ils sont indiqués. Goûtez et rectifiez uniquement avec les assaisonnements de la liste.",
+            f"5. Servez avec {starch.lower()} si cet accompagnement figure dans la fiche, en vérifiant que les ingrédients sont cuits et bien chauds."]
+
+generic_cards_repaired = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I):
+        continue
+    if any(GENERIC_STEP_RE.search(str(step)) for step in r.get("steps", [])):
+        r["steps"] = tailored_steps(r)
+        sync_sections(r)
+        generic_cards_repaired += 1
+print(f"Fiches avec étapes génériques remplacées par des consignes ciblées : {generic_cards_repaired}")
+
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"Recipes={len(recipes)}; exact duplicate ingredient rows removed={removed_duplicate_rows}; explicit cards corrected={17}; numbering cleanup applied.")
 
