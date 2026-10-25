@@ -219,3 +219,25 @@ for r in recipes:
         r["ingredients"] = new
         sync_sections(r)
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+
+# Final safety cleanup for known malformed merged ingredient phrases.
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name",""), re.I): continue
+    fixed = []
+    for item in r.get("ingredients", []):
+        v = str(item)
+        v = re.sub(r"\b200\s*g\s+de\s+citron\b", "1 citron", v, flags=re.I)
+        v = re.sub(r"\b\d+\s*g\s+d['’]ousse\s+d['’]lentilles\s+corail\b", "200 g de lentilles corail", v, flags=re.I)
+        v = re.sub(r"\b\d+\s+gousse\s+d['’]ousse\s+d['’]ail\b", "1 gousse d’ail", v, flags=re.I)
+        v = re.sub(r"\b\d+\s+gousse\s+d['’]\s*(?=\(|$)", "1 gousse d’ail ", v, flags=re.I)
+        v = re.sub(r"\bd['’]ousse\s+d['’]ail\b", "d’ail", v, flags=re.I)
+        v = re.sub(r"\bd['’]ciboulette\b", "de ciboulette", v, flags=re.I)
+        v = re.sub(r"\bde\s+Huile d['’]olive\b", "d’huile d’olive", v, flags=re.I)
+        v = re.sub(r"\bde\s+Oignon poudre\b", "d’oignon en poudre", v, flags=re.I)
+        v = re.sub(r"\bd['’]Ail poudre\b", "d’ail en poudre", v, flags=re.I)
+        v = re.sub(r"\b1\s+râpée de pinces\b", "1 pincée de noix de muscade râpée", v, flags=re.I)
+        fixed.append(re.sub(r"\s+", " ", v).strip())
+    if fixed != r.get("ingredients", []):
+        r["ingredients"] = fixed
+        sync_sections(r)
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
