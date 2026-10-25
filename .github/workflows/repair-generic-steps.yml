@@ -1,0 +1,40 @@
+name: Corriger les étapes génériques des recettes
+on:
+  push:
+    branches:
+      - travail-cuisine-chic-ouf-design
+    paths:
+      - 'scripts/repair-generic-steps.py'
+      - '.github/workflows/repair-generic-steps.yml'
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: travail-cuisine-chic-ouf-design
+          token: \${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Corriger les étapes de recettes ciblées
+        run: python scripts/repair-generic-steps.py
+      - name: Valider le JSON et les sections de préparation
+        run: |
+          python -m json.tool data/carnet.json > /dev/null
+          python - <<'PY'
+          import json
+          d=json.load(open('data/carnet.json',encoding='utf-8'))
+          assert len(d['recipes']) >= 1000
+          print('JSON valide —', len(d['recipes']), 'fiches conservées')
+          PY
+      - name: Enregistrer les corrections dans la branche de test
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/carnet.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Corrige les étapes génériques des fiches recettes"
+          git push origin travail-cuisine-chic-ouf-design
