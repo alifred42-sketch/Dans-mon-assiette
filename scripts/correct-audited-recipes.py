@@ -1762,8 +1762,8 @@ def tailored_steps(r):
           "4. Terminez avec la béchamel, la crème ou le fromage prévu dans la liste, sans ajouter d’ingrédients absents de la recette.",
           "5. Enfournez 25 à 40 minutes selon l’épaisseur. Vérifiez que les légumes sont tendres, le centre bien chaud et le dessus doré; laissez reposer 5 minutes."
         ]
-    if re.search(r"pomme de terre en robe|oeuf cocotte|oeufs brouilles|oeufs au plat|sans poele|micro-ondes|micro ondes|en mug", name):
-        if re.search(r"oeuf cocotte", name):
+    if re.search(r"pomme de terre en robe|(?:oe|œ)uf cocotte|(?:oe|œ)ufs brouilles|(?:oe|œ)ufs au plat|sans poele|micro-ondes|micro ondes|en mug", name):
+        if re.search(r"(?:oe|œ)uf cocotte", name):
             return [
               "1. Déposez le jambon coupé en petits morceaux et la crème prévue dans un mug ou ramequin compatible avec le micro-ondes.",
               "2. Cassez l’œuf dans le récipient et percez délicatement le jaune avec la pointe d’un couteau.",
@@ -1771,7 +1771,7 @@ def tailored_steps(r):
               "4. Laissez reposer 30 secondes. Prolongez par tranches de 10 secondes si nécessaire, en vérifiant la cuisson.",
               "5. Servez aussitôt en faisant attention au récipient très chaud."
             ]
-        if re.search(r"oeufs brouilles", name):
+        if re.search(r"(?:oe|œ)ufs brouilles", name):
             return [
               "1. Battez les œufs avec le lait ou la crème prévus et assaisonnez selon la liste.",
               "2. Versez dans un récipient large compatible avec le micro-ondes, sans le remplir au-delà des deux tiers.",
