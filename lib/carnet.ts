@@ -439,7 +439,23 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   });
   const season = seasonForWeek(week);
   const used = new Set<string>();
-  const eligible = carnet.recipes.filter((recipe) => isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences));
+  const plannedRecipeIds = new Set(carnet.plan.map((slot) => slot.recipeId).filter(Boolean));
+  const eligibleCandidates = carnet.recipes
+    .filter((recipe) => isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences))
+    .sort((a, b) => Number(plannedRecipeIds.has(b.id)) - Number(plannedRecipeIds.has(a.id)) || a.name.localeCompare(b.name, "fr"));
+  // Exact duplicate cards from overlapping PDF imports must not get extra weight in weekly recipe selection.
+  // The full cards remain available in their source collections; only the planning pool is deduplicated.
+  const seenRecipeContent = new Set<string>();
+  const eligible = eligibleCandidates.filter((recipe) => {
+    const contentKey = [
+      normalizedSeasonText(recipe.name),
+      ...(recipe.ingredients || []).map((line) => normalizedSeasonText(line)).sort(),
+      ...(recipe.steps || []).map((step) => normalizedSeasonText(String(step).replace(/^\d+[.)]\s*/, ""))).sort(),
+    ].join("|");
+    if (seenRecipeContent.has(contentKey)) return false;
+    seenRecipeContent.add(contentKey);
+    return true;
+  });
   const plantProfile = Boolean(preferences.isVegan || preferences.vegan || preferences.isVegetarian || preferences.vegetarien);
   const roleText = (recipe: Recipe) => normalizedSeasonText(recipe.name);
   const chooseRole = (pattern: RegExp, exclude: Set<string> = new Set<string>(), quick = false) => {
