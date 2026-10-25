@@ -274,13 +274,18 @@ p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", en
 def recipe_kind(r):
     n = norm(r.get("name", ""))
     if re.search(r"\b(sauce|vinaigrette|marinade|pesto|tartinade|dip|mayonnaise|houmous|hummus|rillettes)\b", n): return "sauce"
+    if re.search(r"\b(puree|purée|ecrase|écrasé|pommes de terre garnies)\b", n): return "mash"
+    if re.search(r"\b(crepe|crêpe|crepes|crêpes|pancake|pancakes|gaufre|gaufres)\b", n): return "pancake"
+    if re.search(r"\b(burger|hamburger)\b", n): return "burger"
+    if re.search(r"\b(paella|riz cantonais|riz sauté|riz saute|riz façon|riz facon)\b", n): return "rice"
+    if re.search(r"\b(overnight oats|porridge|muesli)\b", n): return "cold"
     if re.search(r"\b(salade|wrap|tartine|sandwich|bowl|bruschetta|caprese|crudites)\b", n): return "cold"
     if re.search(r"\b(soupe|veloute|potage|bouillon)\b", n): return "soup"
-    if re.search(r"\b(pizza|quiche|tarte|gratin|lasagne|lasagnes|poivrons farcis|muffin|cake|gateau|crumble|mug cake)\b", n): return "oven"
+    if re.search(r"\b(pizza|quiche|tarte|gratin|lasagne|lasagnes|farci|farcie|farcis|farcies|muffin|cake|gateau|gâteau|crumble|mug cake|flan|banana bread|pommes au four|poires roties|pêches rôties|pêches roties)\b", n): return "oven"
     if re.search(r"\b(risotto)\b", n): return "risotto"
-    if re.search(r"\b(chili|couscous|curry|wok|poelee|poêlée|ragout|tajine|bourguignon)\b", n): return "simmer"
+    if re.search(r"\b(chili|couscous|curry|wok|poelee|poêlée|ragout|ragoût|tajine|bourguignon|ratatouille|dahl|blanquette|paella|paëlla|potée|cantonais|one pot)\b", n): return "simmer"
     if re.search(r"\b(omelette|oeuf|oeufs|œuf|œufs|frittata)\b", n): return "eggs"
-    if re.search(r"\b(cabillaud|colin|saumon|poisson|thon frais|filet de poisson)\b", n): return "fish"
+    if re.search(r"\b(cabillaud|colin|saumon|maquereau|truite|lieu noir|poisson|thon frais|filet de poisson)\b", n): return "fish"
     if re.search(r"\b(compote|tiramisu|dessert|yaourt|skyr|fruits|chocolat|pancake|crepe|crêpe)\b", n): return "dessert"
     if re.search(r"\b(poulet|dinde|boeuf|bœuf|porc|veau|boulettes|steak|merguez|saucisse)\b", n): return "meat"
     if re.search(r"\b(pates|pâtes|macaroni|spaghetti|nouilles|riz saute|riz sauté)\b", n): return "starch"
@@ -361,6 +366,34 @@ def make_steps(r):
           "2. Mélangez les ingrédients dans l’ordre adapté à la recette, en réservant les garnitures pour la finition.",
           "3. Si une cuisson est prévue, faites cuire à la température et pendant la durée indiquées en contrôlant la texture; sinon, répartissez dans les contenants de service.",
           "4. Ajoutez la garniture prévue et laissez refroidir ou réfrigérez si nécessaire avant de servir."
+        ]
+    elif kind == "mash":
+        steps = [
+          "1. Épluchez les pommes de terre et les légumes-racines de la fiche, puis coupez-les en morceaux de taille régulière.",
+          "2. Faites cuire les légumes dans une casserole d’eau bouillante salée ou à la vapeur jusqu’à ce qu’ils soient très tendres.",
+          "3. Égouttez soigneusement, puis écrasez ou mixez selon la texture souhaitée. Ajoutez progressivement le lait, la crème ou la matière grasse seulement s’ils figurent dans la liste.",
+          "4. Assaisonnez avec le sel, le poivre et les aromates prévus; mélangez et servez chaud."
+        ]
+    elif kind == "pancake":
+        steps = [
+          "1. Mélangez les ingrédients secs de la fiche dans un saladier. Dans un autre récipient, battez les œufs avec le lait ou le liquide prévu.",
+          "2. Incorporez les ingrédients liquides aux ingrédients secs en mélangeant juste assez pour obtenir une pâte homogène; laissez reposer si le temps le permet.",
+          "3. Faites chauffer une poêle légèrement graissée. Versez de petites portions de pâte et faites cuire jusqu’à l’apparition de bulles, puis retournez.",
+          "4. Poursuivez la cuisson jusqu’à ce que les deux faces soient dorées et que le centre soit cuit; servez avec les garnitures prévues."
+        ]
+    elif kind == "burger":
+        steps = [
+          "1. Lavez et coupez la salade, les tomates et les autres crudités indiquées; préparez les pains et les sauces prévues.",
+          "2. Formez les steaks si la viande est hachée, assaisonnez et faites-les cuire dans une poêle chaude jusqu’à cuisson à cœur.",
+          "3. Réchauffez les pains quelques instants; ajoutez la sauce, le fromage si prévu, les steaks et les crudités.",
+          "4. Préparez l’accompagnement explicitement listé dans la fiche et servez le burger aussitôt."
+        ]
+    elif kind == "rice":
+        steps = [
+          "1. Rincez le riz si nécessaire et faites-le cuire selon les indications du paquet; pour un riz sauté, privilégiez du riz déjà cuit et refroidi.",
+          "2. Coupez les légumes et les protéines indiqués en petits morceaux. Faites cuire les protéines à part jusqu’à cuisson complète, puis réservez.",
+          "3. Faites revenir les légumes et aromates dans une poêle ou une sauteuse chaude; ajoutez les œufs s’ils figurent dans la liste et faites-les cuire en remuant.",
+          "4. Ajoutez le riz et les protéines, incorporez les condiments prévus et faites sauter quelques minutes en mélangeant régulièrement."
         ]
     elif kind == "starch":
         steps = [
@@ -448,7 +481,7 @@ remaining_templates_fixed = 0
 for r in recipes:
     if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
     old_steps = r.get("steps", [])
-    if old_steps and any(re.search(r"Préparez les ingrédients pour \d+ personnes|Préparez les ingrédients pour 4 personnes|Coupez les ingrédients régulièrement; faites cuire complètement|Faites cuire les ingrédients qui nécessitent une cuisson|condiments indiqués", str(st), re.I) for st in old_steps):
+    if old_steps and any(re.search(r"Préparez les ingrédients pour \d+ personnes|Préparez les ingrédients pour 4 personnes|Coupez les ingrédients régulièrement; faites cuire complètement|Faites cuire les ingrédients qui nécessitent une cuisson|condiments indiqués|Lavez et préparez les ingrédients de la fiche", str(st), re.I) for st in old_steps):
         r["steps"] = make_steps(r)
         remaining_templates_fixed += 1
 
