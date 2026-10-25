@@ -942,3 +942,82 @@ for r in recipes:
     sync_sections(r)
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Derniers liens sauce/marinade retirés des menus; fiches de remplacement synchronisées.")
+
+
+# Clean the remaining seasonal, dessert, beverage and student ingredient rows.
+apply("r-cc1cb0b455", "Pâtes crémeuses aux courgettes et parmesan",
+ ["280 g de pâtes crues (penne ou tagliatelles)","2 courgettes moyennes râpées","4 c. à soupe de crème fraîche légère","40 g de parmesan râpé","1 gousse d’ail hachée","1 c. à soupe d’huile d’olive","5 g de basilic frais","1 pincée de noix de muscade","Sel et poivre"], None, "10 min","12 min",4)
+apply("r-96900930bb", "Taboulé maison revisité",
+ ["150 g de semoule de blé complet crue","3 tomates coupées en petits dés","1/2 concombre coupé en petits dés","30 g de persil frais haché","10 g de menthe fraîche hachée","2 citrons jaunes (jus)","2 c. à soupe d’huile d’olive","Sel et poivre"], None, "15 min","0 min",4)
+apply("r-c2e2da7c3e", "Œufs durs prêts d’avance",
+ ["8 gros œufs","4 glaçons"], None, "2 min","10 min",4)
+apply("r-dc46a25693", "Merguez façon couscous léger",
+ ["4 merguez","160 g de semoule de blé complet crue","300 g de passata de tomate","2 courgettes coupées en gros dés","1 c. à café de mélange d’épices tajine marocain","Sel et poivre"], None, "10 min","15 min",4)
+apply("noel-entree-04", "Tartare de Saint-Jacques aux agrumes",
+ ["300 g de noix de Saint-Jacques très fraîches","1 citron jaune (jus et zestes)","1/2 orange bio (zestes et 1 c. à soupe de jus)","2 c. à soupe d’huile d’olive","1 c. à soupe de ciboulette fraîche ciselée","1 pincée de fleur de sel","1 c. à café de baies roses concassées"], None, "15 min","0 min",4)
+apply("noel-dessert-35", "Cake de Noël moelleux aux épices et agrumes",
+ ["150 g de farine de blé","1 c. à soupe bombée de mélange d’épices de Noël","80 g de sucre roux","2 gros œufs","50 g de beurre fondu","50 ml de lait demi-écrémé","1 orange bio (jus d’une demi-orange et zestes de l’orange entière)","5 g de levure chimique","30 g de fruits secs concassés (amandes et noisettes)"], None, "15 min","40 min",6)
+apply("noel-dessert-41", "Bûche simplissime au chocolat et à l’orange",
+ ["3 œufs","50 g de sucre roux","50 g de farine de blé","1 orange bio (jus d’une demi-orange et zestes de l’orange entière)","80 g de chocolat noir à 70 %","100 g de fromage frais nature","1 c. à soupe de sirop d’agave"], None, "15 min","10 min",4)
+apply("noel-dessert-50", "Mendiants au chocolat et fruits secs",
+ ["120 g de chocolat noir de couverture","12 cerneaux de noix","12 pistaches décortiquées","12 cranberries séchées","20 g d’écorces d’orange confites en petits dés"], None, "15 min","5 min",4)
+apply("halloween-express-19", "Punch sanguin aux mains de glace sans alcool",
+ ["1 litre de jus de cranberry","250 ml de jus d’orange","250 ml de limonade ou d’eau gazeuse","50 ml de sirop de cerise","1 goutte de colorant alimentaire rouge (facultatif)","250 ml d’eau filtrée pour le moule à glace"], None, "15 min","0 min",4)
+apply("halloween-atelier-27", "Citrouilles mandarines",
+ ["8 mandarines ou clémentines","1 branche de céleri pour les tiges"], None, "5 min","0 min",4)
+apply("halloween-atelier-28", "Marshmallows fantômes",
+ ["12 marshmallows blancs","20 g de chocolat noir"], None, "10 min","0 min",4)
+apply("veg-pe-009", "Brochettes de tofu mariné au citron vert et légumes d’été",
+ ["400 g de tofu ferme coupé en cubes","1 courgette coupée en rondelles épaisses","16 tomates cerises","1 oignon rouge coupé en quartiers","2 citrons verts (jus)","1 c. à soupe d’huile d’olive","1/2 c. à café de paprika doux","Sel et poivre"], None, "15 min","10 min",4)
+apply("vegan-pe-002", "Brochettes de tofu mariné au citron vert et légumes d’été",
+ ["400 g de tofu ferme coupé en cubes","1 courgette coupée en rondelles épaisses","16 tomates cerises","1 oignon rouge coupé en quartiers","2 citrons verts (jus)","1 c. à soupe d’huile d’olive","1/2 c. à café de paprika doux","Sel et poivre"], None, "15 min","10 min",4)
+apply("vegan-robot-014", "One Pot Pasta aux tomates cerises et basilic",
+ ["250 g de pâtes (penne ou fusilli)","250 g de tomates cerises coupées en deux","1 oignon","1 gousse d’ail","500 ml d’eau ou de bouillon de légumes","2 c. à soupe d’huile d’olive","1 c. à café d’origan séché","10 g de basilic frais","Sel et poivre"], None, "15 min","25 min",4)
+apply("vegan-robot-021", "Curry de patates douces et lentilles corail",
+ ["400 g de patates douces coupées en cubes","200 g de lentilles corail rincées","400 ml de lait de coco","200 ml d’eau","1 oignon","1 gousse d’ail","2 c. à soupe d’huile d’olive","1 c. à soupe de curry en poudre","1 c. à café de gingembre en poudre","Sel et poivre"], None, "15 min","25 min",4)
+apply("vegan-robot-029", "Crème pâtissière végétale à la vanille",
+ ["500 ml de lait de soja ou d’amande vanillé","45 g de fécule de maïs","60 g de sucre de canne","1 c. à café d’extrait de vanille","1 pincée de curcuma (facultatif)"], None, "10 min","10 min",4)
+apply("vegan-robot-034", "Bolognaise de protéines de soja texturées",
+ ["80 g de protéines de soja texturées sèches","600 g de passata de tomate","1 oignon","1 gousse d’ail","150 ml de bouillon de légumes chaud","2 c. à soupe d’huile d’olive","1 c. à café d’origan séché","1 c. à café de sucre","Sel et poivre"], None, "15 min","25 min",4)
+apply("vegan-robot-048", "Tapioca au lait de coco et vanille",
+ ["40 g de perles de tapioca crues","200 ml de lait de coco","300 ml de lait d’amande","30 g de sucre de canne","1 c. à café d’extrait de vanille"], None, "5 min","15 min",4)
+apply("halloween-potions-031", "Élixir du vampire au cranberry sans alcool",
+ ["300 ml de jus de cranberry","100 ml de jus de pomme","50 ml de sirop de cerise","2 c. à soupe de sucre en poudre pour le givrage","1 goutte de colorant alimentaire rouge (facultatif)"], None, "10 min","0 min",2)
+apply("halloween-potions-032", "Philtre vert de la sorcière sans alcool",
+ ["4 kiwis mûrs","200 ml de jus d’ananas","2 c. à soupe de sirop de menthe","200 ml d’eau gazeuse"], None, "10 min","0 min",4)
+apply("halloween-potions-035", "Shirley Temple de la terreur sans alcool",
+ ["300 ml de ginger ale ou de limonade","1 c. à café de jus de citron","4 cl de sirop de grenadine","Glaçons"], None, "10 min","0 min",2)
+if "halloween-potions-035" in by:
+    by["halloween-potions-035"].setdefault("notes", []).append("Accessoire de présentation facultatif : 2 seringues alimentaires propres, sans aiguille.")
+apply("halloween-potions-036", "Bloody Mary de la veuve noire",
+ ["90 ml de vodka","180 ml de jus de tomate","1 c. à soupe de jus de citron","2 gouttes de Tabasco","1 pincée de sel de céleri","2 olives noires pour la décoration"], None, "10 min","0 min",2)
+apply("halloween-potions-038", "Spritz empoisonné à la mûre",
+ ["120 ml de Prosecco","80 ml d’Apérol ou de Campari","40 ml de crème de mûre","100 ml d’eau gazeuse","100 g de mûres fraîches","2 branches de romarin"], None, "10 min","0 min",2)
+apply("student-zero-cooking-007", "Salade César étudiante rapide",
+ ["100 g de salade verte","1 tranche de blanc de poulet rôti (environ 50 g)","2 c. à soupe de croûtons nature","1 c. à soupe de sauce César","10 g de parmesan râpé","Poivre"], None, "10 min","0 min",1)
+apply("student-systeme-d-001", "Noodles infusées au poulet et petits pois à la bouilloire",
+ ["1 bloc de nouilles instantanées","50 g de dés de blanc de poulet cuit","50 g de petits pois surgelés","1 sachet d’aromates pour nouilles ou 1/2 cube de bouillon","350 ml d’eau bouillante"], None, "5 min","5 min",1)
+apply("student-systeme-d-004", "Croque-monsieur système D au grille-pain",
+ ["2 tranches de pain de mie","1/2 tranche de jambon blanc","1 tranche de fromage fondant","5 g de beurre"], None, "5 min","3 min",1)
+apply("student-systeme-d-019", "Salade de cup-nouilles enrichie au maïs et surimi",
+ ["1 pot de nouilles instantanées en cup","2 c. à soupe de maïs en boîte égoutté","2 bâtonnets de surimi","250 ml d’eau bouillante"], None, "5 min","4 min",1)
+apply("student-systeme-d-038", "Couscous express sucré-salé aux raisins et surimi",
+ ["60 g de semoule de blé moyenne crue","3 bâtonnets de surimi","1 c. à soupe de raisins secs","1 c. à soupe d’huile d’olive","1 pincée de cannelle","100 ml d’eau bouillante","Sel"], None, "10 min","5 min",1)
+
+# Fix portion labels and remove pagination fragments from imported source cards.
+for rid, servings in {
+ "noel-dessert-35":"6 personnes",
+ "noel-dessert-50":"4 personnes (12 mendiants)",
+ "halloween-atelier-27":"4 personnes (8 mandarines)",
+ "halloween-atelier-28":"4 personnes (12 pièces)",
+ "veg-pe-009":"4 personnes (8 brochettes)",
+ "vegan-pe-002":"4 personnes (8 brochettes)",
+ "r-520e2105e0":"1 petit pot",
+}.items():
+    if rid in by: by[rid]["servings"] = servings
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    r["ingredients"] = [str(line).replace("50g", "50 g").replace("60g", "60 g").replace("100g", "100 g").replace("200g", "200 g").replace("350g", "350 g").replace("750ml", "750 ml").replace("20cl", "20 cl").replace("1 c.à.s", "1 c. à soupe") for line in r.get("ingredients", []) if not re.fullmatch(r"\s*\d+\s*/\s*\d+\s*>\s*", str(line))]
+    sync_sections(r)
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Dernières fiches saisonnières, végétariennes, boissons et étudiantes corrigées.")
