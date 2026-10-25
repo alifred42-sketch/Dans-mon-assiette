@@ -634,3 +634,100 @@ for r in recipes:
     sync_sections(r)
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Titres incomplets et fiche pancake corrigés.")
+
+
+# Final source normalization for cookbook-style "ingredient: quantity" lines.
+# This preserves quantities and ingredient names while making each row parseable by the shopping list.
+def clean_ingredient_row(raw):
+    line = str(raw or "").strip()
+    if not line: return line
+    line = line.replace("½", "1/2").replace("¼", "1/4").replace("¾", "3/4").replace("⅓", "1/3").replace("⅔", "2/3")
+    line = re.sub(r"\bc\.\s*à\s*s\.\b", "c. à soupe", line, flags=re.I)
+    line = re.sub(r"\bc\.\s*à\s*c\.\b", "c. à café", line, flags=re.I)
+    line = re.sub(r"\bcuillères?\s+à\s+soupe\b", "c. à soupe", line, flags=re.I)
+    line = re.sub(r"\bcuillères?\s+à\s+café\b", "c. à café", line, flags=re.I)
+    line = re.sub(r"\s+", " ", line).strip()
+    if ":" in line:
+        left, right = [part.strip() for part in line.split(":", 1)]
+        left = re.sub(r"\s*\(recette\s+(?:précédente|\d+)\)\s*", " ", left, flags=re.I)
+        left = re.sub(r"\s+", " ", left).strip()
+        if re.search(r"piques?\s+en\s+bois|cure.?dents?", left, re.I) and re.search(r"service|montage", right, re.I):
+            return ""
+        if re.search(r"^citron(?:\s+jaune|\s+vert)?$", left, re.I):
+            if re.search(r"jus\s+d['’]un\s+demi.?citron|jus\s+d’un\s+demi.?citron", right, re.I): return "1/2 " + left.lower() + " (jus et zestes)"
+            if re.search(r"jus\s+d['’]un\s+gros\s+citron|jus\s+d’un\s+gros\s+citron", right, re.I): return "1 gros " + left.lower() + " (jus et zestes)"
+            if re.search(r"jus\s+d['’]un\s+citron\s+entier|jus\s+d’un\s+citron\s+entier", right, re.I): return "1 " + left.lower() + " (jus et zestes)"
+        if re.search(r"^feuilles?\s+de\s+basilic", left, re.I) and re.search(r"quelques feuilles|pour le décor|pour le service", right, re.I):
+            return "5 g de basilic frais"
+        if re.search(r"^fleur de sel.*poivre", left, re.I) and re.search(r"pincée de chaque", right, re.I):
+            return "1 pincée de fleur de sel et de poivre noir"
+        # A quantity already present at the start of the right side is the most reliable source.
+        m = re.match(r"^(un|une|quelques|\d+(?:[.,]\d+)?(?:\s*/\s*\d+(?:[.,]\d+)?)?)\s*(.*)$", right, re.I)
+        if m:
+            q, rest = m.group(1), m.group(2).strip()
+            q = {"un":"1","une":"1","quelques":"quelques"}.get(q.lower(), q)
+            rest = re.sub(r"\s+", " ", rest)
+            # If the right side contains the actual ingredient, retain its more descriptive wording.
+            if rest and not re.match(r"^(?:c\.\s*à\s*(?:soupe|café)|càs|cac|cs|cc|cuillère|cuillere|g|kg|mg|ml|cl|l|grammes?|pincée|pincee|poignée|poignee|tranche|gousse|filet|branche|feuille|boîte|boite|pot|paquet|rouleau|pièce|piece|verre|tasse|dose|grande boîte|grande boite|petite boîte|petite boite)\b", rest, re.I):
+                # Clean recipe numbers from linked sauce names embedded in ingredient labels.
+                rest = re.sub(r"\s*\(recette\s+\d+\)", "", rest, flags=re.I)
+                return re.sub(r"\s+", " ", q + " " + rest).strip()
+            unit_rest = rest
+            if re.match(r"^(?:c\.\s*à\s*soupe|c\.\s*à\s*café|càs|cac|cs|cc|cuillère|cuillere)", unit_rest, re.I):
+                unit_rest = re.sub(r"^c\.\s*à\s*soupe", "c. à soupe", unit_rest, flags=re.I)
+                unit_rest = re.sub(r"^c\.\s*à\s*café", "c. à café", unit_rest, flags=re.I)
+                return f"{q} {unit_rest} de {left[0].lower()+left[1:]}"
+            if re.match(r"^(?:g|kg|mg|ml|cl|l|grammes?)\b", unit_rest, re.I):
+                return f"{q} {unit_rest} de {left[0].lower()+left[1:]}"
+            if re.match(r"^(?:grande boîte|grande boite|petite boîte|petite boite|boîte|boite|pot|paquet|rouleau|pièce|piece|poignée|poignee|tranche|gousse|filet|branche|feuille|verre|tasse|dose)\b", unit_rest, re.I):
+                detail = re.search(r"\(([^)]*)\)", unit_rest)
+                suffix = f" ({detail.group(1)})" if detail else ""
+                unit = unit_rest.split("(")[0].strip()
+                return f"{q} {unit} de {left}{suffix}"
+            return f"{q} {left}"
+        if re.search(r"^le jus d['’]un (?:demi|gros|grand)?\s*citron", right, re.I):
+            return "1 citron jaune (jus et zestes)"
+        # A non-quantity description is an accessory or a note, not a shopping ingredient.
+        if re.search(r"pour le service|pour le montage", right, re.I) and re.search(r"piques?|cure.?dents?", left, re.I):
+            return ""
+    # Convert common non-numeric quantities to a countable ingredient line.
+    line = re.sub(r"^une pincée\b", "1 pincée", line, flags=re.I)
+    line = re.sub(r"^un filet\b", "1 filet", line, flags=re.I)
+    line = re.sub(r"^quelques feuilles de basilic frais.*$", "5 g de basilic frais", line, flags=re.I)
+    line = re.sub(r"^feuilles de basilic frais\s*:?\s*pour le décor$", "5 g de basilic frais", line, flags=re.I)
+    if re.fullmatch(r"piment d['’]espelette\.?", line, re.I): return "1 pincée de " + line.rstrip(".")
+    if re.fullmatch(r"ail en poudre", line, re.I): return "1/2 c. à café d’ail en poudre"
+    if re.fullmatch(r"menthe et basilic thaï frais", line, re.I): return "10 g de menthe et de basilic thaï frais"
+    if re.fullmatch(r"persil", line, re.I): return "1 c. à soupe de persil frais"
+    if re.fullmatch(r"coriandre", line, re.I): return "1 c. à soupe de coriandre fraîche"
+    if re.fullmatch(r"basilic", line, re.I): return "1 c. à soupe de basilic frais"
+    if re.fullmatch(r"tranches? d['’]orange(s)?", line, re.I): return "1 orange en tranches"
+    if re.fullmatch(r"mûres fraîches", line, re.I): return "100 g de mûres fraîches"
+    if re.fullmatch(r"glaçons", line, re.I): return "4 glaçons"
+    return line
+
+ingredient_rows_normalized = 0
+accessory_rows_removed = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    cleaned = []
+    for raw in r.get("ingredients", []):
+        fixed = clean_ingredient_row(raw)
+        if not fixed:
+            accessory_rows_removed += 1
+            r.setdefault("notes", []).append(str(raw))
+            continue
+        if fixed != raw:
+            ingredient_rows_normalized += 1
+        cleaned.append(fixed)
+    r["ingredients"] = cleaned
+    # Rewrite only steps that the app's strict source-validation gate identifies as generic.
+    steps = r.get("steps", [])
+    if any(re.search(r"préparer les ingrédients\s*:?\s*laver|faire cuire les ingrédients principaux|assembler les ingrédients dans un saladier|cuire les ingrédients dans l’eau ou le bouillon selon les indications|faire cuire les ingrédients dans une poêle ou une casserole chaude|rectifier l’assaisonnement si nécessaire|goûtez et rectifiez|jusqu’à cuisson à cœur|selon votre goût|selon disponibilité", str(st), re.I) for st in steps):
+        r["steps"] = make_steps(r)
+    else:
+        r["steps"] = [re.sub(r"jusqu’à cuisson à cœur", "jusqu’à ce que le centre soit bien cuit", re.sub(r"selon votre goût", "en ajustant progressivement le sel et le poivre", re.sub(r"goûtez et rectifiez l’assaisonnement si nécessaire", "goûtez, puis ajustez le sel et le poivre si nécessaire", str(st), flags=re.I), flags=re.I), flags=re.I) for st in steps]
+    sync_sections(r)
+
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print(f"ingredient_rows_normalized={ingredient_rows_normalized}; non_food_accessories_removed={accessory_rows_removed}")
