@@ -510,7 +510,7 @@ print(f"remaining_template_families_replaced={remaining_templates_fixed}")
 plan_links_repaired = 0
 plan_numbers_removed = 0
 known_ids = {r.get("id") for r in recipes}
-for slot in d.get("plan", {}).values():
+for slot in (d.get("plan", {}).values() if isinstance(d.get("plan", {}), dict) else d.get("plan", [])):
     rid = slot.get("recipeId")
     if rid and rid.startswith("etudiant-zero-cuisson-"):
         candidate = rid.replace("etudiant-zero-cuisson-", "student-zero-cooking-", 1)
