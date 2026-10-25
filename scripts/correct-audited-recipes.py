@@ -1716,7 +1716,14 @@ GENERIC_STEP_RE = re.compile(
     r"Goûtez, rectifiez l’assaisonnement|mélangez la base indiquée dans la liste|Préparez tous les ingrédients listés|"
     r"Commencez par cuire les ingrédients demandant le plus de temps|Ajoutez les autres ingrédients et les liquides prévus|"
     r"Préparez les ingrédients de la fiche|Faites chauffer l’huile indiquée dans une poêle ou une casserole adaptée|"
-    r"Incorporez les liquides, épices et autres ingrédients de la fiche", re.I
+    r"Incorporez les liquides, épices et autres ingrédients de la fiche|"
+    r"Coupez les légumes et aromates listés|Détaillez la viande en morceaux réguliers si nécessaire|"
+    r"Faites dorer la viande dans la matière grasse indiquée|Ajoutez les légumes, épices, tomates ou liquide figurant dans la liste|"
+    r"Vérifiez la cuisson, goûtez et rectifiez l’assaisonnement avec les ingrédients prévus|"
+    r"Servez avec l’accompagnement mentionné dans la recette|"
+    r"Préparez le poisson ou les fruits de mer et les accompagnements listés|"
+    r"Faites cuire d’abord les légumes ou féculents prévus|"
+    r"Ingrédients à préparer pour cette recette", re.I
 )
 def tailored_steps(r):
     name = norm(r.get("name", ""))
