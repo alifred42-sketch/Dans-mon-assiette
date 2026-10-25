@@ -1,4 +1,5 @@
 # Déclencheur de correction automatique des fiches depuis la branche de test.
+# Déclenchement de contrôle : correction et validation des étapes génériques sur la branche de test.
 # Execution pilotée depuis GitHub Actions sur la branche de test.
 #!/usr/bin/env python3
 """Quality corrections for recipe cards; intentionally leaves Opération Vide-Frigo contents untouched."""
