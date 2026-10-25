@@ -273,14 +273,15 @@ p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", en
 # steps grounded in each card's own title, ingredients and declared cooking times.
 def recipe_kind(r):
     n = norm(r.get("name", ""))
-    if re.search(r"\b(sauce|vinaigrette|marinade|pesto|tartinade|dip|mayonnaise|houmous|hummus|rillettes|coulis|bechamel|tzatziki)\b", n): return "sauce"
+    if re.search(r"\b(sauce|vinaigrette|marinade|pesto|tartinade|dip|mayonnaise|houmous|hummus|rillettes|coulis|bechamel|tzatziki|caviar)\b", n): return "sauce"
+    if re.search(r"\b(mug pasta|mac and cheese|mug quesadilla|pomme de terre en robe|micro.?ondes|riz pilaf minute)\b", n): return "microwave"
     if re.search(r"\b(puree|purée|ecrase|écrasé|pommes de terre garnies)\b", n): return "mash"
     if re.search(r"\b(crepe|crêpe|crepes|crêpes|pancake|pancakes|gaufre|gaufres)\b", n): return "pancake"
     if re.search(r"\b(burger|hamburger)\b", n): return "burger"
     if re.search(r"\b(paella|riz cantonais|riz sauté|riz saute|riz façon|riz facon)\b", n): return "rice"
     if re.search(r"\b(overnight oats|porridge|muesli)\b", n): return "cold"
-    if re.search(r"\b(salade|wrap|tartine|sandwich|bowl|bruschetta|caprese|crudites)\b", n): return "cold"
-    if re.search(r"\b(soupe|veloute|potage|bouillon|gaspacho|gazpacho)\b", n): return "soup"
+    if re.search(r"\b(salade\w*|wrap\w*|tartine\w*|sandwich\w*|bowl|bruschetta|caprese|crudite\w*|taco\w*)\b", n): return "cold"
+    if re.search(r"\b(soupe\w*|veloute\w*|potage\w*|bouillon|gaspacho|gazpacho|minestrone)\b", n): return "soup"
     if re.search(r"\b(pizza|quiche|tarte|gratin|lasagne|lasagnes|farci|farcie|farcis|farcies|moussaka|muffin|cake|gateau|crumble|mug cake|flan|banana bread|pommes au four|poires roties|peches roties)\b", n): return "oven"
     if re.search(r"\b(risotto)\b", n): return "risotto"
     if re.search(r"\b(chili|couscous|curry|wok|poelee|ragout|tajine|bourguignon|ratatouille|dahl|blanquette|paella|potee|cantonais|one pot|saucisses)\b", n): return "simmer"
@@ -366,6 +367,13 @@ def make_steps(r):
           "2. Mélangez les ingrédients dans l’ordre adapté à la recette, en réservant les garnitures pour la finition.",
           "3. Si une cuisson est prévue, faites cuire à la température et pendant la durée indiquées en contrôlant la texture; sinon, répartissez dans les contenants de service.",
           "4. Ajoutez la garniture prévue et laissez refroidir ou réfrigérez si nécessaire avant de servir."
+        ]
+    elif kind == "microwave":
+        steps = [
+          "1. Utilisez un bol ou un plat explicitement compatible micro-ondes, sans aucune pièce métallique. Préparez les ingrédients de la fiche.",
+          "2. Pour les pâtes ou le riz, ajoutez la quantité d’eau indiquée et chauffez par séquences courtes en remuant à mi-cuisson; pour une pomme de terre, piquez la peau et cuisez jusqu’à ce qu’elle soit tendre.",
+          "3. Incorporez le lait, le fromage, la garniture ou les assaisonnements prévus, puis réchauffez par courtes séquences jusqu’à ce que le plat soit bien chaud et les aliments cuits.",
+          "4. Laissez reposer une minute, remuez et vérifiez la cuisson avant de manger; attention à la vapeur et au récipient chaud."
         ]
     elif kind == "mash":
         steps = [
@@ -527,3 +535,36 @@ for slot in (d.get("plan", {}).values() if isinstance(d.get("plan", {}), dict) e
 
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"plan_links_repaired={plan_links_repaired}; weekly_recipe_numbers_removed={plan_numbers_removed}")
+
+
+# Final content repairs for remaining malformed or non-specific recipe cards.
+apply("r-ea7fd76f2e", "Wraps façon tartiflette légère",
+ ["4 tortillas complètes","2 pommes de terre moyennes déjà cuites","400 g de jambon blanc","2 oignons","100 g de salade verte","120 g de reblochon ou fromage de montagne","150 g de fromage blanc nature","1 gousse d’ail","1 c. à soupe de ciboulette ciselée","1 c. à café de paprika fumé","1 pincée de noix de muscade","Sel et poivre"],
+ ["1. Émincez les oignons et faites-les revenir 8 à 10 minutes dans une poêle avec un filet d’huile jusqu’à ce qu’ils soient fondants.","2. Coupez les pommes de terre cuites, le jambon et le reblochon en morceaux; ajoutez-les aux oignons et réchauffez doucement jusqu’à ce que le fromage commence à fondre.","3. Mélangez le fromage blanc avec l’ail haché, la ciboulette, le paprika, la muscade, le sel et le poivre.","4. Répartissez la garniture chaude sur les tortillas, ajoutez la sauce au fromage blanc et un peu de salade, puis repliez les wraps et servez."], "15 min","10 min",4)
+apply("r-421c0d31ea", "Velouté de courgettes au St Môret",
+ ["800 g de courgettes","1 oignon","1 pomme de terre moyenne","750 ml de bouillon de légumes","100 g de St Môret ou fromage frais nature","1 c. à soupe d’huile d’olive","Sel et poivre"],
+ ["1. Lavez les courgettes, épluchez la pomme de terre et coupez les légumes en morceaux; émincez l’oignon.","2. Faites revenir l’oignon dans l’huile 3 minutes. Ajoutez les courgettes, la pomme de terre et le bouillon.","3. Faites cuire à couvert 20 à 25 minutes, jusqu’à ce que les légumes soient tendres.","4. Ajoutez le St Môret, mixez jusqu’à obtenir un velouté lisse et rectifiez l’assaisonnement."], "10 min","25 min",4)
+apply("r-f8241b6268", "Légumes grillés façon méditerranéenne",
+ ["1 courgette","2 tomates","2 poivrons","2 oignons","1 gousse d’ail","1 c. à soupe d’huile d’olive","1 c. à café de thym","5 g de basilic frais","1 c. à café de paprika doux","Sel et poivre"],
+ ["1. Préchauffez le four à 200 °C. Lavez les légumes et coupez la courgette, les tomates et les poivrons en morceaux; émincez les oignons et l’ail.","2. Mélangez les légumes avec l’huile, le thym, le paprika, le sel et le poivre.","3. Étalez sur une plaque en une seule couche et enfournez 25 à 35 minutes, en remuant à mi-cuisson.","4. Vérifiez que les légumes sont tendres et dorés, puis parsemez de basilic frais avant de servir."], "15 min","30 min",4)
+apply("r-f7ad8158b6", "Tacos maison au poulet mariné et légumes",
+ ["4 tortillas de blé","400 g de poulet mariné","2 poivrons","2 oignons","150 g de salade verte","2 tomates","100 g de fromage blanc nature","20 g de fromage râpé","1 gousse d’ail","1 c. à café de paprika fumé","1 c. à café de paprika doux","1/2 c. à café de cumin","1 citron","1 c. à soupe d’huile d’olive","Sel et poivre"],
+ ["1. Émincez les oignons et coupez les poivrons en lanières; coupez les tomates et la salade pour la garniture.","2. Faites chauffer l’huile dans une poêle et faites cuire le poulet mariné jusqu’à cuisson complète. Réservez au chaud.","3. Faites revenir les oignons et les poivrons dans la même poêle; ajoutez le paprika, le cumin, l’ail et un filet de jus de citron.","4. Mélangez le fromage blanc avec un peu de jus de citron, du sel et du poivre. Garnissez les tortillas avec le poulet, les légumes, les tomates, la salade, la sauce et le fromage râpé."], "15 min","20 min",4)
+apply("r-ea3ecc28a3", "Tartines de thon, crudités et fromage blanc",
+ ["4 tranches de pain complet","200 g de thon au naturel égoutté","100 g de fromage blanc nature","1/2 concombre","2 tomates","1/2 citron","1/2 c. à café de paprika doux","50 g de salade verte","1 avocat mûr (facultatif)","Sel et poivre"],
+ ["1. Égouttez le thon et mélangez-le avec le fromage blanc, le jus de citron, le paprika, le sel et le poivre.","2. Lavez et coupez le concombre et les tomates en petits dés; lavez et essorez la salade.","3. Faites griller légèrement le pain, puis répartissez la préparation au thon sur les tranches.","4. Ajoutez les crudités, la salade et l’avocat en tranches si vous en utilisez; servez immédiatement."], "12 min","3 min",4)
+apply("r-93a95052bc", "Wraps Buffalo au poulet et crudités",
+ ["4 tortillas complètes","600 g de blanc de poulet","150 g de salade verte","2 tomates","1 concombre","150 g de fromage blanc nature","1 c. à soupe de sauce pimentée douce","1/2 citron","1/2 c. à café d’ail en poudre","1 c. à café de paprika fumé","1/2 c. à café de piment doux","1 c. à soupe d’huile d’olive","Sel et poivre"],
+ ["1. Coupez le poulet en lanières. Mélangez-le avec l’huile, l’ail, le paprika fumé, le piment doux, le sel et le poivre.","2. Faites cuire le poulet dans une poêle chaude 8 à 12 minutes selon l’épaisseur, jusqu’à cuisson complète.","3. Mélangez le fromage blanc avec la sauce pimentée et le jus de citron. Lavez et coupez la salade, les tomates et le concombre.","4. Répartissez le poulet et les crudités sur les tortillas, ajoutez la sauce et repliez les wraps."], "15 min","15 min",4)
+apply("test-burger-s2", "Burgers maison façon bistrot",
+ ["2 pains à burger","2 steaks hachés de bœuf","2 tranches de fromage","50 g de salade verte","1 tomate","4 cornichons","2 c. à soupe de sauce burger","Sel et poivre"],
+ ["1. Lavez et essorez la salade; coupez la tomate en rondelles et les cornichons en tranches.","2. Assaisonnez les steaks et faites-les cuire dans une poêle chaude jusqu’au degré de cuisson souhaité, en respectant une cuisson à cœur pour une viande hachée bien cuite.","3. Réchauffez légèrement les pains et ajoutez la sauce burger, le fromage, les steaks, la tomate, la salade et les cornichons.","4. Refermez les burgers et servez immédiatement avec l’accompagnement choisi."], "10 min","15 min",2)
+apply("veg-robot-008", "Gnocchis poêlés à la crème d’avocat",
+ ["500 g de gnocchis","2 avocats mûrs","100 g d’épinards frais","1/2 citron","1 c. à soupe d’huile d’olive","Sel et poivre"],
+ ["1. Faites cuire les gnocchis selon les indications du paquet, puis égouttez-les.","2. Mixez la chair des avocats avec le jus de citron, l’huile, le sel et le poivre jusqu’à obtenir une crème lisse.","3. Faites tomber les épinards dans une poêle chaude pendant 1 à 2 minutes.","4. Ajoutez les gnocchis et la crème d’avocat, mélangez à feu doux juste le temps de réchauffer sans faire bouillir, puis servez."], "15 min","15 min",4)
+for rid in ["cco-slot-20-samedi-midi","cco-slot-35-lundi-midi","cco-slot-35-mardi-midi","cco-slot-35-mercredi-midi"]:
+    apply(rid, "Assiette complète de saison au poulet, riz et feta",
+      ["200 g de salade verte ou jeunes pousses","250 g de tomates","1 concombre","250 g de poulet déjà cuit","150 g de riz déjà cuit","100 g de feta","2 c. à soupe d’huile d’olive","1 c. à soupe de jus de citron","Sel et poivre"],
+      ["1. Lavez et essorez la salade; coupez les tomates et le concombre en morceaux.","2. Coupez le poulet cuit en lamelles et émiettez la feta.","3. Répartissez la salade, les tomates, le concombre, le riz et le poulet dans les assiettes.","4. Mélangez l’huile d’olive, le jus de citron, le sel et le poivre; assaisonnez juste avant de servir et ajoutez la feta."], "15 min","0 min",4)
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Manual recipe-card repairs applied; weekly meal assignments preserved.")
