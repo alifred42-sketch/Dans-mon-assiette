@@ -5,6 +5,7 @@ on:
     branches: [travail-cuisine-chic-ouf-design]
     paths:
       - 'scripts/correct-audited-recipes.py'
+      - 'scripts/finish-generic-steps.py'
       - '.github/workflows/recipe-corrections.yml'
   workflow_dispatch:
 
@@ -28,10 +29,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Vérifier la syntaxe du correcteur
-        run: python -m py_compile scripts/correct-audited-recipes.py
-      - name: Exécuter les corrections des fiches
-        run: python scripts/correct-audited-recipes.py
+      - name: Vérifier la syntaxe du correcteur final
+        run: python -m py_compile scripts/finish-generic-steps.py
+      - name: Corriger les étapes génériques restantes
+        run: python scripts/finish-generic-steps.py
       - name: Contrôler le JSON et les fiches après correction
         run: |
           python - <<'PY'
