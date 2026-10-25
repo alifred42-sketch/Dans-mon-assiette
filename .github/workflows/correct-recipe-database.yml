@@ -1,0 +1,61 @@
+name: Correct recipe database
+on:
+  push:
+    branches:
+      - travail-cuisine-chic-ouf-design
+    paths:
+      - scripts/correct-audited-recipes.py
+      - .github/workflows/correct-recipe-database.yml
+  workflow_dispatch:
+    branches:
+      - travail-cuisine-chic-ouf-design
+permissions:
+  contents: write
+jobs:
+  correct-recipes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout test branch
+        uses: actions/checkout@v4
+        with:
+          ref: travail-cuisine-chic-ouf-design
+          persist-credentials: true
+      - name: Validate source data
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open("data/carnet.json", encoding="utf-8"))
+          print("Recipes before:", len(d.get("recipes", [])))
+          print("Weekly slots:", sum(len(w.get("days", [])) for w in d.get("weeks", []) if isinstance(w, dict)))
+          PY
+      - name: Apply audited corrections
+        run: python scripts/correct-audited-recipes.py
+      - name: Validate corrected JSON and protected cards
+        run: |
+          python - <<'PY'
+          import json, re, subprocess
+          d=json.load(open("data/carnet.json", encoding="utf-8"))
+          assert d.get("recipes"), "No recipes found"
+          print("Recipes after:", len(d["recipes"]))
+          bad=[]
+          for r in d["recipes"]:
+            if not re.search(r"vide.?frigo", r.get("name", ""), re.I):
+              if not isinstance(r.get("ingredients"), list) or not r["ingredients"]:
+                bad.append((r.get("id"),r.get("name"),"ingredients missing"))
+              if not isinstance(r.get("steps"), list) or not r["steps"]:
+                bad.append((r.get("id"),r.get("name"),"steps missing"))
+          print("Cards with missing ingredients/steps:", len(bad))
+          for x in bad[:40]: print("REVIEW", *x)
+          if bad: raise SystemExit("Validation failed: incomplete recipe cards remain")
+          PY
+      - name: Commit corrected database
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/carnet.json
+          if git diff --cached --quiet; then
+            echo "No recipe data changes to commit."
+          else
+            git commit -m "Corrige les fiches recettes et étapes génériques"
+            git push origin travail-cuisine-chic-ouf-design
+          fi
