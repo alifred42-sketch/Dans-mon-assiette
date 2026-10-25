@@ -1930,6 +1930,210 @@ for r in recipes:
         generic_cards_repaired += 1
 print(f"Fiches avec étapes génériques remplacées par des consignes ciblées : {generic_cards_repaired}")
 
+
+# Dernière reprise manuelle des 38 fiches restantes signalées par l'audit des étapes.
+final_step_ids = {
+ "r-40af79300d","r-3a1d6f68c6","r-201811f784","r-5061ddc84e","r-904e0943b1",
+ "r-44d263ba31","r-b512566901","r-bd28f91212","r-c6e74462e7","r-34ef9f1b64",
+ "r-185194203e","r-4b8db26421","r-33b3fe63c3","r-1ba8280664","r-d4a2a550ce",
+ "vegan-pe-032","veg-robot-007","vegan-express-009","vegan-robot-003","vegan-robot-005",
+ "vegan-robot-018","vegan-robot-020","vegan-robot-027","vegan-robot-031","vegan-robot-032",
+ "vegan-robot-038","vegan-robot-043","vegan-robot-050","student-microwave-001",
+ "student-microwave-004","student-microwave-019","student-microwave-027","student-microwave-032",
+ "student-microwave-033","student-microwave-038","student-microwave-039","student-microwave-041",
+ "student-microwave-046"
+}
+final_step_count = 0
+for r in recipes:
+    rid = r.get("id")
+    if rid not in final_step_ids or re.search(r"vide.?frigo", r.get("name", ""), re.I):
+        continue
+    name = norm(r.get("name", ""))
+    if re.search(r"gratin|lasagne", name):
+        if "dauphinois" in name or "façon dauphinois" in name:
+            steps = [
+              "1. Préchauffez le four à 180 °C. Épluchez les pommes de terre et coupez-les en rondelles fines et régulières.",
+              "2. Beurrez le plat si le beurre figure dans la liste. Disposez les rondelles en couches régulières, en salant et poivrant selon les ingrédients prévus.",
+              "3. Mélangez la crème et le lait indiqués puis versez-les sur les pommes de terre; le liquide doit presque atteindre le haut des rondelles.",
+              "4. Enfournez 50 à 60 minutes, jusqu’à ce que les pommes de terre soient tendres au centre et le dessus doré. Couvrez d’aluminium si la surface colore trop vite.",
+              "5. Laissez reposer 5 à 10 minutes pour que le gratin se tienne, puis servez chaud."
+            ]
+        elif "gnocchi" in name:
+            steps = [
+              "1. Préchauffez le four à 200 °C. Faites cuire les gnocchis selon le paquet, puis égouttez-les soigneusement.",
+              "2. Coupez le jambon en dés et mélangez-le aux gnocchis avec la sauce ou la crème indiquée.",
+              "3. Versez dans un plat à gratin et répartissez le fromage prévu sur le dessus.",
+              "4. Enfournez 15 à 20 minutes, jusqu’à ce que le centre soit chaud et le fromage doré.",
+              "5. Laissez reposer 3 minutes avant de servir."
+            ]
+        else:
+            steps = [
+              "1. Préchauffez le four à 180 °C. Lavez les légumes mentionnés dans la liste et coupez-les en tranches fines ou en petits dés réguliers.",
+              "2. Faites revenir l’oignon et les légumes qui rendent beaucoup d’eau dans l’huile prévue pendant 5 à 8 minutes. Faites cuire complètement à part toute viande crue avant de l’ajouter.",
+              "3. Pour les lasagnes, alternez les plaques, la garniture et la sauce dans le plat. Pour les gratins, répartissez les légumes et la garniture en couches régulières.",
+              "4. Ajoutez uniquement la béchamel, la crème, la ricotta, le jambon ou le fromage mentionnés dans les ingrédients, puis répartissez le fromage sur le dessus s’il est prévu.",
+              "5. Enfournez 25 à 40 minutes selon l’épaisseur, jusqu’à ce que les légumes soient tendres, le centre bien chaud et la surface dorée. Laissez reposer 5 minutes."
+            ]
+    elif re.search(r"dahl|chili|curry de pois chiches|quinoa aux haricots", name):
+        steps = [
+          "1. Rincez les lentilles sèches si la recette en contient. Égouttez et rincez les légumineuses en conserve. Coupez les légumes de la liste en dés et émincez l’oignon; ne hachez pas les lentilles.",
+          "2. Faites chauffer l’huile prévue dans une casserole. Faites revenir l’oignon 3 à 4 minutes, ajoutez l’ail et les épices listées et remuez 30 secondes.",
+          "3. Ajoutez les légumes, les tomates, les légumineuses et le bouillon ou l’eau prévus. Mélangez et portez à frémissement.",
+          "4. Couvrez et laissez mijoter 15 à 30 minutes selon les lentilles ou légumineuses utilisées, en remuant régulièrement. Ajoutez un peu d’eau si le mélange épaissit trop et vérifiez que tout est tendre.",
+          "5. Ajoutez le lait de coco ou les herbes en fin de cuisson seulement s’ils figurent dans la liste. Goûtez et servez avec l’accompagnement précisé dans la fiche."
+        ]
+    elif "bourguignon" in name:
+        steps = [
+          "1. Coupez le bœuf en cubes réguliers. Épluchez les carottes, émincez l’oignon et préparez les champignons indiqués.",
+          "2. Faites dorer la viande dans la cocotte avec l’huile prévue, en plusieurs fois, puis réservez-la. Faites revenir l’oignon et les carottes 4 minutes.",
+          "3. Remettez la viande dans la cocotte, ajoutez la farine si elle est listée, puis versez le vin et/ou le bouillon indiqués. Ajoutez les aromates prévus.",
+          "4. Couvrez et laissez mijoter à feu très doux environ 2 heures, jusqu’à ce que la viande soit tendre. Ajoutez les champignons dans les 20 dernières minutes s’ils sont prévus.",
+          "5. Vérifiez la tendreté de la viande, goûtez et ajustez l’assaisonnement avec les ingrédients listés. Servez chaud."
+        ]
+    elif "assiette assemblee" in name:
+        steps = [
+          "1. Réchauffez le bœuf mijoté déjà cuit dans une casserole à feu doux avec une cuillère de son jus ou un peu d’eau si nécessaire.",
+          "2. Réchauffez séparément les pommes de terre vapeur et les légumes déjà cuits jusqu’à ce qu’ils soient bien chauds.",
+          "3. Coupez les légumes en morceaux adaptés à la dégustation et vérifiez qu’il ne reste pas de gros morceaux froids au centre.",
+          "4. Répartissez le bœuf, les pommes de terre et les légumes dans les assiettes en gardant chaque élément distinct.",
+          "5. Nappez avec un peu de jus de cuisson prévu, goûtez et servez immédiatement."
+        ]
+    elif "pate a pizza" in name:
+        steps = [
+          "1. Mélangez la farine, la levure boulangère et le sel prévus. Ajoutez l’eau tiède et l’huile indiquées et mélangez jusqu’à former une pâte.",
+          "2. Pétrissez 8 à 10 minutes jusqu’à ce que la pâte soit souple et élastique, puis formez une boule.",
+          "3. Couvrez et laissez lever dans un endroit tiède jusqu’à ce que la pâte double de volume, environ 1 heure.",
+          "4. Dégazez, étalez la pâte sur une plaque farinée et garnissez avec la sauce tomate, le fromage et les autres garnitures présents dans la liste.",
+          "5. Faites cuire au four préchauffé à 230 °C pendant 10 à 15 minutes, jusqu’à ce que la pâte soit dorée et cuite dessous."
+        ]
+    elif "ceviche" in name:
+        steps = [
+          "1. Égouttez les cœurs de palmier et coupez-les en petits dés. Lavez les poivrons et coupez-les en dés; émincez l’oignon rouge.",
+          "2. Pressez le citron vert prévu et mélangez son jus avec l’huile, le sel, le poivre et les herbes présents dans la liste.",
+          "3. Ajoutez les cœurs de palmier, les poivrons et l’oignon puis mélangez délicatement pour enrober les légumes.",
+          "4. Couvrez et laissez mariner au réfrigérateur 15 à 20 minutes pour développer les saveurs.",
+          "5. Mélangez une dernière fois et servez frais; cette recette ne nécessite pas de cuisson."
+        ]
+    elif "roules de courgette" in name:
+        steps = [
+          "1. Lavez les courgettes et taillez-les en longues lamelles fines avec un économe ou une mandoline.",
+          "2. Faites griller les lamelles dans une poêle chaude légèrement huilée 1 à 2 minutes par face, juste pour les assouplir. Laissez refroidir.",
+          "3. Mélangez le fromage à tartiner végétal avec l’ail et les fines herbes prévus dans la liste.",
+          "4. Étalez une fine couche de garniture sur chaque lamelle puis roulez sans trop serrer.",
+          "5. Réservez au frais 15 minutes et servez froid."
+        ]
+    elif re.search(r"creme de panais|creme de courgettes|creme de brocoli|bouillon clarifie", name):
+        steps = [
+          "1. Lavez et coupez les légumes indiqués en morceaux réguliers. Émincez l’oignon et préparez l’ail ou les herbes mentionnés.",
+          "2. Faites revenir l’oignon dans l’huile prévue 3 à 4 minutes sans coloration. Pour un robot cuiseur, utilisez le mode de rissolage adapté.",
+          "3. Ajoutez les légumes et le bouillon prévu. Faites cuire à couvert 15 à 25 minutes, jusqu’à ce que les légumes soient très tendres; pour le bouillon clarifié, laissez frémir doucement sans mixer.",
+          "4. Mixez les légumes cuits pour une crème lisse, puis incorporez le lait végétal, la noisette ou la menthe uniquement s’ils figurent dans la liste. Ne mixez pas le bouillon clarifié.",
+          "5. Goûtez, ajustez avec les assaisonnements prévus et servez chaud."
+        ]
+    elif "riz au lait" in name:
+        steps = [
+          "1. Versez le riz et le lait végétal indiqué dans une casserole à fond épais.",
+          "2. Portez doucement à frémissement en remuant, puis baissez le feu au minimum.",
+          "3. Faites cuire 25 à 35 minutes en remuant très régulièrement, jusqu’à ce que le riz soit tendre et la préparation crémeuse.",
+          "4. Ajoutez la vanille, la fleur d’oranger ou le sucre uniquement s’ils figurent dans la liste, puis laissez tiédir.",
+          "5. Pelez et coupez la mangue si elle est prévue, ou parfumez avec la fleur d’oranger mentionnée; servez tiède ou froid."
+        ]
+    elif "quinoa aux legumes" in name:
+        steps = [
+          "1. Rincez le quinoa sous l’eau froide dans une passoire fine. Coupez les poivrons et la courgette en petits dés et émincez l’oignon.",
+          "2. Faites revenir l’oignon dans l’huile prévue 3 minutes, puis ajoutez les dés de poivron et de courgette et faites sauter 5 à 7 minutes.",
+          "3. Ajoutez le quinoa rincé et le bouillon ou l’eau indiqués. Couvrez et laissez cuire selon le paquet, généralement 12 à 15 minutes, jusqu’à absorption du liquide.",
+          "4. Laissez reposer 5 minutes hors du feu puis aérez le quinoa à la fourchette. Ajoutez les herbes ou le citron prévus.",
+          "5. Vérifiez que le quinoa est tendre et servez chaud."
+        ]
+    elif "oeuf cocotte" in name:
+        steps = [
+          "1. Déposez le jambon coupé en petits morceaux et la crème prévue dans un mug ou ramequin compatible avec le micro-ondes.",
+          "2. Cassez l’œuf dans le récipient et percez délicatement le jaune avec la pointe d’un couteau.",
+          "3. Couvrez sans fermer hermétiquement et faites cuire à puissance moyenne par tranches de 20 secondes, jusqu’à ce que le blanc soit pris.",
+          "4. Laissez reposer 30 secondes. Prolongez par tranches de 10 secondes si nécessaire en vérifiant la cuisson.",
+          "5. Servez aussitôt en faisant attention au récipient très chaud."
+        ]
+    elif "oeufs brouilles" in name:
+        steps = [
+          "1. Battez les œufs avec le lait ou la crème prévus et assaisonnez selon la liste.",
+          "2. Versez dans un récipient large compatible avec le micro-ondes, sans le remplir au-delà des deux tiers.",
+          "3. Faites chauffer 20 à 30 secondes à puissance moyenne, puis remuez soigneusement.",
+          "4. Répétez par tranches de 15 à 20 secondes en remuant entre chaque, jusqu’à ce que les œufs soient pris mais encore moelleux.",
+          "5. Laissez reposer 30 secondes et servez immédiatement."
+        ]
+    elif "oeufs au plat" in name:
+        steps = [
+          "1. Graissez légèrement une assiette creuse ou un récipient large compatible avec le micro-ondes.",
+          "2. Cassez les œufs dans le récipient et percez délicatement les jaunes avec la pointe d’un couteau.",
+          "3. Couvrez sans fermer hermétiquement et faites cuire à puissance moyenne par tranches de 20 secondes.",
+          "4. Arrêtez lorsque les blancs sont pris et que les jaunes ont atteint la cuisson souhaitée; laissez reposer 30 secondes.",
+          "5. Salez et poivrez uniquement si prévus, puis servez aussitôt en faisant attention au récipient chaud."
+        ]
+    elif "bouillon express tortellinis" in name:
+        steps = [
+          "1. Placez les tortellinis, les épinards et le cube de bouillon prévu dans un grand bol compatible avec le micro-ondes.",
+          "2. Ajoutez l’eau indiquée et mélangez pour dissoudre le bouillon.",
+          "3. Couvrez sans fermer hermétiquement et faites chauffer 3 minutes à puissance élevée.",
+          "4. Remuez et poursuivez par tranches d’une minute jusqu’à ce que les tortellinis soient tendres et chauds à cœur.",
+          "5. Laissez reposer 1 minute, ajoutez les herbes ou le fromage prévus et servez chaud."
+        ]
+    elif "chili de boeuf minute" in name:
+        steps = [
+          "1. Égouttez les haricots rouges et mesurez le coulis de tomate et les épices prévus.",
+          "2. Dans un bol profond compatible avec le micro-ondes, mélangez le bœuf haché, le coulis, les haricots et les épices.",
+          "3. Couvrez sans fermer hermétiquement et faites cuire 2 minutes à puissance élevée, puis mélangez soigneusement pour séparer les morceaux de viande.",
+          "4. Remettez à cuire par tranches d’une minute, en mélangeant entre chaque, jusqu’à ce que la viande soit cuite à cœur et le plat bien chaud.",
+          "5. Laissez reposer 1 minute et servez chaud."
+        ]
+    elif "mijote de saucisses" in name:
+        steps = [
+          "1. Rincez et égouttez les lentilles si elles sont en conserve; émincez l’oignon et préparez les saucisses et le bouillon indiqués.",
+          "2. Faites dorer les saucisses dans la casserole avec l’huile prévue, puis réservez-les.",
+          "3. Faites revenir l’oignon 3 minutes, ajoutez les lentilles, le coulis de tomate ou la moutarde listés et versez le bouillon prévu.",
+          "4. Remettez les saucisses et laissez mijoter à feu doux jusqu’à ce que les lentilles soient tendres et les saucisses cuites, environ 20 à 30 minutes selon les lentilles.",
+          "5. Goûtez et servez chaud en vérifiant que les saucisses sont bien cuites à cœur."
+        ]
+    elif "pain de boeuf" in name or "meatloaf" in name:
+        steps = [
+          "1. Mélangez le bœuf haché avec l’œuf, la chapelure et les assaisonnements indiqués jusqu’à obtenir une farce homogène.",
+          "2. Tassez dans un grand mug compatible avec le micro-ondes sans le remplir au-delà des deux tiers.",
+          "3. Faites cuire à puissance moyenne-élevée 2 minutes, puis ouvrez avec précaution et vérifiez le centre.",
+          "4. Poursuivez par tranches de 30 secondes jusqu’à ce que la viande hachée soit cuite à cœur.",
+          "5. Laissez reposer 1 minute avant de démouler prudemment et de servir."
+        ]
+    elif "pomme de terre en robe" in name:
+        steps = [
+          "1. Lavez la pomme de terre et piquez sa peau plusieurs fois avec une fourchette.",
+          "2. Placez-la sur une assiette compatible avec le micro-ondes et faites cuire à puissance élevée 4 à 6 minutes selon sa taille, en la retournant à mi-cuisson.",
+          "3. Vérifiez avec la pointe d’un couteau qu’elle est tendre; prolongez par tranches d’une minute si nécessaire.",
+          "4. Laissez reposer une minute avant de l’ouvrir et ajoutez uniquement la garniture présente dans la liste d’ingrédients.",
+          "5. Servez chaud en faisant attention à la vapeur qui s’échappe à l’ouverture."
+        ]
+    elif "gratin de pommes de terre minute" in name:
+        steps = [
+          "1. Coupez les pommes de terre en rondelles très fines et disposez-les dans un petit plat compatible avec le micro-ondes.",
+          "2. Mélangez la crème ou le lait prévu avec l’assaisonnement indiqué, puis versez sur les pommes de terre.",
+          "3. Couvrez avec un couvercle adapté non hermétique et faites cuire à puissance moyenne-élevée 6 minutes.",
+          "4. Vérifiez la tendreté des pommes de terre et poursuivez par tranches de 1 à 2 minutes jusqu’à cuisson complète; ajoutez le fromage prévu à la fin.",
+          "5. Laissez reposer 2 minutes avant de servir."
+        ]
+    elif "dauphinois" in name:
+        steps = [
+          "1. Préchauffez le four à 180 °C. Épluchez les pommes de terre et coupez-les en rondelles fines et régulières.",
+          "2. Disposez-les en couches dans un plat légèrement beurré si le beurre est listé, en assaisonnant selon la recette.",
+          "3. Versez le mélange de lait et de crème indiqué sur les pommes de terre.",
+          "4. Enfournez 50 à 60 minutes, jusqu’à ce que les pommes de terre soient tendres au centre et le dessus doré.",
+          "5. Laissez reposer 5 à 10 minutes avant de servir."
+        ]
+    else:
+        # Pour les autres fiches signalées, garder une procédure de cuisine cohérente avec le type de plat.
+        steps = tailored_steps(r)
+    r["steps"] = steps
+    sync_sections(r)
+    final_step_count += 1
+print(f"Final targeted corrections for remaining generic-step cards: {final_step_count}; Vide-Frigo cards preserved.")
+
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"Direct priority data edits written={priority_updated}/{len(priority_cards)}.")
 
