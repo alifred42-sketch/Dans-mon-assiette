@@ -431,6 +431,11 @@ def make_steps(r):
           "3. Ajoutez les autres ingrédients et assaisonnements de la fiche; mélangez et poursuivez la cuisson jusqu’à ce que les aliments soient tendres et cuits à cœur.",
           "4. Goûtez, rectifiez l’assaisonnement avec les éléments prévus et servez aussitôt."
         ]
+    # Make every repaired method specific to this recipe, not just to its category.
+    # Cite the actual ingredients in the first instruction so the cook can act from the card.
+    if ing:
+        named_ingredients = ", ".join(ing[:6])
+        steps[0] = steps[0].rstrip(".; ") + f". Ingrédients à préparer pour cette recette : {named_ingredients}."
     return steps
 
 generic_fixed = 0
