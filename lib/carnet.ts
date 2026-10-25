@@ -239,6 +239,47 @@ export function seasonLabel(week: number): string {
   return labels[seasonForWeek(week)];
 }
 
+// Sélection éditoriale : corrections ciblées des menus de saison. Les substitutions
+// demandées par l'utilisateur restent prioritaires ; courses et batch utilisent weekPlan().
+const CURATED_PLAN_RECIPE_OVERRIDES: Record<string, string> = {
+  "2|LUNDI|Soir": "r-9b996df25a", // soupe à l'oignon en hiver, à la place du gaspacho
+  "6|LUNDI|Soir": "r-9f72f3e182", // soupe poireaux-carottes en hiver
+  "6|DIMANCHE|Soir": "r-86fb2988d0", // remplacer le doublon de burger par un plat d'hiver
+  "37|VENDREDI|Soir": "r-3a7b357b85", // velouté de courge au lieu du gaspacho
+  "47|VENDREDI|Soir": "r-9f72f3e182", // soupe d'automne au lieu du gaspacho
+  "48|VENDREDI|Soir": "r-0a2e578f74", // un vrai dîner à la place du dessert seul
+  "38|SAMEDI|Soir": "r-0d88134e0e",
+  "38|DIMANCHE|Soir": "r-2cf7843ce5",
+  "39|SAMEDI|Soir": "r-89467af8af",
+  "39|DIMANCHE|Soir": "r-32efaae5de",
+  "40|SAMEDI|Soir": "r-56ef344d3c",
+  "40|DIMANCHE|Soir": "r-768e2e4a95",
+  "41|SAMEDI|Soir": "r-3c29bc5010",
+  "41|DIMANCHE|Soir": "r-45b814e25e",
+  "42|SAMEDI|Soir": "r-f33821e206",
+  "42|DIMANCHE|Soir": "veg-ah-pdf-009",
+  "43|SAMEDI|Soir": "veg-ah-pdf-016",
+  "43|DIMANCHE|Soir": "r-ae5fd0a220",
+  "44|SAMEDI|Soir": "veg-ah-pdf-035",
+  "44|DIMANCHE|Soir": "r-30a78971c9",
+  "45|SAMEDI|Soir": "veg-ah-pdf-024",
+  "45|DIMANCHE|Soir": "r-19ce31994f",
+  "46|SAMEDI|Soir": "veg-ah-pdf-042",
+  "46|DIMANCHE|Soir": "r-0c576a3884",
+  "47|SAMEDI|Soir": "veg-ah-pdf-014",
+  "47|DIMANCHE|Soir": "r-79f9f3b7c4",
+  "48|SAMEDI|Soir": "veg-ah-pdf-037",
+  "48|DIMANCHE|Soir": "veg-ah-pdf-010",
+  "49|SAMEDI|Soir": "veg-ah-pdf-046",
+  "49|DIMANCHE|Soir": "vegan-automne-hiver-012",
+  "50|SAMEDI|Soir": "veg-ah-pdf-018",
+  "50|DIMANCHE|Soir": "veg-ah-pdf-027",
+  "51|SAMEDI|Soir": "veg-ah-pdf-044",
+  "51|DIMANCHE|Soir": "vegan-automne-hiver-006",
+  "52|SAMEDI|Soir": "noel-plat-27",
+  "52|DIMANCHE|Soir": "veg-ah-pdf-026",
+};
+
 const SEASON_TERMS: Record<Season, string[]> = {
   hiver: ["hiver", "hivernal", "soupe", "veloute", "potage", "poireau", "chou", "courge", "pomme de terre", "gratin", "mijote", "lentille", "endive", "carotte"],
   printemps: ["printemps", "asperge", "radis", "petit pois", "epinard", "fraise", "artichaut", "navet", "blette", "courgette", "citron", "herbes fraiches"],
@@ -483,11 +524,18 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   };
   const reserved = new Set<string>();
   const overrideRecipe = (day: string, meal: string, pattern?: RegExp, quick = false) => {
-    const id = overrides[week + "|" + day + "|" + meal];
+    const key = week + "|" + day + "|" + meal;
+    const userId = overrides[key];
+    const curatedId = CURATED_PLAN_RECIPE_OVERRIDES[key];
+    const isCurated = !userId && Boolean(curatedId);
+    const id = userId || curatedId;
     const recipe = id ? recipesById.get(id) : undefined;
-    if (!recipe || !isValidatedRecipe(recipe) || !eligibleForPreferences(recipe, preferences) || !isSeasonCompatible(recipe, season) || reserved.has(recipe.id)) return undefined;
-    if (pattern && !pattern.test(roleText(recipe))) return undefined;
-    if (quick && (durationMinutes(recipe.timePrep) ?? Infinity) + (durationMinutes(recipe.timeCook) ?? Infinity) > 20) return undefined;
+    if (!recipe || !isValidatedRecipe(recipe) || !eligibleForPreferences(recipe, preferences) || !isSeasonCompatible(recipe, season)) return undefined;
+    // Les choix éditoriaux doivent être respectés même s'ils ne correspondent pas au rôle
+    // automatique (ex. soupe en début de semaine) ; les préférences et changements utilisateur restent prioritaires.
+    if (!isCurated && reserved.has(recipe.id)) return undefined;
+    if (!isCurated && pattern && !pattern.test(roleText(recipe))) return undefined;
+    if (!isCurated && quick && (durationMinutes(recipe.timePrep) ?? Infinity) + (durationMinutes(recipe.timeCook) ?? Infinity) > 20) return undefined;
     return recipe;
   };
   const plantPattern = /tofu|pois chiches|lentilles|haricots|edamame|vegan|vegetarien|omelette|falafel|legumes|salade|quiche|frittata/;
