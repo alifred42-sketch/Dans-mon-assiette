@@ -151,6 +151,36 @@ apply("r-3ad7aa939f", "Poivrons farcis à la viande et au riz",
  ["4 poivrons","400 g de viande hachée","200 g de riz cru","2 tomates","1 oignon","1 gousse d’ail","1 c. à soupe de basilic frais","1 c. à soupe d’huile d’olive","Sel et poivre"],
  ["1. Préchauffez le four à 190 °C. Faites cuire le riz selon les indications du paquet, puis égouttez-le.","2. Coupez le haut des poivrons et retirez les graines. Émincez l’oignon et l’ail; coupez les tomates en dés.","3. Faites revenir l’oignon et l’ail dans l’huile, ajoutez la viande hachée et faites-la cuire en l’émiettant.","4. Mélangez la viande avec le riz, les tomates, le basilic, le sel et le poivre.","5. Garnissez les poivrons, placez-les dans un plat avec un petit fond d’eau et enfournez 35 à 45 minutes, jusqu’à ce que les poivrons soient tendres et la farce bien cuite."], "20 min","45 min",4)
 
+# Fill missing times from recipe instructions and repair the last ambiguous ingredient.
+if "student-microwave-044" in by:
+    r = by["student-microwave-044"]
+    r["ingredients"] = [("1 c. à café d’herbes de Provence" if norm(i) == "1 herbes" else i) for i in r.get("ingredients", [])]
+    sync_sections(r)
+
+def estimated_cook_minutes(recipe):
+    total = 0
+    cooking = re.compile(r"poêle|grille.?pain|micro.?ondes|bouilloire|faites cuire|faites chauffer|faites griller|enfournez|cuisez|cuisson|laissez cuire|faites dorer|faites revenir|faites sauter|infuser|gonfler", re.I)
+    for step in recipe.get("steps", []):
+        if not cooking.search(step): continue
+        if re.search(r"réfrigérateur|frigo|toute la nuit|laissez reposer|repos", step, re.I): continue
+        ranges = re.findall(r"(\d+)\s*(?:à|-)\s*(\d+)\s*(?:minutes|min)", step, re.I)
+        singles = re.findall(r"(\d+)\s*(?:minutes|min)", step, re.I)
+        if ranges: total += max(int(b) for a,b in ranges)
+        elif singles: total += max(int(x) for x in singles)
+    return total
+
+time_filled = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name",""), re.I): continue
+    if r.get("timePrep") and r.get("timeCook"): continue
+    n = len(r.get("ingredients", []))
+    r["timePrep"] = r.get("timePrep") or ("15 min" if n >= 10 else "10 min" if n >= 5 else "5 min")
+    if not r.get("timeCook"):
+        minutes = estimated_cook_minutes(r)
+        r["timeCook"] = f"{minutes} min" if minutes else "0 min"
+    sync_sections(r)
+    time_filled += 1
+
 # Generic placeholder labels that are not a recipe title are corrected to coherent named preparations above.
 for r in recipes:
     if re.search(r"vide.?frigo", r.get("name",""), re.I): continue
