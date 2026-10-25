@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: apply-recipe-corrections-test-branch
+  cancel-in-progress: false
+
 jobs:
   correct-recipes:
     runs-on: ubuntu-latest
@@ -17,6 +21,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: travail-cuisine-chic-ouf-design
+          fetch-depth: 0
           persist-credentials: true
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,7 +39,11 @@ jobs:
           assert recipes, "No recipes found"
           ids = [r.get("id") for r in recipes]
           assert len(ids) == len(set(ids)), "Duplicate recipe IDs detected"
-          print(f"Validated JSON: {len(recipes)} recipe cards; IDs unique.")
+          for r in recipes:
+              if "vide-frigo" not in str(r.get("id", "")).lower() and "vide frigo" not in str(r.get("name", "")).lower():
+                  assert isinstance(r.get("ingredients"), list) and r["ingredients"], f"Missing ingredients: {r.get('id')}"
+                  assert isinstance(r.get("steps"), list) and r["steps"], f"Missing steps: {r.get('id')}"
+          print(f"Validated JSON: {len(recipes)} recipe cards; IDs unique; non-empty ingredients and steps.")
           PY
       - name: Commit corrected database
         run: |
@@ -45,5 +54,6 @@ jobs:
             echo "No recipe data changes to commit."
           else
             git commit -m "Corriger la base de recettes et ses étapes"
+            git pull --rebase origin travail-cuisine-chic-ouf-design
             git push origin travail-cuisine-chic-ouf-design
           fi
