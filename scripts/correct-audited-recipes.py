@@ -604,3 +604,33 @@ for r in recipes:
     sync_sections(r)
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Dernières fiches génériques corrigées; sections d’ingrédients et de préparation resynchronisées.")
+
+
+# Repair incomplete titles and a split ingredient list in student recipes.
+apply("student-one-pan-050", "Pancake géant étudiant à la poêle",
+ ["1 œuf","4 c. à soupe bombées de farine","1 c. à café de sucre","1/2 c. à café de levure chimique (facultatif)","50 ml de lait","1 c. à café de beurre pour la poêle","1 c. à soupe de confiture ou de pâte à tartiner (facultatif)"],
+ ["1. Battez l’œuf avec le lait et le sucre dans un bol.","2. Ajoutez la farine et la levure; mélangez jusqu’à obtenir une pâte homogène.","3. Faites fondre le beurre dans une petite poêle antiadhésive et versez toute la pâte. Couvrez et faites cuire à feu doux 3 à 4 minutes.","4. Retournez délicatement le pancake et poursuivez 2 à 3 minutes jusqu’à ce que le centre soit cuit. Ajoutez la garniture choisie si souhaité."], "5 min","7 min",1)
+apply("student-zero-cooking-028", "Rillettes de thon au Kiri pour tartines",
+ ["1 petite boîte de thon au naturel (80 g)","2 portions de fromage Kiri ou fromage fondu nature","1 c. à café de jus de citron","Poivre","4 tranches de pain complet"],
+ ["1. Égouttez soigneusement le thon et émiettez-le dans un bol.","2. Ajoutez le fromage Kiri et le jus de citron, puis écrasez à la fourchette jusqu’à obtenir une préparation tartinable.","3. Poivrez et mélangez une dernière fois.","4. Servez sur les tranches de pain complet ou conservez au frais dans un récipient fermé."], "5 min","0 min",1)
+apply("student-zero-cooking-037", "Soupe froide express de concombre au yaourt et à la menthe",
+ ["1/2 concombre","1 yaourt nature (125 g)","1 c. à café d’huile d’olive","1 pincée d’ail en poudre","2 feuilles de menthe fraîche (facultatif)","Sel et poivre"],
+ ["1. Lavez le concombre et coupez-le en morceaux.","2. Mixez le concombre avec le yaourt, l’huile d’olive, l’ail, le sel et le poivre jusqu’à obtenir une soupe lisse.","3. Ajoutez la menthe ciselée si vous l’utilisez et mélangez.","4. Réfrigérez au moins 15 minutes si possible et servez bien frais."], "5 min","0 min",1)
+apply("student-zero-cooking-039", "Salade de maïs aux dés de jambon et emmental",
+ ["1/2 grande boîte de maïs (140 g égoutté)","50 g de dés de jambon blanc","30 g d’emmental en petits cubes","1 c. à soupe de mayonnaise","Poivre"],
+ ["1. Égouttez le maïs et versez-le dans un bol.","2. Ajoutez les dés de jambon et l’emmental coupé en petits cubes.","3. Incorporez la mayonnaise et le poivre, puis mélangez.","4. Réservez au frais jusqu’au service."], "5 min","0 min",1)
+apply("student-zero-cooking-040", "Sandwich perdu sucré à la fraise sans cuisson",
+ ["2 tranches de pain de mie","2 c. à soupe de fromage blanc épais ou petit-suisse","1 c. à café de sucre","3 fraises fraîches ou 1 c. à soupe de confiture de fraise"],
+ ["1. Mélangez le fromage blanc et le sucre dans un petit bol.","2. Étalez cette préparation sur une tranche de pain de mie.","3. Coupez les fraises en fines tranches et répartissez-les sur le fromage blanc; à défaut, étalez la confiture.","4. Refermez avec la seconde tranche, coupez en deux et servez immédiatement."], "5 min","0 min",1)
+apply("student-zero-cooking-041", "Salade italienne de pois chiches au jambon cru et parmesan",
+ ["1 petite boîte de pois chiches (200 g égouttés)","1 tranche de jambon cru","20 g de parmesan en copeaux","1 c. à soupe d’huile d’olive","1 c. à café de jus de citron ou de vinaigre","Poivre"],
+ ["1. Rincez et égouttez les pois chiches.","2. Déchirez le jambon cru en lanières et ajoutez-le aux pois chiches.","3. Ajoutez le parmesan, l’huile d’olive, le jus de citron ou le vinaigre et le poivre.","4. Mélangez délicatement et servez frais."], "5 min","0 min",1)
+apply("student-zero-cooking-044", "Wrap fraîcheur au jambon blanc, fromage frais et carotte",
+ ["1 tortilla de blé","1 tranche de jambon blanc","1 grosse c. à soupe de fromage frais","1/2 carotte","2 feuilles de salade verte"],
+ ["1. Lavez la salade et râpez finement la demi-carotte.","2. Étalez le fromage frais sur la tortilla.","3. Ajoutez le jambon blanc, la salade et la carotte râpée.","4. Roulez fermement le wrap, coupez-le en deux et servez frais."], "5 min","0 min",1)
+
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    sync_sections(r)
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Titres incomplets et fiche pancake corrigés.")
