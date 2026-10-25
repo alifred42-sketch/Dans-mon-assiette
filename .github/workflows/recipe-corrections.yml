@@ -1,0 +1,66 @@
+name: Corrections de la base recettes
+
+on:
+  push:
+    branches: [travail-cuisine-chic-ouf-design]
+    paths:
+      - 'scripts/correct-audited-recipes.py'
+      - '.github/workflows/recipe-corrections.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recipe-corrections-test-branch
+  cancel-in-progress: false
+
+jobs:
+  correct-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branche de test
+        uses: actions/checkout@v4
+        with:
+          ref: travail-cuisine-chic-ouf-design
+          fetch-depth: 0
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Vérifier la syntaxe du correcteur
+        run: python -m py_compile scripts/correct-audited-recipes.py
+      - name: Exécuter les corrections des fiches
+        run: python scripts/correct-audited-recipes.py
+      - name: Contrôler le JSON et les fiches après correction
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+          p = Path("data/carnet.json")
+          d = json.loads(p.read_text(encoding="utf-8"))
+          recipes = d.get("recipes", [])
+          assert len(recipes) >= 1500, f"Nombre de recettes inattendu: {len(recipes)}"
+          generic = re.compile(r"Préparez les ingrédients|Hachez finement les aromates|Versez l’huile ou le liquide petit à petit|Goûtez, rectifiez l’assaisonnement", re.I)
+          generic_cards = []
+          for r in recipes:
+              if re.search(r"vide.?frigo", r.get("name", ""), re.I):
+                  continue
+              steps = r.get("steps", [])
+              if steps and sum(bool(generic.search(str(s))) for s in steps) >= 2:
+                  generic_cards.append(r.get("id", r.get("name", "?")))
+          print(f"Recettes présentes: {len(recipes)}")
+          print(f"Fiches avec étapes encore génériques repérées: {len(generic_cards)}")
+          print("Exemples à reprendre ensuite:", ", ".join(generic_cards[:30]))
+          PY
+      - name: Enregistrer les modifications sur la branche de test
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/carnet.json
+          if git diff --cached --quiet; then
+            echo "Aucune modification de données à enregistrer."
+          else
+            git commit -m "Corrige et synchronise les fiches recettes auditées"
+            git push origin HEAD:travail-cuisine-chic-ouf-design
+          fi
