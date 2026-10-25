@@ -1712,6 +1712,9 @@ for rid, values in priority_cards.items():
     priority_updated += 1
 
 # 3b) Correct clear unit/quantity corruption and one recipe whose ingredients did not match its title.
+# This script reloads the JSON in later passes, so rebind the active recipe objects here.
+recipes = d.get("recipes", [])
+by = {r.get("id"): r for r in recipes}
 apply("r-530be65cae", ingredients=[
  "500 g de blancs de poulet","2 carottes","250 g de champignons","200 g de poireaux","1 oignon",
  "500 ml de bouillon de volaille","100 g de skyr","1 c. à café de moutarde douce",
