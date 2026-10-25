@@ -1788,5 +1788,94 @@
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 978,
     "id": "pdf-1001-978"
+  },
+  {
+    "name": "Les Céréales de Mini-Pancakes",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Farine de blé : 100 g",
+      "Œuf frais : 1 pièce",
+      "Lait demi-écrémé : 100 ml",
+      "Levure chimique : 1/2 cuillère à café",
+      "Beurre : 10 g (pour la poêle)"
+    ],
+    "steps": [
+      "La pâte : Fouettez la farine, la levure, l'œuf et le lait dans un bol pour obtenir une pâte lisse et épaisse.",
+      "Le pochoir : Versez la pâte dans un sac congélation propre et coupez un tout petit coin pour faire une poche à douille.",
+      "Le chauffage : Faites fondre une noisette de beurre dans une grande poêle antiadhésive sur feu moyen.",
+      "La cuisson flash : Formez des dizaines de billes de pâte de la taille d'une pièce de monnaie dans la poêle chaude.",
+      "Le service : Laissez dorer 1 minute par face, versez ces mini-pancakes dans des bols et dégustez avec un filet de sirop d'érable."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 979,
+    "id": "pdf-1001-979"
+  },
+  {
+    "name": "Les Fraises au Cheesecake minute (sans appareil)",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Fraises fraîches : 250 g coupées en morceaux",
+      "Fromage frais (type St Môret ou Philadelphia) : 150 g",
+      "Crème fraîche épaisse : 2 cuillères à soupe",
+      "Sucre glace : 2 cuillères à soupe",
+      "Biscuits (type Palets Bretons ou Spéculoos) : 4 pièces émiettées"
+    ],
+    "steps": [
+      "Le croquant : Répartissez les éclats de biscuits émiettés de manière égale au fond de 4 verres.",
+      "La crème : Dans un bol, fouettez énergiquement le fromage frais, la crème épaisse et le sucre glace pour lisser l'appareil.",
+      "Le montage : Déposez une généreuse couche de cette crème blanche par-dessus le lit de biscuits.",
+      "Le fruit : Ajoutez les morceaux de fraises fraîches sur le dessus de chaque verrine.",
+      "Le service : Décorez d'un dernier éclat de biscuit croustillant et dégustez immédiatement à la petite cuillère."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 980,
+    "id": "pdf-1001-980"
+  },
+  {
+    "name": "Le Croissant caramélisé et aplati",
+    "timePrep": "2 min",
+    "timeCook": "4 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Croissants de la veille : 4 pièces",
+      "Sucre roux ou cassonade : 2 cuillères à soupe",
+      "Beurre demi-sel : 15 g"
+    ],
+    "steps": [
+      "L'aplatissage : Écrasez fermement les croissants avec la paume de la main ou un rouleau à pâtisserie pour les rendre très plats.",
+      "Le sucré : Saupoudrez généreusement les deux faces des croissants aplatis de sucre roux.",
+      "Le chauffage : Faites fondre le beurre demi-sel dans une grande poêle antiadhésive sur feu moyen.",
+      "La caramélisation : Déposez les croissants dans la poêle et pressez-les avec une spatule pendant 2 minutes de chaque côté.",
+      "Le service : Retirez-les dès que le sucre a formé une croûte bien dorée, laissez durcir 1 minute et servez croustillant."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 981,
+    "id": "pdf-1001-981"
+  },
+  {
+    "name": "Le Mug Crumble express aux pommes et biscuits",
+    "timePrep": "5 min",
+    "timeCook": "2 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pommes de type Gala : 2 pièces pelées et coupées en micro-dés",
+      "Biscuits de type Sablés ou Spéculoos : 6 pièces concassées",
+      "Beurre : 15 g fondu",
+      "Cannelle en poudre : 1 pincée"
+    ],
+    "steps": [
+      "Le fruit : Répartissez les micro-dés de pommes de manière égale au fond de 4 grands mugs.",
+      "L'épice : Saupoudrez une petite pincée de cannelle fine directement sur les pommes.",
+      "La pré-cuisson : Passez les mugs individuellement au micro-ondes pendant 1 minute à puissance maximale pour attendrir les fruits.",
+      "Le sable : Dans un bol, mélangez les éclats de biscuits concassés avec le beurre fondu du bout des doigts.",
+      "Le croustillant : Répartissez ce sable de crumble sur les pommes chaudes et passez à nouveau 30 secondes au micro-ondes avant de servir."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 982,
+    "id": "pdf-1001-982"
   }
 ]
