@@ -1487,3 +1487,88 @@ print(f"Final targeted step repair: {sum(1 for _r in recipes if _r.get('id') in 
 # Persiste également les étapes ciblées définies dans la passe finale ci-dessus.
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Final targeted steps persisted to data/carnet.json.")
+
+
+
+# 4) Remplacer les modèles d'étapes génériques par des instructions adaptées au type de recette.
+# Les fiches Opération Vide-Frigo sont volontairement exclues.
+def steps_for_recipe(r):
+    name = norm(r.get("name", ""))
+    ingredients = r.get("ingredients", [])
+    blob = norm(name + " " + " ".join(str(x) for x in ingredients))
+    def has(*terms): return any(norm(t) in blob for t in terms)
+    if has("sauce", "pesto", "tartinade", "dip", "vinaigrette", "marinade", "coulis"):
+        return [
+          "1. Préparez les ingrédients : lavez et séchez les herbes, pressez le citron si nécessaire et mesurez les liquides.",
+          "2. Hachez finement les aromates. Dans un bol, mélangez la base indiquée dans la liste avec les herbes, épices et condiments.",
+          "3. Versez l’huile ou le liquide petit à petit en fouettant; si la recette contient des ingrédients à mixer, mixez par courtes impulsions jusqu’à la texture souhaitée.",
+          "4. Goûtez, rectifiez l’assaisonnement avec les ingrédients prévus et réservez au frais dans un récipient fermé. Pour une sauce chaude, faites chauffer doucement sans faire bouillir si elle contient un produit laitier."
+        ]
+    if has("wrap", "salade", "taboulé", "taboule", "crudités", "sandwich", "bowl froid", "nouilles soba froides"):
+        return [
+          "1. Lavez et séchez les crudités et les herbes. Égouttez les conserves et faites cuire puis refroidir tout ingrédient qui doit être servi froid.",
+          "2. Coupez les légumes et les autres ingrédients en morceaux réguliers. Émiettez ou effilochez la protéine prévue, si nécessaire.",
+          "3. Mélangez séparément les ingrédients de la sauce indiqués dans la liste, puis assaisonnez les éléments juste avant de servir pour garder leur fraîcheur.",
+          "4. Assemblez les ingrédients dans les wraps ou les bols, répartissez la sauce et servez. Si vous préparez à l’avance, conservez la sauce à part au réfrigérateur."
+        ]
+    if has("micro-ondes", "micro ondes", "mug cake"):
+        return [
+          "1. Coupez les ingrédients en petits morceaux et choisissez un récipient compatible avec le micro-ondes, assez grand pour éviter les débordements.",
+          "2. Mélangez les ingrédients dans l’ordre indiqué sur la fiche, jusqu’à obtenir une préparation homogène. Répartissez la garniture sans tasser.",
+          "3. Faites cuire au micro-ondes à puissance élevée pendant la durée indiquée dans la fiche; vérifiez le centre et prolongez par séquences de 10 à 15 secondes si nécessaire.",
+          "4. Laissez reposer 1 à 2 minutes avant de servir. Le récipient peut être très chaud; vérifiez que les viandes et poissons sont cuits à cœur."
+        ]
+    if has("pizza", "lasagne", "gratin", "quiche", "tarte", "flan"):
+        return [
+          "1. Préchauffez le four à 180 °C. Lavez et coupez les légumes; faites revenir la viande ou les légumes aqueux à la poêle si la garniture doit être précuite.",
+          "2. Préparez la base prévue (pâte, plaques ou légumes en couches) dans un plat adapté. Mélangez la garniture avec les ingrédients d’assaisonnement de la fiche.",
+          "3. Répartissez la garniture uniformément, puis ajoutez le fromage ou l’appareil liquide mentionné dans les ingrédients.",
+          "4. Enfournez pendant la durée indiquée dans la fiche, jusqu’à ce que le centre soit cuit et le dessus doré. Laissez reposer quelques minutes avant de couper et servir."
+        ]
+    if has("saumon", "cabillaud", "colin", "poisson", "crevette"):
+        return [
+          "1. Séchez le poisson avec du papier absorbant. Lavez et coupez les légumes; préparez les herbes, le citron et les condiments indiqués.",
+          "2. Faites cuire les légumes à la vapeur ou dans une poêle avec un peu d’huile, selon leur texture et la cuisson prévue. Réservez au chaud.",
+          "3. Faites cuire le poisson à la poêle ou au four selon la méthode adaptée à la fiche; ajoutez la sauce et les aromates indiqués sans dessécher le poisson.",
+          "4. Vérifiez que le poisson est opaque et se détache facilement à la fourchette, puis servez avec les légumes et l’accompagnement mentionnés."
+        ]
+    if has("poulet", "dinde", "volaille", "bœuf", "boeuf", "porc", "boulettes", "paupiette", "viande", "chili", "merguez"):
+        return [
+          "1. Préparez les ingrédients : coupez les légumes, hachez l’oignon et l’ail s’ils figurent dans la liste, puis mesurez les épices et liquides.",
+          "2. Faites chauffer l’huile indiquée dans une sauteuse. Faites dorer la viande sur les faces, puis ajoutez les aromates et les légumes prévus.",
+          "3. Incorporez les tomates, le bouillon ou la sauce indiqués dans la liste. Couvrez et laissez mijoter à feu doux pendant la durée de cuisson prévue, en remuant de temps en temps.",
+          "4. Vérifiez que la viande est cuite à cœur, rectifiez l’assaisonnement et servez avec l’accompagnement prévu. Pour une sauce crémeuse, ajoutez le produit laitier en fin de cuisson à feu doux."
+        ]
+    if has("pâtes", "pates", "nouilles", "gnocchi", "risotto", "riz", "couscous"):
+        return [
+          "1. Préparez et coupez les légumes et aromates listés. Portez à ébullition une casserole d’eau pour les pâtes ou les céréales, sauf si la fiche prévoit une cuisson en une seule poêle.",
+          "2. Faites revenir les aromates et les légumes dans l’huile indiquée. Ajoutez la protéine ou les autres ingrédients prévus et faites-les cuire avant d’ajouter les éléments déjà cuits.",
+          "3. Faites cuire les pâtes ou céréales selon le paquet; pour un risotto, ajoutez le bouillon progressivement en remuant. Mélangez avec la garniture et la sauce indiquées.",
+          "4. Goûtez, rectifiez l’assaisonnement avec les ingrédients prévus et servez chaud. Ajoutez les herbes fraîches ou le fromage en finition s’ils figurent dans la liste."
+        ]
+    if has("soupe", "velouté", "potage"):
+        return [
+          "1. Lavez, épluchez si nécessaire et coupez les légumes en morceaux de taille similaire. Hachez l’oignon ou l’ail s’ils figurent dans la liste.",
+          "2. Faites revenir les aromates dans l’huile indiquée pendant quelques minutes, puis ajoutez les légumes et le liquide prévu dans les ingrédients.",
+          "3. Laissez cuire à petits frémissements jusqu’à ce que les légumes soient tendres. Mixez soigneusement; ajoutez le lait, le skyr ou la crème en fin de cuisson si la recette en contient.",
+          "4. Goûtez et ajustez l’assaisonnement. Servez chaud, en ajoutant les herbes ou garnitures prévues juste avant de servir."
+        ]
+    return [
+      "1. Préparez les ingrédients de la fiche : lavez et coupez les légumes, hachez les aromates et mesurez les condiments. Gardez les ingrédients séparés par étape.",
+      "2. Faites chauffer l’huile indiquée dans une poêle ou une casserole adaptée. Commencez par les aromates et les ingrédients les plus longs à cuire, puis ajoutez les autres ingrédients selon leur temps de cuisson.",
+      "3. Incorporez les liquides, épices et autres ingrédients de la fiche. Laissez cuire à feu moyen en remuant régulièrement jusqu’à ce que les légumes soient tendres et que les protéines soient cuites à cœur.",
+      "4. Goûtez, rectifiez l’assaisonnement avec les ingrédients prévus et servez avec l’accompagnement mentionné dans la fiche. Respectez le temps de cuisson indiqué et prolongez si nécessaire."
+    ]
+
+generic_patterns = re.compile(r"Préparez les ingrédients listés|Mélangez-les dans un bol ou un mixeur|Incorporez progressivement l’huile, le citron|Goûtez, ajustez avec les assaisonnements prévus|Précuisez à la poêle les viandes et légumes qui en ont besoin|ou à la température précisée dans la recette", re.I)
+generic_fixed = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I):
+        continue
+    if generic_patterns.search("\n".join(r.get("steps", []))):
+        r["steps"] = steps_for_recipe(r)
+        sync_sections(r)
+        generic_fixed += 1
+print(f"Étapes génériques remplacées par des étapes adaptées : {generic_fixed} fiches.")
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Base enregistrée après la correction des étapes génériques.")
