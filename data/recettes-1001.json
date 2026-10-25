@@ -768,10 +768,142 @@
     ],
     "steps": [
       "Le tranchage : Coupez les tomates de saison et les boules de mozzarella en rondelles de même épaisseur.",
-      "Le dressage : Rangez-les sur un grand plat plat en alternant une rondelle de tomate et une de mozzarella."
+      "Le dressage : Rangez-les sur un grand plat plat en alternant une rondelle de tomate et une de mozzarella.",
+      "La fraîcheur : Intercalez les feuilles de basilic frais entier entre les tranches pour parfumer.",
+      "L'arrosage : Nappez généreusement toute la surface de la rosace avec l'huile d'olive extra vierge fine.",
+      "La touche finale : Parsemez d'une pincée de fleur de sel juste avant d'apporter sur la table."
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 933,
     "id": "pdf-1001-933"
+  },
+  {
+    "name": "Tartine scandinave au saumon fumé et fromage frais",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de seigle noir : 4 grandes tranches",
+      "Saumon fumé : 4 belles tranches",
+      "Fromage frais à tartiner (type St Môret) : 100 g",
+      "Jus de citron jaune : 1/2 pièce pressée",
+      "Aneth frais ou séché : 1 pincée"
+    ],
+    "steps": [
+      "Le tartinage : Étalez une couche généreuse de fromage frais St Môret sur une face de chaque tranche de pain de seigle.",
+      "Le montage : Disposez harmonieusement une tranche de saumon fumé par-dessus la crème blanche.",
+      "L'acide : Arrosez le saumon d'un mince filet de jus de citron jaune fraîchement pressé.",
+      "L'aromate : Saupoudrez la pincée d'aneth sur le dessus de chaque préparation pour le relief nordique.",
+      "Le service : Donnez un tour de moulin à poivre blanc et servez ces tartines froides sans attendre."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 934,
+    "id": "pdf-1001-934"
+  },
+  {
+    "name": "Avocat garni de surimi et sauce cocktail",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Avocats bien mûrs : 2 belles pièces",
+      "Bâtonnets de surimi : 8 pièces coupés en petits morceaux",
+      "Sauce cocktail (prête à l'emploi) : 3 cuillères à soupe",
+      "Jus de citron jaune : 1/2 pièce pressée"
+    ],
+    "steps": [
+      "La farce : Mélangez les morceaux de surimi avec la sauce cocktail dans un petit bol à la cuillère.",
+      "Les coques : Coupez les avocats en deux dans le sens de la longueur et retirez délicatement le noyau central.",
+      "La protection : Citronnez immédiatement la chair des avocats avec le jus de citron pour empêcher l'oxydation.",
+      "Le remplissage : Garnissez généreusement les cavités des 4 moitiés d'avocats avec la farce au surimi.",
+      "Le service : Dressez les avocats garnis sur des assiettes individuelles et servez très frais en entrée."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 935,
+    "id": "pdf-1001-935"
+  },
+  {
+    "name": "Salade César étudiante rapide",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Salade romaine ou laitue : 1 grosse salade lavée et essorée",
+      "Émincés de poulet cuits (prêts à consommer) : 200 g",
+      "Croûtons de pain dorés : 50 g",
+      "Sauce salade César industrielle : 4 cuillères à soupe",
+      "Copeaux de parmesan : 30 g"
+    ],
+    "steps": [
+      "La verdure : Hachez grossièrement la salade verte et déposez-la au fond d'un grand saladier robuste.",
+      "La garniture : Ajoutez les émincés de poulet prêts à l'emploi et les croûtons de pain croustillants.",
+      "Le fromage : Parsemez les copeaux de parmesan de manière homogène sur toute la préparation.",
+      "L'assaisonnement : Versez la sauce César industrielle directement sur les ingrédients de la salade.",
+      "Le mélange : Brassez énergiquement le tout à l'aide de deux couverts et servez ce repas minute."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 936,
+    "id": "pdf-1001-936"
+  },
+  {
+    "name": "Salade marocaine croquante de carottes et maïs",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Carottes râpées fraîches : 200 g",
+      "Maïs en grains : 150 g (en conserve égoutté)",
+      "Huile de tournesol : 2 cuillères à soupe",
+      "Jus de citron jaune : 1 cuillère à soupe",
+      "Cumin en poudre : 1/2 cuillère à café"
+    ],
+    "steps": [
+      "Le rassemblement : Versez les carottes râpées et les grains de maïs doux égouttés dans votre saladier.",
+      "La vinaigrette : Ajoutez directement l'huile de tournesol et le jus de citron frais sur les ingrédients.",
+      "L'épice : Saupoudrez le cumin en poudre sur la préparation pour apporter la note orientale.",
+      "L'homogénéisation : Remuez fermement à la cuillère pour bien enrober les carottes de sauce parfumée.",
+      "Le service : Servez immédiatement cette entrée croquante, colorée et pleine de fraîcheur."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 937,
+    "id": "pdf-1001-937"
+  },
+  {
+    "name": "Bowl de fromage blanc gourmand aux fruits",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Fromage blanc nature (type calin ou jockey) : 600 g",
+      "Mélange de fruits frais (banane, fraises, kiwi) : 200 g coupés en morceaux",
+      "Miel liquide ou sirop d'érable : 4 cuillères à soupe",
+      "Granola ou muesli croustillant : 4 cuillères à soupe"
+    ],
+    "steps": [
+      "La base : Répartissez le fromage blanc de manière égale au fond de 4 grands bols individuels.",
+      "Le graphisme : Tracez une jolie ligne de miel liquide ou de sirop d'érable sur le blanc.",
+      "Les fruits : Disposez harmonieusement les morceaux de fruits frais coupés à côté du miel.",
+      "Le croquant : Ajoutez une généreuse cuillère de granola croustillant pour compléter le topping.",
+      "Le service : Dégustez immédiatement ce bol complet et sain, parfait pour un petit-déjeuner minute."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 938,
+    "id": "pdf-1001-938"
+  },
+  {
+    "name": "Salade italienne de haricots blancs au pesto",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Haricots blancs cuits : 500 g (en conserve rincés et égouttés)",
+      "Pesto alla Genovese (basilic vert) : 2 cuillères à soupe",
+      "Tomates cerises : 12 pièces coupées en deux",
+      "Huile d'olive : 1 cuillère à soupe"
+    ],
+    "steps": [],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 939,
+    "id": "pdf-1001-939"
   }
 ]
