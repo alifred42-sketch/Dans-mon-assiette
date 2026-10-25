@@ -1728,6 +1728,57 @@ GENERIC_STEP_RE = re.compile(
 def tailored_steps(r):
     name = norm(r.get("name", ""))
     ing = r.get("ingredients", [])
+    joined_ingredients = norm(" ".join(str(x) for x in ing))
+    # Dernières familles révélées par le contrôle après la première correction.
+    if r.get("id") == "student-microwave-014":
+        return [
+          "1. Versez les carottes surgelées et les 3 cuillères à soupe d’eau dans un récipient compatible avec le micro-ondes; couvrez sans fermer hermétiquement et n’utilisez aucun métal.",
+          "2. Faites chauffer 3 minutes à puissance élevée, puis remuez et vérifiez si les carottes commencent à s’écraser.",
+          "3. Poursuivez par tranches d’une minute jusqu’à ce que les carottes soient très tendres, en remuant entre chaque tranche.",
+          "4. Égouttez l’excédent d’eau s’il en reste, ajoutez la portion de Kiri et écrasez jusqu’à obtenir une purée homogène.",
+          "5. Ajoutez le sel et le poivre prévus, laissez reposer 30 secondes et vérifiez la température avant de manger."
+        ]
+    if re.search(r"compote", name):
+        fruit_lines = [str(x) for x in ing if re.search(r"pomme|poire|rhubarbe|fraise|abricot|banane|peche|prune", norm(x))]
+        fruit_text = ", ".join(fruit_lines) if fruit_lines else "les fruits indiqués dans la liste"
+        robot_lines = r.get("robot", []) if isinstance(r.get("robot", []), list) else []
+        robot_text = " ".join(str(x) for x in robot_lines)
+        settings = re.findall(r"(?:Cuire|cuire)\s+\d+\s*min[^.]*\.", robot_text)
+        settings_text = " ".join(settings)
+        cook_text = settings_text if settings_text else "faites cuire à feu doux 12 à 15 minutes, en remuant régulièrement"
+        return [
+          f"1. Préparez {fruit_text} comme indiqué dans la liste : épluchez et épépinez les fruits si nécessaire, puis coupez-les en morceaux de taille similaire.",
+          "2. Placez les fruits dans une casserole à fond épais ou dans le bol du Mr Cuisine. Ajoutez uniquement le citron, le sucre, la cannelle ou la vanille présents dans les ingrédients.",
+          f"3. Faites cuire les fruits jusqu’à ce qu’ils soient très tendres : {cook_text}. Remuez si vous utilisez une casserole; avec le robot, respectez les réglages affichés dans la rubrique Robot.",
+          "4. Écrasez à la fourchette pour garder des morceaux ou mixez brièvement jusqu’à la texture souhaitée. Évitez les éclaboussures de préparation chaude.",
+          "5. Goûtez et n’ajustez qu’avec les ingrédients prévus. Laissez refroidir puis conservez au réfrigérateur dans un récipient fermé."
+        ]
+    if re.search(r"puree|ecrase", name):
+        veg_lines = [str(x) for x in ing if re.search(r"pomme de terre|carotte|poireau|courgette|patate douce|celeri", norm(x))]
+        veg_text = ", ".join(veg_lines) if veg_lines else "les légumes indiqués dans la liste"
+        return [
+          f"1. Épluchez et coupez {veg_text} en morceaux de taille similaire. Émincez les poireaux s’ils figurent dans la liste.",
+          "2. Faites cuire les légumes dans une casserole d’eau frémissante jusqu’à ce qu’ils soient tendres à cœur; commencez par les pommes de terre et carottes, puis ajoutez les légumes plus tendres en fin de cuisson.",
+          "3. Égouttez soigneusement et laissez évaporer une minute à feu doux en remuant la casserole.",
+          "4. Écrasez les légumes au presse-purée, puis incorporez progressivement le lait et le beurre, fromage blanc ou fromage frais uniquement s’ils sont listés, jusqu’à la texture souhaitée.",
+          "5. Ajoutez les herbes et le poivre prévus, mélangez, goûtez et servez chaud."
+        ]
+    if re.search(r"ratatouille", name):
+        return [
+          "1. Lavez les courgettes, poivrons et aubergines présents dans la liste, puis coupez-les en dés de taille proche. Émincez les oignons et hachez l’ail.",
+          "2. Faites chauffer l’huile prévue dans une grande sauteuse. Faites revenir les oignons 3 minutes, ajoutez l’ail puis les poivrons et l’aubergine; laissez cuire 5 à 7 minutes.",
+          "3. Ajoutez les courgettes et les tomates, mélangez puis couvrez partiellement.",
+          "4. Laissez mijoter à feu doux 20 à 25 minutes en remuant de temps en temps, jusqu’à ce que les légumes soient tendres sans se défaire complètement.",
+          "5. Ajoutez le thym, les herbes de Provence et le basilic prévus, goûtez et servez chaud ou tiède."
+        ]
+    if re.search(r"bolognaise", name) and re.search(r"proteines de soja|pst|soja texture", joined_ingredients):
+        return [
+          "1. Émincez l’oignon et hachez l’ail. Mesurez la passata, le bouillon chaud, l’huile et les assaisonnements indiqués.",
+          "2. Faites revenir l’oignon et l’ail dans l’huile d’olive 3 à 4 minutes à feu moyen, sans les faire brunir.",
+          "3. Ajoutez les protéines de soja texturées sèches, la passata et le bouillon chaud. Mélangez pour humidifier toutes les protéines.",
+          "4. Incorporez l’origan, le sucre, le sel et le poivre prévus. Laissez mijoter à couvert 20 à 25 minutes à feu doux, en remuant toutes les 5 minutes; ajoutez un peu d’eau seulement si la sauce devient trop épaisse.",
+          "5. Vérifiez que les protéines sont bien réhydratées et tendres, rectifiez l’assaisonnement avec les ingrédients listés et servez."
+        ]
     # Corrections ciblées des dernières familles encore couvertes par un gabarit trop vague.
     if re.search(r"pate a pizza", name):
         return [
@@ -1872,7 +1923,7 @@ def tailored_steps(r):
                 "2. Faites cuire complètement la protéine si elle est crue, puis laissez-la reposer quelques minutes avant de la couper; si elle est déjà cuite, détaillez-la simplement.",
                 "3. Mélangez la sauce ou les condiments indiqués. Réchauffez légèrement le pain ou les wraps si souhaité.",
                 "4. Assemblez le plat en répartissant les ingrédients et la sauce; roulez les wraps bien serrés ou dressez dans les assiettes juste avant de servir."]
-    if re.search(r"poisson|saumon|cabillaud|colin|thon|truite|crevette|moule|brandade", name) or re.search(r"poisson|saumon|cabillaud|colin|thon|crevette", joined):
+    if re.search(r"poisson|saumon|cabillaud|colin|thon|truite|crevette|moule|brandade|maquereau", name) or re.search(r"poisson|saumon|cabillaud|colin|thon|crevette", joined):
         return [f"1. Préchauffez le four à 190 °C si la cuisson est au four. Lavez et coupez {veg_text}; séchez le poisson et assaisonnez-le avec les ingrédients prévus.",
                 "2. Faites revenir les légumes 5 minutes à la poêle ou déposez-les dans un plat avec l’huile indiquée.",
                 f"3. Ajoutez le poisson et faites cuire {max(10, min(cook, 30))} minutes au four, ou à la poêle à feu moyen selon l’épaisseur, jusqu’à ce que la chair soit opaque et se détache facilement.",
@@ -1883,7 +1934,7 @@ def tailored_steps(r):
                 f"2. Pendant ce temps, émincez {onion.lower()} et préparez {veg_text}. Faites revenir les aromates dans l’huile prévue 3 à 4 minutes.",
                 f"3. Ajoutez {tomato.lower()} ou la sauce et le fromage listés; laissez chauffer {max(5, min(cook, 20))} minutes à feu doux et cuisez complètement les légumes ou la protéine prévue.",
                 "4. Mélangez les pâtes avec la sauce. Détendez avec une cuillère d’eau de cuisson si nécessaire, puis ajoutez les herbes ou le fromage prévus juste avant de servir."]
-    if re.search(r"dahl|lentille|chili|curry|couscous|tajine|haricot|pois chiche|ragout|mijote|bourguignon|pot.au.feu|soupe|veloute", name):
+    if re.search(r"dahl|lentille|chili|curry|couscous|tajine|haricot|pois chiche|ragout|mijote|bourguignon|pot.au.feu|soupe|veloute|ratatouille|bolognaise", name):
         return [f"1. Rincez les lentilles ou céréales si nécessaire. Émincez {onion.lower()}, hachez {garlic.lower()} et coupez {veg_text}.",
                 "2. Faites revenir les aromates dans l’huile prévue pendant 3 à 5 minutes; ajoutez les épices et remuez 30 secondes.",
                 f"3. Ajoutez les légumes, les tomates, le bouillon et les légumineuses indiqués. Couvrez et laissez mijoter {max(20, cook)} minutes à feu doux, en remuant et en ajoutant un peu d’eau si nécessaire.",
