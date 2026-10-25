@@ -190,3 +190,32 @@ for r in recipes:
 
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"Recipes={len(recipes)}; exact duplicate ingredient rows removed={removed_duplicate_rows}; explicit cards corrected={17}; numbering cleanup applied.")
+
+
+# Normalize legacy ingredient rows to one clear quantity for shopping lists.
+def normalize_quantity_row(value):
+    if ":" not in str(value):
+        return value
+    left, right = [part.strip() for part in str(value).split(":", 1)]
+    if not re.fullmatch(r"(?:\d+(?:[.,]\d+)?(?:/\d+)?|½|¼|un|une)(?:\s*(?:g|kg|ml|cl|l|gousse|gousses|c\.\s*à\s*(?:soupe|café)|cuillère\s+à\s+(?:soupe|café)|pincée|pincées|feuille|feuilles|bouquet|bouquets|pot|pots))?", right, re.I):
+        return value
+    m = re.match(r"^(\d+(?:[.,]\d+)?(?:/\d+)?|½|¼|un|une)(?:\s*(g|kg|ml|cl|l|gousses?|c\.\s*à\s*(?:soupe|café)|cuillère\s+à\s+(?:soupe|café)))?\s*(.*)$", left, re.I)
+    name = m.group(3).strip() if m else left
+    name = re.sub(r"^(?:de|du|des|d['’])\s*", "", name, flags=re.I)
+    name = re.sub(r"^(?:gousse|gousses|cuillère\s+à\s+(?:soupe|café))\s+d['’]\s*", "", name, flags=re.I)
+    name = re.sub(r"^d['’]\s*", "", name, flags=re.I).strip()
+    if not name: return value
+    if re.fullmatch(r"\d+(?:[.,]\d+)?", right): return right + " " + name
+    if re.search(r"c\.\s*à\s*soupe|cuillère\s+à\s*soupe", right, re.I) and norm(name) in ("citron", "citron jaune", "citron vert"):
+        name = "jus de " + name
+    prep = "d’" if re.match(r"^[aeiouyhàâäéèêëîïôöùûü]", name, re.I) else "de "
+    return right + " " + prep + name
+
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name",""), re.I): continue
+    old = r.get("ingredients", [])
+    new = [normalize_quantity_row(i) for i in old]
+    if new != old:
+        r["ingredients"] = new
+        sync_sections(r)
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
