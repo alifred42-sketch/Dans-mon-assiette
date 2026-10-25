@@ -1,0 +1,29 @@
+name: Repair generic recipe steps
+
+on:
+  push:
+    branches:
+      - travail-cuisine-chic-ouf-design
+    paths:
+      - ".github/workflows/repair-generic-recipes.yml"
+      - "scripts/repair-generic-recipe-steps.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair-recipes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout test branch
+        uses: actions/checkout@v4
+        with:
+          ref: travail-cuisine-chic-ouf-design
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Apply targeted recipe corrections
+        run: python scripts/repair-generic-recipe-steps.py
