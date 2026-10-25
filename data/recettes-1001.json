@@ -1117,5 +1117,97 @@
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 948,
     "id": "pdf-1001-948"
+  },
+  {
+    "name": "Salade italienne express au melon et jambon cru",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Melon de Charentes bien mûr : 1 gros pièce (chair coupée en cubes)",
+      "Jambon cru : 4 belles tranches coupées en lanières",
+      "Salade roquette fraîche : 100 g",
+      "Huile d'olive extra vierge : 2 cuillères à soupe",
+      "Vinaigre balsamique : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le lit vert : Répartissez la salade roquette piquante au fond d'un grand plat de présentation plat.",
+      "Le sucré : Disposez les cubes de melon juteux de manière homogène par-dessus la roquette.",
+      "Le salé : Répartissez les lanières de jambon cru sur l'ensemble de la préparation de fruits.",
+      "L'arrosage : Versez l'huile d'olive extra vierge et le vinaigre balsamique en filet continu sur le plat.",
+      "Le service : Brassez très délicatement et servez immédiatement cette entrée estivale contrastée."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 949,
+    "id": "pdf-1001-949"
+  },
+  {
+    "name": "Wrap nordique express au crabe et concombre",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Grandes tortillas de blé : 4 pièces",
+      "Chair de crabe ou miettes de tourteau (en boîte) : 150 g égouttée",
+      "Concombre : 1/2 pièce taillée en fins bâtonnets",
+      "Fromage frais (type St Môret) : 4 cuillères à soupe",
+      "Aneth séché : 1 pincée"
+    ],
+    "steps": [
+      "Le tartinage : Nappez une face de chaque tortilla de blé avec une cuillère de fromage frais St Môret.",
+      "L'aromate : Saupoudrez la pincée d'aneth uniformément sur toute la surface de la crème blanche.",
+      "Le poisson : Répartissez la chair de crabe parfaitement égouttée au centre de chaque galette.",
+      "Le croquant : Déposez les fins bâtonnets de concombre frais par-dessus le crabe.",
+      "Le roulage : Pliez la base de la tortilla puis roulez serré pour former un wrap compact. Servez froid."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 950,
+    "id": "pdf-1001-950"
+  },
+  {
+    "name": "Tartine méditerranéenne aux légumes blancs et feta",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de campagne : 4 grandes tranches",
+      "Haricots blancs Cannellini cuits : 150 g (en conserve égouttés et écrasés)",
+      "Fromage Feta : 80 g émietté",
+      "Huile d'olive extra vierge : 2 cuillères à soupe",
+      "Origan séché : 1 pincée"
+    ],
+    "steps": [
+      "Le tartinage : Étalez la purée de haricots blancs Cannellini à la fourchette sur chaque tranche de pain.",
+      "Le fromage : Répartissez la feta émiettée délicatement sur l'ensemble de la surface.",
+      "L'arrosage : Versez l'huile d'olive extra vierge en filet continu sur les tartines.",
+      "L'aromate : Saupoudrez la pincée d'origan séché pour relever le goût du fromage.",
+      "Le service : Donnez un tour de moulin à poivre noir et servez immédiatement cette tartine fraîche."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 951,
+    "id": "pdf-1001-951"
+  },
+  {
+    "name": "Salade niçoise de l’étudiant pressé",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Thon au naturel (en boîte) : 200 g égoutté et émietté",
+      "Salade verte (laitue ou batavia) : 150 g hachée",
+      "Tomates cerises : 12 pièces coupées en deux",
+      "Olives noires dénoyautées : 12 pièces entières",
+      "Huile d'olive : 3 cuillères à soupe"
+    ],
+    "steps": [
+      "La verdure : Répartissez la salade verte hachée au fond d'un grand saladier.",
+      "Les légumes : Ajoutez les demi-tomates cerises fraîches et les olives noires entières.",
+      "Les protéines : Déposez les miettes de thon égoutté directement sur le dessus.",
+      "L'assaisonnement : Nappez l'ensemble du plat avec l'huile d'olive extra vierge fine.",
+      "Le mélange : Brassez énergiquement le tout à la cuillère et servez immédiatement cette version minute."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 952,
+    "id": "pdf-1001-952"
   }
 ]
