@@ -1,3 +1,4 @@
+# Execution pilotée depuis GitHub Actions sur la branche de test.
 #!/usr/bin/env python3
 """Quality corrections for recipe cards; intentionally leaves Opération Vide-Frigo contents untouched."""
 import json, re, unicodedata
