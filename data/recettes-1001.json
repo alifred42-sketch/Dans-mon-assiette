@@ -901,9 +901,84 @@
       "Tomates cerises : 12 pièces coupées en deux",
       "Huile d'olive : 1 cuillère à soupe"
     ],
-    "steps": [],
+    "steps": [
+      "La base : Versez les haricots blancs parfaitement égouttés au fond de votre plat de service creux.",
+      "La sauce : Ajoutez les cuillères de pesto de basilic épais directement sur les légumineuses.",
+      "Les légumes : Intégrez les moitiés de tomates cerises fraîches dans le saladier de préparation.",
+      "La liaison : Arrosez d'un mince filet d'huile d'olive extra vierge pour détendre et lisser le pesto.",
+      "Le mélange : Brassez énergiquement l'ensemble pour napper chaque grain et servez immédiatement."
+    ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 939,
     "id": "pdf-1001-939"
+  },
+  {
+    "name": "Salade mexicaine Haricots rouges, Maïs & Avocat",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Haricots rouges cuits : 250 g (en conserve égouttés)",
+      "Maïs en grains : 150 g (en conserve égoutté)",
+      "Avocat bien mûr : 1 gros pièce coupé en dés",
+      "Jus de citron vert : 1 pièce pressée",
+      "Huile de tournesol : 2 cuillères à soupe"
+    ],
+    "steps": [
+      "Le mélange : Réunissez les haricots rouges rincés et les grains de maïs doux dans un grand saladier.",
+      "Le fruit : Ajoutez les dés d'avocat frais directement sur le dessus de la préparation colorée.",
+      "L'acide : Arrosez l'avocat avec le jus de citron vert pour assaisonner et fixer sa belle couleur verte.",
+      "La liaison : Versez l'huile de tournesol, salez et donnez un bon tour de moulin à poivre noir.",
+      "Le service : Remuez très délicatement pour ne pas écraser l'avocat et servez cette salade mexicaine."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 940,
+    "id": "pdf-1001-940"
+  },
+  {
+    "name": "Rillettes de sardines minute et crackers",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Sardines à l'huile (en boîte) : 2 boîtes (environ 200 g)",
+      "Fromage frais (type St Môret ou Philadelphia) : 100 g",
+      "Jus de citron jaune : 1 cuillère à soupe pressée",
+      "Échalote : 1/2 pièce émincée microscopiquement",
+      "Crackers ou gressins : 1 paquet pour le service"
+    ],
+    "steps": [
+      "Le parage : Égouttez les sardines en boîte et retirez l'arête centrale si vous le souhaitez.",
+      "L'écrasé : Placez la chair des sardines dans une assiette creuse et écrasez-la finement à la fourchette.",
+      "La liaison : Ajoutez le fromage frais St Môret, le jus de citron et les morceaux d'échalote crue.",
+      "L'homogénéisation : Brassez énergiquement le tout à la fourchette pour obtenir une texture de rillettes liée.",
+      "Le service : Transvasez dans un joli bol et servez immédiatement bien frais avec vos crackers."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 941,
+    "id": "pdf-1001-941"
+  },
+  {
+    "name": "Tartine de houmous, feta et concombre",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de campagne ou aux céréales : 4 grandes tranches",
+      "Houmous classique prêt à l'emploi : 150 g",
+      "Fromage Feta : 80 g émietté",
+      "Concombre : 1/2 pièce coupée en fines rondelles",
+      "Poivre noir du moulin : 1 tour"
+    ],
+    "steps": [
+      "Le tartinage : Étalez une couche généreuse de houmous sur une face de chaque tranche de pain frais ou grillé.",
+      "Le croquant : Disposez harmonieusement les fines rondelles de concombre cru sur le lit de houmous.",
+      "Le fromage : Répartissez la feta émiettée délicatement sur l'ensemble de la surface des tartines.",
+      "Le poivre : Ajoutez un bon tour de moulin à poivre noir pour relever le goût de la feta.",
+      "Le service : Présentez sur un plateau et dégustez immédiatement tant que le concombre est bien croquant."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 942,
+    "id": "pdf-1001-942"
   }
 ]
