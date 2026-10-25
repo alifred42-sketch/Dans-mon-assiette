@@ -19,8 +19,14 @@ for (let week = 1; week <= 52; week += 1) {
   for (const slot of slots) {
     if (slot.recipeId && !recipeById.has(slot.recipeId)) errors.push(`Semaine ${week}: recette absente pour « ${slot.name} » (${slot.recipeId}).`);
   }
-  const fridayLunch = slots.find((slot) => slot.day === "VENDREDI" && slot.meal === "Midi");
-  if (!fridayLunch?.name?.includes("Opération Vide-Frigo")) errors.push(`Semaine ${week}: le vendredi midi doit être « 🍱 Opération Vide-Frigo ! ».`);
+  const previousDay = { MARDI: "LUNDI", MERCREDI: "MARDI", JEUDI: "MERCREDI", VENDREDI: "JEUDI", SAMEDI: "VENDREDI", DIMANCHE: "SAMEDI" };
+  for (const day of ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"]) {
+    const lunch = slots.find((slot) => slot.day === day && slot.meal === "Midi");
+    const sourceWeek = day === "LUNDI" ? (week === 1 ? 52 : week - 1) : week;
+    const sourceDay = day === "LUNDI" ? "DIMANCHE" : previousDay[day];
+    const sourceDinner = weekOf(sourceWeek).find((slot) => slot.day === sourceDay && slot.meal === "Soir");
+    if (lunch?.recipeId !== sourceDinner?.recipeId) errors.push(`Semaine ${week}: le déjeuner du ${day} ne reprend pas le dîner précédent.`);
+  }
   const fridayDinner = slots.find((slot) => slot.day === "VENDREDI" && slot.meal === "Soir");
   if (!/burger|pizza|tacos|quesadilla|croque|wrap|hot.?dog|kebab|nugget/i.test(fridayDinner?.name || "")) warnings.push(`Semaine ${week}: repas plaisir du vendredi soir à vérifier — ${fridayDinner?.name || "absent"}.`);
   const saturdayMeals = slots.filter((slot) => slot.day === "SAMEDI");
