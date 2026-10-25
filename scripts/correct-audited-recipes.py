@@ -1633,5 +1633,5 @@ for r in recipes:
         continue
     sync_sections(r)
     sync_count += 1
-p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\\n", encoding="utf-8")
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"Late generic templates replaced={late_template_fixed}; targeted dessert/mug recipes repaired=7; sections synchronized={sync_count}; Vide-Frigo cards preserved.")
