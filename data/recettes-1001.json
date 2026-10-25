@@ -271,5 +271,202 @@
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 911,
     "id": "pdf-1001-911"
+  },
+  {
+    "name": "One-Pot Pasta au thon, olives et câpres",
+    "timePrep": "5 min",
+    "timeCook": "12 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pâtes courtes (type Penne ou Fusilli) : 300 g",
+      "Thon au naturel (en boîte) : 200 g égoutté et émietté",
+      "Olives noires dénoyautées : 12 pièces coupées en deux",
+      "Câpres au vinaigre : 1 cuillère à soupe égouttée",
+      "Coulis de tomates : 200 ml",
+      "Eau froide : 500 ml"
+    ],
+    "steps": [
+      "L'assemblage : Déposez les pâtes crues, les miettes de thon, les demi-olives et les câpres dans une grande sauteuse.",
+      "Le mouillage : Versez le coulis de tomates rouge et la totalité de l'eau froide directement sur les ingrédients.",
+      "La cuisson : Portez à forte ébullition et laissez cuire à découvert pendant 12 minutes en remuant régulièrement.",
+      "Le test : Vérifiez que les pâtes sont al dente et que le liquide s'est transformé en sauce épaisse.",
+      "Le service : Donnez un bon tour de moulin à poivre noir, remuez une dernière fois et servez bien chaud."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 912,
+    "id": "pdf-1001-912"
+  },
+  {
+    "name": "Chili con carne express de l'étudiant",
+    "timePrep": "5 min",
+    "timeCook": "15 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Viande hachée de bœuf : 300 g",
+      "Haricots rouges cuits : 400 g (1 grande conserve rincée)",
+      "Maïs en grains : 150 g égoutté",
+      "Coulis de tomates : 400 ml",
+      "Épices Chili en poudre : 1 cuillère à soupe bombée"
+    ],
+    "steps": [
+      "La viande : Saisissez la viande hachée dans une casserole huilée à feu vif pendant 4 minutes en la détachant à la spatule.",
+      "Les épices : Saupoudrez les épices Chili sur le bœuf doré et mélangez bien pour développer les arômes.",
+      "L'assemblage : Ajoutez les haricots rouges rincés et les grains de maïs doux égouttés.",
+      "Le liquide : Versez la totalité du coulis de tomates, remuez et portez à frémissement doux.",
+      "Le mijotage : Laissez réduire à couvert sur feu moyen pendant 10 minutes pour bien lier la sauce. Servez chaud."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 913,
+    "id": "pdf-1001-913"
+  },
+  {
+    "name": "Soupe crémeuse de coquillettes au jambon et Kiri",
+    "timePrep": "5 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pâtes (type Coquillettes) : 200 g",
+      "Jambon blanc : 4 tranches coupées en lanières",
+      "Portions de fromage Kiri : 4 pièces",
+      "Bouillon de légumes de qualité : 800 ml chaud"
+    ],
+    "steps": [
+      "Le bouillon : Portez le bouillon de légumes à forte ébullition au fond d'une grande casserole.",
+      "Les pâtes : Jetez les coquillettes crues directement dans le bouillon bouillant.",
+      "La cuisson : Laissez cuire à découvert pendant 8 minutes en remuant de temps en temps (les pâtes doivent absorber une partie du liquide).",
+      "L'onctuosité : Baissez le feu, jetez les portions de Kiri et les lanières de jambon blanc dans la casserole chaude.",
+      "Le brouillage : Mélangez énergiquement à la cuillère en bois pendant 2 minutes jusqu'à ce que le Kiri soit fondu et servez bien chaud."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 914,
+    "id": "pdf-1001-914"
+  },
+  {
+    "name": "One-Pot de lentilles corail au thon et carottes",
+    "timePrep": "10 min",
+    "timeCook": "15 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Lentilles corail : 200 g rincées",
+      "Thon au naturel (en boîte) : 200 g égoutté et émietté",
+      "Carotte : 1 belle pièce coupée en tout petits dés microscopiques",
+      "Coulis de tomates : 200 ml",
+      "Eau froide : 400 ml"
+    ],
+    "steps": [
+      "Le montage : Placez les lentilles corail crues, les miettes de thon et les micro-dés de carotte dans une casserole.",
+      "Le mouillage : Versez le coulis de tomates et la totalité de l'eau froide d'un coup sec sur la préparation.",
+      "La cuisson : Portez à frémissement, puis baissez le feu au minimum pour éviter les projections.",
+      "Le mijotage : Laissez cuire doucement à découvert pendant 15 minutes en remuant régulièrement pour que le fond n'attache pas.",
+      "Le service : Retirez du feu dès que les lentilles sont fondues en une purée épaisse et servez chaud."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 915,
+    "id": "pdf-1001-915"
+  },
+  {
+    "name": "One-Pot Rice au porc ou dinde façon asiatique",
+    "timePrep": "10 min",
+    "timeCook": "15 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Riz blanc : 250 g",
+      "Filets de porc ou de dinde : 300 g coupés en fines lanières",
+      "Sauce soja salée : 3 cuillères à soupe",
+      "Huile de sésame ou de tournesol : 1 cuillère à soupe",
+      "Eau froide : 500 ml"
+    ],
+    "steps": [
+      "La viande : Saisissez les lanières de viande dans l'huile bien chaude au fond d'une casserole pendant 3 minutes.",
+      "Le riz : Jetez le riz blanc cru directement sur la viande dorée et mélangez bien.",
+      "Le mouillage : Versez la sauce soja salée et le volume d'eau froide directement dans la casserole.",
+      "La cuisson : Portez à forte ébullition, couvrez et laissez cuire à feu très doux pendant 12 minutes.",
+      "Le service : Retirez du feu dès l'absorption complète de l'eau, égrainez à la fourchette et servez chaud."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 916,
+    "id": "pdf-1001-916"
+  },
+  {
+    "name": "Mijoté de saucisses aux haricots rouges",
+    "timePrep": "5 min",
+    "timeCook": "12 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Saucisses de Francfort ou de Toulouse : 4 pièces coupées en rondelles épaisses",
+      "Haricots rouges cuits : 400 g (en conserve égouttés)",
+      "Coulis de tomates : 300 ml",
+      "Oignon jaune : 1 pièce émincée",
+      "Huile de tournesol : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le rissolage : Faites revenir l'oignon émincé et les rondelles de saucisses dans l'huile pendant 4 minutes dans une grande poêle.",
+      "Les légumineuses : Ajoutez les haricots rouges parfaitement égouttés dans la poêle chaude.",
+      "Le rouge : Versez la totalité du coulis de tomates et mélangez bien à la spatule.",
+      "Le mijotage : Laissez frémir à petits bouillons et à découvert pendant 8 minutes pour concentrer la sauce.",
+      "Le service : Donnez un généreux tour de moulin à poivre noir et servez ce mijoté rustique bien chaud."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 917,
+    "id": "pdf-1001-917"
+  },
+  {
+    "name": "Nouilles sautées express œuf et soja (à la casserole)",
+    "timePrep": "5 min",
+    "timeCook": "6 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Nouilles instantanées (natures) : 250 g",
+      "Œufs frais : 3 pièces battus",
+      "Sauce soja salée : 3 cuillères à soupe",
+      "Huile de tournesol : 1 cuillère à soupe",
+      "Eau bouillante : 600 ml"
+    ],
+    "steps": [
+      "Les pâtes : Plongez les nouilles instantanées dans l'eau bouillante au fond d'une casserole pendant 3 minutes.",
+      "L'égouttage : Égouttez les nouilles dans une passoire en éliminant complètement l'eau de cuisson.",
+      "Le saut : Remettez la casserole vide sur le feu avec l'huile et jetez-y les nouilles cuites.",
+      "Les œufs : Versez les œufs battus et la sauce soja directement sur les nouilles chaudes.",
+      "Le brouillage : Remuez vigoureusement à la fourchette pendant 3 minutes sur feu moyen jusqu'à ce que les œufs soient cuits et bien répartis. Servez."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 918,
+    "id": "pdf-1001-918"
+  },
+  {
+    "name": "Dessert à la casserole : Flocons d'avoine gourmands Pomme-Chocolat (Porridge)",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Flocons d'avoine fins : 150 g",
+      "Pomme : 1 pièce pelée et râpée grossièrement",
+      "Chocolat noir de cuisine : 60 g brisé en pépites",
+      "Lait ou eau : 600 ml"
+    ],
+    "steps": [
+      "L'assemblage : Versez les flocons d'avoine fins et la pomme râpée au fond de votre casserole.",
+      "Le liquide : Mouillez le tout avec le lait ou l'eau froide et mélangez à la spatule.",
+      "La cuisson : Faites chauffer à feu moyen pendant 4 minutes en remuant constamment jusqu'à l'obtention d'une consistance crémeuse.",
+      "L'ajout gourmand : Hors du feu, jetez les pépites de chocolat noir directement dans le porridge fumant.",
+      "L'enrobage : Laissez fondre le chocolat 1 minute puis donnez un bon coup de cuillère pour créer des marbrures avant de servir."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 919,
+    "id": "pdf-1001-919"
+  },
+  {
+    "name": "One-Pot Pasta au chorizo et crème",
+    "timePrep": "5 min",
+    "timeCook": "12 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pâtes courtes (type Penne) : 300 g",
+      "Chorizo doux ou fort : 100 g coupé en fines rondelles"
+    ],
+    "steps": [],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 920,
+    "id": "pdf-1001-920"
   }
 ]
