@@ -559,7 +559,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
       return { ...slot, name: matrixSelection.name, recipeId: matrixSelection.recipe.id };
     }
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
-    const currentValid = current ? isValidatedRecipe(current) && eligibleForPreferences(current, preferences) && !reserved.has(current.id) : false;
+    const currentValid = current ? isValidatedRecipe(current) && eligibleForPreferences(current, preferences) && isSeasonCompatible(current, season) && !reserved.has(current.id) : false;
     const currentScore = current ? seasonalScore(current, season) : 0;
     if (current && currentValid && currentScore > 0 && !used.has(current.id)) {
       used.add(current.id);
