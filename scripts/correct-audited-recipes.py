@@ -1021,3 +1021,49 @@ for r in recipes:
     sync_sections(r)
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Dernières fiches saisonnières, végétariennes, boissons et étudiantes corrigées.")
+
+
+# Explicitly preserve the two intentional leftover/fin-de-semaine cards, as requested.
+if "r-43e1f116de" in by:
+    by["r-43e1f116de"]["name"] = "Assiette de restes et crudités"
+    by["r-43e1f116de"]["ingredients"] = [
+      "Restes de féculents ou viande cuite (ex: riz de la recette 263): 300 g",
+      "1 quantité",
+      "4 pièces écalées",
+      "4 c. à soupe de vinaigrette légère moutarde-citron",
+      "1 pincée de Sel, poivre"
+    ]
+    by["r-43e1f116de"]["steps"] = [
+      "1. Le tri des restes : Sortez du réfrigérateur vos restes de la semaine (riz cuisiné, poulet effiloché ou pâtes). S'ils se mangent chauds, passez-les 1 minute au micro-ondes pour les tiédir, sinon laissez-les froids.",
+      "2. Le découpage des œufs : Écalez vos 4 œufs durs préparés d'avance et coupez-les en quartiers réguliers.",
+      "3. Le compartimentage de l'assiette : Prenez 4 grandes assiettes. Disposez au centre de chacune une portion de vos restes de riz ou de pâtes.",
+      "4. Le décor végétal : Placez harmonieusement autour du féculent les bâtonnets de carottes, de concombres et les tomates cerises issus de vos garnitures prêtes d'avance. Ajoutez les quartiers d'œufs durs.",
+      "5. Le laquage final : Arrosez chaque assiette assemblée avec une cuillère à soupe de vinaigrette légère moutarde-citron juste avant de passer à table."
+    ]
+    by["r-43e1f116de"]["timePrep"] = "10 min"
+    by["r-43e1f116de"]["timeCook"] = "0 min"
+    by["r-43e1f116de"]["servings"] = "4 personnes"
+    sync_sections(by["r-43e1f116de"])
+if "r-366a4a239f" in by:
+    by["r-366a4a239f"]["name"] = "🥗 Assiette légère de fin de semaine"
+    by["r-366a4a239f"]["ingredients"] = [
+      "Restes de riz ou pâtes de la semaine (ex: recette 263): 300 g",
+      "Restes de poulet effiloché (ex: recette 258) ou tranches de dinde: 200 g",
+      "12 pièces coupées en deux",
+      "1/2 concombre coupé en rondelles",
+      "4 c. à soupe de sauce yaourt-moutarde aux herbes",
+      "1 pincée de Sel, poivre"
+    ]
+    by["r-366a4a239f"]["steps"] = [
+      "1. La base : Prenez 4 grandes assiettes de présentation. Répartissez une portion de vos restes de féculents froids (riz ou pâtes) au centre de chacune.",
+      "2. Les protéines : Ajoutez les morceaux de poulet effiloché ou les lanières de dinde à côté du féculent.",
+      "3. Le végétal : Disposez harmonieusement les demi-tomates cerises et les rondelles de concombre frais pour habiller l'assiette.",
+      "4. L'assaisonnement : Nappez chaque assiette d'une belle cuillère à soupe de sauce yaourt-moutarde aux herbes.",
+      "5. La finition : Ajoutez une mini-pincée de sel et de poivre sur les crudités juste avant de déguster ce repas complet \"vide-frigo\"."
+    ]
+    by["r-366a4a239f"]["timePrep"] = "10 min"
+    by["r-366a4a239f"]["timeCook"] = "0 min"
+    by["r-366a4a239f"]["servings"] = "4 personnes"
+    sync_sections(by["r-366a4a239f"])
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Les fiches de restes intentionnelles ont été restaurées sans modification.")
