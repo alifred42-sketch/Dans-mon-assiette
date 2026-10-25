@@ -2062,7 +2062,7 @@ for r in recipes:
           "4. Répétez par tranches de 15 à 20 secondes en remuant entre chaque, jusqu’à ce que les œufs soient pris mais encore moelleux.",
           "5. Laissez reposer 30 secondes et servez immédiatement."
         ]
-    elif "oeufs au plat" in name:
+    elif "oeufs au plat" in name or "œufs au plat" in name:
         steps = [
           "1. Graissez légèrement une assiette creuse ou un récipient large compatible avec le micro-ondes.",
           "2. Cassez les œufs dans le récipient et percez délicatement les jaunes avec la pointe d’un couteau.",
@@ -2274,7 +2274,7 @@ for r in recipes:
           "4. Répétez par tranches de 15 à 20 secondes en remuant entre chaque, jusqu’à ce que les œufs soient pris mais encore moelleux.",
           "5. Laissez reposer 30 secondes et servez immédiatement."
         ]
-    elif "oeufs au plat" in name:
+    elif "oeufs au plat" in name or "œufs au plat" in name:
         steps = [
           "1. Graissez légèrement une assiette creuse ou un récipient large compatible avec le micro-ondes.",
           "2. Cassez les œufs dans le récipient et percez délicatement les jaunes avec la pointe d’un couteau.",
