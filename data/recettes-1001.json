@@ -1743,5 +1743,50 @@
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 976,
     "id": "pdf-1001-976"
+  },
+  {
+    "name": "Le Tiramisu aux Flocons d'Avoine (sans cuisson)",
+    "timePrep": "10 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Flocons d'avoine fins : 100 g",
+      "Café expresso fort liquide : 150 ml tiède",
+      "Yaourt grec ou fromage blanc nature : 400 g",
+      "Sirop d'érable ou miel : 2 cuillères à soupe",
+      "Cacao en poudre non sucré : 1 cuillère à soupe (décor)"
+    ],
+    "steps": [
+      "Le grain : Répartissez les flocons d'avoine fins de manière égale au fond de 4 verres ou verrines.",
+      "L'imbibage : Arrosez les flocons avec le café expresso tiède pour qu'ils gonflent et s'adoucissent.",
+      "La crème : Dans un bol, fouettez le yaourt grec avec le sirop d'érable pour lisser la préparation.",
+      "Le montage : Versez cette crème de yaourt blanc par-dessus le lit d'avoine au café dans les verres.",
+      "Le graphisme : Saupoudrez le cacao en poudre au travers d'une petite passoire sur le dessus et servez frais."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 977,
+    "id": "pdf-1001-977"
+  },
+  {
+    "name": "Le Toast au Yaourt Soufflé",
+    "timePrep": "5 min",
+    "timeCook": "6 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Tranches de pain de mie épais : 4 pièces",
+      "Yaourt nature classique : 1 pot (125 g)",
+      "Œuf frais : 1 pièce",
+      "Sirop d'érable ou sucre : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le creux : Pressez le centre de chaque tranche de pain de mie avec le dos d'une cuillère pour former une cuvette.",
+      "L'appareil : Dans un petit bol, fouettez énergiquement le yaourt nature, l'œuf entier et le sirop d'érable.",
+      "Le remplissage : Versez cette crème de yaourt liquide directement au cœur des cavités du pain.",
+      "La cuisson four : Placez les tranches sur une plaque et enfournez-les sous le grill du four à 200°C pendant 6 minutes.",
+      "Le soufflé : Le pain doit être croustillant et la crème de yaourt doit gonfler et dorer comme un flan. Servez chaud."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 978,
+    "id": "pdf-1001-978"
   }
 ]
