@@ -1391,7 +1391,12 @@ for r in recipes:
         continue
     steps = r.get("steps", [])
     if isinstance(steps, list) and steps and any(_generic_rx.search(str(step)) for step in steps):
-        r["steps"] = _generic_steps_for(r)
+        repaired_steps = _generic_steps_for(r)
+        # Ground each repaired template in the actual ingredients of this specific card.
+        actual_ingredients = [str(item).strip() for item in r.get("ingredients", []) if str(item).strip()]
+        if actual_ingredients and repaired_steps and "Ingrédients à préparer pour cette recette :" not in repaired_steps[0]:
+            repaired_steps[0] = repaired_steps[0].rstrip(".; ") + ". Ingrédients à préparer pour cette recette : " + ", ".join(actual_ingredients[:6]) + "."
+        r["steps"] = repaired_steps
         _generic_changed += 1
     for sec in r.get("sections", []):
         title = sec.get("title", "")
