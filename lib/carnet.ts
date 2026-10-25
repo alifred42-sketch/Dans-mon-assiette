@@ -3,6 +3,7 @@ import pdfRecipeOverrides619 from "@/data/recettes-619.json";
 import pdfRecipeOverrides800 from "@/data/recettes-800.json";
 import pdfRecipeOverrides899 from "@/data/recettes-899.json";
 import pdfRecipeOverrides1001 from "@/data/recettes-1001.json";
+import pdfRecipeOverrides1024 from "@/data/recettes-1024.json";
 import { trendRecipes } from "@/data/recettes-tendances";
 import { springFestivalRecipes } from "@/data/recettes-fetes-printemps";
 import { summerFestivalRecipes } from "@/data/recettes-fetes-ete";
@@ -132,8 +133,8 @@ function recipeMatchKey(value: string): string {
 }
 
 type PdfRecipeEntry = {
-  recipe: (typeof pdfRecipeOverrides800)[number] | (typeof pdfRecipeOverrides619)[number] | (typeof pdfRecipeOverrides899)[number] | (typeof pdfRecipeOverrides1001)[number];
-  source: "RECETTES 619.pdf" | "RECETTES 800.pdf" | "RECETTES 899.pdf" | "RECETTES 1000.pdf";
+  recipe: (typeof pdfRecipeOverrides800)[number] | (typeof pdfRecipeOverrides619)[number] | (typeof pdfRecipeOverrides899)[number] | (typeof pdfRecipeOverrides1001)[number] | (typeof pdfRecipeOverrides1024)[number];
+  source: "RECETTES 619.pdf" | "RECETTES 800.pdf" | "RECETTES 899.pdf" | "RECETTES 1000.pdf" | "RECETTES 1024.pdf";
   id: string;
 };
 
@@ -152,6 +153,11 @@ const pdfRecipeEntries: PdfRecipeEntry[] = [
     recipe,
     source: "RECETTES 1000.pdf" as const,
     id: recipe.id || `pdf-1001-${recipe.sourceNumber}`,
+  })),
+  ...pdfRecipeOverrides1024.map((recipe) => ({
+    recipe,
+    source: "RECETTES 1024.pdf" as const,
+    id: recipe.id || `pdf-1024-${recipe.sourceNumber}`,
   })),
   ...pdfRecipeOverrides619.map((recipe, index) => ({
     recipe,
