@@ -2460,6 +2460,79 @@ for r in recipes:
             sec["lines"] = steps[:]
     final_step_count += 1
 print(f"Final targeted corrections for remaining generic-step cards: {final_step_count}; Vide-Frigo cards preserved.")
+# Last-mile content check after every reload/template pass: keep these fixes in the final active JSON.
+d = json.loads(p.read_text(encoding="utf-8"))
+recipes = d.get("recipes", [])
+by = {r.get("id"): r for r in recipes}
+last_manual_steps = {
+ "r-530be65cae": [
+  "1. Épluchez les carottes et coupez-les en rondelles. Émincez les poireaux et l’oignon; nettoyez et émincez les champignons.",
+  "2. Coupez le poulet en morceaux réguliers. Faites chauffer l’huile dans une sauteuse et faites dorer le poulet 5 à 7 minutes en le retournant.",
+  "3. Ajoutez les carottes, les poireaux, les champignons, l’oignon, le bouillon, le thym et le laurier. Couvrez partiellement et laissez mijoter 20 à 25 minutes, jusqu’à ce que le poulet soit cuit à cœur et les légumes tendres.",
+  "4. Retirez le laurier. Mélangez le skyr et la moutarde dans un bol, ajoutez une cuillère de bouillon chaud pour les détendre puis incorporez hors du feu sans faire bouillir.",
+  "5. Faites cuire le riz complet selon le paquet et servez-le avec la blanquette. Goûtez et ajustez le sel et le poivre."
+ ],
+ "r-94dd4ec92d": [
+  "1. Épluchez les carottes et coupez-les en rondelles épaisses. Émincez le gros oignon.",
+  "2. Faites chauffer l’huile dans une cocotte et faites dorer les morceaux de poulet sur plusieurs faces pendant 5 à 7 minutes.",
+  "3. Ajoutez les carottes, l’oignon, le bouillon, le thym et le laurier. Portez à frémissement, couvrez partiellement et laissez mijoter 30 à 35 minutes.",
+  "4. Vérifiez que le poulet est cuit à cœur et que les carottes sont tendres. Retirez le laurier, puis goûtez et rectifiez avec le sel et le poivre prévus.",
+  "5. Servez le poulet et les carottes nappés du jus de cuisson."
+ ],
+ "r-21c5d3d2ba": [
+  "1. Épluchez et coupez les carottes en rondelles; émincez les poireaux, les champignons et l’oignon.",
+  "2. Coupez le poulet en morceaux. Faites chauffer l’huile dans une cocotte et faites dorer le poulet 5 minutes, puis ajoutez les légumes et faites revenir encore 4 minutes.",
+  "3. Versez le bouillon, ajoutez le thym et le laurier, puis laissez mijoter à couvert 20 à 25 minutes, jusqu’à cuisson complète du poulet et tendreté des légumes. Faites cuire le riz séparément selon le paquet.",
+  "4. Mélangez la crème avec le jaune d’œuf et un peu de jus de citron. Retirez le laurier et baissez le feu; incorporez progressivement une louche de bouillon chaud dans le mélange, puis versez-le dans la cocotte hors du feu sans faire bouillir.",
+  "5. Goûtez, poivrez et salez si nécessaire. Servez la blanquette avec le riz."
+ ],
+ "r-1c4329d6f0": [
+  "1. Coupez le poulet en morceaux. Émincez l’oignon, hachez l’ail et coupez les poivrons en lanières; détaillez les tomates.",
+  "2. Faites chauffer l’huile dans une sauteuse et faites dorer le poulet 5 à 7 minutes sur plusieurs faces.",
+  "3. Ajoutez l’oignon, l’ail et les poivrons; faites revenir 5 minutes. Incorporez les tomates, le paprika, le piment doux, le thym et le laurier.",
+  "4. Couvrez partiellement et laissez mijoter 20 à 25 minutes, jusqu’à ce que les poivrons soient tendres et le poulet cuit à cœur. Ajoutez un peu d’eau uniquement si la sauce accroche.",
+  "5. Retirez le laurier, goûtez et rectifiez l’assaisonnement. Parsemez du fromage râpé facultatif au moment de servir."
+ ],
+ "r-b8c81518b8": [
+  "1. Coupez le veau en cubes réguliers. Épluchez et tranchez les carottes; émincez les poireaux, les champignons et l’oignon.",
+  "2. Faites chauffer l’huile dans une cocotte et faites dorer le veau en plusieurs fois. Ajoutez l’oignon et faites revenir 3 minutes.",
+  "3. Ajoutez les carottes, les poireaux, les champignons, le bouillon, le thym et le laurier. Couvrez partiellement et laissez mijoter 45 à 60 minutes, jusqu’à ce que le veau soit tendre.",
+  "4. Mélangez la crème, le jaune d’œuf et un peu de jus de citron. Retirez le laurier, baissez le feu et incorporez le mélange hors du feu avec un peu de bouillon chaud; ne faites plus bouillir.",
+  "5. Goûtez, rectifiez le sel et le poivre et servez chaud."
+ ]
+}
+for (const [rid, steps] of Object.entries(last_manual_steps)) {
+ const r = by.get(rid);
+ if (!r || /vide.?frigo/i.test(r.get("name", ""))) continue;
+ r["steps"] = steps;
+ sync_sections(r);
+}
+const ingredientFixes = [
+ [/d’coriandre ou persil/gi, "de coriandre ou de persil"],
+ [/d’persil ou coriandre/gi, "de persil ou de coriandre"],
+ [/d’coriandre/gi, "de coriandre"],
+ [/d’persil/gi, "de persil"],
+ [/d’thym/gi, "de thym"],
+ [/d’huile olive/gi, "d’huile d’olive"],
+ [/d’huile colza/gi, "d’huile de colza"],
+ [/de escalopes/gi, "d’escalopes"],
+ [/1 aubergines/gi, "1 aubergine"],
+ [/1 courgette râpées/gi, "1 courgette râpée"],
+ [/1 olives noires/gi, "1 olive noire"]
+];
+for (const r of recipes) {
+ if (/vide.?frigo/i.test(r.get("name", ""))) continue;
+ const old = r.get("ingredients", []);
+ if (!Array.isArray(old)) continue;
+ const next = old.map(item => {
+  let s = String(item);
+  for (const [re, replacement] of ingredientFixes) s = s.replace(re, replacement);
+  return s;
+ });
+ if (JSON.stringify(next) !== JSON.stringify(old)) r["ingredients"] = next;
+ sync_sections(r);
+}
+
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Les 38 fiches ciblées ont été réécrites après les autres passes et enregistrées.")
 
