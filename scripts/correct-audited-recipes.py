@@ -264,3 +264,5 @@ replace_ings("vegan-automne-hiver-035",["250 g de pois cassés","1 oignon","1 ca
 replace_ings("vegan-automne-hiver-040",["300 g de chou-fleur râpé","80 g de grenade","30 g de pignons de pin","3 c. à soupe d’huile d’olive","2 c. à soupe de jus de citron","Sel et poivre"])
 replace_ings("vegan-automne-hiver-048",["150 g de mâche","2 betteraves cuites","2 tranches de pain complet","3 c. à soupe d’huile de colza","1 c. à soupe de vinaigre de cidre","1 c. à café de sirop d’érable","Sel et poivre"])
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+
+# Run the verified cleanup for split sauce ingredients.
