@@ -21,13 +21,15 @@ jobs:
         run: python -m py_compile scripts/correct-audited-recipes.py
       - name: Corriger les fiches recette et synchroniser les sections
         run: python scripts/correct-audited-recipes.py
+      - name: Synchroniser les déjeuners avec les dîners précédents
+        run: python scripts/align-weekly-leftovers.py
       - name: Enregistrer les corrections de recettes dans la branche de test
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if ! git diff --quiet -- data/carnet.json; then
             git add data/carnet.json
-            git commit -m "Corriger les étapes, ingrédients et quantités des recettes"
+            git commit -m "Synchroniser les recettes et le planning hebdomadaire"
             git push
           fi
       - uses: actions/setup-node@v4
