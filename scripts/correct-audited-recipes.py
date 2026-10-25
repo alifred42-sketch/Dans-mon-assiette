@@ -1710,6 +1710,56 @@ for rid, values in priority_cards.items():
         elif re.search(r"Préparation|Etapes|Étapes", title, re.I) and not re.search(r"astuce|conseil|robot|version|batch", title, re.I):
             sec["lines"] = r["steps"][:]
     priority_updated += 1
+
+# 3b) Correct clear unit/quantity corruption and one recipe whose ingredients did not match its title.
+apply("r-530be65cae", ingredients=[
+ "500 g de blancs de poulet","2 carottes","250 g de champignons","200 g de poireaux","1 oignon",
+ "500 ml de bouillon de volaille","100 g de skyr","1 c. à café de moutarde douce",
+ "250 g de riz complet cru","1 c. à soupe d’huile d’olive","1 branche de thym","1 feuille de laurier","Sel et poivre"
+])
+apply("r-94dd4ec92d", ingredients=[
+ "600 g de poulet en morceaux","6 carottes","1 gros oignon","500 ml de bouillon de volaille",
+ "1 c. à soupe d’huile d’olive","1 branche de thym","1 feuille de laurier","Poivre moulu (0,5 g)","Sel fin (2 g)"
+])
+apply("r-21c5d3d2ba", ingredients=[
+ "500 g de poulet en morceaux","2 carottes","250 g de champignons","200 g de poireaux","250 g de riz cru",
+ "150 ml de crème légère","1 citron","1 jaune d’œuf","1 c. à soupe d’huile d’olive",
+ "1 branche de thym","1 feuille de laurier","Poivre moulu (0,5 g)","Sel fin (2 g)"
+])
+apply("r-1c4329d6f0", ingredients=[
+ "500 g de poulet en morceaux","2 poivrons rouges et verts","300 g de tomates","1 oignon","1 gousse d’ail",
+ "1 c. à soupe d’huile d’olive","1 c. à café de paprika","1 c. à café de piment doux",
+ "1 branche de thym","1 feuille de laurier","30 g de fromage râpé (facultatif)","Sel et poivre"
+])
+apply("r-b8c81518b8", ingredients=[
+ "600 g de veau à mijoter","2 carottes","250 g de champignons","200 g de poireaux","1 oignon",
+ "500 ml de bouillon de volaille","150 ml de crème légère","1 citron","1 jaune d’œuf",
+ "1 c. à soupe d’huile d’olive","1 branche de thym","1 feuille de laurier","Poivre moulu (0,5 g)","Sel fin (2 g)"
+])
+apply("r-4b8db26421", ingredients=[
+ "600 g de bœuf à mijoter","2 carottes","250 g de champignons","1 oignon","2 gousses d’ail",
+ "400 ml de vin rouge","250 ml de bouillon de bœuf","1 c. à soupe d’huile d’olive",
+ "1 c. à soupe de farine","1 branche de thym","1 feuille de laurier","Sel et poivre"
+], steps=[
+ "1. Coupez le bœuf en cubes de 3 à 4 cm. Épluchez les carottes et coupez-les en rondelles; émincez l’oignon et hachez l’ail.",
+ "2. Faites chauffer l’huile dans une cocotte et faites dorer la viande en plusieurs fois. Réservez-la, puis faites revenir l’oignon, l’ail et les carottes 4 à 5 minutes.",
+ "3. Remettez la viande dans la cocotte, saupoudrez de farine et mélangez une minute. Versez le vin rouge et le bouillon; ajoutez le thym et le laurier.",
+ "4. Couvrez et laissez mijoter à feu très doux environ 2 heures, jusqu’à ce que le bœuf soit tendre. Ajoutez les champignons émincés pour les 20 dernières minutes.",
+ "5. Retirez le laurier, vérifiez la tendreté de la viande, goûtez et ajustez le sel et le poivre. Servez chaud."
+])
+apply("r-8ac7c2fa21", "Paëlla légère au poulet et aux fruits de mer", [
+ "350 g de blanc de poulet en morceaux","250 g de riz rond cru","200 g de crevettes décortiquées",
+ "200 g de moules décoquillées","1 poivron rouge","1 oignon","2 tomates","2 gousses d’ail",
+ "750 ml de bouillon de volaille","1 c. à soupe d’huile d’olive","1 c. à café de paprika doux",
+ "1 pincée de safran","1 citron (facultatif)","Sel et poivre"
+], [
+ "1. Émincez l’oignon et l’ail; coupez le poivron en dés et les tomates en petits morceaux. Faites chauffer le bouillon et ajoutez-y le safran.",
+ "2. Faites chauffer l’huile dans une grande sauteuse. Faites dorer les morceaux de poulet 5 à 7 minutes, puis ajoutez l’oignon, l’ail et le poivron et faites revenir 4 minutes.",
+ "3. Ajoutez les tomates, le paprika et le riz cru. Mélangez une minute pour enrober les grains, puis versez le bouillon chaud.",
+ "4. Laissez cuire à petits frémissements sans trop remuer pendant 15 minutes. Répartissez les crevettes et les moules sur le riz et poursuivez 5 à 8 minutes, jusqu’à ce que le riz soit tendre et les fruits de mer bien chauds.",
+ "5. Coupez le feu, couvrez et laissez reposer 5 minutes. Vérifiez que le poulet est cuit à cœur; servez avec le citron si souhaité."
+], "20 min","30 min",4)
+
 # 4) Replace remaining generic instructions with method-specific steps.
 GENERIC_STEP_RE = re.compile(
     r"Préparez les ingrédients|Hachez finement les aromates|Versez l’huile ou le liquide petit à petit|Préchauffez le four à 180 °C\. Lavez et coupez les légumes|Préparez la base prévue \(pâte, plaques ou légumes en couches\)|"
