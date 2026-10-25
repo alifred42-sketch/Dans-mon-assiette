@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - travail-cuisine-chic-ouf-design
-    paths:
-      - .github/workflows/apply-recipe-corrections.yml
   workflow_dispatch:
 
 permissions:
