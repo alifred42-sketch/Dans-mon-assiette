@@ -1583,3 +1583,55 @@ for r in recipes:
 print(f"Étapes génériques remplacées par des étapes adaptées : {generic_fixed} fiches.")
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Base enregistrée après la correction des étapes génériques.")
+
+
+# Dernier filet de sécurité : éliminer les anciens textes génériques qui décrivent un autre plat.
+bad_template_patterns = re.compile(
+    r"Lavez et coupez les légumes prévus en petits morceaux|"
+    r"Faites revenir les légumes dans la matière grasse indiquée|"
+    r"Versez les œufs battus sur la garniture|"
+    r"les assaisonnements listés",
+    re.I,
+)
+late_template_fixed = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I):
+        continue
+    if bad_template_patterns.search("\\n".join(r.get("steps", []))):
+        r["steps"] = steps_for_recipe(r)
+        sync_sections(r)
+        late_template_fixed += 1
+
+# Réparer les six desserts au chocolat dont les ingrédients étaient des libellés placeholders.
+apply("r-3822ce960b", "Fondant chocolat léger au skyr",
+ ["100 g de chocolat noir","150 g de skyr nature","2 œufs","50 g de farine complète","20 g de cacao non sucré","1 c. à soupe de miel (facultatif)"],
+ ["1. Préchauffez le four à 180 °C et chemisez un petit moule.","2. Faites fondre le chocolat doucement, puis laissez-le tiédir.","3. Fouettez le skyr avec les œufs et le miel. Incorporez le chocolat fondu.","4. Ajoutez la farine et le cacao tamisés; mélangez juste assez pour obtenir une pâte homogène.","5. Versez dans le moule et faites cuire 12 à 15 minutes : le centre doit rester légèrement fondant. Laissez tiédir avant de couper."], "10 min","15 min",4)
+apply("r-d319909cc0", "Mousse chocolat légère au skyr",
+ ["150 g de chocolat noir","300 g de skyr nature","2 blancs d’œufs pasteurisés","1 c. à café d’extrait de vanille","1 pincée de fleur de sel"],
+ ["1. Faites fondre le chocolat au bain-marie ou par courtes séquences au micro-ondes, puis laissez-le tiédir.","2. Mélangez le skyr avec la vanille et la fleur de sel.","3. Incorporez le chocolat fondu au mélange de skyr en plusieurs fois.","4. Montez les blancs d’œufs pasteurisés en neige ferme, puis incorporez-les délicatement à la préparation.","5. Répartissez dans quatre verrines et réservez au réfrigérateur au moins 2 heures."], "15 min","5 min",4)
+apply("r-c5820b31fc", "Brownie léger chocolat & skyr",
+ ["100 g de chocolat noir","150 g de skyr nature","2 œufs","80 g de farine complète","20 g de cacao non sucré","30 g de miel ou de sucre (facultatif)"],
+ ["1. Préchauffez le four à 180 °C et chemisez un petit moule carré.","2. Faites fondre le chocolat et laissez-le tiédir.","3. Fouettez les œufs avec le skyr et le miel ou le sucre si utilisé, puis ajoutez le chocolat fondu.","4. Incorporez la farine et le cacao tamisés sans trop travailler la pâte.","5. Versez dans le moule et faites cuire 15 à 20 minutes. Laissez refroidir avant de découper en carrés."], "10 min","20 min",4)
+apply("r-a10bc58641", "Crème dessert chocolat protéinée",
+ ["500 g de skyr nature","100 g de chocolat noir","20 g de cacao non sucré","1 c. à café d’extrait de vanille","20 g de noisettes concassées (facultatif)","1 pincée de fleur de sel (facultatif)"],
+ ["1. Faites fondre le chocolat au bain-marie ou par courtes séquences au micro-ondes, puis laissez-le tiédir.","2. Mélangez le skyr avec le cacao tamisé, la vanille et la fleur de sel si utilisée.","3. Incorporez le chocolat fondu en plusieurs fois jusqu’à obtenir une crème homogène.","4. Répartissez dans quatre ramequins et parsemez de noisettes si souhaité.","5. Réservez au réfrigérateur au moins 30 minutes avant de servir."], "10 min","5 min",4)
+apply("r-4ce28d774d", "🍫 Crème dessert chocolat maison",
+ ["500 ml de lait","100 g de chocolat noir","2 œufs","20 g de cacao non sucré","20 g de fécule de maïs","20 g de sucre (facultatif)"],
+ ["1. Dans un saladier, fouettez les œufs avec le cacao, la fécule et le sucre si utilisé.","2. Faites chauffer le lait dans une casserole. Ajoutez le chocolat en morceaux et remuez jusqu’à ce qu’il soit fondu.","3. Versez progressivement le lait chocolaté chaud sur le mélange aux œufs en fouettant.","4. Reversez dans la casserole et faites épaissir à feu doux sans cesser de remuer; ne laissez pas bouillir fortement.","5. Répartissez dans quatre verrines, laissez refroidir puis réfrigérez au moins 2 heures."], "10 min","10 min",4)
+apply("r-e6ef289c1b", "🍫 Mousse au chocolat",
+ ["150 g de chocolat noir","4 œufs frais extra-frais (blancs et jaunes séparés)","1 pincée de sel"],
+ ["1. Faites fondre le chocolat au bain-marie puis laissez-le tiédir sans le laisser durcir.","2. Séparez les blancs des jaunes. Incorporez les jaunes un à un au chocolat tiède.","3. Montez les blancs en neige avec la pincée de sel jusqu’à ce qu’ils soient fermes.","4. Incorporez délicatement les blancs au chocolat en plusieurs fois pour garder la mousse aérienne.","5. Répartissez dans quatre verrines et réservez au réfrigérateur au moins 3 heures. Pour les personnes fragiles, utilisez des œufs pasteurisés."], "15 min","5 min",4)
+
+# Mug cake salé : étapes propres à sa cuisson au micro-ondes et à sa portion individuelle.
+apply("student-microwave-034", "Mug Cake salé Jambon & Olive",
+ ["3 c. à soupe de farine","1/2 c. à café de levure chimique","1 œuf","1 c. à soupe d’huile","1 c. à soupe de lait","1/2 tranche de jambon","3 olives dénoyautées","1 c. à soupe de fromage râpé","Sel et poivre"],
+ ["1. Coupez le jambon en petits dés et les olives en rondelles.","2. Dans un grand mug compatible avec le micro-ondes, mélangez la farine, la levure, l’œuf, l’huile et le lait jusqu’à disparition des grumeaux.","3. Incorporez le jambon, les olives, le fromage râpé, le sel et le poivre. Ne remplissez pas le mug au-delà des deux tiers.","4. Faites cuire au micro-ondes à puissance élevée pendant environ 1 min 30 à 2 min. Vérifiez que le centre est pris; prolongez par tranches de 10 secondes si nécessaire.","5. Laissez reposer une minute avant de manger : le mug est très chaud."], "4 min","2 min",1)
+
+sync_count = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I):
+        continue
+    sync_sections(r)
+    sync_count += 1
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\\n", encoding="utf-8")
+print(f"Late generic templates replaced={late_template_fixed}; targeted dessert/mug recipes repaired=7; sections synchronized={sync_count}; Vide-Frigo cards preserved.")
