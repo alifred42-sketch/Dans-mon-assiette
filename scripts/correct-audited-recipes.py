@@ -1840,3 +1840,5 @@ p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", en
 print(f"Direct priority data edits written={priority_updated}/{len(priority_cards)}.")
 
 # Déclenchement réel demandé le 25 octobre 2026 : appliquer et enregistrer les corrections sur la branche de test.
+
+# Relance de la vague de remplacement des étapes génériques.
