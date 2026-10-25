@@ -2351,3 +2351,5 @@ for r in recipes:
 print(f"Final targeted corrections for remaining generic-step cards: {final_step_count}; Vide-Frigo cards preserved.")
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Les 38 fiches ciblées ont été réécrites après les autres passes et enregistrées.")
+
+# Déclenchement de la passe finale de corrections vérifiables — 25/10/2026.
