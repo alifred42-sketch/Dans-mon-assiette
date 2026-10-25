@@ -273,7 +273,8 @@ p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", en
 # steps grounded in each card's own title, ingredients and declared cooking times.
 def recipe_kind(r):
     n = norm(r.get("name", ""))
-    if re.search(r"\b(salade|wrap|tartine|sandwich|bowl|bruschetta|caprese|crudites|rillettes)\b", n): return "cold"
+    if re.search(r"\b(sauce|vinaigrette|marinade|pesto|tartinade|dip|mayonnaise|houmous|hummus|rillettes)\b", n): return "sauce"
+    if re.search(r"\b(salade|wrap|tartine|sandwich|bowl|bruschetta|caprese|crudites)\b", n): return "cold"
     if re.search(r"\b(soupe|veloute|potage|bouillon)\b", n): return "soup"
     if re.search(r"\b(pizza|quiche|tarte|gratin|lasagne|lasagnes|poivrons farcis|muffin|cake|gateau|crumble|mug cake)\b", n): return "oven"
     if re.search(r"\b(risotto)\b", n): return "risotto"
@@ -298,7 +299,14 @@ def make_steps(r):
     cook = get_minutes(r, "timeCook", 20)
     list_text = ", ".join(ing[:8])
     # Steps avoid listing sauce/side-dish names as purchasable ingredients; ingredient list remains authoritative.
-    if kind == "cold":
+    if kind == "sauce":
+        steps = [
+          "1. Préparez et mesurez tous les ingrédients indiqués; lavez les herbes et égouttez les ingrédients en conserve s’il y en a.",
+          "2. Hachez finement les herbes, l’ail ou les échalotes prévus; pour une sauce lisse, placez les ingrédients dans un bol ou un mixeur.",
+          "3. Incorporez progressivement l’huile, le jus de citron, le vinaigre ou le produit laitier prévu, en mélangeant jusqu’à obtenir la texture souhaitée.",
+          "4. Goûtez, ajustez uniquement avec les assaisonnements de la fiche, puis réservez au frais dans un récipient fermé si la sauce n’est pas servie immédiatement."
+        ]
+    elif kind == "cold":
         steps = [
           "1. Lavez et préparez les légumes et les herbes de la fiche; égouttez les conserves et coupez les ingrédients en morceaux adaptés.",
           "2. Si la fiche contient une viande, un poisson ou des œufs crus, faites-les cuire séparément jusqu’à cuisson complète, puis laissez tiédir. Pour une recette sans ingrédient cru à cuire, passez directement à l’étape suivante.",
@@ -435,6 +443,24 @@ for rid, items in {
         by[rid]["ingredients"] = items
         sync_sections(by[rid])
 
+# Catch remaining template families whose first step uses a slightly different wording.
+remaining_templates_fixed = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    old_steps = r.get("steps", [])
+    if old_steps and any(re.search(r"Préparez les ingrédients pour \d+ personnes|Préparez les ingrédients pour 4 personnes|Coupez les ingrédients régulièrement; faites cuire complètement|Faites cuire les ingrédients qui nécessitent une cuisson|condiments indiqués", str(st), re.I) for st in old_steps):
+        r["steps"] = make_steps(r)
+        remaining_templates_fixed += 1
+
+# Replace the non-descriptive student recipe title and repair a truncated title without changing its ingredients.
+if "student-tendances-003" in by:
+    by["student-tendances-003"]["name"] = "Salade complète de boulgour, concombre et pois chiches"
+    sync_sections(by["student-tendances-003"])
+# The title is cut off; complete it using the recipe's own listed ingredients.
+if "student-zero-cooking-020" in by and str(by["student-zero-cooking-020"].get("name","")).rstrip().lower().endswith("sans"):
+    by["student-zero-cooking-020"]["name"] = "Mug cake express aux Spéculoos sans cuisson"
+    sync_sections(by["student-zero-cooking-020"])
+
 # Synchronize all ingredient/preparation sections after the data corrections.
 for r in recipes:
     if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
@@ -442,3 +468,5 @@ for r in recipes:
 
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"recipes={len(recipes)}; generic_preparations_replaced={generic_fixed}; numbered_titles_cleaned={numbered_cleaned}; vague_ingredients_fixed={placeholder_fixed}; missing_time_fields_filled={missing_times_filled}")
+
+print(f"remaining_template_families_replaced={remaining_templates_fixed}")
