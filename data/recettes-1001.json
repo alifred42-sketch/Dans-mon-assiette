@@ -1341,5 +1341,140 @@
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 958,
     "id": "pdf-1001-958"
+  },
+  {
+    "name": "Salade de lentilles printanière au fromage de chèvre",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Lentilles vertes cuites (en conserve) : 500 g rincées",
+      "Bûche de fromage de chèvre : 100 g coupée en petits dés",
+      "Huile de colza ou d'olive : 3 cuillères à soupe",
+      "Vinaigre de cidre : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Le saladier : Déposez les lentilles vertes parfaitement égouttées au fond de votre plat de service.",
+      "Le fromage : Répartissez les petits dés de bûche de chèvre sur les légumineuses.",
+      "La vinaigrette : Versez l'huile de colza et le vinaigre de cidre directement sur l'ensemble.",
+      "L'enrobage : Remuez délicatement avec une cuillère en bois pour ne pas écraser les dés de chèvre.",
+      "Le service : Ajoutez une pincée de sel fin et servez immédiatement cette salade complète."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 959,
+    "id": "pdf-1001-959"
+  },
+  {
+    "name": "Tartine d’avocat et surimi (façon Guacamole minute)",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de mie complet : 4 grandes tranches grillées",
+      "Avocats bien mûrs : 2 pièces",
+      "Bâtonnets de surimi : 6 pièces coupés en petits morceaux",
+      "Jus de citron vert : 1 cuillère à soupe pressée",
+      "Épices Guacamole (Cumin, piment doux) : 1/2 cuillère à café"
+    ],
+    "steps": [
+      "L'écrasé : Écrasez la chair des avocats à la fourchette dans un bol avec le jus de citron vert et les épices.",
+      "Le mélange : Intégrez les petits morceaux de surimi à cette purée verte à la cuillère.",
+      "Le tartinage : Répartissez généreusement ce guacamole au surimi sur les tranches de pain chaud.",
+      "L'assaisonnement : Ajoutez une petite pincée de sel et un tour de poivre noir.",
+      "Le service : Servez immédiatement tant que le pain est bien croustillant."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 960,
+    "id": "pdf-1001-960"
+  },
+  {
+    "name": "Rillettes de maquereau à la moutarde et pain noir",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Filets de maquereau au naturel (en boîte) : 2 boîtes (environ 250 g)",
+      "Moutarde à l'ancienne : 2 cuillères à soupe",
+      "Fromage frais (type St Môret) : 2 cuillères à soupe",
+      "Pain noir scandinave (type Pumpernickel) : 4 tranches"
+    ],
+    "steps": [
+      "Le parage : Égouttez les filets de maquereau et déposez-les dans une assiette creuse.",
+      "L'écrasé : Émiettez finement la chair du poisson à l'aide d'une fourchette robuste.",
+      "La liaison : Ajoutez la moutarde à l'ancienne et le fromage frais St Môret pour lier le tout.",
+      "Le tartinage : Étalez une couche épaisse de ces rillettes sur les tranches de pain noir.",
+      "Le service : Coupez les tranches en deux pour l'apéritif et servez très frais."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 961,
+    "id": "pdf-1001-961"
+  },
+  {
+    "name": "Sandwich perdu sucré à la fraise ou confiture",
+    "timePrep": "5 min",
+    "timeCook": "4 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de mie brioché : 8 tranches",
+      "Confiture de fraise (ou fraises fraîches écrasées) : 4 cuillères à soupe",
+      "Œufs frais : 2 pièces",
+      "Lait demi-écrémé : 100 ml",
+      "Beurre : 15 g"
+    ],
+    "steps": [
+      "Le montage : Étalez une cuillère à soupe de confiture de fraise sur 4 tranches de pain, puis refermez avec les 4 tranches restantes.",
+      "L'appareil : Fouettez les œufs et le lait dans une assiette creuse.",
+      "Le trempage : Plongez rapidement les sandwichs des deux côtés dans ce mélange liquide.",
+      "La cuisson poêle : Faites fondre le beurre dans une poêle bien chaude et déposez-y les sandwichs.",
+      "Le croustillant : Laissez dorer 2 minutes par face jusqu'à ce que le pain soit bien doré. Servez chaud."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 962,
+    "id": "pdf-1001-962"
+  },
+  {
+    "name": "Salade italienne de pois chiches au jambon cru et copeaux de fromage",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pois chiches cuits : 400 g (en conserve rincés)",
+      "Jambon cru : 4 belles tranches coupées en lanières",
+      "Fromage Parmesan : 50 g en copeaux",
+      "Pesto de basilic vert : 2 cuillères à soupe"
+    ],
+    "steps": [
+      "Le saladier : Déposez les pois chiches parfaitement égouttés au fond d'un plat creux.",
+      "La sauce : Ajoutez les cuillères de pesto vert directement sur les pois chiches et mélangez.",
+      "Le montage : Répartissez les lanières de jambon cru de manière homogène.",
+      "Le fromage : Parsemez les copeaux de parmesan sur l'ensemble de la préparation.",
+      "Le service : Donnez un tour de poivre noir et servez cette salade complète à température ambiante."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 963,
+    "id": "pdf-1001-963"
+  },
+  {
+    "name": "Salade mexicaine express aux trois grains",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Haricots rouges cuits : 200 g (en conserve égouttés)",
+      "Haricots noirs cuits : 200 g (en conserve égouttés)",
+      "Maïs en grains : 150 g égoutté",
+      "Huile de tournesol : 3 cuillères à soupe",
+      "Jus de citron vert : 1 pièce pressée"
+    ],
+    "steps": [
+      "Le rassemblement : Versez les haricots rouges, les haricots noirs et le maïs dans un grand saladier.",
+      "La vinaigrette : Ajoutez directement l'huile de tournesol et le jus de citron vert frais.",
+      "L'assaisonnement : Salez et donnez un bon tour de moulin à poivre noir.",
+      "L'enrobage : Remuez énergiquement à la cuillère pour lier les différents grains.",
+      "Le service : Servez immédiatement, idéal pour une entrée colorée et riche en protéines."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 964,
+    "id": "pdf-1001-964"
   }
 ]
