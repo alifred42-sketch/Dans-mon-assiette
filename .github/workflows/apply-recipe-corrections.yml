@@ -59,3 +59,5 @@ jobs:
             git pull --rebase origin travail-cuisine-chic-ouf-design
             git push origin travail-cuisine-chic-ouf-design
           fi
+
+# Vérification étendue des étapes génériques avant validation de la base.
