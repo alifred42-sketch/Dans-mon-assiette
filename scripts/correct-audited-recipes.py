@@ -1161,3 +1161,101 @@ for rid in ("veg-pe-022", "vegan-pe-007"):
         sync_sections(by[rid])
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Dernières références numériques supprimées des fiches de socca.")
+
+
+
+# Final semantic pass: replace the remaining non-specific or template-generated cards.
+# Reload after earlier passes so this block is the final source of truth before writing.
+d = json.loads(p.read_text(encoding="utf-8"))
+recipes = d.get("recipes", [])
+by = {r.get("id"): r for r in recipes}
+
+def final_fix(rid, ingredients=None, steps=None, prep=None, cook=None, servings=None):
+    r = by.get(rid)
+    if not r or re.search(r"vide.?frigo", r.get("name", ""), re.I):
+        return
+    if ingredients is not None: r["ingredients"] = ingredients
+    if steps is not None: r["steps"] = steps
+    if prep is not None: r["timePrep"] = prep
+    if cook is not None: r["timeCook"] = cook
+    if servings is not None: r["servings"] = servings
+    for sec in r.get("sections", []):
+        title = sec.get("title", "")
+        if re.search(r"Ingrédients", title, re.I):
+            sec["lines"] = r.get("ingredients", [])[:]
+        elif re.search(r"Préparation", title, re.I) and not re.search(r"temps|durée|⏱️|robot|batch", title, re.I):
+            sec["lines"] = r.get("steps", [])[:]
+        elif re.search(r"⏱️ Préparation", title, re.I) and r.get("steps"):
+            sec["lines"] = r["steps"][:]
+
+final_fix("r-9aa4c08507",
+ ["400 g de filets de maquereau","400 g de légumes rôtis assortis (courgettes, poivrons et carottes)","600 g de pommes de terre","2 tomates","1 salade verte","1 citron","1 c. à soupe d’huile d’olive","Sel et poivre"],
+ ["1. Faites cuire les pommes de terre à l’eau ou à la vapeur jusqu’à ce qu’elles soient tendres, puis laissez-les tiédir et coupez-les en morceaux.","2. Coupez les tomates et préparez la salade. Réchauffez les légumes rôtis si vous les préférez tièdes.","3. Égouttez le maquereau s’il est en conserve; s’il est cru, faites cuire les filets à la poêle jusqu’à ce qu’ils soient opaques et se détachent facilement.","4. Répartissez les pommes de terre, les légumes rôtis, les tomates et la salade dans quatre bols. Ajoutez le maquereau.","5. Assaisonnez avec le jus de citron, l’huile, le sel et le poivre. Servez avec la sauce yaourt citron aux herbes proposée dans la fiche, à part."], "15 min","20 min",4)
+
+final_fix("r-e7670ca0f2",
+ ["250 g d’orzo (pâtes en forme de riz)","1 courgette","2 carottes","1 oignon","600 ml de bouillon de légumes chaud","100 g de parmesan râpé","1 c. à soupe d’huile d’olive","Sel et poivre"],
+ ["1. Lavez la courgette et les carottes; coupez-les en petits dés et émincez l’oignon.","2. Faites chauffer l’huile dans une sauteuse. Faites revenir l’oignon 2 minutes, puis ajoutez les carottes et la courgette et cuisez 5 minutes.","3. Ajoutez l’orzo cru et mélangez 1 minute pour l’enrober d’huile.","4. Versez le bouillon chaud progressivement, en remuant souvent, et laissez cuire 10 à 12 minutes selon les indications du paquet; ajoutez un peu d’eau si nécessaire.","5. Hors du feu, incorporez le parmesan. Poivrez, goûtez avant de saler et servez crémeux."], "10 min","18 min",4)
+
+final_fix("r-cd4732688b",
+ ["250 g d’orzo (risoni)","1 courgette","150 g de chèvre frais","1 oignon","600 ml de bouillon de légumes chaud","5 g de basilic frais","1 c. à soupe d’huile d’olive","Poivre"],
+ ["1. Émincez l’oignon et coupez la courgette en petits dés.","2. Faites revenir l’oignon dans l’huile pendant 2 minutes, ajoutez la courgette et poursuivez 5 minutes.","3. Versez l’orzo cru et mélangez 1 minute.","4. Ajoutez le bouillon chaud petit à petit en remuant souvent; laissez cuire 10 à 12 minutes, jusqu’à ce que les pâtes soient tendres et le mélange crémeux.","5. Hors du feu, incorporez le chèvre frais et le basilic ciselé. Poivrez et servez aussitôt."], "10 min","18 min",4)
+
+final_fix("r-cd7afc007b",
+ ["250 g de spaghetti","200 g de jambon blanc en dés","2 œufs","60 g de parmesan râpé","100 g de skyr nature","Poivre noir","1 c. à soupe de persil frais ciselé (facultatif)","Sel"],
+ ["1. Faites cuire les spaghetti dans une grande casserole d’eau bouillante salée selon le temps indiqué sur le paquet. Réservez une petite louche d’eau de cuisson avant d’égoutter.","2. Pendant ce temps, faites revenir le jambon dans une poêle antiadhésive 2 à 3 minutes. Si vous utilisez des lardons à la place du jambon, faites-les cuire complètement.","3. Dans un bol, fouettez les œufs avec le parmesan, le skyr et beaucoup de poivre.","4. Retirez la poêle du feu. Ajoutez les pâtes chaudes et le mélange aux œufs en remuant rapidement. Détendez avec un peu d’eau de cuisson jusqu’à obtenir une sauce crémeuse; ne faites pas bouillir la sauce.","5. Vérifiez que la préparation est bien chaude, parsemez de persil et servez immédiatement."], "15 min","15 min",4)
+
+final_fix("r-9b996df25a",
+ ["4 gros oignons (environ 600 g)","1 litre de bouillon de bœuf ou de légumes","4 tranches de pain complet","100 g de comté ou d’emmental râpé","1 c. à soupe d’huile d’olive","1 c. à café de thym","Poivre"],
+ ["1. Épluchez et émincez finement les oignons.","2. Faites chauffer l’huile dans une casserole à fond épais. Ajoutez les oignons et faites-les cuire à feu doux 20 à 25 minutes en remuant souvent, jusqu’à ce qu’ils soient bien dorés.","3. Versez le bouillon, ajoutez le thym et le poivre, puis laissez mijoter 15 minutes.","4. Faites griller les tranches de pain. Répartissez la soupe dans des bols allant au four, déposez une tranche de pain sur chaque portion et parsemez de fromage.","5. Faites gratiner sous le gril quelques minutes, en surveillant, jusqu’à ce que le fromage soit fondu et doré."], "15 min","40 min",4)
+
+final_fix("r-35f1833eb2",
+ ["4 gros œufs","4 c. à soupe de coulis de tomate","4 c. à soupe de crème fraîche légère (15 % MG)","Poivre noir","1 petite pincée de sel"],
+ null)
+
+final_fix("r-c2e31d66fb",
+ ["8 gros œufs","200 g de légumes cuits coupés en dés (courgettes, poivrons ou champignons)","40 g de comté ou d’emmental râpé","2 c. à soupe de lait demi-écrémé","1 c. à café d’huile d’olive","2 pincées de sel","Poivre"],
+ ["1. Coupez les légumes déjà cuits en petits morceaux. Battez les œufs avec le lait, le sel et le poivre.","2. Faites chauffer l’huile dans une poêle antiadhésive et réchauffez les légumes 2 à 3 minutes.","3. Versez les œufs battus sur les légumes. Faites cuire à feu doux en ramenant les bords vers le centre.","4. Quand l’omelette commence à prendre, ajoutez le fromage râpé. Couvrez et poursuivez jusqu’à ce que les œufs soient cuits à cœur.","5. Servez immédiatement."], "5 min","10 min",4)
+
+final_fix("test-croques-s2",
+ ["8 tranches de pain de mie complet","4 c. à soupe de sauce épaisse aux légumes rôtis","60 g de comté ou de gruyère râpé","4 c. à soupe de fromage frais nature","Poivre noir"],
+ null)
+
+final_fix("student-one-pan-002",
+ ["150 g de riz nature précuit (ou 150 g de riz déjà cuit)","1 petite boîte de thon au naturel (environ 80 g), égouttée","50 g de petits pois surgelés","1 œuf","1 c. à soupe de sauce soja","1 c. à soupe d’huile neutre"],
+ null,"5 min","8 min","1 portion — quantités adaptables ×4 pour 4 personnes")
+
+final_fix("student-one-pan-023",
+ ["150 g de riz nature précuit (ou 150 g de riz déjà cuit)","100 g de champignons de Paris égouttés (ou frais émincés)","1/2 oignon","5 cl de crème fraîche","20 g de parmesan râpé","10 cl de bouillon préparé","1 petite noisette de beurre"],
+ null,"5 min","10 min","1 portion — quantités adaptables ×4 pour 4 personnes")
+
+final_fix("student-one-pan-034",
+ ["150 g de riz nature précuit (ou 150 g de riz déjà cuit)","2 œufs","50 g de petits pois surgelés","1/2 oignon","1 c. à café de curry en poudre","1 c. à soupe d’huile neutre","Sel et poivre"],
+ null,"5 min","8 min","1 portion — quantités adaptables ×4 pour 4 personnes")
+
+final_fix("student-one-pan-045",
+ ["150 g de riz nature précuit (ou 150 g de riz déjà cuit)","1 petit blanc de poulet (environ 150 g)","1 c. à soupe de sauce soja","1 c. à soupe d’huile neutre","Sel et poivre","1 c. à café de graines de sésame (facultatif)"],
+ null,"5 min","10 min","1 portion — quantités adaptables ×4 pour 4 personnes")
+
+final_fix("student-microwave-007",
+ ["1/2 courgette","1/2 poivron rouge","4 c. à soupe de coulis de tomate","1 c. à café d’huile d’olive","1 c. à café d’herbes de Provence","Sel et poivre"],
+ ["1. Coupez la courgette et le poivron en petits dés.","2. Placez les légumes dans un grand bol adapté au micro-ondes avec le coulis de tomate, l’huile et les herbes. Mélangez.","3. Couvrez sans fermer hermétiquement et faites cuire 5 à 6 minutes à 800 W, en remuant à mi-cuisson.","4. Vérifiez que les légumes sont tendres. Prolongez par tranches de 30 secondes si nécessaire; salez et poivrez avant de servir."], "5 min","6 min","1 portion — multiplier les quantités par 4 pour 4 personnes")
+
+final_fix("student-microwave-031",
+ ["150 g de gnocchis frais","4 c. à soupe de coulis de tomate","1/2 boule de mozzarella (environ 60 g)","2 c. à soupe d’eau","1 c. à café d’herbes de Provence","Poivre et une petite pincée de sel"],
+ ["1. Déposez les gnocchis dans un grand bol compatible avec le micro-ondes. Ajoutez l’eau et le coulis de tomate; mélangez.","2. Couvrez en laissant une petite ouverture et faites cuire 3 minutes à 800 W.","3. Remuez, vérifiez que les gnocchis sont chauds et tendres, puis ajoutez la mozzarella coupée en morceaux et les herbes.","4. Remettez au micro-ondes 30 à 60 secondes, jusqu’à ce que la mozzarella commence à fondre. Laissez reposer 1 minute avant de servir."], "3 min","4 min","1 portion — multiplier les quantités par 4 pour 4 personnes")
+
+final_fix("student-microwave-036",
+ ["1 filet de poisson blanc (environ 150 g)","4 c. à soupe de coulis de tomate","1 c. à café d’huile d’olive","1 c. à café d’herbes de Provence","Sel et poivre"],
+ ["1. Déposez le filet de poisson dans un plat peu profond adapté au micro-ondes.","2. Mélangez le coulis de tomate avec l’huile, les herbes, le sel et le poivre; versez sur le poisson.","3. Couvrez en laissant une petite ouverture et faites cuire à 800 W pendant 2 minutes 30 à 3 minutes, selon l’épaisseur du filet.","4. Vérifiez que le poisson est opaque et se détache facilement à la fourchette; prolongez par tranches de 30 secondes si nécessaire. Laissez reposer 1 minute avant de servir."], "3 min","3 min","1 portion — multiplier les quantités par 4 pour 4 personnes")
+
+# Final sync for every modified recipe, including preparation sections used by the app.
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    for sec in r.get("sections", []):
+        title = sec.get("title", "")
+        if re.search(r"Ingrédients", title, re.I):
+            sec["lines"] = r.get("ingredients", [])[:]
+        elif re.search(r"Préparation", title, re.I) and not re.search(r"temps|durée|⏱️|robot|batch", title, re.I):
+            sec["lines"] = r.get("steps", [])[:]
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Final semantic pass: 15 non-Vide-Frigo cards corrected; ingredient and preparation sections synchronized.")
