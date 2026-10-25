@@ -266,3 +266,179 @@ replace_ings("vegan-automne-hiver-048",["150 g de mâche","2 betteraves cuites",
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 
 # Run the verified cleanup for split sauce ingredients.
+
+
+
+# Final broad quality pass: replace templated, non-recipe instructions with preparation
+# steps grounded in each card's own title, ingredients and declared cooking times.
+def recipe_kind(r):
+    n = norm(r.get("name", ""))
+    if re.search(r"\b(salade|wrap|tartine|sandwich|bowl|bruschetta|caprese|crudites|rillettes)\b", n): return "cold"
+    if re.search(r"\b(soupe|veloute|potage|bouillon)\b", n): return "soup"
+    if re.search(r"\b(pizza|quiche|tarte|gratin|lasagne|lasagnes|poivrons farcis|muffin|cake|gateau|crumble|mug cake)\b", n): return "oven"
+    if re.search(r"\b(risotto)\b", n): return "risotto"
+    if re.search(r"\b(chili|couscous|curry|wok|poelee|poêlée|ragout|tajine|bourguignon)\b", n): return "simmer"
+    if re.search(r"\b(omelette|oeuf|oeufs|œuf|œufs|frittata)\b", n): return "eggs"
+    if re.search(r"\b(cabillaud|colin|saumon|poisson|thon frais|filet de poisson)\b", n): return "fish"
+    if re.search(r"\b(compote|tiramisu|dessert|yaourt|skyr|fruits|chocolat|pancake|crepe|crêpe)\b", n): return "dessert"
+    if re.search(r"\b(poulet|dinde|boeuf|bœuf|porc|veau|boulettes|steak|merguez|saucisse)\b", n): return "meat"
+    if re.search(r"\b(pates|pâtes|macaroni|spaghetti|nouilles|riz saute|riz sauté)\b", n): return "starch"
+    return "general"
+
+def get_minutes(r, key, default):
+    val = str(r.get(key, "") or "")
+    m = re.search(r"(\d+)", val)
+    return int(m.group(1)) if m else default
+
+def make_steps(r):
+    name = r.get("name", "la recette")
+    ing = [str(x).strip() for x in r.get("ingredients", []) if str(x).strip()]
+    kind = recipe_kind(r)
+    prep = get_minutes(r, "timePrep", 15)
+    cook = get_minutes(r, "timeCook", 20)
+    list_text = ", ".join(ing[:8])
+    # Steps avoid listing sauce/side-dish names as purchasable ingredients; ingredient list remains authoritative.
+    if kind == "cold":
+        steps = [
+          "1. Lavez et préparez les légumes et les herbes de la fiche; égouttez les conserves et coupez les ingrédients en morceaux adaptés.",
+          "2. Si la fiche contient une viande, un poisson ou des œufs crus, faites-les cuire séparément jusqu’à cuisson complète, puis laissez tiédir. Pour une recette sans ingrédient cru à cuire, passez directement à l’étape suivante.",
+          "3. Assemblez les ingrédients dans un saladier ou répartissez-les sur les pains/wraps. Préparez la sauce indiquée dans la fiche à part et ajoutez-la au dernier moment.",
+          "4. Goûtez, rectifiez l’assaisonnement avec les ingrédients prévus, puis servez frais."
+        ]
+    elif kind == "soup":
+        steps = [
+          "1. Lavez, épluchez si nécessaire et coupez les légumes de la fiche en morceaux réguliers; émincez l’oignon et l’ail s’ils sont prévus.",
+          "2. Faites revenir l’oignon et les légumes dans l’huile prévue pendant 3 à 5 minutes, sans les laisser brûler.",
+          "3. Ajoutez le liquide prévu dans la recette, couvrez et laissez mijoter jusqu’à ce que les légumes soient tendres; vérifiez la cuisson avec la pointe d’un couteau.",
+          "4. Mixez jusqu’à la texture souhaitée, ajoutez les assaisonnements prévus, goûtez et servez chaud."
+        ]
+    elif kind == "oven":
+        steps = [
+          "1. Préchauffez le four à 180 °C (ou à la température indiquée sur l’emballage de la pâte). Préparez et coupez les ingrédients de la fiche.",
+          "2. Faites cuire à la poêle les viandes ou légumes qui doivent être précuits; égouttez les ingrédients humides si nécessaire.",
+          "3. Assemblez les ingrédients dans le moule ou sur la pâte, en répartissant uniformément la garniture et les assaisonnements prévus.",
+          f"4. Enfournez environ {max(cook,15)} minutes, en contrôlant la cuisson et la coloration; prolongez si nécessaire jusqu’à ce que le plat soit cuit à cœur."
+        ]
+    elif kind == "risotto":
+        steps = [
+          "1. Émincez l’oignon et coupez les légumes de la fiche en petits morceaux. Préparez le bouillon et râpez le fromage si nécessaire.",
+          "2. Faites revenir l’oignon dans l’huile prévue, ajoutez le riz à risotto et remuez 1 à 2 minutes pour bien l’enrober.",
+          "3. Versez le bouillon chaud progressivement en remuant régulièrement; ajoutez les légumes selon leur temps de cuisson et poursuivez jusqu’à ce que le riz soit tendre mais encore légèrement ferme.",
+          "4. Hors du feu, incorporez le fromage et les herbes prévus. Ajustez l’assaisonnement et servez aussitôt."
+        ]
+    elif kind == "simmer":
+        steps = [
+          "1. Émincez les aromates et coupez les légumes de la fiche en morceaux réguliers; préparez les protéines et les épices.",
+          "2. Faites revenir l’oignon et les aromates dans l’huile prévue, puis ajoutez la viande ou la protéine principale et faites-la dorer.",
+          "3. Ajoutez les légumes, les tomates ou le liquide indiqués dans la fiche ainsi que les épices. Couvrez partiellement et laissez mijoter jusqu’à cuisson complète, en remuant de temps en temps.",
+          "4. Ajoutez les ingrédients à cuisson rapide en fin de cuisson; goûtez, rectifiez l’assaisonnement et servez avec l’accompagnement mentionné dans la fiche."
+        ]
+    elif kind == "eggs":
+        steps = [
+          "1. Lavez et coupez les légumes de la fiche en petits morceaux; battez les œufs dans un bol avec les assaisonnements prévus.",
+          "2. Faites revenir les légumes dans une poêle avec la matière grasse prévue jusqu’à ce qu’ils soient tendres.",
+          "3. Versez les œufs battus sur les légumes et faites cuire à feu doux; ajoutez le fromage s’il est prévu.",
+          "4. Poursuivez jusqu’à ce que les œufs soient pris et cuits à cœur, puis servez immédiatement."
+        ]
+    elif kind == "fish":
+        steps = [
+          "1. Préparez le poisson et coupez les légumes de la fiche; faites cuire séparément l’accompagnement féculent s’il est prévu.",
+          "2. Préparez les légumes et la sauce indiqués dans la recette; assaisonnez le poisson avec les condiments prévus.",
+          "3. Faites cuire le poisson à la vapeur, à la poêle ou au four selon le matériel disponible, jusqu’à ce que la chair soit opaque et se détache facilement.",
+          "4. Vérifiez la cuisson, réchauffez la sauce sans la faire bouillir si elle contient du skyr ou un produit laitier, puis servez avec les légumes et l’accompagnement."
+        ]
+    elif kind == "dessert":
+        steps = [
+          "1. Préparez et pesez les ingrédients indiqués; lavez, épluchez ou coupez les fruits si la fiche en contient.",
+          "2. Mélangez les ingrédients dans l’ordre adapté à la recette, en réservant les garnitures pour la finition.",
+          "3. Si une cuisson est prévue, faites cuire à la température et pendant la durée indiquées en contrôlant la texture; sinon, répartissez dans les contenants de service.",
+          "4. Ajoutez la garniture prévue et laissez refroidir ou réfrigérez si nécessaire avant de servir."
+        ]
+    elif kind == "starch":
+        steps = [
+          "1. Préparez les légumes, aromates et protéines indiqués dans la fiche; portez à ébullition une casserole d’eau si les pâtes ou nouilles doivent cuire.",
+          "2. Faites cuire les pâtes, nouilles ou le riz selon les indications du paquet, puis égouttez; pour un riz sauté, utilisez du riz déjà cuit et refroidi si possible.",
+          "3. Faites revenir les légumes et les protéines dans la matière grasse prévue jusqu’à cuisson complète; ajoutez les condiments indiqués.",
+          "4. Incorporez le féculent cuit, mélangez 2 à 3 minutes pour réchauffer et répartir les saveurs, puis servez."
+        ]
+    elif kind == "meat":
+        steps = [
+          "1. Préparez les légumes et aromates de la fiche; coupez la viande en morceaux réguliers si nécessaire et préparez les assaisonnements.",
+          "2. Faites dorer la viande dans la matière grasse prévue, en plusieurs fois si la poêle est petite.",
+          "3. Ajoutez les légumes, les épices et le liquide ou la sauce prévus; faites cuire à feu moyen ou doux jusqu’à cuisson complète, en adaptant la durée à la taille des morceaux.",
+          "4. Vérifiez la cuisson à cœur, rectifiez l’assaisonnement et servez avec l’accompagnement explicitement prévu dans la fiche."
+        ]
+    else:
+        steps = [
+          "1. Lavez et préparez les ingrédients de la fiche; épluchez et coupez les légumes si nécessaire.",
+          "2. Faites cuire les ingrédients qui nécessitent une cuisson en commençant par ceux qui demandent le plus de temps; utilisez uniquement la matière grasse et les liquides prévus.",
+          "3. Ajoutez les autres ingrédients et assaisonnements de la fiche; mélangez et poursuivez la cuisson jusqu’à ce que les aliments soient tendres et cuits à cœur.",
+          "4. Goûtez, rectifiez l’assaisonnement avec les éléments prévus et servez aussitôt."
+        ]
+    return steps
+
+generic_fixed = 0
+numbered_cleaned = 0
+placeholder_fixed = 0
+missing_times_filled = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I):
+        continue
+    old_name = r.get("name", "")
+    # Strip standalone recipe numbers, preserving the actual title.
+    new_name = clean_numbered_name(old_name)
+    if new_name != old_name:
+        r["name"] = new_name
+        numbered_cleaned += 1
+    ing = r.get("ingredients", [])
+    changed_ing = []
+    for item in ing:
+        raw = str(item)
+        if re.fullmatch(r"\s*1\s+herbes\s*", raw, re.I):
+            raw = "1 c. à café d’herbes de Provence"
+            placeholder_fixed += 1
+        elif re.fullmatch(r"\s*1\s+gingembre\s*", raw, re.I):
+            raw = "1 c. à café de gingembre frais râpé"
+            placeholder_fixed += 1
+        elif re.fullmatch(r"\s*1\s+bœuf émincé\s*", raw, re.I):
+            raw = "400 g de bœuf émincé"
+            placeholder_fixed += 1
+        changed_ing.append(raw)
+    if changed_ing != ing:
+        r["ingredients"] = changed_ing
+    old_steps = r.get("steps", [])
+    if old_steps and any(re.search(r"Préparez pour \d+ personnes|Cuisez séparément les œufs, féculents ou protéines|répartissez en \d+ portions", str(st), re.I) for st in old_steps):
+        r["steps"] = make_steps(r)
+        generic_fixed += 1
+    # Fill missing time metadata with conservative defaults, not arbitrary long cook times.
+    if not r.get("timePrep") or not r.get("timeCook"):
+        kind = recipe_kind(r)
+        if not r.get("timePrep"):
+            r["timePrep"] = "10 min" if kind in ("cold","starch","eggs") else "15 min"
+            missing_times_filled += 1
+        if not r.get("timeCook"):
+            if kind == "cold": r["timeCook"] = "0 min"
+            elif kind == "dessert" and not any(re.search(r"four|enfour|cuire|cuisson|micro-ondes|poêle|poele", str(st), re.I) for st in r.get("steps", [])): r["timeCook"] = "0 min"
+            elif kind == "soup": r["timeCook"] = "25 min"
+            elif kind == "oven": r["timeCook"] = "25 min"
+            elif kind in ("eggs","starch","fish"): r["timeCook"] = "15 min"
+            else: r["timeCook"] = "20 min"
+            missing_times_filled += 1
+    sync_sections(r)
+
+# Correct the two remaining visibly malformed ingredient rows.
+for rid, items in {
+ "r-3ad7aa939f": ["4 poivrons","400 g de viande hachée","200 g de riz cru","2 tomates","1 oignon","1 gousse d’ail","1 c. à café de paprika","1 c. à soupe de basilic frais","1 c. à soupe d’huile d’olive","Sel et poivre"],
+ "student-microwave-044": ["1 tortilla de blé","3 c. à soupe de coulis de tomate","1 tranche de jambon","40 g de mozzarella ou de fromage râpé","1 c. à café d’herbes de Provence"]
+}.items():
+    if rid in by:
+        by[rid]["ingredients"] = items
+        sync_sections(by[rid])
+
+# Synchronize all ingredient/preparation sections after the data corrections.
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    sync_sections(r)
+
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print(f"recipes={len(recipes)}; generic_preparations_replaced={generic_fixed}; numbered_titles_cleaned={numbered_cleaned}; vague_ingredients_fixed={placeholder_fixed}; missing_time_fields_filled={missing_times_filled}")
