@@ -7,8 +7,6 @@ on:
       - scripts/correct-audited-recipes.py
       - .github/workflows/correct-recipe-database.yml
   workflow_dispatch:
-    branches:
-      - travail-cuisine-chic-ouf-design
 permissions:
   contents: write
 jobs:
