@@ -61,3 +61,5 @@ jobs:
           fi
 
 # Vérification étendue des étapes génériques avant validation de la base.
+
+# Rejouer la passe finale avec le dictionnaire actif rechargé.
