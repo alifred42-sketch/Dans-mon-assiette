@@ -980,5 +980,142 @@
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 942,
     "id": "pdf-1001-942"
+  },
+  {
+    "name": "Salade piémontaise étudiante (sans cuisson)",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pommes de terre cuites (en conserve sous vide) : 400 g coupées en cubes",
+      "Dés de jambon blanc : 150 g",
+      "Cornichons au vinaigre : 6 gros coupés en rondelles",
+      "Tomates grappes : 2 pièces coupées en dés",
+      "Mayonnaise prête à l'emploi : 4 cuillères à soupe"
+    ],
+    "steps": [
+      "Le rassemblement : Versez les dés de pommes de terre déjà cuites sous vide au fond d'un grand saladier.",
+      "Les ajouts : Intégrez les morceaux de tomates fraîches, les dés de jambon et les rondelles de cornichons.",
+      "La liaison : Déposez les cuillères de mayonnaise sur la préparation colorée.",
+      "Le mélange : Remuez délicatement le tout à l'aide d'une spatule pour bien enrober tous les ingrédients de sauce.",
+      "Le service : Rectifiez l'assaisonnement avec du sel et du poivre et servez cette salade express bien fraîche."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 943,
+    "id": "pdf-1001-943"
+  },
+  {
+    "name": "Wrap crémeux au surimi et avocat",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Grandes tortillas de blé : 4 pièces",
+      "Bâtonnets de surimi : 8 pièces émincés ou râpés",
+      "Avocat bien mûr : 1 gros pièce coupé en fines lanières",
+      "Fromage frais (type St Môret Ligne) : 4 cuillères à soupe",
+      "Jus de citron vert : 1 cuillère à café"
+    ],
+    "steps": [
+      "Le tartinage : Étalez une cuillère à soupe de fromage frais sur une face de chaque tortilla de blé.",
+      "Le poisson : Répartissez uniformément le surimi râpé directement sur le lit de fromage frais.",
+      "Le montage : Disposez les fines lanières d'avocat cru au centre de la galette.",
+      "L'acide : Arrosez l'avocat d'un filet de jus de citron vert pour assaisonner et fixer sa couleur éclatante.",
+      "Le pliage : Rabattez les bords latéraux puis roulez serré pour sceller le wrap crémeux. Servez frais."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 944,
+    "id": "pdf-1001-944"
+  },
+  {
+    "name": "Salade de lentilles express de l’étudiant",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Lentilles vertes cuites (en conserve) : 500 g rincées et égouttées",
+      "Tomates cerises : 12 pièces coupées en deux",
+      "Oignon rouge : 1/4 d'oignon émincé microscopiquement en fines lanières",
+      "Huile de tournesol : 3 cuillères à soupe",
+      "Vinaigre de cidre : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "La base : Versez les lentilles vertes parfaitement égouttées au fond de votre saladier de service.",
+      "Les légumes : Intégrez les demi-tomates cerises fraîches et les lanières d'oignon rouge cru.",
+      "La vinaigrette : Versez l'huile de tournesol et le vinaigre de cidre directement sur l'ensemble.",
+      "Le mélange : Brassez énergiquement le tout à la cuillère pour lier les haricots et les arômes.",
+      "Le service : Laissez reposer 1 minute à température ambiante pour développer le goût et servez."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 945,
+    "id": "pdf-1001-945"
+  },
+  {
+    "name": "Salade fraîcheur de surimi et pamplemousse",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Bâtonnets de surimi : 12 pièces coupées en morceaux de 1 cm",
+      "Pamplemousse rose : 1 pièce pelée à vif (segments prélevés)",
+      "Salade verte mélangée (type mesclun) : 150 g",
+      "Huile d'olive : 2 cuillères à soupe",
+      "Jus du pamplemousse : récupéré lors de la découpe"
+    ],
+    "steps": [
+      "Le lit vert : Répartissez la salade verte mesclun au fond d'un grand plat de service creux.",
+      "La garniture : Ajoutez harmonieusement les morceaux de surimi et les segments juteux de pamplemousse rose.",
+      "La sauce minute : Fouettez l'huile d'olive avec le jus de pamplemousse récupéré au fond d'un verre.",
+      "Le nappage : Versez cette vinaigrette fruitée en filet continu sur toute la surface de la salade.",
+      "Le service : Remuez délicatement au dernier moment et servez immédiatement cette entrée ultra-rafraîchissante."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 946,
+    "id": "pdf-1001-946"
+  },
+  {
+    "name": "Sandwich italien Tomate, Mozzarella & Jambon cru",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain ciabatta ou baguette : 1 long pain coupé en 4 tronçons (ouverts en deux)",
+      "Jambon cru (type Parme) : 4 tranches",
+      "Boule de mozzarella : 1 pièce coupée en 4 tranches",
+      "Tomate bien mûre : 1 grosse pièce coupée en rondelles",
+      "Pesto de basilic vert : 4 cuillères à café"
+    ],
+    "steps": [
+      "Le tartinage : Étalez une cuillère à café de pesto vert sur la face inférieure de chaque morceau de pain.",
+      "La viande : Déposez une belle tranche de jambon cru pliée en deux sur le pesto.",
+      "Le fromage : Ajoutez une tranche de mozzarella et répartissez les rondelles de tomate fraîche par-dessus.",
+      "La fermeture : Refermez les sandwichs italiens avec les morceaux de pain restants en pressant fermement.",
+      "Le service : Dégustez immédiatement ce repas sur le pouce ou enveloppez-le pour l'emporter."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 947,
+    "id": "pdf-1001-947"
+  },
+  {
+    "name": "Dessert zéro cuisson : Le Mug Cake Speculoos sans cuisson",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pâte à tartiner de Spéculoos : 4 cuillères à soupe généreuses",
+      "Biscuits de type Spéculoos : 4 pièces concassées en éclats",
+      "Fromage frais (type Philadelphia nature) : 4 cuillères à soupe",
+      "Crème fraîche épaisse : 4 cuillères à café"
+    ],
+    "steps": [
+      "Le fond : Déposez une cuillère à soupe de pâte à tartiner de Spéculoos au fond de 4 mugs individuels.",
+      "L'appareil : Dans un bol à part, fouettez le fromage frais Philadelphia et la crème épaisse pour lisser la crème.",
+      "Le montage : Répartissez cette crème blanche de manière égale par-dessus la pâte de Spéculoos dans les mugs.",
+      "Le croquant : Parsemez les éclats de biscuits croustillants sur le dessus de chaque préparation sucrée.",
+      "Le service : Servez immédiatement ce dessert minute gourmand à savourer directement à la petite cuillère."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 948,
+    "id": "pdf-1001-948"
   }
 ]
