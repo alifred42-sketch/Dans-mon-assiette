@@ -75,3 +75,5 @@ for r in d.get("recipes",[]):
             sec["lines"]=new[:]; synced+=1
 p.write_text(json.dumps(d,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
 print(f"Fiches réécrites : {n}; sections synchronisées : {synced}; Vide-Frigo inchangé.")
+
+# Déclenchement explicite de la passe sur la branche de test.
