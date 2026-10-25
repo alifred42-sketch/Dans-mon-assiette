@@ -2342,7 +2342,11 @@ for r in recipes:
         # Pour les autres fiches signalées, garder une procédure de cuisine cohérente avec le type de plat.
         steps = tailored_steps(r)
     r["steps"] = steps
-    sync_sections(r)
+    # Les sections peuvent contenir l'ancien gabarit : les synchroniser depuis les étapes corrigées.
+    for sec in r.get("sections", []):
+        title = norm(sec.get("title", ""))
+        if re.search(r"preparation|etapes", title) and not re.search(r"astuce|conseil|robot|version|batch", title):
+            sec["lines"] = steps[:]
     final_step_count += 1
 print(f"Final targeted corrections for remaining generic-step cards: {final_step_count}; Vide-Frigo cards preserved.")
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
