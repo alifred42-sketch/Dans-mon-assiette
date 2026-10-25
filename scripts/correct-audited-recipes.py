@@ -273,22 +273,22 @@ p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", en
 # steps grounded in each card's own title, ingredients and declared cooking times.
 def recipe_kind(r):
     n = norm(r.get("name", ""))
-    if re.search(r"\b(sauce|vinaigrette|marinade|pesto|tartinade|dip|mayonnaise|houmous|hummus|rillettes)\b", n): return "sauce"
+    if re.search(r"\b(sauce|vinaigrette|marinade|pesto|tartinade|dip|mayonnaise|houmous|hummus|rillettes|coulis|bechamel|tzatziki)\b", n): return "sauce"
     if re.search(r"\b(puree|purée|ecrase|écrasé|pommes de terre garnies)\b", n): return "mash"
     if re.search(r"\b(crepe|crêpe|crepes|crêpes|pancake|pancakes|gaufre|gaufres)\b", n): return "pancake"
     if re.search(r"\b(burger|hamburger)\b", n): return "burger"
     if re.search(r"\b(paella|riz cantonais|riz sauté|riz saute|riz façon|riz facon)\b", n): return "rice"
     if re.search(r"\b(overnight oats|porridge|muesli)\b", n): return "cold"
     if re.search(r"\b(salade|wrap|tartine|sandwich|bowl|bruschetta|caprese|crudites)\b", n): return "cold"
-    if re.search(r"\b(soupe|veloute|potage|bouillon)\b", n): return "soup"
-    if re.search(r"\b(pizza|quiche|tarte|gratin|lasagne|lasagnes|farci|farcie|farcis|farcies|muffin|cake|gateau|gâteau|crumble|mug cake|flan|banana bread|pommes au four|poires roties|pêches rôties|pêches roties)\b", n): return "oven"
+    if re.search(r"\b(soupe|veloute|potage|bouillon|gaspacho|gazpacho)\b", n): return "soup"
+    if re.search(r"\b(pizza|quiche|tarte|gratin|lasagne|lasagnes|farci|farcie|farcis|farcies|moussaka|muffin|cake|gateau|crumble|mug cake|flan|banana bread|pommes au four|poires roties|peches roties)\b", n): return "oven"
     if re.search(r"\b(risotto)\b", n): return "risotto"
-    if re.search(r"\b(chili|couscous|curry|wok|poelee|poêlée|ragout|ragoût|tajine|bourguignon|ratatouille|dahl|blanquette|paella|paëlla|potée|cantonais|one pot)\b", n): return "simmer"
-    if re.search(r"\b(omelette|oeuf|oeufs|œuf|œufs|frittata)\b", n): return "eggs"
-    if re.search(r"\b(cabillaud|colin|saumon|maquereau|truite|lieu noir|poisson|thon frais|filet de poisson)\b", n): return "fish"
+    if re.search(r"\b(chili|couscous|curry|wok|poelee|ragout|tajine|bourguignon|ratatouille|dahl|blanquette|paella|potee|cantonais|one pot|saucisses)\b", n): return "simmer"
+    if re.search(r"\b(omelette|oeuf|oeufs|frittata|tortilla espagnole)\b", n): return "eggs"
+    if re.search(r"\b(cabillaud|colin|saumon|maquereau|maquereaux|truite|lieu noir|poisson|thon frais|filet de poisson)\b", n): return "fish"
     if re.search(r"\b(compote|tiramisu|dessert|yaourt|skyr|fruits|chocolat|pancake|crepe|crêpe)\b", n): return "dessert"
     if re.search(r"\b(poulet|dinde|boeuf|bœuf|porc|veau|boulettes|steak|merguez|saucisse)\b", n): return "meat"
-    if re.search(r"\b(pates|pâtes|macaroni|spaghetti|nouilles|riz saute|riz sauté)\b", n): return "starch"
+    if re.search(r"\b(pates|macaroni|spaghetti|nouilles|orzo|risoni|riz saute)\b", n): return "starch"
     return "general"
 
 def get_minutes(r, key, default):
