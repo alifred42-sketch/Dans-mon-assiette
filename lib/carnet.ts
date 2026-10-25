@@ -243,7 +243,7 @@ export function seasonLabel(week: number): string {
 // demandées par l'utilisateur restent prioritaires ; courses et batch utilisent weekPlan().
 const CURATED_PLAN_RECIPE_OVERRIDES: Record<string, string> = {
   "2|LUNDI|Soir": "r-9b996df25a", // soupe à l'oignon en hiver, à la place du gaspacho
-  "6|LUNDI|Soir": "r-9f72f3e182", // soupe poireaux-carottes en hiver
+  "6|LUNDI|Soir": "r-0e5be70f69", // soupe poireaux-carottes en hiver
   "6|DIMANCHE|Soir": "r-86fb2988d0", // remplacer le doublon de burger par un plat d'hiver
   "37|VENDREDI|Soir": "r-3a7b357b85", // velouté de courge au lieu du gaspacho
   "47|VENDREDI|Soir": "r-9f72f3e182", // soupe d'automne au lieu du gaspacho
