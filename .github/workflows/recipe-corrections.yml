@@ -1,12 +1,8 @@
 name: Corrections de la base recettes
 
 on:
-  push:
-    branches: [travail-cuisine-chic-ouf-design]
-    paths:
-      - 'scripts/correct-audited-recipes.py'
-      - 'scripts/finish-generic-steps.py'
-      - '.github/workflows/recipe-corrections.yml'
+  # Déclenchement manuel uniquement : l'écriture automatique est centralisée
+  # dans apply-recipe-corrections.yml pour éviter les conflits de commits.
   workflow_dispatch:
 
 permissions:
