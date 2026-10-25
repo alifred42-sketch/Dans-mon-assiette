@@ -1067,3 +1067,51 @@ if "r-366a4a239f" in by:
     sync_sections(by["r-366a4a239f"])
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Les fiches de restes intentionnelles ont été restaurées sans modification.")
+
+
+# Strip legacy numeric recipe references from visible recipe text while preserving the actual names.
+# Keep the intentionally untouched leftover/Vide-Frigo cards exactly as they are.
+def remove_legacy_recipe_number(text):
+    value = str(text)
+    value = re.sub(r"base de la recette\s+37", "base de champignons préparée à l’avance", value, flags=re.I)
+    value = re.sub(r"la moitié de la recette\s+37", "la moitié de la préparation aux champignons", value, flags=re.I)
+    value = re.sub(r"base tomate\s+recette\s+45", "base tomate maison", value, flags=re.I)
+    value = re.sub(r"de la recette\s+263", "de la préparation de riz", value, flags=re.I)
+    value = re.sub(r"de la recette\s+258", "de la préparation de poulet", value, flags=re.I)
+    value = re.sub(r"\s*\(recette\s+(?:précédente|\d+)\)", "", value, flags=re.I)
+    value = re.sub(r"\s+recette\s+(?:n[°ºo]\s*)?\d+\b", "", value, flags=re.I)
+    value = re.sub(r"\s{2,}", " ", value).strip()
+    return value
+
+preserved_leftover_ids = {"r-43e1f116de", "r-366a4a239f", "test-vide-frigo-s1"}
+legacy_refs_removed = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I) or r.get("id") in preserved_leftover_ids:
+        continue
+    for key in ("name", "blurb"):
+        if isinstance(r.get(key), str):
+            fixed = remove_legacy_recipe_number(r[key])
+            if fixed != r[key]: legacy_refs_removed += 1
+            r[key] = fixed
+    for key in ("ingredients", "steps", "notes"):
+        if isinstance(r.get(key), list):
+            cleaned = []
+            for line in r[key]:
+                fixed = remove_legacy_recipe_number(line)
+                if fixed != line: legacy_refs_removed += 1
+                cleaned.append(fixed)
+            r[key] = cleaned
+    for sec in r.get("sections", []):
+        if isinstance(sec.get("title"), str):
+            sec["title"] = remove_legacy_recipe_number(sec["title"])
+        if isinstance(sec.get("lines"), list):
+            sec["lines"] = [remove_legacy_recipe_number(line) for line in sec["lines"]]
+# A glass garnish is an accessory, not an ingredient, but the ice cubes are needed for this drink.
+if "halloween-potions-035" in by:
+    by["halloween-potions-035"]["ingredients"] = [
+      "300 ml de ginger ale ou de limonade","1 c. à café de jus de citron","4 cl de sirop de grenadine","4 glaçons"
+    ]
+    sync_sections(by["halloween-potions-035"])
+
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print(f"visible_legacy_recipe_numbers_removed={legacy_refs_removed}")
