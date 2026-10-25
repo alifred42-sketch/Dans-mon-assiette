@@ -64,3 +64,5 @@ jobs:
             git commit -m "Corrige et synchronise les fiches recettes auditées"
             git push origin HEAD:travail-cuisine-chic-ouf-design
           fi
+
+# Relance des corrections ciblées après ajout des règles de fiches spécifiques.
