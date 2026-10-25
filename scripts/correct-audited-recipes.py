@@ -503,3 +503,27 @@ p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", en
 print(f"recipes={len(recipes)}; generic_preparations_replaced={generic_fixed}; numbered_titles_cleaned={numbered_cleaned}; vague_ingredients_fixed={placeholder_fixed}; missing_time_fields_filled={missing_times_filled}")
 
 print(f"remaining_template_families_replaced={remaining_templates_fixed}")
+
+
+# Fix dangling plan references from an old student-recipe ID prefix, and remove editorial
+# recipe numbers from weekly display labels without changing week/day/meal assignments.
+plan_links_repaired = 0
+plan_numbers_removed = 0
+known_ids = {r.get("id") for r in recipes}
+for slot in d.get("plan", {}).values():
+    rid = slot.get("recipeId")
+    if rid and rid.startswith("etudiant-zero-cuisson-"):
+        candidate = rid.replace("etudiant-zero-cuisson-", "student-zero-cooking-", 1)
+        if candidate in known_ids:
+            slot["recipeId"] = candidate
+            plan_links_repaired += 1
+    label = slot.get("name")
+    if isinstance(label, str):
+        cleaned = re.sub(r"(?i)\bRECETTE\s*(?:N[°ºo]\s*)?\d+\s*(?:[—–:-]\s*)?", "", label)
+        cleaned = re.sub(r"\s{2,}", " ", cleaned).strip()
+        if cleaned != label:
+            slot["name"] = cleaned
+            plan_numbers_removed += 1
+
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print(f"plan_links_repaired={plan_links_repaired}; weekly_recipe_numbers_removed={plan_numbers_removed}")
