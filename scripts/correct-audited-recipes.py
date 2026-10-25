@@ -1259,3 +1259,27 @@ for r in recipes:
             sec["lines"] = r.get("steps", [])[:]
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Final semantic pass: 15 non-Vide-Frigo cards corrected; ingredient and preparation sections synchronized.")
+
+
+
+# Remove obsolete numeric recipe references from ordinary meal cards; keep Opération Vide-Frigo cards untouched.
+d = json.loads(p.read_text(encoding="utf-8"))
+recipes = d.get("recipes", [])
+by = {r.get("id"): r for r in recipes}
+for rid, replacements in {
+ "r-43e1f116de": {
+   "Restes de féculents ou viande cuite (ex: riz de la recette 263): 300 g": "300 g de restes de riz, pâtes ou viande cuite préparés à l’avance"
+ },
+ "r-366a4a239f": {
+   "Restes de riz ou pâtes de la semaine (ex: recette 263): 300 g": "300 g de restes de riz ou de pâtes préparés à l’avance",
+   "Restes de poulet effiloché (ex: recette 258) ou tranches de dinde: 200 g": "200 g de poulet cuit effiloché ou de tranches de dinde"
+ }
+}.items():
+    r = by.get(rid)
+    if not r or re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    r["ingredients"] = [replacements.get(v, v) for v in r.get("ingredients", [])]
+    for sec in r.get("sections", []):
+        if re.search(r"Ingrédients", sec.get("title", ""), re.I):
+            sec["lines"] = r.get("ingredients", [])[:]
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Références numériques résiduelles supprimées des fiches repas classiques.")
