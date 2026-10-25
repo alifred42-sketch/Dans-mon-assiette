@@ -27,6 +27,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check correction script syntax
+        run: python -m py_compile scripts/correct-audited-recipes.py
       - name: Run recipe corrections
         run: python scripts/correct-audited-recipes.py
       - name: Validate recipe database
