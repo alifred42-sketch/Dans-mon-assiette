@@ -281,6 +281,7 @@ export function seasonalReplacement(
       isValidatedRecipe(recipe) &&
       eligibleForPreferences(recipe, preferences) &&
       isMealRecipe(recipe) &&
+      isSeasonCompatible(recipe, season) &&
       seasonalScore(recipe, season) > 0
     )
     .map((recipe) => {
@@ -298,6 +299,16 @@ export function seasonalReplacement(
 
 function normalizedSeasonText(value: string): string {
   return value.toLocaleLowerCase("fr").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function isSeasonCompatible(recipe: Recipe, season: Season): boolean {
+  const title = normalizedSeasonText(recipe.name || "");
+  const summerOnly = /gaspacho|gazpacho|soupe froide|soupe glacee|veloute froid|melon|pasteque|estival|estivale|\bd ete\b|\bde ete\b|aux legumes du soleil/i;
+  const winterOnly = /hivernal|hivernale|\bd hiver\b|\bde hiver\b|de noel|potimarron|chataigne|chataignes|endive|chou de bruxelles/i;
+  if (season !== "ete" && summerOnly.test(title)) return false;
+  if (season === "ete" && winterOnly.test(title)) return false;
+  if (season === "printemps" && /gaspacho|gazpacho|soupe froide|soupe glacee|de noel/i.test(title)) return false;
+  return true;
 }
 
 function isCompleteRecipe(recipe: Recipe): boolean {
@@ -431,7 +442,7 @@ function seasonalScore(recipe: Recipe, season: Season): number {
   return SEASON_TERMS[season].reduce((score, term) => score + (text.includes(normalizedSeasonText(term)) ? 1 : 0), 0);
 }
 
-export function weekPlan(week: number, overrides: Record<string, string> = {}, preferences: PlanningPreferences = {}): PlanSlot[] {
+export function weekPlan(week: number, overrides: Record<string, string> = {}, preferences: PlanningPreferences = {}, applyLeftovers = true): PlanSlot[] {
   const slots = carnet.plan.filter((p) => p.week === week).map((slot) => {
     const id = overrides[`${slot.week}|${slot.day}|${slot.meal}`];
     const recipe = id ? recipesById.get(id) : undefined;
@@ -441,7 +452,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const used = new Set<string>();
   const plannedRecipeIds = new Set(carnet.plan.map((slot) => slot.recipeId).filter(Boolean));
   const eligibleCandidates = carnet.recipes
-    .filter((recipe) => isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences))
+    .filter((recipe) => isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences) && isSeasonCompatible(recipe, season))
     .sort((a, b) => Number(plannedRecipeIds.has(b.id)) - Number(plannedRecipeIds.has(a.id)) || a.name.localeCompare(b.name, "fr"));
   // Exact duplicate cards from overlapping PDF imports must not get extra weight in weekly recipe selection.
   // The full cards remain available in their source collections; only the planning pool is deduplicated.
@@ -474,7 +485,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const overrideRecipe = (day: string, meal: string, pattern?: RegExp, quick = false) => {
     const id = overrides[week + "|" + day + "|" + meal];
     const recipe = id ? recipesById.get(id) : undefined;
-    if (!recipe || !isValidatedRecipe(recipe) || !eligibleForPreferences(recipe, preferences) || reserved.has(recipe.id)) return undefined;
+    if (!recipe || !isValidatedRecipe(recipe) || !eligibleForPreferences(recipe, preferences) || !isSeasonCompatible(recipe, season) || reserved.has(recipe.id)) return undefined;
     if (pattern && !pattern.test(roleText(recipe))) return undefined;
     if (quick && (durationMinutes(recipe.timePrep) ?? Infinity) + (durationMinutes(recipe.timeCook) ?? Infinity) > 20) return undefined;
     return recipe;
@@ -540,7 +551,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   setRole("DIMANCHE", "Midi", weekendPleasures[2], "Aucun repas plaisir validé");
   setRole("DIMANCHE", "Soir", weekendPleasures[3], "Aucun repas plaisir validé");
 
-  return slots.map((slot) => {
+  const result = slots.map((slot) => {
     const matrixSelection = matrix.get(`${slot.day}|${slot.meal}`);
     if (matrixSelection) {
       if (!matrixSelection.recipe) return { ...slot, name: matrixSelection.name, recipeId: null };
@@ -563,6 +574,37 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     used.add(replacement.id);
     return { ...slot, name: replacement.name, recipeId: replacement.id };
   });
+  if (!applyLeftovers) return result;
+
+  // Tous les déjeuners reprennent le dîner de la veille. Une substitution explicite
+  // faite par l'utilisateur au déjeuner reste prioritaire.
+  const previousWeek = week === 1 ? 52 : week - 1;
+  const previousPlan = weekPlan(previousWeek, overrides, preferences, false);
+  const previousDay: Record<string, string> = {
+    MARDI: "LUNDI",
+    MERCREDI: "MARDI",
+    JEUDI: "MERCREDI",
+    VENDREDI: "JEUDI",
+    SAMEDI: "VENDREDI",
+    DIMANCHE: "SAMEDI",
+  };
+  return result.map((slot) => {
+    if (slot.meal !== "Midi") return slot;
+    const overrideId = overrides[`${slot.week}|${slot.day}|${slot.meal}`];
+    if (overrideId) {
+      const switched = recipesById.get(overrideId);
+      if (switched && isValidatedRecipe(switched) && eligibleForPreferences(switched, preferences) && isSeasonCompatible(switched, season)) {
+        return { ...slot, recipeId: switched.id, name: switched.name };
+      }
+    }
+    const sourcePlan = slot.day === "LUNDI" ? previousPlan : result;
+    const dinnerDay = slot.day === "LUNDI" ? "DIMANCHE" : previousDay[slot.day];
+    const dinner = sourcePlan.find((item) => item.day === dinnerDay && item.meal === "Soir");
+    const recipe = getRecipe(dinner?.recipeId);
+    if (!dinner?.recipeId || !recipe) return slot;
+    return { ...slot, recipeId: recipe.id, name: "Restes du dîner — " + recipe.name };
+  });
+
 }
 export function breakfastForWeek(week: number): Breakfast | undefined {
   return (carnet.breakfasts || []).find((item) => item.week === week);
