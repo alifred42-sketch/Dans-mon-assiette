@@ -1610,5 +1610,93 @@
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 970,
     "id": "pdf-1001-970"
+  },
+  {
+    "name": "Salade croquante de surimi aux carottes râpées",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Carottes râpées fraîches : 200 g",
+      "Bâtonnets de surimi : 8 pièces coupés en rondelles d'un demi-centimètre",
+      "Sauce salade au yaourt prête à l'emploi : 3 cuillères à soupe",
+      "Ciboulette ciselée : 1 cuillère à café"
+    ],
+    "steps": [
+      "Le rassemblement : Versez les carottes râpées et les rondelles de surimi dans un grand saladier robuste.",
+      "L'assaisonnement : Ajoutez les cuillères de sauce salade blanche au yaourt directement sur les ingrédients.",
+      "L'aromate : Parsemez la cuillère de ciboulette ciselée sur la préparation pour la fraîcheur.",
+      "L'enrobage : Remuez énergiquement à la cuillère pour napper l'ensemble de la salade.",
+      "Le service : Donnez un léger tour de poivre noir du moulin et servez immédiatement cette entrée minute."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 971,
+    "id": "pdf-1001-971"
+  },
+  {
+    "name": "Les Œufs au Pesto (Pesto Eggs)",
+    "timePrep": "2 min",
+    "timeCook": "4 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Œufs frais : 4 pièces",
+      "Pesto alla genovese (basilic vert) : 4 cuillères à soupe",
+      "Pain de campagne : 4 grandes tranches grillées",
+      "Poivre noir du moulin : 1 tour"
+    ],
+    "steps": [
+      "Le lit vert : Étalez une généreuse cuillère à soupe de pesto vert au fond d'une poêle froide.",
+      "La chauffe : Portez la poêle sur feu moyen jusqu'à ce que le pesto commence à frémir doucement.",
+      "Les œufs : Cassez les œufs frais délicatement sur la couche de pesto (qui remplace l'huile ou le beurre).",
+      "La cuisson miroir : Couvrez la poêle et laissez cuire pendant 3 minutes jusqu'à ce que le blanc soit pris.",
+      "Le dressage : Glissez un œuf au pesto chaud sur chaque tranche de pain de campagne grillée et poivrez."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 972,
+    "id": "pdf-1001-972"
+  },
+  {
+    "name": "Le Wrap plié en 4",
+    "timePrep": "5 min",
+    "timeCook": "2 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Grandes tortillas de blé : 4 pièces",
+      "Jambon blanc : 4 tranches",
+      "Fromage emmental râpé : 100 g",
+      "Sauce tomate ou ketchup : 4 cuillères à soupe"
+    ],
+    "steps": [
+      "L'entaille : Faites une seule fente droite du centre vers le bord inférieur de la tortilla posée à plat.",
+      "Les quartiers : Imaginez 4 carrés : étalez la sauce tomate sur le premier, le jambon sur le deuxième, le fromage sur le troisième, et laissez le dernier nature.",
+      "Le pliage : Rabattez le premier quartier sur le deuxième, puis sur le troisième, et enfin sur le quatrième pour former un triangle épais.",
+      "La cuisson poêle : Déposez les triangles ainsi formés dans une poêle sèche bien chaude.",
+      "Le croustillant : Pressez bien et laissez chauffer 1 minute par face pour fondre le fromage et dorer le pain."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 973,
+    "id": "pdf-1001-973"
+  },
+  {
+    "name": "La Salade",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Salade verte mélangée (type batavia ou laitue) : 1 grosse salade lavée et essorée",
+      "Huile de tournesol : 3 cuillères à soupe",
+      "Vinaigre de vin rouge : 1 cuillère à soupe",
+      "Moutarde fine de Dijon : 1 cuillère à café"
+    ],
+    "steps": [
+      "La base : Déposez la cuillère de moutarde, le vinaigre de vin et le sel au fond de votre saladier.",
+      "L'émulsion : Versez l'huile de tournesol et fouettez énergiquement à la fourchette pour créer la vinaigrette.",
+      "La verdure : Ajoutez la totalité des feuilles de salade verte lavées et parfaitement séchées.",
+      "L'enrobage : Brassez délicatement au dernier moment à l'aide de deux couverts pour ne pas flétrir la salade.",
+      "Le service : Donnez un bon tour de moulin à poivre noir et apportez sur la table immédiatement."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 974,
+    "id": "pdf-1001-974"
   }
 ]
