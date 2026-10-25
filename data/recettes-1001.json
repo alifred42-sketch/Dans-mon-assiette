@@ -135,5 +135,141 @@
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 905,
     "id": "pdf-1001-905"
+  },
+  {
+    "name": "One-Pot Rice à la mexicaine",
+    "timePrep": "5 min",
+    "timeCook": "15 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Riz blanc : 250 g",
+      "Haricots rouges cuits : 150 g (en conserve égouttés)",
+      "Maïs en grains : 100 g égoutté",
+      "Coulis de tomates : 200 ml",
+      "Épices Chili : 1 cuillère à café",
+      "Eau froide : 400 ml"
+    ],
+    "steps": [
+      "L'assemblage : Placez le riz blanc cru, les haricots rouges et le maïs au fond d'une casserole.",
+      "Les aromates : Saupoudrez les épices Chili, du sel et un tour de poivre noir.",
+      "Les liquides : Versez le coulis de tomates rouge et le volume d'eau froide.",
+      "La cuisson : Portez à ébullition, couvrez et laissez cuire à feu doux pendant 15 minutes.",
+      "Le service : Remuez doucement dès l'absorption complète du liquide et servez bien chaud."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 906,
+    "id": "pdf-1001-906"
+  },
+  {
+    "name": "Fondue de pain rapide au fromage (façon ramequin)",
+    "timePrep": "10 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de campagne rassis : 150 g coupé en petits dés",
+      "Emmental ou Comté râpé : 150 g",
+      "Œufs frais : 2 pièces battus",
+      "Lait : 250 ml",
+      "Gousse d'ail : 1/2 pièce"
+    ],
+    "steps": [
+      "L'ail : Frottez le fond d'une casserole avec la demi-gousse d'ail.",
+      "Le bain : Versez le lait et les œufs battus dans la casserole et mélangez bien.",
+      "Le pain : Jetez les dés de pain rassis dans le liquide pour qu'ils s'imbibent bien pendant 2 minutes.",
+      "La fonte : Ajoutez le fromage râpé et faites chauffer à feu doux en remuant constamment à la cuillère en bois.",
+      "Le service : Retirez du feu après 5 minutes dès que le fromage est totalement fondu et forme une crème filante."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 907,
+    "id": "pdf-1001-907"
+  },
+  {
+    "name": "Coquillettes au poulet et sauce moutarde",
+    "timePrep": "5 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pâtes (type Coquillettes) : 300 g",
+      "Restes de poulet rôti ou émincés prêts à cuire : 250 g",
+      "Moutarde à l'ancienne : 2 cuillères à soupe",
+      "Crème fraîche liquide : 150 ml",
+      "Huile d'olive : 1 cuillère à soupe"
+    ],
+    "steps": [
+      "Les pâtes : Faites cuire les coquillettes al dente dans une grande casserole d'eau bouillante salée.",
+      "La viande : Parallèlement, faites revenir les morceaux de poulet dans une poêle huilée pendant 4 minutes.",
+      "La sauce : Versez la crème liquide et la moutarde à l'ancienne directement sur le poulet chaud.",
+      "L'union : Égouttez les pâtes et versez-les au cœur de la poêle de poulet à la moutarde.",
+      "L'enrobage : Remuez l'ensemble pendant 1 minute à feu très doux pour lier les saveurs et servez chaud."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 908,
+    "id": "pdf-1001-908"
+  },
+  {
+    "name": "Velouté express Maïs & Kiri",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Maïs en grains : 400 g (en conserve égoutté)",
+      "Portions de fromage Kiri : 4 pièces",
+      "Bouillon de légumes chaud : 500 ml",
+      "Piment d'Espelette : 1 pincée"
+    ],
+    "steps": [
+      "La base : Versez les grains de maïs doux égouttés au fond de votre casserole.",
+      "Le liquide : Mouillez les grains avec la totalité du bouillon de légumes chaud.",
+      "La chauffe : Portez l'ensemble à frémissement doux sur feu moyen pendant 5 minutes.",
+      "L'onctuosité : Ajoutez les 4 portions de fromage Kiri directement dans la casserole chaude hors du feu.",
+      "Le lissage : Mixez longuement au mixeur plongeant jusqu'à texture veloutée, servez avec la pincée de piment."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 909,
+    "id": "pdf-1001-909"
+  },
+  {
+    "name": "Dessert à la casserole : Semoule au lait et caramel",
+    "timePrep": "5 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Semoule de blé fine : 80 g",
+      "Lait entier ou demi-écrémé : 600 ml",
+      "Sucre de canne blond : 40 g",
+      "Nappage caramel liquide : 4 cuillères à soupe"
+    ],
+    "steps": [
+      "La chauffe : Versez le lait et le sucre de canne dans une casserole, puis portez à frémissement doux.",
+      "Le grain : Jetez la semoule fine en pluie dans le lait chaud tout en remuant énergiquement au fouet.",
+      "L'épaississement : Laissez cuire à feu très doux pendant 5 minutes sans cesser de mélanger à la cuillère en bois.",
+      "Le fond : Répartissez le nappage caramel liquide au fond de 4 petits ramequins ou bols.",
+      "Le moulage : Versez la semoule au lait bien chaude par-dessus le caramel et laissez tiédir ou refroidir avant de déguster."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 910,
+    "id": "pdf-1001-910"
+  },
+  {
+    "name": "Dessert à la casserole : Semoule au lait et caramel",
+    "timePrep": "5 min",
+    "timeCook": "10 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Semoule de blé fine : 60 g",
+      "Lait entier ou demi-écrémé : 500 ml",
+      "Sucre en poudre : 40 g",
+      "Caramel liquide (prêt à l'emploi) : 4 cuillères à soupe"
+    ],
+    "steps": [
+      "La chauffe : Versez le lait et le sucre en poudre dans une casserole à fond épais et portez à frémissement.",
+      "Le versement : Jetez la semoule fine en pluie dans le lait chaud tout en remuant énergiquement au fouet.",
+      "La cuisson douce : Laissez épaissir sur feu très doux pendant 5 minutes sans cesser de mélanger à la cuillère en bois.",
+      "Le nappage : Répartissez une cuillère à soupe de caramel liquide au fond de 4 petits ramequins individuels.",
+      "Le moulage : Versez la semoule au lait chaude par-dessus le caramel et laissez tiédir ou refroidir avant de déguster."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 911,
+    "id": "pdf-1001-911"
   }
 ]
