@@ -62,3 +62,5 @@ for r in recipes:
                 sec["lines"]=r["steps"][:]
 print("generic step cards repaired:",changed)
 p.write_text(json.dumps(d,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+
+# Relance après raccordement au workflow de correction.
