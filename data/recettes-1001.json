@@ -613,5 +613,165 @@
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 926,
     "id": "pdf-1001-926"
+  },
+  {
+    "name": "Ratatouille minute en bol",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Courgette : 1 pièce coupée en micro-dés microscopiques",
+      "Aubergine : 1/2 pièce coupée en micro-dés microscopiques",
+      "Poivron rouge : 1/2 pièce coupée en micro-dés microscopiques",
+      "Coulis de tomates : 200 ml",
+      "Huile d'olive : 2 cuillères à soupe",
+      "Herbes de Provence : 1 pincée"
+    ],
+    "steps": [
+      "La découpe : Taillez les légumes en dés microscopiques de taille régulière pour garantir une cuisson ultra-rapide.",
+      "La saisie : Saisissez les micro-dés de courgette, d'aubergine et de poivron dans l'huile d'olive à feu très vif pendant 4 minutes.",
+      "Le rouge : Versez le coulis de tomates directement sur les légumes croquants dans la poêle.",
+      "L'aromate : Saupoudrez la pincée d'herbes de Provence, salez et poivrez généreusement la préparation.",
+      "Le mijotage : Laissez réduire à découvert pendant 4 minutes supplémentaires à feu moyen pour confire la ratatouille express."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 927,
+    "id": "pdf-1001-927"
+  },
+  {
+    "name": "Saumon vapeur minute au soja et sésame",
+    "timePrep": "5 min",
+    "timeCook": "6 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pavés de saumon frais (sans peau) : 4 pièces",
+      "Sauce soja salée : 3 cuillères à soupe",
+      "Huile de sésame grillé : 1 cuillère à soupe",
+      "Graines de sésame blanc : 1 cuillère à café",
+      "Eau froide : 200 ml (pour la vapeur)"
+    ],
+    "steps": [
+      "La marinade : Badigeonnez les pavés de saumon avec la sauce soja et l'huile de sésame au fond d'une assiette.",
+      "Le montage : Placez les pavés de saumon dans le panier vapeur de votre casserole contenant l'eau froide.",
+      "La cuisson : Couvrez hermétiquement et faites cuire à feu vif pendant 6 minutes complètes pour pocher le poisson.",
+      "Le décor : Sortez délicatement les pavés de saumon du panier vapeur et déposez-les dans les assiettes.",
+      "La touche finale : Nappez avec le reste de la marinade au soja chaude et saupoudrez les graines de sésame."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 928,
+    "id": "pdf-1001-928"
+  },
+  {
+    "name": "Gnocchis express à la sauce tomate et mozzarella",
+    "timePrep": "5 min",
+    "timeCook": "8 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Gnocchis de pommes de terre frais : 500 g",
+      "Coulis de tomates : 300 ml",
+      "Boule de mozzarella : 1 pièce coupée en petits dés",
+      "Huile d'olive : 1 cuillère à soupe",
+      "Basilic séché : 1 pincée"
+    ],
+    "steps": [
+      "Le dorage : Saisissez les gnocchis frais dans la poêle avec l'huile d'olive à feu vif pendant 4 minutes pour les rendre croustillants.",
+      "Le rouge : Versez le coulis de tomates rouge directement sur les gnocchis dorés au fond de la poêle.",
+      "L'aromate : Saupoudrez la pincée de basilic séché, salez et poivrez la préparation.",
+      "Le fromage : Répartissez les petits dés de mozzarella uniformément sur toute la surface de la poêlée.",
+      "La fusion : Couvrez la poêle, baissez le feu et laissez fondre la mozzarella pendant 2 minutes jusqu'à ce qu'elle soit coulante."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 929,
+    "id": "pdf-1001-929"
+  },
+  {
+    "name": "Pain de bœuf minute en mug (Meatloaf)",
+    "timePrep": "5 min",
+    "timeCook": "3 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Viande hachée de bœuf : 400 g",
+      "Œuf frais : 1 pièce battue",
+      "Chapelure fine : 2 cuillères à soupe",
+      "Ketchup : 4 cuillères à soupe",
+      "Oignon en poudre : 1/2 cuillère à café"
+    ],
+    "steps": [
+      "La farce : Mélangez la viande hachée, l'œuf battu, la chapelure et l'oignon en poudre dans un grand bol.",
+      "Le montage : Répartissez cette farce de manière égale au fond de 4 grands mugs en tassant bien à la cuillère.",
+      "Le laquage : Étalez une cuillère à soupe de ketchup sur le dessus de la viande dans chaque mug.",
+      "La cuisson flash : Faites cuire les mugs individuellement au micro-ondes pendant 3 minutes à puissance maximale (800W).",
+      "Le service : Sortez les mugs prudemment (attention c'est chaud) et dégustez ce pain de bœuf minute à la petite cuillère."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 930,
+    "id": "pdf-1001-930"
+  },
+  {
+    "name": "Salade grecque express à la feta",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Fromage Feta : 150 g coupé en dés",
+      "Concombre : 1 pièce lavée et coupée en dés",
+      "Tomates grappes : 3 pièces coupées en morceaux",
+      "Olives noires dénoyautées : 12 pièces",
+      "Huile d'olive extra vierge : 3 cuillères à soupe",
+      "Origan séché : 1 pincée"
+    ],
+    "steps": [
+      "Les légumes : Réunissez les dés de concombre frais et les morceaux de tomates de saison au fond d'un grand saladier.",
+      "Le fromage : Ajoutez délicatement les dés de feta et les olives noires entières par-dessus les légumes.",
+      "L'arrosage : Versez l'huile d'olive extra vierge en filet continu sur l'ensemble de la préparation.",
+      "L'aromate : Saupoudrez la pincée d'origan séché pour apporter les saveurs de la Méditerranée.",
+      "Le mélange : Brassez doucement à la cuillère en bois pour ne pas écraser le fromage et servez immédiatement."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 931,
+    "id": "pdf-1001-931"
+  },
+  {
+    "name": "Wrap fraîcheur au thon et au maïs",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Grandes tortillas de blé : 4 pièces",
+      "Thon au naturel (en boîte) : 200 g égoutté et émietté",
+      "Maïs en grains : 150 g (en conserve égoutté)",
+      "Mayonnaise : 3 cuillères à soupe",
+      "Salade verte émincée : 1 belle poignée"
+    ],
+    "steps": [
+      "La farce : Mélangez le thon émietté, les grains de maïs doux et la mayonnaise dans un bol à la fourchette.",
+      "Le tartinage : Répartissez cette préparation de manière égale au centre de chaque tortilla de blé.",
+      "Le vert : Déposez quelques lanières de salade verte croquante sur le mélange au thon.",
+      "Le pliage : Rabattez les deux bords opposés des tortillas et roulez-les très serré pour emprisonner la garniture.",
+      "Le service : Tranchez les wraps en deux boudins de biais et dégustez immédiatement ce repas sur le pouce."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 932,
+    "id": "pdf-1001-932"
+  },
+  {
+    "name": "La vraie salade Caprese (Tomate-Mozzarella)",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Tomates anciennes bien mûres : 4 grosses pièces",
+      "Mozzarella di Bufala : 2 boules égouttées",
+      "Feuilles de basilic frais : 12 belles pièces",
+      "Huile d'olive extra vierge : 3 cuillères à soupe",
+      "Fleur de sel : 1 pincée"
+    ],
+    "steps": [
+      "Le tranchage : Coupez les tomates de saison et les boules de mozzarella en rondelles de même épaisseur.",
+      "Le dressage : Rangez-les sur un grand plat plat en alternant une rondelle de tomate et une de mozzarella."
+    ],
+    "source": "RECETTES 1000.pdf",
+    "sourceNumber": 933,
+    "id": "pdf-1001-933"
   }
 ]
