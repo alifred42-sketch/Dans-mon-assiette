@@ -883,3 +883,62 @@ for r in recipes:
     sync_sections(r)
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Plats du planning réparés; temps sans cuisson normalisés; six entrées sauce/épices remplacées par de vrais repas.")
+
+
+# Finish the remaining meal-card defects and remove every sauce/marinade-only plan link.
+apply("r-ad33de6da2", "Burger maison façon montagnard",
+ ["4 pains à burger","4 steaks hachés de bœuf","4 tranches de reblochon","100 g de salade verte","2 tomates","1 oignon","1 c. à soupe de moutarde douce","Sel et poivre"],
+ ["1. Lavez la salade et coupez les tomates en rondelles; émincez l’oignon.","2. Assaisonnez les steaks et faites-les cuire dans une poêle chaude jusqu’à cuisson complète.","3. Ajoutez le reblochon sur les steaks en fin de cuisson et couvrez brièvement pour le faire fondre.","4. Tartinez les pains de moutarde, ajoutez les steaks au reblochon, la salade, les tomates et l’oignon, puis servez."], "15 min","20 min",4)
+apply("r-bf7a581746", "Émincé de poulet façon méditerranéenne",
+ ["600 g de blancs de poulet","2 courgettes","3 tomates","1 oignon","1 poivron (facultatif)","1 c. à soupe d’huile d’olive","1 c. à café d’herbes de Provence","1 c. à café de paprika doux","1 gousse d’ail","5 g de basilic frais","Sel et poivre"],
+ ["1. Coupez le poulet en lanières; coupez les courgettes, les tomates et le poivron en morceaux et émincez l’oignon.","2. Faites revenir l’oignon et l’ail dans l’huile, ajoutez le poulet et faites-le dorer.","3. Ajoutez les légumes, les herbes et le paprika; poursuivez la cuisson 10 à 15 minutes, jusqu’à ce que le poulet soit cuit et les légumes tendres.","4. Parsemez de basilic frais, rectifiez le sel et le poivre, puis servez chaud."], "15 min","25 min",4)
+apply("r-4e7d1bf505", "Wrap mexicain léger au poulet et maïs",
+ ["4 wraps complets","400 g de poulet grillé","2 tomates","100 g de maïs égoutté","100 g de salade verte","2 poivrons","1 c. à café de paprika doux","1/2 c. à café de cumin","100 g de fromage blanc nature","1 citron","Sel et poivre"],
+ ["1. Coupez le poulet grillé en lanières; coupez les tomates et les poivrons en dés et lavez la salade.","2. Faites revenir les poivrons dans une poêle avec le paprika et le cumin pendant 5 à 7 minutes.","3. Mélangez le fromage blanc avec un peu de jus de citron, le sel et le poivre.","4. Garnissez les wraps avec le poulet, les poivrons, les tomates, le maïs, la salade et la sauce au fromage blanc, puis roulez et servez."], "15 min","10 min",4)
+
+# Replace generic wording in otherwise detailed steps without changing the recipe method.
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    if re.search(r"Sans cuisson", str(r.get("timeCook","")), re.I): r["timeCook"] = "0 min"
+    new_steps=[]
+    for st in r.get("steps", []):
+        st=str(st)
+        st=re.sub(r"jusqu’à cuisson à cœur", "jusqu’à ce que le centre soit entièrement cuit", st, flags=re.I)
+        st=re.sub(r"goûtez et rectifiez l’assaisonnement si nécessaire", "goûtez, puis ajustez le sel et le poivre si nécessaire", st, flags=re.I)
+        st=re.sub(r"rectifier l’assaisonnement si nécessaire", "ajuster le sel et le poivre en petites quantités", st, flags=re.I)
+        st=re.sub(r"selon votre goût", "en ajustant progressivement le sel et le poivre", st, flags=re.I)
+        st=re.sub(r"vérifiez l’assaisonnement", "goûtez puis ajustez le sel et le poivre", st, flags=re.I)
+        st=re.sub(r"mélangez délicatement pendant 30 secondes", "mélangez délicatement pendant une demi-minute", st, flags=re.I)
+        st=re.sub(r"ajoutez les ingrédients restants", "incorporez les ingrédients prévus en dernier selon leur temps de cuisson", st, flags=re.I)
+        new_steps.append(st)
+    r["steps"] = new_steps
+    sync_sections(r)
+
+# Sauce and marinade records remain in their own category; meals occupy the weekly slots.
+plan_replacements = {
+ "r-f3c93751c3":"r-ea3ecc28a3",
+ "r-66e7b3d12b":"r-4e7d1bf505",
+ "r-aef573f3e9":"r-f7ad8158b6",
+ "r-6116939142":"r-4e7d1bf505",
+ "r-89c1a2bc15":"r-7e83748f10",
+ "r-b4b0610f04":"r-957c974540",
+ "r-e692c705a1":"r-e79335a6fc",
+ "r-4356461b3b":"veg-ah-pdf-015",
+ "r-08d99317f5":"r-1aff5ca09b",
+}
+for slot in (d.get("plan", {}).values() if isinstance(d.get("plan", {}), dict) else d.get("plan", [])):
+    old_id=slot.get("recipeId")
+    if old_id in plan_replacements and plan_replacements[old_id] in by:
+        replacement_recipe=by[plan_replacements[old_id]]
+        old_label=slot.get("name","")
+        prefix=""
+        if re.match(r"^Vide-frigo\s*[—-]", old_label, re.I): prefix="Vide-frigo — "
+        elif re.match(r"^Seconde vie\s*[—-]", old_label, re.I): prefix="Seconde vie — "
+        slot["recipeId"]=replacement_recipe["id"]
+        slot["name"]=prefix+replacement_recipe.get("name","")
+
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    sync_sections(r)
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Derniers liens sauce/marinade retirés des menus; fiches de remplacement synchronisées.")
