@@ -1,0 +1,36 @@
+name: Corriger les étapes génériques des recettes
+on:
+  push:
+    branches:
+      - travail-cuisine-chic-ouf-design
+    paths:
+      - scripts/refine-generic-recipe-steps.py
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refine-recipes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer la branche de test
+        uses: actions/checkout@v4
+        with:
+          ref: travail-cuisine-chic-ouf-design
+          persist-credentials: true
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Réécrire les étapes trop génériques
+        run: python scripts/refine-generic-recipe-steps.py
+      - name: Enregistrer les corrections dans GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/carnet.json
+          if git diff --cached --quiet; then
+            echo "Aucune modification à enregistrer."
+          else
+            git commit -m "Corrige les étapes génériques des recettes"
+            git push origin travail-cuisine-chic-ouf-design
+          fi
