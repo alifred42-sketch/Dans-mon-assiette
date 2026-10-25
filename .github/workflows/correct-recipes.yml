@@ -1,64 +1,10 @@
 name: Corriger et enregistrer la base recettes
-
 on:
-  push:
-    branches:
-      - travail-cuisine-chic-ouf-design
-    paths:
-      - 'scripts/correct-audited-recipes.py'
-      - '.github/workflows/correct-recipes.yml'
   workflow_dispatch:
-
 permissions:
-  contents: write
-
-concurrency:
-  group: correct-recipes-test-branch
-  cancel-in-progress: false
-
+  contents: read
 jobs:
-  correct:
-    if: github.ref == 'refs/heads/travail-cuisine-chic-ouf-design'
+  notice:
     runs-on: ubuntu-latest
     steps:
-      - name: Récupérer la branche de test
-        uses: actions/checkout@v4
-        with:
-          ref: travail-cuisine-chic-ouf-design
-          fetch-depth: 0
-
-      - name: Préparer Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Vérifier la syntaxe du correcteur
-        run: python -m py_compile scripts/correct-audited-recipes.py
-
-      - name: Appliquer les corrections prévues
-        run: python scripts/correct-audited-recipes.py
-
-      - name: Vérifier le JSON et les identifiants
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          d = json.loads(Path("data/carnet.json").read_text(encoding="utf-8"))
-          recipes = d.get("recipes", [])
-          ids = [r.get("id") for r in recipes]
-          assert recipes, "Aucune recette trouvée"
-          assert len(ids) == len(set(ids)), "Identifiants de recettes en double"
-          print(f"JSON valide ; {len(recipes)} fiches ; identifiants uniques.")
-          PY
-
-      - name: Enregistrer les corrections sur la branche de test
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- data/carnet.json; then
-            echo "Aucune différence de données à enregistrer."
-          else
-            git add data/carnet.json
-            git commit -m "Corriger les fiches et étapes génériques des recettes"
-            git push origin travail-cuisine-chic-ouf-design
-          fi
+      - run: echo 'Les corrections automatiques sont gérées par apply-recipe-corrections.yml pour éviter les écritures concurrentes.'
