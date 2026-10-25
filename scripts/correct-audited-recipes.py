@@ -1117,3 +1117,35 @@ p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", en
 print(f"visible_legacy_recipe_numbers_removed={legacy_refs_removed}")
 
 # Relance de la synchronisation après les changements de validation de lib/carnet.ts.
+
+
+# Remove numeric recipe references that also carry a "prepared in advance" note.
+legacy_batch_refs_removed = 0
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I) or r.get("id") in {"r-43e1f116de","r-366a4a239f"}:
+        continue
+    for key in ("ingredients", "steps", "notes", "blurb"):
+        value = r.get(key)
+        if isinstance(value, list):
+            fixed_list=[]
+            for line in value:
+                text_line = str(line)
+                text_line = re.sub(r"\s*\(recette\s+(?:n[°ºo]\s*)?\d+\s*,\s*(préparé(?:e)? d['’]avance)\)", r" (\1)", text_line, flags=re.I)
+                text_line = re.sub(r"\s*\(recette\s+(?:n[°ºo]\s*)?\d+\s*,\s*(préparée? d['’]avance)\)", r" (\1)", text_line, flags=re.I)
+                if text_line != line: legacy_batch_refs_removed += 1
+                fixed_list.append(text_line)
+            r[key] = fixed_list
+        elif isinstance(value, str):
+            fixed = re.sub(r"\s*\(recette\s+(?:n[°ºo]\s*)?\d+\s*,\s*(préparé(?:e)? d['’]avance)\)", r" (\1)", value, flags=re.I)
+            if fixed != value: legacy_batch_refs_removed += 1
+            r[key] = fixed
+    for sec in r.get("sections", []):
+        if isinstance(sec.get("lines"), list):
+            sec["lines"] = [re.sub(r"\s*\(recette\s+(?:n[°ºo]\s*)?\d+\s*,\s*(préparé(?:e)? d['’]avance)\)", r" (\1)", str(line), flags=re.I) for line in sec["lines"]]
+# Keep the boiled-egg prep card complete, without making it eligible as a meal.
+if "r-c2e2da7c3e" in by:
+    by["r-c2e2da7c3e"]["ingredients"] = ["8 gros œufs","1 litre d’eau pour la cuisson","4 glaçons"]
+    sync_sections(by["r-c2e2da7c3e"])
+
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print(f"prepared-ahead recipe number references removed={legacy_batch_refs_removed}")
