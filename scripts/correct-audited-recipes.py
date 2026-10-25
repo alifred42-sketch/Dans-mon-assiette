@@ -8,7 +8,7 @@ from pathlib import Path
 p = Path("data/carnet.json")
 raw_data = p.read_text(encoding="utf-8")
 # Recover from a trailing literal \\n left by an earlier write attempt, if present.
-if raw_data.endswith(r"\\n"):
+if raw_data.endswith(r"\n"):
     raw_data = raw_data[:-2]
 d = json.loads(raw_data)
 recipes = d.get("recipes", [])
