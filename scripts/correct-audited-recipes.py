@@ -568,3 +568,39 @@ for rid in ["cco-slot-20-samedi-midi","cco-slot-35-lundi-midi","cco-slot-35-mard
       ["1. Lavez et essorez la salade; coupez les tomates et le concombre en morceaux.","2. Coupez le poulet cuit en lamelles et émiettez la feta.","3. Répartissez la salade, les tomates, le concombre, le riz et le poulet dans les assiettes.","4. Mélangez l’huile d’olive, le jus de citron, le sel et le poivre; assaisonnez juste avant de servir et ajoutez la feta."], "15 min","0 min",4)
 p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print("Manual recipe-card repairs applied; weekly meal assignments preserved.")
+
+
+# Last nine residual template cards: use the actual ingredients and method for each dish.
+apply("r-4b1467579a", "Courgettes gratinées au chèvre",
+ ["4 courgettes moyennes","1 oignon","200 g de chèvre frais","100 g de crème légère","40 g de parmesan râpé","1 c. à soupe d’huile d’olive","1 c. à café d’herbes de Provence","Sel et poivre"],
+ ["1. Préchauffez le four à 190 °C. Lavez les courgettes et coupez-les en rondelles; émincez l’oignon.","2. Faites revenir l’oignon et les courgettes dans l’huile pendant 8 à 10 minutes, jusqu’à ce qu’ils commencent à s’attendrir.","3. Mélangez le chèvre frais avec la crème, les herbes, le sel et le poivre. Disposez les courgettes dans un plat et nappez de cette préparation.","4. Parsemez de parmesan et enfournez 20 à 25 minutes, jusqu’à ce que le gratin soit doré et les courgettes tendres."], "15 min","30 min",4)
+apply("student-microwave-021", "One-Pot Pasta express à la tomate en bol",
+ ["50 g de coquillettes","4 c. à soupe de coulis de tomate","100 ml d’eau chaude","1 c. à café d’huile d’olive","30 g de fromage râpé","Sel et poivre"],
+ ["1. Dans un grand bol compatible micro-ondes, mélangez les coquillettes, le coulis de tomate et l’eau chaude; ne couvrez pas hermétiquement.","2. Faites chauffer 2 minutes à puissance élevée, remuez, puis poursuivez par séquences d’une minute jusqu’à ce que les pâtes soient tendres; ajoutez un peu d’eau si nécessaire.","3. Incorporez l’huile, le sel, le poivre et le fromage râpé.","4. Laissez reposer une minute, mélangez et vérifiez que les pâtes sont bien cuites avant de servir."], "4 min","6 min",1)
+apply("student-microwave-022", "Mijoté express de pois chiches au thon et cumin",
+ ["100 g de pois chiches égouttés","80 g de thon au naturel égoutté","3 c. à soupe de coulis de tomate","1 c. à café d’huile d’olive","1/2 c. à café de cumin","Sel et poivre"],
+ ["1. Égouttez les pois chiches et le thon. Placez-les dans un bol compatible micro-ondes.","2. Ajoutez le coulis de tomate, l’huile, le cumin, le sel et le poivre; mélangez délicatement.","3. Faites chauffer 1 minute 30 à 2 minutes au micro-ondes, remuez à mi-cuisson et vérifiez que le mélange est bien chaud.","4. Laissez reposer une minute et servez avec l’accompagnement souhaité."], "3 min","2 min",1)
+apply("student-microwave-024", "Burrito minute au thon et haricots rouges",
+ ["1 tortilla de blé","100 g de haricots rouges égouttés","80 g de thon au naturel égoutté","2 c. à soupe de coulis de tomate","30 g de fromage râpé","1/2 c. à café de paprika doux","Sel et poivre"],
+ ["1. Égouttez les haricots rouges et le thon, puis mélangez-les avec le coulis de tomate, le paprika, le sel et le poivre dans un bol compatible micro-ondes.","2. Faites chauffer le mélange 1 minute à 1 minute 30, jusqu’à ce qu’il soit bien chaud.","3. Répartissez la garniture au centre de la tortilla et ajoutez le fromage râpé.","4. Repliez la tortilla et réchauffez 20 à 30 secondes au micro-ondes pour faire fondre le fromage; laissez reposer avant de manger."], "3 min","2 min",1)
+apply("student-microwave-026", "Fondue de camembert au miel en bol",
+ ["1 petit camembert","1 c. à café de miel","5 g d’herbes aromatiques","4 tranches de pain"],
+ ["1. Retirez le camembert de tout emballage et placez-le dans un petit récipient compatible micro-ondes.","2. Incisez légèrement la croûte sur le dessus et ajoutez le miel et les herbes aromatiques.","3. Faites chauffer par séquences de 20 à 30 secondes jusqu’à ce que le cœur soit fondant, sans laisser déborder.","4. Laissez reposer une minute et dégustez avec les tranches de pain."], "3 min","2 min",1)
+apply("student-microwave-029", "Chaudrée minute de maïs au bacon",
+ ["140 g de maïs égoutté","30 g de lardons","100 ml de lait","1 c. à soupe de crème légère","1/2 cube de bouillon émietté","Poivre"],
+ ["1. Placez les lardons dans un bol compatible micro-ondes et faites-les chauffer 45 à 60 secondes.","2. Ajoutez le maïs égoutté, le lait, la crème et le bouillon émietté; mélangez.","3. Faites chauffer 2 à 3 minutes en remuant à mi-cuisson, jusqu’à ce que la soupe soit bien chaude.","4. Poivrez, laissez reposer une minute et mélangez avant de servir."], "4 min","4 min",1)
+apply("student-microwave-043", "One-Pot Pasta façon tartiflette en bol",
+ ["50 g de coquillettes","30 g de lardons","2 tranches de fromage à raclette ou 60 g de reblochon","100 ml d’eau chaude","2 c. à soupe de lait","Poivre"],
+ ["1. Dans un bol compatible micro-ondes, mélangez les coquillettes et l’eau chaude; ne couvrez pas hermétiquement.","2. Faites chauffer 2 minutes, remuez puis poursuivez par séquences d’une minute jusqu’à ce que les pâtes soient tendres; ajoutez un peu d’eau si nécessaire.","3. Ajoutez les lardons, le lait et le fromage en morceaux; mélangez et réchauffez par séquences courtes jusqu’à ce que le fromage fonde et que les lardons soient bien chauds.","4. Poivrez, laissez reposer une minute et remuez avant de servir."], "4 min","6 min",1)
+apply("student-microwave-045", "Riz au thon et fromage frais en bol",
+ ["150 g de riz déjà cuit","80 g de thon au naturel égoutté","1 grosse c. à soupe de fromage frais","1 c. à café de jus de citron","Poivre"],
+ ["1. Placez le riz cuit et le thon égoutté dans un bol compatible micro-ondes et mélangez.","2. Faites chauffer 60 à 90 secondes, en remuant à mi-cuisson, jusqu’à ce que le mélange soit bien chaud.","3. Incorporez le fromage frais, le jus de citron et le poivre.","4. Mélangez jusqu’à obtenir une texture crémeuse et servez aussitôt."], "3 min","2 min",1)
+apply("student-microwave-049", "Fondue de poireaux minute à la crème",
+ ["150 g de poireaux surgelés émincés","1 grosse c. à soupe de crème légère","1 c. à café de jus de citron","Sel et poivre"],
+ ["1. Placez les poireaux surgelés dans un bol compatible micro-ondes avec une cuillère à soupe d’eau.","2. Couvrez avec un couvercle adapté laissant échapper la vapeur et faites chauffer 3 minutes.","3. Remuez puis poursuivez par séquences de 30 à 60 secondes jusqu’à ce que les poireaux soient tendres; égouttez l’excédent d’eau.","4. Incorporez la crème, le jus de citron, le sel et le poivre; réchauffez 30 secondes et servez."], "3 min","5 min",1)
+
+for r in recipes:
+    if re.search(r"vide.?frigo", r.get("name", ""), re.I): continue
+    sync_sections(r)
+p.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+print("Dernières fiches génériques corrigées; sections d’ingrédients et de préparation resynchronisées.")
