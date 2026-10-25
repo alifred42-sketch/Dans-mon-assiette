@@ -2508,6 +2508,25 @@ for rid, steps in last_manual_steps.items():
     r["steps"] = steps
     sync_sections(r)
 
+# Ensure the light chicken blanquette steps reference only listed ingredients.
+r = by.get("r-21c5d3d2ba")
+if r:
+    current = list(r.get("ingredients", []))
+    if not any("oignon" in str(x).lower() for x in current):
+        current.insert(4, "1 oignon")
+    if not any("bouillon" in str(x).lower() for x in current):
+        current.insert(5, "500 ml de bouillon de volaille")
+    r["ingredients"] = current
+    for sec in r.get("sections", []):
+        if re.search(r"Ingrédients", str(sec.get("title", "")), re.I):
+            sec["lines"] = current[:]
+    sync_sections(r)
+r = by.get("r-530be65cae")
+if r:
+    for sec in r.get("sections", []):
+        if "Avec" in str(sec.get("title", "")):
+            sec["lines"] = ["🍚 Riz complet"]
+
 ingredient_fixes = [
     (r"d’coriandre ou persil", "de coriandre ou de persil"),
     (r"d’persil ou coriandre", "de persil ou de coriandre"),
