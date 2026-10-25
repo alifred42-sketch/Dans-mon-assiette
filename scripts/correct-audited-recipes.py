@@ -28,10 +28,10 @@ def sync_sections(r):
         title = sec.get("title", "")
         if re.search(r"Ingrédients", title, re.I):
             sec["lines"] = ingredients[:]
-        elif re.search(r"Préparation", title, re.I) and not re.search(r"temps|durée|⏱️", title, re.I):
+        elif re.search(r"Préparation|Etapes|Étapes", title, re.I) and not re.search(r"astuce|conseil|robot|version|préparer une grande quantité|préparer une double quantité|à servir avec|préparation de la sauce", title, re.I):
             sec["lines"] = steps[:]
-        elif re.search(r"Temps de préparation|⏱️ Préparation", title, re.I):
-            if r.get("timePrep"): sec["title"] = "⏱️ Préparation : " + str(r["timePrep"])
+            if re.search(r"Temps de préparation|⏱️|durée", title, re.I) and r.get("timePrep"):
+                sec["title"] = "⏱️ Préparation : " + str(r["timePrep"])
 
 def apply(rid, name=None, ingredients=None, steps=None, prep=None, cook=None, servings=None):
     r = by.get(rid)
