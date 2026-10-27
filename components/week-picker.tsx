@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export function WeekPicker({ week, path }: { week: number; path: string }) {
+export function WeekPicker({ week, path, dateRange }: { week: number; path: string; dateRange?: string }) {
   const router = useRouter();
   const prev = Math.max(1, week - 1);
   const next = Math.min(52, week + 1);
@@ -14,7 +14,9 @@ export function WeekPicker({ week, path }: { week: number; path: string }) {
   }
 
   return (
-    <div className="flex items-center justify-between gap-2 rounded-2xl bg-card px-2 py-2 ring-1 ring-foreground/10">
+    <div className="flex flex-col gap-2 rounded-2xl bg-card px-3 py-3 ring-1 ring-foreground/10 shadow-sm">
+      {dateRange ? <p className="text-center text-sm font-black uppercase tracking-wide text-foreground sm:text-base">Semaine du {dateRange}</p> : null}
+      <div className="flex items-center justify-between gap-2">
       {week > 1 ? (
         <a
           href={hrefFor(prev)}
@@ -68,6 +70,7 @@ export function WeekPicker({ week, path }: { week: number; path: string }) {
           <ChevronRight className="size-7" />
         </span>
       )}
+      </div>
     </div>
   );
 }
