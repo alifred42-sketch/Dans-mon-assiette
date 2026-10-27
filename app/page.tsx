@@ -142,9 +142,11 @@ export default function HomePage() {
   useEffect(() => {
     const refreshCurrentWeek = () => setCurrentWeek(currentIsoWeek());
     refreshCurrentWeek();
+    const interval = window.setInterval(refreshCurrentWeek, 60_000);
     window.addEventListener("focus", refreshCurrentWeek);
     document.addEventListener("visibilitychange", refreshCurrentWeek);
     return () => {
+      window.clearInterval(interval);
       window.removeEventListener("focus", refreshCurrentWeek);
       document.removeEventListener("visibilitychange", refreshCurrentWeek);
     };
