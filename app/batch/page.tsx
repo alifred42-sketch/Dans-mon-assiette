@@ -105,9 +105,11 @@ export default function BatchPage() {
       if (search.get("manual") !== "1") setCurrentWeek(currentIsoWeek());
     };
     refreshCurrentWeek();
+    const interval = window.setInterval(refreshCurrentWeek, 60_000);
     window.addEventListener("focus", refreshCurrentWeek);
     document.addEventListener("visibilitychange", refreshCurrentWeek);
     return () => {
+      window.clearInterval(interval);
       window.removeEventListener("focus", refreshCurrentWeek);
       document.removeEventListener("visibilitychange", refreshCurrentWeek);
     };
