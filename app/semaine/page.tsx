@@ -7,7 +7,6 @@ import { ChevronDown, House, CalendarDays, ShoppingBasket, UserRound, Repeat2, L
 import { BASE_PATH } from "@/lib/base-path";
 import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, currentIsoWeek, getRecipe, seasonLabel, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { MealReminders } from "@/components/meal-reminders";
-import { WeekPicker } from "@/components/week-picker";
 import { SwitchMeal } from "@/components/switch-meal";
 
 const TURQUOISE = "#4A9290";
@@ -86,8 +85,6 @@ export default function WeekPage() {
           </div>
           <span className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#2B2B2B]/20 bg-white/60 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-[#2B2B2B] shadow-sm"><Leaf className="size-4" /> Sélection {season}</span>
         </header>
-
-        <WeekPicker week={week} path="/semaine" dateRange={dateRange} />
 
         <section>
           <button type="button" aria-expanded={showSosIdeas} onClick={() => setShowSosIdeas((shown) => !shown)} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl px-3 py-3 text-center text-sm font-black leading-snug text-white shadow-sm transition hover:brightness-105 active:scale-[0.99] sm:text-base" style={{ backgroundColor: SOS_CORAL }}><Flame className="size-6 shrink-0" /> SOS FLEMME : 3 idées simples <ChevronDown className={`size-4 shrink-0 transition-transform ${showSosIdeas ? "rotate-180" : ""}`} /></button>
