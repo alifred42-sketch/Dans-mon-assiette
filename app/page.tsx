@@ -137,7 +137,7 @@ function HomeSection({
 }
 
 export default function HomePage() {
-  const [currentWeek, setCurrentWeek] = useState(1);
+  const [currentWeek, setCurrentWeek] = useState(() => currentIsoWeek());
 
   useEffect(() => {
     const refreshCurrentWeek = () => setCurrentWeek(currentIsoWeek());
