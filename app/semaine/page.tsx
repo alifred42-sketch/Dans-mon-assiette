@@ -62,7 +62,7 @@ export default function WeekPage() {
   }, []);
 
   const requestedWeek = search.get("w");
-  const week = requestedWeek && search.get("manual") === "1" ? clampWeek(requestedWeek) : (requestedWeek ? clampWeek(requestedWeek) : currentWeek);
+  const week = requestedWeek && search.get("manual") === "1" ? clampWeek(requestedWeek) : currentWeek;
   const slots = weekPlan(week, recipeOverrides, preferences);
   const dateRange = dateForIsoWeek(week);
   const season = seasonLabel(week);
