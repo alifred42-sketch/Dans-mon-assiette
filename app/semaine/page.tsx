@@ -187,6 +187,7 @@ function MealRow({ week, day, label, slot }: {
           <p className="mt-0.5 text-sm font-extrabold leading-snug text-[#252B29] sm:text-base">{name}</p>
         )}
         <p className="mt-1 text-xs font-medium text-[#727A76]">{time}</p>
+        {recipe?.imageSourceUrl ? <p className="mt-1 text-[10px] text-[#727A76]">Photo : <a href={recipe.imageSourceUrl} target="_blank" rel="noreferrer" className="underline underline-offset-2">{recipe.imageCredit || "Pexels"}</a> / Pexels</p> : null}
       </div>
       {slot ? <SwitchMeal slot={{ week, day, meal, name, recipeId: slot.recipeId }} /> : (
         <span className="inline-flex size-8 items-center justify-center text-[#9CA9A3]" aria-hidden><Repeat2 className="size-4" /></span>
