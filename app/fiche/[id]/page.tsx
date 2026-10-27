@@ -6,6 +6,7 @@ import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";
 import { LactoseFreeSafetyNotice } from "@/components/lactose-free-safety-notice";
 import { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
 import { RecipeTools } from "@/components/recipe-tools";
+import { RecipeHandsFree } from "@/components/recipe-hands-free";
 import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 import { displayRecipe } from "@/lib/recipe-display";
 
@@ -121,6 +122,8 @@ export default async function FichePage({
       </header>
 
       <RecipeTools recipeId={recipe.id} ingredients={shopIngs} alternatives={alternatives} baseServings={Number.parseInt(recipe.servings || "4", 10) || 4} ingredientTargets={ingredientTargets} />
+
+      <section aria-label="Commandes vocales de préparation"><RecipeHandsFree steps={recipe.steps} /></section>
 
       {sections.length > 0 ? (
         sections.map((sec, si) => (
