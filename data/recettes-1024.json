@@ -1,0 +1,512 @@
+[
+  {
+    "name": "Tartine nordique au saumon et concombre croustillant",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de seigle noir : 4 grandes tranches",
+      "Saumon fumé : 4 belles tranches",
+      "Concombre : 1/4, en rondelles",
+      "Fromage frais : 4 c. à soupe",
+      "Aneth : 1 pincée"
+    ],
+    "steps": [
+      "Étalez le fromage frais sur le pain.",
+      "Ajoutez les rondelles de concombre.",
+      "Déposez le saumon fumé.",
+      "Saupoudrez d’aneth et poivrez.",
+      "Servez immédiatement."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1002,
+    "id": "pdf-1024-1002"
+  },
+  {
+    "name": "Couscous minute aux pois chiches et raisins secs (à la bouilloire)",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Semoule moyenne : 200 g",
+      "Pois chiches cuits : 150 g",
+      "Raisins secs : 40 g",
+      "Eau bouillante : 200 ml",
+      "Huile d’olive : 2 c. à soupe"
+    ],
+    "steps": [
+      "Mélangez semoule, raisins et pois chiches.",
+      "Versez l’eau bouillante salée et couvrez.",
+      "Laissez gonfler 5 minutes.",
+      "Ajoutez l’huile et égrenez à la fourchette.",
+      "Servez tiède."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1003,
+    "id": "pdf-1024-1003"
+  },
+  {
+    "name": "Tartine Club-Maïs au surimi",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de mie complet : 8 tranches",
+      "Surimi : 8 bâtonnets",
+      "Maïs égoutté : 100 g",
+      "Mayonnaise : 3 c. à soupe"
+    ],
+    "steps": [
+      "Mélangez surimi en morceaux, maïs et mayonnaise.",
+      "Assaisonnez.",
+      "Répartissez sur 4 tranches de pain.",
+      "Refermez avec les tranches restantes.",
+      "Coupez en triangles et servez."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1004,
+    "id": "pdf-1024-1004"
+  },
+  {
+    "name": "Dessert Système D : Toast S'mores chocolat et guimauve",
+    "timePrep": "3 min",
+    "timeCook": "4 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de mie ou brioché : 4 tranches",
+      "Pâte à tartiner : 4 c. à soupe",
+      "Mini-guimauves : 1 poignée"
+    ],
+    "steps": [
+      "Étalez la pâte à tartiner sur le pain.",
+      "Ajoutez les mini-guimauves.",
+      "Passez sous le grill à 200 °C 4 minutes.",
+      "Surveillez jusqu’à ce que les guimauves dorent.",
+      "Servez immédiatement."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1005,
+    "id": "pdf-1024-1005"
+  },
+  {
+    "name": "Nouilles de riz vapeur à la sauce cacahuète express (à la bouilloire)",
+    "timePrep": "5 min",
+    "timeCook": "4 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Nouilles de riz : 250 g",
+      "Beurre de cacahuète : 2 c. à soupe",
+      "Sauce soja : 2 c. à soupe",
+      "Eau bouillante : 800 ml"
+    ],
+    "steps": [
+      "Couvrez les nouilles d’eau bouillante.",
+      "Couvrez 4 minutes puis égouttez.",
+      "Mélangez beurre de cacahuète, sauce soja et un peu d’eau chaude.",
+      "Ajoutez les nouilles.",
+      "Enrobez de sauce et servez."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1006,
+    "id": "pdf-1024-1006"
+  },
+  {
+    "name": "Tartine Hot-Dog étudiante au cheddar",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain épais : 4 tranches",
+      "Saucisses de Francfort : 4",
+      "Cheddar râpé : 100 g",
+      "Ketchup ou moutarde douce : 2 c. à soupe"
+    ],
+    "steps": [
+      "Tartinez le pain de ketchup ou moutarde.",
+      "Ajoutez les saucisses en rondelles.",
+      "Parsemez de cheddar.",
+      "Gratinez à 200 °C pendant 5 minutes.",
+      "Servez chaud."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1007,
+    "id": "pdf-1024-1007"
+  },
+  {
+    "name": "Tartine croustillante thon-mayo et emmental fondu",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de campagne : 4 grandes tranches",
+      "Thon égoutté : 200 g",
+      "Mayonnaise : 2 c. à soupe",
+      "Emmental râpé : 80 g"
+    ],
+    "steps": [
+      "Mélangez le thon et la mayonnaise.",
+      "Répartissez sur le pain.",
+      "Recouvrez d’emmental.",
+      "Gratinez à 200 °C pendant 5 minutes.",
+      "Servez chaud."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1008,
+    "id": "pdf-1024-1008"
+  },
+  {
+    "name": "Soupe-repas minute au poulet et vermicelles (à la bouilloire)",
+    "timePrep": "3 min",
+    "timeCook": "3 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Vermicelles fins : 150 g",
+      "Poulet cuit : 200 g",
+      "Bouillon de volaille : 1 cube",
+      "Eau bouillante : 1 litre"
+    ],
+    "steps": [
+      "Répartissez vermicelles et poulet dans 4 bols résistants à la chaleur.",
+      "Ajoutez le bouillon émietté.",
+      "Versez l’eau bouillante.",
+      "Couvrez 3 minutes.",
+      "Remuez et dégustez chaud."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1009,
+    "id": "pdf-1024-1009"
+  },
+  {
+    "name": "Purée express aux lardons croustillants (au grille-pain)",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Flocons de purée : 1 sachet",
+      "Bacon ou lardons : 100 g",
+      "Lait : 400 ml",
+      "Eau : 400 ml"
+    ],
+    "steps": [
+      "Faites dorer le bacon à la poêle puis émiettez-le.",
+      "Portez lait et eau à frémissement.",
+      "Hors du feu, versez les flocons en remuant.",
+      "Incorporez le bacon.",
+      "Mélangez et servez chaud."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1010,
+    "id": "pdf-1024-1010"
+  },
+  {
+    "name": "Tartine fraîcheur au maquereau et fromage à la crème",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain complet : 4 tranches",
+      "Maquereau au naturel : 200 g",
+      "Fromage frais : 100 g",
+      "Jus de citron : 1 c. à café"
+    ],
+    "steps": [
+      "Étalez le fromage frais sur le pain.",
+      "Émiettez le maquereau.",
+      "Répartissez le poisson et ajoutez le citron.",
+      "Salez et poivrez.",
+      "Servez froid."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1011,
+    "id": "pdf-1024-1011"
+  },
+  {
+    "name": "Couscous express sucré-salé aux raisins et surimi (à la bouilloire)",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Semoule : 200 g",
+      "Surimi : 8 bâtonnets",
+      "Raisins secs : 40 g",
+      "Eau bouillante : 200 ml",
+      "Huile de tournesol : 2 c. à soupe"
+    ],
+    "steps": [
+      "Mélangez semoule, raisins et surimi en rondelles.",
+      "Versez l’eau bouillante salée, couvrez 5 minutes.",
+      "Ajoutez l’huile.",
+      "Égrenez à la fourchette.",
+      "Servez."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1012,
+    "id": "pdf-1024-1012"
+  },
+  {
+    "name": "Toast-Mex au maïs et cheddar",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de mie : 4 tranches",
+      "Maïs égoutté : 150 g",
+      "Cheddar râpé : 100 g",
+      "Chili ou piment doux : 1/2 c. à café"
+    ],
+    "steps": [
+      "Mélangez le maïs avec la moitié du cheddar.",
+      "Ajoutez le piment doux.",
+      "Répartissez sur le pain.",
+      "Ajoutez le reste du cheddar.",
+      "Gratinez à 200 °C 5 minutes."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1013,
+    "id": "pdf-1024-1013"
+  },
+  {
+    "name": "Dessert Système D : Toast brioché à la pâte à tartiner et biscuits écrasés",
+    "timePrep": "4 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain brioché : 4 tranches",
+      "Pâte à tartiner : 4 c. à soupe",
+      "Biscuits sablés : 4"
+    ],
+    "steps": [
+      "Faites griller légèrement la brioche.",
+      "Étalez la pâte à tartiner.",
+      "Écrasez les biscuits.",
+      "Parsemez les éclats sur le chocolat.",
+      "Dégustez tiède."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1014,
+    "id": "pdf-1024-1014"
+  },
+  {
+    "name": "Noodles coco-curry minute (à la bouilloire)",
+    "timePrep": "3 min",
+    "timeCook": "3 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Nouilles instantanées : 250 g",
+      "Lait de coco léger : 400 ml",
+      "Curry doux : 1 c. à soupe",
+      "Eau bouillante : 400 ml"
+    ],
+    "steps": [
+      "Mettez nouilles et curry dans 4 bols.",
+      "Versez le lait de coco.",
+      "Ajoutez l’eau bouillante pour couvrir.",
+      "Couvrez 3 minutes.",
+      "Détachez les nouilles et servez chaud."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1015,
+    "id": "pdf-1024-1015"
+  },
+  {
+    "name": "Tartine Club-Poulet au pesto et fromage frais",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain de mie aux céréales : 8 tranches",
+      "Poulet cuit : 200 g",
+      "Fromage frais : 4 c. à soupe",
+      "Pesto vert : 2 c. à soupe"
+    ],
+    "steps": [
+      "Mélangez fromage frais et pesto.",
+      "Tartinez le pain.",
+      "Ajoutez le poulet sur 4 tranches.",
+      "Refermez avec les autres tranches.",
+      "Coupez en biais et servez froid."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1016,
+    "id": "pdf-1024-1016"
+  },
+  {
+    "name": "Semoule express à la tapenade et thon (à la bouilloire)",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Semoule : 200 g",
+      "Thon égoutté : 150 g",
+      "Tapenade : 2 c. à soupe",
+      "Eau bouillante : 200 ml",
+      "Huile d’olive : 1 c. à soupe"
+    ],
+    "steps": [
+      "Mettez semoule et thon dans un plat.",
+      "Versez l’eau bouillante salée, couvrez 5 minutes.",
+      "Ajoutez l’huile et égrenez.",
+      "Incorporez la tapenade.",
+      "Mélangez et servez tiède."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1017,
+    "id": "pdf-1024-1017"
+  },
+  {
+    "name": "Toast-Raclette Système D au jambon cru",
+    "timePrep": "5 min",
+    "timeCook": "6 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain au levain : 4 tranches",
+      "Fromage à raclette : 4 tranches",
+      "Jambon cru : 4 tranches",
+      "Poivre noir"
+    ],
+    "steps": [
+      "Placez le pain sur une plaque.",
+      "Ajoutez le jambon cru.",
+      "Recouvrez de fromage à raclette.",
+      "Gratinez à 200 °C pendant 6 minutes.",
+      "Poivrez et servez chaud."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1018,
+    "id": "pdf-1024-1018"
+  },
+  {
+    "name": "Soupe de légumes minute aux croûtons de chèvre (à la bouilloire)",
+    "timePrep": "5 min",
+    "timeCook": "3 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Soupe de légumes déshydratée : 4 portions",
+      "Chèvre : 4 rondelles",
+      "Pain de mie grillé : 4 tranches",
+      "Eau bouillante : 1 litre"
+    ],
+    "steps": [
+      "Répartissez la poudre dans 4 bols résistants à la chaleur.",
+      "Versez l’eau bouillante.",
+      "Mélangez pour dissoudre.",
+      "Déposez le chèvre sur les pains grillés.",
+      "Posez un toast sur chaque soupe et servez."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1019,
+    "id": "pdf-1024-1019"
+  },
+  {
+    "name": "Aligot minute express au jambon cru",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Flocons de purée : 1 sachet",
+      "Mozzarella ou emmental râpé : 150 g",
+      "Jambon cru : 4 tranches",
+      "Lait : 400 ml",
+      "Eau : 400 ml"
+    ],
+    "steps": [
+      "Portez lait et eau à frémissement.",
+      "Hors du feu, ajoutez les flocons en remuant.",
+      "Ajoutez le fromage râpé.",
+      "Battez pour le faire filer.",
+      "Ajoutez le jambon en lanières et servez chaud."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1020,
+    "id": "pdf-1024-1020"
+  },
+  {
+    "name": "Tartine campagnarde aux rillettes de sardines et cornichons",
+    "timePrep": "5 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Sardines à l’huile : 2 boîtes (environ 200 g)",
+      "Fromage frais : 100 g",
+      "Cornichons : 6 gros",
+      "Pain de campagne grillé : 4 tranches"
+    ],
+    "steps": [
+      "Égouttez et écrasez les sardines.",
+      "Mélangez avec le fromage frais.",
+      "Tartinez le pain grillé.",
+      "Ajoutez les cornichons en rondelles.",
+      "Poivrez et servez."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1021,
+    "id": "pdf-1024-1021"
+  },
+  {
+    "name": "Couscous minute aux légumes fins (à la bouilloire)",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Semoule : 200 g",
+      "Macédoine égouttée : 200 g",
+      "Eau bouillante : 200 ml",
+      "Huile d’olive : 2 c. à soupe"
+    ],
+    "steps": [
+      "Mélangez semoule et légumes.",
+      "Versez l’eau bouillante salée, couvrez 5 minutes.",
+      "Ajoutez l’huile.",
+      "Aérez à la fourchette sans écraser les légumes.",
+      "Mélangez délicatement et servez chaud."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1022,
+    "id": "pdf-1024-1022"
+  },
+  {
+    "name": "Tartine Welsh minute au surimi",
+    "timePrep": "5 min",
+    "timeCook": "5 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Pain épais : 4 grandes tranches",
+      "Cheddar râpé : 150 g",
+      "Surimi : 8 bâtonnets",
+      "Moutarde : 4 c. à café",
+      "Crème liquide : 2 c. à soupe"
+    ],
+    "steps": [
+      "Tartinez le pain de moutarde et ajoutez le surimi en lanières.",
+      "Faites fondre le cheddar avec la crème à feu doux.",
+      "Nappez le surimi de cheddar fondu.",
+      "Gratinez à 200 °C pendant 5 minutes.",
+      "Servez très chaud."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1023,
+    "id": "pdf-1024-1023"
+  },
+  {
+    "name": "Dessert Système D : Porridge chocolat-spéculoos (à la bouilloire)",
+    "timePrep": "3 min",
+    "timeCook": "0 min",
+    "servings": "4 personnes",
+    "ingredients": [
+      "Flocons d’avoine : 160 g",
+      "Spéculoos : 8 biscuits",
+      "Chocolat noir : 60 g",
+      "Eau bouillante : 600 ml"
+    ],
+    "steps": [
+      "Répartissez avoine et spéculoos concassés dans 4 bols.",
+      "Versez l’eau bouillante.",
+      "Mélangez une minute jusqu’à texture crémeuse.",
+      "Ajoutez le chocolat en morceaux.",
+      "Laissez fondre 30 secondes, mélangez et dégustez."
+    ],
+    "source": "RECETTES 1024.pdf",
+    "sourceNumber": 1024,
+    "id": "pdf-1024-1024"
+  }
+]
