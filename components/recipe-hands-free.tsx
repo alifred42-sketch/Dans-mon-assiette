@@ -12,10 +12,18 @@ type Recognition = {
 };
 type SpeechWindow = Window & { SpeechRecognition?: new () => Recognition; webkitSpeechRecognition?: new () => Recognition };
 
-export function RecipeHandsFree({ steps }: { steps: string[] }) {
+type RecipeHandsFreeProps = {
+  steps: string[];
+  currentIndex?: number;
+  onIndexChange?: (index: number) => void;
+  onStepComplete?: (index: number) => void;
+};
+
+export function RecipeHandsFree({ steps, currentIndex, onIndexChange, onStepComplete }: RecipeHandsFreeProps) {
   const [active, setActive] = useState(false);
   const [playing, setPlaying] = useState(false);
-  const [index, setIndex] = useState(0);
+  const [internalIndex, setInternalIndex] = useState(0);
+  const index = Math.min(currentIndex ?? internalIndex, Math.max(0, steps.length - 1));
   const [done, setDone] = useState<Record<number, boolean>>({});
   const [status, setStatus] = useState(steps.length ? "Appuyez sur le micro pour activer les commandes vocales." : "Aucune étape de préparation disponible pour cette recette.");
   const recognitionRef = useRef<Recognition | null>(null);
@@ -24,6 +32,12 @@ export function RecipeHandsFree({ steps }: { steps: string[] }) {
   const step = steps[index] || "";
 
   useEffect(() => { indexRef.current = index; }, [index]);
+  function setStepIndex(next: number) {
+    const target = Math.max(0, Math.min(next, steps.length - 1));
+    indexRef.current = target;
+    if (onIndexChange) onIndexChange(target);
+    else setInternalIndex(target);
+  }
   useEffect(() => { activeRef.current = active; }, [active]);
   useEffect(() => () => { recognitionRef.current?.stop(); if ("speechSynthesis" in window) window.speechSynthesis.cancel(); }, []);
 
@@ -38,7 +52,7 @@ export function RecipeHandsFree({ steps }: { steps: string[] }) {
   }
   function go(next: number) {
     const target = Math.max(0, Math.min(next, steps.length - 1));
-    setIndex(target); indexRef.current = target;
+    setStepIndex(target);
     if (steps[target]) speak(steps[target]);
     setStatus(`Étape ${target + 1} sur ${steps.length}`);
   }
@@ -62,7 +76,7 @@ export function RecipeHandsFree({ steps }: { steps: string[] }) {
       else if (/\bpause\b/.test(transcript)) { window.speechSynthesis.cancel(); setPlaying(false); setStatus("Lecture en pause. Dites « Lecture » pour reprendre."); }
       else if (/\blecture\b|reprends|reprendre/.test(transcript)) { speak(steps[indexRef.current] || "Aucune étape disponible."); }
       else if (/étape suivante|etape suivante|suivant/.test(transcript)) { go(indexRef.current + 1); }
-      else if (/étape ok|etape ok|c'est fait|c est fait/.test(transcript)) { const current = indexRef.current; setDone(prev => ({ ...prev, [current]: true })); if (current < steps.length - 1) { go(current + 1); setStatus("Étape cochée. Passage à l’étape suivante."); } else { setStatus("Dernière étape cochée. Recette terminée."); } }
+      else if (/étape\s*(ok|okay)|etape\s*(ok|okay)|c'est fait|c est fait/.test(transcript)) { const current = indexRef.current; setDone(prev => ({ ...prev, [current]: true })); onStepComplete?.(current); if (current < steps.length - 1) { go(current + 1); setStatus("Étape cochée. Passage à l’étape suivante."); } else { setStatus("Dernière étape cochée. Recette terminée."); } }
       else if (/relis l'étape|relis l etape|répète|repete/.test(transcript)) { speak(steps[indexRef.current] || "Aucune étape disponible."); }
       else if (/précédent|precedent|étape précédente|etape precedente/.test(transcript)) { go(indexRef.current - 1); }
     };
