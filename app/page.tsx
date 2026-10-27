@@ -171,7 +171,7 @@ export default function HomePage() {
           </h1>
           <div className="mt-6 flex w-full max-w-lg flex-col gap-3">
             <Link
-              href={`/semaine?w=${currentWeek}`}
+              href="/semaine"
               className="flex min-h-14 w-full items-center justify-center rounded-2xl bg-[#8FAF9B] px-6 py-4 text-lg font-black text-[#103A36] shadow-[0_7px_18px_rgba(0,0,0,0.2)] transition hover:brightness-105 active:scale-[0.99] sm:min-h-16"
             >
               Sauver ma semaine
