@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { ChevronDown, ChevronLeft, ChevronRight, House, CalendarDays, ShoppingBasket, UserRound, Repeat2, Leaf, Flame, Boxes, ShoppingCart } from "lucide-react";
+import { ChevronDown, House, CalendarDays, ShoppingBasket, UserRound, Repeat2, Leaf, Flame, Boxes, ShoppingCart } from "lucide-react";
 import { BASE_PATH } from "@/lib/base-path";
 import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, currentIsoWeek, getRecipe, seasonLabel, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { MealReminders } from "@/components/meal-reminders";
@@ -66,8 +66,6 @@ export default function WeekPage() {
   const slots = weekPlan(week, recipeOverrides, preferences);
   const dateRange = dateForIsoWeek(week);
   const season = seasonLabel(week);
-  const previousWeek = Math.max(1, week - 1);
-  const nextWeek = Math.min(52, week + 1);
   const breakfast = breakfastForWeek(week);
   const validatedSlotCount = slots.filter((slot) => Boolean(slot.recipeId)).length;
   const activeProfiles = [preferences.etudiant && "Étudiant", preferences.vegan && "Végan", preferences.vegetarien && "Végétarien", preferences.sansGluten && "Sans gluten", preferences.sansLactose && "Sans lactose", preferences.sansFruitsCoque && "Sans fruits à coque"].filter(Boolean);
@@ -79,34 +77,18 @@ export default function WeekPage() {
       <div className="mx-auto flex w-full max-w-3xl flex-col gap-5 px-4 pb-8 pt-6 sm:px-6 sm:pt-8">
         <header className="text-center">
           <img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="CUISINE CHIC OUF !" className="mx-auto mb-4 block h-auto w-[min(48vw,190px)] rounded-[20px] bg-[#F9F6EC] object-contain shadow-[0_8px_24px_rgba(0,0,0,0.2)]" loading="eager" />
-          <h1 className="text-2xl font-black uppercase leading-tight tracking-tight text-[#2B2B2B] sm:text-3xl">Semaine du {dateRange}</h1>
+          <h1 className="text-xl font-black uppercase leading-tight tracking-tight text-[#2B2B2B] sm:text-2xl">Mon planning de la semaine</h1>
           <span className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#2B2B2B]/20 bg-white/60 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-[#2B2B2B] shadow-sm"><Leaf className="size-4" /> Sélection {season}</span>
         </header>
 
-        <div className="flex items-center justify-between gap-2 rounded-2xl bg-white px-2 py-2 text-[#214E4B] shadow-[0_6px_18px_rgba(0,0,0,0.14)]">
-          <button
-            type="button"
-            aria-label="Semaine précédente"
-            disabled={week <= 1}
-            onClick={() => { window.location.href = `/semaine?w=${previousWeek}&manual=1`; }}
-            className="flex size-11 shrink-0 items-center justify-center rounded-xl transition hover:bg-[#EAF4F1] disabled:opacity-30"
-          ><ChevronLeft className="size-6" /></button>
-          <p className="text-center text-base font-black uppercase tracking-wide sm:text-lg">Semaine {week}</p>
-          <button
-            type="button"
-            aria-label="Semaine suivante"
-            disabled={week >= 52}
-            onClick={() => { window.location.href = `/semaine?w=${nextWeek}&manual=1`; }}
-            className="flex size-11 shrink-0 items-center justify-center rounded-xl transition hover:bg-[#EAF4F1] disabled:opacity-30"
-          ><ChevronRight className="size-6" /></button>
-        </div>
+        <WeekPicker week={week} path="/semaine" dateRange={dateRange} />
 
         <section>
           <button type="button" aria-expanded={showSosIdeas} onClick={() => setShowSosIdeas((shown) => !shown)} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl px-3 py-3 text-center text-sm font-black leading-snug text-white shadow-sm transition hover:brightness-105 active:scale-[0.99] sm:text-base" style={{ backgroundColor: SOS_CORAL }}><Flame className="size-6 shrink-0" /> SOS FLEMME : 3 idées simples <ChevronDown className={`size-4 shrink-0 transition-transform ${showSosIdeas ? "rotate-180" : ""}`} /></button>
           {showSosIdeas ? <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3"><Link href="/recettes?filter=express" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">⚡ EXPRESS</Link><Link href="/recettes?filter=tired" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">😮‍💨 JE SUIS FATIGUÉ</Link><Link href="/recettes?filter=easy" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">🍽️ REPAS TOUT SIMPLE</Link></div> : null}
         </section>
 
-        <WeekPicker week={week} path="/semaine" />
+        <WeekPicker week={week} path="/semaine" dateRange={dateRange} />
         <aside className="rounded-2xl border border-[#2B2B2B]/15 bg-white/65 p-3 text-sm text-[#2B2B2B]"><strong>Planning vérifié :</strong> {validatedSlotCount}/{slots.length} créneaux utilisent une recette complète.{activeProfiles.length ? <span> Préférences : {activeProfiles.join(", ")}.</span> : null}</aside>
         <MealReminders />
         {breakfast && breakfast.lines.length > 0 ? <section className="rounded-2xl bg-white p-4 text-[#214E4B] shadow-sm"><h2 className="text-lg font-black">Petit-déjeuner</h2><ul className="mt-2 space-y-1 text-sm">{breakfast.lines.map((line, index) => <li key={index}>{line}</li>)}</ul></section> : null}
