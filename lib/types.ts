@@ -18,6 +18,8 @@ export type Recipe = {
   servings?: string;
   image?: string;
   imageAlt?: string;
+  imageSourceUrl?: string;
+  imageCredit?: string;
   fete?: string;
   sous_fete?: string;
   regime?: string;
