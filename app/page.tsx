@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BASE_PATH } from "@/lib/base-path";
+import { currentIsoWeek } from "@/lib/carnet";
 import { InstallApp } from "@/components/install-app";
 import {
   BookOpen,
@@ -76,16 +77,6 @@ const extraCards: HomeCard[] = [
   { label: "MR CUISINE", href: "/recettes?filter=mr-cuisine", color: "#456B87", Icon: Bot, image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85&v=4" },
 ];
 
-function getCurrentWeek() {
-  const now = new Date();
-  const monday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  monday.setDate(monday.getDate() - ((monday.getDay() + 6) % 7));
-  const jan4 = new Date(now.getFullYear(), 0, 4);
-  const firstMonday = new Date(now.getFullYear(), 0, 4 - ((jan4.getDay() + 6) % 7));
-  const week = Math.floor((monday.getTime() - firstMonday.getTime()) / 604800000) + 1;
-  return Math.min(52, Math.max(1, week));
-}
-
 function CardRow({
   cards,
   columns = 3,
@@ -149,7 +140,7 @@ export default function HomePage() {
   const [currentWeek, setCurrentWeek] = useState(1);
 
   useEffect(() => {
-    const refreshCurrentWeek = () => setCurrentWeek(getCurrentWeek());
+    const refreshCurrentWeek = () => setCurrentWeek(currentIsoWeek());
     refreshCurrentWeek();
     window.addEventListener("focus", refreshCurrentWeek);
     document.addEventListener("visibilitychange", refreshCurrentWeek);
