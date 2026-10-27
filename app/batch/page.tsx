@@ -9,7 +9,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { WeekPicker } from "@/components/week-picker";
-import { Beef, Blender, Carrot, CookingPot, Container, Flame, Refrigerator, Utensils, Wheat, ShoppingCart, ChevronLeft, ChevronRight, ChefHat } from "lucide-react";
+import { Beef, Blender, Carrot, CookingPot, Container, Flame, Refrigerator, Utensils, Wheat, ShoppingCart, ChevronLeft, ChevronRight, ChefHat, Mic, MicOff, SkipBack, SkipForward, Play, Pause } from "lucide-react";
 import { BASE_PATH } from "@/lib/base-path";
 
 type Task = { id: string; title: string; detail?: string; timer?: string; timerMinutes?: number; group?: string };
@@ -105,7 +105,8 @@ export default function BatchPage() {
   const [checked, setChecked] = useState<Record<string, boolean>>({});
   const [ready, setReady] = useState(false);
   const [voiceMode, setVoiceMode] = useState(false);
-  const [voiceStatus, setVoiceStatus] = useState("Mode mains libres désactivé");
+  const [voicePlaying, setVoicePlaying] = useState(false);
+  const [voiceStatus, setVoiceStatus] = useState("Appuyez sur le micro pour activer les commandes vocales.");
   const [voiceIndex, setVoiceIndex] = useState(0);
   const [activeTimers, setActiveTimers] = useState<Record<string, number>>({});
   const recognitionRef = useRef<VoiceRecognition | null>(null);
@@ -207,7 +208,21 @@ export default function BatchPage() {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "fr-FR";
+    utterance.onstart = () => setVoicePlaying(true);
+    utterance.onend = () => setVoicePlaying(false);
+    utterance.onerror = () => setVoicePlaying(false);
     window.speechSynthesis.speak(utterance);
+  }
+
+  function toggleVoicePlayback() {
+    if (voicePlaying) {
+      window.speechSynthesis?.cancel();
+      setVoicePlaying(false);
+      setVoiceStatus("Lecture en pause. Dites « Lecture » pour reprendre.");
+      return;
+    }
+    const task = currentVoiceTaskRef.current;
+    if (task) speak([task.title, task.detail, task.timer].filter(Boolean).join(". "));
   }
 
   function validateCurrentVoiceTask() {
@@ -239,6 +254,7 @@ export default function BatchPage() {
     recognitionRef.current?.stop();
     recognitionRef.current = null;
     setVoiceMode(false);
+    setVoicePlaying(false);
     setVoiceStatus("Mode mains libres désactivé");
     if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
   }
@@ -400,10 +416,19 @@ export default function BatchPage() {
 
         <section aria-labelledby="handsfree-title" className="space-y-4 rounded-3xl border border-[#C8DDD5] bg-white p-4 shadow-sm sm:p-5">
           <div><p className="text-xs font-extrabold uppercase tracking-[0.14em] text-[#197765]">SECTION 1</p><h2 id="handsfree-title" className="mt-1 font-heading text-xl font-extrabold text-[#176B5B] sm:text-2xl">EN CUISINE</h2><p className="mt-1 text-xs leading-relaxed text-[#557067]">Mode mains libres actif : dites « ÉTAPE SUIVANTE » pour avancer sans toucher l’écran.</p></div>
-          <div className="flex justify-center">
-            {!voiceMode ? <button type="button" onClick={startVoiceMode} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-[#176B5B] px-4 py-3 text-sm font-extrabold text-white shadow-sm transition hover:bg-[#105447] sm:w-auto sm:min-w-72"><span aria-hidden="true">🎙️</span> ACTIVER LE MODE MAINS LIBRES</button> : <button type="button" onClick={stopVoiceMode} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-[#A64E42] px-4 py-3 text-sm font-extrabold text-white sm:w-auto sm:min-w-72">⏹ ARRÊTER LE MODE VOCAL</button>}
+          <div className="rounded-2xl border border-[#D8E3D9] bg-[#F8FAF6] p-3 sm:p-4">
+            <p className="mb-3 text-xs font-bold uppercase tracking-wide text-[#557067]">Commandes de préparation</p>
+            <div className="flex items-center justify-center gap-4">
+              <button type="button" aria-label="Étape précédente" title="Précédent" onClick={previousTask} disabled={!tasks.length || voiceIndex === 0} className="flex size-12 items-center justify-center rounded-full bg-[#8FA89B] text-white shadow-sm disabled:opacity-40"><SkipBack size={20} /></button>
+              <button type="button" aria-label={voicePlaying ? "Mettre en pause" : "Lire les instructions"} title={voicePlaying ? "Pause" : "Lecture"} onClick={toggleVoicePlayback} disabled={!tasks.length} className="flex size-14 items-center justify-center rounded-full bg-[#8FA89B] text-white shadow-sm disabled:opacity-40">{voicePlaying ? <Pause size={24} /> : <Play size={24} />}</button>
+              <button type="button" aria-label="Étape suivante" title="Suivant" onClick={nextTask} disabled={!tasks.length || voiceIndex >= tasks.length - 1} className="flex size-12 items-center justify-center rounded-full bg-[#8FA89B] text-white shadow-sm disabled:opacity-40"><SkipForward size={20} /></button>
+              <button type="button" onClick={voiceMode ? stopVoiceMode : startVoiceMode} aria-label={voiceMode ? "Désactiver les commandes vocales" : "Activer les commandes vocales"} title={voiceMode ? "Désactiver le micro" : "Activer le micro"} className={`flex size-12 items-center justify-center rounded-full shadow-sm ring-2 ring-offset-2 ${voiceMode ? "bg-[#DCEBDD] text-[#267443] ring-[#8FA89B]" : "bg-[#F0F0ED] text-[#737873] ring-transparent"}`}>{voiceMode ? <Mic size={21} /> : <MicOff size={21} />}</button>
+            </div>
+            <div className="mt-3 text-center text-xs leading-relaxed text-[#557067]">◀ Précédent · <strong>Lecture / Pause</strong> · Suivant ▶</div>
+            <p className="mt-2 text-center text-xs leading-relaxed text-[#557067]">À la voix : <strong>« Lecture » · « Pause » · « Étape OK » · « Étape suivante » · « Relis l’étape »</strong></p>
+            <p className="mt-2 text-center text-xs leading-relaxed text-[#557067]">Appuyez sur le micro pour activer les commandes vocales. · Étape {tasks.length ? Math.min(voiceIndex + 1, tasks.length) : 0}/{tasks.length}</p>
+            <p aria-live="polite" className="mt-2 text-center text-xs font-semibold text-[#557067]">{voiceStatus}</p>
           </div>
-          <div className="grid grid-cols-2 gap-3"><button type="button" onClick={previousTask} disabled={voiceIndex === 0} className="flex min-h-11 items-center justify-center gap-1 rounded-xl border border-[#B7D2C8] bg-white px-3 py-2 text-sm font-extrabold text-[#176B5B] disabled:opacity-40"><ChevronLeft className="size-4" /> PRÉCÉDENT</button><button type="button" onClick={nextTask} disabled={!tasks.length || voiceIndex >= tasks.length - 1} className="flex min-h-11 items-center justify-center gap-1 rounded-xl bg-[#176B5B] px-3 py-2 text-sm font-extrabold text-white disabled:opacity-40">SUIVANT <ChevronRight className="size-4" /></button></div>
           <div className="rounded-2xl border border-[#B7D2C8] bg-[#F8FCFA] p-4">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#197765]">ÉTAPE {tasks.length ? Math.min(voiceIndex + 1, tasks.length) : 0}/{tasks.length}</p>
             {currentStep ? <><div className="mt-2 flex items-start gap-3"><span className={`flex size-10 shrink-0 items-center justify-center rounded-xl ring-1 ${kindStyle(`${currentStep.title} ${currentStep.detail || ""}`).classes}`}>{taskIcon(`${currentStep.title} ${currentStep.detail || ""}`)}</span><div className="min-w-0"><p className="font-extrabold leading-relaxed text-[#243B35]">{adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(currentStep.title, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose || (preferences as PlanningPreferences & { isLactoseFree?: boolean }).isLactoseFree)), Boolean((preferences as PlanningPreferences & { isNutFree?: boolean; sansFruitsCoque?: boolean }).isNutFree || (preferences as PlanningPreferences & { sansFruitsCoque?: boolean }).sansFruitsCoque))}</p>{currentStep.detail ? <p className="mt-2 text-sm leading-relaxed text-[#557067]">{currentStep.detail}</p> : null}{currentStep.timer ? <button type="button" disabled={!currentStep.timerMinutes} onClick={() => setActiveTimers((current) => ({ ...current, [currentStep.id]: (currentStep.timerMinutes || 0) * 60 }))} className="mt-3 rounded-xl bg-[#FFF1C9] px-3 py-2 text-sm font-extrabold text-[#80600A] disabled:opacity-50">⏱ {currentStep.timer}</button> : null}{activeTimers[currentStep.id] !== undefined ? <p role="timer" className="mt-2 font-mono text-lg font-extrabold text-[#176B5B]">{Math.floor(activeTimers[currentStep.id] / 60)}:{String(activeTimers[currentStep.id] % 60).padStart(2, "0")}</p> : null}<p aria-live="polite" className="mt-3 text-xs font-semibold text-[#557067]">{voiceStatus}</p></div></div><button type="button" onClick={() => toggle(currentStep.id)} className={`mt-4 w-full rounded-xl px-4 py-3 text-sm font-extrabold ${checked[currentStep.id] ? "bg-[#E3EEE9] text-[#176B5B]" : "bg-[#176B5B] text-white"}`}>{checked[currentStep.id] ? "✓ ÉTAPE VALIDÉE — ANNULER" : "✓ VALIDER CETTE ÉTAPE"}</button></> : <p className="text-sm text-[#557067]">Aucune tâche disponible à partir des fiches de cette semaine.</p>}
