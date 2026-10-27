@@ -272,31 +272,46 @@ export default function BatchPage() {
     recognition.onresult = (event) => {
       const transcript = Array.from(event.results).map((result) => result[0]?.transcript || "").join(" ").toLocaleLowerCase("fr");
       setVoiceStatus(`Commande entendue : « ${transcript} »`);
-      if (/étape suivante|etape suivante|suivant|continue|continuer/.test(transcript)) {
+      if (/\bpause\b/.test(transcript)) {
+        window.speechSynthesis?.cancel();
+        setVoicePlaying(false);
+        setVoiceStatus("Lecture en pause. Dites « Lecture » pour reprendre.");
+      } else if (/\blecture\b|reprends|reprendre/.test(transcript)) {
+        const task = currentVoiceTaskRef.current;
+        if (task) speak([task.title, task.detail, task.timer].filter(Boolean).join(". "));
+      } else if (/étape suivante|etape suivante|suivant|continue|continuer/.test(transcript)) {
         setVoiceIndex((index) => {
           const next = Math.min(index + 1, Math.max(0, tasks.length - 1));
           const task = tasks[next];
-          speak(next === index ? "Vous êtes déjà à la dernière étape." : `Étape suivante. ${task?.title || ""}. ${task?.detail || ""}. ${task?.timer || ""}`);
+          if (task) speak(next === index ? "Vous êtes déjà à la dernière étape." : [task.title, task.detail, task.timer].filter(Boolean).join(". "));
           return next;
         });
       } else if (/étape précédente|etape precedente|précédent|precedent|retour/.test(transcript)) {
         setVoiceIndex((index) => {
           const previous = Math.max(0, index - 1);
-          speak(previous === index ? "Vous êtes déjà à la première étape." : `Étape précédente. ${tasks[previous]?.title || ""}.`);
+          const task = tasks[previous];
+          if (task) speak(previous === index ? "Vous êtes déjà à la première étape." : [task.title, task.detail, task.timer].filter(Boolean).join(". "));
           return previous;
         });
-      } else if (/répète|repete|répéter|repeter|redis/.test(transcript)) {
-        speak(currentVoiceTaskRef.current ? `${currentVoiceTaskRef.current.title}. ${currentVoiceTaskRef.current.detail || ""}. ${currentVoiceTaskRef.current.timer || ""}` : "Aucune étape disponible.");
-      } else if (/étape\s*(ok|okay)|etape\s*(ok|okay)|valide|valider|c'est fait|c est fait|terminé|termine/.test(transcript)) {
-        if (currentVoiceTaskRef.current) {
-          setChecked((previous) => ({ ...previous, [currentVoiceTaskRef.current!.id]: true }));
-          speak(`Étape validée : ${currentVoiceTaskRef.current.title}. Dites étape suivante pour continuer.`);
+      } else if (/relis.*étape|relis.*etape|répète|repete|répéter|repeter|redis/.test(transcript)) {
+        const task = currentVoiceTaskRef.current;
+        if (task) speak([task.title, task.detail, task.timer].filter(Boolean).join(". "));
+      } else if (/étape\s*(ok|okay)|etape\s*(ok|okay)|valide|valider|c est fait|terminé|termine/.test(transcript)) {
+        const task = currentVoiceTaskRef.current;
+        if (task) {
+          setChecked((previous) => ({ ...previous, [task.id]: true }));
+          setVoiceIndex((index) => {
+            if (index >= tasks.length - 1) { setVoiceStatus("Dernière étape cochée. Batch cooking terminé."); speak("Dernière étape cochée. Batch cooking terminé."); return index; }
+            const next = index + 1;
+            const nextTask = tasks[next];
+            if (nextTask) speak(`Étape validée. Étape suivante : ${[nextTask.title, nextTask.detail, nextTask.timer].filter(Boolean).join(". ")}`);
+            return next;
+          });
         }
-      } else if (/arrête|arrete|stop|désactive|desactive/.test(transcript)) {
-        speak("J'arrête le mode mains libres.");
+      } else if (/\bstop\b|arrête|arrete|désactive|desactive/.test(transcript)) {
         stopVoiceMode();
       } else {
-        speak("Commande non reconnue. Dites étape suivante, étape précédente, répète, valide ou arrête.");
+        setVoiceStatus("Commande non reconnue. Dites « Lecture », « Pause », « Étape OK », « Étape suivante » ou « Relis l’étape ».");
       }
     };
     recognition.onerror = (event) => setVoiceStatus(event.error === "not-allowed" ? "Micro refusé : autorisez l'accès au micro dans votre navigateur." : `Reconnaissance vocale : ${event.error || "erreur"}`);
@@ -308,7 +323,7 @@ export default function BatchPage() {
     recognitionRef.current = recognition;
     setVoiceIndex(0);
     setVoiceMode(true);
-    setVoiceStatus("Micro activé — dites « étape OK » pour cocher, puis « étape suivante » pour avancer.");
+    setVoiceStatus("Micro activé. Dites « Lecture », « Pause », « Étape OK », « Étape suivante » ou « Relis l’étape ».");
     speak(currentVoiceTask ? `Mode mains libres activé. Première étape : ${tasks[0]?.title || currentVoiceTask.title}. Dites étape OK pour cocher cette étape, puis étape suivante pour avancer. Dites répète pour réécouter, ou arrête pour quitter.` : "Mode mains libres activé, mais aucune tâche n'est disponible.");
     try { recognition.start(); } catch { setVoiceStatus("Impossible de démarrer le micro. Réessayez."); }
   }
