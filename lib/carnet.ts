@@ -187,9 +187,35 @@ const unmatchedPdfRecipes: Recipe[] = pdfRecipeEntries
     source: entry.source,
   }));
 
+const firstTwentyRecipeImages: Record<string, { image: string; imageAlt: string; imageSourceUrl: string; imageCredit: string }> = {
+  "r-b6bee72546": { image: "https://images.pexels.com/photos/14774691/pexels-photo-14774691.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Wrap poulet crudités", imageSourceUrl: "https://www.pexels.com/photo/a-wrap-with-meat-and-vegetables-on-a-plate-14774691/", imageCredit: "Shameel mukkath" },
+  "r-027c5f4f20": { image: "https://images.pexels.com/photos/14537684/pexels-photo-14537684.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Poisson grillé et légumes", imageSourceUrl: "https://www.pexels.com/photo/grilled-vegetables-and-fish-served-on-white-plate-14537684/", imageCredit: "Cristian Mihaila" },
+  "r-6f3fa27bf5": { image: "https://images.pexels.com/photos/36430162/pexels-photo-36430162.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Risotto crémeux aux courgettes", imageSourceUrl: "https://www.pexels.com/photo/creamy-risotto-with-zucchini-slices-on-plate-36430162/", imageCredit: "Willians Huerta" },
+  "r-eec2386df3": { image: "https://images.pexels.com/photos/31064161/pexels-photo-31064161.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Poulet rôti aux légumes", imageSourceUrl: "https://www.pexels.com/photo/gourmet-roasted-chicken-with-vegetables-31064161/", imageCredit: "Mahmoud Salem" },
+  "r-c9d038ac38": { image: "https://images.pexels.com/photos/37648023/pexels-photo-37648023.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Salade de poulet et crudités", imageSourceUrl: "https://www.pexels.com/photo/colorful-chicken-salad-bowl-with-fresh-vegetables-37648023/", imageCredit: "Tochukwu Ekeh" },
+  "r-286a260f09": { image: "https://images.pexels.com/photos/20778523/pexels-photo-20778523.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Salade composée", imageSourceUrl: "https://www.pexels.com/photo/salad-in-bowl-20778523/", imageCredit: "Nadin Sh" },
+  "r-191ad7474a": { image: "https://images.pexels.com/photos/35646479/pexels-photo-35646479.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Ragoût de lentilles", imageSourceUrl: "https://www.pexels.com/photo/rustic-lentil-stew-with-red-bell-peppers-35646479/", imageCredit: "Vural Yavas" },
+  "r-103073cf0c": { image: "https://images.pexels.com/photos/19409026/pexels-photo-19409026.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Melon et prosciutto", imageSourceUrl: "https://www.pexels.com/photo/woman-eating-appetizer-in-a-restaurant-19409026/", imageCredit: "Nadin Sh" },
+  "r-b03b260268": { image: "https://images.pexels.com/photos/13163534/pexels-photo-13163534.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Burger et frites", imageSourceUrl: "https://www.pexels.com/photo/delicious-burger-and-fries-serving-13163534/", imageCredit: "Aleksey Bystrov" },
+  "r-c1ed1606a4": { image: "https://images.pexels.com/photos/26161037/pexels-photo-26161037.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Omelette et salade", imageSourceUrl: "https://www.pexels.com/photo/omelette-with-vegetable-salad-26161037/", imageCredit: "Serdar Göksu" },
+  "r-ceea7b5051": { image: "https://images.pexels.com/photos/10802307/pexels-photo-10802307.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Pâtes crémeuses aux courgettes", imageSourceUrl: "https://www.pexels.com/photo/a-delicious-pasta-dish-in-a-pan-10802307/", imageCredit: "Anna Guerrero" },
+  "r-9f72f3e182": { image: "https://images.pexels.com/photos/5794/pexels-photo-5794.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Soupe poireaux pommes de terre", imageSourceUrl: "https://www.pexels.com/photo/leek-and-potato-soup-5794/", imageCredit: "Karolina Grabowska" },
+  "r-e99302c7e8": { image: "https://images.pexels.com/photos/14537687/pexels-photo-14537687.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Saumon au four et légumes", imageSourceUrl: "https://www.pexels.com/photo/dish-with-baked-salmon-and-vegetables-14537687/", imageCredit: "Cristian Mihaila" },
+  "r-4c28f40550": { image: "https://images.pexels.com/photos/37417629/pexels-photo-37417629.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Maquereau grillé et salade", imageSourceUrl: "https://www.pexels.com/photo/grilled-mackerel-with-fresh-tomato-and-herb-salad-37417629/", imageCredit: "Husien Bisky" },
+  "r-4a83bb2c6f": { image: "https://images.pexels.com/photos/21517324/pexels-photo-21517324.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Poulet et légumes", imageSourceUrl: "https://www.pexels.com/photo/fried-chicken-with-mushrooms-and-vegetables-21517324/", imageCredit: "Change C.C" },
+  "r-1aceae48da": { image: "https://images.pexels.com/photos/38706545/pexels-photo-38706545.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Courgettes farcies", imageSourceUrl: "https://www.pexels.com/photo/traditional-lebanese-stuffed-zucchini-dish-38706545/", imageCredit: "Anthony Rahayel" },
+  "r-8cb821d384": { image: "https://images.pexels.com/photos/40135526/pexels-photo-40135526.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Lentilles corail", imageSourceUrl: "https://www.pexels.com/photo/delicious-soup-of-red-lentils-with-croutons-and-lemon-40135526/", imageCredit: "mehmetakifarts" },
+  "r-f1341c9e59": { image: "https://images.pexels.com/photos/6210955/pexels-photo-6210955.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Poulet rôti aux légumes", imageSourceUrl: "https://www.pexels.com/photo/appetizing-roasted-chicken-with-vegetables-in-baking-dish-6210955/", imageCredit: "Tim Douglas" },
+  "r-ea69524e92": { image: "https://images.pexels.com/photos/25748212/pexels-photo-25748212.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Omelette et salade", imageSourceUrl: "https://www.pexels.com/photo/a-plate-with-a-salad-and-an-omelette-25748212/", imageCredit: "Helin Gezer" },
+  "r-4261d5727b": { image: "https://images.pexels.com/photos/19001608/pexels-photo-19001608.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Saumon au citron", imageSourceUrl: "https://www.pexels.com/photo/salmon-on-a-tray-in-kitchen-19001608/", imageCredit: "Lalada" },
+};
+
 export const carnet = {
   ...data,
-  recipes: [...recipesWithPdfOverrides, ...unmatchedPdfRecipes, ...springFestivalRecipes, ...summerFestivalRecipes, ...autumnSylvestreRecipes].map(normalizeRecipeForPlanning),
+  recipes: [...recipesWithPdfOverrides, ...unmatchedPdfRecipes, ...springFestivalRecipes, ...summerFestivalRecipes, ...autumnSylvestreRecipes].map((recipe) => {
+    const normalized = normalizeRecipeForPlanning(recipe);
+    return firstTwentyRecipeImages[normalized.id] ? { ...normalized, ...firstTwentyRecipeImages[normalized.id] } : normalized;
+  }),
 } as Carnet;
 
 export const DAYS = [
