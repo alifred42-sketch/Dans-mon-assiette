@@ -52,9 +52,11 @@ export default function WeekPage() {
   useEffect(() => {
     const refreshWeek = () => setCurrentWeek(currentIsoWeek());
     refreshWeek();
+    const interval = window.setInterval(refreshWeek, 60_000);
     window.addEventListener("focus", refreshWeek);
     document.addEventListener("visibilitychange", refreshWeek);
     return () => {
+      window.clearInterval(interval);
       window.removeEventListener("focus", refreshWeek);
       document.removeEventListener("visibilitychange", refreshWeek);
     };
