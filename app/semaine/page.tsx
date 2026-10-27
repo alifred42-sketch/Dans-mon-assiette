@@ -88,7 +88,7 @@ export default function WeekPage() {
           {showSosIdeas ? <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3"><Link href="/recettes?filter=express" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">⚡ EXPRESS</Link><Link href="/recettes?filter=tired" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">😮‍💨 JE SUIS FATIGUÉ</Link><Link href="/recettes?filter=easy" className="rounded-xl bg-[#FFF0E8] px-3 py-3 text-center text-xs font-extrabold text-[#9D4218] sm:text-sm">🍽️ REPAS TOUT SIMPLE</Link></div> : null}
         </section>
 
-        <WeekPicker week={week} path="/semaine" dateRange={dateRange} />
+
         <aside className="rounded-2xl border border-[#2B2B2B]/15 bg-white/65 p-3 text-sm text-[#2B2B2B]"><strong>Planning vérifié :</strong> {validatedSlotCount}/{slots.length} créneaux utilisent une recette complète.{activeProfiles.length ? <span> Préférences : {activeProfiles.join(", ")}.</span> : null}</aside>
         <MealReminders />
         {breakfast && breakfast.lines.length > 0 ? <section className="rounded-2xl bg-white p-4 text-[#214E4B] shadow-sm"><h2 className="text-lg font-black">Petit-déjeuner</h2><ul className="mt-2 space-y-1 text-sm">{breakfast.lines.map((line, index) => <li key={index}>{line}</li>)}</ul></section> : null}
