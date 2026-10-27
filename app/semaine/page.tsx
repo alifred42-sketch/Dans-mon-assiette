@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { ChevronDown, House, CalendarDays, ShoppingBasket, UserRound, Repeat2, Leaf, Flame, Boxes, ShoppingCart } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, House, CalendarDays, ShoppingBasket, UserRound, Repeat2, Leaf, Flame, Boxes, ShoppingCart } from "lucide-react";
 import { BASE_PATH } from "@/lib/base-path";
 import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, currentIsoWeek, getRecipe, seasonLabel, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { MealReminders } from "@/components/meal-reminders";
