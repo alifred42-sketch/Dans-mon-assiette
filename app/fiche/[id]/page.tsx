@@ -7,9 +7,9 @@ import { LactoseFreeSafetyNotice } from "@/components/lactose-free-safety-notice
 import { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
 import { RecipeTools } from "@/components/recipe-tools";
 import { RecipeComments, RecipeFeedbackSummary } from "@/components/recipe-feedback";
-import { RecipeHandsFree } from "@/components/recipe-hands-free";
 import { carnet, getRecipe, isPlaceholderIngredient } from "@/lib/carnet";
 import { displayRecipe } from "@/lib/recipe-display";
+import { RecipeHandsFree } from "@/components/recipe-hands-free";
 
 export function generateStaticParams() {
   return carnet.recipes.map((recipe) => ({ id: recipe.id }));
@@ -51,31 +51,41 @@ export default async function FichePage({
     if (!target) return line;
     return <Link href={"/fiche/" + target.id} className="font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">{line}</Link>;
   }
-  function ingredientsForStep(step: string) {
-    const normalizedStep = cleanMatch(step);
-    const ignored = new Set(["avec", "dans", "pour", "deux", "trois", "quatre", "cinq", "puis", "ajouter", "ajoutez", "mettre", "mettez", "verser", "versez", "incorporer", "incorporez", "melanger", "melangez", "couper", "coupez", "faire", "faites", "cuire", "cuisez", "jusque", "jusqu", "minutes", "minute", "gramme", "grammes", "cuillere", "soupe", "cafe", "pincee", "filet", "gousse"]);
-    const stepWords = new Set(normalizedStep.split(" "));
-    return shopIngs.filter((ingredient) => {
-      const name = cleanMatch(ingredient.replace(/^\s*\d+(?:[.,]\d+)?\s*(?:g|kg|mg|ml|cl|l)?\s*/i, "").replace(/\([^)]*\)/g, ""));
-      const words = name.split(" ").filter((word) => word.length >= 4 && !ignored.has(word) && !/^\d+$/.test(word));
-      return words.some((word) => stepWords.has(word));
-    });
-  }
   function instructionWithIngredients(step: string, key: string) {
-    const matched = ingredientsForStep(step);
+    // Intègre les quantités à la phrase, sans répéter les cartes d'ingrédients.
+    const entries = shopIngs.map((line) => {
+      const parts = line.split(/:\s*/, 2);
+      if (parts.length < 2) return null;
+      const name = parts[0].trim();
+      const detail = parts[1].trim();
+      const quantityMatch = detail.match(/^(\d+(?:[.,]\d+)?\s*(?:kg|g|mg|l|cl|ml|cuillères? à soupe|cuillères? à café|c\.\s*à\s*c\.|c\.\s*à\s*s\.|pincées?|gousses?|filets?|tranches?|branches?|feuilles?|œufs?|oignons?|doses?|boîtes?|sachets?|pots?|verres?|bouquets?|brins?|noix|d\w+)?)/i);
+      if (!quantityMatch) return null;
+      let shortName = name.replace(/\s*\([^)]*\)\s*/g, " ").trim();
+      shortName = shortName.replace(/\s+(?:frais|fraîche|fraîches|allégé|allégée|allégés|allégées|râpé|râpée|râpés|râpées|émincé|émincée|émincés|émincées|haché|hachée|hachés|hachées|coupé|coupée|coupés|coupées|en dés|en morceaux|pour la cuisson|pour la finition).*$/i, "").trim();
+      return shortName.length >= 3 ? { name: shortName, quantity: quantityMatch[1].trim() } : null;
+    }).filter((entry): entry is { name: string; quantity: string } => Boolean(entry))
+      .sort((a, b) => b.name.length - a.name.length);
+
+    let output = step;
+    const applied: { start: number; end: number; value: string }[] = [];
+    for (const entry of entries) {
+      const escaped = entry.name.replace(/[.*+?^\${}()|[\]\\]/g, "\\$&");
+      const pattern = new RegExp("(?<![\\p{L}\\p{N}])(" + escaped + ")(?![\\p{L}\\p{N}])", "giu");
+      const match = pattern.exec(output);
+      if (match && !/\(\s*\d/.test(output.slice(match.index + match[0].length, match.index + match[0].length + 12))) {
+        applied.push({ start: match.index + match[0].length, end: match.index + match[0].length, value: " (" + entry.quantity + ")" });
+      }
+    }
+    for (const item of applied.sort((a, b) => b.start - a.start)) {
+      output = output.slice(0, item.start) + item.value + output.slice(item.end);
+    }
+    const chunks = output.split(/(\([^()]+\))/g);
     return (
-      <div key={key} className="space-y-2">
-        {matched.length > 0 && (
-          <div className="flex flex-wrap gap-2" aria-label="Ingrédients et quantités de cette étape">
-            {matched.map((ingredient, index) => (
-              <span key={key + "-ingredient-" + index} className="inline-flex rounded-xl border-2 border-[#8FA89B]/60 bg-[#8FA89B]/15 px-3 py-2 text-base font-extrabold leading-snug text-[#24372C] sm:text-lg">
-                <GlutenFreeText text={ingredient.toLocaleUpperCase("fr")} />
-              </span>
-            ))}
-          </div>
-        )}
-        <div><GlutenFreeTimerText text={step} /></div>
-      </div>
+      <span key={key}>
+        {chunks.map((chunk, i) => /^\s*\([^()]+\)$/.test(chunk)
+          ? <strong key={i}>{chunk}</strong>
+          : <GlutenFreeTimerText key={i} text={chunk} />)}
+      </span>
     );
   }
   const meta = [recipe.timePrep && `Préparation ${recipe.timePrep}`, recipe.timeCook && `Cuisson ${recipe.timeCook}`, recipe.servings]
@@ -120,7 +130,7 @@ export default async function FichePage({
             {sec.lines.length === 0 ? null : (
               <ul className="mt-2 divide-y">
                 {sec.lines.map((line, li) => (
-                  <li key={`${si}-${li}`} className="py-2 text-sm leading-relaxed">
+                  <li key={`${si}-${li}`} className="py-3 text-base leading-relaxed">
                     <GlutenFreeTimerText text={line} />
                   </li>
                 ))}
@@ -133,7 +143,7 @@ export default async function FichePage({
           <section>
             <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
             {recipe.steps.length > 0 ? (
-              <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+              <ol className="mt-3 list-decimal space-y-3 pl-5 text-base leading-relaxed">
                 {recipe.steps.map((step, i) => (
                   <li key={`step-${i}`}>{instructionWithIngredients(step, `step-${i}`)}</li>
                 ))}
@@ -147,7 +157,7 @@ export default async function FichePage({
           {recipe.robot.length > 0 && (
             <section>
               <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
-              <ul className="mt-2 space-y-1 text-sm">
+              <ul className="mt-3 space-y-2 text-base leading-relaxed">
                 {recipe.robot.map((line, i) => (
                   <li key={`robot-${i}`}>{instructionWithIngredients(line, `robot-${i}`)}</li>
                 ))}
@@ -160,7 +170,7 @@ export default async function FichePage({
       {sections.length > 0 && recipe.steps.length > 0 && !sections.some((sec) => /préparation|preparation|étapes|etapes|instructions/i.test(sec.title)) ? (
         <section>
           <h2 className="font-heading text-xl">👩‍🍳 Préparation</h2>
-          <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+          <ol className="mt-3 list-decimal space-y-3 pl-5 text-base leading-relaxed">
             {recipe.steps.map((step, i) => <li key={`step-extra-${i}`}>{instructionWithIngredients(step, `step-extra-${i}`)}</li>)}
           </ol>
         </section>
@@ -168,7 +178,7 @@ export default async function FichePage({
       {sections.length > 0 && recipe.robot.length > 0 && !sections.some((sec) => /mr cuisine|robot/i.test(sec.title)) ? (
         <section>
           <h2 className="font-heading text-xl">🤖 Mr Cuisine</h2>
-          <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+          <ol className="mt-3 list-decimal space-y-3 pl-5 text-base leading-relaxed">
             {recipe.robot.map((line, i) => <li key={`robot-extra-${i}`}>{instructionWithIngredients(line, `robot-extra-${i}`)}</li>)}
           </ol>
         </section>
