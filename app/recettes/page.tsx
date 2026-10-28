@@ -33,6 +33,15 @@ const FILTER_LABELS: Record<string, string> = {
   automne: "Automne", hiver: "Hiver", bonus: "Bonus du carnet", vegetarien: "🥦 Végétarien",
 };
 
+function ovenTemperature(recipe: (typeof carnet.recipes)[number]): number | null {
+  const instructions = (recipe.steps || []).join(" ");
+  if (!/(?:au four|enfournez|enfourner|cuire au four|cuisson au four)/i.test(instructions)) return null;
+  const match = instructions.match(/(\d{2,3})\s*°\s*C/i);
+  if (!match) return null;
+  const temperature = Number(match[1]);
+  return temperature >= 100 && temperature <= 260 ? temperature : null;
+}
+
 function durationMinutes(value?: string): number | null {
   if (!value?.trim()) return null;
   const normalized = value.toLocaleLowerCase("fr");
@@ -118,7 +127,16 @@ export default function RecettesPage() {
         const cook = durationMinutes(recipe.timeCook);
         return prep !== null && cook !== null && prep + cook <= maxDuration;
       });
-  const recipes = timeFilteredRecipes.map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
+  const recipes = timeFilteredRecipes.map((recipe) => ({
+    id: recipe.id,
+    name: recipe.name,
+    lines: recipeLines(recipe),
+    timeCook: recipe.timeCook,
+    ovenTemperature: ovenTemperature(recipe),
+    airfryer_compatible: recipe.airfryer_compatible,
+    airfryer_temps: recipe.airfryer_temps,
+    airfryer_temperature: recipe.airfryer_temperature,
+  }));
 
   if (filter === "vegan") return <VeganNavigation showBack />;
 
