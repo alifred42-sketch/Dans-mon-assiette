@@ -642,13 +642,24 @@ function recipePillars(recipe: Recipe): { vegetables: Set<string>; starches: Set
   };
 }
 
+const TRANSFORMATION_TOKENS = ["pois chiches", "lentilles", "haricots", "poulet", "dinde", "boeuf", "veau", "porc", "agneau", "saumon", "cabillaud", "thon", "maquereau", "colin", "lieu", "crevette", "tofu", "falafel", "oeuf"];
+const transformationTokenCache = new Map<string, Set<string>>();
+
+function transformationTokens(recipe: Recipe): Set<string> {
+  const cached = transformationTokenCache.get(recipe.id);
+  if (cached) return cached;
+  const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
+  const found = new Set(TRANSFORMATION_TOKENS.filter((token) => text.includes(normalizedSeasonText(token))));
+  transformationTokenCache.set(recipe.id, found);
+  return found;
+}
+
 function sharesPivotIngredient(candidate: Recipe, pivotRecipeId: string): boolean {
   const pivot = recipesById.get(pivotRecipeId);
   if (!pivot) return false;
-  const tokens = ["pois chiches", "lentilles", "haricots", "poulet", "dinde", "boeuf", "veau", "porc", "agneau", "saumon", "cabillaud", "thon", "maquereau", "colin", "lieu", "crevette", "tofu", "falafel", "oeuf"];
-  const pivotText = normalizedSeasonText([pivot.name, ...(pivot.ingredients || [])].join(" "));
-  const candidateText = normalizedSeasonText([candidate.name, ...(candidate.ingredients || [])].join(" "));
-  return tokens.some((token) => pivotText.includes(normalizedSeasonText(token)) && candidateText.includes(normalizedSeasonText(token)));
+  const pivotTokens = transformationTokens(pivot);
+  const candidateTokens = transformationTokens(candidate);
+  return [...pivotTokens].some((token) => candidateTokens.has(token));
 }
 
 function fitsWeeklyPillarCaps(candidate: Recipe, selected: Recipe[]): boolean {
