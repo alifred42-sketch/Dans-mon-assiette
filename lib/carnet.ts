@@ -737,7 +737,7 @@ function enforceDinnerCategoryCooldown(
   return result;
 }
 
-export function weekPlan(
+function computeWeekPlan(
   week: number,
   overrides: Record<string, string> = {},
   preferences: PlanningPreferences = {},
@@ -958,6 +958,33 @@ export function weekPlan(
   });
 
 }
+
+/**
+ * Cache mémoire du planning calculé. Batch et Courses demandaient plusieurs fois
+ * exactement le même planning, et chaque calcul retraitait le catalogue complet.
+ * Les paramètres font partie de la clé afin de ne jamais réutiliser un planning
+ * calculé pour une autre semaine, un autre profil ou d'autres changements manuels.
+ */
+const weekPlanCache = new Map<string, PlanSlot[]>();
+
+export function weekPlan(
+  week: number,
+  overrides: Record<string, string> = {},
+  preferences: PlanningPreferences = {},
+  applyLeftovers = true,
+  applyBoundaryCooldown = true,
+): PlanSlot[] {
+  const key = JSON.stringify([week, overrides, preferences, applyLeftovers, applyBoundaryCooldown]);
+  const cached = weekPlanCache.get(key);
+  if (cached) return cached;
+  const result = computeWeekPlan(week, overrides, preferences, applyLeftovers, applyBoundaryCooldown);
+  // Cache borné : les changements successifs de semaine/profil ne gardent pas
+  // une quantité illimitée de résultats dans la mémoire de l'application.
+  if (weekPlanCache.size >= 80) weekPlanCache.clear();
+  weekPlanCache.set(key, result);
+  return result;
+}
+
 export function breakfastForWeek(week: number): Breakfast | undefined {
   return (carnet.breakfasts || []).find((item) => item.week === week);
 }
