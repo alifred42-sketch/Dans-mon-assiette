@@ -50,8 +50,10 @@ jobs:
             git push
           fi
       - run: npm ci
-      - name: Auditer les 52 semaines avant publication (lecture seule)
+      - name: Auditer les 52 semaines du planning source (lecture seule)
         run: npm run audit:weekly-plan
+      - name: Auditer les menus réellement générés par weekPlan (lecture seule)
+        run: npm run audit:generated-plan
       - run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ github.ref == 'refs/heads/main' && '/Dans-mon-assiette' || '/Dans-mon-assiette/previews/travail-cuisine-chic-ouf-design' }}
