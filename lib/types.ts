@@ -20,6 +20,10 @@ export type Recipe = {
   imageAlt?: string;
   imageSourceUrl?: string;
   imageCredit?: string;
+  /** Airfryer conversion derived from explicit oven instructions; null means review needed. */
+  airfryer_compatible?: boolean;
+  airfryer_temps?: number | null;
+  airfryer_temperature?: number | null;
   fete?: string;
   sous_fete?: string;
   regime?: string;
