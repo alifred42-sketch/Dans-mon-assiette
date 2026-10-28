@@ -607,7 +607,7 @@ function budgetRecipeScore(recipe: Recipe): number {
 
 function isMainDishCandidate(recipe: Recipe): boolean {
   const name = normalizedSeasonText(recipe.name);
-  const notAMainDish = /(?:dessert|snack|truffes?|bonbons?|cookies?|biscuits? sucre|brownies?|mousse au chocolat|panna cotta|tiramisu|compote|granola|energy balls|boules d energie|barres energetiques|gaufres? sucrees|crepes sucrees|fondants? au chocolat|rochers coco|madeleines|financiers|muffins? sucrees?|chips|pop.?corn|pop.?corn|bonbons|sucettes|mendiants|buche|bouchees chocolatees|bouchees aperitives|mini.?feuilletes|gressins|crackers|tartinade|dip\b|cocktail|mocktail|smoothie|boisson)/i;
+  const notAMainDish = /(?:dessert|snack|truffes?|bonbons?|cookies?|biscuits? sucre|brownies?|mousse au chocolat|panna cotta|tiramisu|compote|granola|energy balls|boules d energie|barres energetiques|gaufres? sucrees|crepes sucrees|fondants? au chocolat|rochers coco|madeleines|financiers|muffins? sucrees?|chips|pop.?corn|bonbons|sucettes|mendiants|buche|bouchees chocolatees|bouchees aperitives|mini.?feuilletes|gressins|crackers|tartinade|dip\b|cocktail|mocktail|smoothie|boisson|bananes? roties?|banana bread|pain perdu|salade de fruits|fruits au chocolat|bowl de (?:skyr|fromage blanc|yaourt)|skyr aux fruits|fromage blanc aux fruits|bowl sucre)/i;
   return !notAMainDish.test(name) && !isSauceOrSideRecipe(recipe.name);
 }
 
