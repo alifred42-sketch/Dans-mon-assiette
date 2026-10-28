@@ -633,13 +633,13 @@ function enforceDinnerCategoryCooldown(
   week: number,
   preferences: PlanningPreferences,
   season: Season,
-  previousDinnerCategory = "",
+  previousDinnerCategories: string[] = [],
 ): PlanSlot[] {
   const days = ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"];
   const result = [...slots];
-  // Le dernier dîner de la semaine précédente compte aussi : le lundi soir ne doit
-  // pas répéter la catégorie du dimanche, même si la semaine est générée séparément.
-  let previousCategory = previousDinnerCategory;
+  // Les deux derniers dîners sont pris en compte : le déjeuner du lendemain
+  // reprend les restes, donc une catégorie ne doit pas revenir dans la fenêtre de 48 h.
+  const recentCategories = previousDinnerCategories.filter((category) => category && category !== "inconnu").slice(-2);
   const selectedDinners: Recipe[] = [];
   for (const day of days) {
     const index = result.findIndex((slot) => slot.day === day && slot.meal === "Soir");
@@ -648,7 +648,7 @@ function enforceDinnerCategoryCooldown(
     const recipe = current.recipeId ? recipesById.get(current.recipeId) : undefined;
     const category = mainDishCategory(recipe);
     const invalid = !recipe || !isMainDishCandidate(recipe);
-    const repeated = Boolean(previousCategory && category === previousCategory);
+    const repeated = Boolean(category && recentCategories.includes(category));
     const exceedsPillars = Boolean(recipe && !fitsWeeklyPillarCaps(recipe, selectedDinners));
     if (invalid || repeated || exceedsPillars) {
       const alreadyUsed = new Set(result.filter((slot, slotIndex) => slotIndex !== index && slot.recipeId).map((slot) => slot.recipeId as string));
@@ -656,21 +656,26 @@ function enforceDinnerCategoryCooldown(
         !alreadyUsed.has(candidate.id) && !reserved.has(candidate.id) && candidate.id !== current.recipeId &&
         isMainDishCandidate(candidate) && isValidatedRecipe(candidate) &&
         eligibleForPreferences(candidate, preferences) && isSeasonCompatible(candidate, season) &&
-        (!previousCategory || mainDishCategory(candidate) !== previousCategory) &&
+        !recentCategories.includes(mainDishCategory(candidate)) &&
         fitsWeeklyPillarCaps(candidate, selectedDinners)
       ).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
       const replacement = candidates[(Math.max(1, week + days.indexOf(day)) - 1) % Math.max(1, candidates.length)];
       if (replacement) {
         result[index] = { ...current, recipeId: replacement.id, name: replacement.name };
-        previousCategory = mainDishCategory(replacement);
+        recentCategories.push(mainDishCategory(replacement));
+        if (recentCategories.length > 2) recentCategories.shift();
         selectedDinners.push(replacement);
       } else {
         if (invalid) result[index] = { ...current, recipeId: null, name: "Aucun plat principal complet validé pour ce créneau" };
-        previousCategory = invalid ? "inconnu" : category;
-        if (recipe && !invalid) selectedDinners.push(recipe);
+        if (!invalid) {
+          recentCategories.push(category);
+          if (recentCategories.length > 2) recentCategories.shift();
+          selectedDinners.push(recipe!);
+        }
       }
     } else {
-      previousCategory = category;
+      recentCategories.push(category);
+      if (recentCategories.length > 2) recentCategories.shift();
       if (recipe) selectedDinners.push(recipe);
     }
   }
@@ -847,15 +852,18 @@ export function weekPlan(
     used.add(replacement.id);
     return { ...slot, name: replacement.name, recipeId: replacement.id };
   });
-  let previousDinnerCategory = "";
+  let previousDinnerCategories: string[] = [];
   if (applyBoundaryCooldown) {
-    // Générer la semaine précédente sans recalcul récursif de sa propre frontière.
+    // La frontière du lundi respecte aussi le dîner du samedi précédent : les déjeuners
+    // intermédiaires sont les restes, et prolongent la fenêtre anti-répétition de 48 h.
     const previousWeek = week === 1 ? 52 : week - 1;
     const previousPlanForBoundary = weekPlan(previousWeek, overrides, preferences, false, false);
-    const previousSundayDinner = previousPlanForBoundary.find((slot) => slot.day === "DIMANCHE" && slot.meal === "Soir");
-    previousDinnerCategory = mainDishCategory(getRecipe(previousSundayDinner?.recipeId));
+    previousDinnerCategories = ["SAMEDI", "DIMANCHE"].map((day) => {
+      const dinner = previousPlanForBoundary.find((slot) => slot.day === day && slot.meal === "Soir");
+      return mainDishCategory(getRecipe(dinner?.recipeId));
+    });
   }
-  const safeResult = enforceDinnerCategoryCooldown(result, eligible, reserved, week, preferences, season, previousDinnerCategory);
+  const safeResult = enforceDinnerCategoryCooldown(result, eligible, reserved, week, preferences, season, previousDinnerCategories);
   if (!applyLeftovers) return safeResult;
 
   // Tous les déjeuners reprennent le dîner de la veille. Une substitution explicite
