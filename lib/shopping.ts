@@ -285,6 +285,13 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
   const frozenSlots = new Set(activePlan
     .filter((slot) => requestedFrozenSlots.has(slotKey(slot)) && overrides[slotKey(slot)] === slot.recipeId)
     .map(slotKey));
+  const frozenRecipeIds = new Set(activePlan.filter((slot) => frozenSlots.has(slotKey(slot))).map((slot) => slot.recipeId).filter((id): id is string => Boolean(id)));
+  // Le déjeuner qui reprend les portions congelées du dîner n'exige pas non plus de nouvel achat.
+  for (const slot of activePlan) {
+    if (slot.meal === "Midi" && slot.recipeId && frozenRecipeIds.has(slot.recipeId) && /^restes du dîner\s*[—-]/i.test(slot.name)) {
+      frozenSlots.add(slotKey(slot));
+    }
+  }
   const activeDishNames = new Set(activePlan.filter((slot) => !frozenSlots.has(slotKey(slot))).map((slot) => fold(slot.name)).filter(Boolean));
 
   for (const slot of activePlan) {
