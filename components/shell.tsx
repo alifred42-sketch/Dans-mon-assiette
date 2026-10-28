@@ -14,8 +14,8 @@ const NAV = [
   { href: "/recettes", label: "Recettes", icon: UtensilsCrossed, color: "#D6B86A", activeText: "#302400" },
   { href: "/courses", label: "Courses", icon: ShoppingCart, color: "#83D6B0", activeText: "#173C2C" },
   { href: "/batch", label: "Batch", icon: CookingPot, color: "#F05B4E", activeText: "#FFFFFF" },
-  { href: "/mes-recettes?tab=favoris", label: "Mes favoris", icon: Heart, color: "#E32636", activeText: "#FFFFFF" },
   { href: "/frigo-magique", label: "Frigo", icon: Refrigerator, color: "#8FA89B", activeText: "#173C2C" },
+  { href: "/mes-recettes?tab=favoris", label: "Mes favoris", icon: Heart, color: "#E32636", activeText: "#FFFFFF" },
 ];
 
 export function Shell({ children }: { children: React.ReactNode }) {
