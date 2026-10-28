@@ -52,23 +52,35 @@ function normalize(text) {
 }
 
 function getInstructions(recipe) {
-  return [recipe.steps, recipe.preparation, recipe.instructions, recipe.robot]
+  const sectionLines = Array.isArray(recipe.sections)
+    ? recipe.sections.flatMap((section) => Array.isArray(section?.lines) ? section.lines : [])
+    : [];
+  return [recipe.steps, recipe.preparation, recipe.instructions, recipe.robot, sectionLines]
     .filter(Array.isArray).flat().filter((v) => typeof v === "string").join("\n");
 }
 
-function ovenCooking(instructions) {
+function ovenCooking(instructions, recipe) {
   const text = normalize(instructions);
-  return /(?:au four|enfournez|enfourner|enfourne|cuire au four|cuisson au four|four prechauffe|four chaud|four a \d{2,3}\s*°?c)/i.test(text);
+  const hasStructuredOvenTemperature = [recipe.ovenTemperature, recipe.oven_temperature, recipe.temperatureFour, recipe.temperature_four]
+    .some((value) => Number(value) >= 100 && Number(value) <= 260);
+  return hasStructuredOvenTemperature || /(?:au four|enfournez|enfourner|enfourne|cuire au four|cuisson au four|four prechauffe|four chaud|four a \d{2,3}\s*°?c)/i.test(text);
 }
 
-function extractOvenTemperature(instructions) {
+function extractOvenTemperature(instructions, recipe) {
+  const structured = [recipe.ovenTemperature, recipe.oven_temperature, recipe.temperatureFour, recipe.temperature_four]
+    .map(Number).find((value) => Number.isFinite(value) && value >= 100 && value <= 260);
+  if (structured != null) return structured;
   const text = normalize(instructions);
   const matches = [...text.matchAll(/(\d{2,3})\s*°\s*c/g)];
   const values = matches.map((m) => Number(m[1])).filter((n) => n >= 100 && n <= 260);
   return values.length ? values[0] : null;
 }
 
-function extractOvenMinutes(instructions, timeCook) {
+function extractOvenMinutes(instructions, timeCook, recipe) {
+  const structured = [recipe.ovenMinutes, recipe.oven_minutes, recipe.ovenTime, recipe.oven_time, recipe.timeOven, recipe.timeFour, recipe.time_four]
+    .map((value) => String(value ?? "").match(/(\d{1,3})\s*(?:min|minute)/i)?.[1])
+    .map(Number).find((value) => Number.isFinite(value) && value > 0 && value <= 600);
+  if (structured != null) return structured;
   const text = normalize(instructions);
   const sentences = text.split(/[.!?\n]+/);
   for (const sentence of sentences) {
@@ -86,7 +98,7 @@ function extractOvenMinutes(instructions, timeCook) {
 
 function migrateRecipe(recipe) {
   const instructions = getInstructions(recipe);
-  const compatible = ovenCooking(instructions);
+  const compatible = ovenCooking(instructions, recipe);
   const previous = {
     airfryer_compatible: recipe.airfryer_compatible,
     airfryer_temps: recipe.airfryer_temps,
@@ -97,8 +109,8 @@ function migrateRecipe(recipe) {
     recipe.airfryer_temps = null;
     recipe.airfryer_temperature = null;
   } else {
-    const ovenMinutes = extractOvenMinutes(instructions, recipe.timeCook);
-    const ovenTemperature = extractOvenTemperature(instructions);
+    const ovenMinutes = extractOvenMinutes(instructions, recipe.timeCook, recipe);
+    const ovenTemperature = extractOvenTemperature(instructions, recipe);
     recipe.airfryer_compatible = true;
     recipe.airfryer_temps = ovenMinutes == null ? null : Math.max(1, Math.round(ovenMinutes * 0.8));
     recipe.airfryer_temperature = ovenTemperature == null ? null : Math.max(80, ovenTemperature - 20);
