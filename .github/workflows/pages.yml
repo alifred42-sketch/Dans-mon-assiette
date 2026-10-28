@@ -23,6 +23,23 @@ jobs:
         run: python scripts/correct-audited-recipes.py
       - name: Synchroniser les déjeuners avec les dîners précédents
         run: python scripts/align-weekly-leftovers.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Migrer les données Airfryer sans modifier les champs existants
+        if: github.ref == 'refs/heads/travail-cuisine-chic-ouf-design'
+        run: node scripts/migrate-airfryer.mjs --write
+      - name: Enregistrer les migrations Airfryer dans la branche de test uniquement
+        if: github.ref == 'refs/heads/travail-cuisine-chic-ouf-design'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- data; then
+            git add data/*.json
+            git commit -m "Ajouter les données de conversion Airfryer"
+            git push
+          fi
       - name: Enregistrer les corrections de recettes dans la branche de test
         run: |
           git config user.name "github-actions[bot]"
@@ -32,10 +49,6 @@ jobs:
             git commit -m "Synchroniser les recettes et le planning hebdomadaire"
             git push
           fi
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
       - run: npm ci
       - run: npm run build
         env:
