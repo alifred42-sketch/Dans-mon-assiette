@@ -235,19 +235,22 @@ function pluralizeIngredient(name: string): string {
 
 // Index construit une seule fois : auparavant, chaque ligne d'ingrédient
 // rescannait tout le catalogue (1 600+ recettes), ce qui ralentissait fortement Courses.
-const linkedSauceCandidates = carnet.recipes
+function getLinkedSauceCandidates() {
+  return carnet.recipes
   .filter((candidate) => {
     const name = fold(candidate.name);
     return /(^|\\s)(sauce|marinade|vinaigrette|pesto|coulis)\\b/.test(name)
       && !/poulet|cabillaud|saumon|steak|boulettes|colin|merguez|ravioles|paupiettes|wrap/.test(name);
   })
   .map((recipe) => ({ recipe, foldedName: fold(recipe.name) }))
-  .sort((a, b) => b.recipe.name.length - a.recipe.name.length);
+    .sort((a, b) => b.recipe.name.length - a.recipe.name.length);
+}
 const linkedSauceMatchCache = new Map<string, (typeof carnet.recipes)[number] | undefined>();
 
 function findLinkedSauce(line: string) {
   const cleaned = fold(line);
   if (linkedSauceMatchCache.has(cleaned)) return linkedSauceMatchCache.get(cleaned);
+  const linkedSauceCandidates = getLinkedSauceCandidates();
   const exact = linkedSauceCandidates.find(({ foldedName }) => cleaned.includes(foldedName))?.recipe;
   if (exact) {
     linkedSauceMatchCache.set(cleaned, exact);
