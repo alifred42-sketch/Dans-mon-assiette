@@ -11,6 +11,7 @@ import { GlutenFreeSafetyNotice } from "@/components/gluten-free-safety-notice";
 import { LactoseFreeSafetyNotice } from "@/components/lactose-free-safety-notice";
 import { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
 import { BASE_PATH } from "@/lib/base-path";
+import { getFreezerPlan } from "@/lib/freezer";
 
 function dateRangeForIsoWeek(week: number) {
   const now = new Date();
@@ -33,6 +34,7 @@ export default function CoursesPage() {
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
   const [preferences, setPreferences] = useState<PlanningPreferences>({});
   const [extraCourseItems, setExtraCourseItems] = useState<string[]>([]);
+  const [freezerSlotKeys, setFreezerSlotKeys] = useState<string[]>([]);
   const [openDay, setOpenDay] = useState<string>("");
   useEffect(() => {
     const refreshCurrentWeek = () => {
@@ -51,7 +53,12 @@ export default function CoursesPage() {
   useEffect(() => {
     const refresh = () => {
       try { setServingsByRecipe(JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}")); } catch { setServingsByRecipe({}); }
-      try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); }
+      try {
+        const savedOverrides = JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}");
+        const freezerPlan = getFreezerPlan(week, savedOverrides);
+        setRecipeOverrides(freezerPlan.overrides);
+        setFreezerSlotKeys(freezerPlan.slotKeys);
+      } catch { setRecipeOverrides({}); setFreezerSlotKeys([]); }
       try { setPreferences(JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}")); } catch { setPreferences({}); }
     };
     refresh();
@@ -59,13 +66,15 @@ export default function CoursesPage() {
     window.addEventListener("assiette-servings-change", refresh);
     window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
     window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
+    window.addEventListener("cuisine-chic-ouf-freezer-change", refresh);
     return () => {
       window.removeEventListener("storage", refresh);
       window.removeEventListener("assiette-servings-change", refresh);
       window.removeEventListener("cuisine-chic-ouf-plan-change", refresh);
       window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh);
+      window.removeEventListener("cuisine-chic-ouf-freezer-change", refresh);
     };
-  }, []);
+  }, [week]);
 
   useEffect(() => {
     const refreshExtras = () => {
@@ -85,7 +94,7 @@ export default function CoursesPage() {
 
   // Le calcul central du panier reste inchangé : mêmes données, quantités et regroupements.
   const nonIngredientPattern = /(?:verifier la cuisson|arroser du jus|servir immediatement|cuire au four|prechauffer le four|assaisonner le poisson|repartir les legumes|fruits de mer doivent|pour personnes|une recette ideale pour)/i;
-  const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences)
+  const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences, freezerSlotKeys)
     .filter((item) => !nonIngredientPattern.test(item.label.normalize("NFD").replace(/[\u0300-\u036f]/g, "")))
     .map((item) => ({ id: `${item.aisle}|${item.label}`, title: adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(item.label, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose)), Boolean(preferences.sansFruitsCoque)), group: item.aisle }))
     .concat(extraCourseItems.map((item) => ({ id: "frigo|" + item, title: item, group: "Ajouts du Frigo Magique" })));
