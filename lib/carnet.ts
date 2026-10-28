@@ -700,7 +700,7 @@ function enforceDinnerCategoryCooldown(
         !recentCategories.includes(mainDishCategory(candidate)) &&
         // Si le dîner du jeudi est la recette fille, toute correction de diversité doit
         // conserver un ingrédient du pivot du mardi (sauf choix explicite de l’utilisatrice).
-        (day !== "JEUDI" || !daughterPivotRecipeId || sharesPivotIngredient(candidate, daughterPivotRecipe)) &&
+        (day !== "JEUDI" || !daughterPivotRecipe || sharesPivotIngredient(candidate, daughterPivotRecipe)) &&
         fitsWeeklyPillarCaps(candidate, selectedDinners)
       ).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
       const replacement = candidates[(Math.max(1, week + days.indexOf(day)) - 1) % Math.max(1, candidates.length)];
