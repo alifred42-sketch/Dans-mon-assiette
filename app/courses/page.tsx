@@ -13,6 +13,8 @@ import { NutFreeSafetyNotice } from "@/components/nut-free-safety-notice";
 import { BASE_PATH } from "@/lib/base-path";
 import { getFreezerPlan } from "@/lib/freezer";
 
+const NON_INGREDIENT_PATTERN = /(?:verifier la cuisson|arroser du jus|servir immediatement|cuire au four|prechauffer le four|assaisonner le poisson|repartir les legumes|fruits de mer doivent|pour personnes|une recette ideale pour)/i;
+
 function dateRangeForIsoWeek(week: number) {
   const now = new Date();
   const jan4 = new Date(now.getFullYear(), 0, 4);
@@ -97,9 +99,8 @@ export default function CoursesPage() {
   }, [week]);
 
   // Le calcul central du panier reste inchangé : mêmes données, quantités et regroupements.
-  const nonIngredientPattern = /(?:verifier la cuisson|arroser du jus|servir immediatement|cuire au four|prechauffer le four|assaisonner le poisson|repartir les legumes|fruits de mer doivent|pour personnes|une recette ideale pour)/i;
   const items = useMemo(() => shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences, freezerSlotKeys)
-    .filter((item) => !nonIngredientPattern.test(item.label.normalize("NFD").replace(/[\u0300-\u036f]/g, "")))
+    .filter((item) => !NON_INGREDIENT_PATTERN.test(item.label.normalize("NFD").replace(/[\u0300-\u036f]/g, "")))
     .map((item) => ({ id: `${item.aisle}|${item.label}`, title: adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(item.label, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose)), Boolean(preferences.sansFruitsCoque)), group: item.aisle }))
     .concat(extraCourseItems.map((item) => ({ id: "frigo|" + item, title: item, group: "Ajouts du Frigo Magique" }))), [week, servingsByRecipe, recipeOverrides, preferences, freezerSlotKeys, extraCourseItems]);
 
