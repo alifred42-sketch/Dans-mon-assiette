@@ -7,6 +7,7 @@ import { carnet, currentIsoWeek, shoppingForWeek } from "@/lib/carnet";
 
 const STOCK_KEY = "cuisine-chic-ouf-frigo-stock";
 const EXTRA_PREFIX = "assiette-courses-extra-";
+const EXCLUDED_PROBABLE_KEY = "cuisine-chic-ouf-frigo-excluded-probable";
 
 function fold(value: string) {
   return value.toLocaleLowerCase("fr").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
@@ -35,6 +36,7 @@ export default function FrigoMagiquePage() {
   const [stock, setStock] = useState<string[]>([]);
   const [ready, setReady] = useState(false);
   const [probable, setProbable] = useState<string[]>([]);
+  const [excludedProbable, setExcludedProbable] = useState<string[]>([]);
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({ "Légumes": true, "Épicerie": true });
 
   useEffect(() => {
@@ -42,7 +44,10 @@ export default function FrigoMagiquePage() {
     setWeek(current);
     try {
       const saved = JSON.parse(localStorage.getItem(STOCK_KEY) || "[]");
-      setStock(Array.isArray(saved) ? saved : []);
+      const excluded = JSON.parse(localStorage.getItem(EXCLUDED_PROBABLE_KEY) || "[]");
+      const excludedList = Array.isArray(excluded) ? excluded.filter((item) => typeof item === "string") : [];
+      setExcludedProbable(excludedList);
+      setStock(Array.isArray(saved) ? saved.filter((item) => !excludedList.some((value) => fold(value) === fold(item))) : []);
       const prefs = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
       const servings = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}");
       const overrides = JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}");
@@ -54,8 +59,8 @@ export default function FrigoMagiquePage() {
         .filter(Boolean);
       const unique = [...new Map(leftovers.map((item) => [fold(item), item])).values()].slice(0, 24);
       setProbable(unique);
-      // Les restes probables sont cochés par défaut, sans effacer le stock déjà saisi.
-      setStock((existing) => [...new Map([...unique, ...existing].map((item) => [fold(item), item])).values()]);
+      // Ne pas recocher un reste que l'utilisatrice a explicitement décoché lors d'une visite précédente.
+      setStock((existing) => [...new Map([...unique.filter((item) => !excludedList.some((value) => fold(value) === fold(item))), ...existing.filter((item) => !excludedList.some((value) => fold(value) === fold(item)))].map((item) => [fold(item), item])).values()]);
     } catch {
       setProbable([]);
     }
@@ -64,12 +69,21 @@ export default function FrigoMagiquePage() {
 
   useEffect(() => {
     if (!ready) return;
-    try { localStorage.setItem(STOCK_KEY, JSON.stringify(stock)); } catch {}
-  }, [stock, ready]);
+    try {
+      localStorage.setItem(STOCK_KEY, JSON.stringify(stock));
+      localStorage.setItem(EXCLUDED_PROBABLE_KEY, JSON.stringify(excludedProbable));
+    } catch {}
+  }, [stock, excludedProbable, ready]);
 
   function toggleIngredient(item: string) {
-    setStock((current) => current.some((v) => fold(v) === fold(item))
-      ? current.filter((v) => fold(v) !== fold(item))
+    const currentlySelected = stock.some((value) => fold(value) === fold(item));
+    if (probable.some((value) => fold(value) === fold(item))) {
+      setExcludedProbable((current) => currentlySelected
+        ? [...new Map([...current, item].map((value) => [fold(value), value])).values()]
+        : current.filter((value) => fold(value) !== fold(item)));
+    }
+    setStock((current) => currentlySelected
+      ? current.filter((value) => fold(value) !== fold(item))
       : [...current, item]);
   }
   function addIngredient() {
