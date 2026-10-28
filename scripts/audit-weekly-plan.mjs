@@ -94,11 +94,15 @@ for (let week = 1; week <= 52; week++) {
   const month = monthForWeek(week);
   for (const slot of dinners) {
     const recipe = recipeOf(slot);
-    const text = fold([nameOf(slot), ...(recipe?.ingredients || [])].join(" "));
+    // Vérifier les ingrédients réels, pas seulement le titre du plat.
+    // Les conserves, coulis et produits surgelés ne sont pas considérés comme frais/hors saison.
+    const ingredientLines = (recipe?.ingredients || []).map((line) => fold(line))
+      .filter((line) => !/conserve|concassee|concassees|coulis|passata|en boite|en conserve|surgel|tomates pelees|concentre de tomate/.test(line));
     for (const rule of seasonalWindows) {
       if (rule.months.includes(month)) continue;
-      if (new RegExp(`\\b${rule.name.replace(/ /g, "\\s+")}s?\\b`).test(text)) {
-        warnings.push(`Semaine ${week} (mois ${month}): produit possiblement hors saison « ${rule.name} » dans « ${nameOf(slot)} ».`);
+      const pattern = new RegExp(`\\b${rule.name.replace(/ /g, "\\s+")}s?\\b`);
+      if (ingredientLines.some((line) => pattern.test(line))) {
+        warnings.push(`Semaine ${week} (mois ${month}): produit frais possiblement hors saison « ${rule.name} » dans « ${nameOf(slot)} ».`);
       }
     }
   }
@@ -117,10 +121,11 @@ for (let week = 1; week <= 52; week++) {
 }
 
 const plannedIds = new Set((data.plan || []).map((slot) => slot.recipeId).filter(Boolean));
+const uniqueWarnings = [...new Set(warnings)];
 console.log("Cuisine Chic Ouf — audit heuristique du planning 52 semaines (lecture seule)");
 console.log(`Recettes source: ${(data.recipes || []).length} | Créneaux: ${(data.plan || []).length} | Recettes planifiées: ${plannedIds.size}`);
-console.log(`Erreurs de structure/IDs: ${errors.length} | Alertes culinaires à examiner: ${warnings.length}`);
+console.log(`Erreurs de structure/IDs: ${errors.length} | Alertes culinaires à examiner: ${uniqueWarnings.length}`);
 for (const error of errors) console.error("ERREUR: " + error);
-for (const warning of warnings.slice(0, 160)) console.warn("À EXAMINER: " + warning);
-if (warnings.length > 160) console.warn(`… ${warnings.length - 160} alertes supplémentaires (non affichées).`);
+for (const warning of uniqueWarnings.slice(0, 160)) console.warn("À EXAMINER: " + warning);
+if (uniqueWarnings.length > 160) console.warn(`… ${uniqueWarnings.length - 160} alertes supplémentaires (non affichées).`);
 if (errors.length) process.exitCode = 1;
