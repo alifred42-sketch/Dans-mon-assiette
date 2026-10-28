@@ -459,7 +459,7 @@ const rawValidatedRecipeIds = new Set<string>(
 
 export type PlanningPreferences = {
   etudiant?: boolean; vegetarien?: boolean; isVegetarian?: boolean; vegan?: boolean; isVegan?: boolean; halal?: boolean;
-  sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean; placardVide?: boolean;
+  sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean; placardVide?: boolean; householdServings?: number;
 };
 
 /** Le profil vegan n'accepte que les fiches explicitement étiquetées vegan
@@ -733,7 +733,9 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     .filter((recipe) => !reserved.has(recipe.id) && recipe.id !== pivot?.id && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
     .filter((recipe) => (plantProfile ? plantPattern : meatPattern).test(roleText(recipe)))
     .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || (preferences.placardVide ? pantryIngredientRatio(b) - pantryIngredientRatio(a) : budgetWeek ? budgetRecipeScore(b) - budgetRecipeScore(a) : 0) || a.name.localeCompare(b.name, "fr"));
-  const transformedPivot = thursdayOverride || transformedCandidates[(Math.max(1, week) - 1) % Math.max(1, transformedCandidates.length)] || fallbackTransformations[0];
+  const transformedPivot = thursdayOverride || (preferences.householdServings != null && preferences.householdServings >= 4
+    ? chooseRole(plantProfile ? plantPattern : meatPattern, reserved)
+    : transformedCandidates[(Math.max(1, week) - 1) % Math.max(1, transformedCandidates.length)] || fallbackTransformations[0]);
   if (transformedPivot) reserved.add(transformedPivot.id);
 
   const pleasurePool = eligible
