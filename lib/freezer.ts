@@ -52,12 +52,18 @@ export function getFreezerPlan(week: number, manualOverrides: Record<string, str
   const slotKeys: string[] = [];
   const scheduled: VirtualFrozenMeal[] = [];
   const usedSlots = new Set<string>();
-  const due = items.filter((item) => item.status === "stored" && item.availableWeek === week);
+  const due = items.filter((item) =>
+    (item.status === "stored" && item.availableWeek === week) ||
+    (item.status === "scheduled" && item.scheduledWeek === week)
+  );
   for (const item of due) {
-    const day = DINNER_SLOTS.find((candidate) => {
-      const key = week + "|" + candidate + "|Soir";
-      return !overrides[key] && !usedSlots.has(key);
-    });
+    const savedDay = item.status === "scheduled" ? item.scheduledDay : undefined;
+    const day = savedDay && DINNER_SLOTS.includes(savedDay) && !overrides[week + "|" + savedDay + "|Soir"]
+      ? savedDay
+      : DINNER_SLOTS.find((candidate) => {
+          const key = week + "|" + candidate + "|Soir";
+          return !overrides[key] && !usedSlots.has(key);
+        });
     if (!day) continue;
     const key = week + "|" + day + "|Soir";
     overrides[key] = item.recipeId;
