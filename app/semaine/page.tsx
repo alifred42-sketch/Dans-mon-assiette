@@ -37,16 +37,22 @@ export default function WeekPage() {
   useEffect(() => {
     const refresh = () => {
       try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); }
-      try { setPreferences(JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}")); } catch { setPreferences({}); }
+      try {
+        const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
+        const householdServings = Number(localStorage.getItem("assiette-household-servings") || "4");
+        setPreferences({ ...saved, householdServings: Number.isFinite(householdServings) ? householdServings : 4 });
+      } catch { setPreferences({}); }
     };
     refresh();
     window.addEventListener("storage", refresh);
     window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
     window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
+    window.addEventListener("assiette-servings-change", refresh);
     return () => {
       window.removeEventListener("storage", refresh);
       window.removeEventListener("cuisine-chic-ouf-plan-change", refresh);
       window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh);
+      window.removeEventListener("assiette-servings-change", refresh);
     };
   }, []);
 
