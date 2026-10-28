@@ -32,6 +32,7 @@ export default function CoursesPage() {
   const [servingsByRecipe, setServingsByRecipe] = useState<Record<string, number>>({});
   const [recipeOverrides, setRecipeOverrides] = useState<Record<string, string>>({});
   const [preferences, setPreferences] = useState<PlanningPreferences>({});
+  const [extraCourseItems, setExtraCourseItems] = useState<string[]>([]);
   const [openDay, setOpenDay] = useState<string>("");
   useEffect(() => {
     const refreshCurrentWeek = () => {
@@ -66,11 +67,28 @@ export default function CoursesPage() {
     };
   }, []);
 
+  useEffect(() => {
+    const refreshExtras = () => {
+      try {
+        const saved = JSON.parse(localStorage.getItem("assiette-courses-extra-" + week) || "[]");
+        setExtraCourseItems(Array.isArray(saved) ? saved.filter((item) => typeof item === "string") : []);
+      } catch { setExtraCourseItems([]); }
+    };
+    refreshExtras();
+    window.addEventListener("storage", refreshExtras);
+    window.addEventListener("cuisine-chic-ouf-courses-extra-change", refreshExtras);
+    return () => {
+      window.removeEventListener("storage", refreshExtras);
+      window.removeEventListener("cuisine-chic-ouf-courses-extra-change", refreshExtras);
+    };
+  }, [week]);
+
   // Le calcul central du panier reste inchangé : mêmes données, quantités et regroupements.
   const nonIngredientPattern = /(?:verifier la cuisson|arroser du jus|servir immediatement|cuire au four|prechauffer le four|assaisonner le poisson|repartir les legumes|fruits de mer doivent|pour personnes|une recette ideale pour)/i;
   const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences)
     .filter((item) => !nonIngredientPattern.test(item.label.normalize("NFD").replace(/[\u0300-\u036f]/g, "")))
-    .map((item) => ({ id: `${item.aisle}|${item.label}`, title: adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(item.label, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose)), Boolean(preferences.sansFruitsCoque)), group: item.aisle }));
+    .map((item) => ({ id: `${item.aisle}|${item.label}`, title: adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(item.label, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose)), Boolean(preferences.sansFruitsCoque)), group: item.aisle }))
+    .concat(extraCourseItems.map((item) => ({ id: "frigo|" + item, title: item, group: "Ajouts du Frigo Magique" })));
 
   const slots = weekPlan(week, recipeOverrides, preferences);
   const daySlots = DAYS.filter((day) => day !== "LUNDI").map((day) => ({
