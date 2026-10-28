@@ -39,6 +39,11 @@ export type RecipeListItem = {
   id: string;
   name: string;
   lines?: string[];
+  timeCook?: string;
+  ovenTemperature?: number | null;
+  airfryer_compatible?: boolean;
+  airfryer_temps?: number | null;
+  airfryer_temperature?: number | null;
 };
 
 export function RecipeList({
@@ -54,7 +59,24 @@ export function RecipeList({
 }) {
   const [q, setQ] = useState("");
   const [favorites, setFavorites] = useState<string[]>([]);
-  useEffect(() => { try { setFavorites(JSON.parse(localStorage.getItem("cuisine-chic-ouf-favorites") || "[]")); } catch { setFavorites([]); } }, []);
+  const [hasAirfryer, setHasAirfryer] = useState(false);
+  useEffect(() => {
+    try {
+      setFavorites(JSON.parse(localStorage.getItem("cuisine-chic-ouf-favorites") || "[]"));
+      const prefs = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
+      setHasAirfryer(Boolean(prefs.airfryer));
+    } catch { setFavorites([]); setHasAirfryer(false); }
+    const refreshPrefs = () => {
+      try { setHasAirfryer(Boolean(JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}").airfryer)); }
+      catch { setHasAirfryer(false); }
+    };
+    window.addEventListener("storage", refreshPrefs);
+    window.addEventListener("cuisine-chic-ouf-preferences-change", refreshPrefs);
+    return () => {
+      window.removeEventListener("storage", refreshPrefs);
+      window.removeEventListener("cuisine-chic-ouf-preferences-change", refreshPrefs);
+    };
+  }, []);
   function toggleFavorite(id: string) { const next = favorites.includes(id) ? favorites.filter(value => value !== id) : [...favorites, id]; setFavorites(next); try { localStorage.setItem("cuisine-chic-ouf-favorites", JSON.stringify(next)); window.dispatchEvent(new Event("cuisine-chic-ouf-favorites-change")); } catch {} }
   const query = q.trim();
   const filtered = useMemo(() => {
@@ -148,6 +170,14 @@ export function RecipeList({
               <li key={`${item.id}-${query}`} className="flex items-start gap-2 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
                 <Link href={week ? `/fiche/${item.id}?w=${week}` : `/fiche/${item.id}`} className="min-w-0 flex-1 rounded-xl px-1 py-1">
                   <p className="text-base leading-snug">{item.name}</p>
+                  {item.timeCook && item.ovenTemperature ? (
+                    <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                      <span className="rounded-full border border-[#D8D8D0] bg-white/70 px-2.5 py-1 font-semibold text-[#4D4D48]">🔥 Four : {item.timeCook} à {item.ovenTemperature}°C</span>
+                      {item.airfryer_compatible && item.airfryer_temps != null && item.airfryer_temperature != null ? (
+                        <span className={`rounded-full border px-2.5 py-1 font-bold ${hasAirfryer ? "border-[#E69A4A] bg-[#FFF0D9] text-[#7A3E08] ring-2 ring-[#F2C078]/50" : "border-[#E7E5DE] bg-[#F9F9F7] text-[#4D4D48]"}`}>🍟 Airfryer : {item.airfryer_temps} min à {item.airfryer_temperature}°C</span>
+                      ) : null}
+                    </div>
+                  ) : null}
                   {hits.length > 0 ? <ul className="mt-2 space-y-1 text-sm text-muted-foreground">{hits.slice(0, 8).map((line, index) => <li key={`${item.id}-hit-${index}`}>• {line}</li>)}</ul> : null}
                 </Link>
                 <button type="button" aria-label={favorites.includes(item.id) ? "Retirer des favoris" : "Ajouter aux favoris"} aria-pressed={favorites.includes(item.id)} onClick={() => toggleFavorite(item.id)} className={`flex size-10 shrink-0 items-center justify-center rounded-xl transition ${favorites.includes(item.id) ? "bg-[#F4C542]/25 text-[#B18B00]" : "bg-[#F9F9F7] text-[#777773]"}`}><Heart className="size-5" fill={favorites.includes(item.id) ? "currentColor" : "none"} /></button>
