@@ -12,7 +12,7 @@ export type VirtualFrozenMeal = {
 };
 
 const STORAGE_KEY = "cuisine-chic-ouf-virtual-freezer";
-const DINNER_SLOTS = ["MARDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"];
+const DINNER_SLOTS = ["VENDREDI", "SAMEDI", "DIMANCHE", "LUNDI", "JEUDI", "MARDI"];
 
 export function readVirtualFreezer(): VirtualFrozenMeal[] {
   if (typeof window === "undefined") return [];
