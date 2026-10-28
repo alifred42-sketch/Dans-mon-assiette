@@ -6,7 +6,7 @@ import { BASE_PATH } from "@/lib/base-path";
 export function RegisterSW() {
   useEffect(() => {
     if (!("serviceWorker" in navigator)) return;
-    const sw = `${BASE_PATH}/sw.js?v=15`;
+    const sw = `${BASE_PATH}/sw.js?v=16`;
     const scope = `${BASE_PATH}/`;
     const register = () => {
       navigator.serviceWorker.register(sw, { scope }).catch(() => {
