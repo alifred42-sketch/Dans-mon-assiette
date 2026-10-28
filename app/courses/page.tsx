@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Apple, Carrot, ChevronDown, ChevronLeft, ChevronRight, Fish, ShoppingCart, Container } from "lucide-react";
 import { clampWeek, currentIsoWeek, getRecipe, shoppingForWeek, weekPlan, DAYS, DAY_LABEL, type PlanningPreferences } from "@/lib/carnet";
 import { CheckList } from "@/components/check-list";
@@ -98,19 +98,19 @@ export default function CoursesPage() {
 
   // Le calcul central du panier reste inchangé : mêmes données, quantités et regroupements.
   const nonIngredientPattern = /(?:verifier la cuisson|arroser du jus|servir immediatement|cuire au four|prechauffer le four|assaisonner le poisson|repartir les legumes|fruits de mer doivent|pour personnes|une recette ideale pour)/i;
-  const items = shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences, freezerSlotKeys)
+  const items = useMemo(() => shoppingForWeek(week, servingsByRecipe, recipeOverrides, preferences, freezerSlotKeys)
     .filter((item) => !nonIngredientPattern.test(item.label.normalize("NFD").replace(/[\u0300-\u036f]/g, "")))
     .map((item) => ({ id: `${item.aisle}|${item.label}`, title: adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(item.label, Boolean(preferences.sansGluten)), Boolean(preferences.sansLactose)), Boolean(preferences.sansFruitsCoque)), group: item.aisle }))
-    .concat(extraCourseItems.map((item) => ({ id: "frigo|" + item, title: item, group: "Ajouts du Frigo Magique" })));
+    .concat(extraCourseItems.map((item) => ({ id: "frigo|" + item, title: item, group: "Ajouts du Frigo Magique" }))), [week, servingsByRecipe, recipeOverrides, preferences, freezerSlotKeys, extraCourseItems]);
 
-  const slots = weekPlan(week, recipeOverrides, preferences);
-  const daySlots = DAYS.filter((day) => day !== "LUNDI").map((day) => ({
+  const slots = useMemo(() => weekPlan(week, recipeOverrides, preferences), [week, recipeOverrides, preferences]);
+  const daySlots = useMemo(() => DAYS.filter((day) => day !== "LUNDI").map((day) => ({
     day,
     meals: slots.filter((slot) => slot.day === day && slot.recipeId).map((slot) => {
       const recipe = getRecipe(slot.recipeId);
       return { meal: slot.meal, name: slot.name, ingredients: recipe?.ingredients || [] };
     }),
-  }));
+  })), [slots]);
 
   return (
     <main className="min-h-dvh bg-transparent px-4 pb-28 pt-5 text-[#2B2B2B] sm:px-6">
