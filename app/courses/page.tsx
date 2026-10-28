@@ -59,7 +59,11 @@ export default function CoursesPage() {
         setRecipeOverrides(freezerPlan.overrides);
         setFreezerSlotKeys(freezerPlan.slotKeys);
       } catch { setRecipeOverrides({}); setFreezerSlotKeys([]); }
-      try { setPreferences(JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}")); } catch { setPreferences({}); }
+      try {
+        const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
+        const householdServings = Number(localStorage.getItem("assiette-household-servings") || "4");
+        setPreferences({ ...saved, householdServings: Number.isFinite(householdServings) ? householdServings : 4 });
+      } catch { setPreferences({}); }
     };
     refresh();
     window.addEventListener("storage", refresh);
