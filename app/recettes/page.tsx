@@ -143,6 +143,7 @@ export default function RecettesPage() {
     name: recipe.name,
     lines: recipeLines(recipe),
     timeCook: recipe.timeCook,
+    ovenTime: recipe.ovenTime,
     ovenTemperature: ovenTemperature(recipe),
     airfryer_compatible: recipe.airfryer_compatible,
     airfryer_temps: recipe.airfryer_temps,
