@@ -259,11 +259,34 @@ export function getRecipe(id: string | null | undefined): Recipe | undefined {
 
 export type Season = "hiver" | "printemps" | "ete" | "automne";
 
+/**
+ * Associe chaque numéro de semaine à son mois via le jeudi de la semaine ISO.
+ * 2026 sert d'année de référence fixe pour que les 52 semaines du carnet ne
+ * changent pas de saison selon l'année où l'application est ouverte.
+ */
+export function monthForWeek(week: number): number {
+  const safeWeek = Math.min(52, Math.max(1, Math.round(week)));
+  const jan4 = new Date(Date.UTC(2026, 0, 4));
+  const weekday = jan4.getUTCDay() || 7;
+  const monday = new Date(jan4);
+  monday.setUTCDate(jan4.getUTCDate() - weekday + 1 + (safeWeek - 1) * 7);
+  const thursday = new Date(monday);
+  thursday.setUTCDate(monday.getUTCDate() + 3);
+  return thursday.getUTCMonth() + 1;
+}
+
+export function monthLabelForWeek(week: number): string {
+  const date = new Date(Date.UTC(2026, monthForWeek(week) - 1, 15));
+  return date.toLocaleDateString("fr-FR", { month: "long", timeZone: "UTC" });
+}
+
 export function seasonForWeek(week: number): Season {
-  // Repères hebdomadaires adaptés au calendrier des saisons en France métropolitaine.
-  if (week <= 11 || week >= 50) return "hiver";
-  if (week <= 24) return "printemps";
-  if (week <= 37) return "ete";
+  // Saison calculée depuis le mois de la semaine ISO, selon les repères de
+  // disponibilité des produits en France métropolitaine.
+  const month = monthForWeek(week);
+  if ([12, 1, 2].includes(month)) return "hiver";
+  if ([3, 4, 5].includes(month)) return "printemps";
+  if ([6, 7, 8].includes(month)) return "ete";
   return "automne";
 }
 
@@ -393,10 +416,10 @@ function isSeasonCompatible(recipe: Recipe, season: Season): boolean {
   // Exclusions prudentes sur les produits explicitement nommés dans la fiche.
   // On ne bloque pas les recettes qui parlent simplement de « légumes de saison ».
   const outOfSeason: Record<Season, RegExp> = {
-    hiver: /\b(?:courgettes?|aubergines?|poivrons?|concombres?|melons?|pasteques?|peches?|nectarines?|abricots?|fraises?|framboises?|groseilles?|tomates fraiches?)\b/i,
-    printemps: /\b(?:melons?|pasteques?|potimarrons?|courges? butternut|chataignes?|choux de bruxelles|clementines?|mandarines?)\b/i,
-    ete: /\b(?:potimarrons?|courges? butternut|chataignes?|choux de bruxelles|clementines?|mandarines?)\b/i,
-    automne: /\b(?:melons?|pasteques?|fraises?|framboises?|groseilles?|courgettes?|aubergines?)\b/i,
+    hiver: /\b(?:courgettes?|aubergines?|poivrons?|concombres?|haricots verts?|melons?|pasteques?|peches?|nectarines?|abricots?|fraises?|framboises?|groseilles?|tomates fraiches?|asperges?)\b/i,
+    printemps: /\b(?:melons?|pasteques?|potimarrons?|courges? butternut|chataignes?|choux de bruxelles|clementines?|mandarines?|abricots?|peches?|nectarines?)\b/i,
+    ete: /\b(?:potimarrons?|courges? butternut|chataignes?|choux de bruxelles|clementines?|mandarines?|endives?|panais?)\b/i,
+    automne: /\b(?:melons?|pasteques?|fraises?|framboises?|groseilles?|courgettes?|aubergines?|poivrons?|concombres?|haricots verts?|peches?|nectarines?|abricots?)\b/i,
   };
   if (outOfSeason[season].test(text)) return false;
   return true;
