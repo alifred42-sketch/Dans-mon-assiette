@@ -703,7 +703,18 @@ function enforceDinnerCategoryCooldown(
         (day !== "JEUDI" || !daughterPivotRecipe || sharesPivotIngredient(candidate, daughterPivotRecipe)) &&
         fitsWeeklyPillarCaps(candidate, selectedDinners)
       ).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
-      const replacement = candidates[(Math.max(1, week + days.indexOf(day)) - 1) % Math.max(1, candidates.length)];
+      // Si les rôles réservés bloquent toutes les options, réutiliser une recette non
+      // déjà présente dans un autre créneau plutôt que laisser passer une répétition ou
+      // dépasser les plafonds de piliers. Le filtre des créneaux utilisés reste prioritaire.
+      const fallbackCandidates = candidates.length ? candidates : eligible.filter((candidate) =>
+        !alreadyUsed.has(candidate.id) && candidate.id !== current.recipeId &&
+        isMainDishCandidate(candidate) && isValidatedRecipe(candidate) &&
+        eligibleForPreferences(candidate, preferences) && isSeasonCompatible(candidate, season, monthForWeek(week)) &&
+        !recentCategories.includes(mainDishCategory(candidate)) &&
+        (day !== "JEUDI" || !daughterPivotRecipe || sharesPivotIngredient(candidate, daughterPivotRecipe)) &&
+        fitsWeeklyPillarCaps(candidate, selectedDinners)
+      ).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+      const replacement = fallbackCandidates[(Math.max(1, week + days.indexOf(day)) - 1) % Math.max(1, fallbackCandidates.length)];
       if (replacement) {
         result[index] = { ...current, recipeId: replacement.id, name: replacement.name };
         recentCategories.push(mainDishCategory(replacement));
