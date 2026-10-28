@@ -125,7 +125,8 @@ export default function BatchPage() {
       } catch { setRecipeOverrides({}); }
       try {
         const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
-        setPreferences(saved);
+        const householdServings = Number(localStorage.getItem("assiette-household-servings") || "4");
+        setPreferences({ ...saved, householdServings: Number.isFinite(householdServings) ? householdServings : 4 });
         setRobotPriority(Boolean(saved.robot));
       } catch { setPreferences({}); setRobotPriority(false); }
       try { setHouseholdServings(Math.max(1, Math.min(20, Number(localStorage.getItem("assiette-household-servings") || "4")))); } catch { setHouseholdServings(4); }
