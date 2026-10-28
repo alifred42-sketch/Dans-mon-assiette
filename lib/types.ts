@@ -15,6 +15,9 @@ export type Recipe = {
   source: string;
   timePrep?: string;
   timeCook?: string;
+  /** Paramètres de cuisson au four lorsqu'ils sont explicitement fournis dans la fiche. */
+  ovenTemperature?: number | null;
+  ovenTime?: string;
   servings?: string;
   image?: string;
   imageAlt?: string;
