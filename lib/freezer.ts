@@ -71,7 +71,8 @@ export function getFreezerPlan(week: number, manualOverrides: Record<string, str
     slotKeys.push(key);
     scheduled.push({ ...item, status: "scheduled", scheduledWeek: week, scheduledDay: day, scheduledMeal: "Soir" });
   }
-  if (scheduled.length) {
+  const newlyScheduled = scheduled.some((item) => items.find((saved) => saved.id === item.id)?.status === "stored");
+  if (newlyScheduled) {
     const scheduledById = new Map(scheduled.map((item) => [item.id, item]));
     writeVirtualFreezer(items.map((item) => scheduledById.get(item.id) || item));
   }
