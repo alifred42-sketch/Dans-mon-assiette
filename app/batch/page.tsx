@@ -12,6 +12,7 @@ import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type Plan
 import { WeekPicker } from "@/components/week-picker";
 import { Beef, Blender, Carrot, CookingPot, Container, Flame, Refrigerator, Utensils, Wheat, ShoppingCart, ChevronLeft, ChevronRight, ChefHat } from "lucide-react";
 import { BASE_PATH } from "@/lib/base-path";
+import { getFreezerPlan, readVirtualFreezer, saveFrozenMeal, markFrozenMealUsed, rescheduleFrozenMeal, type VirtualFrozenMeal } from "@/lib/freezer";
 
 type Task = { id: string; title: string; detail?: string; timer?: string; timerMinutes?: number; group?: string };
 function minutes(value?: string): number {
@@ -99,6 +100,8 @@ export default function BatchPage() {
   const [voiceStatus, setVoiceStatus] = useState("");
   const [voiceIndex, setVoiceIndex] = useState(0);
   const [activeTimers, setActiveTimers] = useState<Record<string, number>>({});
+  const [householdServings, setHouseholdServings] = useState(4);
+  const [freezerItems, setFreezerItems] = useState<VirtualFrozenMeal[]>([]);
 
   useEffect(() => {
     const refreshCurrentWeek = () => {
@@ -116,7 +119,10 @@ export default function BatchPage() {
   }, [search]);
   useEffect(() => {
     const refresh = () => {
-      try { setRecipeOverrides(JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}")); } catch { setRecipeOverrides({}); }
+      try {
+        const savedOverrides = JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}");
+        setRecipeOverrides(getFreezerPlan(week, savedOverrides).overrides);
+      } catch { setRecipeOverrides({}); }
       try {
         const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
         setPreferences(saved); setRobotPriority(Boolean(saved.robot));
