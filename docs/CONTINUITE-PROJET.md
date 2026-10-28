@@ -13,15 +13,16 @@
 - Profil Airfryer enregistré dans les préférences locales de l’appareil ; mise en valeur des données Airfryer sur les cartes lorsqu’elles sont disponibles. Pas de serveur de comptes/DB actuellement, donc pas de synchronisation inter-appareils.
 - Frigo Magique : ingrédients en stock, restes probables dérivés des cases non cochées de la semaine précédente, matching des recettes avec jusqu’à deux ingrédients manquants, ajout de ces ingrédients aux courses.
 - Migration additive Airfryer : `scripts/migrate-airfryer.mjs`, commande `npm run migrate:airfryer` (simulation) et `npm run migrate:airfryer -- --write` (écriture locale). Les durées/températures non trouvées restent nulles et doivent être vérifiées ; ne pas inventer de données.
-- Planification : filtres de profil, exclusions de desserts/snacks, règles saisonnières, transformation d’un ingrédient pivot, cooldown de catégories de dîner et plafonds de piliers dans `lib/carnet.ts`.
+- Planification : filtres de profil, exclusions de desserts/snacks, règles saisonnières, transformation d’un ingrédient pivot, cooldown de catégories de dîner et plafonds de piliers dans `lib/carnet.ts`. Un audit heuristique en lecture seule a été ajouté : `npm run audit:weekly-plan` (`scripts/audit-weekly-plan.mjs`). Il signale la structure des 52 semaines, les desserts/snacks en plats principaux, les catégories répétées, les produits possiblement hors saison, les piliers et les transformations mère/fille à revoir.
 - Listes de courses et calculs batch s’appuient sur le planning partagé ; vérifier tout changement de sélection pour éviter les lignes obsolètes.
 
-## Modification enregistrée dans cette vague
+## Modifications enregistrées dans cette vague
 - `app/batch/page.tsx` : le batch cooking parcourt désormais tous les dîners de la semaine, déduplique les recettes identiques et ne recuisine pas les déjeuners issus des restes. Le détail des tâches est construit depuis les fiches de ces dîners.
+- `scripts/audit-weekly-plan.mjs` et `package.json` : ajout de `npm run audit:weekly-plan`. L’audit est volontairement en lecture seule et présente les résultats comme des alertes heuristiques, pas comme des verdicts culinaires. Il doit être exécuté et ses alertes triées avant de modifier les 52 semaines.
 
 ## À poursuivre, dans cet ordre
 1. Vérifier le déploiement de cette vague et tester visuellement le batch cooking et le mode mains libres.
-2. Auditer les 52 semaines avec une validation automatisée : repas principaux uniquement, saisonnalité, catégorie répétée, piliers, cohérence mère/fille, profils et semaine « placard vide ».
+2. Exécuter `npm run audit:weekly-plan`, examiner les alertes et séparer les vrais défauts des faux positifs avant correction.
 3. Améliorer le matching mère/fille et le calcul des courses à partir des quantités normalisées, sans ajouter deux fois un ingrédient déjà fourni par une recette liée.
 4. Vérifier les données Airfryer sur les fichiers de recettes source et exécuter la migration uniquement après audit/diff, puis sauvegarder les changements sur cette branche.
 5. Continuer l’audit culinaire fiche par fiche ; ne jamais présenter une heuristique automatique comme une validation culinaire complète.
