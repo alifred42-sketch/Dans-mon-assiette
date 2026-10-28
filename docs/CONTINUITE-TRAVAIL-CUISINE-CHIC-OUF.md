@@ -23,7 +23,7 @@
 - L'application actuelle est publiée sur GitHub Pages sans backend de comptes connecté : les préférences sont locales à l'appareil, pas synchronisées en base de données. Ne pas présenter localStorage comme une base distante.
 
 ## Prochaines étapes dans l'ordre
-1. Vérifier le résultat du premier passage automatique Airfryer (volume de recettes modifiées, recettes à revoir et diff des JSON), sans supprimer de données d'origine.
+1. Auditer le résultat de la migration Airfryer (recettes modifiées et données à revoir), sans supprimer de données d'origine.
 2. Auditer et corriger les 52 semaines : aucun dessert/snack en plat principal, diversité sur 48 h en tenant compte des restes, saisonnalité française par mois.
 3. Optimiser mères/filles, listes de courses, batch, piliers (3 légumes/2 féculents/2 protéines), taille du foyer, semaine économique, placard vide et congélateur virtuel.
 4. Harmoniser les commandes mains libres entre batch et fiches, sans casser les minuteries et la navigation.
