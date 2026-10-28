@@ -27,6 +27,13 @@
 4. Vérifier les données Airfryer sur les fichiers de recettes source et exécuter la migration uniquement après audit/diff, puis sauvegarder les changements sur cette branche.
 5. Continuer l’audit culinaire fiche par fiche ; ne jamais présenter une heuristique automatique comme une validation culinaire complète.
 
+## Mise à jour du 28 octobre 2026
+- `lib/carnet.ts` : la diversité des dîners prend désormais en compte les deux dîners précédents, afin d’inclure le déjeuner de restes dans la fenêtre de 48 h ; la frontière samedi/dimanche vers lundi est aussi prise en compte.
+- `lib/carnet.ts` : la compatibilité saisonnière utilise des fenêtres mensuelles indicatives pour plusieurs fruits et légumes frais. Les conserves, coulis et surgelés sont exemptés de ces règles de produits frais.
+- `components/recipe-list.tsx` et `app/recettes/page.tsx` : les cartes transmettent la durée de four déclarée et affichent Four et Airfryer côte à côte lorsque les paramètres disponibles le permettent ; l’option Airfryer activée est mise en évidence.
+- `scripts/audit-weekly-plan.mjs` : l’audit signale maintenant les catégories répétées dans la fenêtre des deux derniers dîners, en tenant compte du passage d’une semaine à l’autre.
+- Ces changements ont été enregistrés sur `travail-cuisine-chic-ouf-design`. La compilation et le déploiement doivent encore être confirmés par le workflow de cette vague avant de déclarer l’ensemble validé.
+
 ## Règles de conservation
 - Ne supprimer aucune fonctionnalité existante sans demande explicite.
 - Ne remplacer aucun fichier de données complet sans audit préalable et comparaison des changements.
