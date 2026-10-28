@@ -633,10 +633,13 @@ function enforceDinnerCategoryCooldown(
   week: number,
   preferences: PlanningPreferences,
   season: Season,
+  previousDinnerCategory = "",
 ): PlanSlot[] {
   const days = ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"];
   const result = [...slots];
-  let previousCategory = "";
+  // Le dernier dîner de la semaine précédente compte aussi : le lundi soir ne doit
+  // pas répéter la catégorie du dimanche, même si la semaine est générée séparément.
+  let previousCategory = previousDinnerCategory;
   const selectedDinners: Recipe[] = [];
   for (const day of days) {
     const index = result.findIndex((slot) => slot.day === day && slot.meal === "Soir");
@@ -674,7 +677,13 @@ function enforceDinnerCategoryCooldown(
   return result;
 }
 
-export function weekPlan(week: number, overrides: Record<string, string> = {}, preferences: PlanningPreferences = {}, applyLeftovers = true): PlanSlot[] {
+export function weekPlan(
+  week: number,
+  overrides: Record<string, string> = {},
+  preferences: PlanningPreferences = {},
+  applyLeftovers = true,
+  applyBoundaryCooldown = true,
+): PlanSlot[] {
   const slots = carnet.plan.filter((p) => p.week === week).map((slot) => {
     const id = overrides[`${slot.week}|${slot.day}|${slot.meal}`];
     const recipe = id ? recipesById.get(id) : undefined;
@@ -838,13 +847,21 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     used.add(replacement.id);
     return { ...slot, name: replacement.name, recipeId: replacement.id };
   });
-  const safeResult = enforceDinnerCategoryCooldown(result, eligible, reserved, week, preferences, season);
+  let previousDinnerCategory = "";
+  if (applyBoundaryCooldown) {
+    // Générer la semaine précédente sans recalcul récursif de sa propre frontière.
+    const previousWeek = week === 1 ? 52 : week - 1;
+    const previousPlanForBoundary = weekPlan(previousWeek, overrides, preferences, false, false);
+    const previousSundayDinner = previousPlanForBoundary.find((slot) => slot.day === "DIMANCHE" && slot.meal === "Soir");
+    previousDinnerCategory = mainDishCategory(getRecipe(previousSundayDinner?.recipeId));
+  }
+  const safeResult = enforceDinnerCategoryCooldown(result, eligible, reserved, week, preferences, season, previousDinnerCategory);
   if (!applyLeftovers) return safeResult;
 
   // Tous les déjeuners reprennent le dîner de la veille. Une substitution explicite
   // faite par l'utilisateur au déjeuner reste prioritaire.
   const previousWeek = week === 1 ? 52 : week - 1;
-  const previousPlan = weekPlan(previousWeek, overrides, preferences, false);
+  const previousPlan = weekPlan(previousWeek, overrides, preferences, false, false);
   const previousDay: Record<string, string> = {
     MARDI: "LUNDI",
     MERCREDI: "MARDI",
