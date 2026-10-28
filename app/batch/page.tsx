@@ -156,20 +156,22 @@ export default function BatchPage() {
     if (ready) { try { localStorage.setItem(storageKey, JSON.stringify(checked)); } catch { /* storage indisponible */ } }
   }, [checked, ready, storageKey]);
 
-  const plan = weekPlan(week, recipeOverrides, preferences);
+  const plan = useMemo(() => weekPlan(week, recipeOverrides, preferences), [week, recipeOverrides, preferences]);
   // Le batch cooking couvre maintenant tous les dîners planifiés de la semaine,
   // et pas seulement le pivot du mardi et la soupe du mercredi. Les déjeuners
   // issus des restes ne sont pas recuisinés. Une même recette n’est préparée qu’une fois.
-  const baseSlots = plan.filter((slot) => slot.meal === "Soir");
-  const seenBatchRecipes = new Set<string>();
-  const recipes = baseSlots.map((slot) => {
-    const source = getRecipe(slot.recipeId);
-    return { slot, recipe: source ? displayRecipe(source) : undefined };
-  }).filter((entry) => {
-    if (!entry.recipe || seenBatchRecipes.has(entry.recipe.id)) return false;
-    seenBatchRecipes.add(entry.recipe.id);
-    return true;
-  });
+  const recipes = useMemo(() => {
+    const baseSlots = plan.filter((slot) => slot.meal === "Soir");
+    const seenBatchRecipes = new Set<string>();
+    return baseSlots.map((slot) => {
+      const source = getRecipe(slot.recipeId);
+      return { slot, recipe: source ? displayRecipe(source) : undefined };
+    }).filter((entry) => {
+      if (!entry.recipe || seenBatchRecipes.has(entry.recipe.id)) return false;
+      seenBatchRecipes.add(entry.recipe.id);
+      return true;
+    });
+  }, [plan]);
   const existingItems = batchForWeek(week, recipeOverrides, preferences).filter((item) => /protéine pivot|proteine pivot|féculent|feculent|soupe de saison|base soupe|base de saison/i.test(`${item.title} ${item.group || ""}`));
   const existingTask = (item: { id: string; title: string; detail?: string; group?: string; target?: string }): Task => ({
     id: `carnet-${item.id}`, title: item.title,
