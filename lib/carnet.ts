@@ -547,6 +547,22 @@ function mainDishCategory(recipe: Recipe | undefined): string {
   return "plat";
 }
 
+function recipePillars(recipe: Recipe): { vegetables: Set<string>; starches: Set<string>; proteins: Set<string> } {
+  const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
+  const collect = (tokens: string[]) => new Set(tokens.filter((token) => text.includes(token)));
+  return {
+    vegetables: collect(["courgette", "carotte", "tomate", "poivron", "poireau", "brocoli", "chou", "epinard", "aubergine", "courge", "potimarron", "champignon", "concombre", "haricot vert", "artichaut", "asperge", "navet", "panais", "fenouil", "endive", "betterave", "radis", "salade", "blette", "celeri"]),
+    starches: collect(["pates", "spaghetti", "lasagne", "riz", "pomme de terre", "patate douce", "quinoa", "semoule", "couscous", "boulgour", "polenta", "pain", "tortilla", "nouilles", "orge"]),
+    proteins: collect(["poulet", "dinde", "boeuf", "veau", "porc", "agneau", "canard", "saumon", "cabillaud", "thon", "maquereau", "colin", "poisson", "crevette", "sardine", "oeuf", "lentille", "pois chiche", "haricot rouge", "tofu", "tempeh"]),
+  };
+}
+
+function fitsWeeklyPillarCaps(candidate: Recipe, selected: Recipe[]): boolean {
+  const combined = [...selected, candidate].map(recipePillars);
+  const count = (key: "vegetables" | "starches" | "proteins") => new Set(combined.flatMap((entry) => [...entry[key]])).size;
+  return count("vegetables") <= 3 && count("starches") <= 2 && count("proteins") <= 2;
+}
+
 function enforceDinnerCategoryCooldown(
   slots: PlanSlot[],
   eligible: Recipe[],
