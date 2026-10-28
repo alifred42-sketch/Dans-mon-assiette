@@ -265,8 +265,11 @@ export type Season = "hiver" | "printemps" | "ete" | "automne";
  * changent pas de saison selon l'année où l'application est ouverte.
  */
 export function monthForWeek(week: number): number {
+  // Les semaines sont rattachées à l'année civile courante : pas de calendrier 2026 figé.
+  // Le jeudi détermine le mois de la semaine ISO, y compris lorsqu'elle chevauche deux mois.
   const safeWeek = Math.min(52, Math.max(1, Math.round(week)));
-  const jan4 = new Date(Date.UTC(2026, 0, 4));
+  const year = new Date().getFullYear();
+  const jan4 = new Date(Date.UTC(year, 0, 4));
   const weekday = jan4.getUTCDay() || 7;
   const monday = new Date(jan4);
   monday.setUTCDate(jan4.getUTCDate() - weekday + 1 + (safeWeek - 1) * 7);
@@ -276,7 +279,7 @@ export function monthForWeek(week: number): number {
 }
 
 export function monthLabelForWeek(week: number): string {
-  const date = new Date(Date.UTC(2026, monthForWeek(week) - 1, 15));
+  const date = new Date(Date.UTC(new Date().getFullYear(), monthForWeek(week) - 1, 15));
   return date.toLocaleDateString("fr-FR", { month: "long", timeZone: "UTC" });
 }
 
