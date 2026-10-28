@@ -28,6 +28,7 @@ import {
   Sparkles,
   Refrigerator,
   UserRound,
+  Heart,
   type LucideIcon,
 } from "lucide-react";
 
@@ -75,8 +76,8 @@ const preferenceCards: HomeCard[] = [
 
 // Ces raccourcis déjà présents sur l'accueil sont conservés.
 const extraCards: HomeCard[] = [
-  { label: "LE FRIGO MAGIQUE", href: "/frigo-magique", color: "#DCEBDD", iconColor: "#214E4B", Icon: Refrigerator, image: "https://images.unsplash.com/photo-1600490036275-35f5f1656861?auto=format&fit=crop&w=900&q=85&v=4" },
-  { label: "MON PROFIL", href: "/profil", color: "#DCEBDD", iconColor: "#214E4B", Icon: UserRound, image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85&v=4" },
+  { label: "LE FRIGO MAGIQUE", href: "/frigo-magique", color: "#DCEBDD", iconColor: "#214E4B", Icon: Refrigerator, image: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=900&q=85&v=5" },
+  { label: "MES FAVORIS", href: "/mes-recettes?tab=favoris", color: "#DCEBDD", iconColor: "#E32636", Icon: Heart, image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85&v=4" },
   { label: "BONUS", href: "/recettes?filter=bonus", color: "#4D7777", Icon: Sparkles, image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85&v=4" },
   { label: "MR CUISINE", href: "/recettes?filter=mr-cuisine", color: "#456B87", Icon: Bot, image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85&v=4" },
 ];
