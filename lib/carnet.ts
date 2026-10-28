@@ -521,6 +521,74 @@ function seasonalScore(recipe: Recipe, season: Season): number {
   return SEASON_TERMS[season].reduce((score, term) => score + (text.includes(normalizedSeasonText(term)) ? 1 : 0), 0);
 }
 
+function isMainDishCandidate(recipe: Recipe): boolean {
+  const name = normalizedSeasonText(recipe.name);
+  return !/(?:dessert|snack|truffes?|bonbons?|cookies?|biscuits? sucre|brownies?|mousse au chocolat|panna cotta|tiramisu|compote|granola|energy balls|boules d energie|barres energetiques|gaufres? sucrees|crepes sucrees|fondants? au chocolat|rochers coco|madeleines|financiers|muffins? sucrees?)/i.test(name);
+}
+
+function mainDishCategory(recipe: Recipe | undefined): string {
+  if (!recipe) return "inconnu";
+  const name = normalizedSeasonText(recipe.name);
+  if (/soupe|veloute|potage|bouillon/.test(name)) return "soupe";
+  if (/salade|taboule|crudite/.test(name)) return "salade";
+  if (/pates|spaghetti|lasagnes|ravioles|gnocchi|nouilles/.test(name)) return "pates";
+  if (/riz|risotto|paella/.test(name)) return "riz";
+  if (/pizza|flam/.test(name)) return "pizza";
+  if (/quiche|tarte salee|cake sale|frittata/.test(name)) return "quiche";
+  if (/wrap|tacos|quesadilla|burrito|fajitas/.test(name)) return "wrap-tacos";
+  if (/burger|croque|sandwich|hot.?dog/.test(name)) return "sandwich";
+  if (/gratin|hachis parmentier|crumble sale/.test(name)) return "gratin";
+  if (/chili|con carne/.test(name)) return "chili";
+  if (/curry|dahl|dal/.test(name)) return "curry";
+  if (/omelette|oeufs|oeuf/.test(name)) return "oeufs";
+  if (/poisson|saumon|cabillaud|thon|maquereau|colin|crevettes?|sardines?/.test(name)) return "poisson";
+  if (/poulet|dinde|boeuf|veau|porc|agneau|steak|saucisse|jambon/.test(name)) return "viande";
+  if (/poelee|legumes rotis|legumes farcis|ratatouille/.test(name)) return "legumes";
+  return "plat";
+}
+
+function enforceDinnerCategoryCooldown(
+  slots: PlanSlot[],
+  eligible: Recipe[],
+  reserved: Set<string>,
+  week: number,
+  preferences: PlanningPreferences,
+  season: string,
+): PlanSlot[] {
+  const days = ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"];
+  const result = [...slots];
+  let previousCategory = "";
+  for (const day of days) {
+    const index = result.findIndex((slot) => slot.day === day && slot.meal === "Soir");
+    if (index < 0) continue;
+    const current = result[index];
+    const recipe = current.recipeId ? recipesById.get(current.recipeId) : undefined;
+    const category = mainDishCategory(recipe);
+    const invalid = !recipe || !isMainDishCandidate(recipe);
+    const repeated = Boolean(previousCategory && category === previousCategory);
+    if (invalid || repeated) {
+      const alreadyUsed = new Set(result.filter((slot, slotIndex) => slotIndex !== index && slot.recipeId).map((slot) => slot.recipeId as string));
+      const candidates = eligible.filter((candidate) =>
+        !alreadyUsed.has(candidate.id) && !reserved.has(candidate.id) && candidate.id !== current.recipeId &&
+        isMainDishCandidate(candidate) && isValidatedRecipe(candidate) &&
+        eligibleForPreferences(candidate, preferences) && isSeasonCompatible(candidate, season) &&
+        (!previousCategory || mainDishCategory(candidate) !== previousCategory)
+      ).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+      const replacement = candidates[(Math.max(1, week + days.indexOf(day)) - 1) % Math.max(1, candidates.length)];
+      if (replacement) {
+        result[index] = { ...current, recipeId: replacement.id, name: replacement.name };
+        previousCategory = mainDishCategory(replacement);
+      } else {
+        if (invalid) result[index] = { ...current, recipeId: null, name: "Aucun plat principal complet validé pour ce créneau" };
+        previousCategory = invalid ? "inconnu" : category;
+      }
+    } else {
+      previousCategory = category;
+    }
+  }
+  return result;
+}
+
 export function weekPlan(week: number, overrides: Record<string, string> = {}, preferences: PlanningPreferences = {}, applyLeftovers = true): PlanSlot[] {
   const slots = carnet.plan.filter((p) => p.week === week).map((slot) => {
     const id = overrides[`${slot.week}|${slot.day}|${slot.meal}`];
@@ -531,7 +599,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const used = new Set<string>();
   const plannedRecipeIds = new Set(carnet.plan.map((slot) => slot.recipeId).filter(Boolean));
   const eligibleCandidates = carnet.recipes
-    .filter((recipe) => isValidatedRecipe(recipe) && eligibleForPreferences(recipe, preferences) && isSeasonCompatible(recipe, season))
+    .filter((recipe) => isValidatedRecipe(recipe) && isMainDishCandidate(recipe) && eligibleForPreferences(recipe, preferences) && isSeasonCompatible(recipe, season))
     .sort((a, b) => Number(plannedRecipeIds.has(b.id)) - Number(plannedRecipeIds.has(a.id)) || a.name.localeCompare(b.name, "fr"));
   // Exact duplicate cards from overlapping PDF imports must not get extra weight in weekly recipe selection.
   // The full cards remain available in their source collections; only the planning pool is deduplicated.
@@ -667,7 +735,8 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     used.add(replacement.id);
     return { ...slot, name: replacement.name, recipeId: replacement.id };
   });
-  if (!applyLeftovers) return result;
+  const safeResult = enforceDinnerCategoryCooldown(result, eligible, reserved, week, preferences, season);
+  if (!applyLeftovers) return safeResult;
 
   // Tous les déjeuners reprennent le dîner de la veille. Une substitution explicite
   // faite par l'utilisateur au déjeuner reste prioritaire.
@@ -690,7 +759,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
         return { ...slot, recipeId: switched.id, name: switched.name };
       }
     }
-    const sourcePlan = slot.day === "LUNDI" ? previousPlan : result;
+    const sourcePlan = slot.day === "LUNDI" ? previousPlan : safeResult;
     const dinnerDay = slot.day === "LUNDI" ? "DIMANCHE" : previousDay[slot.day];
     const dinner = sourcePlan.find((item) => item.day === dinnerDay && item.meal === "Soir");
     const recipe = getRecipe(dinner?.recipeId);
