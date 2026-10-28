@@ -59,7 +59,9 @@ export function RecipeList({
   homeStyleCollections?: boolean;
 }) {
   const [q, setQ] = useState("");
+  const [visibleCount, setVisibleCount] = useState(36);
   const [favorites, setFavorites] = useState<string[]>([]);
+  useEffect(() => { setVisibleCount(36); }, [q]);
   const [hasAirfryer, setHasAirfryer] = useState(false);
   useEffect(() => {
     try {
@@ -80,15 +82,16 @@ export function RecipeList({
   }, []);
   function toggleFavorite(id: string) { const next = favorites.includes(id) ? favorites.filter(value => value !== id) : [...favorites, id]; setFavorites(next); try { localStorage.setItem("cuisine-chic-ouf-favorites", JSON.stringify(next)); window.dispatchEvent(new Event("cuisine-chic-ouf-favorites-change")); } catch {} }
   const query = q.trim();
-  const filtered = useMemo(() => {
-    return items
-      .map((item) => {
-        const hay = `${item.name}\n${(item.lines || []).join("\n")}`;
-        if (!matchesQuery(hay, q)) return null;
-        return { item, hits: query ? matchingLines(item.lines || [], q) : [] };
-      })
-      .filter((row): row is { item: RecipeListItem; hits: string[] } => row !== null);
-  }, [items, q, query]);
+  // Ne pas créer des centaines/milliers de cartes DOM d’un coup : le catalogue reste complet,
+  // mais seules 36 fiches sont rendues au départ. La recherche continue de parcourir tout le catalogue.
+  const filtered = useMemo(() => items.filter((item) => {
+    const hay = `${item.name}\n${(item.lines || []).join("\n")}`;
+    return matchesQuery(hay, q);
+  }), [items, q]);
+  const visibleItems = useMemo(() => filtered.slice(0, visibleCount).map((item) => ({
+    item,
+    hits: query ? matchingLines(item.lines || [], q) : [],
+  })), [filtered, visibleCount, query, q]);
 
   return (
     <div className="space-y-5">
@@ -123,6 +126,7 @@ export function RecipeList({
             <Link
               key={card.label}
               href={card.href}
+              prefetch={false}
               aria-label={card.label}
               className="group flex aspect-square min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:rounded-3xl"
               style={{ backgroundColor: card.color }}
@@ -142,6 +146,7 @@ export function RecipeList({
             <Link
               key={col.slug}
               href={`/carnet/${col.slug}`}
+              prefetch={false}
               style={{ backgroundColor: COLLECTION_COLORS[col.slug] || "#E8ECEF", boxShadow: "0 3px 10px rgba(26,26,26,0.08)" }}
               className="rounded-2xl p-4 text-[#1A1A1A] ring-1 ring-black/5 transition-shadow hover:shadow-md"
             >
@@ -167,9 +172,9 @@ export function RecipeList({
           </p>
         ) : (
           <ul className="space-y-3">
-            {filtered.map(({ item, hits }) => (
+            {visibleItems.map(({ item, hits }) => (
               <li key={`${item.id}-${query}`} className="flex items-start gap-2 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
-                <Link href={week ? `/fiche/${item.id}?w=${week}` : `/fiche/${item.id}`} className="min-w-0 flex-1 rounded-xl px-1 py-1">
+                <Link href={week ? `/fiche/${item.id}?w=${week}` : `/fiche/${item.id}`} prefetch={false} className="min-w-0 flex-1 rounded-xl px-1 py-1">
                   <p className="text-base leading-snug">{item.name}</p>
                   {(item.ovenTemperature != null && (item.ovenTime || item.timeCook)) || (item.airfryer_compatible && item.airfryer_temps != null && item.airfryer_temperature != null) ? (
                     <div className="mt-2 grid grid-cols-1 gap-2 text-xs sm:grid-cols-2" aria-label="Modes de cuisson disponibles">
@@ -188,6 +193,11 @@ export function RecipeList({
             ))}
           </ul>
         )}
+        {visibleItems.length < filtered.length ? (
+          <button type="button" onClick={() => setVisibleCount((count) => Math.min(count + 36, filtered.length))} className="w-full rounded-2xl border border-[#8FA89B] bg-[#F9F9F7] px-4 py-3 text-sm font-bold text-[#244A42] transition hover:bg-[#EAF1EC]">
+            Afficher plus de recettes ({filtered.length - visibleItems.length} restantes)
+          </button>
+        ) : null}
       </section>
     </div>
   );
