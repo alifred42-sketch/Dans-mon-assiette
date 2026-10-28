@@ -59,7 +59,7 @@ function category(recipe) {
   return "plat";
 }
 
-const dessert = /(?:dessert|snack|truffes?|bonbons?|cookies?|biscuits? sucre|brownies?|mousse au chocolat|panna cotta|tiramisu|compote|granola|energy balls|boules d energie|barres energetiques|gaufres? sucrees|crepes sucrees|fondants? au chocolat|rochers coco|madeleines|financiers|muffins? sucrees?|chips|pop.?corn|sucettes|mendiants|buche|bouchees chocolatees|bouchees aperitives|mini.?feuilletes|gressins|crackers|tartinade|dip\b|cocktail|mocktail|smoothie|boisson)/i;
+const dessert = /(?:dessert|snack|truffes?|bonbons?|cookies?|biscuits? sucre|brownies?|mousse au chocolat|panna cotta|tiramisu|compote|granola|energy balls|boules d energie|barres energetiques|gaufres? sucrees|crepes sucrees|fondants? au chocolat|rochers coco|madeleines|financiers|muffins? sucrees?|chips|pop.?corn|sucettes|mendiants|buche|bouchees chocolatees|bouchees aperitives|mini.?feuilletes|gressins|crackers|tartinade|dip\b|cocktail|mocktail|smoothie|boisson|bananes? roties?|banana bread|pain perdu|salade de fruits|fruits au chocolat|bowl de (?:skyr|fromage blanc|yaourt)|skyr aux fruits|fromage blanc aux fruits|bowl sucre)/i;
 
 function pillars(recipe) {
   const text = fold([recipe?.name || "", ...(recipe?.ingredients || [])].join(" "));
@@ -144,10 +144,9 @@ for (let week = 1; week <= 52; week++) {
 
   const dinners = DAYS.map((day) => plan.find((slot) => slot.day === day && slot.meal === "Soir"));
   const previous = previousBasePlan;
-  const recent = ["SAMEDI", "DIMANCHE"].map((day) => {
-    const slot = previous.find((item) => item.day === day && item.meal === "Soir");
-    return category(getRecipe(slot?.recipeId));
-  }).filter((item) => item !== "inconnu");
+  // Cette génération de contrôle désactive volontairement le cooldown de frontière ;
+  // l'audit du planning source vérifie séparément la frontière entre deux semaines.
+  const recent = [];
   for (const dinner of dinners) {
     const recipe = getRecipe(dinner?.recipeId);
     const currentCategory = category(recipe);
