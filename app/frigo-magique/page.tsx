@@ -36,7 +36,6 @@ export default function FrigoMagiquePage() {
   const [ready, setReady] = useState(false);
   const [probable, setProbable] = useState<string[]>([]);
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({ "Légumes": true, "Épicerie": true });
-  const [preferences, setPreferences] = useState<Record<string, unknown>>({});
 
   useEffect(() => {
     const current = currentIsoWeek();
@@ -45,7 +44,6 @@ export default function FrigoMagiquePage() {
       const saved = JSON.parse(localStorage.getItem(STOCK_KEY) || "[]");
       setStock(Array.isArray(saved) ? saved : []);
       const prefs = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
-      setPreferences(prefs);
       const servings = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}");
       const overrides = JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}");
       const prev = current === 1 ? 52 : current - 1;
