@@ -736,16 +736,20 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   // Le dîner du jeudi transforme le même ingrédient pivot dans une recette différente.
   const pivotText = pivot ? normalizedSeasonText([pivot.name, ...(pivot.ingredients || [])].join(" ")) : "";
   const pivotTokens = ["pois chiches", "lentilles", "haricots", "poulet", "dinde", "bœuf", "boeuf", "veau", "porc", "agneau", "saumon", "cabillaud", "thon", "maquereau", "colin", "lieu", "crevette", "tofu", "falafel", "œuf", "oeuf"];
-  const pivotToken = pivotTokens.find((token) => pivotText.includes(normalizedSeasonText(token)));
+  // Une recette fille doit réellement réutiliser au moins un ingrédient pivot.
+  // On compare tous les ingrédients pivots présents, pas seulement le premier trouvé.
+  const activePivotTokens = pivotTokens.filter((token) => pivotText.includes(normalizedSeasonText(token)));
+  const sharedPivotScore = (recipe: Recipe) => {
+    const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
+    return activePivotTokens.reduce((score, token) => score + (text.includes(normalizedSeasonText(token)) ? 1 : 0), 0);
+  };
   const thursdayOverride = overrideRecipe("JEUDI", "Soir");
   const transformedCandidates = eligible
     .filter((recipe) => !reserved.has(recipe.id) && recipe.id !== pivot?.id && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
-    .filter((recipe) => pivotToken && normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" ")).includes(normalizedSeasonText(pivotToken)))
-    .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || (preferences.placardVide ? pantryIngredientRatio(b) - pantryIngredientRatio(a) : budgetWeek ? budgetRecipeScore(b) - budgetRecipeScore(a) : 0) || a.name.localeCompare(b.name, "fr"));
-  const fallbackTransformations = eligible
-    .filter((recipe) => !reserved.has(recipe.id) && recipe.id !== pivot?.id && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
-    .filter((recipe) => (plantProfile ? plantPattern : meatPattern).test(roleText(recipe)))
-    .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || (preferences.placardVide ? pantryIngredientRatio(b) - pantryIngredientRatio(a) : budgetWeek ? budgetRecipeScore(b) - budgetRecipeScore(a) : 0) || a.name.localeCompare(b.name, "fr"));
+    .filter((recipe) => sharedPivotScore(recipe) > 0)
+    .sort((a, b) => sharedPivotScore(b) - sharedPivotScore(a) || seasonalScore(b, season) - seasonalScore(a, season) || (preferences.placardVide ? pantryIngredientRatio(b) - pantryIngredientRatio(a) : budgetWeek ? budgetRecipeScore(b) - budgetRecipeScore(a) : 0) || a.name.localeCompare(b.name, "fr"));
+  const fallbackTransformations = transformedCandidates
+    .filter((recipe) => (plantProfile ? plantPattern : meatPattern).test(roleText(recipe)));
   const transformedPivot = thursdayOverride || (preferences.householdServings != null && preferences.householdServings >= 4
     ? chooseRole(plantProfile ? plantPattern : meatPattern, reserved)
     : transformedCandidates[(Math.max(1, week) - 1) % Math.max(1, transformedCandidates.length)] || fallbackTransformations[0]);
