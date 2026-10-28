@@ -553,7 +553,7 @@ function enforceDinnerCategoryCooldown(
   reserved: Set<string>,
   week: number,
   preferences: PlanningPreferences,
-  season: string,
+  season: Season,
 ): PlanSlot[] {
   const days = ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"];
   const result = [...slots];
