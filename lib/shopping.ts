@@ -244,7 +244,7 @@ function findLinkedSauce(line: string) {
   }).sort((a, b) => a.name.length - b.name.length)[0];
 }
 
-export function shoppingForWeek(week: number, servingsByRecipe: Record<string, number> = {}, overrides: Record<string, string> = {}, preferences: PlanningPreferences = {}): ShoppingItem[] {
+export function shoppingForWeek(week: number, servingsByRecipe: Record<string, number> = {}, overrides: Record<string, string> = {}, preferences: PlanningPreferences = {}, freezerSlotKeys: string[] = []): ShoppingItem[] {
   const official = (carnet.courses || []).filter((row) => row.week === week);
   const aisleByName = new Map<string, string>();
   for (const row of official) {
@@ -279,9 +279,13 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
   }
 
   const activePlan = weekPlan(week, overrides, preferences);
-  const activeDishNames = new Set(activePlan.map((slot) => fold(slot.name)).filter(Boolean));
+  const frozenSlots = new Set(freezerSlotKeys);
+  const slotKey = (slot: { week: number; day: string; meal: string }) => slot.week + "|" + slot.day + "|" + slot.meal;
+  const activeDishNames = new Set(activePlan.filter((slot) => !frozenSlots.has(slotKey(slot))).map((slot) => fold(slot.name)).filter(Boolean));
 
   for (const slot of activePlan) {
+    // Un repas issu du congélateur virtuel est déjà acheté et préparé : aucune ligne de courses ne doit être générée pour ce créneau.
+    if (frozenSlots.has(slotKey(slot))) continue;
     // La seconde vie du pivot réutilise les portions déjà comptées mardi et mercredi : aucun achat supplémentaire.
     if (/^seconde vie\s*[—-]/i.test(slot.name)) continue;
     const sourceRecipe = getRecipe(slot.recipeId);
