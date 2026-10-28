@@ -167,17 +167,31 @@ export default function FrigoMagiquePage() {
         <div><h2 className="font-heading text-xl font-bold">Frigo & Placards</h2><p className="text-sm text-muted-foreground">Coche les ingrédients que tu as sous la main.</p></div>
         <div className="flex flex-wrap gap-2">{stock.map((item) => <button key={item} type="button" onClick={() => toggleIngredient(item)} className="rounded-full bg-[#315E59] px-3 py-1.5 text-sm font-semibold text-white">{item} ×</button>)}</div>
         <div className="space-y-2">
-          {categories.filter((category) => groups[category]?.length).map((category) => (
-            <details key={category} open={Boolean(openGroups[category])} onToggle={(event) => setOpenGroups((prev) => ({ ...prev, [category]: (event.currentTarget as HTMLDetailsElement).open }))} className="overflow-hidden rounded-2xl border border-[#E7E5DE] bg-white">
-              <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 font-bold">{category}<ChevronDown className="size-4" /></summary>
-              <div className="grid grid-cols-2 gap-2 p-3 pt-0 sm:grid-cols-3">
-                {groups[category].map((item) => {
-                  const checked = stock.some((value) => fold(value) === fold(item));
-                  return <label key={item} className={`flex cursor-pointer items-center gap-2 rounded-xl border p-2 text-sm ${checked ? "border-[#8FA89B] bg-[#EAF4E8]" : "border-[#E7E5DE] bg-[#FAFAF7]"}`}><input type="checkbox" checked={checked} onChange={() => toggleIngredient(item)} className="size-4 accent-[#668775]" /><span>{item}</span></label>;
-                })}
-              </div>
-            </details>
-          ))}
+          {categories.filter((category) => groups[category]?.length).map((category) => {
+            const isOpen = Boolean(openGroups[category]);
+            return (
+              <section key={category} className="overflow-hidden rounded-2xl border border-[#E7E5DE] bg-white">
+                <button
+                  type="button"
+                  aria-expanded={isOpen}
+                  aria-controls={`frigo-category-${category.replace(/[^a-z0-9]/gi, "-")}`}
+                  onClick={() => setOpenGroups((previous) => ({ ...previous, [category]: !previous[category] }))}
+                  className="flex w-full items-center justify-between px-4 py-3 text-left font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#668775]"
+                >
+                  <span>{category}</span>
+                  <ChevronDown className={`size-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+                </button>
+                {isOpen ? (
+                  <div id={`frigo-category-${category.replace(/[^a-z0-9]/gi, "-")}`} className="grid grid-cols-2 gap-2 p-3 pt-0 sm:grid-cols-3">
+                    {groups[category].map((item) => {
+                      const checked = stock.some((value) => fold(value) === fold(item));
+                      return <label key={item} className={`flex cursor-pointer items-center gap-2 rounded-xl border p-2 text-sm ${checked ? "border-[#8FA89B] bg-[#EAF4E8]" : "border-[#E7E5DE] bg-[#FAFAF7]"}`}><input type="checkbox" checked={checked} onChange={() => toggleIngredient(item)} className="size-4 accent-[#668775]" /><span>{item}</span></label>;
+                    })}
+                  </div>
+                ) : null}
+              </section>
+            );
+          })}
         </div>
       </section>
 
