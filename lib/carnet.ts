@@ -642,6 +642,15 @@ function recipePillars(recipe: Recipe): { vegetables: Set<string>; starches: Set
   };
 }
 
+function sharesPivotIngredient(candidate: Recipe, pivotRecipeId: string): boolean {
+  const pivot = recipesById.get(pivotRecipeId);
+  if (!pivot) return false;
+  const tokens = ["pois chiches", "lentilles", "haricots", "poulet", "dinde", "boeuf", "veau", "porc", "agneau", "saumon", "cabillaud", "thon", "maquereau", "colin", "lieu", "crevette", "tofu", "falafel", "oeuf"];
+  const pivotText = normalizedSeasonText([pivot.name, ...(pivot.ingredients || [])].join(" "));
+  const candidateText = normalizedSeasonText([candidate.name, ...(candidate.ingredients || [])].join(" "));
+  return tokens.some((token) => pivotText.includes(normalizedSeasonText(token)) && candidateText.includes(normalizedSeasonText(token)));
+}
+
 function fitsWeeklyPillarCaps(candidate: Recipe, selected: Recipe[]): boolean {
   const combined = [...selected, candidate].map(recipePillars);
   const count = (key: "vegetables" | "starches" | "proteins") => new Set(combined.flatMap((entry) => [...entry[key]])).size;
@@ -656,6 +665,7 @@ function enforceDinnerCategoryCooldown(
   preferences: PlanningPreferences,
   season: Season,
   previousDinnerCategories: string[] = [],
+  daughterPivotRecipeId?: string,
 ): PlanSlot[] {
   const days = ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"];
   const result = [...slots];
@@ -679,6 +689,9 @@ function enforceDinnerCategoryCooldown(
         isMainDishCandidate(candidate) && isValidatedRecipe(candidate) &&
         eligibleForPreferences(candidate, preferences) && isSeasonCompatible(candidate, season, monthForWeek(week)) &&
         !recentCategories.includes(mainDishCategory(candidate)) &&
+        // Si le dîner du jeudi est la recette fille, toute correction de diversité doit
+        // conserver un ingrédient du pivot du mardi (sauf choix explicite de l’utilisatrice).
+        (day !== "JEUDI" || !daughterPivotRecipeId || sharesPivotIngredient(candidate, daughterPivotRecipeId)) &&
         fitsWeeklyPillarCaps(candidate, selectedDinners)
       ).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
       const replacement = candidates[(Math.max(1, week + days.indexOf(day)) - 1) % Math.max(1, candidates.length)];
@@ -805,7 +818,12 @@ export function weekPlan(
     const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
     return activePivotTokens.reduce((score, token) => score + (text.includes(normalizedSeasonText(token)) ? 1 : 0), 0);
   };
-  const thursdayOverride = overrideRecipe("JEUDI", "Soir");
+  const thursdayOverrideCandidate = overrideRecipe("JEUDI", "Soir");
+  // Les choix éditoriaux automatiques ne priment pas sur la règle mère/fille.
+  // Une substitution manuelle reste prioritaire, même si elle ne réutilise pas le pivot.
+  const thursdayOverride = thursdayOverrideCandidate && (
+    Boolean(overrides[`${week}|JEUDI|Soir`]) || sharedPivotScore(thursdayOverrideCandidate) > 0
+  ) ? thursdayOverrideCandidate : undefined;
   const transformedCandidates = eligible
     .filter((recipe) => !reserved.has(recipe.id) && recipe.id !== pivot?.id && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
     .filter((recipe) => sharedPivotScore(recipe) > 0)
@@ -885,7 +903,8 @@ export function weekPlan(
       return mainDishCategory(getRecipe(dinner?.recipeId));
     });
   }
-  const safeResult = enforceDinnerCategoryCooldown(result, eligible, reserved, week, preferences, season, previousDinnerCategories);
+  const daughterPivotId = overrides[`${week}|JEUDI|Soir`] ? undefined : pivot?.id;
+  const safeResult = enforceDinnerCategoryCooldown(result, eligible, reserved, week, preferences, season, previousDinnerCategories, daughterPivotId);
   if (!applyLeftovers) return safeResult;
 
   // Tous les déjeuners reprennent le dîner de la veille. Une substitution explicite
