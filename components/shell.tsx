@@ -81,7 +81,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 className={`flex min-h-16 min-w-0 flex-col items-center justify-center gap-1 rounded-xl px-0.5 text-[10px] font-bold leading-tight transition-colors sm:text-xs ${active ? "shadow-sm" : "hover:bg-black/5"}`}
                 style={{ backgroundColor: active ? item.color : "transparent", color: active ? item.activeText : item.color }}
               >
-                <Icon className="size-5 shrink-0 sm:size-6" />
+                <span className={`inline-flex items-center justify-center rounded-full p-1 ${active ? "bg-white/25 ring-1 ring-white/40" : ""}`}>
+                  <Icon className="size-5 shrink-0 sm:size-6" style={{ color: active ? item.activeText : item.color }} />
+                </span>
                 {item.label}
               </Link>
             );
