@@ -8,6 +8,7 @@ import { BASE_PATH } from "@/lib/base-path";
 import { DAYS, DAY_LABEL, breakfastForWeek, clampWeek, currentIsoWeek, getRecipe, seasonLabel, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { MealReminders } from "@/components/meal-reminders";
 import { SwitchMeal } from "@/components/switch-meal";
+import { getFreezerPlan } from "@/lib/freezer";
 
 const TURQUOISE = "#4A9290";
 const SOS_CORAL = "#F2A08F";
@@ -64,6 +65,24 @@ export default function WeekPage() {
 
   const requestedWeek = search.get("w");
   const week = requestedWeek && search.get("manual") === "1" ? clampWeek(requestedWeek) : currentWeek;
+  useEffect(() => {
+    const refreshFreezerPlan = () => {
+      try {
+        const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-recipe-switches") || "{}");
+        setRecipeOverrides(getFreezerPlan(week, saved).overrides);
+      } catch {}
+    };
+    refreshFreezerPlan();
+    window.addEventListener("storage", refreshFreezerPlan);
+    window.addEventListener("cuisine-chic-ouf-plan-change", refreshFreezerPlan);
+    window.addEventListener("cuisine-chic-ouf-freezer-change", refreshFreezerPlan);
+    return () => {
+      window.removeEventListener("storage", refreshFreezerPlan);
+      window.removeEventListener("cuisine-chic-ouf-plan-change", refreshFreezerPlan);
+      window.removeEventListener("cuisine-chic-ouf-freezer-change", refreshFreezerPlan);
+    };
+  }, [week]);
+
   const slots = weekPlan(week, recipeOverrides, preferences);
   const dateRange = dateForIsoWeek(week);
   const season = seasonLabel(week);
