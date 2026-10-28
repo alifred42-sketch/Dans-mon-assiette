@@ -691,7 +691,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     const isCurated = !userId && Boolean(curatedId);
     const id = userId || curatedId;
     const recipe = id ? recipesById.get(id) : undefined;
-    if (!recipe || !isValidatedRecipe(recipe) || !eligibleForPreferences(recipe, preferences) || !isSeasonCompatible(recipe, season)) return undefined;
+    if (!recipe || !isValidatedRecipe(recipe) || !isMainDishCandidate(recipe) || !eligibleForPreferences(recipe, preferences) || !isSeasonCompatible(recipe, season)) return undefined;
     if (isCurated && preferences.placardVide && pantryIngredientRatio(recipe) < 0.8) return undefined;
     if (isCurated && budgetWeek && budgetRecipeScore(recipe) < 2) return undefined;
     // Les choix éditoriaux doivent être respectés même s'ils ne correspondent pas au rôle
