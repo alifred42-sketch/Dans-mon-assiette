@@ -574,6 +574,7 @@ function enforceDinnerCategoryCooldown(
   const days = ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"];
   const result = [...slots];
   let previousCategory = "";
+  const selectedDinners: Recipe[] = [];
   for (const day of days) {
     const index = result.findIndex((slot) => slot.day === day && slot.meal === "Soir");
     if (index < 0) continue;
@@ -582,24 +583,29 @@ function enforceDinnerCategoryCooldown(
     const category = mainDishCategory(recipe);
     const invalid = !recipe || !isMainDishCandidate(recipe);
     const repeated = Boolean(previousCategory && category === previousCategory);
-    if (invalid || repeated) {
+    const exceedsPillars = Boolean(recipe && !fitsWeeklyPillarCaps(recipe, selectedDinners));
+    if (invalid || repeated || exceedsPillars) {
       const alreadyUsed = new Set(result.filter((slot, slotIndex) => slotIndex !== index && slot.recipeId).map((slot) => slot.recipeId as string));
       const candidates = eligible.filter((candidate) =>
         !alreadyUsed.has(candidate.id) && !reserved.has(candidate.id) && candidate.id !== current.recipeId &&
         isMainDishCandidate(candidate) && isValidatedRecipe(candidate) &&
         eligibleForPreferences(candidate, preferences) && isSeasonCompatible(candidate, season) &&
-        (!previousCategory || mainDishCategory(candidate) !== previousCategory)
+        (!previousCategory || mainDishCategory(candidate) !== previousCategory) &&
+        fitsWeeklyPillarCaps(candidate, selectedDinners)
       ).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
       const replacement = candidates[(Math.max(1, week + days.indexOf(day)) - 1) % Math.max(1, candidates.length)];
       if (replacement) {
         result[index] = { ...current, recipeId: replacement.id, name: replacement.name };
         previousCategory = mainDishCategory(replacement);
+        selectedDinners.push(replacement);
       } else {
         if (invalid) result[index] = { ...current, recipeId: null, name: "Aucun plat principal complet validé pour ce créneau" };
         previousCategory = invalid ? "inconnu" : category;
+        if (recipe && !invalid) selectedDinners.push(recipe);
       }
     } else {
       previousCategory = category;
+      if (recipe) selectedDinners.push(recipe);
     }
   }
   return result;
