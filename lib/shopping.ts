@@ -279,8 +279,12 @@ export function shoppingForWeek(week: number, servingsByRecipe: Record<string, n
   }
 
   const activePlan = weekPlan(week, overrides, preferences);
-  const frozenSlots = new Set(freezerSlotKeys);
+  const requestedFrozenSlots = new Set(freezerSlotKeys);
   const slotKey = (slot: { week: number; day: string; meal: string }) => slot.week + "|" + slot.day + "|" + slot.meal;
+  // Une règle de sécurité du planning peut remplacer un créneau; dans ce cas, ne pas supprimer les courses du nouveau plat.
+  const frozenSlots = new Set(activePlan
+    .filter((slot) => requestedFrozenSlots.has(slotKey(slot)) && overrides[slotKey(slot)] === slot.recipeId)
+    .map(slotKey));
   const activeDishNames = new Set(activePlan.filter((slot) => !frozenSlots.has(slotKey(slot))).map((slot) => fold(slot.name)).filter(Boolean));
 
   for (const slot of activePlan) {
