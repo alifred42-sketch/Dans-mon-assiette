@@ -144,7 +144,7 @@ export default function FrigoMagiquePage() {
         <div className="flex flex-wrap gap-2">
           {probable.length ? probable.map((item) => {
             const selected = stock.some((value) => fold(value) === fold(item));
-            return <button key={item} type="button" aria-pressed={selected} onClick={() => toggleIngredient(item)} className={\`rounded-full border px-3 py-2 text-sm font-semibold \${selected ? "border-[#6E9B79] bg-[#DDEEDB] text-[#254D30]" : "border-[#D8D8D0] bg-white text-[#777773] line-through"}\`}>{selected ? "✓ " : ""}{item}</button>;
+            return <button key={item} type="button" aria-pressed={selected} onClick={() => toggleIngredient(item)} className={`rounded-full border px-3 py-2 text-sm font-semibold ${selected ? "border-[#6E9B79] bg-[#DDEEDB] text-[#254D30]" : "border-[#D8D8D0] bg-white text-[#777773] line-through"}`}>{selected ? "✓ " : ""}{item}</button>;
           }) : <p className="text-sm text-[#777773]">Aucun reste détecté pour le moment.</p>}
         </div>
       </section>
@@ -159,7 +159,7 @@ export default function FrigoMagiquePage() {
               <div className="grid grid-cols-2 gap-2 p-3 pt-0 sm:grid-cols-3">
                 {groups[category].map((item) => {
                   const checked = stock.some((value) => fold(value) === fold(item));
-                  return <label key={item} className={\`flex cursor-pointer items-center gap-2 rounded-xl border p-2 text-sm \${checked ? "border-[#8FA89B] bg-[#EAF4E8]" : "border-[#E7E5DE] bg-[#FAFAF7]"}\`}><input type="checkbox" checked={checked} onChange={() => toggleIngredient(item)} className="size-4 accent-[#668775]" /><span>{item}</span></label>;
+                  return <label key={item} className={`flex cursor-pointer items-center gap-2 rounded-xl border p-2 text-sm ${checked ? "border-[#8FA89B] bg-[#EAF4E8]" : "border-[#E7E5DE] bg-[#FAFAF7]"}`}><input type="checkbox" checked={checked} onChange={() => toggleIngredient(item)} className="size-4 accent-[#668775]" /><span>{item}</span></label>;
                 })}
               </div>
             </details>
@@ -174,11 +174,11 @@ export default function FrigoMagiquePage() {
             <div className="flex items-start justify-between gap-3"><h3 className="font-bold leading-snug">{match.name}</h3><span className="shrink-0 rounded-full bg-[#DDEEDB] px-2 py-1 text-xs font-extrabold text-[#315E59]">{match.score}%</span></div>
             <p className="text-xs text-muted-foreground">{match.matched}/{match.total} ingrédients présents</p>
             {match.missing.length ? <div className="flex flex-wrap items-center gap-2 text-sm"><span>Il vous manque :</span>{match.missing.map((item) => <span key={item} className="inline-flex items-center gap-1 rounded-full bg-[#F7F1E8] px-2 py-1">{item}<button type="button" title={"Ajouter " + item + " aux courses"} onClick={() => addMissingToCourses(item)} className="rounded-full p-0.5 text-[#315E59] hover:bg-white"><Plus className="size-4" /></button></span>)}</div> : <p className="text-sm font-semibold text-[#315E59]">Tous les ingrédients principaux sont là !</p>}
-            <Link href={\`/fiche/\${match.id}\`} className="inline-flex rounded-xl bg-[#315E59] px-3 py-2 text-sm font-bold text-white">Voir la recette</Link>
+            <Link href={`/fiche/${match.id}`} className="inline-flex rounded-xl bg-[#315E59] px-3 py-2 text-sm font-bold text-white">Voir la recette</Link>
           </article>
         )) : <p className="rounded-2xl bg-white p-5 text-sm text-muted-foreground">Aucune recette ne correspond avec 2 ingrédients manquants maximum.</p>}
       </section>
-      <Link href={\`/courses?w=\${week}&manual=1\`} className="flex items-center justify-center gap-2 rounded-2xl bg-[#E6DFD3] px-4 py-3 font-bold text-[#2B2B2B]"><ShoppingCart className="size-5" /> Ouvrir mes courses de la semaine {week}</Link>
+      <Link href={`/courses?w=${week}&manual=1`} className="flex items-center justify-center gap-2 rounded-2xl bg-[#E6DFD3] px-4 py-3 font-bold text-[#2B2B2B]"><ShoppingCart className="size-5" /> Ouvrir mes courses de la semaine {week}</Link>
       {ready ? <p className="text-center text-xs text-muted-foreground">Stock enregistré sur cet appareil.</p> : null}
     </div>
   );
