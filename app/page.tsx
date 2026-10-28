@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BASE_PATH } from "@/lib/base-path";
-import { currentIsoWeek } from "@/lib/carnet";
+import { currentIsoWeek } from "@/lib/week-utils";
 import { InstallApp } from "@/components/install-app";
 import {
   BookOpen,
@@ -104,6 +104,7 @@ function CardRow({
           <Link
             key={label}
             href={destination}
+            prefetch={false}
             aria-label={label}
             className="group flex aspect-square min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:rounded-3xl"
             style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}
@@ -178,12 +179,14 @@ export default function HomePage() {
           <div className="mt-6 flex w-full max-w-lg flex-col gap-3">
             <Link
               href={`/semaine?w=${currentWeek}`}
+              prefetch={false}
               className="flex min-h-14 w-full items-center justify-center rounded-2xl bg-[#8FAF9B] px-6 py-4 text-lg font-black text-[#103A36] shadow-[0_7px_18px_rgba(0,0,0,0.2)] transition hover:brightness-105 active:scale-[0.99] sm:min-h-16"
             >
               Sauver ma semaine
             </Link>
             <Link
               href="/recettes?filter=tired"
+              prefetch={false}
               className="flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border border-white/20 bg-[#B79AD8] px-6 py-4 text-base font-extrabold text-[#30213F] shadow-[0_7px_18px_rgba(0,0,0,0.18)] transition hover:brightness-105 active:scale-[0.99] sm:min-h-16 sm:text-lg"
             >
               <span aria-hidden="true" className="text-xl">🆘</span>
