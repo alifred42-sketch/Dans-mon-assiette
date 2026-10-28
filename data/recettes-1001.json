@@ -20,7 +20,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 900,
-    "id": "pdf-1001-900"
+    "id": "pdf-1001-900",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert à la casserole : Compote tiède aux éclats de biscuits",
@@ -42,7 +45,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 901,
-    "id": "pdf-1001-901"
+    "id": "pdf-1001-901",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "One-Pot Pasta crémeux au thon et au fromage frais",
@@ -65,7 +71,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 902,
-    "id": "pdf-1001-902"
+    "id": "pdf-1001-902",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Curry express de pois chiches au lait de coco",
@@ -88,7 +97,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 903,
-    "id": "pdf-1001-903"
+    "id": "pdf-1001-903",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Soupe-repas campagnarde au bacon et pommes de terre",
@@ -111,7 +123,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 904,
-    "id": "pdf-1001-904"
+    "id": "pdf-1001-904",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Nouilles instantanées façon carbonara étudiante",
@@ -134,7 +149,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 905,
-    "id": "pdf-1001-905"
+    "id": "pdf-1001-905",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "One-Pot Rice à la mexicaine",
@@ -158,7 +176,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 906,
-    "id": "pdf-1001-906"
+    "id": "pdf-1001-906",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Fondue de pain rapide au fromage (façon ramequin)",
@@ -181,7 +202,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 907,
-    "id": "pdf-1001-907"
+    "id": "pdf-1001-907",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Coquillettes au poulet et sauce moutarde",
@@ -204,7 +228,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 908,
-    "id": "pdf-1001-908"
+    "id": "pdf-1001-908",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Velouté express Maïs & Kiri",
@@ -226,7 +253,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 909,
-    "id": "pdf-1001-909"
+    "id": "pdf-1001-909",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert à la casserole : Semoule au lait et caramel",
@@ -248,7 +278,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 910,
-    "id": "pdf-1001-910"
+    "id": "pdf-1001-910",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert à la casserole : Semoule au lait et caramel",
@@ -270,7 +303,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 911,
-    "id": "pdf-1001-911"
+    "id": "pdf-1001-911",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "One-Pot Pasta au thon, olives et câpres",
@@ -294,7 +330,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 912,
-    "id": "pdf-1001-912"
+    "id": "pdf-1001-912",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Chili con carne express de l'étudiant",
@@ -317,7 +356,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 913,
-    "id": "pdf-1001-913"
+    "id": "pdf-1001-913",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Soupe crémeuse de coquillettes au jambon et Kiri",
@@ -339,7 +381,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 914,
-    "id": "pdf-1001-914"
+    "id": "pdf-1001-914",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "One-Pot de lentilles corail au thon et carottes",
@@ -362,7 +407,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 915,
-    "id": "pdf-1001-915"
+    "id": "pdf-1001-915",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "One-Pot Rice au porc ou dinde façon asiatique",
@@ -385,7 +433,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 916,
-    "id": "pdf-1001-916"
+    "id": "pdf-1001-916",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Mijoté de saucisses aux haricots rouges",
@@ -408,7 +459,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 917,
-    "id": "pdf-1001-917"
+    "id": "pdf-1001-917",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Nouilles sautées express œuf et soja (à la casserole)",
@@ -431,7 +485,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 918,
-    "id": "pdf-1001-918"
+    "id": "pdf-1001-918",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert à la casserole : Flocons d'avoine gourmands Pomme-Chocolat (Porridge)",
@@ -453,7 +510,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 919,
-    "id": "pdf-1001-919"
+    "id": "pdf-1001-919",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "One-Pot Pasta au chorizo et crème",
@@ -476,7 +536,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 920,
-    "id": "pdf-1001-920"
+    "id": "pdf-1001-920",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Curry express de dinde et pois chiches",
@@ -500,7 +563,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 921,
-    "id": "pdf-1001-921"
+    "id": "pdf-1001-921",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Marmite de gnocchis au bacon et poireaux (surgelés)",
@@ -523,7 +589,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 922,
-    "id": "pdf-1001-922"
+    "id": "pdf-1001-922",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Soupe-repas de riz au poulet et légumes",
@@ -545,7 +614,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 923,
-    "id": "pdf-1001-923"
+    "id": "pdf-1001-923",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "One-Pot Pasta au poisson blanc et crème de citron",
@@ -568,7 +640,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 924,
-    "id": "pdf-1001-924"
+    "id": "pdf-1001-924",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Mijoté express de lentilles au chorizo",
@@ -590,7 +665,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 925,
-    "id": "pdf-1001-925"
+    "id": "pdf-1001-925",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert à la casserole : Crème d'avoine au chocolat (Style Danette)",
@@ -612,7 +690,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 926,
-    "id": "pdf-1001-926"
+    "id": "pdf-1001-926",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Ratatouille minute en bol",
@@ -636,7 +717,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 927,
-    "id": "pdf-1001-927"
+    "id": "pdf-1001-927",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Saumon vapeur minute au soja et sésame",
@@ -659,7 +743,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 928,
-    "id": "pdf-1001-928"
+    "id": "pdf-1001-928",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Gnocchis express à la sauce tomate et mozzarella",
@@ -682,7 +769,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 929,
-    "id": "pdf-1001-929"
+    "id": "pdf-1001-929",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Pain de bœuf minute en mug (Meatloaf)",
@@ -705,7 +795,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 930,
-    "id": "pdf-1001-930"
+    "id": "pdf-1001-930",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade grecque express à la feta",
@@ -729,7 +822,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 931,
-    "id": "pdf-1001-931"
+    "id": "pdf-1001-931",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Wrap fraîcheur au thon et au maïs",
@@ -752,7 +848,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 932,
-    "id": "pdf-1001-932"
+    "id": "pdf-1001-932",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "La vraie salade Caprese (Tomate-Mozzarella)",
@@ -775,7 +874,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 933,
-    "id": "pdf-1001-933"
+    "id": "pdf-1001-933",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine scandinave au saumon fumé et fromage frais",
@@ -798,7 +900,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 934,
-    "id": "pdf-1001-934"
+    "id": "pdf-1001-934",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Avocat garni de surimi et sauce cocktail",
@@ -820,7 +925,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 935,
-    "id": "pdf-1001-935"
+    "id": "pdf-1001-935",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade César étudiante rapide",
@@ -843,7 +951,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 936,
-    "id": "pdf-1001-936"
+    "id": "pdf-1001-936",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade marocaine croquante de carottes et maïs",
@@ -866,7 +977,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 937,
-    "id": "pdf-1001-937"
+    "id": "pdf-1001-937",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Bowl de fromage blanc gourmand aux fruits",
@@ -888,7 +1002,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 938,
-    "id": "pdf-1001-938"
+    "id": "pdf-1001-938",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade italienne de haricots blancs au pesto",
@@ -910,7 +1027,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 939,
-    "id": "pdf-1001-939"
+    "id": "pdf-1001-939",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade mexicaine Haricots rouges, Maïs & Avocat",
@@ -933,7 +1053,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 940,
-    "id": "pdf-1001-940"
+    "id": "pdf-1001-940",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Rillettes de sardines minute et crackers",
@@ -956,7 +1079,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 941,
-    "id": "pdf-1001-941"
+    "id": "pdf-1001-941",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine de houmous, feta et concombre",
@@ -979,7 +1105,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 942,
-    "id": "pdf-1001-942"
+    "id": "pdf-1001-942",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade piémontaise étudiante (sans cuisson)",
@@ -1002,7 +1131,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 943,
-    "id": "pdf-1001-943"
+    "id": "pdf-1001-943",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Wrap crémeux au surimi et avocat",
@@ -1025,7 +1157,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 944,
-    "id": "pdf-1001-944"
+    "id": "pdf-1001-944",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade de lentilles express de l’étudiant",
@@ -1048,7 +1183,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 945,
-    "id": "pdf-1001-945"
+    "id": "pdf-1001-945",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade fraîcheur de surimi et pamplemousse",
@@ -1071,7 +1209,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 946,
-    "id": "pdf-1001-946"
+    "id": "pdf-1001-946",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Sandwich italien Tomate, Mozzarella & Jambon cru",
@@ -1094,7 +1235,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 947,
-    "id": "pdf-1001-947"
+    "id": "pdf-1001-947",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert zéro cuisson : Le Mug Cake Speculoos sans cuisson",
@@ -1116,7 +1260,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 948,
-    "id": "pdf-1001-948"
+    "id": "pdf-1001-948",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade italienne express au melon et jambon cru",
@@ -1139,7 +1286,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 949,
-    "id": "pdf-1001-949"
+    "id": "pdf-1001-949",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Wrap nordique express au crabe et concombre",
@@ -1162,7 +1312,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 950,
-    "id": "pdf-1001-950"
+    "id": "pdf-1001-950",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine méditerranéenne aux légumes blancs et feta",
@@ -1185,7 +1338,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 951,
-    "id": "pdf-1001-951"
+    "id": "pdf-1001-951",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade niçoise de l’étudiant pressé",
@@ -1208,7 +1364,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 952,
-    "id": "pdf-1001-952"
+    "id": "pdf-1001-952",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade tex-mex de maïs à l’avocat",
@@ -1231,7 +1390,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 953,
-    "id": "pdf-1001-953"
+    "id": "pdf-1001-953",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Gazpacho andalou aux croûtons express",
@@ -1254,7 +1416,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 954,
-    "id": "pdf-1001-954"
+    "id": "pdf-1001-954",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Rillettes de thon express à la Kiri",
@@ -1276,7 +1441,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 955,
-    "id": "pdf-1001-955"
+    "id": "pdf-1001-955",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade de surimi croquante au maïs",
@@ -1298,7 +1466,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 956,
-    "id": "pdf-1001-956"
+    "id": "pdf-1001-956",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert zéro cuisson : Le mini-bagel sucré Banane & Chocolat",
@@ -1319,7 +1490,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 957,
-    "id": "pdf-1001-957"
+    "id": "pdf-1001-957",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Panino express à la tapenade et chèvre frais",
@@ -1340,7 +1514,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 958,
-    "id": "pdf-1001-958"
+    "id": "pdf-1001-958",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade de lentilles printanière au fromage de chèvre",
@@ -1362,7 +1539,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 959,
-    "id": "pdf-1001-959"
+    "id": "pdf-1001-959",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine d’avocat et surimi (façon Guacamole minute)",
@@ -1385,7 +1565,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 960,
-    "id": "pdf-1001-960"
+    "id": "pdf-1001-960",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Rillettes de maquereau à la moutarde et pain noir",
@@ -1407,7 +1590,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 961,
-    "id": "pdf-1001-961"
+    "id": "pdf-1001-961",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Sandwich perdu sucré à la fraise ou confiture",
@@ -1430,7 +1616,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 962,
-    "id": "pdf-1001-962"
+    "id": "pdf-1001-962",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade italienne de pois chiches au jambon cru et copeaux de fromage",
@@ -1452,7 +1641,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 963,
-    "id": "pdf-1001-963"
+    "id": "pdf-1001-963",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade mexicaine express aux trois grains",
@@ -1475,7 +1667,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 964,
-    "id": "pdf-1001-964"
+    "id": "pdf-1001-964",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade fraîche de concombre, feta et menthe",
@@ -1497,7 +1692,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 965,
-    "id": "pdf-1001-965"
+    "id": "pdf-1001-965",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Wrap fraîcheur au jambon blanc, fromage frais et crudités",
@@ -1519,7 +1717,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 966,
-    "id": "pdf-1001-966"
+    "id": "pdf-1001-966",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade de riz minute au thon, maïs et cornichons",
@@ -1542,7 +1743,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 967,
-    "id": "pdf-1001-967"
+    "id": "pdf-1001-967",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Carpaccio de tomates au jambon cru et pesto",
@@ -1564,7 +1768,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 968,
-    "id": "pdf-1001-968"
+    "id": "pdf-1001-968",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Rillettes de crabe minute sur tartines croustillantes",
@@ -1586,7 +1793,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 969,
-    "id": "pdf-1001-969"
+    "id": "pdf-1001-969",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade nordique de haricots blancs au saumon fumé",
@@ -1609,7 +1819,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 970,
-    "id": "pdf-1001-970"
+    "id": "pdf-1001-970",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade croquante de surimi aux carottes râpées",
@@ -1631,7 +1844,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 971,
-    "id": "pdf-1001-971"
+    "id": "pdf-1001-971",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Les Œufs au Pesto (Pesto Eggs)",
@@ -1653,7 +1869,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 972,
-    "id": "pdf-1001-972"
+    "id": "pdf-1001-972",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Le Wrap plié en 4",
@@ -1675,7 +1894,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 973,
-    "id": "pdf-1001-973"
+    "id": "pdf-1001-973",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "La Salade",
@@ -1697,7 +1919,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 974,
-    "id": "pdf-1001-974"
+    "id": "pdf-1001-974",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Les Croquettes de Courgettes express",
@@ -1720,7 +1945,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 975,
-    "id": "pdf-1001-975"
+    "id": "pdf-1001-975",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "La Pomme de Terre (Double cuisson)",
@@ -1742,7 +1970,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 976,
-    "id": "pdf-1001-976"
+    "id": "pdf-1001-976",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Le Tiramisu aux Flocons d'Avoine (sans cuisson)",
@@ -1765,7 +1996,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 977,
-    "id": "pdf-1001-977"
+    "id": "pdf-1001-977",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Le Toast au Yaourt Soufflé",
@@ -1787,7 +2021,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 978,
-    "id": "pdf-1001-978"
+    "id": "pdf-1001-978",
+    "airfryer_compatible": true,
+    "airfryer_temps": 5,
+    "airfryer_temperature": 180
   },
   {
     "name": "Les Céréales de Mini-Pancakes",
@@ -1810,7 +2047,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 979,
-    "id": "pdf-1001-979"
+    "id": "pdf-1001-979",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Les Fraises au Cheesecake minute (sans appareil)",
@@ -1833,7 +2073,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 980,
-    "id": "pdf-1001-980"
+    "id": "pdf-1001-980",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Le Croissant caramélisé et aplati",
@@ -1854,7 +2097,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 981,
-    "id": "pdf-1001-981"
+    "id": "pdf-1001-981",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Le Mug Crumble express aux pommes et biscuits",
@@ -1876,7 +2122,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 982,
-    "id": "pdf-1001-982"
+    "id": "pdf-1001-982",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Noodles infusées au poulet et petits pois (à la bouilloire)",
@@ -1899,7 +2148,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 983,
-    "id": "pdf-1001-983"
+    "id": "pdf-1001-983",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "L'Avocado Toast croustillant (au grille-pain)",
@@ -1921,7 +2173,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 984,
-    "id": "pdf-1001-984"
+    "id": "pdf-1001-984",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Croque-Monsieur Système D au grille-pain",
@@ -1942,7 +2197,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 985,
-    "id": "pdf-1001-985"
+    "id": "pdf-1001-985",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Soupe de miso instantanée aux dés de tofu (à la bouilloire)",
@@ -1963,7 +2221,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 986,
-    "id": "pdf-1001-986"
+    "id": "pdf-1001-986",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "One-Pot de vermicelles de riz au curry et surimi",
@@ -1986,7 +2247,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 987,
-    "id": "pdf-1001-987"
+    "id": "pdf-1001-987",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine \"Welsh\" étudiante au cheddar",
@@ -2009,7 +2273,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 988,
-    "id": "pdf-1001-988"
+    "id": "pdf-1001-988",
+    "airfryer_compatible": true,
+    "airfryer_temps": 4,
+    "airfryer_temperature": 180
   },
   {
     "name": "Dessert Système D : Le Porridge express Banane & Chocolat",
@@ -2031,7 +2298,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 989,
-    "id": "pdf-1001-989"
+    "id": "pdf-1001-989",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade de vermicelles de soja au thon et sésame",
@@ -2054,7 +2324,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 990,
-    "id": "pdf-1001-990"
+    "id": "pdf-1001-990",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Taboulé minute aux raisins secs et pois chiches",
@@ -2077,7 +2350,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 991,
-    "id": "pdf-1001-991"
+    "id": "pdf-1001-991",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Velouté express de tomates aux croûtons dorés",
@@ -2099,7 +2375,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 992,
-    "id": "pdf-1001-992"
+    "id": "pdf-1001-992",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Purée express à la vache qui rit et dés de jambon",
@@ -2122,7 +2401,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 993,
-    "id": "pdf-1001-993"
+    "id": "pdf-1001-993",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine norvégienne au fromage frais et miettes de crabe",
@@ -2144,7 +2426,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 994,
-    "id": "pdf-1001-994"
+    "id": "pdf-1001-994",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Polenta minute au parmesan (à la bouilloire)",
@@ -2166,7 +2451,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 995,
-    "id": "pdf-1001-995"
+    "id": "pdf-1001-995",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Salade de cup-nouilles enrichie au maïs et surimi",
@@ -2188,7 +2476,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 996,
-    "id": "pdf-1001-996"
+    "id": "pdf-1001-996",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert Système D : Le Toast brioché bananes et éclats de chocolat",
@@ -2210,7 +2501,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 997,
-    "id": "pdf-1001-997"
+    "id": "pdf-1001-997",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Noodles de l'espace au thon et sauce soja (à la bouilloire)",
@@ -2232,7 +2526,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 998,
-    "id": "pdf-1001-998"
+    "id": "pdf-1001-998",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Semoule parfumée au chorizo minute (à la bouilloire)",
@@ -2254,7 +2551,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 999,
-    "id": "pdf-1001-999"
+    "id": "pdf-1001-999",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Soupe de vermicelles express (à la bouilloire)",
@@ -2276,7 +2576,10 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 1000,
-    "id": "pdf-1001-1000"
+    "id": "pdf-1001-1000",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Aligot Système D express",
@@ -2299,6 +2602,9 @@
     ],
     "source": "RECETTES 1000.pdf",
     "sourceNumber": 1001,
-    "id": "pdf-1001-1001"
+    "id": "pdf-1001-1001",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   }
 ]

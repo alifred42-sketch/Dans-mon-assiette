@@ -20,7 +20,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1002,
-    "id": "pdf-1024-1002"
+    "id": "pdf-1024-1002",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Couscous minute aux pois chiches et raisins secs (à la bouilloire)",
@@ -43,7 +46,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1003,
-    "id": "pdf-1024-1003"
+    "id": "pdf-1024-1003",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine Club-Maïs au surimi",
@@ -65,7 +71,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1004,
-    "id": "pdf-1024-1004"
+    "id": "pdf-1024-1004",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert Système D : Toast S'mores chocolat et guimauve",
@@ -86,7 +95,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1005,
-    "id": "pdf-1024-1005"
+    "id": "pdf-1024-1005",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Nouilles de riz vapeur à la sauce cacahuète express (à la bouilloire)",
@@ -108,7 +120,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1006,
-    "id": "pdf-1024-1006"
+    "id": "pdf-1024-1006",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine Hot-Dog étudiante au cheddar",
@@ -130,7 +145,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1007,
-    "id": "pdf-1024-1007"
+    "id": "pdf-1024-1007",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine croustillante thon-mayo et emmental fondu",
@@ -152,7 +170,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1008,
-    "id": "pdf-1024-1008"
+    "id": "pdf-1024-1008",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Soupe-repas minute au poulet et vermicelles (à la bouilloire)",
@@ -174,7 +195,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1009,
-    "id": "pdf-1024-1009"
+    "id": "pdf-1024-1009",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Purée express aux lardons croustillants (au grille-pain)",
@@ -196,7 +220,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1010,
-    "id": "pdf-1024-1010"
+    "id": "pdf-1024-1010",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine fraîcheur au maquereau et fromage à la crème",
@@ -218,7 +245,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1011,
-    "id": "pdf-1024-1011"
+    "id": "pdf-1024-1011",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Couscous express sucré-salé aux raisins et surimi (à la bouilloire)",
@@ -241,7 +271,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1012,
-    "id": "pdf-1024-1012"
+    "id": "pdf-1024-1012",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Toast-Mex au maïs et cheddar",
@@ -263,7 +296,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1013,
-    "id": "pdf-1024-1013"
+    "id": "pdf-1024-1013",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert Système D : Toast brioché à la pâte à tartiner et biscuits écrasés",
@@ -284,7 +320,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1014,
-    "id": "pdf-1024-1014"
+    "id": "pdf-1024-1014",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Noodles coco-curry minute (à la bouilloire)",
@@ -306,7 +345,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1015,
-    "id": "pdf-1024-1015"
+    "id": "pdf-1024-1015",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine Club-Poulet au pesto et fromage frais",
@@ -328,7 +370,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1016,
-    "id": "pdf-1024-1016"
+    "id": "pdf-1024-1016",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Semoule express à la tapenade et thon (à la bouilloire)",
@@ -351,7 +396,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1017,
-    "id": "pdf-1024-1017"
+    "id": "pdf-1024-1017",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Toast-Raclette Système D au jambon cru",
@@ -373,7 +421,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1018,
-    "id": "pdf-1024-1018"
+    "id": "pdf-1024-1018",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Soupe de légumes minute aux croûtons de chèvre (à la bouilloire)",
@@ -395,7 +446,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1019,
-    "id": "pdf-1024-1019"
+    "id": "pdf-1024-1019",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Aligot minute express au jambon cru",
@@ -418,7 +472,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1020,
-    "id": "pdf-1024-1020"
+    "id": "pdf-1024-1020",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine campagnarde aux rillettes de sardines et cornichons",
@@ -440,7 +497,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1021,
-    "id": "pdf-1024-1021"
+    "id": "pdf-1024-1021",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Couscous minute aux légumes fins (à la bouilloire)",
@@ -462,7 +522,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1022,
-    "id": "pdf-1024-1022"
+    "id": "pdf-1024-1022",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Tartine Welsh minute au surimi",
@@ -485,7 +548,10 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1023,
-    "id": "pdf-1024-1023"
+    "id": "pdf-1024-1023",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Dessert Système D : Porridge chocolat-spéculoos (à la bouilloire)",
@@ -507,6 +573,9 @@
     ],
     "source": "RECETTES 1024.pdf",
     "sourceNumber": 1024,
-    "id": "pdf-1024-1024"
+    "id": "pdf-1024-1024",
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   }
 ]
