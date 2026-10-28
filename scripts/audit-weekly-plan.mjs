@@ -86,10 +86,21 @@ for (let week = 1; week <= 52; week++) {
     if (slot.meal === "Soir" && !isMainDish(nameOf(slot))) warnings.push(`Semaine ${week} ${slot.day} soir: dessert/snack possible « ${nameOf(slot)} ».`);
   }
   const dinners = DAYS.map((day) => slots.find((slot) => slot.day === day && slot.meal === "Soir"));
-  for (let i = 1; i < dinners.length; i++) {
-    const before = category(nameOf(dinners[i - 1]));
-    const after = category(nameOf(dinners[i]));
-    if (before !== "autre" && before === after) warnings.push(`Semaine ${week}: catégorie « ${after} » deux soirs de suite (${nameOf(dinners[i - 1])} → ${nameOf(dinners[i])}).`);
+  // Les déjeuners reprenant les restes, deux dîners de même catégorie à moins de 48 h
+  // d'intervalle sont à signaler, même si un autre repas se glisse entre eux.
+  const previousWeek = week === 1 ? 52 : week - 1;
+  const previousSlots = slotsFor(previousWeek);
+  const recent = ["SAMEDI", "DIMANCHE"].map((day) => {
+    const slot = previousSlots.find((item) => item.day === day && item.meal === "Soir");
+    return category(nameOf(slot));
+  }).filter((value) => value !== "autre");
+  for (const dinner of dinners) {
+    const after = category(nameOf(dinner));
+    if (after !== "autre" && recent.includes(after)) {
+      warnings.push(`Semaine ${week}: catégorie « ${after} » répétée dans la fenêtre de 48 h (restes du midi inclus), autour de « ${nameOf(dinner)} ».`);
+    }
+    recent.push(after);
+    if (recent.length > 2) recent.shift();
   }
   const month = monthForWeek(week);
   for (const slot of dinners) {
