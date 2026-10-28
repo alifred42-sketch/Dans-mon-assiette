@@ -6,7 +6,7 @@ import { RecipeList } from "@/components/recipe-list";
 import { VeganNavigation } from "@/components/vegan-navigation";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const CATEGORY_COPY: Record<string, string> = {
   "": "Inspirez, cliquez... cuisinez chic ! Vos bons petits plats de la semaine à portée de main.",
@@ -95,35 +95,37 @@ export default function RecettesPage() {
     printemps: "printemps", ete: "ete", automne: "automne", hiver: "hiver", bonus: "bonus",
   };
   const selectedCollection = allCollections.find((col) => col.slug === slugByFilter[filter] && col.recipeIds.length > 0);
-  const selectedIds = selectedCollection ? new Set(selectedCollection.recipeIds) : null;
-  const fallbackFilter = (recipe: (typeof carnet.recipes)[number]) => {
-    const hay = [recipe.name, recipe.blurb || "", ...recipeLines(recipe)].join(" ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("fr");
-    switch (filter) {
-      case "sauces": return /sauce|vinaigrette|pesto|coulis|mayonnaise|beurre compose/.test(hay);
-      case "marinades": return /marinade|mariner/.test(hay);
-      case "epices": return /epice|aromate|assaisonnement|melange d'herbes/.test(hay);
-      case "express": return /express|rapide|15 min|20 min|10 min/.test(hay) || (Number.parseInt(recipe.timePrep || "99", 10) + Number.parseInt(recipe.timeCook || "99", 10) <= 20);
-      case "tired": return /fatigue|flemme|facile|sans cuisson|3 ingredients|rapide/.test(hay) || (recipe.steps.length > 0 && recipe.steps.length <= 4);
-      case "mr-cuisine": return recipe.robot.length > 0;
-      case "apero": return /aperitif|apero|verrine|tartinade|tapenade|toast/.test(hay);
-      case "recevoir": return /invites|recevoir|festif|convivial|famille|repas de fete/.test(hay);
-      case "printemps": return selectedIds ? false : /asperge|petit pois|radis|fraise|artichaut/.test(hay);
-      case "ete": return /tomate|courgette|aubergine|melon|peche|barbecue|salade fraiche/.test(hay);
-      case "automne": return /potimarron|courge|champignon|chataigne|pomme|poire|poireau/.test(hay);
-      case "hiver": return /chou|endive|poireau|carotte|navet|veloute|soupe chaude/.test(hay);
-      case "bonus": return recipe.notes.length > 0 || /astuce|variante|bonus|anti gaspi/.test(hay);
-      default: return true;
-    }
-  };
-  const matchingRecipes = carnet.recipes
-    .filter((recipe) => !veganProfile || isVeganRecipe(recipe))
-    .filter((recipe) => veganProfile || !vegetarianProfile || isVegetarianRecipe(recipe))
-    .filter((recipe) => !filter || (selectedIds ? selectedIds.has(recipe.id) : fallbackFilter(recipe)))
-    .filter((recipe) => filter !== "tired" || (
-      recipe.ingredients.filter((line) => line.trim() && !/^ingr[ée]dients à prévoir/i.test(line)).length >= 2 &&
-      recipe.steps.filter((line) => line.trim()).length >= 2
-    ))
-    .sort((a, b) => a.name.localeCompare(b.name, "fr"));
+  const selectedIds = useMemo(() => selectedCollection ? new Set(selectedCollection.recipeIds) : null, [selectedCollection]);
+  const matchingRecipes = useMemo(() => {
+    const fallbackFilter = (recipe: (typeof carnet.recipes)[number]) => {
+      const hay = [recipe.name, recipe.blurb || "", ...recipeLines(recipe)].join(" ").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLocaleLowerCase("fr");
+      switch (filter) {
+        case "sauces": return /sauce|vinaigrette|pesto|coulis|mayonnaise|beurre compose/.test(hay);
+        case "marinades": return /marinade|mariner/.test(hay);
+        case "epices": return /epice|aromate|assaisonnement|melange d.?herbes/.test(hay);
+        case "express": return /express|rapide|15 min|20 min|10 min/.test(hay) || (Number.parseInt(recipe.timePrep || "99", 10) + Number.parseInt(recipe.timeCook || "99", 10) <= 20);
+        case "tired": return /fatigue|flemme|facile|sans cuisson|3 ingredients|rapide/.test(hay) || (recipe.steps.length > 0 && recipe.steps.length <= 4);
+        case "mr-cuisine": return recipe.robot.length > 0;
+        case "apero": return /aperitif|apero|verrine|tartinade|tapenade|toast/.test(hay);
+        case "recevoir": return /invites|recevoir|festif|convivial|famille|repas de fete/.test(hay);
+        case "printemps": return selectedIds ? false : /asperge|petit pois|radis|fraise|artichaut/.test(hay);
+        case "ete": return /tomate|courgette|aubergine|melon|peche|barbecue|salade fraiche/.test(hay);
+        case "automne": return /potimarron|courge|champignon|chataigne|pomme|poire|poireau/.test(hay);
+        case "hiver": return /chou|endive|poireau|carotte|navet|veloute|soupe chaude/.test(hay);
+        case "bonus": return recipe.notes.length > 0 || /astuce|variante|bonus|anti gaspi/.test(hay);
+        default: return true;
+      }
+    };
+    return carnet.recipes
+      .filter((recipe) => !veganProfile || isVeganRecipe(recipe))
+      .filter((recipe) => veganProfile || !vegetarianProfile || isVegetarianRecipe(recipe))
+      .filter((recipe) => !filter || (selectedIds ? selectedIds.has(recipe.id) : fallbackFilter(recipe)))
+      .filter((recipe) => filter !== "tired" || (
+        recipe.ingredients.filter((line) => line.trim() && !/^ingr[ée]dients à prévoir/i.test(line)).length >= 2 &&
+        recipe.steps.filter((line) => line.trim()).length >= 2
+      ))
+      .sort((a, b) => a.name.localeCompare(b.name, "fr"));
+  }, [filter, veganProfile, vegetarianProfile, selectedIds]);
 
   // Le SOS propose 5 recettes complètes par jour, avec une sélection qui tourne automatiquement.
   const dailyOffset = Math.floor(Date.now() / 86400000) % Math.max(1, matchingRecipes.length);
