@@ -34,8 +34,19 @@ const FILTER_LABELS: Record<string, string> = {
 };
 
 function ovenTemperature(recipe: (typeof carnet.recipes)[number]): number | null {
-  const instructions = (recipe.steps || []).join(" ");
-  if (!/(?:au four|enfournez|enfourner|cuire au four|cuisson au four)/i.test(instructions)) return null;
+  const structured = Number(recipe.ovenTemperature);
+  if (Number.isFinite(structured) && structured >= 100 && structured <= 260) return structured;
+  const extended = recipe as typeof recipe & {
+    oven_temperature?: number | null;
+    temperatureFour?: number | null;
+    temperature_four?: number | null;
+  };
+  const alternative = [extended.oven_temperature, extended.temperatureFour, extended.temperature_four]
+    .map(Number).find((value) => Number.isFinite(value) && value >= 100 && value <= 260);
+  if (alternative != null) return alternative;
+  const sectionLines = (recipe.sections || []).flatMap((section) => section.lines || []);
+  const instructions = [...(recipe.steps || []), ...sectionLines].join(" ");
+  if (!/(?:au four|enfournez|enfourner|cuire au four|cuisson au four|four préchauffé|four prechauffe)/i.test(instructions)) return null;
   const match = instructions.match(/(\d{2,3})\s*°\s*C/i);
   if (!match) return null;
   const temperature = Number(match[1]);
