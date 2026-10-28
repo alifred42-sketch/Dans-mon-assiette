@@ -88,7 +88,7 @@ export default function RecettesPage() {
   const filter = searchParams.get("filter") || "";
   useEffect(() => { if (filter === "favoris") router.replace("/mes-recettes?tab=favoris"); }, [filter, router]);
   const allCollections = getCollections();
-  const collections = allCollections.filter((col) => col.recipeIds.length > 0).map((col) => ({ slug: col.slug, name: col.name, count: col.recipeIds.length }));
+  const collections = useMemo(() => allCollections.filter((col) => col.recipeIds.length > 0).map((col) => ({ slug: col.slug, name: col.name, count: col.recipeIds.length })), [allCollections]);
   const slugByFilter: Record<string, string> = {
     sauces: "sauces", marinades: "marinades", epices: "epices", express: "express",
     tired: "fatiguee", "mr-cuisine": "mrcuisine", apero: "apero", recevoir: "invites",
@@ -129,18 +129,18 @@ export default function RecettesPage() {
 
   // Le SOS propose 5 recettes complètes par jour, avec une sélection qui tourne automatiquement.
   const dailyOffset = Math.floor(Date.now() / 86400000) % Math.max(1, matchingRecipes.length);
-  const dailyRecipes = filter === "tired" && matchingRecipes.length > 5
+  const dailyRecipes = useMemo(() => filter === "tired" && matchingRecipes.length > 5
     ? [...matchingRecipes.slice(dailyOffset), ...matchingRecipes.slice(0, dailyOffset)].slice(0, 5)
-    : matchingRecipes;
+    : matchingRecipes, [filter, matchingRecipes, dailyOffset]);
 
-  const timeFilteredRecipes = maxDuration === null
+  const timeFilteredRecipes = useMemo(() => maxDuration === null
     ? dailyRecipes
     : dailyRecipes.filter((recipe) => {
         const prep = durationMinutes(recipe.timePrep);
         const cook = durationMinutes(recipe.timeCook);
         return prep !== null && cook !== null && prep + cook <= maxDuration;
-      });
-  const recipes = timeFilteredRecipes.map((recipe) => ({
+      }), [maxDuration, dailyRecipes]);
+  const recipes = useMemo(() => timeFilteredRecipes.map((recipe) => ({
     id: recipe.id,
     name: recipe.name,
     lines: recipeLines(recipe),
@@ -150,7 +150,7 @@ export default function RecettesPage() {
     airfryer_compatible: recipe.airfryer_compatible,
     airfryer_temps: recipe.airfryer_temps,
     airfryer_temperature: recipe.airfryer_temperature,
-  }));
+  })), [timeFilteredRecipes]);
 
   if (filter === "vegan") return <VeganNavigation showBack />;
 
