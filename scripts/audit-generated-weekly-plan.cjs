@@ -112,9 +112,27 @@ function checkSeason(recipe, month, week, slot) {
   }
 }
 
+const preferences = { householdServings: 2 };
+// Une seule génération sans récursion par semaine. Les frontières et les restes sont
+// ensuite vérifiés avec les plans déjà en cache pour que l'audit reste rapide en CI.
+const generatedPlans = new Map();
 for (let week = 1; week <= 52; week++) {
-  const preferences = { householdServings: 2 };
-  const plan = weekPlan(week, {}, preferences);
+  generatedPlans.set(week, weekPlan(week, {}, preferences, false, false));
+}
+
+for (let week = 1; week <= 52; week++) {
+  const basePlan = generatedPlans.get(week) || [];
+  const previousWeek = week === 1 ? 52 : week - 1;
+  const previousBasePlan = generatedPlans.get(previousWeek) || [];
+  const previousDay = { MARDI: "LUNDI", MERCREDI: "MARDI", JEUDI: "MERCREDI", VENDREDI: "JEUDI", SAMEDI: "VENDREDI", DIMANCHE: "SAMEDI" };
+  const plan = basePlan.map((slot) => {
+    if (slot.meal !== "Midi") return slot;
+    const source = slot.day === "LUNDI" ? previousBasePlan : basePlan;
+    const dinnerDay = slot.day === "LUNDI" ? "DIMANCHE" : previousDay[slot.day];
+    const dinner = source.find((item) => item.day === dinnerDay && item.meal === "Soir");
+    const recipe = getRecipe(dinner?.recipeId);
+    return recipe ? { ...slot, recipeId: recipe.id, name: "Restes du dîner — " + recipe.name } : slot;
+  });
   if (plan.length !== 14) errors.push("Semaine " + week + ": " + plan.length + "/14 créneaux générés.");
   for (const slot of plan) {
     const recipe = getRecipe(slot.recipeId);
@@ -125,8 +143,7 @@ for (let week = 1; week <= 52; week++) {
   }
 
   const dinners = DAYS.map((day) => plan.find((slot) => slot.day === day && slot.meal === "Soir"));
-  const prevWeek = week === 1 ? 52 : week - 1;
-  const previous = weekPlan(prevWeek, {}, preferences, false, false);
+  const previous = previousBasePlan;
   const recent = ["SAMEDI", "DIMANCHE"].map((day) => {
     const slot = previous.find((item) => item.day === day && item.meal === "Soir");
     return category(getRecipe(slot?.recipeId));
