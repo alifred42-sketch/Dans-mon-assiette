@@ -9,7 +9,8 @@
     "lint": "eslint",
     "check:carnet": "node scripts/check-carnet.mjs",
     "migrate:airfryer": "node scripts/migrate-airfryer.mjs",
-    "audit:weekly-plan": "node scripts/audit-weekly-plan.mjs"
+    "audit:weekly-plan": "node scripts/audit-weekly-plan.mjs",
+    "audit:generated-plan": "node scripts/audit-generated-weekly-plan.cjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
