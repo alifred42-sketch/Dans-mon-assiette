@@ -789,7 +789,8 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
       .filter((recipe) => !used.has(recipe.id) && !reserved.has(recipe.id) && recipe.id !== current?.id)
       .map((recipe) => ({ recipe, score: seasonalScore(recipe, season) }))
       .sort((a, b) => (preferences.placardVide ? pantryIngredientRatio(b.recipe) - pantryIngredientRatio(a.recipe) : budgetWeek ? budgetRecipeScore(b.recipe) - budgetRecipeScore(a.recipe) : 0) || b.score - a.score || a.recipe.name.localeCompare(b.recipe.name, "fr"));
-    const preferredAlternatives = preferences.placardVide ? alternatives.filter((item) => pantryIngredientRatio(item.recipe) >= 0.8) : budgetWeek ? alternatives.filter((item) => budgetRecipeScore(item.recipe) >= 2) : alternatives;\n    const replacement = preferredAlternatives.find((item) => item.score > 0)?.recipe || preferredAlternatives[0]?.recipe || alternatives.find((item) => item.score > 0)?.recipe || alternatives[0]?.recipe;
+    const preferredAlternatives = preferences.placardVide ? alternatives.filter((item) => pantryIngredientRatio(item.recipe) >= 0.8) : budgetWeek ? alternatives.filter((item) => budgetRecipeScore(item.recipe) >= 2) : alternatives;
+    const replacement = preferredAlternatives.find((item) => item.score > 0)?.recipe || preferredAlternatives[0]?.recipe || alternatives.find((item) => item.score > 0)?.recipe || alternatives[0]?.recipe;
     if (!replacement) return { ...slot, name: "Aucune recette complète validée pour ces critères", recipeId: null };
     used.add(replacement.id);
     return { ...slot, name: replacement.name, recipeId: replacement.id };
