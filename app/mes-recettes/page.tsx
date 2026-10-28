@@ -143,11 +143,11 @@ export default function MesRecettesPage() {
     <div className="space-y-6 pb-8">
       <header className="space-y-2">
         <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#668775]">Votre collection personnelle</p>
-        <h1 className="font-heading text-3xl">Mes recettes</h1>
+        <h1 className="flex items-center gap-2 font-heading text-3xl"><Heart className="size-8 fill-[#E32636] text-[#E32636]" aria-hidden="true" /> Mes favoris</h1>
         <p className="text-sm leading-relaxed text-[#555551]">Tes recettes préférées du carnet, tes créations et celles que tu as repérées en ligne.</p>
       </header>
 
-      <nav aria-label="Sous-navigation Mes recettes" className="grid grid-cols-3 gap-2">
+      <nav aria-label="Sous-navigation Mes favoris" className="grid grid-cols-3 gap-2">
         {tabs.map((tab) => <Link key={tab.id} href={`/mes-recettes?tab=${tab.id}`} aria-current={activeTab === tab.id ? "page" : undefined} className={`flex min-h-12 items-center justify-center rounded-xl px-2 py-2 text-center text-xs font-extrabold shadow-sm transition sm:text-sm ${activeTab === tab.id ? "ring-2 ring-black/10" : "opacity-75 hover:opacity-100"}`} style={{ backgroundColor: tab.color, color: tab.activeText }}>{tab.label}</Link>)}
       </nav>
 
