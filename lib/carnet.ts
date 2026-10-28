@@ -459,7 +459,7 @@ const rawValidatedRecipeIds = new Set<string>(
 
 export type PlanningPreferences = {
   etudiant?: boolean; vegetarien?: boolean; isVegetarian?: boolean; vegan?: boolean; isVegan?: boolean; halal?: boolean;
-  sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean;
+  sansGluten?: boolean; sansLactose?: boolean; sansFruitsCoque?: boolean; placardVide?: boolean;
 };
 
 /** Le profil vegan n'accepte que les fiches explicitement étiquetées vegan
@@ -519,6 +519,30 @@ function seasonalScore(recipe: Recipe, season: Season): number {
     ...(recipe.sections || []).flatMap((section) => [section.title, ...section.lines]),
   ].join(" "));
   return SEASON_TERMS[season].reduce((score, term) => score + (text.includes(normalizedSeasonText(term)) ? 1 : 0), 0);
+}
+
+function isFourthWeekOfMonth(week: number): boolean {
+  const year = new Date().getFullYear();
+  const jan4 = new Date(year, 0, 4);
+  const monday = new Date(jan4);
+  monday.setDate(jan4.getDate() - ((jan4.getDay() + 6) % 7) + (Math.max(1, Math.min(52, week)) - 1) * 7);
+  return monday.getDate() >= 22;
+}
+
+function pantryIngredientRatio(recipe: Recipe): number {
+  const lines = (recipe.ingredients || []).filter((line) => line.trim());
+  if (!lines.length) return 0;
+  const pantry = /lentilles|pois chiches|haricots secs|riz|pates|semoule|couscous|boulgour|farine|conserve|tomates concassees|thon en boite|mais en boite|bouillon|huile|vinaigre|epices|flocons d avoine|polenta|quinoa|legumes surgeles/i;
+  return lines.filter((line) => pantry.test(normalizedSeasonText(line))).length / lines.length;
+}
+
+function budgetRecipeScore(recipe: Recipe): number {
+  const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
+  let score = 0;
+  for (const token of ["lentille", "oeuf", "pomme de terre", "riz", "pates", "pois chiche", "haricot", "conserve", "tomate", "semoule", "sardine", "thon", "carotte", "chou", "polenta"]) {
+    if (text.includes(token)) score += 1;
+  }
+  return score;
 }
 
 function isMainDishCandidate(recipe: Recipe): boolean {
@@ -620,9 +644,14 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const season = seasonForWeek(week);
   const used = new Set<string>();
   const plannedRecipeIds = new Set(carnet.plan.map((slot) => slot.recipeId).filter(Boolean));
+  const budgetWeek = isFourthWeekOfMonth(week);
   const eligibleCandidates = carnet.recipes
     .filter((recipe) => isValidatedRecipe(recipe) && isMainDishCandidate(recipe) && eligibleForPreferences(recipe, preferences) && isSeasonCompatible(recipe, season))
-    .sort((a, b) => Number(plannedRecipeIds.has(b.id)) - Number(plannedRecipeIds.has(a.id)) || a.name.localeCompare(b.name, "fr"));
+    .sort((a, b) => {
+      if (preferences.placardVide) return pantryIngredientRatio(b) - pantryIngredientRatio(a) || a.name.localeCompare(b.name, "fr");
+      if (budgetWeek) return budgetRecipeScore(b) - budgetRecipeScore(a) || a.name.localeCompare(b.name, "fr");
+      return Number(plannedRecipeIds.has(b.id)) - Number(plannedRecipeIds.has(a.id)) || a.name.localeCompare(b.name, "fr");
+    });
   // Exact duplicate cards from overlapping PDF imports must not get extra weight in weekly recipe selection.
   // The full cards remain available in their source collections; only the planning pool is deduplicated.
   const seenRecipeContent = new Set<string>();
@@ -644,7 +673,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
       if (!quick) return true;
       const total = (durationMinutes(recipe.timePrep) || 0) + (durationMinutes(recipe.timeCook) || 0);
       return total <= 20;
-    }).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+    }).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || (preferences.placardVide ? pantryIngredientRatio(b) - pantryIngredientRatio(a) : budgetWeek ? budgetRecipeScore(b) - budgetRecipeScore(a) : 0) || a.name.localeCompare(b.name, "fr"));
     if (!candidates.length) return undefined;
     const bestScore = seasonalScore(candidates[0], season);
     const bestPool = candidates.filter((recipe) => seasonalScore(recipe, season) === bestScore);
@@ -693,17 +722,17 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
   const transformedCandidates = eligible
     .filter((recipe) => !reserved.has(recipe.id) && recipe.id !== pivot?.id && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
     .filter((recipe) => pivotToken && normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" ")).includes(normalizedSeasonText(pivotToken)))
-    .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+    .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || (preferences.placardVide ? pantryIngredientRatio(b) - pantryIngredientRatio(a) : budgetWeek ? budgetRecipeScore(b) - budgetRecipeScore(a) : 0) || a.name.localeCompare(b.name, "fr"));
   const fallbackTransformations = eligible
     .filter((recipe) => !reserved.has(recipe.id) && recipe.id !== pivot?.id && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
     .filter((recipe) => (plantProfile ? plantPattern : meatPattern).test(roleText(recipe)))
-    .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+    .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || (preferences.placardVide ? pantryIngredientRatio(b) - pantryIngredientRatio(a) : budgetWeek ? budgetRecipeScore(b) - budgetRecipeScore(a) : 0) || a.name.localeCompare(b.name, "fr"));
   const transformedPivot = thursdayOverride || transformedCandidates[(Math.max(1, week) - 1) % Math.max(1, transformedCandidates.length)] || fallbackTransformations[0];
   if (transformedPivot) reserved.add(transformedPivot.id);
 
   const pleasurePool = eligible
     .filter((recipe) => !reserved.has(recipe.id) && !/soupe|veloute|potage|bouillon/.test(roleText(recipe)))
-    .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
+    .sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || (preferences.placardVide ? pantryIngredientRatio(b) - pantryIngredientRatio(a) : budgetWeek ? budgetRecipeScore(b) - budgetRecipeScore(a) : 0) || a.name.localeCompare(b.name, "fr"));
   const topScore = pleasurePool.length ? seasonalScore(pleasurePool[0], season) : -1;
   const topPool = pleasurePool.filter((recipe) => seasonalScore(recipe, season) === topScore);
   const start = topPool.length ? (Math.max(1, week) - 1) % topPool.length : 0;
@@ -742,7 +771,7 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
       return { ...slot, name: matrixSelection.name, recipeId: matrixSelection.recipe.id };
     }
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
-    const currentValid = current ? isValidatedRecipe(current) && eligibleForPreferences(current, preferences) && isSeasonCompatible(current, season) && !reserved.has(current.id) : false;
+    const currentValid = current ? isValidatedRecipe(current) && isMainDishCandidate(current) && eligibleForPreferences(current, preferences) && isSeasonCompatible(current, season) && !reserved.has(current.id) : false;
     const currentScore = current ? seasonalScore(current, season) : 0;
     if (current && currentValid && currentScore > 0 && !used.has(current.id)) {
       used.add(current.id);
