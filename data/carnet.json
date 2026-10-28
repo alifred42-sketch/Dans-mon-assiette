@@ -4264,8 +4264,8 @@
       "servings": "4 personnes",
       "blurb": "🏷️ Catégorie : 🍝 Plats réconfort",
       "validated": true,
-      "airfryer_compatible": false,
-      "airfryer_temps": null,
+      "airfryer_compatible": true,
+      "airfryer_temps": 24,
       "airfryer_temperature": null
     },
     {
@@ -5029,8 +5029,8 @@
       "prep": "15 min",
       "cook": "35 min",
       "validated": true,
-      "airfryer_compatible": false,
-      "airfryer_temps": null,
+      "airfryer_compatible": true,
+      "airfryer_temps": 32,
       "airfryer_temperature": null
     },
     {
@@ -14491,9 +14491,9 @@
       "servings": "4 personnes",
       "blurb": "🏷️ Catégorie : 🍟 Repas plaisir maîtrisé",
       "validated": true,
-      "airfryer_compatible": false,
-      "airfryer_temps": null,
-      "airfryer_temperature": null
+      "airfryer_compatible": true,
+      "airfryer_temps": 20,
+      "airfryer_temperature": 100
     },
     {
       "id": "r-fffc139d41",
@@ -48136,8 +48136,8 @@
       "timeCook": "25 min",
       "servings": "4 personnes",
       "validated": true,
-      "airfryer_compatible": false,
-      "airfryer_temps": null,
+      "airfryer_compatible": true,
+      "airfryer_temps": 20,
       "airfryer_temperature": null
     },
     {
@@ -48522,8 +48522,8 @@
       "timeCook": "20 min",
       "servings": 4,
       "validated": true,
-      "airfryer_compatible": false,
-      "airfryer_temps": null,
+      "airfryer_compatible": true,
+      "airfryer_temps": 16,
       "airfryer_temperature": null
     },
     {
@@ -49338,8 +49338,8 @@
       "timeCook": "20 min",
       "servings": 4,
       "validated": true,
-      "airfryer_compatible": false,
-      "airfryer_temps": null,
+      "airfryer_compatible": true,
+      "airfryer_temps": 16,
       "airfryer_temperature": null
     },
     {
@@ -50554,8 +50554,8 @@
       "timeCook": "20 min",
       "servings": 4,
       "validated": true,
-      "airfryer_compatible": false,
-      "airfryer_temps": null,
+      "airfryer_compatible": true,
+      "airfryer_temps": 16,
       "airfryer_temperature": null
     },
     {
@@ -52704,8 +52704,8 @@
       "timeCook": "20 min",
       "servings": 4,
       "validated": true,
-      "airfryer_compatible": false,
-      "airfryer_temps": null,
+      "airfryer_compatible": true,
+      "airfryer_temps": 16,
       "airfryer_temperature": null
     },
     {
@@ -85648,6 +85648,7 @@
       ],
       "robot": [],
       "notes": [
+        "Accessoire de présentation facultatif : 2 seringues alimentaires propres, sans aiguille.",
         "Accessoire de présentation facultatif : 2 seringues alimentaires propres, sans aiguille.",
         "Accessoire de présentation facultatif : 2 seringues alimentaires propres, sans aiguille.",
         "Accessoire de présentation facultatif : 2 seringues alimentaires propres, sans aiguille.",
