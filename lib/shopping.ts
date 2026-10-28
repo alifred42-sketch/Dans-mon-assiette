@@ -233,15 +233,34 @@ function pluralizeIngredient(name: string): string {
   return lower + "s";
 }
 
+// Index construit une seule fois : auparavant, chaque ligne d'ingrédient
+// rescannait tout le catalogue (1 600+ recettes), ce qui ralentissait fortement Courses.
+const linkedSauceCandidates = carnet.recipes
+  .filter((candidate) => {
+    const name = fold(candidate.name);
+    return /(^|\\s)(sauce|marinade|vinaigrette|pesto|coulis)\\b/.test(name)
+      && !/poulet|cabillaud|saumon|steak|boulettes|colin|merguez|ravioles|paupiettes|wrap/.test(name);
+  })
+  .map((recipe) => ({ recipe, foldedName: fold(recipe.name) }))
+  .sort((a, b) => b.recipe.name.length - a.recipe.name.length);
+const linkedSauceMatchCache = new Map<string, (typeof carnet.recipes)[number] | undefined>();
+
 function findLinkedSauce(line: string) {
   const cleaned = fold(line);
-  const sauces = carnet.recipes.filter((candidate) => { const name = fold(candidate.name); return /(^|\s)(sauce|marinade|vinaigrette|pesto|coulis)\b/.test(name) && !/poulet|cabillaud|saumon|steak|boulettes|colin|merguez|ravioles|paupiettes|wrap/.test(name); });
-  const exact = sauces.filter((candidate) => cleaned.includes(fold(candidate.name))).sort((a, b) => b.name.length - a.name.length)[0];
-  if (exact) return exact;
-  return sauces.filter((candidate) => {
-    const name = fold(candidate.name);
-    return cleaned.length >= 6 && name.includes(cleaned);
-  }).sort((a, b) => a.name.length - b.name.length)[0];
+  if (linkedSauceMatchCache.has(cleaned)) return linkedSauceMatchCache.get(cleaned);
+  const exact = linkedSauceCandidates.find(({ foldedName }) => cleaned.includes(foldedName))?.recipe;
+  if (exact) {
+    linkedSauceMatchCache.set(cleaned, exact);
+    return exact;
+  }
+  const partial = cleaned.length >= 6
+    ? linkedSauceCandidates
+        .filter(({ foldedName }) => foldedName.includes(cleaned))
+        .sort((a, b) => a.recipe.name.length - b.recipe.name.length)[0]?.recipe
+    : undefined;
+  if (linkedSauceMatchCache.size > 2000) linkedSauceMatchCache.clear();
+  linkedSauceMatchCache.set(cleaned, partial);
+  return partial;
 }
 
 export function shoppingForWeek(week: number, servingsByRecipe: Record<string, number> = {}, overrides: Record<string, string> = {}, preferences: PlanningPreferences = {}, freezerSlotKeys: string[] = []): ShoppingItem[] {
