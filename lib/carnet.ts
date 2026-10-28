@@ -643,20 +643,18 @@ function recipePillars(recipe: Recipe): { vegetables: Set<string>; starches: Set
 }
 
 const TRANSFORMATION_TOKENS = ["pois chiches", "lentilles", "haricots", "poulet", "dinde", "boeuf", "veau", "porc", "agneau", "saumon", "cabillaud", "thon", "maquereau", "colin", "lieu", "crevette", "tofu", "falafel", "oeuf"];
-const transformationTokenCache = new Map<string, Set<string>>();
+const transformationTokenCache = new WeakMap<Recipe, Set<string>>();
 
 function transformationTokens(recipe: Recipe): Set<string> {
-  const cached = transformationTokenCache.get(recipe.id);
+  const cached = transformationTokenCache.get(recipe);
   if (cached) return cached;
   const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
   const found = new Set(TRANSFORMATION_TOKENS.filter((token) => text.includes(normalizedSeasonText(token))));
-  transformationTokenCache.set(recipe.id, found);
+  transformationTokenCache.set(recipe, found);
   return found;
 }
 
-function sharesPivotIngredient(candidate: Recipe, pivotRecipeId: string): boolean {
-  const pivot = recipesById.get(pivotRecipeId);
-  if (!pivot) return false;
+function sharesPivotIngredient(candidate: Recipe, pivot: Recipe): boolean {
   const pivotTokens = transformationTokens(pivot);
   const candidateTokens = transformationTokens(candidate);
   return [...pivotTokens].some((token) => candidateTokens.has(token));
@@ -676,7 +674,7 @@ function enforceDinnerCategoryCooldown(
   preferences: PlanningPreferences,
   season: Season,
   previousDinnerCategories: string[] = [],
-  daughterPivotRecipeId?: string,
+  daughterPivotRecipe?: Recipe,
 ): PlanSlot[] {
   const days = ["LUNDI", "MARDI", "MERCREDI", "JEUDI", "VENDREDI", "SAMEDI", "DIMANCHE"];
   const result = [...slots];
@@ -702,7 +700,7 @@ function enforceDinnerCategoryCooldown(
         !recentCategories.includes(mainDishCategory(candidate)) &&
         // Si le dîner du jeudi est la recette fille, toute correction de diversité doit
         // conserver un ingrédient du pivot du mardi (sauf choix explicite de l’utilisatrice).
-        (day !== "JEUDI" || !daughterPivotRecipeId || sharesPivotIngredient(candidate, daughterPivotRecipeId)) &&
+        (day !== "JEUDI" || !daughterPivotRecipeId || sharesPivotIngredient(candidate, daughterPivotRecipe)) &&
         fitsWeeklyPillarCaps(candidate, selectedDinners)
       ).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
       const replacement = candidates[(Math.max(1, week + days.indexOf(day)) - 1) % Math.max(1, candidates.length)];
@@ -914,8 +912,8 @@ export function weekPlan(
       return mainDishCategory(getRecipe(dinner?.recipeId));
     });
   }
-  const daughterPivotId = overrides[`${week}|JEUDI|Soir`] ? undefined : pivot?.id;
-  const safeResult = enforceDinnerCategoryCooldown(result, eligible, reserved, week, preferences, season, previousDinnerCategories, daughterPivotId);
+  const daughterPivotRecipe = overrides[`${week}|JEUDI|Soir`] ? undefined : pivot;
+  const safeResult = enforceDinnerCategoryCooldown(result, eligible, reserved, week, preferences, season, previousDinnerCategories, daughterPivotRecipe);
   if (!applyLeftovers) return safeResult;
 
   // Tous les déjeuners reprennent le dîner de la veille. Une substitution explicite
