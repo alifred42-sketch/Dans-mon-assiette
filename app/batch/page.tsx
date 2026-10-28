@@ -125,15 +125,26 @@ export default function BatchPage() {
       } catch { setRecipeOverrides({}); }
       try {
         const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-preferences") || "{}");
-        setPreferences(saved); setRobotPriority(Boolean(saved.robot));
+        setPreferences(saved);
+        setRobotPriority(Boolean(saved.robot));
       } catch { setPreferences({}); setRobotPriority(false); }
+      try { setHouseholdServings(Math.max(1, Math.min(20, Number(localStorage.getItem("assiette-household-servings") || "4")))); } catch { setHouseholdServings(4); }
+      setFreezerItems(readVirtualFreezer());
     };
     refresh();
     window.addEventListener("storage", refresh);
     window.addEventListener("cuisine-chic-ouf-plan-change", refresh);
     window.addEventListener("cuisine-chic-ouf-preferences-change", refresh);
-    return () => { window.removeEventListener("storage", refresh); window.removeEventListener("cuisine-chic-ouf-plan-change", refresh); window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh); };
-  }, []);
+    window.addEventListener("cuisine-chic-ouf-freezer-change", refresh);
+    window.addEventListener("assiette-servings-change", refresh);
+    return () => {
+      window.removeEventListener("storage", refresh);
+      window.removeEventListener("cuisine-chic-ouf-plan-change", refresh);
+      window.removeEventListener("cuisine-chic-ouf-preferences-change", refresh);
+      window.removeEventListener("cuisine-chic-ouf-freezer-change", refresh);
+      window.removeEventListener("assiette-servings-change", refresh);
+    };
+  }, [week]);
   const storageKey = `cuisine-chic-ouf-batch-v2-${week}`;
   useEffect(() => {
     setReady(false);
