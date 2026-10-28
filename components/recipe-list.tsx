@@ -40,6 +40,7 @@ export type RecipeListItem = {
   name: string;
   lines?: string[];
   timeCook?: string;
+  ovenTime?: string;
   ovenTemperature?: number | null;
   airfryer_compatible?: boolean;
   airfryer_temps?: number | null;
@@ -170,11 +171,13 @@ export function RecipeList({
               <li key={`${item.id}-${query}`} className="flex items-start gap-2 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
                 <Link href={week ? `/fiche/${item.id}?w=${week}` : `/fiche/${item.id}`} className="min-w-0 flex-1 rounded-xl px-1 py-1">
                   <p className="text-base leading-snug">{item.name}</p>
-                  {item.timeCook && item.ovenTemperature ? (
-                    <div className="mt-2 flex flex-wrap gap-2 text-xs">
-                      <span className="rounded-full border border-[#D8D8D0] bg-white/70 px-2.5 py-1 font-semibold text-[#4D4D48]">🔥 Four : {item.timeCook} à {item.ovenTemperature}°C</span>
+                  {(item.ovenTemperature != null && (item.ovenTime || item.timeCook)) || (item.airfryer_compatible && item.airfryer_temps != null && item.airfryer_temperature != null) ? (
+                    <div className="mt-2 grid grid-cols-1 gap-2 text-xs sm:grid-cols-2" aria-label="Modes de cuisson disponibles">
+                      {item.ovenTemperature != null && (item.ovenTime || item.timeCook) ? (
+                        <span className="rounded-xl border border-[#D8D8D0] bg-white/80 px-3 py-2 font-semibold text-[#4D4D48]">🔥 Four : {item.ovenTime || item.timeCook} à {item.ovenTemperature}°C</span>
+                      ) : <span className="rounded-xl border border-dashed border-[#D8D8D0] px-3 py-2 text-[#777773]">🔥 Four : paramètres à vérifier sur la fiche</span>}
                       {item.airfryer_compatible && item.airfryer_temps != null && item.airfryer_temperature != null ? (
-                        <span className={`rounded-full border px-2.5 py-1 font-bold ${hasAirfryer ? "border-[#E69A4A] bg-[#FFF0D9] text-[#7A3E08] ring-2 ring-[#F2C078]/50" : "border-[#E7E5DE] bg-[#F9F9F7] text-[#4D4D48]"}`}>🍟 Airfryer : {item.airfryer_temps} min à {item.airfryer_temperature}°C</span>
+                        <span className={`rounded-xl border px-3 py-2 font-bold ${hasAirfryer ? "border-[#E69A4A] bg-[#FFF0D9] text-[#7A3E08] ring-2 ring-[#F2C078]/50" : "border-[#E7E5DE] bg-[#F9F9F7] text-[#4D4D48]"}`}>🍟 Airfryer : {item.airfryer_temps} min à {item.airfryer_temperature}°C{hasAirfryer ? " · Votre équipement" : ""}</span>
                       ) : null}
                     </div>
                   ) : null}
