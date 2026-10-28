@@ -382,11 +382,23 @@ function normalizedSeasonText(value: string): string {
 
 function isSeasonCompatible(recipe: Recipe, season: Season): boolean {
   const title = normalizedSeasonText(recipe.name || "");
+  const ingredients = normalizedSeasonText((recipe.ingredients || []).join(" "));
+  const text = title + " " + ingredients;
   const summerOnly = /gaspacho|gazpacho|soupe froide|soupe glacee|veloute froid|melon|pasteque|estival|estivale|\bd ete\b|\bde ete\b|aux legumes du soleil/i;
   const winterOnly = /hivernal|hivernale|\bd hiver\b|\bde hiver\b|de noel|potimarron|chataigne|chataignes|endive|chou de bruxelles/i;
   if (season !== "ete" && summerOnly.test(title)) return false;
   if ((season === "ete" || season === "printemps") && winterOnly.test(title)) return false;
   if (season === "printemps" && /de noel/i.test(title)) return false;
+
+  // Exclusions prudentes sur les produits explicitement nommés dans la fiche.
+  // On ne bloque pas les recettes qui parlent simplement de « légumes de saison ».
+  const outOfSeason: Record<Season, RegExp> = {
+    hiver: /\b(?:courgettes?|aubergines?|poivrons?|concombres?|melons?|pasteques?|peches?|nectarines?|abricots?|fraises?|framboises?|groseilles?|tomates fraiches?)\b/i,
+    printemps: /\b(?:melons?|pasteques?|potimarrons?|courges? butternut|chataignes?|choux de bruxelles|clementines?|mandarines?)\b/i,
+    ete: /\b(?:potimarrons?|courges? butternut|chataignes?|choux de bruxelles|clementines?|mandarines?)\b/i,
+    automne: /\b(?:melons?|pasteques?|fraises?|framboises?|groseilles?|courgettes?|aubergines?)\b/i,
+  };
+  if (outOfSeason[season].test(text)) return false;
   return true;
 }
 
@@ -547,7 +559,8 @@ function budgetRecipeScore(recipe: Recipe): number {
 
 function isMainDishCandidate(recipe: Recipe): boolean {
   const name = normalizedSeasonText(recipe.name);
-  return !/(?:dessert|snack|truffes?|bonbons?|cookies?|biscuits? sucre|brownies?|mousse au chocolat|panna cotta|tiramisu|compote|granola|energy balls|boules d energie|barres energetiques|gaufres? sucrees|crepes sucrees|fondants? au chocolat|rochers coco|madeleines|financiers|muffins? sucrees?)/i.test(name);
+  const notAMainDish = /(?:dessert|snack|truffes?|bonbons?|cookies?|biscuits? sucre|brownies?|mousse au chocolat|panna cotta|tiramisu|compote|granola|energy balls|boules d energie|barres energetiques|gaufres? sucrees|crepes sucrees|fondants? au chocolat|rochers coco|madeleines|financiers|muffins? sucrees?|chips|pop.?corn|pop.?corn|bonbons|sucettes|mendiants|buche|bouchees chocolatees|bouchees aperitives|mini.?feuilletes|gressins|crackers|tartinade|dip\b|cocktail|mocktail|smoothie|boisson)/i;
+  return !notAMainDish.test(name) && !isSauceOrSideRecipe(recipe.name);
 }
 
 function mainDishCategory(recipe: Recipe | undefined): string {
@@ -810,7 +823,8 @@ export function weekPlan(week: number, overrides: Record<string, string> = {}, p
     SAMEDI: "VENDREDI",
     DIMANCHE: "SAMEDI",
   };
-  return result.map((slot) => {
+  // Important : conserver les corrections de sécurité/diversité appliquées juste au-dessus.
+  return safeResult.map((slot) => {
     if (slot.meal !== "Midi") return slot;
     const overrideId = overrides[`${slot.week}|${slot.day}|${slot.meal}`];
     if (overrideId) {
