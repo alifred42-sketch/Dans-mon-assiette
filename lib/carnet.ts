@@ -386,7 +386,7 @@ export function seasonalReplacement(
       isValidatedRecipe(recipe) &&
       eligibleForPreferences(recipe, preferences) &&
       isMealRecipe(recipe) &&
-      isSeasonCompatible(recipe, season) &&
+      isSeasonCompatible(recipe, season, monthForWeek(week)) &&
       seasonalScore(recipe, season) > 0
     )
     .map((recipe) => {
@@ -406,25 +406,47 @@ function normalizedSeasonText(value: string): string {
   return value.toLocaleLowerCase("fr").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-function isSeasonCompatible(recipe: Recipe, season: Season): boolean {
+function isSeasonCompatible(recipe: Recipe, season: Season, month: number): boolean {
   const title = normalizedSeasonText(recipe.name || "");
-  const ingredients = normalizedSeasonText((recipe.ingredients || []).join(" "));
-  const text = title + " " + ingredients;
+  const text = normalizedSeasonText([recipe.name, ...(recipe.ingredients || [])].join(" "));
   const summerOnly = /gaspacho|gazpacho|soupe froide|soupe glacee|veloute froid|melon|pasteque|estival|estivale|\bd ete\b|\bde ete\b|aux legumes du soleil/i;
   const winterOnly = /hivernal|hivernale|\bd hiver\b|\bde hiver\b|de noel|potimarron|chataigne|chataignes|endive|chou de bruxelles/i;
   if (season !== "ete" && summerOnly.test(title)) return false;
   if ((season === "ete" || season === "printemps") && winterOnly.test(title)) return false;
   if (season === "printemps" && /de noel/i.test(title)) return false;
 
-  // Exclusions prudentes sur les produits explicitement nommés dans la fiche.
-  // On ne bloque pas les recettes qui parlent simplement de « légumes de saison ».
-  const outOfSeason: Record<Season, RegExp> = {
-    hiver: /\b(?:courgettes?|aubergines?|poivrons?|concombres?|haricots verts?|melons?|pasteques?|peches?|nectarines?|abricots?|fraises?|framboises?|groseilles?|tomates fraiches?|asperges?)\b/i,
-    printemps: /\b(?:melons?|pasteques?|potimarrons?|courges? butternut|chataignes?|choux de bruxelles|clementines?|mandarines?|abricots?|peches?|nectarines?)\b/i,
-    ete: /\b(?:potimarrons?|courges? butternut|chataignes?|choux de bruxelles|clementines?|mandarines?|endives?|panais?)\b/i,
-    automne: /\b(?:melons?|pasteques?|fraises?|framboises?|groseilles?|courgettes?|aubergines?|poivrons?|concombres?|haricots verts?|peches?|nectarines?|abricots?)\b/i,
-  };
-  if (outOfSeason[season].test(text)) return false;
+  // Fenêtres indicatives de disponibilité des produits frais en France métropolitaine.
+  // Les conserves, coulis et produits surgelés ne sont pas considérés hors saison.
+  const seasonalWindows: { pattern: RegExp; months: number[] }[] = [
+    { pattern: /\b(?:tomates?|tomate cerise)\b/i, months: [6, 7, 8, 9] },
+    { pattern: /\bcourgettes?\b/i, months: [6, 7, 8, 9, 10] },
+    { pattern: /\baubergines?\b/i, months: [7, 8, 9] },
+    { pattern: /\bpoivrons?\b/i, months: [7, 8, 9, 10] },
+    { pattern: /\bconcombres?\b/i, months: [5, 6, 7, 8, 9] },
+    { pattern: /\bmelons?\b/i, months: [6, 7, 8, 9] },
+    { pattern: /\b(?:pasteques?|peches?|nectarines?)\b/i, months: [6, 7, 8, 9] },
+    { pattern: /\babricots?\b/i, months: [6, 7, 8] },
+    { pattern: /\b(?:fraises?|framboises?|groseilles?)\b/i, months: [4, 5, 6, 7, 8, 9] },
+    { pattern: /\basperges?\b/i, months: [3, 4, 5, 6] },
+    { pattern: /\bharicots verts?\b/i, months: [6, 7, 8, 9, 10] },
+    { pattern: /\bpotimarrons?\b/i, months: [9, 10, 11, 12, 1, 2] },
+    { pattern: /\bcourges? butternut\b/i, months: [9, 10, 11, 12, 1, 2] },
+    { pattern: /\bchataignes?\b/i, months: [9, 10, 11, 12] },
+    { pattern: /\bchoux? de bruxelles\b/i, months: [9, 10, 11, 12, 1, 2, 3] },
+    { pattern: /\bendives?\b/i, months: [10, 11, 12, 1, 2, 3, 4] },
+    { pattern: /\bpanais\b/i, months: [10, 11, 12, 1, 2, 3] },
+    { pattern: /\bclementines?\b/i, months: [11, 12, 1, 2] },
+    { pattern: /\bmandarines?\b/i, months: [11, 12, 1, 2] },
+    { pattern: /\bpoireaux?\b/i, months: [9, 10, 11, 12, 1, 2, 3, 4] },
+    { pattern: /\b(?:pommes?|poires?)\b/i, months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5] },
+  ];
+  const preserved = /conserve|concassee|concassees|coulis|passata|en boite|en conserve|surgel|tomates pelees|concentre de tomate|compote|confiture/i;
+  for (const rawLine of recipe.ingredients || []) {
+    const line = normalizedSeasonText(rawLine);
+    if (preserved.test(line)) continue;
+    if (seasonalWindows.some((rule) => rule.pattern.test(line) && !rule.months.includes(month))) return false;
+  }
+  if (season === "hiver" && /gaspacho|gazpacho|soupe froide|veloute froid/.test(text)) return false;
   return true;
 }
 
@@ -655,7 +677,7 @@ function enforceDinnerCategoryCooldown(
       const candidates = eligible.filter((candidate) =>
         !alreadyUsed.has(candidate.id) && !reserved.has(candidate.id) && candidate.id !== current.recipeId &&
         isMainDishCandidate(candidate) && isValidatedRecipe(candidate) &&
-        eligibleForPreferences(candidate, preferences) && isSeasonCompatible(candidate, season) &&
+        eligibleForPreferences(candidate, preferences) && isSeasonCompatible(candidate, season, monthForWeek(week)) &&
         !recentCategories.includes(mainDishCategory(candidate)) &&
         fitsWeeklyPillarCaps(candidate, selectedDinners)
       ).sort((a, b) => seasonalScore(b, season) - seasonalScore(a, season) || a.name.localeCompare(b.name, "fr"));
@@ -699,7 +721,7 @@ export function weekPlan(
   const plannedRecipeIds = new Set(carnet.plan.map((slot) => slot.recipeId).filter(Boolean));
   const budgetWeek = isFourthWeekOfMonth(week);
   const eligibleCandidates = carnet.recipes
-    .filter((recipe) => isValidatedRecipe(recipe) && isMainDishCandidate(recipe) && eligibleForPreferences(recipe, preferences) && isSeasonCompatible(recipe, season))
+    .filter((recipe) => isValidatedRecipe(recipe) && isMainDishCandidate(recipe) && eligibleForPreferences(recipe, preferences) && isSeasonCompatible(recipe, season, monthForWeek(week)))
     .sort((a, b) => {
       if (preferences.placardVide) return pantryIngredientRatio(b) - pantryIngredientRatio(a) || a.name.localeCompare(b.name, "fr");
       if (budgetWeek) return budgetRecipeScore(b) - budgetRecipeScore(a) || a.name.localeCompare(b.name, "fr");
@@ -744,7 +766,7 @@ export function weekPlan(
     const isCurated = !userId && Boolean(curatedId);
     const id = userId || curatedId;
     const recipe = id ? recipesById.get(id) : undefined;
-    if (!recipe || !isValidatedRecipe(recipe) || !isMainDishCandidate(recipe) || !eligibleForPreferences(recipe, preferences) || !isSeasonCompatible(recipe, season)) return undefined;
+    if (!recipe || !isValidatedRecipe(recipe) || !isMainDishCandidate(recipe) || !eligibleForPreferences(recipe, preferences) || !isSeasonCompatible(recipe, season, monthForWeek(week))) return undefined;
     if (isCurated && preferences.placardVide && pantryIngredientRatio(recipe) < 0.8) return undefined;
     if (isCurated && budgetWeek && budgetRecipeScore(recipe) < 2) return undefined;
     // Les choix éditoriaux doivent être respectés même s'ils ne correspondent pas au rôle
@@ -836,7 +858,7 @@ export function weekPlan(
       return { ...slot, name: matrixSelection.name, recipeId: matrixSelection.recipe.id };
     }
     const current = slot.recipeId ? recipesById.get(slot.recipeId) : undefined;
-    const currentValid = current ? isValidatedRecipe(current) && isMainDishCandidate(current) && eligibleForPreferences(current, preferences) && isSeasonCompatible(current, season) && (!preferences.placardVide || pantryIngredientRatio(current) >= 0.8) && (!budgetWeek || budgetRecipeScore(current) >= 2) && !reserved.has(current.id) : false;
+    const currentValid = current ? isValidatedRecipe(current) && isMainDishCandidate(current) && eligibleForPreferences(current, preferences) && isSeasonCompatible(current, season, monthForWeek(week)) && (!preferences.placardVide || pantryIngredientRatio(current) >= 0.8) && (!budgetWeek || budgetRecipeScore(current) >= 2) && !reserved.has(current.id) : false;
     const currentScore = current ? seasonalScore(current, season) : 0;
     if (current && currentValid && currentScore > 0 && !used.has(current.id)) {
       used.add(current.id);
@@ -884,7 +906,7 @@ export function weekPlan(
     const overrideId = overrides[`${slot.week}|${slot.day}|${slot.meal}`];
     if (overrideId) {
       const switched = recipesById.get(overrideId);
-      if (switched && isValidatedRecipe(switched) && eligibleForPreferences(switched, preferences) && isSeasonCompatible(switched, season)) {
+      if (switched && isValidatedRecipe(switched) && eligibleForPreferences(switched, preferences) && isSeasonCompatible(switched, season, monthForWeek(week))) {
         return { ...slot, recipeId: switched.id, name: switched.name };
       }
     }
