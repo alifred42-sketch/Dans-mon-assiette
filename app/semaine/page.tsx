@@ -104,9 +104,9 @@ export default function WeekPage() {
       <div className="mx-auto flex w-full max-w-3xl flex-col gap-5 px-4 pb-8 pt-6 sm:px-6 sm:pt-8">
         <header className="text-center">
           <div className="flex items-center justify-between gap-2">
-            <button type="button" aria-label="Semaine précédente" disabled={week <= 1} onClick={() => { window.location.href = `/semaine?w=${previousWeek}&manual=1`; }} className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/75 text-[#214E4B] shadow-sm transition hover:bg-white disabled:opacity-30"><ChevronLeft className="size-5" /></button>
+            <button type="button" aria-label="Semaine précédente" disabled={week <= 1} onClick={() => { window.location.href = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/semaine?w=${previousWeek}&manual=1`; }} className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/75 text-[#214E4B] shadow-sm transition hover:bg-white disabled:opacity-30"><ChevronLeft className="size-5" /></button>
             <h1 className="flex-1 text-xl font-black uppercase leading-tight tracking-tight text-[#2B2B2B] sm:text-3xl">Semaine du {dateRange}</h1>
-            <button type="button" aria-label="Semaine suivante" disabled={week >= 52} onClick={() => { window.location.href = `/semaine?w=${nextWeek}&manual=1`; }} className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/75 text-[#214E4B] shadow-sm transition hover:bg-white disabled:opacity-30"><ChevronRight className="size-5" /></button>
+            <button type="button" aria-label="Semaine suivante" disabled={week >= 52} onClick={() => { window.location.href = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/semaine?w=${nextWeek}&manual=1`; }} className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/75 text-[#214E4B] shadow-sm transition hover:bg-white disabled:opacity-30"><ChevronRight className="size-5" /></button>
           </div>
           <span className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#2B2B2B]/20 bg-white/60 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-[#2B2B2B] shadow-sm"><Leaf className="size-4" /> Sélection {season}</span>
         </header>
