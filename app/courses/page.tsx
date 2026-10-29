@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Apple, Carrot, ChevronDown, ChevronLeft, ChevronRight, Fish, ShoppingCart, Container } from "lucide-react";
+import { Apple, Carrot, ChevronDown, ChevronLeft, ChevronRight, Fish, ShoppingCart, Container, Heart } from "lucide-react";
 import { clampWeek, currentIsoWeek, getRecipe, shoppingForWeek, weekPlan, DAYS, DAY_LABEL, type PlanningPreferences } from "@/lib/carnet";
 import { CheckList } from "@/components/check-list";
 import { adaptGlutenFreeText, adaptLactoseFreeText, adaptNutFreeText } from "@/lib/ingredient-substitutions";
@@ -38,6 +38,10 @@ export default function CoursesPage() {
   const [extraCourseItems, setExtraCourseItems] = useState<string[]>([]);
   const [freezerSlotKeys, setFreezerSlotKeys] = useState<string[]>([]);
   const [openDay, setOpenDay] = useState<string>("");
+  const [activeTab, setActiveTab] = useState<"week" | "favorites">("week");
+  const [favoriteRecipes, setFavoriteRecipes] = useState<Array<{ recipeId: string; name: string; ingredients: string[] }>>([]);
+  const [favoriteChecked, setFavoriteChecked] = useState<Record<string, boolean>>({});
+  const [openFavorite, setOpenFavorite] = useState<string>("");
   useEffect(() => {
     const refreshCurrentWeek = () => {
       if (search.get("manual") !== "1") setCurrentWeek(currentIsoWeek());
@@ -83,6 +87,31 @@ export default function CoursesPage() {
   }, [week]);
 
   useEffect(() => {
+    const refreshFavorites = () => {
+      try {
+        const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-course-favorites") || "[]");
+        setFavoriteRecipes(Array.isArray(saved) ? saved.filter((item) => item && typeof item.recipeId === "string" && typeof item.name === "string" && Array.isArray(item.ingredients)) : []);
+      } catch { setFavoriteRecipes([]); }
+      try { setFavoriteChecked(JSON.parse(localStorage.getItem("cuisine-chic-ouf-course-favorites-checked") || "{}")); } catch { setFavoriteChecked({}); }
+    };
+    refreshFavorites();
+    window.addEventListener("storage", refreshFavorites);
+    window.addEventListener("cuisine-chic-ouf-course-favorites-change", refreshFavorites);
+    return () => {
+      window.removeEventListener("storage", refreshFavorites);
+      window.removeEventListener("cuisine-chic-ouf-course-favorites-change", refreshFavorites);
+    };
+  }, []);
+
+  function toggleFavoriteIngredient(key: string) {
+    setFavoriteChecked((previous) => {
+      const next = { ...previous, [key]: !previous[key] };
+      try { localStorage.setItem("cuisine-chic-ouf-course-favorites-checked", JSON.stringify(next)); } catch {}
+      return next;
+    });
+  }
+
+  useEffect(() => {
     const refreshExtras = () => {
       try {
         const saved = JSON.parse(localStorage.getItem("assiette-courses-extra-" + week) || "[]");
@@ -114,23 +143,22 @@ export default function CoursesPage() {
   })), [slots]);
 
   return (
-    <main className="min-h-dvh bg-transparent px-4 pb-28 pt-5 text-[#2B2B2B] sm:px-6">
+    <main className="min-h-dvh bg-[#A8E6CF] px-4 pb-28 pt-5 font-sans uppercase text-black sm:px-6">
       <div className="mx-auto flex w-full max-w-3xl flex-col gap-5">
         <GlutenFreeSafetyNotice />
         <LactoseFreeSafetyNotice />
         <NutFreeSafetyNotice />
-        <header className="text-center">
-          <img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="Cuisine Chic Ouf !" className="mx-auto mb-3 block h-auto w-[min(38vw,140px)] rounded-2xl bg-[#F9F6EC] object-contain shadow-sm" />
-          <h1 className="text-2xl font-black uppercase tracking-tight text-[#214E4B] sm:text-3xl">Mes courses : semaine {week}</h1>
+        <header className="relative text-center">
+          <div className="mb-3 flex items-center justify-between"><Link href="/" aria-label="Retour" className="text-2xl font-bold text-black">‹</Link><h1 className="font-heading text-2xl font-bold normal-case text-black sm:text-3xl">Mes Courses</h1><Link href="/compte" className="text-xs font-bold tracking-wide text-black">MON COMPTE</Link></div>
           <div className="mx-auto mt-3 flex max-w-xl items-center justify-between gap-2 rounded-2xl bg-white px-2 py-2 text-[#214E4B] shadow-sm">
             <button type="button" aria-label="Semaine précédente" disabled={week <= 1} onClick={() => { window.location.href = `/courses?w=${week - 1}&manual=1`; }} className="flex size-10 shrink-0 items-center justify-center rounded-xl hover:bg-[#EAF4F1] disabled:opacity-30"><ChevronLeft className="size-6" /></button>
             <p className="text-center text-xs font-black uppercase tracking-wide sm:text-sm">{dateRangeForIsoWeek(week)}</p>
             <button type="button" aria-label="Semaine suivante" disabled={week >= 52} onClick={() => { window.location.href = `/courses?w=${week + 1}&manual=1`; }} className="flex size-10 shrink-0 items-center justify-center rounded-xl hover:bg-[#EAF4F1] disabled:opacity-30"><ChevronRight className="size-6" /></button>
           </div>
-          <p className="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-[#2B2B2B]/85">Votre panier trié par rayons automatiquement. Cochez ce que vous avez, le reste remonte en vert.</p>
+          <p className="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-black">Votre panier trié par rayons automatiquement. Cochez ce que vous avez, le reste remonte en vert.</p>\n          <div className="mx-auto mt-4 grid max-w-xl grid-cols-2 gap-2" role="tablist" aria-label="Navigation des courses"><button role="tab" aria-selected={activeTab === "week"} onClick={() => setActiveTab("week")} className={`rounded-2xl px-3 py-3 text-sm font-black ${activeTab === "week" ? "bg-white text-black shadow-sm ring-2 ring-black/10" : "bg-white/40 text-black"}`}>MA SEMAINE</button><button role="tab" aria-selected={activeTab === "favorites"} onClick={() => setActiveTab("favorites")} className={`flex items-center justify-center gap-2 rounded-2xl px-3 py-3 text-sm font-black ${activeTab === "favorites" ? "bg-white text-black shadow-sm ring-2 ring-black/10" : "bg-white/40 text-black"}`}><Heart className="size-4"/> MES FAVORIS</button></div>
         </header>
 
-        <section id="panier-global" className="space-y-3">
+        {activeTab === "week" ? <><section id="panier-global" className="space-y-3">
           <div className="flex items-center gap-2 px-1 text-[#2B2B2B]">
             <ShoppingCart className="size-5" />
             <h2 className="text-lg font-black uppercase tracking-wide">Mon panier par rayons</h2>
@@ -144,13 +172,13 @@ export default function CoursesPage() {
         </section>
 
         <section className="space-y-2" aria-label="Ingrédients par jour">
-          <h2 className="px-1 text-lg font-black uppercase tracking-wide text-white">Détail des menus par jour</h2>
+          <h2 className="px-1 text-lg font-black uppercase tracking-wide text-black">Détail des menus par jour</h2>
           {daySlots.map(({ day, meals }) => {
             const expanded = openDay === day;
             return (
               <section key={day} className="overflow-hidden rounded-2xl bg-white shadow-sm">
                 <button type="button" aria-expanded={expanded} onClick={() => setOpenDay(expanded ? "" : day)} className="flex w-full items-center justify-between gap-3 px-4 py-4 text-left font-black uppercase text-[#214E4B] hover:bg-[#F9F9F7]">
-                  <span>{DAY_LABEL[day]} <span className="font-medium normal-case text-[#777]">({meals.length} repas)</span></span>
+                  <span>👩‍🍳 {DAY_LABEL[day]} <span className="font-medium normal-case text-[#777]">({meals.length} repas)</span></span>
                   <ChevronDown className={`size-5 shrink-0 transition-transform ${expanded ? "rotate-180" : ""}`} />
                 </button>
                 {expanded ? <div className="space-y-3 border-t border-[#E6DFD3] p-4">
@@ -164,12 +192,26 @@ export default function CoursesPage() {
               </section>
             );
           })}
-        </section>
+        </section></> : <section className="space-y-3" aria-label="Mes recettes favorites ajoutées aux courses">
+          {favoriteRecipes.length === 0 ? <div className="rounded-2xl bg-white p-5 text-center text-sm font-semibold normal-case">Aucune recette ajoutée pour le moment. Depuis une fiche recette, utilise « Ajouter à la liste de courses ».</div> : favoriteRecipes.map((recipe) => {
+            const expanded = openFavorite === recipe.recipeId;
+            return <article key={recipe.recipeId} className="overflow-hidden rounded-2xl bg-white shadow-sm">
+              <button type="button" aria-expanded={expanded} onClick={() => setOpenFavorite(expanded ? "" : recipe.recipeId)} className="flex w-full items-center justify-between gap-3 rounded-2xl bg-white px-4 py-4 text-left text-sm font-black text-black">
+                <span>{recipe.name}</span><ChevronDown className={`size-5 shrink-0 transition-transform ${expanded ? "rotate-180" : ""}`}/>
+              </button>
+              {expanded ? <ul className="space-y-1 border-t border-black/10 p-3">{recipe.ingredients.map((ingredient, index) => {
+                const key = recipe.recipeId + "|" + index + "|" + ingredient;
+                const done = Boolean(favoriteChecked[key]);
+                return <li key={key}><label className="flex cursor-pointer items-start gap-3 rounded-xl px-2 py-3 text-sm normal-case"><input type="checkbox" checked={done} onChange={() => toggleFavoriteIngredient(key)} className="mt-0.5 size-5 shrink-0 accent-[#8FA89B]"/><span className={done ? "text-gray-400 line-through" : "text-black"}>{ingredient}</span></label></li>;
+              })}</ul> : null}
+            </article>;
+          })}
+        </section>}
 
-        <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-black/10 bg-[#F9F9F7]/95 px-3 py-3 backdrop-blur">
+        <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-black/10 bg-[#A8E6CF]/95 px-3 py-3 backdrop-blur">
           <div className="mx-auto grid max-w-3xl grid-cols-2 gap-3">
             <a href="#panier-global" className="flex min-h-11 items-center justify-center gap-2 rounded-xl bg-white px-3 py-2 text-center text-xs font-black uppercase text-[#1A1A1A] shadow-sm ring-1 ring-black/10 sm:text-sm"><ShoppingCart className="size-4" /> Ma liste de courses</a>
-            <Link href={`/batch?w=${week}&manual=1`} className="flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#214E4B] px-3 py-2 text-center text-xs font-black uppercase text-white shadow-sm sm:text-sm"><Container className="size-4" /> Mon batch</Link>
+            <Link href={`/batch?w=${week}&manual=1`} className="flex min-h-11 items-center justify-center gap-2 rounded-xl bg-white px-3 py-2 text-center text-xs font-black uppercase text-black shadow-sm sm:text-sm"><Container className="size-4" /> Mon batch</Link>
           </div>
         </nav>
       </div>
