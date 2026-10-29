@@ -118,6 +118,7 @@ export default function MesRecettesPage() {
   type FavoriteWeekPlan = Record<string, PlannedFavorite | null>;
   const [plannerOpen, setPlannerOpen] = useState(false);
   const [selectedFavoriteId, setSelectedFavoriteId] = useState("");
+  const [viewingPlannedKey, setViewingPlannedKey] = useState("");
   const [favoriteWeekPlan, setFavoriteWeekPlan] = useState<FavoriteWeekPlan>({});
   const [plannerReady, setPlannerReady] = useState(false);
   const [plannerMessage, setPlannerMessage] = useState("");
@@ -329,8 +330,14 @@ export default function MesRecettesPage() {
           <div className="space-y-2"><h4 className="text-sm font-extrabold">Mon planning · lundi au dimanche</h4>
             {plannerDays.map((day) => <article key={day} className="rounded-xl bg-white p-3 shadow-sm"><h5 className="mb-2 font-extrabold">{day}</h5><div className="grid grid-cols-1 gap-2 sm:grid-cols-2">{plannerMeals.map((meal) => { const key = day + "|" + meal.key; const planned = favoriteWeekPlan[key]; return <div key={key} className="min-w-0 rounded-xl border border-[#E6DFD3] bg-[#FCFCFA] p-2">
               <div className="mb-1 text-xs font-extrabold">{meal.label}</div>
-              {planned ? <div className="flex items-center gap-2"><button type="button" onClick={() => setPlannerMessage("Lecture seule : la recette planifiée ne peut pas être modifiée ici.")} className="flex min-h-10 min-w-0 flex-1 items-center gap-2 text-left text-sm font-semibold normal-case"><span className="size-10 shrink-0 overflow-hidden rounded-lg bg-[#EAF4F1]">{planned.image ? <img src={planned.image} alt="" className="size-full object-cover" /> : <span className="flex size-full items-center justify-center">🍽️</span>}</span><span className="truncate">{planned.name}<span className="block text-[11px] font-medium text-[#557C65]">Consulter · lecture seule</span></span></button><button type="button" onClick={() => clearFavoriteSlot(key)} aria-label={`Retirer ${planned.name} de ${day}, ${meal.key}`} className="rounded-lg px-2 py-2 text-xs font-bold text-[#8B3D35]">Retirer</button></div> : <button type="button" onClick={() => assignFavorite(day, meal.key)} className="min-h-10 w-full rounded-lg border border-dashed border-[#8FA89B] px-2 text-left text-xs font-semibold text-[#557C65] hover:bg-[#EAF4F1]">{selectedFavoriteId ? "＋ Ajouter la recette sélectionnée" : "Choisir une recette en haut"}</button>}
-              {planned && plannerMessage.startsWith("Lecture seule") ? null : null}
+              {planned ? <div className="flex items-center gap-2"><button type="button" onClick={() => setViewingPlannedKey((current) => current === key ? "" : key)} className="flex min-h-10 min-w-0 flex-1 items-center gap-2 text-left text-sm font-semibold normal-case"><span className="size-10 shrink-0 overflow-hidden rounded-lg bg-[#EAF4F1]">{planned.image ? <img src={planned.image} alt="" className="size-full object-cover" /> : <span className="flex size-full items-center justify-center">🍽️</span>}</span><span className="truncate">{planned.name}<span className="block text-[11px] font-medium text-[#557C65]">Consulter · lecture seule</span></span></button><button type="button" onClick={() => clearFavoriteSlot(key)} aria-label={`Retirer ${planned.name} de ${day}, ${meal.key}`} className="rounded-lg px-2 py-2 text-xs font-bold text-[#8B3D35]">Retirer</button></div> : <button type="button" onClick={() => assignFavorite(day, meal.key)} className="min-h-10 w-full rounded-lg border border-dashed border-[#8FA89B] px-2 text-left text-xs font-semibold text-[#557C65] hover:bg-[#EAF4F1]">{selectedFavoriteId ? "＋ Ajouter la recette sélectionnée" : "Choisir une recette en haut"}</button>}
+              {planned && viewingPlannedKey === key ? <div className="mt-2 border-t border-[#E6DFD3] pt-2 text-xs normal-case">
+                <p className="font-bold">Ingrédients</p>
+                {planned.ingredients.length ? <ul className="mt-1 list-disc space-y-1 pl-4">{planned.ingredients.map((ingredient, index) => <li key={index}>{ingredient}</li>)}</ul> : <p className="mt-1 text-[#777773]">Aucun ingrédient renseigné sur cette fiche.</p>}
+                <p className="mt-2 font-bold">Préparation</p>
+                {planned.steps.length ? <ol className="mt-1 list-decimal space-y-1 pl-4">{planned.steps.map((step, index) => <li key={index}>{step}</li>)}</ol> : <p className="mt-1 text-[#777773]">Aucune étape renseignée sur cette fiche.</p>}
+                <p className="mt-2 font-semibold text-[#557C65]">Fiche consultable en lecture seule.</p>
+              </div> : null}
             </div>; })}</div>
             {plannerDays.map((day) => null).length ? null : null}
           </article>)}
