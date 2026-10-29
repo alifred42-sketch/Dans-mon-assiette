@@ -170,37 +170,11 @@ export default function MesRecettesPage() {
     if (!selected.length) { setPlannerMessage("Ajoute au moins une recette avant de valider le menu."); return; }
     try {
       const unique = Array.from(new Map(selected.map((item) => [item.recipeId, item])).values());
-      const planKey = "cuisine-chic-ouf-favorites-menu-plan-v1";
-      const overridesKey = "cuisine-chic-ouf-recipe-switches";
-      const weekNumber = (() => {
-        const now = new Date();
-        const date = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
-        date.setUTCDate(date.getUTCDate() + 4 - (date.getUTCDay() || 7));
-        const yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1));
-        return Math.ceil((((date.getTime() - yearStart.getTime()) / 86400000) + 1) / 7);
-      })();
-      const dayKeys: Record<string, string> = { Lundi: "LUNDI", Mardi: "MARDI", Mercredi: "MERCREDI", Jeudi: "JEUDI", Vendredi: "VENDREDI", Samedi: "SAMEDI", Dimanche: "DIMANCHE" };
-      const previousPlan = JSON.parse(localStorage.getItem(planKey) || "{}") as FavoriteWeekPlan;
-      const overrides = JSON.parse(localStorage.getItem(overridesKey) || "{}") as Record<string, string>;
-      Object.entries(previousPlan).forEach(([slot, item]) => {
-        if (!item) return;
-        const [day, meal] = slot.split("|");
-        const key = `${weekNumber}|${dayKeys[day]}|${meal}`;
-        if (overrides[key] === item.recipeId) delete overrides[key];
-      });
-      Object.entries(favoriteWeekPlan).forEach(([slot, item]) => {
-        if (!item) return;
-        const [day, meal] = slot.split("|");
-        const dayKey = dayKeys[day];
-        if (dayKey && (meal === "Midi" || meal === "Soir")) overrides[`${weekNumber}|${dayKey}|${meal}`] = item.recipeId;
-      });
-      localStorage.setItem(overridesKey, JSON.stringify(overrides));
-      localStorage.setItem(planKey, JSON.stringify(favoriteWeekPlan));
+      localStorage.setItem("cuisine-chic-ouf-favorites-menu-plan-v1", JSON.stringify(favoriteWeekPlan));
       localStorage.setItem("cuisine-chic-ouf-favorites-menu-course-items", JSON.stringify(unique.map((item) => ({ recipeId: item.recipeId, name: item.name, ingredients: item.ingredients }))));
-      window.dispatchEvent(new Event("cuisine-chic-ouf-plan-change"));
       window.dispatchEvent(new Event("cuisine-chic-ouf-favorites-menu-plan-change"));
       window.dispatchEvent(new Event("cuisine-chic-ouf-favorites-menu-courses-change"));
-      setPlannerMessage("Menu validé ! Il est maintenant repris dans le planning de cette semaine et dans les courses.");
+      setPlannerMessage("Menu validé ! Les ingrédients sont ajoutés à l’encart « Mes Favoris » des courses.");
     } catch { setPlannerMessage("Le menu est préparé, mais l’enregistrement a échoué. Libère de l’espace sur cet appareil et réessaie."); }
   }
   const personalRecipes = recipes.filter((recipe) => activeTab === "imports" ? Boolean(recipe.sourceUrl) : activeTab === "creations" ? !recipe.sourceUrl : false);
