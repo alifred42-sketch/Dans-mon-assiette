@@ -9,7 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-heading), Georgia, serif;
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-card: var(--card);
@@ -21,29 +21,171 @@
 }
 
 :root {
-  --app-gradient: linear-gradient(135deg, #DDF4F0 0%, #BCE7E1 48%, #91D0CB 100%);
-  --background: #F9F9F7;
-  --foreground: #2B2B2B;
+  color-scheme: light;
+  --app-gradient: #A8E6CF;
+  --background: #A8E6CF;
+  --foreground: #111111;
   --card: #FFFFFF;
-  --card-foreground: #2B2B2B;
-  --primary: #8FA89B;
-  --primary-foreground: #FFFFFF;
-  --muted-foreground: #6B6B67;
-  --border: #E9E9E4;
+  --card-foreground: #111111;
+  --primary: #68B99B;
+  --primary-foreground: #111111;
+  --muted-foreground: #454545;
+  --border: rgba(17, 17, 17, 0.12);
+  --app-radius: 16px;
 }
 
 * { box-sizing: border-box; }
-html { width: 100%; height: 100%; min-height: 100%; background: var(--app-gradient); background-attachment: fixed; }
-body { width: 100%; min-height: 100vh; min-height: 100dvh; margin: 0; background: var(--app-gradient); background-attachment: fixed; color: #2B2B2B; }
-/* Un seul fond commun : il couvre aussi les marges sur les grands écrans et les écrans de portable. */
-body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: var(--app-gradient); background-attachment: fixed; }
-/* Les pages ne doivent pas peindre un rectangle opaque par-dessus le fond global. */
+html {
+  width: 100%;
+  min-height: 100%;
+  background: #A8E6CF;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  background: #A8E6CF;
+  color: #111111;
+  font-family: var(--font-sans), Arial, sans-serif;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: #A8E6CF;
+}
 main { background-color: transparent !important; }
 button, a { -webkit-tap-highlight-color: transparent; }
+button, input, select, textarea { font: inherit; }
+button, [role="button"], summary, a { transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+:focus-visible { outline: 3px solid #24795B; outline-offset: 3px; }
 
+/* Hiérarchie typographique commune : texte affiché en capitales sans modifier les chaînes sources. */
+h1, h2, h3, h4, [data-page-title], [data-section-title] {
+  color: #111111;
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 650;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .035em;
+}
+body, p, li, label, button, input, select, textarea, a, small, summary {
+  color: #111111;
+  font-family: var(--font-sans), Arial, sans-serif;
+}
+button, [role="button"], summary { border-radius: var(--app-radius); }
 
-/* Ouverture en douceur : le splash disparaît après 3 secondes. */
+/* Bandeaux communs et navigation persistante : transparents sur le fond vert d'eau. */
+body header {
+  background: rgba(168, 230, 207, .96) !important;
+  border-color: rgba(17, 17, 17, .12) !important;
+  box-shadow: 0 2px 12px rgba(24, 73, 56, .06);
+  backdrop-filter: blur(12px);
+}
+body header a {
+  color: #111111 !important;
+  text-transform: uppercase;
+}
+body nav[aria-label] {
+  background: rgba(168, 230, 207, .97) !important;
+  border-color: rgba(17, 17, 17, .14) !important;
+  backdrop-filter: blur(12px);
+}
+body nav[aria-label] a { border-radius: 16px; }
+body nav[aria-label] a[aria-current="page"] { box-shadow: 0 3px 10px rgba(0,0,0,.12); }
+
+/* Les fonds pleine page restent transparents ; les éléments interactifs flottent séparément. */
+main > div, main section, main article, main [role="tabpanel"] {
+  border-color: rgba(17, 17, 17, .10);
+}
+main .bg-white, main [class*="bg-white/"] {
+  border-radius: var(--app-radius);
+}
+main button,
+main a[role="button"],
+main [role="button"],
+main summary,
+main input:not([type="checkbox"]):not([type="radio"]),
+main select,
+main textarea {
+  border-radius: var(--app-radius);
+}
+main button, main [role="button"] {
+  color: #111111;
+}
+main input:not([type="checkbox"]):not([type="radio"]),
+main select,
+main textarea {
+  background-color: #FFFFFF;
+  color: #111111;
+  border-color: rgba(17, 17, 17, .16);
+}
+main input[type="checkbox"] {
+  accent-color: #68B99B;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 3px;
+}
+main input[type="checkbox"]:checked + label,
+main input[type="checkbox"]:checked ~ label { color: #777777; }
+
+/* Fiches et boutons : cartes blanches autonomes, coins réguliers et ombre légère. */
+main a.rounded-xl,
+main a.rounded-2xl,
+main a.rounded-3xl,
+main button.rounded-xl,
+main button.rounded-2xl,
+main button.rounded-3xl,
+main article,
+main [data-card],
+main [data-recipe-card] {
+  border-radius: var(--app-radius) !important;
+}
+main a.rounded-xl,
+main a.rounded-2xl,
+main a.rounded-3xl,
+main article,
+main [data-card],
+main [data-recipe-card] {
+  box-shadow: 0 3px 12px rgba(26, 67, 52, .09);
+}
+main a.rounded-xl:active,
+main a.rounded-2xl:active,
+main a.rounded-3xl:active,
+main button:active { transform: scale(.985); }
+
+/* Titres de sections sur l'accueil et onglets de courses. */
+main h1, main h2, main h3 { margin-left: auto; margin-right: auto; }
+[role="tablist"] { display: flex; gap: .5rem; }
+[role="tablist"] [role="tab"] {
+  flex: 1 1 0;
+  min-height: 44px;
+  border-radius: 16px;
+  color: #111111;
+}
+[role="tablist"] [role="tab"][aria-selected="true"] {
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(26, 67, 52, .10);
+}
+
+/* Accordéons et étapes : animations visuelles seulement, aucun changement de comportement. */
+details > summary { cursor: pointer; }
+details[open] > summary { margin-bottom: .5rem; }
+details > *:not(summary) { animation: panel-in 180ms ease-out; }
+@keyframes panel-in {
+  from { opacity: .75; transform: translateY(-2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Splash conservé ; seules ses transitions existantes sont maintenues. */
 .splash-screen { transition: opacity 550ms ease, visibility 550ms ease; }
 .splash-screen-visible { opacity: 1; visibility: visible; }
 .splash-screen-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-@media (prefers-reduced-motion: reduce) { .splash-screen { transition: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
