@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { BackButton } from "@/components/back-button";
 import { carnet } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
@@ -51,7 +50,6 @@ export function FetesNavigation() {
 
   return (
     <section className="space-y-5">
-      {showBack ? <BackButton /> : null}
       <div>
         <h1 className="font-heading text-2xl font-bold text-[#1A1A1A] sm:text-3xl">🎉 Fêtes</h1>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#1A1A1A] sm:text-base">
