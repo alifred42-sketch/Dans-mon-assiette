@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowLeft, ChefHat, Refrigerator, Save } from "lucide-react";
+import { ChefHat, Refrigerator, Save } from "lucide-react";
 
 const PREFS_KEY = "cuisine-chic-ouf-preferences";
 
@@ -29,7 +29,6 @@ export default function ProfilPage() {
   return (
     <main className="min-h-dvh bg-transparent px-4 pb-12 pt-6 text-[#2B2B2B] sm:px-6">
       <div className="mx-auto flex w-full max-w-2xl flex-col gap-5">
-        <Link href="/" className="inline-flex w-fit items-center gap-2 rounded-xl bg-white/80 px-3 py-2 text-sm font-bold text-[#214E4B] shadow-sm"><ArrowLeft size={18} /> Retour à l’accueil</Link>
         <header className="text-center">
           <span className="mx-auto flex size-16 items-center justify-center rounded-2xl bg-[#DCEBDD] text-[#214E4B]"><ChefHat size={34} /></span>
           <h1 className="mt-3 text-3xl font-black uppercase tracking-tight text-[#214E4B]">Mon profil</h1>
