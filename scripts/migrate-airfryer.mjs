@@ -7,9 +7,8 @@
  *   node scripts/migrate-airfryer.mjs --write         # writes JSON changes
  *   node scripts/migrate-airfryer.mjs --write --file data/recettes-619.json
  *
- * Adds Airfryer fields without removing or rewriting existing recipe fields.
- * Missing oven data is left null and reported for human review; no guessed
- * temperature or cooking duration is silently invented.
+ * Existing Airfryer values are preserved. Missing oven data is reported for
+ * human review; conversion values are estimates, not guaranteed cooking results.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -98,32 +97,36 @@ function extractOvenMinutes(instructions, timeCook, recipe) {
 
 function migrateRecipe(recipe) {
   const instructions = getInstructions(recipe);
-  const compatible = ovenCooking(instructions, recipe);
+  const detectedOven = ovenCooking(instructions, recipe);
   const previous = {
     airfryer_compatible: recipe.airfryer_compatible,
     airfryer_temps: recipe.airfryer_temps,
     airfryer_temperature: recipe.airfryer_temperature,
   };
-  if (!compatible) {
-    recipe.airfryer_compatible = false;
-    recipe.airfryer_temps = null;
-    recipe.airfryer_temperature = null;
+  const existingMinutes = Number(recipe.airfryer_temps);
+  const existingTemperature = Number(recipe.airfryer_temperature);
+  const hasExistingAirfryer = Number.isFinite(existingMinutes) && existingMinutes > 0
+    && Number.isFinite(existingTemperature) && existingTemperature >= 80 && existingTemperature <= 200;
+
+  // Ne jamais effacer des paramètres Airfryer déjà renseignés : l'absence de
+  // détection de mots-clés four ne prouve pas que la recette est incompatible.
+  if (!detectedOven) {
+    if (hasExistingAirfryer) {
+      recipe.airfryer_compatible = recipe.airfryer_compatible === false ? true : (recipe.airfryer_compatible ?? true);
+    }
   } else {
     const ovenMinutes = extractOvenMinutes(instructions, recipe.timeCook, recipe);
     const ovenTemperature = extractOvenTemperature(instructions, recipe);
-    // Les réglages Airfryer déjà renseignés sont conservés : ils peuvent avoir
-    // été vérifiés manuellement et ne doivent pas être remplacés par une estimation.
-    const existingAirfryerMinutes = Number(recipe.airfryer_temps);
-    const existingAirfryerTemperature = Number(recipe.airfryer_temperature);
     recipe.airfryer_compatible = true;
-    recipe.airfryer_temps = Number.isFinite(existingAirfryerMinutes) && existingAirfryerMinutes > 0
-      ? existingAirfryerMinutes
-      : ovenMinutes == null ? null : Math.max(1, Math.round(ovenMinutes * 0.8));
-    recipe.airfryer_temperature = Number.isFinite(existingAirfryerTemperature) && existingAirfryerTemperature >= 80 && existingAirfryerTemperature <= 200
-      ? existingAirfryerTemperature
-      : ovenTemperature == null ? null : Math.min(200, Math.max(80, ovenTemperature - 20));
+    recipe.airfryer_temps = Number.isFinite(existingMinutes) && existingMinutes > 0
+      ? existingMinutes
+      : ovenMinutes == null ? (recipe.airfryer_temps ?? null) : Math.max(1, Math.round(ovenMinutes * 0.8));
+    recipe.airfryer_temperature = Number.isFinite(existingTemperature) && existingTemperature >= 80 && existingTemperature <= 200
+      ? existingTemperature
+      : ovenTemperature == null ? (recipe.airfryer_temperature ?? null) : Math.min(200, Math.max(80, ovenTemperature - 20));
   }
   const changed = Object.keys(previous).some((key) => previous[key] !== recipe[key]);
+  const compatible = detectedOven || hasExistingAirfryer || recipe.airfryer_compatible === true;
   const needsReview = compatible && (recipe.airfryer_temps == null || recipe.airfryer_temperature == null);
   return { changed, compatible, needsReview };
 }
@@ -151,7 +154,7 @@ for (const file of files) {
     if (result.compatible) compatible++;
     if (result.needsReview) {
       review++;
-      console.warn("À vérifier : " + (recipe.name ?? recipe.title) + " — durée/température du four incomplète.");
+      console.warn("À vérifier : " + (recipe.name ?? recipe.title) + " — durée/température Airfryer incomplète.");
     }
     if (result.changed) { changed++; fileChanged = true; }
   }
@@ -163,7 +166,7 @@ for (const file of files) {
 
 console.log("\nMigration Airfryer — " + (write ? "ÉCRITURE" : "SIMULATION"));
 console.log("Recettes examinées : " + scanned);
-console.log("Recettes compatibles four : " + compatible);
+console.log("Recettes compatibles/déjà équipées : " + compatible);
 console.log("Recettes modifiées : " + changed);
 console.log("Compatibles à vérifier (données incomplètes) : " + review);
 if (!write) console.log("Aucun fichier modifié. Relancer avec --write pour enregistrer.");
