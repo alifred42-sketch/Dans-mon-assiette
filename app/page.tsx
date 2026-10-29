@@ -28,8 +28,13 @@ import {
   Refrigerator,
   UserRound,
   Heart,
+  Settings,
+  Check,
+  EyeOff,
   type LucideIcon,
 } from "lucide-react";
+
+const HOME_LAYOUT_KEY = "cuisine-chic-ouf-home-categories-v1";
 
 type HomeCard = {
   label: string;
@@ -85,10 +90,16 @@ function CardRow({
   cards,
   columns = 3,
   currentWeek,
+  editing = false,
+  visibleLabels,
+  onToggle,
 }: {
   cards: HomeCard[];
   columns?: 3 | 4;
   currentWeek: number;
+  editing?: boolean;
+  visibleLabels: string[];
+  onToggle: (label: string) => void;
 }) {
   const gridColumns = columns === 4
     ? "grid-cols-4"
@@ -96,19 +107,19 @@ function CardRow({
 
   return (
     <div className={`grid ${columns === 4 ? "grid-cols-2 sm:grid-cols-4" : gridColumns} gap-2.5 sm:gap-4`}>
-      {cards.map(({ label, href, color, iconColor, Icon, image }) => {
-        const destination = href === "/batch" || href === "/courses"
-          ? `${href}?w=${currentWeek}`
-          : href;
-        return (
-          <Link
-            key={label}
-            href={destination}
-            prefetch={false}
-            aria-label={label}
-            className="group flex aspect-square min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:rounded-3xl"
-            style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}
-          >
+      {cards.filter((card) => editing || visibleLabels.includes(card.label)).map(({ label, href, color, iconColor, Icon, image }) => {
+        const destination = href === "/batch" || href === "/courses" ? href + "?w=" + currentWeek : href;
+        const selected = visibleLabels.includes(label);
+        const cardClass = "group relative flex aspect-square min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition duration-200 sm:rounded-3xl " + (editing ? "cursor-pointer ring-4 " + (selected ? "ring-[#2F855A]" : "ring-[#9CA3AF] opacity-60 grayscale") : "hover:-translate-y-1 hover:brightness-105 active:scale-[0.97]");
+        const cardContent = (
+          <>
+            <div className="relative mx-auto mt-1 h-[64%] w-[calc(100%-0.5rem)] min-h-0 overflow-hidden rounded-xl sm:rounded-2xl"><img src={image} alt="" loading="lazy" className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />{label === "MES FAVORIS" ? <div aria-hidden="true" className="pointer-events-none absolute inset-0"><Heart className="absolute left-[7%] top-[8%] size-[19%] rotate-[-14deg] fill-[#E32636] text-[#E32636] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute right-[8%] top-[12%] size-[16%] rotate-[15deg] fill-[#FF5B70] text-[#FF5B70] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute left-[3%] top-[48%] size-[14%] rotate-[-10deg] fill-[#FF5B70] text-[#FF5B70] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute right-[4%] top-[48%] size-[18%] rotate-[12deg] fill-[#E32636] text-[#E32636] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute bottom-[7%] left-[17%] size-[13%] rotate-[10deg] fill-[#FF5B70] text-[#FF5B70] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute bottom-[5%] right-[20%] size-[15%] rotate-[-12deg] fill-[#E32636] text-[#E32636] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /></div> : null}</div>
+            <span className="flex min-h-0 flex-1 w-full items-center justify-center px-1 py-1 text-[10px] font-black leading-tight tracking-wide sm:text-xs md:text-sm" style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>{label}</span>
+            {editing ? <span className={"absolute right-2 top-2 flex size-8 items-center justify-center rounded-full shadow " + (selected ? "bg-[#2F855A] text-white" : "bg-white text-[#374151]")} aria-hidden="true">{selected ? <Check size={20} strokeWidth={3} /> : <EyeOff size={18} />}</span> : null}
+          </>
+        );
+        return editing ? <button key={label} type="button" onClick={() => onToggle(label)} aria-pressed={selected} aria-label={(selected ? "Masquer" : "Afficher") + " la catégorie " + label} className={cardClass} style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>{cardContent}</button> : <Link key={label} href={destination} prefetch={false} aria-label={label} className={cardClass} style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>{cardContent}</Link>;
+      })}
             <div className="relative mx-auto mt-1 h-[64%] w-[calc(100%-0.5rem)] min-h-0 overflow-hidden rounded-xl sm:rounded-2xl"><img src={image} alt="" loading="lazy" className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />{label === "MES FAVORIS" ? <div aria-hidden="true" className="pointer-events-none absolute inset-0"><Heart className="absolute left-[7%] top-[8%] size-[19%] rotate-[-14deg] fill-[#E32636] text-[#E32636] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute right-[8%] top-[12%] size-[16%] rotate-[15deg] fill-[#FF5B70] text-[#FF5B70] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute left-[3%] top-[48%] size-[14%] rotate-[-10deg] fill-[#FF5B70] text-[#FF5B70] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute right-[4%] top-[48%] size-[18%] rotate-[12deg] fill-[#E32636] text-[#E32636] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute bottom-[7%] left-[17%] size-[13%] rotate-[10deg] fill-[#FF5B70] text-[#FF5B70] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute bottom-[5%] right-[20%] size-[15%] rotate-[-12deg] fill-[#E32636] text-[#E32636] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /></div> : null}</div>
             <span className="flex min-h-0 flex-1 w-full items-center justify-center px-1 py-1 text-[10px] font-black leading-tight tracking-wide sm:text-xs md:text-sm" style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>
               {label}
@@ -125,26 +136,54 @@ function HomeSection({
   cards,
   columns = 3,
   currentWeek,
+  editing,
+  visibleLabels,
+  onToggle,
 }: {
   title: string;
   cards: HomeCard[];
   columns?: 3 | 4;
   currentWeek: number;
+  editing: boolean;
+  visibleLabels: string[];
+  onToggle: (label: string) => void;
 }) {
+  const displayedCards = cards.filter((card) => editing || visibleLabels.includes(card.label));
+  if (!editing && displayedCards.length === 0) return null;
   return (
     <section className="w-full">
       <h2 className="mb-3 text-center text-xl font-black tracking-tight text-white sm:mb-4 sm:text-2xl">
         {title}
       </h2>
-      <CardRow cards={cards} columns={columns} currentWeek={currentWeek} />
+      <CardRow cards={cards} columns={columns} currentWeek={currentWeek} editing={editing} visibleLabels={visibleLabels} onToggle={onToggle} />
     </section>
   );
 }
 
 export default function HomePage() {
   const [currentWeek, setCurrentWeek] = useState(() => currentIsoWeek());
+  const allHomeLabels = [...dailyCards, ...pepsCards, ...moodCards, ...seasonCards, ...preferenceCards, ...extraCards].map((card) => card.label);
+  const [visibleLabels, setVisibleLabels] = useState<string[]>(allHomeLabels);
+  const [editingHome, setEditingHome] = useState(false);
+  const [preferencesReady, setPreferencesReady] = useState(false);
+  const [saveMessage, setSaveMessage] = useState("");
 
   useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(HOME_LAYOUT_KEY);
+      if (raw !== null) {
+        const parsed: unknown = JSON.parse(raw);
+        if (Array.isArray(parsed)) {
+          const allowed = new Set(allHomeLabels);
+          setVisibleLabels(parsed.filter((label): label is string => typeof label === "string" && allowed.has(label)));
+        }
+      }
+    } catch {
+      // Si le stockage est indisponible ou invalide, conserver l’accueil standard.
+    } finally {
+      setPreferencesReady(true);
+    }
+
     const refreshCurrentWeek = () => setCurrentWeek(currentIsoWeek());
     refreshCurrentWeek();
     const interval = window.setInterval(refreshCurrentWeek, 60_000);
@@ -156,6 +195,34 @@ export default function HomePage() {
       document.removeEventListener("visibilitychange", refreshCurrentWeek);
     };
   }, []);
+
+  function toggleHomeCategory(label: string) {
+    setVisibleLabels((current) => current.includes(label) ? current.filter((item) => item !== label) : [...current, label]);
+    setSaveMessage("");
+  }
+
+  function saveHomeCategories() {
+    try {
+      window.localStorage.setItem(HOME_LAYOUT_KEY, JSON.stringify(visibleLabels));
+      setEditingHome(false);
+      setSaveMessage("Vos choix sont enregistrés sur cet appareil.");
+    } catch {
+      setSaveMessage("Impossible d’enregistrer les choix. Vérifiez le stockage du navigateur.");
+    }
+  }
+
+  function cancelHomeEditing() {
+    try {
+      const raw = window.localStorage.getItem(HOME_LAYOUT_KEY);
+      if (raw !== null) {
+        const parsed: unknown = JSON.parse(raw);
+        const allowed = new Set(allHomeLabels);
+        setVisibleLabels(Array.isArray(parsed) ? parsed.filter((label): label is string => typeof label === "string" && allowed.has(label)) : allHomeLabels);
+      } else setVisibleLabels(allHomeLabels);
+    } catch { setVisibleLabels(allHomeLabels); }
+    setEditingHome(false);
+    setSaveMessage("");
+  }
 
   return (
     <main
@@ -192,17 +259,29 @@ export default function HomePage() {
           Tout est là pour vous simplifier la vie
         </p>
 
-        <div className="flex w-full flex-col gap-8 sm:gap-10">
-          <HomeSection title="Mon Quotidien" cards={dailyCards} currentWeek={currentWeek} />
-          <HomeSection title="Le Peps en cuisine" cards={pepsCards} currentWeek={currentWeek} />
-          <HomeSection title="Selon mon humeur & mon profil" cards={moodCards} columns={4} currentWeek={currentWeek} />
-          <HomeSection title="Les Saisons" cards={seasonCards} columns={4} currentWeek={currentWeek} />
-          <HomeSection title="Mes Préférences" cards={preferenceCards} columns={4} currentWeek={currentWeek} />
-          <HomeSection title="Mes petits plus" cards={extraCards} currentWeek={currentWeek} />
+        <div className="flex w-full flex-col gap-8 sm:gap-10" aria-label={editingHome ? "Sélection des catégories de l’accueil" : "Catégories de l’accueil"}>
+          {editingHome && <p className="rounded-2xl border border-[#B9D9C2] bg-white/90 p-4 text-center text-sm font-semibold text-[#214E4B]">Touchez les photos pour choisir les catégories à conserver. Le contour vert indique une catégorie affichée ; les cartes grisées seront masquées.</p>}
+          <HomeSection title="Mon Quotidien" cards={dailyCards} currentWeek={currentWeek} editing={editingHome} visibleLabels={visibleLabels} onToggle={toggleHomeCategory} />
+          <HomeSection title="Le Peps en cuisine" cards={pepsCards} currentWeek={currentWeek} editing={editingHome} visibleLabels={visibleLabels} onToggle={toggleHomeCategory} />
+          <HomeSection title="Selon mon humeur & mon profil" cards={moodCards} columns={4} currentWeek={currentWeek} editing={editingHome} visibleLabels={visibleLabels} onToggle={toggleHomeCategory} />
+          <HomeSection title="Les Saisons" cards={seasonCards} columns={4} currentWeek={currentWeek} editing={editingHome} visibleLabels={visibleLabels} onToggle={toggleHomeCategory} />
+          <HomeSection title="Mes Préférences" cards={preferenceCards} columns={4} currentWeek={currentWeek} editing={editingHome} visibleLabels={visibleLabels} onToggle={toggleHomeCategory} />
+          <HomeSection title="Mes petits plus" cards={extraCards} currentWeek={currentWeek} editing={editingHome} visibleLabels={visibleLabels} onToggle={toggleHomeCategory} />
         </div>
 
         <div className="w-full max-w-md text-left">
           <InstallApp />
+        </div>
+
+        <div className="w-full max-w-lg pt-2">
+          {editingHome ? <div className="flex flex-col gap-3">
+            <p className="text-center text-sm font-bold text-[#214E4B]">{visibleLabels.length} catégorie(s) conservée(s) sur {allHomeLabels.length}</p>
+            <button type="button" onClick={saveHomeCategories} disabled={!preferencesReady} className="flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-[#2F855A] px-5 py-4 text-base font-black text-white shadow-lg transition hover:brightness-105 disabled:opacity-50"><Check size={20} /> Confirmer et enregistrer mes choix</button>
+            <button type="button" onClick={cancelHomeEditing} className="min-h-11 w-full rounded-xl border border-[#8FAF9B] bg-white/80 px-4 py-2 font-bold text-[#214E4B]">Annuler</button>
+          </div> : <div className="flex flex-col items-center gap-2">
+            <button type="button" onClick={() => { setEditingHome(true); setSaveMessage(""); }} disabled={!preferencesReady} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl border border-[#8FAF9B] bg-white/85 px-5 py-3 font-extrabold text-[#214E4B] shadow-sm transition hover:bg-white disabled:opacity-50"><Settings size={19} /> ⚙️ Personnaliser mon accueil</button>
+            {saveMessage && <p role="status" className="text-center text-sm font-semibold text-[#214E4B]">{saveMessage}</p>}
+          </div>}
         </div>
       </div>
     </main>
