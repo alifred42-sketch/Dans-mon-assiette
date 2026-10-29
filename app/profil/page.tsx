@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ChefHat, Refrigerator, Save } from "lucide-react";
+import { NotreHistoireModal } from "@/components/notre-histoire-modal";
 
 const PREFS_KEY = "cuisine-chic-ouf-preferences";
 
@@ -58,6 +59,10 @@ export default function ProfilPage() {
             <Link href="/frigo-magique" className="rounded-xl bg-[#DCEBDD] px-3 py-2 font-bold text-[#214E4B]">✨ Le Frigo Magique</Link>
             <Link href="/recettes" className="rounded-xl bg-[#F5E4D2] px-3 py-2 font-bold text-[#75431F]">📖 Le carnet de recettes</Link>
           </div>
+        </section>
+
+        <section className="flex justify-center pt-1">
+          <NotreHistoireModal />
         </section>
       </div>
     </main>
