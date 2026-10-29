@@ -38,8 +38,8 @@ function lines(value: string) { return value.split("\n").map((line) => line.trim
 
 
 function cleanText(value: unknown): string {
-  if (typeof value === "string") return value.replace(/<[^>]*>/g, " ").replace(/\\s+/g, " ").trim();
-  if (Array.isArray(value)) return value.map(cleanText).filter(Boolean).join("\\n");
+  if (typeof value === "string") return value.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  if (Array.isArray(value)) return value.map(cleanText).filter(Boolean).join("\n");
   if (value && typeof value === "object" && "text" in value) return cleanText((value as { text: unknown }).text);
   return "";
 }
@@ -54,7 +54,7 @@ function findRecipe(value: unknown): Record<string, unknown> | null {
   return null;
 }
 function recipeFromReader(markdown: string, sourceUrl: string): Omit<MyRecipe, "id" | "updatedAt"> | null {
-  const jsonBlocks = [...markdown.matchAll(/<script[^>]*type=["']application\\/ld\\+json["'][^>]*>([\\s\\S]*?)<\\/script>/gi)];
+  const jsonBlocks = [...markdown.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\\S]*?)<\/script>/gi)];
   for (const match of jsonBlocks) {
     try {
       const recipe = findRecipe(JSON.parse(match[1]));
@@ -70,10 +70,10 @@ function recipeFromReader(markdown: string, sourceUrl: string): Omit<MyRecipe, "
       }
     } catch { /* Ignore malformed JSON-LD. */ }
   }
-  const title = markdown.match(/^#\\s+(.+)$/m)?.[1]?.trim() || markdown.match(/^Title:\\s*(.+)$/mi)?.[1]?.trim();
+  const title = markdown.match(/^#\s+(.+)$/m)?.[1]?.trim() || markdown.match(/^Title:\s*(.+)$/mi)?.[1]?.trim();
   const section = (names: string) => {
-    const match = markdown.match(new RegExp("(?:^|\\\\n)#+\\\\s*(?:" + names + ")[^\\\\n]*\\\\n([\\\\s\\\\S]*?)(?=\\\\n#+\\\\s|$)", "im"));
-    return match?.[1]?.split("\\n").map((line) => line.replace(/^\\s*(?:[-*•] |\\d+[.)] )/, "").trim()).filter(Boolean) || [];
+    const match = markdown.match(new RegExp("(?:^|\\\n)#+\\\s*(?:" + names + ")[^\\\n]*\\\n([\\\s\\\\S]*?)(?=\\\n#+\\\s|$)", "im"));
+    return match?.[1]?.split("\n").map((line) => line.replace(/^\s*(?:[-*•] |\\d+[.)] )/, "").trim()).filter(Boolean) || [];
   };
   const ingredients = section("ingredients?|what you need|incredients?");
   const steps = section("instructions?|directions?|preparation|method|steps|préparation|étapes?");
