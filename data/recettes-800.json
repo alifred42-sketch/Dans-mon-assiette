@@ -1899,9 +1899,9 @@
     "source": "RECETTES 800.pdf",
     "sourceNumber": 692,
     "id": "pdf-800-692",
-    "airfryer_compatible": true,
-    "airfryer_temps": 20,
-    "airfryer_temperature": 160
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Crème de Courge Butternut pour Cannellonis",
@@ -4616,9 +4616,9 @@
     "source": "RECETTES 800.pdf",
     "sourceNumber": 798,
     "id": "pdf-800-798",
-    "airfryer_compatible": true,
-    "airfryer_temps": 20,
-    "airfryer_temperature": 180
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
+    "airfryer_temperature": null
   },
   {
     "name": "Galettes de Courge Butternut et Flocons d'Avoine",
