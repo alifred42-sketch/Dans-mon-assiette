@@ -2183,8 +2183,8 @@
     "source": "RECETTES 800.pdf",
     "sourceNumber": 703,
     "id": "pdf-800-703",
-    "airfryer_compatible": true,
-    "airfryer_temps": 12,
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
     "airfryer_temperature": null
   },
   {
