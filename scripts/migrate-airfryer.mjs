@@ -112,6 +112,8 @@ const MANUAL_AIRFRYER = new Map([
   ["soupe froide de poivrons rouges rotis au mascarpone", { minutes: 14, temperature: 180 }],
   ["sauce poivrons grilles", { minutes: 14, temperature: 180 }],
   // Fiches de composants sans cuisson autonome : ne pas les afficher comme plats Airfryer.
+  ["soupe a l oignon facon bistrot", { incompatible: true }],
+  ["huitres chaudes sabayon au champagne", { incompatible: true }],
   ["bechamel legere au fromage blanc", { incompatible: true }],
   ["marinade poulet tikka", { incompatible: true }],
   ["marinade filet mignon moutarde & herbes", { incompatible: true }],
