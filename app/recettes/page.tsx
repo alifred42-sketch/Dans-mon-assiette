@@ -162,7 +162,7 @@ export default function RecettesPage() {
         <p className="mt-1 text-xs text-muted-foreground">{filter ? `${recipes.length} résultat(s) dans cette sélection.` : "Tape un plat ou un ingrédient pour retrouver une fiche."}</p>
       </div>
       <div className="flex flex-wrap items-center gap-2">
-        {[15, 30, 45].map((minutes) => {
+        {(filter === "express" || filter === "tired" ? [15, 30] : [15, 30, 45]).map((minutes) => {
           const active = maxDuration === minutes;
           return (
             <button
