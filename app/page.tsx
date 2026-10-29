@@ -121,7 +121,6 @@ function CardRow({
         );
         return editing ? <button key={label} type="button" onClick={() => onToggle(label)} aria-pressed={selected} aria-label={(selected ? "Masquer" : "Afficher") + " la catégorie " + label} className={cardClass} style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>{cardContent}</button> : <Link key={label} href={destination} prefetch={false} aria-label={label} className={cardClass} style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>{cardContent}</Link>;
       })}
-      })}
     </div>
   );
 }
