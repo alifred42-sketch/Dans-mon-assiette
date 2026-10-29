@@ -377,7 +377,7 @@ export default function MesRecettesPage() {
 
       {activeTab !== "favoris" && mode === "manual" ? <section className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 sm:p-6">
         <div className="mb-5 flex items-start justify-between gap-3">
-          <div><p className="text-sm font-bold text-[#668775]">{editingId ? "Modifier ma fiche" : mode === "link" ? "Garder une recette trouvée en ligne" : "Créer une fiche personnelle"}</p><h2 className="mt-1 font-heading text-xl">{mode === "link" ? "Recette ou vidéo" : "Nouvelle recette"}</h2></div>
+          <div><p className="text-sm font-bold text-[#668775]">{editingId ? "Modifier ma fiche" : "Créer une fiche personnelle"}</p><h2 className="mt-1 font-heading text-xl">Nouvelle recette</h2></div>
           <button type="button" onClick={() => setMode(null)} aria-label="Fermer le formulaire" className="flex size-10 items-center justify-center rounded-full bg-[#F3F3EF]"><X className="size-5" /></button>
         </div>
         {mode === "link" ? <div className="mb-5 rounded-xl bg-[#F9F6EC] p-3 text-sm leading-relaxed text-[#555551]">Colle le lien, puis note les ingrédients et les étapes que tu vois dans la publication. Facebook et certaines plateformes bloquent la lecture automatique : le lien sera conservé, et tu peux l’ouvrir pour consulter la recette.</div> : null}
