@@ -111,9 +111,17 @@ function migrateRecipe(recipe) {
   } else {
     const ovenMinutes = extractOvenMinutes(instructions, recipe.timeCook, recipe);
     const ovenTemperature = extractOvenTemperature(instructions, recipe);
+    // Les réglages Airfryer déjà renseignés sont conservés : ils peuvent avoir
+    // été vérifiés manuellement et ne doivent pas être remplacés par une estimation.
+    const existingAirfryerMinutes = Number(recipe.airfryer_temps);
+    const existingAirfryerTemperature = Number(recipe.airfryer_temperature);
     recipe.airfryer_compatible = true;
-    recipe.airfryer_temps = ovenMinutes == null ? null : Math.max(1, Math.round(ovenMinutes * 0.8));
-    recipe.airfryer_temperature = ovenTemperature == null ? null : Math.max(80, ovenTemperature - 20);
+    recipe.airfryer_temps = Number.isFinite(existingAirfryerMinutes) && existingAirfryerMinutes > 0
+      ? existingAirfryerMinutes
+      : ovenMinutes == null ? null : Math.max(1, Math.round(ovenMinutes * 0.8));
+    recipe.airfryer_temperature = Number.isFinite(existingAirfryerTemperature) && existingAirfryerTemperature >= 80 && existingAirfryerTemperature <= 200
+      ? existingAirfryerTemperature
+      : ovenTemperature == null ? null : Math.min(200, Math.max(80, ovenTemperature - 20));
   }
   const changed = Object.keys(previous).some((key) => previous[key] !== recipe[key]);
   const needsReview = compatible && (recipe.airfryer_temps == null || recipe.airfryer_temperature == null);
