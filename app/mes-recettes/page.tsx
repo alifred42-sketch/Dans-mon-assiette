@@ -53,7 +53,7 @@ function findRecipe(value: unknown): Record<string, unknown> | null {
   for (const child of Object.values(obj)) if (child && typeof child === "object") { const found = findRecipe(child); if (found) return found; }
   return null;
 }
-function recipeFromReader(markdown: string, sourceUrl: string): Omit<MyRecipe, "id" | "updatedAt" | "photos"> | null {
+function recipeFromReader(markdown: string, sourceUrl: string): Omit<MyRecipe, "id" | "updatedAt"> | null {
   const jsonBlocks = [...markdown.matchAll(/<script[^>]*type=["']application\\/ld\\+json["'][^>]*>([\\s\\S]*?)<\\/script>/gi)];
   for (const match of jsonBlocks) {
     try {
