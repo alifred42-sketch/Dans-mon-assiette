@@ -82,7 +82,7 @@ const preferenceCards: HomeCard[] = [
 // Ces raccourcis déjà présents sur l'accueil sont conservés.
 const extraCards: HomeCard[] = [
   { label: "LE FRIGO MAGIQUE", href: "/frigo-magique", color: "#DCEBDD", iconColor: "#214E4B", Icon: Refrigerator, image: "https://images.pexels.com/photos/6593800/pexels-photo-6593800.jpeg?auto=compress&cs=tinysrgb&w=900" },
-  { label: "MES FAVORIS", href: "/mes-recettes?tab=favoris", color: "#DCEBDD", iconColor: "#E32636", Icon: Heart, image: "`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/favoris-menu.jpg`" },
+  { label: "MES FAVORIS", href: "/mes-recettes?tab=favoris", color: "#DCEBDD", iconColor: "#E32636", Icon: Heart, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/favoris-menu.jpg` },
   { label: "BONUS", href: "/recettes?filter=bonus", color: "#4D7777", Icon: Sparkles, image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85&v=4" },
   { label: "MR CUISINE", href: "/recettes?filter=mr-cuisine", color: "#456B87", Icon: Bot, image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85&v=4" },
 ];
