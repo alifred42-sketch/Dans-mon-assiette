@@ -124,6 +124,29 @@ const MANUAL_AIRFRYER = new Map([
   ["tacos mexicains aux haricots rouges et guacamole maison", { incompatible: true }],
   ["appareil a tatin de poireaux au chevre sainte-maure", { incompatible: true }],
   ["tatin de navets caramelises au vinaigre balsamique", { incompatible: true }],
+  // Préparations et plats non adaptés au panier Airfryer : éviter les faux positifs
+  // produits par une mention du four dans les instructions.
+  ["sauce legumes rotis mixes", { incompatible: true }],
+  ["sauce poivrons grilles", { incompatible: true }],
+  ["marinade patate douce / pommes de terre", { incompatible: true }],
+  ["melange frites au four version bistrot", { incompatible: true }],
+  ["veloute de legumes rotis & chevre frais", { incompatible: true }],
+  ["soupe + tartine chaude", { incompatible: true }],
+  ["gaspacho courgette basilic + tartare de thon", { incompatible: true }],
+  ["soupe froide de poivrons rouges rotis au mascarpone", { incompatible: true }],
+  ["veloute de chou-fleur roti et ail doux", { incompatible: true }],
+  ["appareil a quiche maison", { incompatible: true }],
+  ["pate a pizza maison", { incompatible: true }],
+  ["barbecue entre amis", { incompatible: true }],
+  ["verrine fraises, skyr & crumble d'avoine", { incompatible: true }],
+  ["oeufs mimosa maison", { incompatible: true }],
+  ["roti de porc aux legumes", { incompatible: true }],
+  ["wrap chaud saumon & poireaux fondants", { incompatible: true }],
+  ["gateau au yaourt revisite", { incompatible: true }],
+  ["mug quesadilla crousti-fondante", { incompatible: true }],
+  ["appareil a clafoutis rustique aux tomates cerises & romarin", { incompatible: true }],
+  ["appareil a flan de potimarron au beaufort", { incompatible: true }],
+  ["farce aux champignons et comte pour courge farcie", { incompatible: true }],
 ]);
 
 // Index canonique : ignore accents, espaces, apostrophes et ponctuation.
