@@ -55,6 +55,7 @@ export default function MesRecettesPage() {
   const [photos, setPhotos] = useState<string[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [message, setMessage] = useState("");
+  const [importing, setImporting] = useState(false);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
   const photoInput = useRef<HTMLInputElement>(null);
   const searchParams = useSearchParams();
@@ -79,6 +80,7 @@ export default function MesRecettesPage() {
     .sort((a, b) => a.name.localeCompare(b.name, "fr"))
     .map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
   const personalRecipes = recipes.filter((recipe) => activeTab === "imports" ? Boolean(recipe.sourceUrl) : activeTab === "creations" ? !recipe.sourceUrl : false);
+  const importedRecipes = recipes.filter((recipe) => Boolean(recipe.sourceUrl)).sort((a, b) => b.updatedAt - a.updatedAt);
 
   function persist(next: MyRecipe[]) {
     try {
@@ -119,6 +121,29 @@ export default function MesRecettesPage() {
     event.target.value = "";
   }
 
+
+  async function importFromUrl(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    let sourceUrl = form.sourceUrl.trim();
+    try {
+      const parsed = new URL(sourceUrl);
+      if (!["http:", "https:"].includes(parsed.protocol) || !parsed.hostname.includes(".")) throw new Error();
+      if (["localhost", "127.0.0.1", "::1"].includes(parsed.hostname) || /^(10\\.|192\\.168\\.|172\\.(1[6-9]|2\\d|3[01])\\.)/.test(parsed.hostname)) throw new Error();
+      sourceUrl = parsed.toString();
+    } catch { setMessage("L’adresse URL n’est pas valide. Colle un lien public commençant par https://."); return; }
+    setImporting(true); setMessage("");
+    try {
+      const response = await fetch("https://r.jina.ai/" + sourceUrl, { headers: { Accept: "text/plain" } });
+      if (!response.ok) throw new Error("La page n’est pas accessible.");
+      const extracted = recipeFromReader(await response.text(), sourceUrl);
+      if (!extracted) throw new Error("Aucune recette détectée. Essaie l’adresse directe de la page de recette plutôt qu’un lien vers une vidéo ou un réseau social.");
+      const recipe: MyRecipe = { ...extracted, id: "import-" + Date.now(), photos: [], updatedAt: Date.now() };
+      if (!persist([recipe, ...recipes])) return;
+      setMode(null); setForm(emptyForm); setMessage("");
+    } catch (error) { setMessage(error instanceof Error ? error.message : "Import impossible. Vérifie le lien et réessaie."); }
+    finally { setImporting(false); }
+  }
+
   function save(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const title = form.title.trim();
@@ -154,6 +179,8 @@ export default function MesRecettesPage() {
       {activeTab === "favoris" ? <section className="space-y-3">
         <div><h2 className="font-heading text-xl">Mes Favoris</h2><p className="text-sm text-[#555551]">Les recettes officielles de Cuisine Chic Ouf que tu as ajoutées avec le cœur.</p></div>
         {favoriteRecipes.length ? <RecipeList items={favoriteRecipes} /> : <div className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5"><Heart className="mx-auto size-8 text-[#D1A900]" /><p className="mt-2 text-sm text-[#555551]">Tes recettes favorites apparaîtront ici. Dans le catalogue, touche le cœur d’une recette pour l’ajouter.</p><Link href="/recettes" className="mt-3 inline-flex min-h-11 items-center rounded-xl bg-[#F4C542] px-4 text-sm font-bold text-[#302400]">Parcourir le catalogue</Link></div>}
+        <button type="button" onClick={() => begin("link")} className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#557C65] px-4 text-sm font-bold text-white"><Link2 className="size-5" /> Importer une recette</button>
+        {importedRecipes.length ? <div className="space-y-3 pt-2"><h3 className="font-heading text-lg">Recettes importées · lecture seule</h3>{importedRecipes.map((recipe) => <article key={recipe.id} className="space-y-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5"><h4 className="font-heading text-lg">{recipe.title}</h4>{recipe.description ? <p className="text-sm text-[#555551]">{recipe.description}</p> : null}<div><h5 className="text-sm font-bold">Ingrédients</h5><ul className="mt-1 list-inside list-disc space-y-1 text-sm text-[#555551]">{recipe.ingredients.map((item, i) => <li key={i}>{item}</li>)}</ul></div><div><h5 className="text-sm font-bold">Préparation</h5><ol className="mt-1 list-inside list-decimal space-y-1 text-sm text-[#555551]">{recipe.steps.map((item, i) => <li key={i}>{item}</li>)}</ol></div><a href={recipe.sourceUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-[#668775] underline">Voir la source <ArrowUpRight className="size-4" /></a><p className="text-xs text-[#777773]">Recette importée — modification désactivée.</p></article>)}</div> : null}
       </section> : null}
 
       {activeTab !== "favoris" && !mode ? <section className="grid gap-3 sm:grid-cols-2" aria-label="Ajouter une recette">
@@ -167,7 +194,15 @@ export default function MesRecettesPage() {
         </button> : null}
       </section> : null}
 
-      {activeTab !== "favoris" && mode ? <section className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 sm:p-6">
+      {activeTab !== "favoris" && mode === "link" ? <section className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 sm:p-6">
+        <div className="mb-5 flex items-start justify-between gap-3"><div><p className="text-sm font-bold text-[#668775]">Importer automatiquement</p><h2 className="mt-1 font-heading text-xl">Colle le lien de ta recette</h2></div><button type="button" onClick={() => { setMode(null); setMessage(""); }} aria-label="Fermer l’import" className="flex size-10 items-center justify-center rounded-full bg-[#F3F3EF]"><X className="size-5" /></button></div>
+        <form onSubmit={importFromUrl} className="space-y-3"><label className="block text-sm font-semibold">Adresse URL de la recette<input required type="url" inputMode="url" autoCapitalize="none" autoComplete="url" placeholder="https://exemple.fr/ma-recette" value={form.sourceUrl} onChange={(event) => setForm({ ...emptyForm, sourceUrl: event.target.value })} className={fieldClass} /></label>
+        <p className="text-sm leading-relaxed text-[#555551]">Je récupère automatiquement le titre, les ingrédients et les étapes lorsque le site les rend accessibles.</p>
+        {message ? <p role="alert" className="rounded-lg bg-[#FAD2CB]/50 p-3 text-sm font-medium">{message}</p> : null}
+        <div className="flex flex-wrap gap-2"><button type="submit" disabled={!ready || importing} className="min-h-12 rounded-xl bg-[#668775] px-5 text-sm font-bold text-white shadow-sm disabled:opacity-60">{importing ? "Import en cours…" : "Importer la recette"}</button><button type="button" onClick={() => { setMode(null); setMessage(""); }} className="min-h-12 rounded-xl px-4 text-sm font-semibold text-[#555551]">Annuler</button></div></form>
+      </section> : null}
+
+      {activeTab !== "favoris" && mode === "manual" ? <section className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 sm:p-6">
         <div className="mb-5 flex items-start justify-between gap-3">
           <div><p className="text-sm font-bold text-[#668775]">{editingId ? "Modifier ma fiche" : mode === "link" ? "Garder une recette trouvée en ligne" : "Créer une fiche personnelle"}</p><h2 className="mt-1 font-heading text-xl">{mode === "link" ? "Recette ou vidéo" : "Nouvelle recette"}</h2></div>
           <button type="button" onClick={() => setMode(null)} aria-label="Fermer le formulaire" className="flex size-10 items-center justify-center rounded-full bg-[#F3F3EF]"><X className="size-5" /></button>
@@ -200,7 +235,7 @@ export default function MesRecettesPage() {
         {!personalRecipes.length ? <div className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5"><UtensilsCrossed className="mx-auto size-8 text-[#8FA89B]" /><p className="mt-2 text-sm text-[#555551]">{activeTab === "creations" ? "Tes recettes personnelles apparaîtront ici." : "Tes recettes avec un lien source apparaîtront ici."}</p></div> : <ul className="space-y-3">{personalRecipes.map((recipe) => <li key={recipe.id} className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5">
           {recipe.photos[0] ? <img src={recipe.photos[0]} alt={`Photo de ${recipe.title}`} className="max-h-64 w-full object-cover" /> : null}
           <article className="space-y-3 p-4">
-            <div className="flex items-start justify-between gap-3"><div className="min-w-0"><h3 className="font-heading text-lg leading-tight">{recipe.title}</h3>{recipe.description ? <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-[#555551]">{recipe.description}</p> : null}<p className="mt-2 text-xs text-[#777773]">{[recipe.prepTime && `Préparation ${recipe.prepTime}`, recipe.cookTime && `Cuisson ${recipe.cookTime}`, recipe.servings && `${recipe.servings} personne(s)`].filter(Boolean).join(" · ") || "Fiche personnelle"}</p></div><div className="flex shrink-0 gap-1"><button type="button" onClick={() => edit(recipe)} aria-label={`Modifier ${recipe.title}`} className="flex size-10 items-center justify-center rounded-xl bg-[#F3F3EF]"><Pencil className="size-4" /></button><button type="button" onClick={() => remove(recipe.id)} aria-label={`Supprimer ${recipe.title}`} className="flex size-10 items-center justify-center rounded-xl bg-[#FAD2CB]/40 text-[#7C3A35]"><Trash2 className="size-4" /></button></div></div>
+            <div className="flex items-start justify-between gap-3"><div className="min-w-0"><h3 className="font-heading text-lg leading-tight">{recipe.title}</h3>{recipe.description ? <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-[#555551]">{recipe.description}</p> : null}<p className="mt-2 text-xs text-[#777773]">{[recipe.prepTime && `Préparation ${recipe.prepTime}`, recipe.cookTime && `Cuisson ${recipe.cookTime}`, recipe.servings && `${recipe.servings} personne(s)`].filter(Boolean).join(" · ") || "Fiche personnelle"}</p></div><div className="flex shrink-0 gap-1">{!recipe.sourceUrl ? <button type="button" onClick={() => edit(recipe)} aria-label={`Modifier ${recipe.title}`} className="flex size-10 items-center justify-center rounded-xl bg-[#F3F3EF]"><Pencil className="size-4" /></button> : null}<button type="button" onClick={() => remove(recipe.id)} aria-label={`Supprimer ${recipe.title}`} className="flex size-10 items-center justify-center rounded-xl bg-[#FAD2CB]/40 text-[#7C3A35]"><Trash2 className="size-4" /></button></div></div>
             {recipe.photos.length > 1 ? <div className="grid grid-cols-3 gap-2">{recipe.photos.slice(1).map((photo, index) => <img key={index} src={photo} alt={`Photo ${index + 2} de ${recipe.title}`} className="aspect-square w-full rounded-xl object-cover" />)}</div> : null}
             {recipe.ingredients.length ? <div><h4 className="text-sm font-bold">Ingrédients{recipe.servings ? ` · ${recipe.servings} personne(s)` : ""}</h4><ul className="mt-1 list-inside list-disc space-y-1 text-sm text-[#555551]">{recipe.ingredients.map((item, index) => <li key={index}>{item}</li>)}</ul></div> : null}
             {recipe.steps.length ? <div><h4 className="text-sm font-bold">Préparation</h4><ol className="mt-1 list-inside list-decimal space-y-1 text-sm leading-relaxed text-[#555551]">{recipe.steps.map((item, index) => <li key={index}>{item}</li>)}</ol></div> : null}
