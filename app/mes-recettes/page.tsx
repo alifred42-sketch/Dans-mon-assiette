@@ -228,41 +228,39 @@ export default function MesRecettesPage() {
       if (!["http:", "https:"].includes(parsed.protocol) || !parsed.hostname.includes(".")) throw new Error();
       if (["localhost", "127.0.0.1", "::1"].includes(parsed.hostname) || /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(parsed.hostname)) throw new Error();
       sourceUrl = parsed.toString();
-    } catch { setMessage("L’adresse URL n’est pas valide. Colle un lien public commençant par https://."); return; }
-    setImporting(true); setMessage("");
+    } catch {
+      setMessage("L’adresse URL n’est pas valide. Colle un lien public commençant par https://.");
+      return;
+    }
+
+    setImporting(true);
+    setMessage("");
     try {
-      // robots.txt est vérifié avant de demander le contenu de la recette.
-      // L’import est bloqué par défaut si le fichier n’est pas accessible ou interprétable.
+      // Respecter les règles publiques robots.txt avant toute tentative d’import.
       const robotsUrl = new URL("/robots.txt", sourceUrl).toString();
       const robotsResponse = await fetch("https://r.jina.ai/" + robotsUrl, { headers: { Accept: "text/plain" } });
       if (!robotsResponse.ok) throw new Error("Impossible de vérifier les règles robots.txt de ce site. Importation bloquée par sécurité.");
       const robotsText = await robotsResponse.text();
-      if (/access denied|error code:?\\s*(401|403)|status code:?\\s*(401|403)/i.test(robotsText)) throw new Error("Impossible de vérifier les règles robots.txt de ce site. Importation bloquée par sécurité.");
+      if (/access denied|error code:?\s*(401|403)|status code:?\s*(401|403)/i.test(robotsText)) {
+        throw new Error("Impossible de vérifier les règles robots.txt de ce site. Importation bloquée par sécurité.");
+      }
+
       const pathname = new URL(sourceUrl).pathname;
-      const groups = robotsText.split(/(?:^|\\n)\\s*user-agent\\s*:/i).slice(1);
+      const groups = robotsText.split(/(?:^|\n)\s*user-agent\s*:/i).slice(1);
       let disallowed = false;
       for (const group of groups) {
-        const lines = group.split(/\\r?\\n/);
+        const lines = group.split(/\r?\n/);
         const agent = (lines.shift() || "").trim();
-        if (agent !== "*" && !/chic\\s*ouf/i.test(agent)) continue;
+        if (agent !== "*" && !/chic\s*ouf/i.test(agent)) continue;
         for (const line of lines) {
-          const rule = line.match(/^\\s*(disallow|allow)\\s*:\\s*(.*?)\\s*(?:#.*)?$/i);
+          const rule = line.match(/^\s*(disallow|allow)\s*:\s*(.*?)\s*(?:#.*)?$/i);
           if (!rule || !rule[2]) continue;
           try {
-            const pattern = rule[2].replace(/[.+^$|{}()]/g, "\\\\    setImporting(true); setMessage("");
-    try {
-      const response = await fetch("https://r.jina.ai/" + sourceUrl, { headers: { Accept: "text/plain" } });
-      if (!response.ok) throw new Error("La page n’est pas accessible.");
-      const extracted = recipeFromReader(await response.text(), sourceUrl);
-      if (!extracted) throw new Error("Aucune recette détectée. Essaie l’adresse directe de la page de recette plutôt qu’un lien vers une vidéo ou un réseau social.");
-      const recipe: MyRecipe = { ...extracted, id: "import-" + Date.now(), photos: [], updatedAt: Date.now() };
-      if (!persist([recipe, ...recipes])) return;
-      setMode(null); setForm(emptyForm); setMessage("");
-    } catch (error) { setMessage(error instanceof Error ? error.message : "Import impossible. Vérifie le lien et réessaie."); }
-    finally { setImporting(false); }").replace(/\\*/g, ".*").replace(/\\$/g, "$");
-            if (new RegExp("^" + pattern).test(pathname) && rule[1].toLowerCase() === "disallow") disallowed = true;
-            if (new RegExp("^" + pattern).test(pathname) && rule[1].toLowerCase() === "allow") disallowed = false;
-          } catch { /* Règle non interprétable : ne pas la considérer comme une autorisation. */ }
+            const pattern = rule[2].replace(/[.+^$|{}()]/g, "\\$&").replace(/\*/g, ".*").replace(/\$$/g, "$");
+            if (new RegExp("^" + pattern).test(pathname)) disallowed = rule[1].toLowerCase() === "disallow";
+          } catch {
+            // Une règle non interprétable n’est pas considérée comme une autorisation.
+          }
         }
       }
       if (disallowed) throw new Error("Ce site n'autorise pas l'importation automatique.");
@@ -273,14 +271,21 @@ export default function MesRecettesPage() {
         throw new Error("La page n’est pas accessible (HTTP " + response.status + ").");
       }
       const content = await response.text();
-      if (/access denied|\\b(401|403)\\s*(unauthorized|forbidden)|paywall|subscribe to continue|sign in to continue|log in to view/i.test(content)) throw new Error("Le site semble restreindre l’accès à cette recette. Aucun contournement n’est effectué.");
+      if (/access denied|\b(401|403)\s*(unauthorized|forbidden)|paywall|subscribe to continue|sign in to continue|log in to view/i.test(content)) {
+        throw new Error("Le site semble restreindre l’accès à cette recette. Aucun contournement n’est effectué.");
+      }
       const extracted = recipeFromReader(content, sourceUrl);
       if (!extracted) throw new Error("Aucune recette détectée. Essaie l’adresse directe d’une page publique de recette, sans connexion ni abonnement.");
       const recipe: MyRecipe = { ...extracted, id: "import-" + Date.now(), photos: [], updatedAt: Date.now() };
       if (!persist([recipe, ...recipes])) return;
-      setMode(null); setForm(emptyForm); setMessage("");
-    } catch (error) { setMessage(error instanceof Error ? error.message : "Import impossible. Vérifie le lien et réessaie."); }
-    finally { setImporting(false); }
+      setMode(null);
+      setForm(emptyForm);
+      setMessage("");
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Import impossible. Vérifie le lien et réessaie.");
+    } finally {
+      setImporting(false);
+    }
   }
 
   function save(event: FormEvent<HTMLFormElement>) {
