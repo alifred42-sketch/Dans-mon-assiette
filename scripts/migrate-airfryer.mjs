@@ -125,7 +125,7 @@ const MANUAL_AIRFRYER = new Map([
 ]);
 
 function applyManualAirfryer(recipe) {
-  const key = normalize(recipe.name ?? recipe.title).replace(/[^a-z0-9 &]+/g, " ").replace(/\\s+/g, " ").trim();
+  const key = normalize(recipe.name ?? recipe.title).replace(/[^a-z0-9 &]+/g, " ").replace(/\s+/g, " ").trim();
   const override = MANUAL_AIRFRYER.get(key);
   if (!override) return;
   if (override.incompatible) {
@@ -221,8 +221,8 @@ console.log("Recettes examinées : " + scanned);
 console.log("Recettes compatibles/déjà équipées : " + compatible);
 console.log("Recettes modifiées : " + changed);
 console.log("Compatibles à vérifier (données incomplètes) : " + review);
-console.log("\\nCANDIDATS AVEC CUISSON AU FOUR (" + ovenCandidates.length + ") :");
+console.log("\nCANDIDATS AVEC CUISSON AU FOUR (" + ovenCandidates.length + ") :");
 for (const item of ovenCandidates) console.log("- " + item.name + " | Airfryer=" + item.compatible + " | " + item.minutes + " min / " + item.temperature + " °C");
-console.log("\\nCANDIDATS FOUR INCOMPLETS (" + incompleteCandidates.length + ") :");
+console.log("\nCANDIDATS FOUR INCOMPLETS (" + incompleteCandidates.length + ") :");
 for (const item of incompleteCandidates) console.log("- " + item.name + " | durée=" + item.minutes + " | température=" + item.temperature + " | compatible=" + item.compatible);
 if (!write) console.log("Aucun fichier modifié. Relancer avec --write pour enregistrer.");
