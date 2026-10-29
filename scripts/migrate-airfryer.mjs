@@ -178,7 +178,11 @@ function migrateRecipe(recipe) {
   }
   applyManualAirfryer(recipe);
   const changed = Object.keys(previous).some((key) => previous[key] !== recipe[key]);
-  const compatible = detectedOven || hasExistingAirfryer || recipe.airfryer_compatible === true;
+  // Une exclusion manuelle prime sur la détection générique de mots-clés « four » :
+  // une soupe, une marinade ou une préparation ne doit pas rester comptée comme plat Airfryer.
+  const compatible = recipe.airfryer_compatible === false
+    ? false
+    : (detectedOven || hasExistingAirfryer || recipe.airfryer_compatible === true);
   const needsReview = compatible && (recipe.airfryer_temps == null || recipe.airfryer_temperature == null);
   return { changed, compatible, needsReview };
 }
