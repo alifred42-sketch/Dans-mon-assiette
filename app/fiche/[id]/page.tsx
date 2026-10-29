@@ -119,7 +119,7 @@ export default async function FichePage({
         )}
       </header>
 
-      <RecipeTools recipeId={recipe.id} ingredients={shopIngs} alternatives={alternatives} baseServings={Number.parseInt(recipe.servings || "4", 10) || 4} ingredientTargets={ingredientTargets} />
+      <RecipeTools recipeId={recipe.id} recipeName={recipe.name} ingredients={shopIngs} alternatives={alternatives} baseServings={Number.parseInt(recipe.servings || "4", 10) || 4} ingredientTargets={ingredientTargets} />
 
       <section aria-label="Commandes vocales de préparation"><RecipeHandsFree steps={recipe.steps} /></section>
 
