@@ -54,7 +54,7 @@ function findRecipe(value: unknown): Record<string, unknown> | null {
   return null;
 }
 function recipeFromReader(markdown: string, sourceUrl: string): Omit<MyRecipe, "id" | "updatedAt"> | null {
-  const jsonBlocks = [...markdown.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\\S]*?)<\/script>/gi)];
+  const jsonBlocks = [...markdown.matchAll(/<script[^>]*>([\\s\\S]*?)<\\/script>/gi)].filter((match) => /application\\/ld\\+json/i.test(match[0]));
   for (const match of jsonBlocks) {
     try {
       const recipe = findRecipe(JSON.parse(match[1]));
@@ -71,12 +71,24 @@ function recipeFromReader(markdown: string, sourceUrl: string): Omit<MyRecipe, "
     } catch { /* Ignore malformed JSON-LD. */ }
   }
   const title = markdown.match(/^#\s+(.+)$/m)?.[1]?.trim() || markdown.match(/^Title:\s*(.+)$/mi)?.[1]?.trim();
-  const section = (names: string) => {
-    const match = markdown.match(new RegExp("(?:^|\\\n)#+\\\s*(?:" + names + ")[^\\\n]*\\\n([\\\s\\\\S]*?)(?=\\\n#+\\\s|$)", "im"));
-    return match?.[1]?.split("\n").map((line) => line.replace(/^\s*(?:[-*•] |\\d+[.)] )/, "").trim()).filter(Boolean) || [];
+  const section = (kind: "ingredients" | "steps") => {
+    const lines = markdown.split(/\\r?\\n/);
+    const isHeader = (line: string) => /^#{1,4}\\s/.test(line.trim());
+    const matchesHeader = (line: string) => kind === "ingredients"
+      ? /ingredients?|what you need|incredients?/i.test(line)
+      : /instructions?|directions?|preparation|method|steps|préparation|étapes?/i.test(line);
+    const start = lines.findIndex((line) => isHeader(line) && matchesHeader(line));
+    if (start < 0) return [];
+    const result: string[] = [];
+    for (const line of lines.slice(start + 1)) {
+      if (isHeader(line)) break;
+      const value = line.replace(/^\\s*(?:[-*•] |\\d+[.)] )/, "").trim();
+      if (value && !/^source:/i.test(value)) result.push(value);
+    }
+    return result;
   };
-  const ingredients = section("ingredients?|what you need|incredients?");
-  const steps = section("instructions?|directions?|preparation|method|steps|préparation|étapes?");
+  const ingredients = section("ingredients");
+  const steps = section("steps");
   if (!title || !ingredients.length || !steps.length) return null;
   return { title: cleanText(title), description: "", ingredients, steps, prepTime: "", cookTime: "", servings: "4", sourceUrl, photos: [] };
 }
