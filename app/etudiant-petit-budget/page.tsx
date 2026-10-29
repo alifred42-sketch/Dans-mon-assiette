@@ -1,12 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { carnet } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
 import { RecipeList } from "@/components/recipe-list";
 import type { Recipe } from "@/lib/types";
-import { ArrowLeft, CookingPot, Soup, Microwave, Salad, Coffee, Sparkles } from "lucide-react";
+import { CookingPot, Soup, Microwave, Salad, Coffee, Sparkles } from "lucide-react";
 
 type Book = "cuisson-unique" | "fast-chic";
 
@@ -36,10 +35,6 @@ export default function EtudiantPetitBudgetPage() {
   return (
     <main className="min-h-dvh bg-transparent px-5 py-6 sm:px-8">
       <div className="mx-auto w-full max-w-4xl space-y-6">
-        <Link href="/" className="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-[#1A1A1A] transition hover:bg-[#E6DFD3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8FA89B]">
-          <ArrowLeft aria-hidden="true" className="size-4" /> Retour
-        </Link>
-
         <header className="space-y-2">
           <p className="text-sm font-semibold uppercase tracking-wide text-[#6B6B67]">Le carnet malin</p>
           <h1 className="font-heading text-3xl font-extrabold text-[#1A1A1A] sm:text-4xl">🎓 Étudiant & Petit Budget</h1>
