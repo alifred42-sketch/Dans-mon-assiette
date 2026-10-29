@@ -95,6 +95,48 @@ function extractOvenMinutes(instructions, timeCook, recipe) {
   return cooked ? Number(cooked[1]) : null;
 }
 
+const MANUAL_AIRFRYER = new Map([
+  // Plats complets : réglages de départ prudents, à adapter à la taille des portions et au modèle.
+  ["gratin de pates saumon & poireaux leger", { minutes: 20, temperature: 160 }],
+  ["poulet citron thym & legumes du four", { minutes: 28, temperature: 180 }],
+  ["poulet facon barbecue maison", { minutes: 20, temperature: 180 }],
+  ["kebab maison version equilibree", { minutes: 14, temperature: 180 }],
+  ["gyros de poulet maison", { minutes: 14, temperature: 180 }],
+  ["tacos maison poulet facon mexicaine", { minutes: 14, temperature: 180 }],
+  ["tacos maison au poulet marine et legumes", { minutes: 16, temperature: 180 }],
+  ["burger maison facon barbecue", { minutes: 12, temperature: 180 }],
+  ["burger maison facon montagnard", { minutes: 12, temperature: 180 }],
+  ["burger maison de poulet facon bistrot", { minutes: 14, temperature: 180 }],
+  ["frittata aux artichauts, tomates sechees et chevre", { minutes: 16, temperature: 160 }],
+  ["frittata vegetale aux epinards et a la farine de pois", { minutes: 18, temperature: 160 }],
+  ["soupe froide de poivrons rouges rotis au mascarpone", { minutes: 14, temperature: 180 }],
+  ["sauce poivrons grilles", { minutes: 14, temperature: 180 }],
+  // Fiches de composants sans cuisson autonome : ne pas les afficher comme plats Airfryer.
+  ["bechamel legere au fromage blanc", { incompatible: true }],
+  ["marinade poulet tikka", { incompatible: true }],
+  ["marinade filet mignon moutarde & herbes", { incompatible: true }],
+  ["marinade legumes rotis", { incompatible: true }],
+  ["melange special poulet grille", { incompatible: true }],
+  ["tacos mexicains aux haricots rouges et guacamole maison", { incompatible: true }],
+  ["appareil a tatin de poireaux au chevre sainte-maure", { incompatible: true }],
+  ["tatin de navets caramelises au vinaigre balsamique", { incompatible: true }],
+]);
+
+function applyManualAirfryer(recipe) {
+  const key = normalize(recipe.name ?? recipe.title).replace(/[^a-z0-9 &]+/g, " ").replace(/\\s+/g, " ").trim();
+  const override = MANUAL_AIRFRYER.get(key);
+  if (!override) return;
+  if (override.incompatible) {
+    recipe.airfryer_compatible = false;
+    recipe.airfryer_temps = null;
+    recipe.airfryer_temperature = null;
+    return;
+  }
+  recipe.airfryer_compatible = true;
+  recipe.airfryer_temps = override.minutes;
+  recipe.airfryer_temperature = override.temperature;
+}
+
 function migrateRecipe(recipe) {
   const instructions = getInstructions(recipe);
   const detectedOven = ovenCooking(instructions, recipe);
@@ -125,7 +167,7 @@ function migrateRecipe(recipe) {
       ? existingTemperature
       : ovenTemperature == null ? (recipe.airfryer_temperature ?? null) : Math.min(200, Math.max(80, ovenTemperature - 20));
   }
-  const changed = Object.keys(previous).some((key) => previous[key] !== recipe[key]);
+  applyManualAirfryer(recipe);\n  const changed = Object.keys(previous).some((key) => previous[key] !== recipe[key]);
   const compatible = detectedOven || hasExistingAirfryer || recipe.airfryer_compatible === true;
   const needsReview = compatible && (recipe.airfryer_temps == null || recipe.airfryer_temperature == null);
   return { changed, compatible, needsReview };
