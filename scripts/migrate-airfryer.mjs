@@ -95,6 +95,8 @@ function extractOvenMinutes(instructions, timeCook, recipe) {
   return cooked ? Number(cooked[1]) : null;
 }
 
+const normalizeKey = (text) => normalize(text).replace(/[^a-z0-9]+/g, "");
+
 const MANUAL_AIRFRYER = new Map([
   // Plats complets : réglages de départ prudents, à adapter à la taille des portions et au modèle.
   ["gratin de pates saumon & poireaux leger", { minutes: 20, temperature: 160 }],
@@ -124,9 +126,14 @@ const MANUAL_AIRFRYER = new Map([
   ["tatin de navets caramelises au vinaigre balsamique", { incompatible: true }],
 ]);
 
+// Index canonique : ignore accents, espaces, apostrophes et ponctuation.
+const MANUAL_AIRFRYER_NORMALIZED = new Map(
+  [...MANUAL_AIRFRYER.entries()].map(([key, value]) => [normalizeKey(key), value]),
+);
+
 function applyManualAirfryer(recipe) {
-  const key = normalize(recipe.name ?? recipe.title).replace(/[^a-z0-9 &]+/g, " ").replace(/\s+/g, " ").trim();
-  const override = MANUAL_AIRFRYER.get(key);
+  const key = normalizeKey(recipe.name ?? recipe.title);
+  const override = MANUAL_AIRFRYER_NORMALIZED.get(key);
   if (!override) return;
   if (override.incompatible) {
     recipe.airfryer_compatible = false;
