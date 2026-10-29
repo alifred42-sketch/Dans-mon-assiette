@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { BackButton } from "@/components/back-button";
 import { RecipeList } from "@/components/recipe-list";
 import { carnet } from "@/lib/carnet";
 import { recipeLines } from "@/lib/search";
@@ -24,7 +23,7 @@ const SUBFILTERS: Record<LevelOne, { id: string; label: string }[]> = {
   ],
 };
 
-export function VeganNavigation({ showBack = true }: { showBack?: boolean }) {
+export function VeganNavigation() {
   const [activeLevel, setActiveLevel] = useState<LevelOne | null>(null);
   const [activeSub, setActiveSub] = useState<string | null>(null);
   const recipes = activeSub
@@ -34,7 +33,6 @@ export function VeganNavigation({ showBack = true }: { showBack?: boolean }) {
 
   return (
     <section className="space-y-5">
-      {showBack ? <BackButton /> : null}
       <header>
         <h1 className="font-heading text-2xl font-bold text-[#1A1A1A] sm:text-3xl">🥦 Végan</h1>
         <p className="mt-2 max-w-3xl text-sm font-normal leading-relaxed text-[#1A1A1A] sm:text-base">{intro}</p>
