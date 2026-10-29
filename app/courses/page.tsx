@@ -148,7 +148,7 @@ export default function CoursesPage() {
         <LactoseFreeSafetyNotice />
         <NutFreeSafetyNotice />
         <header className="relative text-center">
-          <div className="relative mb-3 flex items-center justify-center"><Link href="/" aria-label="Retour" className="absolute left-0 text-2xl font-bold text-black">‹</Link><h1 className="font-heading text-2xl font-bold normal-case text-black sm:text-3xl">Mes Courses</h1></div>
+          <div className="relative mb-3 flex items-center justify-center"><h1 className="font-heading text-2xl font-bold normal-case text-black sm:text-3xl">Mes Courses</h1></div>
           <div className="mx-auto mt-3 flex max-w-xl items-center justify-between gap-2 rounded-2xl bg-white px-2 py-2 text-black shadow-sm">
             <button type="button" aria-label="Semaine précédente" disabled={week <= 1} onClick={() => { window.location.href = `/courses?w=${week - 1}&manual=1`; }} className="flex size-10 shrink-0 items-center justify-center rounded-xl hover:bg-[#EAF4F1] disabled:opacity-30"><ChevronLeft className="size-6" /></button>
             <p className="text-center text-xs font-black uppercase tracking-wide sm:text-sm">{dateRangeForIsoWeek(week)}</p>
