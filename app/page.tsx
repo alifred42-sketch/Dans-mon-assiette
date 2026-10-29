@@ -121,12 +121,6 @@ function CardRow({
         );
         return editing ? <button key={label} type="button" onClick={() => onToggle(label)} aria-pressed={selected} aria-label={(selected ? "Masquer" : "Afficher") + " la catégorie " + label} className={cardClass} style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>{cardContent}</button> : <Link key={label} href={destination} prefetch={false} aria-label={label} className={cardClass} style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>{cardContent}</Link>;
       })}
-            <div className="relative mx-auto mt-1 h-[64%] w-[calc(100%-0.5rem)] min-h-0 overflow-hidden rounded-xl sm:rounded-2xl"><img src={image} alt="" loading="lazy" className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />{label === "MES FAVORIS" ? <div aria-hidden="true" className="pointer-events-none absolute inset-0"><Heart className="absolute left-[7%] top-[8%] size-[19%] rotate-[-14deg] fill-[#E32636] text-[#E32636] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute right-[8%] top-[12%] size-[16%] rotate-[15deg] fill-[#FF5B70] text-[#FF5B70] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute left-[3%] top-[48%] size-[14%] rotate-[-10deg] fill-[#FF5B70] text-[#FF5B70] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute right-[4%] top-[48%] size-[18%] rotate-[12deg] fill-[#E32636] text-[#E32636] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute bottom-[7%] left-[17%] size-[13%] rotate-[10deg] fill-[#FF5B70] text-[#FF5B70] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /><Heart className="absolute bottom-[5%] right-[20%] size-[15%] rotate-[-12deg] fill-[#E32636] text-[#E32636] drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)]" strokeWidth={1.5} /></div> : null}</div>
-            <span className="flex min-h-0 flex-1 w-full items-center justify-center px-1 py-1 text-[10px] font-black leading-tight tracking-wide sm:text-xs md:text-sm" style={{ backgroundColor: color, color: iconColor || "#FFFFFF" }}>
-              {label}
-            </span>
-          </Link>
-        );
       })}
     </div>
   );
