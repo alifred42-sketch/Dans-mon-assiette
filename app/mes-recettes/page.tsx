@@ -190,10 +190,51 @@ export default function MesRecettesPage() {
     } catch { setMessage("L’adresse URL n’est pas valide. Colle un lien public commençant par https://."); return; }
     setImporting(true); setMessage("");
     try {
+      // robots.txt est vérifié avant de demander le contenu de la recette.
+      // L’import est bloqué par défaut si le fichier n’est pas accessible ou interprétable.
+      const robotsUrl = new URL("/robots.txt", sourceUrl).toString();
+      const robotsResponse = await fetch("https://r.jina.ai/" + robotsUrl, { headers: { Accept: "text/plain" } });
+      if (!robotsResponse.ok) throw new Error("Impossible de vérifier les règles robots.txt de ce site. Importation bloquée par sécurité.");
+      const robotsText = await robotsResponse.text();
+      if (/access denied|error code:?\\s*(401|403)|status code:?\\s*(401|403)/i.test(robotsText)) throw new Error("Impossible de vérifier les règles robots.txt de ce site. Importation bloquée par sécurité.");
+      const pathname = new URL(sourceUrl).pathname;
+      const groups = robotsText.split(/(?:^|\\n)\\s*user-agent\\s*:/i).slice(1);
+      let disallowed = false;
+      for (const group of groups) {
+        const lines = group.split(/\\r?\\n/);
+        const agent = (lines.shift() || "").trim();
+        if (agent !== "*" && !/chic\\s*ouf/i.test(agent)) continue;
+        for (const line of lines) {
+          const rule = line.match(/^\\s*(disallow|allow)\\s*:\\s*(.*?)\\s*(?:#.*)?$/i);
+          if (!rule || !rule[2]) continue;
+          try {
+            const pattern = rule[2].replace(/[.+^$|{}()]/g, "\\\\    setImporting(true); setMessage("");
+    try {
       const response = await fetch("https://r.jina.ai/" + sourceUrl, { headers: { Accept: "text/plain" } });
       if (!response.ok) throw new Error("La page n’est pas accessible.");
       const extracted = recipeFromReader(await response.text(), sourceUrl);
       if (!extracted) throw new Error("Aucune recette détectée. Essaie l’adresse directe de la page de recette plutôt qu’un lien vers une vidéo ou un réseau social.");
+      const recipe: MyRecipe = { ...extracted, id: "import-" + Date.now(), photos: [], updatedAt: Date.now() };
+      if (!persist([recipe, ...recipes])) return;
+      setMode(null); setForm(emptyForm); setMessage("");
+    } catch (error) { setMessage(error instanceof Error ? error.message : "Import impossible. Vérifie le lien et réessaie."); }
+    finally { setImporting(false); }").replace(/\\*/g, ".*").replace(/\\$/g, "$");
+            if (new RegExp("^" + pattern).test(pathname) && rule[1].toLowerCase() === "disallow") disallowed = true;
+            if (new RegExp("^" + pattern).test(pathname) && rule[1].toLowerCase() === "allow") disallowed = false;
+          } catch { /* Règle non interprétable : ne pas la considérer comme une autorisation. */ }
+        }
+      }
+      if (disallowed) throw new Error("Ce site n'autorise pas l'importation automatique.");
+
+      const response = await fetch("https://r.jina.ai/" + sourceUrl, { headers: { Accept: "text/plain" } });
+      if (!response.ok) {
+        if (response.status === 401 || response.status === 403) throw new Error("Ce site refuse l’accès à cette page. L’importation est bloquée.");
+        throw new Error("La page n’est pas accessible (HTTP " + response.status + ").");
+      }
+      const content = await response.text();
+      if (/access denied|\\b(401|403)\\s*(unauthorized|forbidden)|paywall|subscribe to continue|sign in to continue|log in to view/i.test(content)) throw new Error("Le site semble restreindre l’accès à cette recette. Aucun contournement n’est effectué.");
+      const extracted = recipeFromReader(content, sourceUrl);
+      if (!extracted) throw new Error("Aucune recette détectée. Essaie l’adresse directe d’une page publique de recette, sans connexion ni abonnement.");
       const recipe: MyRecipe = { ...extracted, id: "import-" + Date.now(), photos: [], updatedAt: Date.now() };
       if (!persist([recipe, ...recipes])) return;
       setMode(null); setForm(emptyForm); setMessage("");
@@ -237,7 +278,7 @@ export default function MesRecettesPage() {
         <div><h2 className="font-heading text-xl">Mes Favoris</h2><p className="text-sm text-[#555551]">Les recettes officielles de Cuisine Chic Ouf que tu as ajoutées avec le cœur.</p></div>
         {favoriteRecipes.length ? <RecipeList items={favoriteRecipes} /> : <div className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5"><Heart className="mx-auto size-8 text-[#D1A900]" /><p className="mt-2 text-sm text-[#555551]">Tes recettes favorites apparaîtront ici. Dans le catalogue, touche le cœur d’une recette pour l’ajouter.</p><Link href="/recettes" className="mt-3 inline-flex min-h-11 items-center rounded-xl bg-[#F4C542] px-4 text-sm font-bold text-[#302400]">Parcourir le catalogue</Link></div>}
         <button type="button" onClick={() => begin("link")} className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#557C65] px-4 text-sm font-bold text-white"><Link2 className="size-5" /> Importer une recette</button>
-        {importedRecipes.length ? <div className="space-y-3 pt-2"><h3 className="font-heading text-lg">Recettes importées · lecture seule</h3>{importedRecipes.map((recipe) => <article key={recipe.id} className="space-y-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5"><h4 className="font-heading text-lg">{recipe.title}</h4>{recipe.description ? <p className="text-sm text-[#555551]">{recipe.description}</p> : null}<div><h5 className="text-sm font-bold">Ingrédients</h5><ul className="mt-1 list-inside list-disc space-y-1 text-sm text-[#555551]">{recipe.ingredients.map((item, i) => <li key={i}>{item}</li>)}</ul></div><div><h5 className="text-sm font-bold">Préparation</h5><ol className="mt-1 list-inside list-decimal space-y-1 text-sm text-[#555551]">{recipe.steps.map((item, i) => <li key={i}>{item}</li>)}</ol></div><a href={recipe.sourceUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-[#668775] underline">Voir la source <ArrowUpRight className="size-4" /></a><p className="text-xs text-[#777773]">Recette importée — modification désactivée.</p></article>)}</div> : null}
+        {importedRecipes.length ? <div className="space-y-3 pt-2"><h3 className="font-heading text-lg">Recettes importées · lecture seule</h3>{importedRecipes.map((recipe) => <article key={recipe.id} className="space-y-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5"><h4 className="font-heading text-lg">{recipe.title}</h4>{recipe.description ? <p className="text-sm text-[#555551]">{recipe.description}</p> : null}<div><h5 className="text-sm font-bold">Ingrédients</h5><ul className="mt-1 list-inside list-disc space-y-1 text-sm text-[#555551]">{recipe.ingredients.map((item, i) => <li key={i}>{item}</li>)}</ul></div><div><h5 className="text-sm font-bold">Préparation</h5><ol className="mt-1 list-inside list-decimal space-y-1 text-sm text-[#555551]">{recipe.steps.map((item, i) => <li key={i}>{item}</li>)}</ol></div><p className="rounded-xl border border-[#668775]/30 bg-[#668775]/10 p-3 text-sm font-semibold text-[#355542]">Recette originale publiée sur {(() => { try { return new URL(recipe.sourceUrl).hostname; } catch { return recipe.sourceUrl; } })()}</p><a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-[#668775] underline break-all">Ouvrir la recette originale : {recipe.sourceUrl} <ArrowUpRight className="size-4 shrink-0" /></a><p className="text-xs text-[#777773]">Recette importée — lecture seule, sans modification.</p></article>)}</div> : null}
       </section> : null}
 
       {activeTab !== "favoris" && !mode ? <section className="grid gap-3 sm:grid-cols-2" aria-label="Ajouter une recette">
