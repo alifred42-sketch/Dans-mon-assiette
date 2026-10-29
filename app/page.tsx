@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BASE_PATH } from "@/lib/base-path";
 import { currentIsoWeek } from "@/lib/week-utils";
 import { InstallApp } from "@/components/install-app";
 import {
@@ -164,13 +163,6 @@ export default function HomePage() {
     >
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-4 py-6 pb-12 sm:gap-10 sm:px-8 sm:py-9">
         <header className="flex w-full flex-col items-center text-center">
-          <img
-            src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`}
-            alt="CUISINE CHIC OUF !"
-            className="block h-auto w-[min(68vw,270px)] max-w-full shrink-0 rounded-[26px] bg-[#F9F6EC] object-contain shadow-[0_8px_24px_rgba(0,0,0,0.24)]"
-            loading="eager"
-            fetchPriority="high"
-          />
           <p className="mt-5 max-w-2xl text-sm font-medium leading-6 text-[#2B2B2B]/90 sm:text-base sm:leading-7">
             52 semaines de menus, du batchcooking simple et vos listes de courses automatisées. Cuisinez chic, respirez...OUF !
           </p>
