@@ -36,6 +36,51 @@ const tabs: { id: RecipeTab; label: string; color: string; activeText: string }[
 
 function lines(value: string) { return value.split("\n").map((line) => line.trim()).filter(Boolean); }
 
+
+function cleanText(value: unknown): string {
+  if (typeof value === "string") return value.replace(/<[^>]*>/g, " ").replace(/\\s+/g, " ").trim();
+  if (Array.isArray(value)) return value.map(cleanText).filter(Boolean).join("\\n");
+  if (value && typeof value === "object" && "text" in value) return cleanText((value as { text: unknown }).text);
+  return "";
+}
+function findRecipe(value: unknown): Record<string, unknown> | null {
+  if (Array.isArray(value)) { for (const item of value) { const found = findRecipe(item); if (found) return found; } return null; }
+  if (!value || typeof value !== "object") return null;
+  const obj = value as Record<string, unknown>;
+  const types = Array.isArray(obj["@type"]) ? obj["@type"] : [obj["@type"]];
+  if (types.some((type) => String(type).toLowerCase() === "recipe")) return obj;
+  if (obj["@graph"]) { const found = findRecipe(obj["@graph"]); if (found) return found; }
+  for (const child of Object.values(obj)) if (child && typeof child === "object") { const found = findRecipe(child); if (found) return found; }
+  return null;
+}
+function recipeFromReader(markdown: string, sourceUrl: string): Omit<MyRecipe, "id" | "updatedAt" | "photos"> | null {
+  const jsonBlocks = [...markdown.matchAll(/<script[^>]*type=["']application\\/ld\\+json["'][^>]*>([\\s\\S]*?)<\\/script>/gi)];
+  for (const match of jsonBlocks) {
+    try {
+      const recipe = findRecipe(JSON.parse(match[1]));
+      if (recipe) {
+        const instructions = recipe.recipeInstructions;
+        const steps = (Array.isArray(instructions) ? instructions : instructions ? [instructions] : []).flatMap((step) => {
+          if (typeof step === "string") return [cleanText(step)];
+          if (step && typeof step === "object") { const obj = step as Record<string, unknown>; if (Array.isArray(obj.itemListElement)) return obj.itemListElement.map((part) => cleanText(part && typeof part === "object" ? (part as Record<string, unknown>).text || (part as Record<string, unknown>).name : part)).filter(Boolean); return [cleanText(obj.text || obj.name)]; }
+          return [];
+        }).filter(Boolean);
+        const ingredients = Array.isArray(recipe.recipeIngredient) ? recipe.recipeIngredient.map(cleanText).filter(Boolean) : [];
+        if (cleanText(recipe.name) && ingredients.length && steps.length) return { title: cleanText(recipe.name), description: cleanText(recipe.description), ingredients, steps, prepTime: cleanText(recipe.prepTime), cookTime: cleanText(recipe.cookTime), servings: cleanText(recipe.recipeYield) || "4", sourceUrl, photos: [] };
+      }
+    } catch { /* Ignore malformed JSON-LD. */ }
+  }
+  const title = markdown.match(/^#\\s+(.+)$/m)?.[1]?.trim() || markdown.match(/^Title:\\s*(.+)$/mi)?.[1]?.trim();
+  const section = (names: string) => {
+    const match = markdown.match(new RegExp("(?:^|\\\\n)#+\\\\s*(?:" + names + ")[^\\\\n]*\\\\n([\\\\s\\\\S]*?)(?=\\\\n#+\\\\s|$)", "im"));
+    return match?.[1]?.split("\\n").map((line) => line.replace(/^\\s*(?:[-*•] |\\d+[.)] )/, "").trim()).filter(Boolean) || [];
+  };
+  const ingredients = section("ingredients?|what you need|incredients?");
+  const steps = section("instructions?|directions?|preparation|method|steps|préparation|étapes?");
+  if (!title || !ingredients.length || !steps.length) return null;
+  return { title: cleanText(title), description: "", ingredients, steps, prepTime: "", cookTime: "", servings: "4", sourceUrl, photos: [] };
+}
+
 async function shrinkPhoto(file: File): Promise<string> {
   const source = await createImageBitmap(file);
   const scale = Math.min(1, 1400 / Math.max(source.width, source.height));
@@ -194,7 +239,7 @@ export default function MesRecettesPage() {
         </button> : null}
       </section> : null}
 
-      {activeTab !== "favoris" && mode === "link" ? <section className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 sm:p-6">
+      {mode === "link" ? <section className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 sm:p-6">
         <div className="mb-5 flex items-start justify-between gap-3"><div><p className="text-sm font-bold text-[#668775]">Importer automatiquement</p><h2 className="mt-1 font-heading text-xl">Colle le lien de ta recette</h2></div><button type="button" onClick={() => { setMode(null); setMessage(""); }} aria-label="Fermer l’import" className="flex size-10 items-center justify-center rounded-full bg-[#F3F3EF]"><X className="size-5" /></button></div>
         <form onSubmit={importFromUrl} className="space-y-3"><label className="block text-sm font-semibold">Adresse URL de la recette<input required type="url" inputMode="url" autoCapitalize="none" autoComplete="url" placeholder="https://exemple.fr/ma-recette" value={form.sourceUrl} onChange={(event) => setForm({ ...emptyForm, sourceUrl: event.target.value })} className={fieldClass} /></label>
         <p className="text-sm leading-relaxed text-[#555551]">Je récupère automatiquement le titre, les ingrédients et les étapes lorsque le site les rend accessibles.</p>
