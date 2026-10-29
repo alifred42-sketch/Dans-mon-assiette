@@ -11,7 +11,6 @@ import { useEffect, useMemo, useState } from "react";
 import { batchForWeek, clampWeek, currentIsoWeek, getRecipe, weekPlan, type PlanningPreferences } from "@/lib/carnet";
 import { WeekPicker } from "@/components/week-picker";
 import { Beef, Blender, Carrot, CookingPot, Container, Flame, Refrigerator, Utensils, Wheat, ShoppingCart, ChevronLeft, ChevronRight, ChefHat } from "lucide-react";
-import { BASE_PATH } from "@/lib/base-path";
 import { getFreezerPlan, readVirtualFreezer, saveFrozenMeal, markFrozenMealUsed, rescheduleFrozenMeal, type VirtualFrozenMeal } from "@/lib/freezer";
 
 type Task = { id: string; title: string; detail?: string; timer?: string; timerMinutes?: number; group?: string };
@@ -296,7 +295,6 @@ export default function BatchPage() {
         <NutFreeSafetyNotice />
 
         <header className="sticky top-0 z-30 -mx-3 space-y-3 border-b border-[#C8DDD5] bg-[#EAF5F1]/95 px-3 pb-3 pt-2 backdrop-blur-md sm:-mx-5 sm:px-5">
-          <div className="flex justify-center"><img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="Cuisine Chic Ouf !" className="h-auto w-28 rounded-xl sm:w-32" /></div>
           <h1 className="text-center font-heading text-2xl font-extrabold tracking-wide text-[#176B5B] sm:text-3xl">MON BATCH COOKING</h1>
           <div className="mx-auto flex max-w-lg items-center justify-between gap-2 rounded-full border border-[#D9E8E2] bg-white px-2 py-1 shadow-sm">
             <a href={week > 1 ? `?w=${week - 1}&manual=1` : "#"} aria-label="Semaine précédente" onClick={(event) => { if (week <= 1) event.preventDefault(); }} className={`flex size-9 shrink-0 items-center justify-center rounded-full ${week > 1 ? "text-[#176B5B] hover:bg-[#EAF5F1]" : "text-gray-300"}`}><ChevronLeft className="size-5" /></a>
