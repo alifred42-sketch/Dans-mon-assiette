@@ -169,7 +169,8 @@ function migrateRecipe(recipe) {
       ? existingTemperature
       : ovenTemperature == null ? (recipe.airfryer_temperature ?? null) : Math.min(200, Math.max(80, ovenTemperature - 20));
   }
-  applyManualAirfryer(recipe);\n  const changed = Object.keys(previous).some((key) => previous[key] !== recipe[key]);
+  applyManualAirfryer(recipe);
+  const changed = Object.keys(previous).some((key) => previous[key] !== recipe[key]);
   const compatible = detectedOven || hasExistingAirfryer || recipe.airfryer_compatible === true;
   const needsReview = compatible && (recipe.airfryer_temps == null || recipe.airfryer_temperature == null);
   return { changed, compatible, needsReview };
