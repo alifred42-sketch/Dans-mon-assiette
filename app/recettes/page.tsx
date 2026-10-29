@@ -152,7 +152,7 @@ export default function RecettesPage() {
     airfryer_temperature: recipe.airfryer_temperature,
   })), [timeFilteredRecipes]);
 
-  if (filter === "vegan") return <VeganNavigation showBack />;
+  if (filter === "vegan") return <VeganNavigation />;
 
   return (
     <div className="space-y-6">
