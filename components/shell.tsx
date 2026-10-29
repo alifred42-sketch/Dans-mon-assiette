@@ -52,9 +52,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
           {children}
         </Suspense>
         <div className="mt-6"><MealReminders visible={pathname === "/semaine" || pathname === "/"} /></div>
-        <div className="mt-10 border-t border-[#E9E9E4] pt-5 text-center">
-          <Link href="/notre-histoire" className="text-sm font-semibold text-[#668775] underline decoration-[#8FA89B]/50 underline-offset-4">Notre Histoire — pourquoi Cuisine Chic Ouf ?</Link>
-        </div>
       </main>
       <nav aria-label="Navigation principale" className="fixed inset-x-0 bottom-0 z-40 border-t border-[#E9E9E4] bg-[#F9F9F7]/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md">
         <div className="mx-auto grid max-w-3xl grid-cols-6 gap-0.5 px-1">
