@@ -114,6 +114,13 @@ export default function MesRecettesPage() {
   const [message, setMessage] = useState("");
   const [importing, setImporting] = useState(false);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
+  type PlannedFavorite = { recipeId: string; name: string; image: string; ingredients: string[]; steps: string[]; servings: string };
+  type FavoriteWeekPlan = Record<string, PlannedFavorite | null>;
+  const [plannerOpen, setPlannerOpen] = useState(false);
+  const [selectedFavoriteId, setSelectedFavoriteId] = useState("");
+  const [favoriteWeekPlan, setFavoriteWeekPlan] = useState<FavoriteWeekPlan>({});
+  const [plannerReady, setPlannerReady] = useState(false);
+  const [plannerMessage, setPlannerMessage] = useState("");
   const photoInput = useRef<HTMLInputElement>(null);
   const searchParams = useSearchParams();
   const requestedTab = searchParams.get("tab");
@@ -123,6 +130,11 @@ export default function MesRecettesPage() {
     try { setRecipes(JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]")); } catch { setRecipes([]); }
     const readFavorites = () => { try { setFavoriteIds(JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]")); } catch { setFavoriteIds([]); } };
     readFavorites();
+    try {
+      const savedPlan = JSON.parse(localStorage.getItem("cuisine-chic-ouf-favorites-menu-plan-v1") || "{}");
+      setFavoriteWeekPlan(savedPlan && typeof savedPlan === "object" ? savedPlan : {});
+    } catch { setFavoriteWeekPlan({}); }
+    setPlannerReady(true);
     window.addEventListener("storage", readFavorites);
     window.addEventListener("cuisine-chic-ouf-favorites-change", readFavorites);
     setReady(true);
@@ -135,7 +147,35 @@ export default function MesRecettesPage() {
   const favoriteRecipes = carnet.recipes
     .filter((recipe) => favoriteIds.includes(recipe.id))
     .sort((a, b) => a.name.localeCompare(b.name, "fr"))
-    .map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe) }));
+    .map((recipe) => ({ id: recipe.id, name: recipe.name, lines: recipeLines(recipe), image: recipe.image || "", ingredients: recipe.ingredients || [], steps: recipe.steps || [], servings: recipe.servings || "4" }));
+  const plannerDays = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+  const plannerMeals = [{ key: "Midi", label: "☀️ Midi" }, { key: "Soir", label: "🌙 Soir" }];
+  function assignFavorite(day: string, meal: string) {
+    if (!selectedFavoriteId) { setPlannerMessage("Choisis d’abord une recette dans la pioche du haut."); return; }
+    const recipe = favoriteRecipes.find((item) => item.id === selectedFavoriteId);
+    if (!recipe) { setPlannerMessage("Cette recette n’est plus dans tes favoris. Actualise la liste et réessaie."); return; }
+    const next = { ...favoriteWeekPlan, [day + "|" + meal]: { recipeId: recipe.id, name: recipe.name, image: recipe.image, ingredients: recipe.ingredients, steps: recipe.steps, servings: recipe.servings } };
+    setFavoriteWeekPlan(next);
+    setPlannerMessage("");
+    try { localStorage.setItem("cuisine-chic-ouf-favorites-menu-plan-v1", JSON.stringify(next)); } catch { setPlannerMessage("Le planning n’a pas pu être enregistré sur cet appareil."); }
+  }
+  function clearFavoriteSlot(key: string) {
+    const next = { ...favoriteWeekPlan, [key]: null };
+    setFavoriteWeekPlan(next);
+    try { localStorage.setItem("cuisine-chic-ouf-favorites-menu-plan-v1", JSON.stringify(next)); } catch { setPlannerMessage("Impossible d’enregistrer cette modification."); }
+  }
+  function validateFavoritePlan() {
+    const selected = Object.values(favoriteWeekPlan).filter((item): item is PlannedFavorite => Boolean(item));
+    if (!selected.length) { setPlannerMessage("Ajoute au moins une recette avant de valider le menu."); return; }
+    try {
+      const unique = Array.from(new Map(selected.map((item) => [item.recipeId, item])).values());
+      localStorage.setItem("cuisine-chic-ouf-favorites-menu-plan-v1", JSON.stringify(favoriteWeekPlan));
+      localStorage.setItem("cuisine-chic-ouf-favorites-menu-course-items", JSON.stringify(unique.map((item) => ({ recipeId: item.recipeId, name: item.name, ingredients: item.ingredients }))));
+      window.dispatchEvent(new Event("cuisine-chic-ouf-favorites-menu-plan-change"));
+      window.dispatchEvent(new Event("cuisine-chic-ouf-favorites-menu-courses-change"));
+      setPlannerMessage("Menu validé ! Les ingrédients sont ajoutés à l’encart « Mes Favoris » des courses.");
+    } catch { setPlannerMessage("Le menu est préparé, mais l’enregistrement a échoué. Libère de l’espace sur cet appareil et réessaie."); }
+  }
   const personalRecipes = recipes.filter((recipe) => activeTab === "imports" ? Boolean(recipe.sourceUrl) : activeTab === "creations" ? !recipe.sourceUrl : false);
   const importedRecipes = recipes.filter((recipe) => Boolean(recipe.sourceUrl)).sort((a, b) => b.updatedAt - a.updatedAt);
 
@@ -276,6 +316,29 @@ export default function MesRecettesPage() {
 
       {activeTab === "favoris" ? <section className="space-y-3">
         <div><h2 className="font-heading text-xl">Mes Favoris</h2><p className="text-sm text-[#555551]">Les recettes officielles de Cuisine Chic Ouf que tu as ajoutées avec le cœur.</p></div>
+        <button type="button" onClick={() => { setPlannerOpen((open) => !open); setPlannerMessage(""); setSelectedFavoriteId(""); }} className="flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-[#214E4B] px-4 py-3 text-base font-extrabold text-white shadow-md hover:bg-[#173D3A]">📅 Mes Favoris au Menu <span aria-hidden="true">{plannerOpen ? "−" : "+"}</span></button>
+        {plannerOpen ? <section className="space-y-4 rounded-2xl border border-[#214E4B]/20 bg-[#F9F9F7] p-3 sm:p-5" aria-label="Planificateur Mes Favoris au Menu">
+          <header><h3 className="font-heading text-xl">Ma semaine 100 % coups de cœur</h3><p className="mt-1 text-sm normal-case text-[#555551]">Sélectionne une recette en haut, puis touche la case Midi ou Soir où tu veux la placer.</p></header>
+          <div><div className="mb-2 flex items-center justify-between"><h4 className="text-sm font-extrabold">Ma pioche de favoris</h4><span className="text-xs text-[#555551]">{favoriteRecipes.length} recette(s)</span></div>
+            {favoriteRecipes.length ? <div className="flex snap-x gap-3 overflow-x-auto pb-3" role="list" aria-label="Recettes favorites à placer">{favoriteRecipes.map((recipe) => <button key={recipe.id} type="button" onClick={() => { setSelectedFavoriteId(recipe.id); setPlannerMessage(""); }} aria-pressed={selectedFavoriteId === recipe.id} className={`w-36 shrink-0 snap-start overflow-hidden rounded-xl bg-white text-left shadow-sm transition ${selectedFavoriteId === recipe.id ? "ring-4 ring-[#F4C542]" : "ring-1 ring-black/10"}`}>
+              {recipe.image ? <img src={recipe.image} alt="" loading="lazy" className="h-24 w-full object-cover" /> : <div className="flex h-24 items-center justify-center bg-[#DDEBE4] text-3xl" aria-hidden="true">🍽️</div>}
+              <span className="block p-2 text-xs font-bold normal-case leading-snug">{recipe.name}</span>
+              {selectedFavoriteId === recipe.id ? <span className="block px-2 pb-2 text-[11px] font-extrabold text-[#557C65]">✓ Sélectionnée</span> : null}
+            </button>)}</div> : <p className="rounded-xl bg-white p-4 text-sm normal-case text-[#555551]">Ajoute d’abord des recettes avec le cœur dans le catalogue : elles apparaîtront ici.</p>}
+          </div>
+          <div className="space-y-2"><h4 className="text-sm font-extrabold">Mon planning · lundi au dimanche</h4>
+            {plannerDays.map((day) => <article key={day} className="rounded-xl bg-white p-3 shadow-sm"><h5 className="mb-2 font-extrabold">{day}</h5><div className="grid grid-cols-1 gap-2 sm:grid-cols-2">{plannerMeals.map((meal) => { const key = day + "|" + meal.key; const planned = favoriteWeekPlan[key]; return <div key={key} className="min-w-0 rounded-xl border border-[#E6DFD3] bg-[#FCFCFA] p-2">
+              <div className="mb-1 text-xs font-extrabold">{meal.label}</div>
+              {planned ? <div className="flex items-center gap-2"><button type="button" onClick={() => setPlannerMessage("Lecture seule : la recette planifiée ne peut pas être modifiée ici.")} className="flex min-h-10 min-w-0 flex-1 items-center gap-2 text-left text-sm font-semibold normal-case"><span className="size-10 shrink-0 overflow-hidden rounded-lg bg-[#EAF4F1]">{planned.image ? <img src={planned.image} alt="" className="size-full object-cover" /> : <span className="flex size-full items-center justify-center">🍽️</span>}</span><span className="truncate">{planned.name}<span className="block text-[11px] font-medium text-[#557C65]">Consulter · lecture seule</span></span></button><button type="button" onClick={() => clearFavoriteSlot(key)} aria-label={`Retirer ${planned.name} de ${day}, ${meal.key}`} className="rounded-lg px-2 py-2 text-xs font-bold text-[#8B3D35]">Retirer</button></div> : <button type="button" onClick={() => assignFavorite(day, meal.key)} className="min-h-10 w-full rounded-lg border border-dashed border-[#8FA89B] px-2 text-left text-xs font-semibold text-[#557C65] hover:bg-[#EAF4F1]">{selectedFavoriteId ? "＋ Ajouter la recette sélectionnée" : "Choisir une recette en haut"}</button>}
+              {planned && plannerMessage.startsWith("Lecture seule") ? null : null}
+            </div>; })}</div>
+            {plannerDays.map((day) => null).length ? null : null}
+          </article>)}
+          </div>
+          <div className="flex flex-wrap items-center gap-2"><button type="button" onClick={validateFavoritePlan} disabled={!plannerReady} className="min-h-12 rounded-xl bg-[#557C65] px-5 text-sm font-extrabold text-white shadow-sm disabled:opacity-50">Valider mon menu et envoyer aux courses</button><button type="button" onClick={() => { setFavoriteWeekPlan({}); setPlannerMessage(""); try { localStorage.setItem("cuisine-chic-ouf-favorites-menu-plan-v1", "{}"); localStorage.setItem("cuisine-chic-ouf-favorites-menu-course-items", "[]"); window.dispatchEvent(new Event("cuisine-chic-ouf-favorites-menu-courses-change")); } catch {} }} className="min-h-12 rounded-xl border border-[#8FA89B] px-4 text-sm font-semibold">Vider le planning</button></div>
+          {plannerMessage ? <p role="status" className="rounded-xl bg-white p-3 text-sm font-semibold normal-case text-[#355542]">{plannerMessage}</p> : null}
+          <p className="text-xs normal-case text-[#777773]">Ce planning possède son propre stockage et ne modifie jamais « Sauver ma semaine » ni les 52 semaines du carnet.</p>
+        </section> : null}
         {favoriteRecipes.length ? <RecipeList items={favoriteRecipes} /> : <div className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5"><Heart className="mx-auto size-8 text-[#D1A900]" /><p className="mt-2 text-sm text-[#555551]">Tes recettes favorites apparaîtront ici. Dans le catalogue, touche le cœur d’une recette pour l’ajouter.</p><Link href="/recettes" className="mt-3 inline-flex min-h-11 items-center rounded-xl bg-[#F4C542] px-4 text-sm font-bold text-[#302400]">Parcourir le catalogue</Link></div>}
         <button type="button" onClick={() => begin("link")} className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#557C65] px-4 text-sm font-bold text-white"><Link2 className="size-5" /> Importer une recette</button>
         {importedRecipes.length ? <div className="space-y-3 pt-2"><h3 className="font-heading text-lg">Recettes importées · lecture seule</h3>{importedRecipes.map((recipe) => <article key={recipe.id} className="space-y-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5"><h4 className="font-heading text-lg">{recipe.title}</h4>{recipe.description ? <p className="text-sm text-[#555551]">{recipe.description}</p> : null}<div><h5 className="text-sm font-bold">Ingrédients</h5><ul className="mt-1 list-inside list-disc space-y-1 text-sm text-[#555551]">{recipe.ingredients.map((item, i) => <li key={i}>{item}</li>)}</ul></div><div><h5 className="text-sm font-bold">Préparation</h5><ol className="mt-1 list-inside list-decimal space-y-1 text-sm text-[#555551]">{recipe.steps.map((item, i) => <li key={i}>{item}</li>)}</ol></div><p className="rounded-xl border border-[#668775]/30 bg-[#668775]/10 p-3 text-sm font-semibold text-[#355542]">Recette originale publiée sur {(() => { try { return new URL(recipe.sourceUrl).hostname; } catch { return recipe.sourceUrl; } })()}</p><a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-[#668775] underline break-all">Ouvrir la recette originale : {recipe.sourceUrl} <ArrowUpRight className="size-4 shrink-0" /></a><p className="text-xs text-[#777773]">Recette importée — lecture seule, sans modification.</p></article>)}</div> : null}
