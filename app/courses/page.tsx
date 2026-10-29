@@ -89,16 +89,25 @@ export default function CoursesPage() {
     const refreshFavorites = () => {
       try {
         const saved = JSON.parse(localStorage.getItem("cuisine-chic-ouf-course-favorites") || "[]");
-        setFavoriteRecipes(Array.isArray(saved) ? saved.filter((item) => item && typeof item.recipeId === "string" && typeof item.name === "string" && Array.isArray(item.ingredients)) : []);
+        const base = Array.isArray(saved) ? saved.filter((item) => item && typeof item.recipeId === "string" && typeof item.name === "string" && Array.isArray(item.ingredients)) : [];
+        const planned = JSON.parse(localStorage.getItem("cuisine-chic-ouf-favorites-menu-course-items") || "[]");
+        const menuItems = Array.isArray(planned) ? planned.filter((item) => item && typeof item.recipeId === "string" && typeof item.name === "string" && Array.isArray(item.ingredients)) : [];
+        const merged = new Map<string, { recipeId: string; name: string; ingredients: string[] }>();
+        [...base, ...menuItems].forEach((item) => merged.set(item.recipeId, item));
+        setFavoriteRecipes(Array.from(merged.values()));
       } catch { setFavoriteRecipes([]); }
       try { setFavoriteChecked(JSON.parse(localStorage.getItem("cuisine-chic-ouf-course-favorites-checked") || "{}")); } catch { setFavoriteChecked({}); }
     };
     refreshFavorites();
     window.addEventListener("storage", refreshFavorites);
     window.addEventListener("cuisine-chic-ouf-course-favorites-change", refreshFavorites);
+    window.addEventListener("cuisine-chic-ouf-favorites-menu-courses-change", refreshFavorites);
+    window.addEventListener("cuisine-chic-ouf-favorites-menu-plan-change", refreshFavorites);
     return () => {
       window.removeEventListener("storage", refreshFavorites);
       window.removeEventListener("cuisine-chic-ouf-course-favorites-change", refreshFavorites);
+      window.removeEventListener("cuisine-chic-ouf-favorites-menu-courses-change", refreshFavorites);
+      window.removeEventListener("cuisine-chic-ouf-favorites-menu-plan-change", refreshFavorites);
     };
   }, []);
 
