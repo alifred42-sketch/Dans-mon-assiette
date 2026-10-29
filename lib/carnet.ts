@@ -132,6 +132,32 @@ function recipeMatchKey(value: string): string {
   return normalizedSeasonText(value).replace(/^[0-9]+\.\s*/, "").replace(/[^a-z0-9]+/g, " ").trim();
 }
 
+/** Fiches qui décrivent une préparation, une sauce ou un plat dont la cuisson principale
+ * n'est pas réalisable dans le panier Airfryer. Elles restent non marquées à cette étape. */
+const AIRFRYER_EXCLUDED_RECIPE_NAMES = new Set([
+  "sauce legumes rotis mixes",
+  "sauce poivrons grilles",
+  "marinade patate douce pommes de terre",
+  "melange frites au four version bistrot",
+  "veloute de legumes rotis chevre frais",
+  "soupe tartine chaude",
+  "gaspacho courgette basilic tartare de thon",
+  "soupe froide de poivrons rouges rotis au mascarpone",
+  "veloute de chou fleur roti et ail doux",
+  "appareil a quiche maison",
+  "pate a pizza maison",
+  "barbecue entre amis",
+  "verrine fraises skyr crumble d avoine",
+  "oeufs mimosa maison",
+  "roti de porc aux legumes",
+  "wrap chaud saumon poireaux fondants",
+  "gateau au yaourt revisite",
+  "mug quesadilla crousti fondante",
+  "appareil a clafoutis rustique aux tomates cerises romarin",
+  "appareil a flan de potimarron au beaufort",
+  "farce aux champignons et comte pour courge farcie",
+]);
+
 type PdfRecipeEntry = {
   recipe: (typeof pdfRecipeOverrides800)[number] | (typeof pdfRecipeOverrides619)[number] | (typeof pdfRecipeOverrides899)[number] | (typeof pdfRecipeOverrides1001)[number] | (typeof pdfRecipeOverrides1024)[number];
   source: "RECETTES 619.pdf" | "RECETTES 800.pdf" | "RECETTES 899.pdf" | "RECETTES 1000.pdf" | "RECETTES 1024.pdf";
@@ -226,7 +252,10 @@ export const carnet = {
   ...data,
   recipes: [...recipesWithPdfOverrides, ...unmatchedPdfRecipes, ...springFestivalRecipes, ...summerFestivalRecipes, ...autumnSylvestreRecipes].map((recipe) => {
     const normalized = normalizeRecipeForPlanning(recipe);
-    return firstTwentyRecipeImages[normalized.id] ? { ...normalized, ...firstTwentyRecipeImages[normalized.id] } : normalized;
+    const airfryerSafe = AIRFRYER_EXCLUDED_RECIPE_NAMES.has(recipeMatchKey(normalized.name))
+      ? { ...normalized, airfryer_compatible: false, airfryer_temps: null, airfryer_temperature: null }
+      : normalized;
+    return firstTwentyRecipeImages[airfryerSafe.id] ? { ...airfryerSafe, ...firstTwentyRecipeImages[airfryerSafe.id] } : airfryerSafe;
   }),
 } as Carnet;
 
