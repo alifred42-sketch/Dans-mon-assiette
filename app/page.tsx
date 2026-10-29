@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { currentIsoWeek } from "@/lib/week-utils";
 import { InstallApp } from "@/components/install-app";
+import { NotreHistoireModal } from "@/components/notre-histoire-modal";
 import {
   BookOpen,
   Boxes,
@@ -282,6 +283,10 @@ export default function HomePage() {
             <button type="button" onClick={() => { setEditingHome(true); setSaveMessage(""); }} disabled={!preferencesReady} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl border border-[#8FAF9B] bg-white/85 px-5 py-3 font-extrabold text-[#214E4B] shadow-sm transition hover:bg-white disabled:opacity-50"><Settings size={19} /> ⚙️ Personnaliser mon accueil</button>
             {saveMessage && <p role="status" className="text-center text-sm font-semibold text-[#214E4B]">{saveMessage}</p>}
           </div>}
+        </div>
+
+        <div className="flex w-full justify-center pt-1">
+          <NotreHistoireModal />
         </div>
       </div>
     </main>
