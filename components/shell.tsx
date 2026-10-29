@@ -4,7 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { CalendarDays, CookingPot, ShoppingCart, UtensilsCrossed, UserRound, Heart, Refrigerator } from "lucide-react";
+import { CalendarDays, CookingPot, ShoppingCart, UtensilsCrossed, Heart, Refrigerator } from "lucide-react";
 import { BackButton } from "@/components/back-button";
 import { MealReminders } from "@/components/meal-reminders";
 import { BASE_PATH } from "@/lib/base-path";
@@ -34,23 +34,20 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-dvh flex-col bg-transparent">
-      <header className="sticky top-0 z-40 border-b border-[#E9E9E4] bg-white/35 backdrop-blur-md">
-        <div className="mx-auto flex h-16 max-w-3xl items-center justify-between gap-3 px-4">
-          <Link href="/" aria-label="CUISINE CHIC OUF !">
-            <img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="Logo officiel CUISINE CHIC OUF !" className="block h-12 w-auto max-w-[200px] rounded-[14px] bg-[#F9F6EC] object-contain drop-shadow-[0_2px_6px_rgba(43,43,43,0.07)]" loading="eager" fetchPriority="high" />
+      <header className="app-header fixed inset-x-0 top-0 z-40 border-b border-[#E9E9E4] bg-white/35 backdrop-blur-md">
+        <div className="app-header-inner relative mx-auto flex h-14 max-w-3xl items-center justify-between gap-3 px-4">
+          <div className="app-header-left z-10 flex min-w-10 items-center justify-start">
+            <Suspense fallback={null}><BackButton /></Suspense>
+          </div>
+          <Link href="/" aria-label="CUISINE CHIC OUF !" className="app-header-logo absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <img src={`${BASE_PATH}/logo-cuisine-chic-ouf-v3.png`} alt="Logo officiel CUISINE CHIC OUF !" className="block h-10 max-h-10 w-auto max-w-[150px] rounded-[8px] bg-[#F9F6EC] object-contain drop-shadow-[0_2px_6px_rgba(43,43,43,0.07)]" loading="eager" fetchPriority="high" />
           </Link>
-          <Link
-            href="/compte"
-            aria-label="Mon compte"
-            aria-current={pathname.startsWith("/compte") ? "page" : undefined}
-            className={`inline-flex min-h-10 shrink-0 items-center justify-center gap-2 rounded-full border px-3 py-2 text-xs font-extrabold shadow-sm transition hover:brightness-95 sm:text-sm ${pathname.startsWith("/compte") ? "border-[#668775] bg-[#8FA89B] text-[#173C2C]" : "border-[#E9E9E4] bg-white/80 text-[#38534B]"}`}
-          >
-            <UserRound className="size-4 shrink-0" />
+          <Link href="/compte" aria-label="Mon compte" aria-current={pathname.startsWith("/compte") ? "page" : undefined} className="app-header-account z-10 ml-auto inline-flex min-h-10 shrink-0 items-center justify-center px-1 py-2 text-xs font-bold uppercase tracking-wide transition hover:opacity-70 sm:text-sm">
             <span>Mon compte</span>
           </Link>
         </div>
       </header>
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-28 pt-6">
+      <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-28 pt-20">
         <Suspense fallback={null}><BackButton /></Suspense>
         <Suspense fallback={<div className="rounded-xl bg-white/70 p-4 text-sm text-[#214E4B]">Chargement de la page…</div>}>
           {children}
