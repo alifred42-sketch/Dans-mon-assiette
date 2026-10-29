@@ -138,6 +138,8 @@ if (!files.length) {
 }
 
 let scanned = 0, changed = 0, compatible = 0, review = 0;
+const ovenCandidates = [];
+const incompleteCandidates = [];
 for (const file of files) {
   let data;
   try { data = JSON.parse(fs.readFileSync(file, "utf8")); }
@@ -151,6 +153,11 @@ for (const file of files) {
   for (const recipe of recipes) {
     scanned++;
     const result = migrateRecipe(recipe);
+    const instructions = getInstructions(recipe);
+    if (ovenCooking(instructions, recipe)) {
+      ovenCandidates.push({ name: recipe.name ?? recipe.title, minutes: recipe.airfryer_temps ?? null, temperature: recipe.airfryer_temperature ?? null, compatible: recipe.airfryer_compatible === true });
+      if (recipe.airfryer_temps == null || recipe.airfryer_temperature == null || recipe.airfryer_compatible !== true) incompleteCandidates.push({ name: recipe.name ?? recipe.title, minutes: recipe.airfryer_temps ?? null, temperature: recipe.airfryer_temperature ?? null, compatible: recipe.airfryer_compatible ?? null });
+    }
     if (result.compatible) compatible++;
     if (result.needsReview) {
       review++;
@@ -169,4 +176,8 @@ console.log("Recettes examinées : " + scanned);
 console.log("Recettes compatibles/déjà équipées : " + compatible);
 console.log("Recettes modifiées : " + changed);
 console.log("Compatibles à vérifier (données incomplètes) : " + review);
+console.log("\\nCANDIDATS AVEC CUISSON AU FOUR (" + ovenCandidates.length + ") :");
+for (const item of ovenCandidates) console.log("- " + item.name + " | Airfryer=" + item.compatible + " | " + item.minutes + " min / " + item.temperature + " °C");
+console.log("\\nCANDIDATS FOUR INCOMPLETS (" + incompleteCandidates.length + ") :");
+for (const item of incompleteCandidates) console.log("- " + item.name + " | durée=" + item.minutes + " | température=" + item.temperature + " | compatible=" + item.compatible);
 if (!write) console.log("Aucun fichier modifié. Relancer avec --write pour enregistrer.");
