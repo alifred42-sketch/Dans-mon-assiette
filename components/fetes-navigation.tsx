@@ -43,7 +43,7 @@ const BOOKS = [
 
 type BookId = (typeof BOOKS)[number]["id"];
 
-export function FetesNavigation({ showBack = false }: { showBack?: boolean }) {
+export function FetesNavigation() {
   const [activeBook, setActiveBook] = useState<BookId | null>(null);
   const [activeSub, setActiveSub] = useState<string | null>(null);
   const selectedBook = BOOKS.find((book) => book.id === activeBook);
