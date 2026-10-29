@@ -54,7 +54,7 @@ function findRecipe(value: unknown): Record<string, unknown> | null {
   return null;
 }
 function recipeFromReader(markdown: string, sourceUrl: string): Omit<MyRecipe, "id" | "updatedAt"> | null {
-  const jsonBlocks = [...markdown.matchAll(/<script[^>]*>([\\s\\S]*?)<\\/script>/gi)].filter((match) => /application\\/ld\\+json/i.test(match[0]));
+  const jsonBlocks = [...markdown.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)].filter((match) => /application\/ld\+json/i.test(match[0]));
   for (const match of jsonBlocks) {
     try {
       const recipe = findRecipe(JSON.parse(match[1]));
@@ -72,8 +72,8 @@ function recipeFromReader(markdown: string, sourceUrl: string): Omit<MyRecipe, "
   }
   const title = markdown.match(/^#\s+(.+)$/m)?.[1]?.trim() || markdown.match(/^Title:\s*(.+)$/mi)?.[1]?.trim();
   const section = (kind: "ingredients" | "steps") => {
-    const lines = markdown.split(/\\r?\\n/);
-    const isHeader = (line: string) => /^#{1,4}\\s/.test(line.trim());
+    const lines = markdown.split(/\r?\n/);
+    const isHeader = (line: string) => /^#{1,4}\s/.test(line.trim());
     const matchesHeader = (line: string) => kind === "ingredients"
       ? /ingredients?|what you need|incredients?/i.test(line)
       : /instructions?|directions?|preparation|method|steps|préparation|étapes?/i.test(line);
@@ -82,7 +82,7 @@ function recipeFromReader(markdown: string, sourceUrl: string): Omit<MyRecipe, "
     const result: string[] = [];
     for (const line of lines.slice(start + 1)) {
       if (isHeader(line)) break;
-      const value = line.replace(/^\\s*(?:[-*•] |\\d+[.)] )/, "").trim();
+      const value = line.replace(/^\s*(?:[-*•] |\d+[.)] )/, "").trim();
       if (value && !/^source:/i.test(value)) result.push(value);
     }
     return result;
@@ -185,7 +185,7 @@ export default function MesRecettesPage() {
     try {
       const parsed = new URL(sourceUrl);
       if (!["http:", "https:"].includes(parsed.protocol) || !parsed.hostname.includes(".")) throw new Error();
-      if (["localhost", "127.0.0.1", "::1"].includes(parsed.hostname) || /^(10\\.|192\\.168\\.|172\\.(1[6-9]|2\\d|3[01])\\.)/.test(parsed.hostname)) throw new Error();
+      if (["localhost", "127.0.0.1", "::1"].includes(parsed.hostname) || /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(parsed.hostname)) throw new Error();
       sourceUrl = parsed.toString();
     } catch { setMessage("L’adresse URL n’est pas valide. Colle un lien public commençant par https://."); return; }
     setImporting(true); setMessage("");
