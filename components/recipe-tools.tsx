@@ -17,7 +17,7 @@ function scaleLine(line: string, factor: number) {
   });
 }
 
-export function RecipeTools({ recipeId, ingredients, alternatives, baseServings = 4, ingredientTargets = {} }: { recipeId: string; ingredients: string[]; alternatives: Alternative[]; baseServings?: number; ingredientTargets?: Record<number, IngredientTarget> }) {
+export function RecipeTools({ recipeId, recipeName, ingredients, alternatives, baseServings = 4, ingredientTargets = {} }: { recipeId: string; recipeName: string; ingredients: string[]; alternatives: Alternative[]; baseServings?: number; ingredientTargets?: Record<number, IngredientTarget> }) {
   const [servings, setServings] = useState(baseServings);
   const [ready, setReady] = useState(false);
   const [sansGluten, setSansGluten] = useState(false);
@@ -47,6 +47,19 @@ export function RecipeTools({ recipeId, ingredients, alternatives, baseServings 
   }, [recipeId, baseServings]);
   useEffect(() => { if (!ready) return; try { const saved = JSON.parse(localStorage.getItem("assiette-recipe-servings") || "{}") as Record<string, number>; saved[recipeId] = servings; localStorage.setItem("assiette-recipe-servings", JSON.stringify(saved)); window.dispatchEvent(new CustomEvent("assiette-servings-change")); } catch {} }, [recipeId, servings, ready]);
   const [showSos, setShowSos] = useState(false);
+  const [addedToCourses, setAddedToCourses] = useState(false);
+  function addToShoppingFavorites() {
+    try {
+      const key = "cuisine-chic-ouf-course-favorites";
+      const saved = JSON.parse(localStorage.getItem(key) || "[]");
+      const list = Array.isArray(saved) ? saved : [];
+      const entry = { recipeId, name: recipeName, ingredients: scaled };
+      const next = [...list.filter((item: { recipeId?: string }) => item?.recipeId !== recipeId), entry];
+      localStorage.setItem(key, JSON.stringify(next));
+      window.dispatchEvent(new CustomEvent("cuisine-chic-ouf-course-favorites-change"));
+      setAddedToCourses(true);
+    } catch { setAddedToCourses(false); }
+  }
   const scaled = useMemo(() => ingredients.map((line) => scaleLine(adaptNutFreeText(adaptLactoseFreeText(adaptGlutenFreeText(line, sansGluten), isLactoseFree), isNutFree), servings / baseServings)), [ingredients, servings, baseServings, sansGluten, isLactoseFree, isNutFree]);
   return (
     <section className="space-y-3 rounded-2xl border border-[#E9E9E4] bg-white p-4 shadow-sm">
