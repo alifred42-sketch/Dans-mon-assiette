@@ -488,8 +488,8 @@
     "source": "RECETTES 899.pdf",
     "sourceNumber": 819,
     "id": "pdf-899-819",
-    "airfryer_compatible": true,
-    "airfryer_temps": 12,
+    "airfryer_compatible": false,
+    "airfryer_temps": null,
     "airfryer_temperature": null
   },
   {
@@ -593,9 +593,9 @@
     "source": "RECETTES 899.pdf",
     "sourceNumber": 823,
     "id": "pdf-899-823",
-    "airfryer_compatible": false,
-    "airfryer_temps": null,
-    "airfryer_temperature": null
+    "airfryer_compatible": true,
+    "airfryer_temps": 18,
+    "airfryer_temperature": 160
   },
   {
     "name": "Pâtes au Ragoût de Lentilles Brunes (Style Bolognaise)",
