@@ -189,3 +189,14 @@ details > *:not(summary) { animation: panel-in 180ms ease-out; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+
+/* Header fixe commun : flèche à gauche, logo réellement centré, compte à droite. */
+.app-header { height: 56px; }
+.app-header-inner { height: 56px; }
+.app-header-logo { z-index: 1; line-height: 0; }
+.app-header-logo img { display: block; height: 40px; max-height: 40px; width: auto; max-width: min(150px, 38vw); object-fit: contain; }
+.app-header-left { flex: 0 0 40px; }
+.app-header-back { width: 40px; height: 40px; padding: 0; }
+.app-header-account { color: #000 !important; font-family: Arial, sans-serif !important; font-size: 12px; line-height: 1; white-space: nowrap; }
+@media (max-width: 380px) { .app-header-inner { padding-left: 8px; padding-right: 8px; gap: 4px; } .app-header-account { font-size: 11px; } .app-header-logo img { max-width: 34vw; } }
