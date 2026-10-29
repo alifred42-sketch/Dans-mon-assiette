@@ -48,7 +48,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
         </div>
       </header>
       <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-28 pt-20">
-        <Suspense fallback={null}><BackButton /></Suspense>
         <Suspense fallback={<div className="rounded-xl bg-white/70 p-4 text-sm text-[#214E4B]">Chargement de la page…</div>}>
           {children}
         </Suspense>
