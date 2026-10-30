@@ -131,7 +131,7 @@ export function RecipeList({
               className="group flex aspect-square min-w-0 flex-col overflow-hidden rounded-2xl text-center shadow-[0_5px_14px_rgba(0,0,0,0.18)] transition duration-200 hover:-translate-y-1 hover:brightness-105 active:scale-[0.97] sm:rounded-3xl"
               style={{ backgroundColor: card.color }}
             >
-              <img src={card.image} alt="" loading="lazy" className="h-[68%] w-full min-h-0 object-cover transition-transform duration-300 group-hover:scale-105" />
+              <img src={card.image} alt="" loading="lazy" className="h-[68%] w-full min-h-0 bg-white/70 object-contain object-center" />
               <span className="flex min-h-0 flex-1 w-full items-center justify-center px-1 py-1 text-[10px] font-black leading-tight tracking-wide sm:text-xs md:text-sm" style={{ backgroundColor: card.color, color: card.textColor || "#FFFFFF" }}>
                 {card.label}
               </span>
