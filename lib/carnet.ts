@@ -567,6 +567,7 @@ const firstTwentyRecipeImages: Record<string, { image: string; imageAlt: string;
   "r-7e9ac7cf02": { image: "https://images.pexels.com/photos/33831200/pexels-photo-33831200.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Épices marocaines colorées pour assaisonner le poulet", imageSourceUrl: "https://www.pexels.com/photo/colorful-array-of-spices-on-dark-background-33831200/", imageCredit: "Christopher Welsch Leveroni" },
   "r-c526145b8c": { image: "https://images.pexels.com/photos/6690933/pexels-photo-6690933.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Poudres de curry et épices indiennes sur fond clair", imageSourceUrl: "https://www.pexels.com/photo/colored-powder-spices-on-a-marble-surface-6690933/", imageCredit: "Tara Winstead" },
   "r-d7a5212511": { image: "https://images.pexels.com/photos/33694449/pexels-photo-33694449.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Assortiment d’épices indiennes pour légumes au curry", imageSourceUrl: "https://www.pexels.com/photo/colorful-assortment-of-indian-spices-on-plate-33694449/", imageCredit: "Kitchen Se Dil Tak by Anjum Ansari" },
+  "r-30b15ff2e3": { image: "https://images.pexels.com/photos/7976107/pexels-photo-7976107.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Épices et herbes pour un mélange citronné destiné au poisson", imageSourceUrl: "https://www.pexels.com/photo/close-up-shot-of-spices-on-a-spoon-7976107/", imageCredit: "Berkay AK" },
 };
 
 export const carnet = {
