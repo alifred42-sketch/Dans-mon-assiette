@@ -696,7 +696,7 @@ const firstTwentyRecipeImages: Record<string, { image: string; imageAlt: string;
   "r-9958fa88f3": { image: "https://images.pexels.com/photos/8697537/pexels-photo-8697537.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Poulet grillé accompagné de pommes de terre", imageSourceUrl: "https://www.pexels.com/photo/cooked-food-on-white-ceramic-plate-8697537/", imageCredit: "Farhad Ibrahimzade" },
   "r-570d3ee146": { image: "https://images.pexels.com/photos/18058377/pexels-photo-18058377.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Pommes de terre grenaille rôties aux herbes", imageSourceUrl: "https://www.pexels.com/photo/potatoes-with-vegetables-18058377/", imageCredit: "Valeria Boltneva" },
   "r-8aa6f62f61": { image: "https://images.pexels.com/photos/9524170/pexels-photo-9524170.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Canapés de saumon fumé au fromage frais", imageSourceUrl: "https://www.pexels.com/photo/breads-with-cream-cheese-and-salmon-on-top-9524170/", imageCredit: "Matthew Osier" },
-  "r-5754f74ea4": { image: "https://images.pexels.com/photos/40441624/pexels-photo-40441624.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Bruschetta apéritive au fromage et légumes", imageSourceUrl: "https://www.pexels.com/photo/bruschetta-appetissante-au-prosciutto-et-au-fromage-40441624/", imageCredit: "Stefan Vibes" },
+  "r-5754f74ea4": { image: "https://images.pexels.com/photos/4087618/pexels-photo-4087618.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Plateau en vue du dessus de fromages de chèvre, miel et noix", imageSourceUrl: "https://www.pexels.com/photo/assorted-cheese-on-wooden-board-4087618/", imageCredit: "Luna Lovegood" },
 };
 
 export const carnet = {
