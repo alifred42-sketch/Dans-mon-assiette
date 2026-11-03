@@ -1150,6 +1150,7 @@ const firstTwentyRecipeImages: Record<string, { image: string; imageAlt: string;
   "veg-ah-pdf-013": { image: "https://images.pexels.com/photos/2960581/pexels-photo-2960581.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Soupe-repas de lentilles aux épices", imageSourceUrl: "https://www.pexels.com/photo/overhead-shot-of-lentil-soup-2960581/", imageCredit: "Yonko Kilasi" },
   "veg-ah-pdf-014": { image: "https://images.pexels.com/photos/10000001/pexels-photo-10000001.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Pâtes enrobées d'une sauce crémeuse au parmesan", imageSourceUrl: "https://www.pexels.com/photo/photography-of-spaghetti-10000001/", imageCredit: "Pelageia Zelenina" },
   "veg-express-pdf-001": { image: "https://images.pexels.com/photos/27850079/pexels-photo-27850079.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Salade pois chiches feta", imageSourceUrl: "https://www.pexels.com/photo/a-salad-with-feta-cheese-olives-and-chickpeas-27850079/", imageCredit: "Livilla Latini" },
+  "veg-ah-pdf-030": { image: "https://images.pexels.com/photos/6544494/pexels-photo-6544494.jpeg?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Chou-fleur rôti nappé de sauce crémeuse", imageSourceUrl: "https://www.pexels.com/photo/a-plate-of-baked-cauliflower-6544494/", imageCredit: "Alesia Kozik" },
 };
 
 export const carnet = {
