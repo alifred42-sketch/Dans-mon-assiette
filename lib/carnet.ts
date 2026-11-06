@@ -1814,6 +1814,11 @@ const firstTwentyRecipeImages: Record<string, { image: string; imageAlt: string;
   "r-a9558230ac": { image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Burger maison façon barbecue", imageSourceUrl: "https://unsplash.com", imageCredit: "Unsplash" },
   "r-546baad0a1": { image: "https://images.unsplash.com/photo-1534080355125-27b34d75b74e?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Fideuà légère aux fruits de mer", imageSourceUrl: "https://unsplash.com", imageCredit: "Unsplash" },
   "r-2d6d639969": { image: "https://images.unsplash.com/photo-1689860892307-7db54ab276ba?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Pot-au-feu revisité aux légumes", imageSourceUrl: "https://unsplash.com", imageCredit: "nilufar nattaq" },
+  "veg-ah-pdf-004": { image: "https://images.unsplash.com/photo-1511378156040-1259b5bcd0fb?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Soupe de légumes d’hiver colorée en bols", imageSourceUrl: "https://unsplash.com", imageCredit: "Monika Grabkowska" },
+  "veg-ah-pdf-007": { image: "https://images.unsplash.com/photo-1658308766948-01c85ade2737?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Chili aux patates douces, haricots rouges et avocat", imageSourceUrl: "https://unsplash.com", imageCredit: "Svitlana" },
+  "veg-ah-pdf-009": { image: "https://images.unsplash.com/photo-1758580815433-5e35651c1243?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Champignons cuisinés et jeunes pousses dans un bol", imageSourceUrl: "https://unsplash.com", imageCredit: "Filipp Romanovski" },
+  "veg-ah-pdf-010": { image: "https://images.pexels.com/photos/30068444/pexels-photo-30068444.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400&fm=webp&q=80", imageAlt: "Tajine marocain aux pruneaux et amandes", imageSourceUrl: "https://www.pexels.com/photo/traditional-moroccan-lamb-tagine-with-almonds-and-prunes-30068444/", imageCredit: "Moussa Idrissi" },
+  "veg-ah-pdf-011": { image: "https://images.unsplash.com/photo-1714062105941-144a2b6565f1?auto=format&fit=crop&w=400&h=400&q=80&fm=webp", imageAlt: "Lentilles mijotées et céréales en bols", imageSourceUrl: "https://unsplash.com", imageCredit: "Joanna Stołowicz" },
 };
 
 export const carnet = {
