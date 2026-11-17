@@ -53,7 +53,7 @@ jobs:
             sauceOnly
               ? "This is a sauce or preparation: show ONLY the sauce itself in one small simple ceramic ramekin or bowl. Do not show a finished meal, salad, pasta, meat, fish, or any dish covered with the sauce."
               : wrapDish
-                ? "IMPORTANT: this recipe is a WRAP. Show an actual fully rolled and folded tortilla wrap, closed around the filling, clearly recognizable as a wrap. Do NOT show an open flat tortilla, a tortilla pizza, a taco, a salad bowl, or loose ingredients spread over a flat tortilla. The wrap must be the main subject, with a small neat cut end optionally showing the exact filling."
+                ? "IMPORTANT: this recipe is a CHICKEN CRUDITES WRAP. Show one complete tortilla wrap rolled tightly and closed, with one end neatly cut diagonally and turned toward the viewer so the filling is unmistakably visible. The filling must visibly include cooked chicken breast strips, green lettuce, fresh tomato, grated carrot and cucumber slices, all wrapped INSIDE the tortilla. The chicken must be clearly identifiable, not replaced by another protein. Keep the wrap as the only food on the plate: do not place a separate salad, loose tomatoes, garnish vegetables, or side dish beside it. Do NOT show an open flat tortilla, tortilla pizza, taco, burrito bowl, or loose ingredients on top of a flat tortilla."
                 : "Show the finished dish exactly as named, with its main ingredients clearly recognizable.",
             "Wide, zoomed-out overhead flat-lay view; the entire plate or bowl fully visible, centered, with generous clear space around it.",
             "Bright natural daylight, clean elegant simple styling, white marble, pale wood, or light grey stone background.",
@@ -69,7 +69,7 @@ jobs:
           ].join("\n"));
           console.log("Recette sélectionnée :", name);
           console.log("Nombre d'ingrédients :", ingredients.length);
-          console.log("Présentation :", sauceOnly ? "sauce seule en ramequin" : "plat terminé");
+          console.log("Présentation :", sauceOnly ? "sauce seule en ramequin" : wrapDish ? "wrap roulé et fermé avec garniture visible" : "plat terminé");
           NODE
 
       - name: Générer une seule image avec Cloudflare Workers AI
