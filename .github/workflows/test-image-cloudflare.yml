@@ -104,6 +104,13 @@ jobs:
                 seasonal,
                 "Square composition. No close-up, no cropped main dish, no hands, no people, no packaging, no text, no watermark, no logo, no collage."
               ]
+              if chocolate_bowl:
+                  prompt = [
+                      "Photorealistic bright editorial food photo, square overhead view, wide framing with the entire bowl visible and space around it.",
+                      "Exact recipe: Bowl dessert au skyr, fruits rouges et chocolat noir. Show a generous creamy white skyr bowl topped with clearly visible fresh red berries, abundant grated dark chocolate shavings and a few small dark chocolate curls, plus distinct chopped almonds.",
+                      "The dark chocolate must be unmistakable at first glance and strongly contrast with the white skyr and red berries. Never replace it with honey, caramel, syrup, cocoa powder or a brown drizzle.",
+                      "Faithful appetizing food styling, pale white marble or light stone background, bright soft window daylight, gentle shadows, airy clean composition. No close-up, no cropped bowl, no hands, no text, no logo, no watermark, no collage."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
