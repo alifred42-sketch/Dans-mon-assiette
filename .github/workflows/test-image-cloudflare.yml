@@ -153,6 +153,15 @@ jobs:
                       "Show one individual rich dark chocolate fondant cake on a pale elegant dessert plate. The cake is slightly cut open, revealing a generous, glossy, unmistakably molten dark chocolate center flowing slowly from the middle onto the plate. The liquid chocolate must be clearly visible and be the visual hero; not a dry brownie, not a plain intact cake, not chocolate sauce poured over the outside.",
                       "Soft bright natural window light, appetizing moist cake texture, refined simple cookbook styling, pale white marble or light stone background, a few restrained chocolate shavings nearby. Entire plate visible, airy composition, no clutter, no hands, no text, no logo, no watermark, no collage."
                   ]
+              if ("cabillaud" in name.lower() and "citron" in name.lower() and "tomates cerises" in name.lower()):
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, square wide overhead or gentle three-quarter view, whole plate visible with breathing room.",
+                      "Exact dish: a single beautiful thick boneless cod loin or cod fillet (dos de cabillaud), opaque pearly white and delicately flaky, gently baked or pan-roasted. It must unmistakably be a cut portion of cod, NOT a whole fish: absolutely no head, no tail, no fins, no whole-body fish silhouette.",
+                      "Clearly show tender sautéed courgette rounds and half-moons, bright red cherry tomatoes, fresh lemon slices or wedges, and fresh basil leaves arranged around and beside the cod. All four ingredients must be recognizable and visible. A light olive-oil gloss only, no heavy sauce.",
+                      "Serve on an elegant warm ivory ceramic plate over warm greige limestone or light taupe stone. Add only a few restrained cookbook details nearby, such as a folded natural linen napkin, a small basil sprig and one lemon wedge.",
+                      "Warm soft natural window daylight, appetizing fresh colors, chic welcoming cookbook styling, gentle shadows. Not stark white, not washed out, not cold, not dark rustic.",
+                      "No whole fish, no head, no tail, no fins, no skin-on whole fish, no missing courgette, no text, no hands, no packaging, no logo, no watermark, no collage."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
