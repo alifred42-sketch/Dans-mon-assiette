@@ -8,15 +8,9 @@ on:
         required: true
         default: "80"
       batch_size:
-        description: "Nombre de photos du lot (maximum 20, à ajuster après mesure du quota)"
+        description: "Nombre de photos du lot (maximum prudent : 5)"
         required: true
         default: "5"
-  push:
-    branches:
-      - travail-cuisine-chic-ouf-design
-    paths:
-      - .github/workflows/test-image-cloudflare.yml
-
 permissions:
   contents: read
 
@@ -50,7 +44,7 @@ jobs:
           account = os.environ["CF_ACCOUNT_ID"]
           token = os.environ["CF_API_TOKEN"]
           start = max(0, int(os.environ.get("START_INDEX", "80")))
-          count = min(20, max(1, int(os.environ.get("BATCH_SIZE", "5"))))
+          count = min(5, max(1, int(os.environ.get("BATCH_SIZE", "5"))))
           data = json.loads(Path("data/carnet.json").read_text(encoding="utf-8"))
           recipes = data.get("recipes", [])
           selected = recipes[start:start + count]
