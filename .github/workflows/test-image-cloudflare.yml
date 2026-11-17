@@ -104,8 +104,19 @@ jobs:
           print(f"Image originale reçue : {image.width} x {image.height}")
           image = ImageOps.fit(image, (400, 400), method=Image.Resampling.LANCZOS, centering=(0.5, 0.5))
           os.makedirs("generated-test", exist_ok=True)
-          image.save("generated-test/recette-test.webp", "WEBP", quality=86, method=6)
-          print("Image prête : 400 x 400 WebP")
+          output = "generated-test/recette-test.webp"
+          max_bytes = 100 * 1024
+          chosen_quality = None
+          for quality in (82, 78, 74, 70, 66):
+              image.save(output, "WEBP", quality=quality, method=6, optimize=True)
+              size = os.path.getsize(output)
+              print(f"Compression WebP qualité {quality} : {size / 1024:.1f} Ko")
+              if size <= max_bytes:
+                  chosen_quality = quality
+                  break
+          if chosen_quality is None:
+              raise RuntimeError("Image encore trop lourde après compression : limite 100 Ko dépassée.")
+          print(f"Image prête : 400 x 400 WebP, {os.path.getsize(output) / 1024:.1f} Ko (qualité {chosen_quality})")
           PY
 
       - name: Mettre l'image test à disposition sans modifier le catalogue
