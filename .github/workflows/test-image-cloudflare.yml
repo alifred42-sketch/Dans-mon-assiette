@@ -105,7 +105,7 @@ jobs:
                 ("For this dessert, use bright soft window daylight, a very pale white marble or light stone surface, gentle shadows only, fresh clean airy styling, and a wide overhead view showing the entire bowl with space around it." if chocolate_bowl else ""),
                 "A delicate drizzle of sauce is welcome only if that sauce is actually listed and appropriate to the recipe; never invent one.",
                 "Wide, slightly zoomed-out overhead or gentle three-quarter composition, centered with breathing room. Never crop the main dish.",
-                "Bright soft natural daylight, clean elegant magazine food styling, white marble, pale wood or light grey stone background. Keep a coherent light visual identity across the whole app.",
+                "Bright soft natural daylight and warm chic cookbook styling. Vary the setting naturally from one recipe to the next: a softly textured natural linen tablecloth, pale warm wood, warm greige limestone, light taupe stone or white marble. Do not use marble for every image. Keep backgrounds light-to-medium, welcoming and elegant, with gentle shadows and appetizing true-to-life food colors; never cold, washed out or dark rustic.",
                 seasonal,
                 "Square composition. No close-up, no cropped main dish, no hands, no people, no packaging, no text, no watermark, no logo, no collage."
               ]
