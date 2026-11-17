@@ -115,10 +115,10 @@ jobs:
                   ]
               if pizza_wrap:
                   prompt = [
-                      "Photorealistic bright premium editorial food photography, square wide overhead or gentle three-quarter view, entire serving plate visible with generous breathing room.",
-                      "Exact recipe: Wrap façon pizza jambon et mozzarella. Show two real fully rolled and closed tortilla wraps, one cut diagonally to reveal clearly visible ham, melted mozzarella and tomato pizza-style filling. The wraps must look like wraps, not open tortillas, tacos or a pizza.",
-                      "Serve on a simple pale ceramic plate over a very light white marble or pale grey stone surface. Keep the filling appetizing and recognizable, with only a few tiny fresh herb accents; no clutter.",
-                      "Very bright soft natural window daylight, high-key airy clean styling, pale background, gentle minimal shadows. Absolutely no dark wood, no rustic board, no charcoal background, no dramatic contrast, no close-up, no cropped wraps, no hands, no text, no logo, no watermark, no collage."
+                      "Photorealistic vibrant premium editorial food photography, square wide overhead composition, full serving plate completely visible and centered with comfortable space around it.",
+                      "Exact recipe: Wrap façon pizza jambon et mozzarella. Show three appetizing fully rolled and closed mini pizza wraps arranged generously on a pale round ceramic plate, one cut diagonally to reveal a generous, clearly visible filling of pink ham, juicy bright red tomato and stretchy melted mozzarella. Tortillas lightly golden and lightly toasted, not pale, dry or burnt. They must unmistakably be closed wraps, never open tortillas, tacos or a pizza.",
+                      "Make the food look warm, fresh, colorful and irresistible: vivid tomato red, creamy melted mozzarella, visible ham, a little golden toasted color and a few fresh basil leaves. Keep ingredients realistic and faithful; no excessive garnish.",
+                      "Use a bright white marble or very pale warm stone tabletop, soft abundant natural daylight, cheerful fresh clean styling, gentle shadows only. The entire plate and every wrap must be visible. Background must be light in every corner, absolutely no black or dark area, no dark wood, no rustic board, no grey gloomy lighting, no washed-out colors, no close-up, no cropped plate, no hands, no text, no logo, no watermark, no collage."
                   ]
               if chocolate_bowl:
                   prompt = [
