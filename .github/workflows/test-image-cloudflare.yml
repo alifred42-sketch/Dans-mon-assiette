@@ -43,7 +43,7 @@ jobs:
           if (!name || ingredients.length === 0) {
             throw new Error("La recette ne contient pas assez d'informations pour créer une image fidèle.");
           }
-          const sauceOnly = /sauce|vinaigrette|marinade|pesto|coulis|dip|tartinade/i.test(name);
+          const sauceOnly = /^(sauce|vinaigrette|marinade|pesto|coulis|dip|tartinade)\b/i.test(name.trim());
           const prompt = [
             "Photorealistic professional food photography for a French recipe app.",
             "The exact recipe is: " + name + ".",
