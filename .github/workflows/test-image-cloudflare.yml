@@ -43,21 +43,22 @@ jobs:
           if (!name || ingredients.length === 0) {
             throw new Error("La recette ne contient pas assez d'informations pour créer une image fidèle.");
           }
-          const sauceOnly = /^(sauce|vinaigrette|marinade|pesto|coulis|dip|tartinade)\b/i.test(name.trim());
-          const wrapDish = /\bwraps?\b/i.test(name);
+          const sauceOnly = /^(sauce|vinaigrette|marinade|pesto|coulis|dip|tartinade)\\b/i.test(name.trim());
+          const wrapDish = /\\bwraps?\\b/i.test(name);
           const prompt = [
-            "Photorealistic professional food photography for a French recipe app.",
+            "Photorealistic premium editorial food photography for a French recipe app, appetizing and natural.",
             "The exact recipe is: " + name + ".",
-            "Use only these recipe ingredients as the visible food: " + ingredients.join(", ") + ".",
-            "Faithfulness is mandatory: do not replace, omit, or invent any main ingredient; do not add a different dish or side.",
+            "The recipe ingredients are: " + ingredients.join(", ") + ".",
+            "The named recipe itself must remain the unmistakable main subject and occupy most of the image. Preserve its true dish type and all recognizable main ingredients; never substitute a different protein, starch, vegetable, or dish.",
+            "Only use listed ingredients for the actual recipe. Small coherent fresh garnish is allowed only when compatible with the recipe; keep it restrained and secondary. A modest accompaniment may appear only if it is clearly compatible and never competes with the main dish.",
             sauceOnly
-              ? "This is a sauce or preparation: show ONLY the sauce itself in one small simple ceramic ramekin or bowl. Do not show a finished meal, salad, pasta, meat, fish, or any dish covered with the sauce."
+              ? "This is a sauce or preparation: show ONLY the sauce itself in one small elegant ceramic ramekin or bowl. Do not turn it into a finished meal."
               : wrapDish
-                ? "IMPORTANT: this recipe is a CHICKEN CRUDITES WRAP. Show one complete tortilla wrap rolled tightly and closed, with one end neatly cut diagonally and turned toward the viewer so the filling is unmistakably visible. The filling must visibly include cooked chicken breast strips, green lettuce, fresh tomato, grated carrot and cucumber slices, all wrapped INSIDE the tortilla. The chicken must be clearly identifiable, not replaced by another protein. The wrap must remain the clear main subject, largest and most visually prominent. Keep the composition simple and uncluttered, with the wrap clearly dominant and plenty of empty space around it. Add only a small, neat ceramic ramekin of the lemon-yogurt sauce beside the wrap, with the pale sauce clearly visible. A few tiny fresh herb leaves or one or two small vegetable accents are enough; do not add a separate side dish, extra bowls, piles of garnish, or many scattered ingredients. Do NOT show an open flat tortilla, tortilla pizza, taco, burrito bowl, or loose ingredients on top of a flat tortilla."
-                : "Show the finished dish exactly as named, with its main ingredients clearly recognizable.",
-            "Wide, zoomed-out overhead flat-lay view; the entire plate or bowl fully visible, centered, with generous clear space around it.",
-            "Bright natural daylight, clean elegant simple styling, white marble, pale wood, or light grey stone background.",
-            "Square composition. No close-up, no cropped plate, no hands, no people, no packaging, no labels, no lettering, no watermark, no logos, no collage."
+                ? "Show the actual wrap or wraps fully rolled and closed, not open flat. Arrange one wrap whole and another cut diagonally so the real filling is clearly visible inside the tortilla. The filling must match the listed ingredients exactly. A light, appetizing drizzle of a listed compatible sauce may be placed over the wrap; do not invent a sauce if none is in the recipe. Keep the wrap dominant, with only a few restrained matching garnish accents."
+                : "Show the finished dish exactly as named, with its main ingredients clearly recognizable and presented as the hero. If a sauce is part of the recipe, a delicate drizzle over the dish is welcome when natural; do not invent sauce or conceal the food.",
+            "Wide, slightly zoomed-out overhead or gentle three-quarter flat-lay composition; show the whole dish and plate/bowl, centered, with breathing room around it. Never crop the main dish.",
+            "Bright soft natural daylight, clean elegant magazine-style styling, white marble, pale wood, or light grey stone background. Fresh, balanced, uncluttered composition.",
+            "Square composition. No close-up, no cropped main dish, no hands, no people, no packaging, no labels, no lettering, no watermark, no logos, no collage."
           ].join(" ");
           fs.writeFileSync("request.json", JSON.stringify({ prompt, steps: 4 }));
           fs.writeFileSync("recipe-info.txt", [
@@ -65,11 +66,11 @@ jobs:
             "Identifiant : " + recipe.id,
             "Ingrédients :",
             ...ingredients.map(x => "- " + x),
-            "Mode : " + (sauceOnly ? "sauce seule en ramequin" : wrapDish ? "wrap roulé et fermé" : "plat terminé")
+            "Mode : " + (sauceOnly ? "sauce seule en ramequin" : wrapDish ? "wrap roulé et fermé, garniture fidèle visible" : "plat terminé, plat principal prioritaire")
           ].join("\n"));
           console.log("Recette sélectionnée :", name);
           console.log("Nombre d'ingrédients :", ingredients.length);
-          console.log("Présentation :", sauceOnly ? "sauce seule en ramequin" : wrapDish ? "wrap roulé et fermé avec garniture visible" : "plat terminé");
+          console.log("Présentation :", sauceOnly ? "sauce seule en ramequin" : wrapDish ? "wrap roulé et fermé avec garniture fidèle visible" : "plat terminé, sujet principal prioritaire");
           NODE
 
       - name: Générer une seule image avec Cloudflare Workers AI
