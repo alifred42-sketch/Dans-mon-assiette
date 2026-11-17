@@ -1,12 +1,16 @@
-name: Test image Cloudflare AI
+name: Générer un lot de photos recettes
 
 on:
   workflow_dispatch:
     inputs:
-      recipe_id:
-        description: "Identifiant exact de la recette à illustrer"
+      start_index:
+        description: "Position de départ dans le catalogue (0 = première recette)"
         required: true
-        default: "r-b6bee72546"
+        default: "80"
+      batch_size:
+        description: "Nombre de photos du lot (maximum 20, à ajuster après mesure du quota)"
+        required: true
+        default: "5"
   push:
     branches:
       - travail-cuisine-chic-ouf-design
@@ -17,114 +21,174 @@ permissions:
   contents: read
 
 jobs:
-  generate-one-image:
+  generate-recipe-batch:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 45
     env:
       CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
       CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-      RECIPE_ID: ${{ github.event.inputs.recipe_id || 'r-b6bee72546' }}
+      START_INDEX: ${{ github.event.inputs.start_index || '80' }}
+      BATCH_SIZE: ${{ github.event.inputs.batch_size || '5' }}
     steps:
       - name: Récupérer le projet
         uses: actions/checkout@v4
 
-      - name: Préparer la description fidèle de la recette
-        shell: bash
-        run: |
-          node <<'NODE'
-          const fs = require("node:fs");
-          const data = JSON.parse(fs.readFileSync("data/carnet.json", "utf8"));
-          const recipe = (data.recipes || []).find((item) => item.id === process.env.RECIPE_ID);
-          if (!recipe) {
-            throw new Error("Recette introuvable dans data/carnet.json : " + process.env.RECIPE_ID);
-          }
-          const name = String(recipe.name || "").trim();
-          const ingredients = Array.isArray(recipe.ingredients) ? recipe.ingredients.map(x => String(x).trim()).filter(Boolean) : [];
-          if (!name || ingredients.length === 0) {
-            throw new Error("La recette ne contient pas assez d'informations pour créer une image fidèle.");
-          }
-          const sauceOnly = /^(sauce|vinaigrette|marinade|pesto|coulis|dip|tartinade)\\b/i.test(name.trim());
-          const wrapDish = /\\bwraps?\\b/i.test(name);
-          const prompt = [
-            "Photorealistic premium editorial food photography for a French recipe app, appetizing and natural.",
-            "The exact recipe is: " + name + ".",
-            "The recipe ingredients are: " + ingredients.join(", ") + ".",
-            "The named recipe itself must remain the unmistakable main subject and occupy most of the image. Preserve its true dish type and all recognizable main ingredients; never substitute a different protein, starch, vegetable, or dish.",
-            "Only use listed ingredients for the actual recipe. Small coherent fresh garnish is allowed only when compatible with the recipe; keep it restrained and secondary. A modest accompaniment may appear only if it is clearly compatible and never competes with the main dish.",
-            sauceOnly
-              ? "This is a sauce or preparation: show ONLY the sauce itself in one small elegant ceramic ramekin or bowl. Do not turn it into a finished meal."
-              : wrapDish
-                ? "Show the actual wrap or wraps fully rolled and closed, not open flat. Arrange one wrap whole and another cut diagonally so the real filling is clearly visible inside the tortilla. The filling must match the listed ingredients exactly. A light, appetizing drizzle of a listed compatible sauce may be placed over the wrap; do not invent a sauce if none is in the recipe. Keep the wrap dominant, with only a few restrained matching garnish accents."
-                : "Show the finished dish exactly as named, with its main ingredients clearly recognizable and presented as the hero. If a sauce is part of the recipe, a delicate drizzle over the dish is welcome when natural; do not invent sauce or conceal the food.",
-            "Wide, slightly zoomed-out overhead or gentle three-quarter flat-lay composition; show the whole dish and plate/bowl, centered, with breathing room around it. Never crop the main dish.",
-            "Bright soft natural daylight, clean elegant magazine-style styling, white marble, pale wood, or light grey stone background. Fresh, balanced, uncluttered composition.",
-            "Square composition. No close-up, no cropped main dish, no hands, no people, no packaging, no labels, no lettering, no watermark, no logos, no collage."
-          ].join(" ");
-          fs.writeFileSync("request.json", JSON.stringify({ prompt, steps: 4 }));
-          fs.writeFileSync("recipe-info.txt", [
-            "Recette : " + name,
-            "Identifiant : " + recipe.id,
-            "Ingrédients :",
-            ...ingredients.map(x => "- " + x),
-            "Mode : " + (sauceOnly ? "sauce seule en ramequin" : wrapDish ? "wrap roulé et fermé, garniture fidèle visible" : "plat terminé, plat principal prioritaire")
-          ].join("\n"));
-          console.log("Recette sélectionnée :", name);
-          console.log("Nombre d'ingrédients :", ingredients.length);
-          console.log("Présentation :", sauceOnly ? "sauce seule en ramequin" : wrapDish ? "wrap roulé et fermé avec garniture fidèle visible" : "plat terminé, sujet principal prioritaire");
-          NODE
+      - name: Installer les outils image
+        run: python -m pip install --quiet Pillow
 
-      - name: Générer une seule image avec Cloudflare Workers AI
+      - name: Générer le lot de recettes en respectant le quota
         shell: bash
         run: |
           test -n "$CF_ACCOUNT_ID" || { echo "Secret CF_ACCOUNT_ID absent"; exit 1; }
           test -n "$CF_API_TOKEN" || { echo "Secret CF_API_TOKEN absent"; exit 1; }
-          curl --fail --silent --show-error \
-            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/ai/run/@cf/black-forest-labs/flux-1-schnell" \
-            -X POST \
-            -H "Authorization: Bearer $CF_API_TOKEN" \
-            -H "Content-Type: application/json" \
-            --data-binary @request.json \
-            --output cloudflare-response.json
-
-      - name: Convertir en WebP carré 400 x 400
-        shell: bash
-        run: |
-          python -m pip install --quiet Pillow
           python <<'PY'
-          import base64, json, os, sys
+          import base64, json, os, re, sys, time, urllib.error, urllib.request
           from io import BytesIO
-          from PIL import Image, ImageOps
+          from pathlib import Path
+          from PIL import Image, ImageOps, ImageDraw
 
-          with open("cloudflare-response.json", "r", encoding="utf-8") as f:
-              payload = json.load(f)
-          if not payload.get("success") or not isinstance(payload.get("result"), dict) or not payload["result"].get("image"):
-              print("Réponse Cloudflare inattendue :", json.dumps(payload)[:1800])
-              sys.exit(1)
-          raw = base64.b64decode(payload["result"]["image"])
-          image = Image.open(BytesIO(raw)).convert("RGB")
-          print(f"Image originale reçue : {image.width} x {image.height}")
-          image = ImageOps.fit(image, (400, 400), method=Image.Resampling.LANCZOS, centering=(0.5, 0.5))
-          os.makedirs("generated-test", exist_ok=True)
-          output = "generated-test/recette-test.webp"
-          max_bytes = 100 * 1024
-          chosen_quality = None
-          for quality in (82, 78, 74, 70, 66):
-              image.save(output, "WEBP", quality=quality, method=6, optimize=True)
-              size = os.path.getsize(output)
-              print(f"Compression WebP qualité {quality} : {size / 1024:.1f} Ko")
-              if size <= max_bytes:
-                  chosen_quality = quality
+          account = os.environ["CF_ACCOUNT_ID"]
+          token = os.environ["CF_API_TOKEN"]
+          start = max(0, int(os.environ.get("START_INDEX", "80")))
+          count = min(20, max(1, int(os.environ.get("BATCH_SIZE", "5"))))
+          data = json.loads(Path("data/carnet.json").read_text(encoding="utf-8"))
+          recipes = data.get("recipes", [])
+          selected = recipes[start:start + count]
+          if not selected:
+              raise SystemExit(f"Aucune recette à partir de la position {start}.")
+          out = Path("generated-batch")
+          out.mkdir(exist_ok=True)
+          manifest = []
+          for offset, recipe in enumerate(selected):
+              rid = str(recipe.get("id", "")).strip()
+              name = str(recipe.get("name", "")).strip()
+              ingredients = recipe.get("ingredients") or []
+              ingredients = [str(x).strip() for x in ingredients if str(x).strip()]
+              if not rid or not name or not ingredients:
+                  print(f"IGNORÉ (fiche incomplète) : {rid or 'sans identifiant'} — {name}")
+                  continue
+
+              season_text = (name + " " + " ".join(ingredients)).lower()
+              seasonal = ""
+              if any(w in season_text for w in ["noël", "noel", "réveillon", "reveillon", "bûche", "buche", "chapon"]):
+                  seasonal = "Add a very subtle Christmas touch in the surroundings only: a tiny sprig of rosemary or fir and restrained festive red accents; never obscure the dish."
+              elif any(w in season_text for w in ["automne", "potimarron", "courge", "citrouille", "châtaigne", "chataigne", "champignon"]):
+                  seasonal = "If natural for this recipe, add very subtle autumn-toned accents such as a few leaves, nuts or muted warm orange details around the dish; keep the background light."
+              elif any(w in season_text for w in ["printemps", "asperge", "petits pois", "fraise"]):
+                  seasonal = "If natural for this recipe, add restrained fresh spring accents such as herbs or a few delicate edible flowers; keep the background light."
+              elif any(w in season_text for w in ["été", "ete", "melon", "tomate", "courgette", "pêche", "peche"]):
+                  seasonal = "If natural for this recipe, add restrained summery accents such as fresh herbs, lemon or a few seasonal vegetables; keep the background light."
+
+              sauce_only = bool(re.match(r"^(sauce|vinaigrette|marinade|pesto|coulis|dip|tartinade)\b", name, re.I))
+              wrap_dish = bool(re.search(r"\bwraps?\b", name, re.I))
+              prompt = [
+                "Photorealistic premium editorial food photography for a French recipe app.",
+                f"The exact recipe is: {name}.",
+                "Its listed ingredients are: " + ", ".join(ingredients) + ".",
+                "The named recipe must be the unmistakable hero and occupy most of the frame. Preserve the real dish type and recognizable listed main ingredients. Never substitute a different protein, starch, vegetable or dish.",
+                "Use the listed ingredients for the actual recipe. Small coherent garnish and a modest compatible accompaniment are welcome but strictly secondary and must never hide or overpower the dish.",
+                ("Show ONLY the sauce/preparation itself in one small elegant ramekin or bowl; do not turn it into a meal." if sauce_only else
+                 "Show real fully rolled and closed wraps, with one cut diagonally to reveal the exact listed filling. Never show an open flat tortilla, taco or loose filling on a flat tortilla." if wrap_dish else
+                 "Show the finished dish exactly as named, clearly recognizable, beautifully served, with the whole plate/bowl visible."),
+                "A delicate drizzle of sauce is welcome only if that sauce is actually listed and appropriate to the recipe; never invent one.",
+                "Wide, slightly zoomed-out overhead or gentle three-quarter composition, centered with breathing room. Never crop the main dish.",
+                "Bright soft natural daylight, clean elegant magazine food styling, white marble, pale wood or light grey stone background. Keep a coherent light visual identity across the whole app.",
+                seasonal,
+                "Square composition. No close-up, no cropped main dish, no hands, no people, no packaging, no text, no watermark, no logo, no collage."
+              ]
+              manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
+          Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+          if not manifest:
+              raise SystemExit("Aucune recette exploitable dans ce lot.")
+          print(f"Lot préparé : {len(manifest)} recettes (positions {start + 1} à {start + len(selected)}).")
+
+          made = []
+          stopped_for_quota = False
+          for index, item in enumerate(manifest, 1):
+              rid = item["id"]
+              print(f"[{index}/{len(manifest)}] Génération : {item['name']} ({rid})")
+              body = json.dumps({"prompt": item["prompt"], "steps": 4}).encode("utf-8")
+              request = urllib.request.Request(
+                  f"https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/@cf/black-forest-labs/flux-1-schnell",
+                  data=body,
+                  headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
+                  method="POST"
+              )
+              try:
+                  with urllib.request.urlopen(request, timeout=180) as response:
+                      payload = json.loads(response.read())
+              except urllib.error.HTTPError as exc:
+                  details = exc.read().decode("utf-8", "replace")[:1200]
+                  print(f"ARRÊT PROPRE : Cloudflare a répondu HTTP {exc.code}. {details}")
+                  if exc.code in (402, 403, 429):
+                      stopped_for_quota = True
+                      break
+                  raise
+              if not payload.get("success") or not payload.get("result", {}).get("image"):
+                  errors = json.dumps(payload.get("errors", payload), ensure_ascii=False)[:1200]
+                  print("ARRÊT : réponse Cloudflare sans image :", errors)
+                  stopped_for_quota = True
                   break
-          if chosen_quality is None:
-              raise RuntimeError("Image encore trop lourde après compression : limite 100 Ko dépassée.")
-          print(f"Image prête : 400 x 400 WebP, {os.path.getsize(output) / 1024:.1f} Ko (qualité {chosen_quality})")
+              raw = base64.b64decode(payload["result"]["image"])
+              image = Image.open(BytesIO(raw)).convert("RGB")
+              image = ImageOps.fit(image, (400, 400), method=Image.Resampling.LANCZOS, centering=(0.5, 0.5))
+              path = out / f"{rid}.webp"
+              selected_quality = None
+              for quality in (82, 78, 74, 70, 66):
+                  image.save(path, "WEBP", quality=quality, method=6, optimize=True)
+                  if path.stat().st_size <= 100 * 1024:
+                      selected_quality = quality
+                      break
+              if selected_quality is None:
+                  path.unlink(missing_ok=True)
+                  print(f"REJET : impossible de passer sous 100 Ko pour {rid}.")
+                  continue
+              info = out / f"{rid}.txt"
+              info.write_text(
+                  f"Recette : {item['name']}\nIdentifiant : {rid}\nIngrédients :\n" +
+                  "\n".join("- " + x for x in item["ingredients"]) +
+                  f"\nFichier : {path.name}\nTaille : {path.stat().st_size / 1024:.1f} Ko\n",
+                  encoding="utf-8"
+              )
+              made.append({"id": rid, "name": item["name"], "file": str(path), "kb": round(path.stat().st_size / 1024, 1)})
+              print(f"OK : {path} — {path.stat().st_size / 1024:.1f} Ko")
+              time.sleep(2)
+
+          Path("batch-result.json").write_text(json.dumps({
+              "requested": len(manifest), "generated": made,
+              "stopped_for_quota_or_api": stopped_for_quota,
+              "start_index": start, "next_start_index": start + len(selected)
+          }, ensure_ascii=False, indent=2), encoding="utf-8")
+          print(f"RÉSULTAT : {len(made)} photo(s) générée(s) sur {len(manifest)} demandée(s).")
+          if stopped_for_quota:
+              print("Le lot s'est arrêté sans nouvelle tentative pour éviter de marteler l'API.")
+          if made:
+              thumbs = []
+              for entry in made:
+                  im = Image.open(entry["file"]).convert("RGB")
+                  im.thumbnail((220, 220))
+                  thumbs.append((entry, im.copy()))
+              cols = 3
+              rows = (len(thumbs) + cols - 1) // cols
+              sheet = Image.new("RGB", (cols * 260, rows * 270), "white")
+              draw = ImageDraw.Draw(sheet)
+              for i, (entry, im) in enumerate(thumbs):
+                  x, y = (i % cols) * 260, (i // cols) * 270
+                  sheet.paste(im, (x + 20, y + 5))
+                  draw.text((x + 8, y + 232), entry["name"][:34], fill="black")
+                  draw.text((x + 8, y + 248), f"{entry['kb']} Ko", fill="black")
+              sheet.save("contact-sheet.jpg", quality=88)
           PY
 
-      - name: Mettre l'image test à disposition sans modifier le catalogue
+      - name: Publier le lot pour contrôle visuel (sans modifier le catalogue)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: image-test-cuisine-chic-ouf
+          name: lot-photos-cuisine-chic-ouf
           path: |
-            generated-test/recette-test.webp
-            recipe-info.txt
+            generated-batch/
+            batch-manifest.json
+            batch-result.json
+            contact-sheet.jpg
+          if-no-files-found: warn
           retention-days: 3
