@@ -116,12 +116,11 @@ jobs:
                   ]
               if buddha_bowl:
                   prompt = [
-                      "Photorealistic bright premium editorial food photography, square wide overhead composition, entire serving vessel completely visible and centered with generous breathing room.",
-                      f"Exact recipe: {name}. Its listed ingredients are: " + ", ".join(ingredients) + ".",
-                      "IMPORTANT PRESENTATION: this is a Buddha bowl. Serve it in one large, generous, clearly deep round bowl with a visible rim, or a wide deep bowl-shaped ceramic plate. It must unmistakably read as a bowl, never a flat dinner plate, platter, tray or scattered ingredients on a tabletop.",
-                      "Arrange the actual listed ingredients in distinct, attractive sections inside the bowl so each component is easy to recognize. Keep the bowl full but orderly, colorful and appetizing; do not invent or substitute ingredients. Any sauce belongs inside the bowl and must match the listed recipe.",
-                      "Use a wide overhead view showing the entire bowl and its full rim, with generous pale background around it. The tabletop MUST be bright white marble or very pale ivory stone in every corner, evenly lit by abundant soft daylight. Absolutely no wood surface of any color, no brown, no dark areas, no rustic styling. The salmon MUST be cold-smoked salmon, not cooked: show several thin, silky, translucent rose-pink smoked salmon slices, loosely folded into delicate ribbons. No salmon steak, no fillet, no cooked fish, no grill marks. Inside the large deep bowl arrange distinct sections of brown rice, avocado, cucumber, grated carrot, tomato and green lettuce. Style the scene like an elegant cookbook photograph: around the bowl add a few small tasteful props on the pale marble surface, such as two thin lemon wedges, a tiny sprig of fresh dill, a few scattered sesame seeds and a few delicate green leaves. Keep props sparse, intentional and balanced, filling some empty space without cluttering or hiding the bowl. Bright natural daylight, appetizing fresh colors, full bowl and rim visible.",
-                      "No flat plate, no platter, no close-up, no cropped bowl, no dark or rustic background, no hands, no text, no logo, no watermark, no collage."
+                      "Bright photorealistic cookbook food photo, square overhead view, entire large deep round bowl and rim visible, centered on pale white marble.",
+                      f"Recipe: {name}. Ingredients: " + ", ".join(ingredients) + ".",
+                      "Serve unmistakably in a large deep bowl, never a flat plate. Arrange the real ingredients in neat colorful sections.",
+                      "Show ONLY cold-smoked salmon: thin silky rose-pink slices, uncooked, gently folded into ribbons. Absolutely no cooked salmon, steak, fillet or grill marks.",
+                      "Add a few elegant cookbook props around the bowl on the marble: two lemon wedges, a small dill sprig, a few sesame seeds and delicate green leaves. Airy, balanced, fresh styling; props must stay subtle and not hide the bowl. Bright soft daylight, no dark areas, no wood, no clutter."
                   ]
               if pizza_wrap:
                   prompt = [
