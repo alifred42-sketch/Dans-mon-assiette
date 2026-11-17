@@ -162,6 +162,15 @@ jobs:
                       "Warm soft natural window daylight, appetizing fresh colors, chic welcoming cookbook styling, gentle shadows. Not stark white, not washed out, not cold, not dark rustic.",
                       "No whole fish, no head, no tail, no fins, no skin-on whole fish, no missing courgette, no text, no hands, no packaging, no logo, no watermark, no collage."
                   ]
+              if ("wrap" in name.lower() and ("chèvre" in name.lower() or "chevre" in name.lower()) and "miel" in name.lower()):
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, square wide overhead view, preserving the same visual idea as a beautiful rustic composition: three fully rolled closed wraps arranged together on a round muted sage-green ceramic plate, one or two cut diagonally to show the filling. Entire plate visible, centered, with breathing room.",
+                      "Exact recipe: warm goat cheese and light honey wraps. Make the goat cheese unmistakable: generous soft creamy goat cheese pieces or slices, gently warmed and slightly melting inside the cut wraps, visibly white and creamy rather than feta-like cubes. Add a delicate fine golden honey drizzle directly over the visible goat cheese and lightly across the cut filling; it must be visible but restrained, never a thick syrup.",
+                      "Clearly show fresh green lettuce, juicy red cherry tomato pieces and chopped walnuts inside the wraps. The walnuts must be visibly identifiable. Keep the filling balanced and realistic, with goat cheese and honey as the signature ingredients.",
+                      "The wraps must be fully rolled and closed, not open tortillas, tacos or loose filling. One cut cross-section should clearly reveal goat cheese, lettuce, tomato and walnut pieces.",
+                      "Warm chic cookbook styling, soft natural daylight, welcoming warm tones. Use a light warm wood tabletop or warm greige stone, not dark wood. A few fresh tomatoes and delicate herb sprigs may sit subtly around the plate, but do not clutter the scene. Appetizing true-to-life colors, gentle shadows.",
+                      "No feta cubes, no mozzarella, no cooked meat, no open tortilla, no excessive salad, no dark background, no text, no hands, no packaging, no logo, no watermark, no collage."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
