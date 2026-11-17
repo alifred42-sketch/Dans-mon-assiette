@@ -45,7 +45,7 @@ jobs:
           if not trigger_path.is_file():
               raise SystemExit("Fichier trigger.txt absent : aucun lot autorisé.")
           trigger_text = trigger_path.read_text(encoding="utf-8").strip()
-          match = re.fullmatch(r"([1-9][0-9]*)\\s*-\\s*([1-9][0-9]*)", trigger_text)
+          match = re.fullmatch(r"([1-9][0-9]*)\s*-\s*([1-9][0-9]*)", trigger_text)
           if not match:
               raise SystemExit("Format refusé dans trigger.txt. Format attendu : premier-dernier, ex. 86-90.")
           first, last = map(int, match.groups())
