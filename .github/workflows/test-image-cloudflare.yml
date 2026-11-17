@@ -44,6 +44,7 @@ jobs:
             throw new Error("La recette ne contient pas assez d'informations pour créer une image fidèle.");
           }
           const sauceOnly = /^(sauce|vinaigrette|marinade|pesto|coulis|dip|tartinade)\b/i.test(name.trim());
+          const wrapDish = /\bwraps?\b/i.test(name);
           const prompt = [
             "Photorealistic professional food photography for a French recipe app.",
             "The exact recipe is: " + name + ".",
@@ -51,7 +52,9 @@ jobs:
             "Faithfulness is mandatory: do not replace, omit, or invent any main ingredient; do not add a different dish or side.",
             sauceOnly
               ? "This is a sauce or preparation: show ONLY the sauce itself in one small simple ceramic ramekin or bowl. Do not show a finished meal, salad, pasta, meat, fish, or any dish covered with the sauce."
-              : "Show the finished dish exactly as named, with its main ingredients clearly recognizable.",
+              : wrapDish
+                ? "IMPORTANT: this recipe is a WRAP. Show an actual fully rolled and folded tortilla wrap, closed around the filling, clearly recognizable as a wrap. Do NOT show an open flat tortilla, a tortilla pizza, a taco, a salad bowl, or loose ingredients spread over a flat tortilla. The wrap must be the main subject, with a small neat cut end optionally showing the exact filling."
+                : "Show the finished dish exactly as named, with its main ingredients clearly recognizable.",
             "Wide, zoomed-out overhead flat-lay view; the entire plate or bowl fully visible, centered, with generous clear space around it.",
             "Bright natural daylight, clean elegant simple styling, white marble, pale wood, or light grey stone background.",
             "Square composition. No close-up, no cropped plate, no hands, no people, no packaging, no labels, no lettering, no watermark, no logos, no collage."
@@ -62,7 +65,7 @@ jobs:
             "Identifiant : " + recipe.id,
             "Ingrédients :",
             ...ingredients.map(x => "- " + x),
-            "Mode : " + (sauceOnly ? "sauce seule en ramequin" : "plat terminé")
+            "Mode : " + (sauceOnly ? "sauce seule en ramequin" : wrapDish ? "wrap roulé et fermé" : "plat terminé")
           ].join("\n"));
           console.log("Recette sélectionnée :", name);
           console.log("Nombre d'ingrédients :", ingredients.length);
