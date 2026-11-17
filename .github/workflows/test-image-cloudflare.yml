@@ -90,6 +90,7 @@ jobs:
               blanquette_chicken = ("blanquette" in name.lower() and "poulet" in name.lower())
               pizza_wrap = ("wrap" in name.lower() and "pizza" in name.lower())
               buddha_bowl = "buddha" in name.lower()
+              grandmother_chicken = ("poulet" in name.lower() and "grand-mère" in name.lower() and "carotte" in name.lower())
               chocolate_fondant = ("fondant" in name.lower() and "chocolat" in name.lower())
               prompt = [
                 "Photorealistic premium editorial food photography for a French recipe app.",
@@ -114,6 +115,14 @@ jobs:
                       "Exact dish: creamy chicken blanquette with mushrooms and carrots, served with a modest separate portion of brown rice. Show tender visible chicken pieces, sliced mushrooms, orange carrot pieces and a smooth pale creamy sauce; include the listed leeks subtly in the blanquette.",
                       "Serve in a beautiful shallow white ceramic bowl or deep-rimmed plate. The sauce must look silky and light, not brown. Keep the chicken and vegetables clearly distinguishable; rice is secondary.",
                       "Very bright soft natural window daylight, high-key pale white marble or light grey stone background, airy clean elegant styling, gentle minimal shadows. No dark background, no rustic dark wood, no dramatic contrast, no close-up, no cropped plate, no hands, no text, no logo, no watermark, no collage."
+                  ]
+              if grandmother_chicken:
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, square wide overhead or gentle three-quarter view, entire serving dish visible with breathing room.",
+                      f"Exact recipe: {name}. Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show a generous, beautifully cooked traditional chicken-and-carrot dish, with golden tender chicken pieces and clearly visible naturally orange carrots, gently coated in a glossy, appetizing light golden cooking sauce. Keep the dish faithful to the listed ingredients; no invented vegetables or side dish.",
+                      "Serve in an elegant warm ivory or muted sage ceramic shallow casserole dish, with a few delicate fresh thyme or parsley leaves. Add only restrained cookbook table details nearby, such as a folded natural linen napkin and a small piece of fresh carrot or herb sprig.",
+                      "Create a warm chic editorial cookbook atmosphere: softly sunlit warm greige limestone or light taupe stone tabletop, subtle natural texture, a hint of warm wood only as a small accent, rich appetizing food colors, gentle directional window light and soft shadows. The image must feel welcoming, refined and colorful, never stark white, washed out, cold, gloomy or dark rustic. Whole dish visible, no close-up, no cropped dish, no hands, no text, no logo, no watermark, no collage."
                   ]
               if buddha_bowl:
                   prompt = [
