@@ -88,6 +88,7 @@ jobs:
               wrap_dish = bool(re.search(r"\bwraps?\b", name, re.I))
               chocolate_bowl = ("bowl" in name.lower() and "chocolat noir" in name.lower())
               blanquette_chicken = ("blanquette" in name.lower() and "poulet" in name.lower())
+              pizza_wrap = ("wrap" in name.lower() and "pizza" in name.lower())
               prompt = [
                 "Photorealistic premium editorial food photography for a French recipe app.",
                 f"The exact recipe is: {name}.",
@@ -111,6 +112,13 @@ jobs:
                       "Exact dish: creamy chicken blanquette with mushrooms and carrots, served with a modest separate portion of brown rice. Show tender visible chicken pieces, sliced mushrooms, orange carrot pieces and a smooth pale creamy sauce; include the listed leeks subtly in the blanquette.",
                       "Serve in a beautiful shallow white ceramic bowl or deep-rimmed plate. The sauce must look silky and light, not brown. Keep the chicken and vegetables clearly distinguishable; rice is secondary.",
                       "Very bright soft natural window daylight, high-key pale white marble or light grey stone background, airy clean elegant styling, gentle minimal shadows. No dark background, no rustic dark wood, no dramatic contrast, no close-up, no cropped plate, no hands, no text, no logo, no watermark, no collage."
+                  ]
+              if pizza_wrap:
+                  prompt = [
+                      "Photorealistic bright premium editorial food photography, square wide overhead or gentle three-quarter view, entire serving plate visible with generous breathing room.",
+                      "Exact recipe: Wrap façon pizza jambon et mozzarella. Show two real fully rolled and closed tortilla wraps, one cut diagonally to reveal clearly visible ham, melted mozzarella and tomato pizza-style filling. The wraps must look like wraps, not open tortillas, tacos or a pizza.",
+                      "Serve on a simple pale ceramic plate over a very light white marble or pale grey stone surface. Keep the filling appetizing and recognizable, with only a few tiny fresh herb accents; no clutter.",
+                      "Very bright soft natural window daylight, high-key airy clean styling, pale background, gentle minimal shadows. Absolutely no dark wood, no rustic board, no charcoal background, no dramatic contrast, no close-up, no cropped wraps, no hands, no text, no logo, no watermark, no collage."
                   ]
               if chocolate_bowl:
                   prompt = [
