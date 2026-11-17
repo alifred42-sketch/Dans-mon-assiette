@@ -1,0 +1,115 @@
+name: Test image Cloudflare AI
+
+on:
+  workflow_dispatch:
+    inputs:
+      recipe_id:
+        description: "Identifiant exact de la recette à illustrer"
+        required: true
+        default: "r-b6bee72546"
+  push:
+    branches:
+      - travail-cuisine-chic-ouf-design
+    paths:
+      - .github/workflows/test-image-cloudflare.yml
+
+permissions:
+  contents: read
+
+jobs:
+  generate-one-image:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      RECIPE_ID: ${{ github.event.inputs.recipe_id || 'r-b6bee72546' }}
+    steps:
+      - name: Récupérer le projet
+        uses: actions/checkout@v4
+
+      - name: Préparer la description fidèle de la recette
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require("node:fs");
+          const data = JSON.parse(fs.readFileSync("data/carnet.json", "utf8"));
+          const recipe = (data.recipes || []).find((item) => item.id === process.env.RECIPE_ID);
+          if (!recipe) {
+            throw new Error("Recette introuvable dans data/carnet.json : " + process.env.RECIPE_ID);
+          }
+          const name = String(recipe.name || "").trim();
+          const ingredients = Array.isArray(recipe.ingredients) ? recipe.ingredients.map(x => String(x).trim()).filter(Boolean) : [];
+          if (!name || ingredients.length === 0) {
+            throw new Error("La recette ne contient pas assez d'informations pour créer une image fidèle.");
+          }
+          const sauceOnly = /sauce|vinaigrette|marinade|pesto|coulis|dip|tartinade/i.test(name);
+          const prompt = [
+            "Photorealistic professional food photography for a French recipe app.",
+            "The exact recipe is: " + name + ".",
+            "Use only these recipe ingredients as the visible food: " + ingredients.join(", ") + ".",
+            "Faithfulness is mandatory: do not replace, omit, or invent any main ingredient; do not add a different dish or side.",
+            sauceOnly
+              ? "This is a sauce or preparation: show ONLY the sauce itself in one small simple ceramic ramekin or bowl. Do not show a finished meal, salad, pasta, meat, fish, or any dish covered with the sauce."
+              : "Show the finished dish exactly as named, with its main ingredients clearly recognizable.",
+            "Wide, zoomed-out overhead flat-lay view; the entire plate or bowl fully visible, centered, with generous clear space around it.",
+            "Bright natural daylight, clean elegant simple styling, white marble, pale wood, or light grey stone background.",
+            "Square composition. No close-up, no cropped plate, no hands, no people, no packaging, no labels, no lettering, no watermark, no logos, no collage."
+          ].join(" ");
+          fs.writeFileSync("request.json", JSON.stringify({ prompt, steps: 4 }));
+          fs.writeFileSync("recipe-info.txt", [
+            "Recette : " + name,
+            "Identifiant : " + recipe.id,
+            "Ingrédients :",
+            ...ingredients.map(x => "- " + x),
+            "Mode : " + (sauceOnly ? "sauce seule en ramequin" : "plat terminé")
+          ].join("\n"));
+          console.log("Recette sélectionnée :", name);
+          console.log("Nombre d'ingrédients :", ingredients.length);
+          console.log("Présentation :", sauceOnly ? "sauce seule en ramequin" : "plat terminé");
+          NODE
+
+      - name: Générer une seule image avec Cloudflare Workers AI
+        shell: bash
+        run: |
+          test -n "$CF_ACCOUNT_ID" || { echo "Secret CF_ACCOUNT_ID absent"; exit 1; }
+          test -n "$CF_API_TOKEN" || { echo "Secret CF_API_TOKEN absent"; exit 1; }
+          curl --fail --silent --show-error \
+            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/ai/run/@cf/black-forest-labs/flux-1-schnell" \
+            -X POST \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data-binary @request.json \
+            --output cloudflare-response.json
+
+      - name: Convertir en WebP carré 400 x 400
+        shell: bash
+        run: |
+          python -m pip install --quiet Pillow
+          python <<'PY'
+          import base64, json, os, sys
+          from io import BytesIO
+          from PIL import Image, ImageOps
+
+          with open("cloudflare-response.json", "r", encoding="utf-8") as f:
+              payload = json.load(f)
+          if not payload.get("success") or not isinstance(payload.get("result"), dict) or not payload["result"].get("image"):
+              print("Réponse Cloudflare inattendue :", json.dumps(payload)[:1800])
+              sys.exit(1)
+          raw = base64.b64decode(payload["result"]["image"])
+          image = Image.open(BytesIO(raw)).convert("RGB")
+          print(f"Image originale reçue : {image.width} x {image.height}")
+          image = ImageOps.fit(image, (400, 400), method=Image.Resampling.LANCZOS, centering=(0.5, 0.5))
+          os.makedirs("generated-test", exist_ok=True)
+          image.save("generated-test/recette-test.webp", "WEBP", quality=86, method=6)
+          print("Image prête : 400 x 400 WebP")
+          PY
+
+      - name: Mettre l'image test à disposition sans modifier le catalogue
+        uses: actions/upload-artifact@v4
+        with:
+          name: image-test-cuisine-chic-ouf
+          path: |
+            generated-test/recette-test.webp
+            recipe-info.txt
+          retention-days: 3
