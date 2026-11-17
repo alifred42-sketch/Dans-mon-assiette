@@ -90,6 +90,7 @@ jobs:
               blanquette_chicken = ("blanquette" in name.lower() and "poulet" in name.lower())
               pizza_wrap = ("wrap" in name.lower() and "pizza" in name.lower())
               buddha_bowl = "buddha" in name.lower()
+              chocolate_fondant = ("fondant" in name.lower() and "chocolat" in name.lower())
               prompt = [
                 "Photorealistic premium editorial food photography for a French recipe app.",
                 f"The exact recipe is: {name}.",
@@ -135,6 +136,13 @@ jobs:
                       "Exact recipe: Bowl dessert au skyr, fruits rouges et chocolat noir. Show a generous creamy white skyr bowl topped with clearly visible fresh red berries, abundant grated dark chocolate shavings and a few small dark chocolate curls, plus distinct chopped almonds.",
                       "The dark chocolate must be unmistakable at first glance and strongly contrast with the white skyr and red berries. Never replace it with honey, caramel, syrup, cocoa powder or a brown drizzle.",
                       "Faithful appetizing food styling, pale white marble or light stone background, bright soft window daylight, gentle shadows, airy clean composition. No close-up, no cropped bowl, no hands, no text, no logo, no watermark, no collage."
+                  ]
+              if chocolate_fondant:
+                  prompt = [
+                      "Photorealistic premium French dessert cookbook photography, square overhead or gentle three-quarter view, wide framing with the whole dessert visible.",
+                      f"Exact recipe: {name}. Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show one individual rich dark chocolate fondant cake on a pale elegant dessert plate. The cake is slightly cut open, revealing a generous, glossy, unmistakably molten dark chocolate center flowing slowly from the middle onto the plate. The liquid chocolate must be clearly visible and be the visual hero; not a dry brownie, not a plain intact cake, not chocolate sauce poured over the outside.",
+                      "Soft bright natural window light, appetizing moist cake texture, refined simple cookbook styling, pale white marble or light stone background, a few restrained chocolate shavings nearby. Entire plate visible, airy composition, no clutter, no hands, no text, no logo, no watermark, no collage."
                   ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
