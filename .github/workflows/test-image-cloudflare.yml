@@ -1,16 +1,15 @@
 name: Générer un lot de photos recettes
 
 on:
-  workflow_dispatch:
-    inputs:
-      start_index:
-        description: "Position de départ dans le catalogue (0 = première recette)"
-        required: true
-        default: "80"
-      batch_size:
-        description: "Nombre de photos du lot (maximum prudent : 5)"
-        required: true
-        default: "5"
+  push:
+    branches:
+      - travail-cuisine-chic-ouf-design
+    paths:
+      - trigger.txt
+
+concurrency:
+  group: cuisine-chic-ouf-photo-batch
+  cancel-in-progress: false
 permissions:
   contents: read
 
@@ -21,8 +20,7 @@ jobs:
     env:
       CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
       CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-      START_INDEX: ${{ github.event.inputs.start_index || '80' }}
-      BATCH_SIZE: ${{ github.event.inputs.batch_size || '5' }}
+      TRIGGER_FILE: trigger.txt
     steps:
       - name: Récupérer le projet
         uses: actions/checkout@v4
@@ -43,13 +41,26 @@ jobs:
 
           account = os.environ["CF_ACCOUNT_ID"]
           token = os.environ["CF_API_TOKEN"]
-          start = max(0, int(os.environ.get("START_INDEX", "80")))
-          count = min(5, max(1, int(os.environ.get("BATCH_SIZE", "5"))))
+          trigger_path = Path(os.environ.get("TRIGGER_FILE", "trigger.txt"))
+          if not trigger_path.is_file():
+              raise SystemExit("Fichier trigger.txt absent : aucun lot autorisé.")
+          trigger_text = trigger_path.read_text(encoding="utf-8").strip()
+          match = re.fullmatch(r"([1-9][0-9]*)\\s*-\\s*([1-9][0-9]*)", trigger_text)
+          if not match:
+              raise SystemExit("Format refusé dans trigger.txt. Format attendu : premier-dernier, ex. 86-90.")
+          first, last = map(int, match.groups())
+          if last < first:
+              raise SystemExit("Lot refusé : le dernier numéro est inférieur au premier.")
+          count = last - first + 1
+          if count > 5:
+              raise SystemExit("Lot refusé : plafond strict de 5 recettes par lancement.")
+          start = first - 1
           data = json.loads(Path("data/carnet.json").read_text(encoding="utf-8"))
           recipes = data.get("recipes", [])
           selected = recipes[start:start + count]
-          if not selected:
-              raise SystemExit(f"Aucune recette à partir de la position {start}.")
+          if len(selected) != count:
+              raise SystemExit(f"Lot incomplet : {count} recettes demandées, {len(selected)} disponibles.")
+          print(f"Demande validée : positions {first} à {last}, soit {count} recette(s) maximum.")
           out = Path("generated-batch")
           out.mkdir(exist_ok=True)
           manifest = []
