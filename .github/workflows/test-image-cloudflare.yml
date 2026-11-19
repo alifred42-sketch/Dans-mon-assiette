@@ -200,6 +200,27 @@ jobs:
                       "Use a gentle three-quarter overhead angle so the thick herb crust is clearly visible on top and the salmon's pink sides are recognizable. Add only a modest lemon wedge and a few delicate herb leaves nearby; do not bury the pavé under parsley garnish.",
                       "Keep exactly the same warm chic cookbook atmosphere as the approved recent batch: beautiful light-to-medium warm neutral textured tabletop, softly directional natural daylight, gentle defined shadows, warm elegant tones and appetizing contrast. Whole plate visible with breathing room; no cold sterile white, no dark rustic background, no text, hands, logo or watermark."
                   ]
+              if "wrap chèvre" in name.lower() or "wrap chevre" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photo, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show two or three REAL fully rolled, closed cylindrical wholemeal wraps, not open flat tortillas and not folded triangles. One wrap cut diagonally to reveal the filling. The cross-section must clearly show creamy white goat cheese, generous pink slices of cooked ham, very fine crisp pale-golden apple matchsticks, and fresh green lettuce. All four ingredients must be recognizable at first glance; goat cheese and ham especially visible, apple present as delicate thin strips, not large chunks.",
+                      "Tortillas lightly toasted with warm golden freckles, soft and pliable, generously filled, appetizing and fresh. Arrange on a warm ceramic plate with the cut face toward camera. Keep garnish minimal and do not hide the filling.",
+                      "Same approved warm chic cookbook atmosphere as the recent accepted photos: beautiful warm neutral textured tabletop, softly directional natural daylight, gentle defined shadows, lively natural food colors and appetizing contrast. Whole plate visible, breathing room, no pale washed-out look, no text, hands, logo or watermark."
+                  ]
+              if "mousse chocolat" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook dessert photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show a clearly recognizable LIGHT, AIRY CHOCOLATE MOUSSE, not chocolate pudding, ganache, yogurt or a smoothie. Serve the mousse in two elegant small glass dessert cups, with a generous soft whipped mousse texture visible above the rim: airy, fluffy, gently rippled spoon peaks and tiny bubbles, rich deep chocolate-brown color. One cup may show a neat spoon-shaped scoop indentation to reveal the light mousse interior; no spoon or hand.",
+                      "Make the chocolate unmistakable: rich dark chocolate mousse with a few delicate dark chocolate shavings on top, restrained and elegant. The skyr should be incorporated into the mousse, not visible as a separate white layer. No fruit or toppings not listed in the recipe.",
+                      "Same approved warm chic cookbook atmosphere as the recent accepted photos: warm neutral textured tabletop, softly directional natural daylight, gentle defined shadows, rich appetizing chocolate tones, elegant ceramic or glassware, whole cups visible with breathing room. Never flat, dense, glossy like ganache, pale or washed out. No text, hands, logo or watermark."
+                  ]
+              if "poulet basquaise" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show a generous authentic chicken basquaise stew. Make the CHICKEN immediately unmistakable: several large golden-browned chicken pieces, clearly visible and distinct, with recognizable chicken shape and juicy texture, not tiny anonymous chunks. Chicken is the hero and occupies a generous part of the serving.",
+                      "Surround and partially coat the chicken with a rich glossy deep-red tomato and pepper sauce, packed with abundant clearly visible strips of red and yellow bell peppers, soft onions and tomato pieces. The peppers and tomatoes must be plentiful and obvious at first glance, giving the dish its classic colorful Basque look. Add subtle herbs de Provence.",
+                      "Serve in a warm ivory or muted sage shallow ceramic bowl, with the chicken and colorful sauce beautifully arranged and whole bowl visible. Same approved warm chic cookbook atmosphere as the recent accepted photos: warm neutral textured tabletop, soft directional daylight, gentle defined shadows, rich appetizing reds and golden-brown chicken, natural contrast and depth. Never pale, watery or dull. No rice or other unlisted side dish, no text, hands, logo or watermark."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
