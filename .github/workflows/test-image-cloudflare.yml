@@ -171,6 +171,34 @@ jobs:
                       "Irresistible lively colors: rich tomato reds, vivid greens, golden tortilla highlights, creamy textures, warm directional light, defined soft shadows and depth. Warm wood, chic generous cookbook styling, strong appetizing contrast. Never pale, flat, grey or washed out.",
                       "No pale wraps, folded parcels, cones, hidden cheese, feta, mozzarella, clutter, text, hands, logo or watermark."
                   ]
+              if "saumon fumé" in name.lower() or "saumon fume" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography. Exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show a generous elegant potato salad with clearly visible bite-size cooked potato pieces, fresh cucumber, thin radish slices and green salad. The smoked salmon must be unmistakably COLD-SMOKED: thin silky translucent rose-pink slices, delicately folded into loose ribbons and draped over the salad. It must look uncooked, never like a cooked salmon fillet, steak, grilled fish or thick opaque chunk.",
+                      "The smoked salmon ribbons are the clear visual hero, with potatoes and vegetables immediately recognizable beneath and around them. Refined natural plating, appetizing freshness, delicate chives.",
+                      "Keep exactly the same warm chic cookbook atmosphere as the approved recent batch: beautiful light-to-medium warm neutral textured tabletop, softly directional natural daylight, gentle defined shadows, warm elegant tones and appetizing contrast. Whole plate visible with breathing room; no cold sterile white, no dark rustic background, no text, hands, logo or watermark."
+                  ]
+              if "pommes au four" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook dessert photography. Exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show TWO WHOLE apples baked intact, not cut in halves, not sliced, not cored open and not turned into apple wedges. The apples remain clearly whole and round, beautifully roasted until tender with lightly wrinkled glossy golden-red skins. A small neat crown of toasted flaked almonds and a delicate dusting of cinnamon sit on top of each whole apple; a subtle hint of honey glaze only if natural. Make it immediately obvious that these are whole baked apples.",
+                      "Serve together on a beautiful warm ivory or muted sage ceramic plate, with a few toasted almond flakes nearby, restrained and elegant. The apples are the hero, generous and appetizing.",
+                      "Keep exactly the same warm chic cookbook atmosphere as the approved recent batch: beautiful light-to-medium warm neutral textured tabletop, softly directional natural daylight, gentle defined shadows, warm elegant tones and appetizing contrast. Whole plate visible with breathing room; no cold sterile white, no dark rustic background, no text, hands, logo or watermark."
+                  ]
+              if "poulet au citron" in name.lower() and "romarin" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography. Exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Make it instantly and unmistakably recognizable as a delicious CHICKEN dish. Show generous golden-brown seared chicken breast pieces, thick juicy slices with the white chicken interior clearly visible and lightly browned edges; not anonymous pale chunks, not fish, not pork. The chicken is the hero and occupies most of the plate.",
+                      "Clearly include glossy lemon-garlic pan juices, fresh rosemary sprigs, visible lemon slices, golden courgette and carrot pieces, all cooked appetizingly and arranged around the chicken. Rich golden sear, moist tender texture, fresh herbs, vivid natural colors.",
+                      "Serve in a beautiful warm ivory or muted sage ceramic shallow plate. Keep exactly the same warm chic cookbook atmosphere as the approved recent batch: light-to-medium warm neutral textured tabletop, softly directional natural daylight, gentle defined shadows, warm elegant tones and appetizing contrast. Whole plate visible with breathing room; no pale washed-out chicken, no cold sterile white, no dark rustic background, no text, hands, logo or watermark."
+                  ]
+              if "croûte d'herbes" in name.lower() or "croute d'herbes" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography. Exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show one beautiful thick salmon pavé, whole and clearly identifiable, topped with a THICK, CONTINUOUS, vivid fresh green herb crust made from finely chopped parsley, chives and golden wholemeal breadcrumbs. The crust must cover most of the top surface, visibly textured, richly green with golden toasted breadcrumb flecks, crisp and appetizing. It must be immediately obvious at first glance that this is a salmon pavé with an herb crust, not a plain salmon fillet with a few leaves sprinkled on top.",
+                      "Use a gentle three-quarter overhead angle so the thick herb crust is clearly visible on top and the salmon's pink sides are recognizable. Add only a modest lemon wedge and a few delicate herb leaves nearby; do not bury the pavé under parsley garnish.",
+                      "Keep exactly the same warm chic cookbook atmosphere as the approved recent batch: beautiful light-to-medium warm neutral textured tabletop, softly directional natural daylight, gentle defined shadows, warm elegant tones and appetizing contrast. Whole plate visible with breathing room; no cold sterile white, no dark rustic background, no text, hands, logo or watermark."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
