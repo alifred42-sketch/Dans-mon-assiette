@@ -295,6 +295,15 @@ jobs:
                       "Use only the listed ingredients. Make the salad and visible walnut halves easy to recognize; no invented toppings.",
                       "Wide pulled-back three-quarter overhead view: entire plate and full rim visible, plate about 60 percent of the square frame, generous tabletop space on every side. Warm ivory ceramic, light warm tabletop, soft natural daylight, appetizing colors. No close-up, watermark, signature, text, logo, hands or packaging."
                   ]
+              if "poire" in name.lower() and ("rôt" in name.lower() or "rot" in name.lower()):
+                  prompt = [
+                      "Photorealistic premium French dessert cookbook photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show beautifully roasted pear halves or quarters, depending on the recipe, tender and glossy with visibly golden caramelized edges and warm amber surfaces. The pears must look genuinely roasted and appetizing, not raw, pale, or merely sliced fresh.",
+                      "Make the cinnamon visible as a delicate warm dusting on the pears, and show distinct chopped almond pieces generously scattered over the pears and clearly visible at first glance. The almonds should be golden and crunchy-looking, not hidden or reduced to a few tiny specks.",
+                      "If the recipe includes skyr or another listed accompaniment, show it neatly in a small separate elegant bowl or modest spoonful beside the pears; do not let it dominate. Use only listed ingredients.",
+                      "Wide pulled-back three-quarter overhead composition: show the entire dessert plate with its complete rim and generous tabletop breathing room on every side. Keep the pears as the hero. Warm chic cookbook styling, pale warm stone or natural linen background, soft golden natural daylight, appetizing rich colors and gentle shadows.",
+                      "No close-up, no cropped plate, no extra fruit, no invented sauce, no text, no hands, no logo, no watermark, no collage."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
