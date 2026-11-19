@@ -164,11 +164,12 @@ jobs:
                   ]
               if ("wrap" in name.lower() and ("chèvre" in name.lower() or "chevre" in name.lower()) and "miel" in name.lower()):
                   prompt = [
-                      "Photorealistic appetizing French cookbook photo, square overhead view. Recreate the FIRST successful composition: round muted sage-green ceramic plate on warm medium-brown wood, exactly three classic long cylindrical wraps arranged loosely in a triangle. One complete uncut wrap lies diagonally at left. Two other long wraps lie across center and lower plate, each cut diagonally at one end with round cut face aimed at camera. They must look like rolled tortilla cylinders, never folded triangles, parcels, cones or tacos. Same simple composition, plate, warm light and framing.",
-                      "Thin soft flexible flour tortillas, pale golden with small toasted freckles. Cut ends show generous distinct filling: thick creamy white goat-cheese rounds, fresh green lettuce, juicy red cherry tomato slices and chopped walnuts. Goat cheese is clearly visible and the main filling.",
-                      "A fine glossy golden honey thread directly across the goat cheese inside the cut ends. Beside the plate, a small short piece of goat-cheese log with one slice cut, subtle and recognizable. No honey on the plate.",
-                      "Warm lively natural colors, appetizing contrast, soft directional daylight and gentle shadows. Small bowl of tomatoes and a few herb leaves near top edge. Chic welcoming cookbook styling, never pale or washed out.",
-                      "Never fold wraps into triangles or parcels. No flat open tortillas, dry cardboard texture, hidden goat cheese, feta, mozzarella, clutter, text, hands, logo or watermark."
+                      "Vibrant appetizing French cookbook food photo, overhead view. Original composition: three long cylindrical tortilla wraps on a round sage-green plate over warm walnut wood. One whole wrap diagonal left, two cut diagonally with round filling faces up. Plump rolled cylinders, never folded triangles or cones.",
+                      "Tortillas rich golden toasted brown with attractive pan-seared spots, never white or pale. Freshly warmed, soft and supple inside, lightly glossy, never dry or cardboard-like.",
+                      "Cut ends show abundant thick creamy white goat-cheese rounds, gently warmed and slightly melting, vivid green lettuce, juicy glossy deep-red cherry tomato slices and visible walnut pieces. Goat cheese obvious and abundant, not hidden.",
+                      "Fine shiny amber-gold honey drizzle directly over goat cheese inside wraps. Beside plate, small piece of goat-cheese log with one slice cut, a few walnut halves and fresh herbs.",
+                      "Irresistible lively colors: rich tomato reds, vivid greens, golden tortilla highlights, creamy textures, warm directional light, defined soft shadows and depth. Warm wood, chic generous cookbook styling, strong appetizing contrast. Never pale, flat, grey or washed out.",
+                      "No pale wraps, folded parcels, cones, hidden cheese, feta, mozzarella, clutter, text, hands, logo or watermark."
                   ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
