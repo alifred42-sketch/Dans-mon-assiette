@@ -251,6 +251,35 @@ jobs:
                       "Serve on a warm ivory or muted sage ceramic plate or pale wooden board, with the entire loaf and slice visible and breathing room around them. Gentle three-quarter overhead angle to show both the loaf and the moist cut interior.",
                       "Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, warm golden tones, appetizing contrast and elegant restrained styling. No close crop, no text, hands, logos or watermark."
                   ]
+              if "poulet" in name.lower() and "miel" in name.lower() and "moutarde" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show tender golden chicken strips or bite-sized chicken pieces coated in a clearly visible glossy honey-mustard sauce. The sauce is the defining feature: creamy golden mustard-colored glaze, lightly shiny, gently clinging to the chicken and visible in a small generous pool around it. The honey-mustard character must be immediately recognizable.",
+                      "Show only ingredients listed in the recipe. Do not add pasta, noodles, rice or any unlisted side dish. Keep the chicken as the hero, with restrained fresh herbs or listed vegetables only. Make it look juicy, tender and freshly cooked, never dry.",
+                      "Serve in a warm elegant shallow ceramic plate or small bowl, whole dish visible with complete rim and generous breathing room. Slightly elevated three-quarter overhead angle, not close-up.",
+                      "Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, rich appetizing golden tones and natural contrast. No text, hands, logos or watermark."
+                  ]
+              if "wrap césar" in name.lower() or "wrap cesar" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show two or three real fully rolled, closed cylindrical wraps, not folded sandwiches, not open tortillas and not tacos. One wrap must be cut diagonally and turned toward the camera so the cross-section is clearly visible. The tortilla should be lightly toasted with warm golden freckles and look soft, pliable and appetizing.",
+                      "The filling must clearly show recognizable tender chicken pieces, crisp green romaine lettuce and a visible creamy Caesar dressing. Add unmistakable fine shavings of Parmesan cheese inside the cut wrap and a few elegant Parmesan curls on top or beside it. Parmesan must be easy to see. Keep the filling balanced and generous.",
+                      "Whole plate visible with complete rim and breathing room, slightly elevated three-quarter overhead angle. Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, lively appetizing colors and natural contrast. No open flat tortilla, no text, hands, logos or watermark."
+                  ]
+              if "risoni" in name.lower() or "orzo" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "The pasta MUST be authentic RISONI / ORZO: tiny rice-shaped pasta grains, each only a few millimeters long, clearly visible throughout the creamy dish. It must look like little rice-shaped pasta, NOT spaghetti, linguine, penne, rice or long noodles. Show a close enough food detail to recognize the tiny individual risoni grains, but keep the whole bowl visible.",
+                      "Clearly show generous fresh dark-green spinach leaves folded through the risoni, plus distinct pink pieces or flakes of salmon. The three key elements—tiny rice-shaped risoni pasta, green spinach and salmon—must all be immediately recognizable and well distributed. Creamy, glossy, appetizing texture, not soupy.",
+                      "Serve in a beautiful warm ceramic shallow bowl, entire bowl and rim visible with space around it. Slightly elevated three-quarter overhead angle. Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, rich natural colors and appetizing contrast. No spaghetti, no long pasta, no text, hands, logos or watermark."
+                  ]
+              if "chèvre chaud" in name.lower() or "chevre chaud" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show a beautiful generous fresh salad with warm goat cheese as a clear hero ingredient. Include two or three thick rounds or slices of goat cheese on small pieces of toasted bread, warmed until the edges are lightly golden and the center looks soft, creamy and slightly melting. The goat cheese must look warm and fondant, not like cold white feta cubes.",
+                      "Make the walnuts unmistakable: several clearly visible walnut halves, golden and crunchy, placed on top of the greens and around the goat cheese. Keep fresh salad leaves, any listed fruit or vegetables, and the warm goat cheese distinct and balanced. Do not hide the walnuts or cover the cheese with leaves.",
+                      "Show the entire salad plate with complete rim and breathing room, gently elevated three-quarter overhead angle. Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, appetizing golden cheese and fresh vivid greens. No close crop, no text, hands, logos or watermark."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
