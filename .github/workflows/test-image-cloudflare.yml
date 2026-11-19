@@ -221,6 +221,36 @@ jobs:
                       "IMPORTANT CAMERA FRAMING: pull the camera back noticeably. Show the ENTIRE serving plate or shallow cocotte, with the complete rim visible on all sides, fully inside the square image. Leave generous visible tabletop margin around the dish, about 15 to 20 percent of the image on every side. The plate must not touch or be cropped by any image edge. Use a wider three-quarter overhead composition, not a close-up, not macro.",
                       "Keep the same beautiful warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, rich appetizing reds and natural contrast as the previous version. Preserve the warm chic cookbook atmosphere. Entire dish and entire plate visible with breathing room. No close crop, no cut-off plate, no zoom-in, no text, hands, logo or watermark."
                   ]
+              if "colin au four" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show two or three clearly recognizable white cod/hake fillets baked gently with lemon, garlic and parsley. Make the vegetables unmistakable and generous: visible golden-edged zucchini rounds and carrot slices arranged around and partly beneath the fish. The zucchini must be clearly identifiable as courgette, not hidden under the fish or confused with garnish. Keep the fish moist, lightly golden at the edges, with lemon and herbs.",
+                      "The fish and the courgettes and carrots are all clearly visible in a balanced composition. Serve on a warm elegant ceramic plate, whole plate visible, slightly zoomed-out gentle three-quarter overhead angle.",
+                      "Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional daylight, gentle defined shadows, rich natural food colors and appetizing contrast. No wine bottle, no glass of wine, no alcohol props, no unnecessary bottles, no text, hands, logos or watermark."
+                  ]
+              if "wrap nordique" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show two or three real fully rolled and closed wholemeal wraps, lightly toasted with attractive golden freckles. One wrap is cut diagonally and turned so its cross-section faces the camera. The filling must unmistakably show generous COLD-SMOKED SALMON: thin silky translucent rose-pink smoked salmon ribbons, not cooked salmon, not grilled fish and not thick opaque chunks. Also clearly show pale cucumber, creamy light cream cheese and fresh dill inside the wrap.",
+                      "The wraps must look generously filled, fresh and appetizing, with the salmon visually obvious at first glance. Do not show open flat tortillas, tacos or loose filling. Whole plate visible with breathing room.",
+                      "Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, fresh appetizing colors and elegant styling. No cooked fish, no text, hands, logos or watermark."
+                  ]
+              if "salade croquante poulet" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show a generous colorful crunchy salad where the greens, fruit and crunchy toppings are just as important as the chicken. Use a MODERATE amount of grilled chicken: only a few small tender golden strips, not a mountain of chicken and not the dominant element.",
+                      "Make the apple immediately recognizable and abundant: thin fresh pale apple slices with a little red skin, clearly visible across the salad. Make the walnuts unmistakable: several large golden walnut halves scattered visibly on top. Include clearly visible fresh green salad, fine grated orange carrot and a few creamy goat cheese pieces or small rounds, all distinct and balanced.",
+                      "The bowl should look fresh, crisp, colorful and appetizing, with every named ingredient easy to recognize at first glance. Whole bowl visible, wide gently elevated overhead angle with space around it.",
+                      "Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, lively natural colors and appetizing contrast. No oversized chicken portions, no hidden apple or walnuts, no text, hands, logos or watermark."
+                  ]
+              if "banana bread" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook dessert photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show a beautiful small golden-brown banana bread loaf, with the WHOLE loaf clearly visible and one generous slice cut and placed in front. The cut slice must face the camera and reveal a clearly visible moist, tender, fine crumb inside, with subtle little banana pieces and a soft golden interior. The inside texture is essential and must not be hidden.",
+                      "The crust should be appetizingly golden and lightly browned, never burnt or dry. Add a few natural banana slices and a few walnut halves only if consistent with the listed recipe; keep them modest and do not cover the cut face. Make it immediately recognizable as banana bread, not a plain pound cake.",
+                      "Serve on a warm ivory or muted sage ceramic plate or pale wooden board, with the entire loaf and slice visible and breathing room around them. Gentle three-quarter overhead angle to show both the loaf and the moist cut interior.",
+                      "Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, warm golden tones, appetizing contrast and elegant restrained styling. No close crop, no text, hands, logos or watermark."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
