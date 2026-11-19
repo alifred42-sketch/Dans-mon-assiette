@@ -280,6 +280,20 @@ jobs:
                       "Make the walnuts unmistakable: several clearly visible walnut halves, golden and crunchy, placed on top of the greens and around the goat cheese. Keep fresh salad leaves, any listed fruit or vegetables, and the warm goat cheese distinct and balanced. Do not hide the walnuts or cover the cheese with leaves.",
                       "Show the entire salad plate with complete rim and breathing room, gently elevated three-quarter overhead angle. Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, appetizing golden cheese and fresh vivid greens. No close crop, no text, hands, logos or watermark."
                   ]
+              if "wrap césar" in name.lower() or "wrap cesar" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Preserve the same attractive wrap composition and styling as the previous approved candidate: real fully rolled, closed cylindrical wraps, one cut diagonally to show the filling, lightly toasted tortilla with warm golden freckles. Do not change the overall arrangement or add new side dishes.",
+                      "The only requested visual improvement is PARMESAN: generously sprinkle fine freshly grated Parmesan and add a few clearly visible delicate Parmesan shavings over the wraps and exposed filling. Parmesan must be unmistakable at first glance, white-ivory curls and fine grated cheese, but do not bury the chicken or lettuce. Keep the Caesar chicken, romaine and creamy dressing visible.",
+                      "Whole plate visible with complete rim and breathing room. Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft natural daylight, gentle defined shadows, appetizing colors. No text, hands, logos or watermark."
+                  ]
+              if "chèvre chaud" in name.lower() or "chevre chaud" in name.lower():
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: " + name + ". Ingredients: " + ", ".join(ingredients) + ".",
+                      "Show a generous colorful French warm goat cheese salad. The signature feature must be clearly visible: several slices of golden toasted bread arranged on top of the salad, each topped with a thick round of warm goat cheese. The goat cheese is lightly browned and softly melted, creamy and warm in the center, with delicate golden toasted spots on top. It must look like classic chèvre chaud on toast, never cold white cheese cubes or feta.",
+                      "Keep the salad garnish faithful ONLY to the listed recipe ingredients: " + ", ".join(ingredients) + ". Arrange the listed fresh salad leaves and garnish visibly around the toasts. Make the walnuts clearly recognizable with several visible walnut halves. Balance the plate so the warm goat cheese toasts are the hero while the full salad and its recipe toppings remain visible. Do not invent fruit, vegetables, seeds, sauces or extra ingredients not listed.",
+                      "Serve on a beautiful warm ivory or muted sage ceramic plate. Entire plate and complete rim visible, generous breathing room, slightly elevated three-quarter overhead view, not close-up. Same approved warm chic cookbook atmosphere: warm neutral textured tabletop, soft directional natural daylight, gentle defined shadows, appetizing golden toast, warm creamy goat cheese and fresh colorful greens. No text, hands, logos or watermark."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
