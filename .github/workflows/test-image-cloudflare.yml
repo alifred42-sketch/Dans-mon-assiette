@@ -60,7 +60,8 @@ jobs:
           selected = recipes[start:start + count]
           if len(selected) != count:
               raise SystemExit(f"Lot incomplet : {count} recettes demandées, {len(selected)} disponibles.")
-          print(f"Demande validée : positions {first} à {last}, soit {count} recette(s) maximum.")\n          print("Modèle : FLUX.2 Klein 4B | sortie 512x512 | estimation : 26,05 neurones par image, soit 130,25 pour 5 images.")
+          print(f"Demande validée : positions {first} à {last}, soit {count} recette(s) maximum.")
+          print("Modèle : FLUX.2 Klein 4B | sortie 512x512 | estimation : 26,05 neurones par image, soit 130,25 pour 5 images.")
           out = Path("generated-batch")
           out.mkdir(exist_ok=True)
           manifest = []
@@ -425,7 +426,8 @@ jobs:
               "stopped_for_quota_or_api": stopped_for_quota,
               "start_index": start, "next_start_index": start + len(selected)
           }, ensure_ascii=False, indent=2), encoding="utf-8")
-          print(f"RÉSULTAT : {len(made)} photo(s) générée(s) sur {len(manifest)} demandée(s).")\n          print(f"CONSOMMATION ESTIMÉE : {len(made) * 26.05:.2f} neurones pour les images générées (à confirmer dans le tableau de bord Cloudflare).")
+          print(f"RÉSULTAT : {len(made)} photo(s) générée(s) sur {len(manifest)} demandée(s).")
+          print(f"CONSOMMATION ESTIMÉE : {len(made) * 26.05:.2f} neurones pour les images générées (à confirmer dans le tableau de bord Cloudflare).")
           if stopped_for_quota:
               print("Le lot s'est arrêté sans nouvelle tentative pour éviter de marteler l'API.")
           if made:
