@@ -73,6 +73,11 @@ jobs:
                   print(f"IGNORÉ (fiche incomplète) : {rid or 'sans identifiant'} — {name}")
                   continue
 
+              # Photo 123 déjà validée par l'utilisatrice : ne pas la régénérer.
+              if rid == "r-97b2f9cdef":
+                  print(f"CONSERVÉE (déjà validée) : {name} ({rid})")
+                  continue
+
               season_text = (name + " " + " ".join(ingredients)).lower()
               seasonal = ""
               if any(w in season_text for w in ["noël", "noel", "réveillon", "reveillon", "bûche", "buche", "chapon"]):
@@ -304,7 +309,35 @@ jobs:
                       "Wide pulled-back three-quarter overhead composition: show the entire dessert plate with its complete rim and generous tabletop breathing room on every side. Keep the pears as the hero. Warm chic cookbook styling, pale warm stone or natural linen background, soft golden natural daylight, appetizing rich colors and gentle shadows.",
                       "No close-up, no cropped plate, no extra fruit, no invented sauce, no text, no hands, no logo, no watermark, no collage."
                   ]
-              manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
+              if rid == "r-e04a817134":
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: Filet de truite aux amandes & citron. Ingredients: 2 trout fillets, 30 g sliced almonds, lemon, parsley, green beans and steamed potatoes.",
+                      "Show one beautiful skinless trout fillet as the clear hero, gently pan-seared or roasted, moist pearly pink-white flesh with delicate flaky texture. The trout must be unmistakably a trout fillet, not a whole fish and not salmon.",
+                      "Make the sliced almonds essential and unmistakable: a generous visible layer of thin golden toasted almond flakes scattered directly over the top of the trout, clearly catching the light. Add a fresh lemon wedge or thin lemon slice and a little chopped parsley. Show green beans and small steamed potato pieces neatly arranged as modest sides, all clearly visible and faithful to the recipe.",
+                      "Serve on a warm ivory ceramic plate, whole plate and rim visible with generous breathing room, gentle three-quarter overhead view. Warm chic cookbook style, softly lit pale warm stone or natural linen background, soft natural daylight, rich appetizing colors. No whole fish, no missing almonds, no invented sauce, no text, hands, logos or watermark."
+                  ]
+              elif rid == "r-c73f799f72":
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: Poulet forestier léger. Ingredients: chicken breast, button mushrooms, onions, garlic, skyr, parsley and thyme.",
+                      "Show tender bite-sized pieces and short strips of boneless chicken BREAST, lightly golden and juicy, gently coated in a light creamy mushroom sauce made with skyr. Clearly visible sliced button mushrooms must be generously mixed through the chicken. This must unmistakably look like chicken breast pieces, never a whole chicken, drumstick, thigh, leg or roast bird.",
+                      "Show the mushrooms, chicken and delicate creamy sauce clearly, with restrained fresh thyme and parsley. Do not add pasta, rice, potatoes or any unlisted side dish. Serve in a beautiful shallow warm ivory ceramic bowl or plate, entire rim visible and generous breathing room.",
+                      "Warm chic cookbook styling, pale warm wood or light greige stone tabletop, soft natural window daylight, appetizing golden chicken and creamy mushroom tones, gentle shadows. No whole poultry, no legs, no pasta, no text, hands, logo or watermark."
+                  ]
+              elif rid == "r-5ff12b1c43":
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: Wrap méditerranéen au thon. Ingredients: wholemeal wraps, tuna in water, tomatoes, cucumber, green salad and optional olives.",
+                      "Show two or three real fully rolled and CLOSED cylindrical wholemeal wraps on a plate. One wrap is cut diagonally and turned toward the camera so its cross-section is clearly visible. The filling must unmistakably show a generous amount of flaky pale tuna, juicy red tomato, crisp cucumber and green lettuce; a few olive slices only if natural. Tuna must be obvious at first glance and not hidden by lettuce or sauce.",
+                      "Wraps must be closed and neatly rolled, lightly toasted with subtle golden freckles, never open flat tortillas, tacos, folded triangles or loose filling. Keep the filling fresh, colorful and abundant. No unlisted cheese or meat.",
+                      "Wide pulled-back three-quarter overhead view, entire plate and full rim visible with space around it. Warm chic cookbook atmosphere, pale warm stone or natural linen background, soft daylight, fresh appetizing colors. No text, hands, logo or watermark."
+                  ]
+              elif rid == "r-f0d58d2216":
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: Salade croquante au maquereau. Ingredients: cooked mackerel fillets, green salad, tomatoes, cucumber, grated carrots and steamed potatoes.",
+                      "Show a generous colorful composed salad in a wide shallow bowl. The fish must unmistakably be MACKEREL: several clearly recognizable cooked mackerel fillet portions with the characteristic silvery skin and delicate pale flesh, not salmon, tuna, sardines or an unidentified fish. Arrange the fillets visibly on top rather than burying them.",
+                      "Make every listed ingredient easy to recognize: a generous tuft of bright orange freshly grated carrots, fresh green lettuce, juicy red tomato wedges, cucumber slices and bite-size steamed potato pieces. Keep all ingredients distinct and balanced, with mackerel clearly visible as the protein hero.",
+                      "Wide pulled-back overhead or gentle three-quarter angle, whole bowl and rim visible with generous breathing room. Warm chic cookbook styling, light warm wood or pale greige stone background, soft natural daylight, crisp appetizing colors. No other fish, no invented ingredients, no text, hands, logo or watermark."
+                  ]
+                            manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
               raise SystemExit("Aucune recette exploitable dans ce lot.")
