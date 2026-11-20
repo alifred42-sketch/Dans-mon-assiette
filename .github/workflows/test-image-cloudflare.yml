@@ -343,7 +343,30 @@ jobs:
                       "Serve in a wide shallow pale turquoise ceramic bowl on a light natural stone surface with a blue-green striped linen napkin. Place the plain open tin and a small fork beside the bowl. Bright lively daylight, fresh saturated vegetable colors and appetizing contrast.",
                       "Wide overhead view with slight angle, whole bowl and rim visible with generous breathing room. Show every ingredient clearly. No fresh whole fish, no grilled fish, no salmon, no tuna, no close-up, no hands, text, branding or watermark."
                   ]
-              manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
+              # Corrections visuelles ciblées demandées après validation du lot 86-90.
+          if rid == "r-2687b67896":
+              prompt = [
+                  "Premium appetizing French cookbook food photography, exact recipe: Cabillaud au curry léger. Ingredients: cod loin, courgette, carrots, mild curry, plain skyr, lemon, brown rice, olive oil, salt and pepper.",
+                  "Show one clearly recognizable thick white cod loin as the hero, served with a distinct portion of whole-grain brown rice. Every listed vegetable must be visible: green courgette slices or half-moons and orange carrot pieces, not just one token slice. Make the mild curry-skyr sauce a light warm golden creamy sauce, visibly coating part of the cod and vegetables; it must read as a curry sauce made with skyr, not a plain white dollop or an unrelated dressing.",
+                  "Include a small lemon wedge on the plate or beside it. No other vegetables, nuts, herbs, extra protein or invented ingredients. All listed recipe components must be visually represented and recognizable: cod, courgette, carrots, curry-skyr sauce, brown rice and lemon.",
+                  "Serve on a warm ivory or muted sage ceramic plate over pale honey oak or warm greige stone. Wide pulled-back overhead three-quarter view, complete plate and rim visible, generous tabletop breathing room, warm natural window light, inviting colorful premium cookbook styling. No close-up, no cropped plate, no hands, no text, no logo, no watermark."
+              ]
+          elif rid == "r-b5d84e8dfe":
+              prompt = [
+                  "Premium appetizing French cookbook food photography, exact recipe: Poulet rôti, légumes fondants et sauce champignons légère. Ingredients: chicken thighs OR chicken breasts (choose four small golden roasted chicken thighs for this image), button mushrooms, carrots, courgettes, onions, garlic, olive oil, thyme, light cream, salt and pepper.",
+                  "Show two to three clearly recognizable individual roasted chicken thighs with golden browned skin, NOT one oversized solid block of chicken. Arrange the chicken naturally among clearly visible tender carrot pieces and courgette pieces, with softened onion and garlic integrated into the vegetables.",
+                  "The defining feature is a generous silky light mushroom cream sauce made from the listed button mushrooms and light cream. Show plenty of sliced button mushrooms and a visibly nappant glossy pale beige sauce coating the chicken and vegetables and pooling lightly around them. The sauce must be unmistakable and abundant, not dry chicken, not a separate plain white blob, not soup.",
+                  "Use only the listed ingredients; no rice, potatoes, pasta or extra vegetables. A little thyme may be visible as the listed herb.",
+                  "Serve in a shallow warm ivory ceramic serving dish on warm taupe stone or honey oak, with a folded natural linen napkin. Wide three-quarter overhead view, entire dish and rim visible with breathing room, warm directional daylight, rich appetizing color, refined welcoming French cookbook styling. No close-up, no cropped dish, no hands, no text, no logo, no watermark."
+              ]
+          elif rid == "r-904e0943b1":
+              prompt = [
+                  "Premium appetizing French cookbook food photography, exact recipe: Gratin de courgettes façon lasagnes. Ingredients: courgettes, minced meat OR minced chicken, crushed tomatoes, onions, garlic, aromatic herbs, skyr OR fromage blanc, Parmesan.",
+                  "Show a real baked zucchini lasagna-style gratin, NOT a salad and NOT a plate of separate vegetables. The cut portion must clearly reveal several distinct stacked layers of long thin courgette slices alternating with a tomato and minced-meat filling and a light creamy skyr/fromage-blanc layer. The top must have a clearly visible golden melted and lightly gratinated Parmesan crust.",
+                  "Make the courgette layers unmistakable at the cut edge and across the top; show the tomato-mince filling between layers. The finished portion should hold its layered shape like lasagne. Use the listed ingredients only; no pasta sheets, potatoes, rice or extra vegetables.",
+                  "Serve one generous layered square portion in a shallow warm ivory ceramic baking dish, with a little natural baked edge visible. Wide three-quarter overhead view, whole dish visible with complete rim and tabletop breathing room. Warm natural window light, inviting colorful premium French cookbook styling, light warm stone or pale oak surface. No close-up, no cropped dish, no hands, no text, no logo, no watermark."
+              ]
+          manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
               raise SystemExit("Aucune recette exploitable dans ce lot.")
