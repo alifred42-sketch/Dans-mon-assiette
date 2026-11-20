@@ -47,6 +47,15 @@ jobs:
           trigger_text = trigger_path.read_text(encoding="utf-8").strip()
           data = json.loads(Path("data/carnet.json").read_text(encoding="utf-8"))
           recipes = data.get("recipes", [])
+          if trigger_text.lower().startswith("list-after:"):
+              anchor = trigger_text.split(":", 1)[1].strip()
+              positions = [i for i, recipe in enumerate(recipes) if str(recipe.get("id", "")).strip() == anchor]
+              if not positions:
+                  raise SystemExit("Identifiant d'ancrage introuvable : " + anchor)
+              print("APERÇU SANS GÉNÉRATION — recettes suivantes dans le catalogue :")
+              for i, recipe in enumerate(recipes[positions[0] + 1:positions[0] + 11], positions[0] + 2):
+                  print(json.dumps({"position": i, "id": recipe.get("id"), "name": recipe.get("name"), "ingredients": recipe.get("ingredients", [])}, ensure_ascii=False))
+              raise SystemExit(0)
           if trigger_text.lower().startswith("ids:"):
               requested_ids = [x.strip() for x in trigger_text[4:].split(",") if x.strip()]
               if not requested_ids or len(requested_ids) > 5:
