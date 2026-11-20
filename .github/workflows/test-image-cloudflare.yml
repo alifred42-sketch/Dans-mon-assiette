@@ -60,7 +60,7 @@ jobs:
           selected = recipes[start:start + count]
           if len(selected) != count:
               raise SystemExit(f"Lot incomplet : {count} recettes demandées, {len(selected)} disponibles.")
-          print(f"Demande validée : positions {first} à {last}, soit {count} recette(s) maximum.")
+          print(f"Demande validée : positions {first} à {last}, soit {count} recette(s) maximum.")\n          print("Modèle : FLUX.2 Klein 4B | sortie 512x512 | estimation : 26,05 neurones par image, soit 130,25 pour 5 images.")
           out = Path("generated-batch")
           out.mkdir(exist_ok=True)
           manifest = []
@@ -353,11 +353,31 @@ jobs:
           for index, item in enumerate(manifest, 1):
               rid = item["id"]
               print(f"[{index}/{len(manifest)}] Génération : {item['name']} ({rid})")
-              body = json.dumps({"prompt": item["prompt"], "steps": 4}).encode("utf-8")
+              # FLUX.2 Klein 4B requires multipart/form-data; 512x512 keeps
+              # inference to one output tile (26.05 neurons per image).
+              boundary = "----CuisineChicOufFlux2Klein4B"
+              fields = {
+                  "prompt": item["prompt"],
+                  "width": "512",
+                  "height": "512"
+              }
+              chunks = []
+              for field_name, field_value in fields.items():
+                  chunks.extend([
+                      f"--{boundary}\r\n".encode("utf-8"),
+                      f'Content-Disposition: form-data; name="{field_name}"\r\n\r\n'.encode("utf-8"),
+                      field_value.encode("utf-8"),
+                      b"\r\n"
+                  ])
+              chunks.append(f"--{boundary}--\r\n".encode("utf-8"))
+              body = b"".join(chunks)
               request = urllib.request.Request(
-                  f"https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/@cf/black-forest-labs/flux-1-schnell",
+                  f"https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/@cf/black-forest-labs/flux-2-klein-4b",
                   data=body,
-                  headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
+                  headers={
+                      "Authorization": f"Bearer {token}",
+                      "Content-Type": f"multipart/form-data; boundary={boundary}"
+                  },
                   method="POST"
               )
               try:
@@ -405,7 +425,7 @@ jobs:
               "stopped_for_quota_or_api": stopped_for_quota,
               "start_index": start, "next_start_index": start + len(selected)
           }, ensure_ascii=False, indent=2), encoding="utf-8")
-          print(f"RÉSULTAT : {len(made)} photo(s) générée(s) sur {len(manifest)} demandée(s).")
+          print(f"RÉSULTAT : {len(made)} photo(s) générée(s) sur {len(manifest)} demandée(s).")\n          print(f"CONSOMMATION ESTIMÉE : {len(made) * 26.05:.2f} neurones pour les images générées (à confirmer dans le tableau de bord Cloudflare).")
           if stopped_for_quota:
               print("Le lot s'est arrêté sans nouvelle tentative pour éviter de marteler l'API.")
           if made:
