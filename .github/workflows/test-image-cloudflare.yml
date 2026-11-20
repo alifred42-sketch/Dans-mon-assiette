@@ -318,10 +318,12 @@ jobs:
                   ]
               elif rid == "r-c73f799f72":
                   prompt = [
-                      "Photorealistic premium French cookbook food photography, exact recipe: Poulet forestier léger. Ingredients: chicken breast, button mushrooms, onions, garlic, skyr, parsley and thyme.",
-                      "Show tender bite-sized pieces and short strips of boneless chicken BREAST, lightly golden and juicy, gently coated in a light creamy mushroom sauce made with skyr. Clearly visible sliced button mushrooms must be generously mixed through the chicken. This must unmistakably look like chicken breast pieces, never a whole chicken, drumstick, thigh, leg or roast bird.",
-                      "Show the mushrooms, chicken and delicate creamy sauce clearly, with restrained fresh thyme and parsley. Do not add pasta, rice, potatoes or any unlisted side dish. Serve in a beautiful shallow warm ivory ceramic bowl or plate, entire rim visible and generous breathing room.",
-                      "Warm chic cookbook styling, pale warm wood or light greige stone tabletop, soft natural window daylight, appetizing golden chicken and creamy mushroom tones, gentle shadows. No whole poultry, no legs, no pasta, no text, hands, logo or watermark."
+                      "Photorealistic premium French cookbook food photography. The main subject MUST be a generous serving of COOKED CHICKEN BREAST PIECES. This is not a mushroom dish.",
+                      "Exact recipe: Poulet forestier léger. Ingredients: chicken breast, button mushrooms, onions, garlic, skyr, parsley and thyme.",
+                      "Show at least 8 to 10 clearly visible bite-sized chunks and short strips of boneless chicken breast, lightly golden on the outside and juicy inside. The chicken pieces must cover most of the center of the plate and be immediately recognizable as chicken. Coat them lightly in a silky pale creamy skyr sauce.",
+                      "Add sliced button mushrooms as a secondary ingredient, visibly mixed among and around the chicken, but mushrooms must NEVER cover the chicken or appear alone. Include subtle softened onion, garlic, parsley and thyme in the sauce.",
+                      "Serve as a complete chicken-and-mushroom dish in a shallow warm ivory ceramic bowl, photographed wide enough to show the full rim and the chicken clearly. No pasta, rice, potatoes, no extra side dish.",
+                      "Warm chic cookbook styling, pale warm wood or light greige stone tabletop, soft natural window daylight, appetizing golden chicken pieces, gentle shadows. ABSOLUTELY NO bowl or plate containing only mushrooms, no mushroom-only dish, no whole poultry, no legs, no text, hands, logo or watermark."
                   ]
               elif rid == "r-5ff12b1c43":
                   prompt = [
