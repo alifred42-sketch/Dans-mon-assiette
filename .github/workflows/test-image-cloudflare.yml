@@ -171,7 +171,15 @@ jobs:
                       "Show one individual rich dark chocolate fondant cake on a pale elegant dessert plate. The cake is slightly cut open, revealing a generous, glossy, unmistakably molten dark chocolate center flowing slowly from the middle onto the plate. The liquid chocolate must be clearly visible and be the visual hero; not a dry brownie, not a plain intact cake, not chocolate sauce poured over the outside.",
                       "Soft bright natural window light, appetizing moist cake texture, refined simple cookbook styling, pale white marble or light stone background, a few restrained chocolate shavings nearby. Entire plate visible, airy composition, no clutter, no hands, no text, no logo, no watermark, no collage."
                   ]
-              if ("cabillaud" in name.lower() and "citron" in name.lower() and "tomates cerises" in name.lower()):
+              if rid == "r-8221a6ec1c":
+                  prompt = [
+                      "Photorealistic premium French cookbook food photography, exact recipe: Cabillaud au citron & tomates cerises. Ingredients: 400 g cod, cherry tomatoes, courgette, lemon, fresh basil and olive oil.",
+                      "Show one thick boneless cod loin, unmistakably FULLY COOKED: opaque pearly-white flesh all the way through, tender moist flakes naturally separating at one edge, lightly golden delicate sear on the top and sides. Absolutely no translucent, glassy, grey or raw-looking flesh. It must look hot, tender and delicious, ready to eat.",
+                      "Arrange clearly visible sautéed courgette rounds, juicy roasted cherry tomatoes, fresh lemon wedges and basil around the cod. The vegetables should look gently cooked, glossy and vibrant, not raw garnish. Use only these recipe ingredients.",
+                      "Serve generously on a beautiful muted sage-green or warm ivory handmade ceramic plate with a subtle rim, on a honey-oak dining table with a soft rust or olive linen runner. Add only a few cherry tomatoes, a basil sprig and a fork naturally beside the plate. Warm directional natural daylight, rich appetizing colors and a welcoming real-table setting.",
+                      "Wide pulled-back three-quarter overhead view, complete plate and full rim visible, centered and occupying 60–70% of the square frame with breathing room. No close-up, no cropped plate, no raw fish, no hands, no people, no text, no logo, no watermark, no collage."
+                  ]
+              elif ("cabillaud" in name.lower() and "citron" in name.lower() and "tomates cerises" in name.lower()):
                   prompt = [
                       "Photorealistic premium French cookbook food photography, square wide overhead or gentle three-quarter view, whole plate visible with breathing room.",
                       "Exact dish: a single beautiful thick boneless cod loin or cod fillet (dos de cabillaud), opaque pearly white and delicately flaky, gently baked or pan-roasted. It must unmistakably be a cut portion of cod, NOT a whole fish: absolutely no head, no tail, no fins, no whole-body fish silhouette.",
