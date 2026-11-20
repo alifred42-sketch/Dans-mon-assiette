@@ -73,8 +73,8 @@ jobs:
                   print(f"IGNORÉ (fiche incomplète) : {rid or 'sans identifiant'} — {name}")
                   continue
 
-              # Photo 123 déjà validée par l'utilisatrice : ne pas la régénérer.
-              if rid == "r-97b2f9cdef":
+              # Photos 122 et 123 conservées : validées lors du contrôle visuel.
+              if rid in {"r-5ff12b1c43", "r-97b2f9cdef"}:
                   print(f"CONSERVÉE (déjà validée) : {name} ({rid})")
                   continue
 
@@ -319,11 +319,11 @@ jobs:
                   ]
               elif rid == "r-c73f799f72":
                   prompt = [
-                      "Premium appetizing French cookbook photography, exact recipe: Poulet forestier léger. Ingredients: boneless chicken breast, button mushrooms, onions, garlic, skyr, parsley and thyme.",
-                      "The dish MUST visibly contain a generous serving of chicken breast as its main ingredient. Show 8 to 10 substantial bite-sized golden chicken breast chunks or short strips, occupying most of the center and foreground. Chicken pieces must be clearly separated and recognizable; do not hide them under sauce or mushrooms.",
-                      "Add a smaller amount of sliced button mushrooms between the chicken pieces, plus a silky pale creamy skyr sauce, softened onion, subtle garlic, parsley and thyme. Chicken should make up roughly two thirds of the visible solid ingredients; mushrooms are secondary. Absolutely no mushroom-only plate, no whole poultry, no legs, no pasta, rice or other sides.",
-                      "Distinctive styling: serve in a shallow deep terracotta or warm rust-colored handmade ceramic bowl, on a softly textured natural flax-linen cloth over light warm stone. Add only a tiny thyme sprig and a small whole button mushroom near the bowl. Golden side-light should make the chicken pieces appetizing and distinct, with warm rich contrast.",
-                      "Wide three-quarter overhead view, full bowl rim visible and plenty of space around it. Make this composition clearly different from the trout and wrap images. No close-up, no cropped bowl, no hands, text, packaging, logo or watermark."
+                      "Premium French cookbook food photography, exact recipe: Poulet forestier léger. Ingredients: boneless chicken breast, button mushrooms, onions, garlic, skyr, parsley and thyme.",
+                      "The plate must be unmistakably a CHICKEN dish, not a mushroom dish. Show 8 to 10 substantial, clearly recognizable pieces and short strips of boneless chicken breast, each with a lightly golden sautéed surface and moist white interior visible on one or two cut edges. Chicken is the hero and must occupy at least 75 percent of the visible solid ingredients.",
+                      "Use only a modest amount of sliced button mushrooms, no more than a few scattered slices between the chicken pieces. Add a light silky cream sauce made with skyr, with subtle onion, garlic, parsley and thyme. Keep the chicken pieces exposed above the sauce; do not make pale cubes that could be mistaken for tofu. No mushroom-only bowl, no whole poultry, no legs, no pasta, rice or extra side dish.",
+                      "Distinctive inviting styling: shallow oval ivory plate with a fine warm ochre rim, on pale honey oak with a small folded olive-green linen napkin. Add a tiny thyme sprig and one or two whole button mushrooms off to the side only. Warm directional sunlight should create golden highlights on the chicken and clear contrast with the creamy sauce.",
+                      "Wide gentle three-quarter overhead framing, full plate rim and generous space around it. The chicken must be the first thing the eye sees. No close-up, no cropped plate, no hands, text, packaging, logo or watermark."
                   ]
               elif rid == "r-5ff12b1c43":
                   prompt = [
@@ -335,11 +335,12 @@ jobs:
                   ]
               elif rid == "r-f0d58d2216":
                   prompt = [
-                      "Premium bright French cookbook food photography, exact recipe: Salade croquante au maquereau. Ingredients: canned mackerel fillets, green salad, tomatoes, cucumber, freshly grated carrots and steamed potatoes.",
-                      "IMPORTANT: use ordinary MACKEREL FROM A TIN, already cooked and preserved, drained before serving. Show several natural canned mackerel fillets or large tender flakes, with their recognizable soft pale beige-pink flesh and a little silvery skin. They should look moist, delicate and ready to eat straight from a can, not raw, not freshly grilled, not seared, not a whole fish and not a large restaurant-cooked fillet. No grill marks and no charred skin.",
-                      "Build a generous crunchy composed salad where every ingredient is easy to identify: fresh green lettuce, a vivid nest of finely grated bright orange carrots, juicy red tomato wedges, crisp cucumber slices and bite-sized steamed potato pieces. Arrange the drained canned mackerel fillets visibly on top, as the clear protein hero, without burying them.",
-                      "Distinctive fresh styling: serve in a wide shallow handmade pale turquoise or soft blue ceramic bowl, on a light natural stone surface with a folded blue-green striped linen napkin. Place a small opened plain tin just outside the bowl only if it has no label, no writing and no branding; otherwise omit it. Add a few carrot strands and parsley sprigs nearby. Bright lively daylight, fresh saturated vegetable colors, appetizing contrast.",
-                      "Wide overhead view with a slight angle, entire bowl and complete rim visible and generous breathing room. Do not repeat the trout's sage plate, chicken's terracotta bowl or wrap's teal plate. No fresh whole fish, no grilled fish, no salmon, no tuna, no missing grated carrot, no close-up, no hands, text, packaging, logos or watermark."
+                      "Premium appetizing French cookbook photography, exact recipe: Salade croquante au maquereau. Ingredients: canned mackerel, green salad, tomatoes, cucumber, grated carrots and steamed potatoes.",
+                      "The mackerel MUST look like everyday canned mackerel, drained from a tin and served cold in a salad. Show several small irregular moist flakes and broken short pieces of pale beige-pink mackerel flesh, with only occasional small fragments of silvery skin. The fish should look tender and naturally flaky, not like long intact fish fillets.",
+                      "ABSOLUTELY NO whole fish, no long unbroken fillets, no grilled or pan-seared fish, no browned crust, no grill marks, no charred skin and no restaurant-style cooked fish portions. Make the canned fish visibly flaked and gently broken apart with a fork, as it would be when taken from a tin.",
+                      "Build a generous colorful crunchy salad: fresh green lettuce, a clearly visible mound of finely grated bright orange carrots, juicy red tomato wedges, crisp cucumber slices and bite-sized steamed potato pieces. Scatter the canned mackerel flakes over the top so they are clearly identifiable but integrated naturally with the salad.",
+                      "Distinctive styling: serve in a wide shallow cheerful pale turquoise ceramic bowl on a light natural stone tabletop with a blue-green striped linen napkin. Place a small plain opened tin with no label or writing near the bowl and a fork with a little flaked mackerel beside it, to reinforce the everyday canned ingredient. Add a few carrot strands and parsley sprigs. Bright fresh daylight, lively greens, reds and orange, appetizing contrast.",
+                      "Wide overhead view with slight angle, entire bowl and rim visible with generous breathing room. No long fish fillets, no fresh grilled fish, no salmon, no tuna, no missing carrots, no close-up, no hands, text, branding or watermark."
                   ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
