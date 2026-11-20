@@ -411,7 +411,7 @@ jobs:
                   "Create a warm inviting cookbook scene on a softly textured pale limestone or warm taupe tabletop. Around the dish, add a few restrained recipe-related details: one small fresh courgette, a ripe tomato or two, a half red onion, a garlic clove, a few Parmesan shavings and a small sprig of the listed herbs. Arrange them asymmetrically along the lower-left or left edge, not in the upper-right corner. No ramekin, no lemon, and no folded napkin in this image. Props must remain secondary and must not hide the gratin.",
                   "Warm directional natural window light, appetizing golden Parmesan, vivid tomato red and fresh courgette green, rich but natural color, gentle shadows, elegant premium French cookbook styling. Wide three-quarter overhead view with generous tabletop breathing room. No close-up, no cropped dish, no hands, no text, no logo, no watermark, no collage."
               ]
-          manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
+            manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
               raise SystemExit("Aucune recette exploitable dans ce lot.")
