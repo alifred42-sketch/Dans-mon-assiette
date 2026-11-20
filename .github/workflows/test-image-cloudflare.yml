@@ -45,22 +45,36 @@ jobs:
           if not trigger_path.is_file():
               raise SystemExit("Fichier trigger.txt absent : aucun lot autorisé.")
           trigger_text = trigger_path.read_text(encoding="utf-8").strip()
-          match = re.fullmatch(r"([1-9][0-9]*)\s*-\s*([1-9][0-9]*)", trigger_text)
-          if not match:
-              raise SystemExit("Format refusé dans trigger.txt. Format attendu : premier-dernier, ex. 86-90.")
-          first, last = map(int, match.groups())
-          if last < first:
-              raise SystemExit("Lot refusé : le dernier numéro est inférieur au premier.")
-          count = last - first + 1
-          if count > 5:
-              raise SystemExit("Lot refusé : plafond strict de 5 recettes par lancement.")
-          start = first - 1
           data = json.loads(Path("data/carnet.json").read_text(encoding="utf-8"))
           recipes = data.get("recipes", [])
-          selected = recipes[start:start + count]
-          if len(selected) != count:
-              raise SystemExit(f"Lot incomplet : {count} recettes demandées, {len(selected)} disponibles.")
-          print(f"Demande validée : positions {first} à {last}, soit {count} recette(s) maximum.")
+          if trigger_text.lower().startswith("ids:"):
+              requested_ids = [x.strip() for x in trigger_text[4:].split(",") if x.strip()]
+              if not requested_ids or len(requested_ids) > 5:
+                  raise SystemExit("Lot par identifiants refusé : indique 1 à 5 identifiants après ids:, séparés par des virgules.")
+              by_id = {str(recipe.get("id", "")).strip(): recipe for recipe in recipes if str(recipe.get("id", "")).strip()}
+              missing = [rid for rid in requested_ids if rid not in by_id]
+              if missing:
+                  raise SystemExit("Identifiant(s) introuvable(s) dans le catalogue : " + ", ".join(missing))
+              selected = [by_id[rid] for rid in requested_ids]
+              start = next(i for i, recipe in enumerate(recipes) if str(recipe.get("id", "")).strip() == requested_ids[0])
+              count = len(selected)
+              first, last = start + 1, start + count
+              print("Ciblage sécurisé par identifiants : " + ", ".join(requested_ids))
+          else:
+              match = re.fullmatch(r"([1-9][0-9]*)\\s*-\\s*([1-9][0-9]*)", trigger_text)
+              if not match:
+                  raise SystemExit("Format refusé. Utilise une plage 86-90 ou ids:r-identifiant,r-identifiant.")
+              first, last = map(int, match.groups())
+              if last < first:
+                  raise SystemExit("Lot refusé : le dernier numéro est inférieur au premier.")
+              count = last - first + 1
+              if count > 5:
+                  raise SystemExit("Lot refusé : plafond strict de 5 recettes par lancement.")
+              start = first - 1
+              selected = recipes[start:start + count]
+              if len(selected) != count:
+                  raise SystemExit(f"Lot incomplet : {count} recettes demandées, {len(selected)} disponibles.")
+              print(f"Demande validée : positions {first} à {last}, soit {count} recette(s) maximum.")
           print("Modèle : FLUX.2 Klein 4B | sortie 512x512 | estimation : 26,05 neurones par image, soit 130,25 pour 5 images.")
           out = Path("generated-batch")
           out.mkdir(exist_ok=True)
