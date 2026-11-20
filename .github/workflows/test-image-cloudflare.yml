@@ -117,10 +117,11 @@ jobs:
               ]
               if blanquette_chicken:
                   prompt = [
-                      "Photorealistic bright premium French food photography, square wide overhead view, entire plate visible with generous breathing room.",
-                      "Exact dish: creamy chicken blanquette with mushrooms and carrots, served with a modest separate portion of brown rice. Show tender visible chicken pieces, sliced mushrooms, orange carrot pieces and a smooth pale creamy sauce; include the listed leeks subtly in the blanquette.",
-                      "Serve in a beautiful shallow white ceramic bowl or deep-rimmed plate. The sauce must look silky and light, not brown. Keep the chicken and vegetables clearly distinguishable; rice is secondary.",
-                      "Very bright soft natural window daylight, high-key pale white marble or light grey stone background, airy clean elegant styling, gentle minimal shadows. No dark background, no rustic dark wood, no dramatic contrast, no close-up, no cropped plate, no hands, no text, no logo, no watermark, no collage."
+                      "Photorealistic premium French cookbook food photography, square wide overhead or gentle three-quarter view, complete plate or shallow bowl fully visible with comfortable breathing room.",
+                      "Exact dish: comforting creamy chicken blanquette with mushrooms, carrots and leeks, served with a modest separate portion of brown rice. Show generous tender golden chicken pieces, clearly recognizable sliced mushrooms, carrot rounds and soft leeks, all nestled in a silky pale ivory cream sauce. The dish must look freshly simmered, moist, hearty and deeply appetizing, never dry or sparse.",
+                      "Present the blanquette generously in a beautiful warm ivory, honey-beige or muted sage ceramic shallow bowl with a softly irregular handmade finish. Keep the brown rice clearly visible in a neat separate portion beside the blanquette, not mixed into the sauce. A few tiny fresh thyme leaves may garnish the dish, without hiding the ingredients.",
+                      "Create a warm, welcoming, comforting atmosphere like a beautiful French family cookbook: warm natural late-afternoon window light, soft golden highlights, gentle cozy shadows, a warm pale oak tabletop or textured taupe linen surface, rich appetizing natural colors. Add only one or two subtle relevant details such as a wooden serving spoon or a small sprig of thyme near the edge. Avoid cold white marble, clinical high-key lighting, empty styling, stark white plates, excessive props or a minimalist restaurant presentation.",
+                      "Keep the whole plate or bowl and its rim visible, with the food filling about 60–70% of the square frame. No close-up, no cropped plate, no hands, no people, no invented ingredients, no text, no logo, no watermark, no collage."
                   ]
               if grandmother_chicken:
                   prompt = [
