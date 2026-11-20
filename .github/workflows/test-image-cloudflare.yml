@@ -337,7 +337,7 @@ jobs:
                       "Make every listed ingredient easy to recognize: a generous tuft of bright orange freshly grated carrots, fresh green lettuce, juicy red tomato wedges, cucumber slices and bite-size steamed potato pieces. Keep all ingredients distinct and balanced, with mackerel clearly visible as the protein hero.",
                       "Wide pulled-back overhead or gentle three-quarter angle, whole bowl and rim visible with generous breathing room. Warm chic cookbook styling, light warm wood or pale greige stone background, soft natural daylight, crisp appetizing colors. No other fish, no invented ingredients, no text, hands, logo or watermark."
                   ]
-                            manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
+              manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
               raise SystemExit("Aucune recette exploitable dans ce lot.")
