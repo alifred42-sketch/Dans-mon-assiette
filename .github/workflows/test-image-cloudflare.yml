@@ -159,6 +159,7 @@ jobs:
                   prompt.extend([
                       "ABSOLUTELY CRITICAL COOKING APPEARANCE: both trout fillets must look completely cooked and ready to eat, never raw, translucent, glassy, wet-looking or sushi-like. The flesh must be fully opaque, tender and visibly flaky, with a warm pearly-white to pale pink cooked interior and lightly golden, gently seared edges. Show delicate appetizing browning on the surface and a few crisp golden toasted almond flakes.",
                       "The two cooked trout fillets must look hot, moist and freshly prepared, with a subtle buttery lemon gloss. No raw fish texture, no grey translucent flesh, no uncooked-looking skin, no pale limp appearance. Make the cooking immediately obvious at first glance.",
+                      "Finish both cooked trout fillets and the cooked vegetables with a delicate, visible drizzle of golden extra-virgin olive oil. It should catch the light and make the food look moist, glossy and appetizing, never greasy or swimming in oil.",
                       "Serve with the recipe's listed accompaniments, all visibly cooked and appetizing. Use warm natural directional light and a rich, inviting cookbook color palette. The finished plate should look like a delicious meal ready to be eaten, not ingredients assembled before cooking."
                   ])
               if blanquette_chicken:
