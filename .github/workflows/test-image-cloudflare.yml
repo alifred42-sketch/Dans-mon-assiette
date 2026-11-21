@@ -520,7 +520,18 @@ jobs:
                       "Serve on a beautiful warm terracotta or deep honey-amber ceramic dessert plate with a crisp, clearly visible contrasting rim. Create a cozy authentic dessert-at-the-table scene on a warm oak dining table, with a folded rust or plum linen napkin, a small dessert fork and a few scattered toasted almond flakes and cinnamon beside the plate. Props are subtle and natural, not cluttered. Rich warm natural window light, soft directional shadows, caramel-gold highlights, warm appetizing color and clear contrast; avoid faded, pale or sterile styling.",
                       "Wide pulled-back three-quarter overhead view, whole plate and rim visible, plate about 60–70% of square frame with generous tabletop breathing room. Premium welcoming French cookbook photography. No close-up, no cropped plate, no hands, no text, no logo, no watermark."
                   ]
-              manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
+              # Verrou final : cette consigne remplace toute ancienne variante pour la recette 129.
+              if rid == "r-cd4732688b":
+                  prompt = [
+                      "Photorealistic premium French cookbook photograph of the exact dish Risonis crémeux au chèvre & courgettes.",
+                      "The bowl contains ONLY creamy small rice-shaped orzo/risoni pasta, abundant unmistakable sliced COURGETTES, fresh goat cheese, onion, vegetable stock, basil, olive oil and pepper.",
+                      "CRITICAL: show many large visible courgette half-moon slices with dark green skin and pale green centers, plus a few courgette cubes. Put several half-moons prominently on top of the pasta and more mixed throughout. They must be unmistakably sliced zucchini, not leaves.",
+                      "The pasta must be tiny rice-shaped orzo/risoni, creamy and glossy, with visible small pieces of fresh goat cheese. A few tiny basil leaves only as garnish.",
+                      "ABSOLUTELY FORBIDDEN: salmon, fish, spinach, spinach leaves, leafy greens, peas, broccoli, rice grains, risotto, meat or any ingredient not listed. Do not depict salmon or spinach under any circumstances.",
+                      "Serve in a warm ivory or muted terracotta shallow ceramic bowl, whole bowl and rim visible, on warm taupe limestone. Place one small whole courgette and two raw courgette half-moons near the lower edge, with a subtle natural linen corner. No ramekin, no lemon.",
+                      "Wide pulled-back three-quarter overhead view, bowl occupies 60–70% of square frame with breathing room. Warm natural window light, elegant comforting seasonal cookbook styling, appetizing rich color, creamy moist texture. No close-up, no crop, no hands, no text, no logo, no watermark."
+                  ]
+                            manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
               raise SystemExit("Aucune recette exploitable dans ce lot.")
