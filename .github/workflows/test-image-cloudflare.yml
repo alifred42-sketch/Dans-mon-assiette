@@ -411,6 +411,27 @@ jobs:
                       "Create a warm inviting cookbook scene on a softly textured pale limestone or warm taupe tabletop. Around the dish, add a few restrained recipe-related details: one small fresh courgette, a ripe tomato or two, a half red onion, a garlic clove, a few Parmesan shavings and a small sprig of the listed herbs. Arrange them asymmetrically along the lower-left or left edge, not in the upper-right corner. No ramekin, no lemon, and no folded napkin in this image. Props must remain secondary and must not hide the gratin.",
                       "Warm directional natural window light, appetizing golden Parmesan, vivid tomato red and fresh courgette green, rich but natural color, gentle shadows, elegant premium French cookbook styling. Wide three-quarter overhead view with generous tabletop breathing room. No close-up, no cropped dish, no hands, no text, no logo, no watermark, no collage."
                   ]
+              elif rid == "r-854b6e3c3d":
+                  prompt = [
+                      "Photorealistic premium French cookbook photograph of the exact recipe Wrap chèvre chaud & miel léger. Show three real rolled tortilla WRAPS, cylindrical and fully closed, not open flat, not toast, not crostini, not bruschetta and not bread slices.",
+                      "Arrange three warm golden toasted wraps on a large pale ceramic plate. One wrap is cut diagonally to reveal thick creamy warm goat cheese, fresh green lettuce and juicy tomato inside. Show the walnuts in the filling and a fine amber honey drizzle over the goat cheese and cut wrap. The remaining wraps are clearly rolled tortilla cylinders with toasted spots.",
+                      "Use only the listed ingredients: tortilla wraps, goat cheese, green salad, tomatoes, walnuts and a little honey. Do not add sliced bread, cucumber, extra vegetables or unrelated toppings.",
+                      "Warm bright natural window light, inviting rich color, chic French cookbook styling, whole plate and rim visible with generous tabletop around it, 60–70% frame, warm honey-oak table with a muted sage linen accent. No close-up, no cropped plate, no hands, no text, no logo, no watermark."
+                  ]
+              elif rid == "r-6412e86059":
+                  prompt = [
+                      "Photorealistic premium French cookbook photograph of One Pot Orzo (Risoni) Poulet & Courgettes. This is a savory one-pot ORZO PASTA dish, not risotto and not soup.",
+                      "Show a generous shallow ceramic bowl filled with clearly recognizable small rice-shaped orzo/risoni pasta in a light glossy Parmesan broth-sauce. Make several golden cooked chicken pieces unmistakably visible throughout the pasta, and show many tender green courgette half-moons and small courgette cubes. Chicken and courgette must be obvious at first glance, not hidden under garnish.",
+                      "Use only the recipe ingredients: orzo/risoni pasta, chicken, courgettes, onions, broth and Parmesan. Absolutely no spinach, carrots, salmon, peas, rice or unrelated vegetables. Keep the dish creamy and cohesive, with no large liquid soup pool.",
+                      "Warm inviting cookbook table scene, muted warm ceramic bowl, light textured stone or honey-oak surface, natural daylight, whole bowl and rim visible, wide slightly pulled-back overhead view, 60–70% frame. No close-up, no cropped bowl, no text, no hands, no logo, no watermark."
+                  ]
+              elif rid == "r-a2d1c90f9f":
+                  prompt = [
+                      "Photorealistic premium French dessert cookbook photograph of Pommes au four cannelle & amandes. The apples MUST look baked and tender, not raw fresh apples.",
+                      "Show two whole oven-baked apples with visibly softened, slightly wrinkled and gently collapsed warm red-gold skins, subtle baked caramelized patches and a small slit at the top revealing tender baked flesh. A light glossy coating of warm baking juices is welcome. Generously scatter toasted flaked almonds over the apples and on the plate, with a delicate cinnamon dusting and a small cinnamon stick nearby.",
+                      "Use only apples, cinnamon, flaked almonds and a tiny optional honey sheen. No raw crisp apple appearance, no green leaves, no extra fruit, no cake or ice cream.",
+                      "Warm cozy French cookbook styling, soft natural window light, beautiful muted ivory or sage ceramic plate on warm taupe stone or honey-oak table, entire plate and rim visible, inviting generous framing, 60–70% frame. No close-up, no cropped plate, no hands, no text, no logo, no watermark."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
