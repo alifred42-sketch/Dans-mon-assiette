@@ -531,7 +531,7 @@ jobs:
                       "Serve in a warm ivory or muted terracotta shallow ceramic bowl, whole bowl and rim visible, on warm taupe limestone. Place one small whole courgette and two raw courgette half-moons near the lower edge, with a subtle natural linen corner. No ramekin, no lemon.",
                       "Wide pulled-back three-quarter overhead view, bowl occupies 60–70% of square frame with breathing room. Warm natural window light, elegant comforting seasonal cookbook styling, appetizing rich color, creamy moist texture. No close-up, no crop, no hands, no text, no logo, no watermark."
                   ]
-                            manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
+            manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
               raise SystemExit("Aucune recette exploitable dans ce lot.")
