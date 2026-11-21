@@ -426,6 +426,14 @@ jobs:
                       "Use only the recipe ingredients: orzo/risoni pasta, chicken, courgettes, onions, broth and Parmesan. Absolutely no spinach, carrots, salmon, peas, rice or unrelated vegetables. Keep the dish creamy and cohesive, with no large liquid soup pool.",
                       "Warm inviting cookbook table scene, muted warm ceramic bowl, light textured stone or honey-oak surface, natural daylight, whole bowl and rim visible, wide slightly pulled-back overhead view, 60–70% frame. No close-up, no cropped bowl, no text, no hands, no logo, no watermark."
                   ]
+              elif rid == "r-2c7595faf1":
+                  prompt = [
+                      "Photorealistic premium French cookbook photograph of the exact recipe Wrap chèvre, jambon & pommes. Preserve the attractive, bright, warm table setting and overall visual mood of a stylish French cookbook.",
+                      "Show two or three fully rolled, closed tortilla wraps on a beautiful ceramic plate. One wrap is cut diagonally and turned toward the viewer so the filling is clearly visible. Inside the cut wrap, make all three defining ingredients unmistakable and abundant: generous distinct creamy white goat cheese pieces, clearly visible delicate pink ham ribbons, and thin fresh apple slices. The goat cheese must be prominent and easy to identify at first glance, not hidden by lettuce or sauce; the ham must also be visibly pink and separate from the cheese; apple slices should be recognizable.",
+                      "Use only wholemeal tortilla wraps, goat cheese, ham, apple and salad leaves as listed. Do not replace goat cheese with cream cheese, mozzarella or another cheese. Do not omit the ham or apple. No unrelated fillings.",
+                      "Keep the same welcoming elegant composition: complete plate and defined rim visible, plate occupying about 60–70% of square frame, warm natural oak dining table, subtle linen napkin and restrained table details. Warm bright natural window light, lively appetizing colors, gentle shadows, premium French cookbook styling.",
+                      "Wide pulled-back three-quarter overhead view with generous tabletop breathing room. No close-up, no cropped plate, no open flat tortilla, no toast, no hands, no text, no logo, no watermark."
+                  ]
               elif rid == "r-a2d1c90f9f":
                   prompt = [
                       "Photorealistic premium French dessert cookbook photograph of Pommes au four cannelle & amandes. The dessert must look delicious, freshly baked, warm and inviting, not dull, dry, raw or plastic-shiny.",
