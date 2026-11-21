@@ -139,6 +139,22 @@ jobs:
                 seasonal,
                 "Square composition. No close-up, no cropped main dish, no hands, no people, no packaging, no text, no watermark, no logo, no collage."
               ]
+              # Corrections ciblées validées avec l'utilisatrice pour les recettes 120, 121 et 124.
+              if rid == "r-e04a817134":
+                  prompt.extend([
+                      "CRITICAL RECIPE ACCURACY: show exactly TWO separate, complete trout fillets, both clearly visible on the plate. Never show only one fillet. The two trout portions must be unmistakably fish fillets, with almond and lemon accents only if listed in the ingredients.",
+                      "Compose the plate so both fillets are easy to count at first glance, side by side or slightly overlapping without hiding either one. Keep all listed accompaniments recognizable and faithful; do not add another protein.",
+                  ])
+              elif rid == "r-c73f799f72":
+                  prompt.extend([
+                      "CRITICAL VISUAL DETAIL: the creamy forestière mushroom sauce must be abundant, glossy, clearly visible and unmistakable. Generously coat the chicken and show a visible pool of creamy mushroom sauce around and beneath the chicken; the sauce must be a major visible part of the dish, not a tiny drizzle or hidden under the meat.",
+                      "Show clearly recognizable mushroom pieces in the cream sauce, while keeping the chicken visible. Make the dish look moist, rich and appetizing, not dry. Do not replace the creamy sauce with a dry garnish or plain pan juices.",
+                  ])
+              elif rid == "r-f0d58d2216":
+                  prompt.extend([
+                      "CRITICAL INGREDIENT ACCURACY: this is a salad with grated carrots AND potatoes, plus the listed mackerel. Make both vegetables clearly recognizable and visually distinct: a visible pile of fine orange grated carrot and clearly identifiable real potato pieces or slices (not couscous, semolina, rice or grains). Show the potatoes as tender pale-yellow potato chunks/slices, easy to distinguish from the carrot.",
+                      "Keep the salad fresh and appetizing, with the mackerel clearly visible. Do not omit the potatoes and do not substitute any grain or pasta for them.",
+                  ])
               if blanquette_chicken:
                   prompt = [
                       "Photorealistic premium French cookbook food photography, square wide overhead or gentle three-quarter view, complete plate or shallow bowl fully visible with comfortable breathing room.",
