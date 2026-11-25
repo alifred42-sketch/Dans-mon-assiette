@@ -534,6 +534,7 @@ jobs:
                   prompt.extend([
                       "EXTRA CREAMY FINISH: the risoni must be generously coated in a thick, silky, velvety fresh-goat-cheese cream. Every little pasta grain should glisten and cling together softly; show a clearly visible creamy coating between the pasta and a small natural pool of cream at the bottom of the bowl. The texture must look luscious and spoonable, never dry, separated or broth-like.",
                       "Make the fresh goat cheese unmistakable: add several soft, irregular creamy-white goat-cheese pieces visibly melting into the hot pasta, plus a few small fresh goat-cheese morsels on top. They must be clearly identifiable as goat cheese, not grated Parmesan. Keep the courgette half-moons prominent and plentiful.",
+                      "PRIORITY: the first impression must be a silky creamy pasta, not pasta with scattered cheese chunks. Show a continuous pale ivory goat-cheese cream visibly binding and coating the risoni, with a soft glossy sheen and creamy sauce clearly visible in the gaps. Reduce the distinct cheese chunks to just two or three tiny softened pieces partly melted into the sauce. The sauce should look like a light, smooth, luscious cream, not dry, grainy, stringy or clotted.",
                       "Serve immediately while warm, with a beautiful glossy creamy texture catching the natural light. Keep the whole bowl visible and the scene elegant, generous and appetizing."
                   ])
               elif rid == "r-ac41aa7880":
