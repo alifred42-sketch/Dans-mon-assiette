@@ -533,6 +533,35 @@ jobs:
                       "Serve in a warm ivory or muted terracotta shallow ceramic bowl, whole bowl and rim visible, on warm taupe limestone. Place one small whole courgette and two raw courgette half-moons near the lower edge, with a subtle natural linen corner. No ramekin, no lemon.",
                       "Wide pulled-back three-quarter overhead view, bowl occupies 60–70% of square frame with breathing room. Warm natural window light, elegant comforting seasonal cookbook styling, appetizing rich color, creamy moist texture. No close-up, no crop, no hands, no text, no logo, no watermark."
                   ]
+              # Retouches visuelles demandées après contrôle du lot 129-133.
+              if rid == "r-cd4732688b":
+                  prompt.extend([
+                      "EXTRA CREAMY FINISH: the risoni must be generously coated in a thick, silky, velvety fresh-goat-cheese cream. Every little pasta grain should glisten and cling together softly; show a clearly visible creamy coating between the pasta and a small natural pool of cream at the bottom of the bowl. The texture must look luscious and spoonable, never dry, separated or broth-like.",
+                      "Make the fresh goat cheese unmistakable: add several soft, irregular creamy-white goat-cheese pieces visibly melting into the hot pasta, plus a few small fresh goat-cheese morsels on top. They must be clearly identifiable as goat cheese, not grated Parmesan. Keep the courgette half-moons prominent and plentiful.",
+                      "Serve immediately while warm, with a beautiful glossy creamy texture catching the natural light. Keep the whole bowl visible and the scene elegant, generous and appetizing."
+                  ])
+              elif rid == "r-ac41aa7880":
+                  prompt = [
+                      "Premium mouthwatering French cookbook photograph of Salade de pommes de terre au maquereau, styled as a generous, colorful, fresh summer lunch rather than a dull or sparse salad.",
+                      "Build a generous attractive base of tender golden potato slices, slightly overlapping in a beautiful fan across a large shallow ceramic platter. Arrange several substantial, clearly recognizable mackerel fillets elegantly on top, with their silvery skin and delicate flaky flesh visible. The fish should look moist, fresh and appetizing, never grey, dry or like scraps.",
+                      "Add juicy glossy red tomato wedges and crisp cucumber ribbons/slices in a lively balanced arrangement around the potatoes and fish. Finish with finely chopped fresh chives. Use only potatoes, mackerel, cucumber, tomatoes and chives; no invented dressing, mayonnaise, lemon or extra ingredients.",
+                      "Give the ingredients natural appetizing sheen and vivid but realistic color. Make the potato slices golden and tender, tomatoes ripe and juicy, cucumber fresh and crisp, and mackerel gently glistening. The plate should look abundant, harmonious and ready to eat.",
+                      "Serve on a beautiful warm ivory or soft sage-green wide ceramic plate with a subtle contrasting rim, on a warm pale-stone tabletop. Add one casually placed folded blue-grey linen napkin and a simple fork, with no ramekin. Bright natural window light, gentle shadows, premium inviting French cookbook styling. Entire plate and rim visible, wide pulled-back three-quarter overhead view with breathing room. No close-up, no crop, no hands, no text, no logo, no watermark."
+                  ]
+              elif rid == "r-957c974540":
+                  prompt = [
+                      "Premium appetizing French cookbook photograph of Poulet au paprika fumé et légumes rôtis. Show golden-browned tender chicken pieces with a beautiful warm smoky-paprika color, surrounded by plentiful roasted courgette half-moons, orange carrot batons and softened golden onion wedges.",
+                      "IMPORTANT MOIST FINISH: the chicken and vegetables must look succulent, tender and freshly roasted, never dry, dusty or matte. Use the recipe's listed olive oil to create a delicate glossy coating, and show a small but clearly visible pool of golden paprika-tinted roasting juices collected naturally in the bottom of the roasting dish. A little of this glossy cooking juice should lightly coat the lower edges of the chicken and vegetables, as if just spooned over before serving.",
+                      "This is NOT a separate sauce: do not add cream, tomato sauce, broth or any unlisted liquid. Use only chicken, courgettes, carrots, onion, olive oil, smoked paprika, herbes de Provence, salt and pepper. Keep all vegetables clearly recognizable and plentiful.",
+                      "Serve in a generous deep forest-green oval ceramic roasting dish on a warm pale-sand stone tabletop, with a rust-colored linen corner and a wooden serving spoon placed naturally beside it. Warm directional natural light, rich golden and paprika tones, inviting cookbook styling. Whole dish and rim visible, wide three-quarter overhead view with breathing room. No close-up, no crop, no hands, no text, no logo, no watermark."
+                  ]
+              elif rid == "r-04b6e91cc3":
+                  prompt = [
+                      "Premium appetizing French cookbook photograph of Lieu noir au four, citron & aneth. Show one generous fully cooked, opaque, tender white pollock fillet, gently flaky with a lightly golden baked surface, served with a generous portion of bright-green whole green beans and pale-golden steamed potato pieces.",
+                      "IMPORTANT MOIST LEMON-DILL FINISH: the fish must look tender, juicy and freshly baked, never dry. Show a delicate but clearly visible glossy pool of natural lemon-and-dill cooking juices around and partly beneath the fish, with a little of the juice spooned over the top so it catches the light. The fish surface should be moist and gently glistening, with fine fresh dill and thin lemon slices. The juices should look like the natural liquid released during baking with the listed lemon and fish, not a cream sauce.",
+                      "Keep green beans and potatoes clearly separate and generous beside the fish. Use only pollock, lemon, fresh dill, green beans and steamed potatoes. Do not add cream, butter, broth, rice or other ingredients.",
+                      "Serve on a beautiful warm-grey or muted sage ceramic plate with a contrasting rim, on a softly textured pale sage tabletop. Add only a small sprig of fresh dill and a fork placed naturally to one side. Fresh elegant French cookbook styling, bright natural window light, appetizing color and gentle shadows. Entire plate and rim visible, pulled-back three-quarter overhead view with comfortable breathing room. No close-up, no crop, no hands, no text, no logo, no watermark."
+                  ]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
