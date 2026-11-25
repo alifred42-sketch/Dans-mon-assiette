@@ -70,7 +70,7 @@ jobs:
               first, last = start + 1, start + count
               print("Ciblage sécurisé par identifiants : " + ", ".join(requested_ids))
           else:
-              match = re.fullmatch(r"([1-9][0-9]*)\\s*-\\s*([1-9][0-9]*)", trigger_text)
+              match = re.fullmatch(r"([1-9][0-9]*)\s*-\s*([1-9][0-9]*)", trigger_text)
               if not match:
                   raise SystemExit("Format refusé. Utilise une plage 86-95 ou ids:r-identifiant,r-identifiant.")
               first, last = map(int, match.groups())
