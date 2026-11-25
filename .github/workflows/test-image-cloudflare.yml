@@ -579,7 +579,21 @@ jobs:
                       "Keep green beans and potatoes clearly separate and generous beside the fish. Use only pollock, lemon, fresh dill, green beans and steamed potatoes. Do not add cream, butter, broth, rice or other ingredients.",
                       "Serve on a beautiful warm-grey or muted sage ceramic plate with a contrasting rim, on a softly textured pale sage tabletop. Add only a small sprig of fresh dill and a fork placed naturally to one side. Fresh elegant French cookbook styling, bright natural window light, appetizing color and gentle shadows. Entire plate and rim visible, pulled-back three-quarter overhead view with comfortable breathing room. No close-up, no crop, no hands, no text, no logo, no watermark."
                   ]
-              manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
+              # Verrou spécifique : la recette 147 est un gratin de poireaux au jambon,
+          # sans pâtes ni féculent. Montrer le vrai gratin, pas une assiette de pâtes.
+          if rid == "r-44d263ba31":
+              prompt = [
+                  "Photorealistic premium French cookbook photograph of the exact recipe Gratin de poireaux au jambon.",
+                  "CRITICAL DISH IDENTITY: this is a baked leek-and-ham gratin. It is NOT pasta, noodles, lasagna, rice, potatoes or a pasta dish. Absolutely no pasta or any other starch.",
+                  "Show several tender whole leek sections, clearly recognizable by their pale ivory and soft light-green cylindrical layers, each wrapped neatly in thin slices of cooked white ham. Arrange them snugly side by side in a small elegant oval ceramic gratin dish.",
+                  "Cover the leek-and-ham rolls with a light creamy white skyr sauce, then a generous but delicate layer of finely grated Parmesan, baked to an appetizing golden surface with a few toasted spots. Let one portion be gently opened so the leek layers and ham wrapping are unmistakable.",
+                  "Use ONLY leek, cooked ham, skyr, Parmesan and herbes de Provence. No pasta, noodles, spaghetti, rice, potatoes, vegetables, herbs as a bed, or invented ingredients.",
+                  "The gratin dish itself is the hero, fully visible with its entire rim, occupying about 65% of the square image. Serve directly in the baking dish, not plated over pasta.",
+                  "Set the dish on a warm pale limestone or light oak tabletop. Add only a small fork and a subtle folded natural linen napkin; a few fresh leek rings may sit beside the dish. No spoonfuls of pasta, no ramekin, no lemon.",
+                  "Warm natural window light, appetizing golden Parmesan crust, creamy moist interior, rich but natural color, inviting French family cookbook styling. Wide pulled-back three-quarter overhead view with breathing room around the complete dish.",
+                  "No close-up, no cropped dish, no hands, no people, no packaging, no text, no watermark, no logo, no collage."
+              ]
+          manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
               raise SystemExit("Aucune recette exploitable dans ce lot.")
