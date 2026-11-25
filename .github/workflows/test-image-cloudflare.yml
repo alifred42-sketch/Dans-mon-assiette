@@ -139,6 +139,26 @@ jobs:
                 seasonal,
                 "Square composition. No close-up, no cropped main dish, no hands, no people, no packaging, no text, no watermark, no logo, no collage."
               ]
+              # Scènes éditoriales distinctes demandées pour le lot 134–138 : le décor varie vraiment d'une recette à l'autre.
+              scenes_134_138 = {
+                  "r-178fbace86": [
+                      "SCÈNE SPÉCIFIQUE WRAPS : servir les wraps entièrement roulés et coupés en biais sur une grande assiette ovale en céramique bleu pétrole, posée sur une nappe en lin naturel froissé sur une table en pierre calcaire beige chaud. Ajouter seulement quelques feuilles de salade et deux petites tomates cerises près du bord inférieur, sans ramequin ni citron. Vue trois-quarts douce, lumière naturelle chaleureuse. Ce décor textile et minéral doit être très différent d'une scène sur planche en bois."
+                  ],
+                  "r-b6703781a3": [
+                      "SCÈNE SPÉCIFIQUE ONE POT : présenter les pâtes au saumon et brocoli dans un grand bol profond en grès vert sauge, sur un plan de travail en pierre gris chaud légèrement texturé. Ajouter une fourchette élégante en inox sur le côté gauche et quelques petits bouquets de brocoli crus près du bord, aucun torchon, aucune cuillère en bois, aucun ramequin. Vue légèrement plongeante, ambiance fraîche et généreuse."
+                  ],
+                  "r-17a1ecc3b7": [
+                      "SCÈNE SPÉCIFIQUE SALADE : présenter la salade complète dans une grande assiette creuse en céramique ivoire à bord irrégulier, sur une table en bois noyer foncé. Les morceaux de poulet grillé, le chèvre, les noix, les tomates et le concombre doivent être distincts et abondants. Ajouter un petit morceau de lin vert olive placé en diagonale loin de l'assiette et quelques cerneaux de noix près du bord gauche. Pas de citron, pas de ramequin, pas de cuillère en bois. Vue du dessus, lumière estivale vivante."
+                  ],
+                  "r-e8952bdaf2": [
+                      "SCÈNE ET TEXTURE CRITIQUES COMPOTE : montrer une VRAIE COMPOTE pommes-poires cuite, lisse et épaisse, de texture fondante avec seulement quelques très petits morceaux tendres, dans un joli petit bol rond en céramique rose poudré ou terracotta claire. Il ne doit absolument pas y avoir de pommes entières, de poires entières, de fruits coupés en quartiers ni de fruits crus posés dans le bol. La compote doit être visiblement cuite, couleur doré ambré, avec une fine poussière de cannelle bien visible sur sa surface. Décor dessert doux et gourmand : napperon en lin rose pâle sur une petite table en pierre crème, une cuillère à dessert dorée posée à côté et un petit bâton de cannelle discret. Aucun fruit entier, aucun ramequin supplémentaire, aucun décor en bois clair. Cadrage trois-quarts rapproché mais bol entier visible avec de l'espace autour."
+                  ],
+                  "r-1aff7d1098": [
+                      "SCÈNE SPÉCIFIQUE POULET CITRON COURGETTES : servir le poulet entièrement cuit, doré et juteux avec des rondelles de courgettes bien visibles dans un plat rond peu profond en céramique terracotta, sur une surface en ardoise gris anthracite. Faire apparaître quelques quartiers de citron confit et des herbes de Provence directement dans le plat, uniquement selon la recette. Ajouter une serviette en lin moutarde pliée sur le bord supérieur gauche et une petite fourchette noire mate à droite. Pas de ramequin, pas de cuillère en bois, pas de fond marbre blanc. Ambiance provençale chaude, lumière naturelle latérale."
+                  ]
+              }
+              if rid in scenes_134_138:
+                  prompt.extend(scenes_134_138[rid])
               # Corrections ciblées validées avec l'utilisatrice pour les recettes 120, 121 et 124.
               if rid == "r-e04a817134":
                   prompt.extend([
