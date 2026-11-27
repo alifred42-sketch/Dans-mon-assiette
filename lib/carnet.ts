@@ -77,6 +77,38 @@ function inferIngredients(recipe: Partial<Recipe>): string[] {
 }
 
 function normalizeRecipeForPlanning(recipe: Recipe): Recipe {
+  // Correction validée : la sauce légère à l’échalote fait partie intégrante de la fiche 195.
+  if (recipe.id === "r-fcac441e35") {
+    const ingredients = [
+      "4 steaks hachés",
+      "2 courgettes",
+      "2 carottes",
+      "600 g de pommes de terre",
+      "2 échalotes",
+      "150 ml de bouillon de bœuf ou de légumes",
+      "1 c. à soupe de skyr nature",
+      "1 c. à soupe de thym",
+      "1 c. à soupe de romarin",
+      "1 gousse d’ail",
+      "1 c. à soupe d’huile d’olive",
+      "Poivre moulu",
+      "30 g de fromage à côté (facultatif)",
+    ];
+    const steps = [
+      "1. Préchauffez le four à 190 °C. Lavez les courgettes, les carottes et les pommes de terre, puis coupez-les en morceaux de taille régulière.",
+      "2. Disposez les légumes sur une plaque, ajoutez l’huile d’olive, le thym, le romarin, l’ail haché et le poivre. Mélangez puis faites rôtir 30 à 40 minutes en remuant à mi-cuisson.",
+      "3. Épluchez et émincez finement les échalotes. Faites-les fondre doucement dans une petite casserole avec une cuillère d’eau ou un peu de bouillon.",
+      "4. Ajoutez le bouillon et laissez réduire quelques minutes. Hors du feu, incorporez le skyr pour obtenir une sauce légère et onctueuse. Ne faites plus bouillir.",
+      "5. Faites cuire les steaks hachés à la poêle selon la cuisson souhaitée. Servez-les nappés de sauce à l’échalote avec les légumes rôtis. Ajoutez le fromage à côté si envie.",
+    ];
+    const sections = (recipe.sections || []).map((section) => {
+      if (/ingrédients|ingredients|🛒/i.test(section.title || "")) return { ...section, lines: ingredients };
+      if (/préparation|preparation|👩‍🍳/i.test(section.title || "")) return { ...section, lines: steps };
+      if (/sauce échalote/i.test(section.title || "")) return { ...section, lines: ["2 échalotes finement émincées", "150 ml de bouillon de bœuf ou de légumes", "1 c. à soupe de skyr nature"] };
+      return section;
+    });
+    recipe = { ...recipe, ingredients, steps, sections };
+  }
   const recipeTags = recipe as Recipe & { sous_etudiant?: string };
   const isPdfTrendRecipe = recipeTags.sous_etudiant === "tendances" && recipe.source.includes("RECETTES ETUDIANTS - LES 12 RECETTES TENDANCES");
   const notes = [...(recipe.notes || [])];
