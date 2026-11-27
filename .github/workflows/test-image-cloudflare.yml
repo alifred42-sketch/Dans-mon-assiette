@@ -225,6 +225,42 @@ jobs:
                       "SCÈNE CHILI CON CARNE : présenter un chili épais et mijoté, rouge profond, avec viande hachée et haricots bien identifiables dans une cocotte individuelle en fonte émaillée turquoise. La préparation doit être généreuse et liée, pas une soupe ; montrer la texture du chili à la surface. Décor chaleureux sur table en bois fumé avec torchon terracotta et cuillère en métal noir. Ne pas ajouter de riz, fromage, avocat ou crème si ces ingrédients ne sont pas dans la fiche. Vue trois-quarts."
                   ]
               }
+              # Scènes entièrement personnalisées pour le lot 189–198, d'après les ingrédients réels.
+              scenes_189_198 = {
+                  "r-50e9f84517": [
+                      "SCÈNE CHILI : servir le chili épais dans une cocotte individuelle en fonte émaillée bleu pétrole, sur une table en noyer sombre avec un torchon terracotta. Viande hachée, haricots rouges, tomates, carottes et poivron doivent être nettement visibles dans la sauce rouge profonde. Le riz blanc est servi séparément dans un petit bol en céramique crème, clairement visible. Ajouter une cuillère de service en métal noir et quelques feuilles de coriandre seulement si elles restent discrètes. Pas d'avocat, pas de crème, pas de fromage. Ambiance chaleureuse de cuisine familiale, vue trois-quarts."
+                  ],
+                  "r-b90dd4f2c7": [
+                      "SCÈNE TORTILLA ESPAGNOLE : montrer une vraie tortilla espagnole épaisse et ronde, dorée à l'extérieur, coupée en une belle part pour révéler les couches de pommes de terre, oignons et œufs. Servir sur un plat rond en céramique jaune safran, sur une nappe en lin écru et une table en pierre beige chaud. À côté, présenter une petite salade verte fraîche, quelques dés de feta dans une coupelle discrète et une tranche de pain complet grillé. Quelques feuilles de persil. Aucun autre légume. Lumière ensoleillée de tapas, angle trois-quarts."
+                  ],
+                  "r-86fb2988d0": [
+                      "SCÈNE CHOU FARCI : présenter deux beaux rouleaux de chou vert farcis, l'un entier et l'autre coupé en deux pour montrer clairement la farce de bœuf et veau. Les feuilles de chou doivent envelopper la viande, avec carottes et pommes de terre vapeur visibles à côté. Servir dans un plat ovale en grès vert forêt, sur une table rustique en chêne moyen avec serviette en lin bordeaux et petite fourchette ancienne. Persil et thym frais en touche légère. Pas de sauce tomate inventée, pas de riz. Ambiance grand-mère revisitée, lumière chaude."
+                  ],
+                  "r-934c884001": [
+                      "SCÈNE PARMENTIER DE POISSON : montrer un vrai parmentier individuel dans un plat à gratin ovale en céramique bleu-gris, avec une couche de purée de pommes de terre dorée et légèrement gratinée. Une portion est servie et ouverte pour révéler dessous les morceaux distincts de saumon rose et de cabillaud blanc, avec une texture crémeuse légère au skyr et lait. Ciboulette et aneth visibles, petite touche de citron. Décor élégant de bord de mer : table en bois patiné gris, linge bleu marine, fourchette inox. Pas de chapelure excessive, pas d'autres poissons. Vue trois-quarts."
+                  ],
+                  "r-fdf3b6311b": [
+                      "SCÈNE PÂTES RICOTTA : servir les pâtes bien visibles et généreusement enrobées d'une sauce ricotta crémeuse, avec tomates cerises rouges rôties, basilic frais et parmesan râpé en copeaux. Grand bol profond en céramique artisanale vert sauge, posé sur une nappe en lin rayé beige et olive, table en pierre chaude. Ajouter quelques tomates cerises et feuilles de basilic au bord, ainsi qu'une fourchette élégante. Ambiance trattoria italienne ensoleillée. Aucun autre légume, aucune viande. Vue trois-quarts."
+                  ],
+                  "r-f8fd15f1a2": [
+                      "SCÈNE RIZ SAUTÉ THAÏ : présenter un riz sauté doré dans un grand bol profond en céramique anthracite, avec morceaux de poulet bien visibles, rubans de carotte, chou émincé, courgette et petits morceaux d'œuf brouillé répartis dans le riz. La sauce soja doit donner un léger brillant au riz, sans le noyer. Décor asiatique contemporain sur une table en bambou foncé, petite serviette vert lime, quartiers de citron vert et coriandre fraîche à côté. Pas de crevettes, pas de cacahuètes, pas de brocoli. Vue plongeante oblique."
+                  ],
+                  "r-fcac441e35": [
+                      "SCÈNE STEAK SAUCE ÉCHALOTE : présenter un steak haché bien saisi, juteux, nappé d'une sauce échalote brune et brillante, la sauce clairement visible sur la viande et dans une petite saucière assortie. Accompagner de courgettes et carottes rôties ainsi que de pommes de terre dorées au thym et romarin. Grande assiette en céramique gris ardoise sur une table en bois noyer, serviette en lin moutarde et couteau élégant. Ambiance bistrot chic, lumière latérale chaleureuse. Aucun légume supplémentaire."
+                  ],
+                  "r-6e0eb13534": [
+                      "SCÈNE TIRAMISU FRUITS ROUGES : présenter un vrai tiramisu en verrine large en verre transparent, avec couches bien distinctes de biscuits à la cuillère imbibés, crème légère au skyr et petite quantité de mascarpone, puis fruits rouges visibles en surface. La coupe doit révéler les couches crémeuses et les biscuits, pas un simple yaourt aux fruits. Décor dessert raffiné sur une petite table en marbre rose pâle avec serviette en lin framboise, petite cuillère dorée et quelques fruits rouges frais à côté. Vanille et zeste de citron subtils. Lumière douce et gourmande."
+                  ],
+                  "r-76033d4d4b": [
+                      "SCÈNE WRAP POULET ST MÔRET : présenter deux wraps de blé bien roulés, l'un entier et l'autre coupé en diagonale pour montrer nettement le poulet cuit, la couche blanche et crémeuse de St Môret, les courgettes grillées, tomates, salade et concombre. La garniture doit être généreuse et identifiable à l'intérieur, pas étalée sur une tortilla ouverte. Servir sur une assiette rectangulaire en céramique bleu pétrole, sur un tissu en lin vert olive posé sur pierre claire. Quelques rondelles de concombre et tomates en rappel, aucun ramequin. Lumière estivale, angle trois-quarts."
+                  ],
+                  "r-55df4a046d": [
+                      "SCÈNE POULET MÉDITERRANÉEN : montrer des blancs de poulet dorés et juteux, avec mozzarella fondue en nappage visible sur le poulet, entourés de courgettes, tomates et oignon rouge rôtis. Pommes de terre grenaille facultatives : si présentes, elles restent un accompagnement discret. Servir dans un plat peu profond en céramique terracotta, sur une nappe en lin bleu azur et une table en pierre beige. Basilic et origan frais, petite fourchette en inox. Ambiance méditerranéenne chaleureuse, soleil de fin d'après-midi, vue trois-quarts."
+                  ]
+              }
+              if rid in scenes_189_198:
+                  prompt.extend(scenes_189_198[rid])
+
               if rid in scenes_179_188:
                   prompt.extend(scenes_179_188[rid])
 
