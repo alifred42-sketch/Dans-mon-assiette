@@ -713,6 +713,54 @@ jobs:
                       "Warm chic cookbook styling on a softly textured light stone or natural linen tabletop, gentle warm daylight, fresh appetizing color and natural shadows. Add only a few cucumber ribbons and a small lemon wedge as subtle accompaniments. No ramekin, no clutter.",
                       "Square pulled-back three-quarter overhead composition, whole plate and rim visible with breathing room. No close-up crop, no flat open tortilla, no tacos, no hands, no text, no logo, no watermark."
                   ]
+              # Corrections ciblées après le premier contrôle visuel du lot 199–208.
+              # Ces scènes remplacent les consignes génériques ou erronées pour garantir la fidélité aux fiches.
+              retakes = {
+                  "r-b17bf4bbeb": [
+                      "Photorealistic premium French cookbook photograph of a true finished zucchini soup, not a vegetable salad.",
+                      "Show a smooth, creamy, pale green zucchini velouté in one generous deep ceramic soup bowl. The soup must be visibly liquid and velvety, with a subtle swirl of fresh cheese stirred into the surface and a tiny restrained basil garnish.",
+                      "Use only courgettes, potato, onion, vegetable stock, fresh cheese, optional mild curry, salt, pepper and basil. No sliced zucchini salad, no raw vegetable medley, no feta cubes, no tomatoes, no extra vegetables.",
+                      "Warm elegant kitchen-table setting on a soft honey-oak surface with a natural linen napkin and one soup spoon. Three-quarter overhead view; show the complete bowl and its rim, warm natural daylight, appetizing rich green color."
+                  ],
+                  "r-7715637c6c": [
+                      "Photorealistic premium French cookbook photograph of homemade cooked tomato sauce, not a salad and not a plated meal.",
+                      "Show only a thick, rich, slowly simmered red tomato sauce in one small elegant ceramic sauce bowl or ramekin. The sauce itself is the hero, with a visibly smooth chunky tomato texture and tiny finely cooked pieces of carrot and onion; a few tiny basil leaves and thyme may sit on the surface.",
+                      "Use only crushed tomatoes, onions, garlic, carrots, aromatic herbs, fresh basil, fresh thyme and herbes de Provence. No raw tomato salad, no whole tomatoes, no mozzarella, no eggs, no bread, no pasta and no unrelated garnish.",
+                      "Set the bowl on a warm pale limestone surface with a small wooden spoon and a subtle sprig of thyme beside it. Whole bowl visible, warm directional daylight, appetizing deep tomato-red color."
+                  ],
+                  "r-627302c625": [
+                      "Photorealistic premium French cookbook photograph of eggs cocotte with cold-smoked salmon.",
+                      "Show two small individual ceramic ramekins of baked eggs cocotte. Each ramekin must visibly contain creamy egg and unmistakable thin silky rose-pink cold-smoked salmon ribbons folded into or resting on the creamy egg surface. The salmon must look cold-smoked, never like cooked salmon chunks or a fillet. Add only finely chopped chives and dill with black pepper.",
+                      "Use only eggs, smoked salmon, light cream, chives, dill, pepper and lemon. Absolutely no potato salad, potatoes, cucumber, radish, lettuce, tomatoes or side salad. A tiny lemon wedge may sit outside the ramekins.",
+                      "Arrange the two complete ramekins on a warm taupe stone tabletop with a small linen napkin. Three-quarter overhead view, soft warm daylight, entire ramekins visible, elegant bistro cookbook styling."
+                  ],
+                  "r-4ce28d774d": [
+                      "Photorealistic premium French cookbook photograph of a homemade chocolate custard dessert.",
+                      "Show a smooth, thick, glossy chocolate crème dessert in one elegant small glass or ceramic dessert cup. The texture must be a cooked silky custard, not whipped cream, mousse piled high or ice cream. A few fine dark chocolate shavings are acceptable as a restrained garnish.",
+                      "Use only milk, dark chocolate, eggs, unsweetened cocoa, corn starch and optional sugar. No whipped cream, no berries, no nuts, no biscuits, no caramel and no extra ingredients.",
+                      "Warm dessert styling on a muted terracotta or warm beige tabletop with a small dessert spoon and a folded linen corner. Whole cup visible, appetizing deep chocolate color, gentle natural window light."
+                  ],
+                  "r-8c62c53b61": [
+                      "Photorealistic premium French cookbook photograph of homemade cooked applesauce with no added sugar.",
+                      "Show a generous serving of cooked apple compote in a small beautiful ceramic bowl. The compote must be visibly cooked, soft, thick and spoonable, golden pale amber with a few tender tiny apple pieces and a delicate visible dusting of cinnamon. It must not look like whole apples or raw fruit salad.",
+                      "Use only apples, cinnamon and vanilla. No whole apples in the bowl, no apple slices arranged as fresh fruit, no sugar, no caramel, no berries, no nuts and no cream.",
+                      "Set the complete bowl on a warm natural linen cloth over a light oak table, with a small dessert spoon and one subtle cinnamon stick outside the bowl. Soft warm daylight, inviting homemade dessert atmosphere."
+                  ],
+                  "r-4d5e2c63aa": [
+                      "Photorealistic premium French cookbook photograph of light crêpe batter before cooking.",
+                      "Show a smooth, thin, pourable pale cream-colored crêpe batter inside one attractive ceramic mixing bowl. The batter must clearly look liquid and silky, with a small whisk resting partly inside or beside the bowl. This is raw batter, not cooked crêpes.",
+                      "Use only flour, egg and milk. No cooked pancakes, no crepes stacked on a plate, no fruit, no chocolate, no sugar, no berries and no extra ingredients.",
+                      "Warm elegant kitchen prep scene on a honey-oak tabletop with a simple linen napkin and the whole mixing bowl visible. Three-quarter overhead view, natural window light, clean but inviting cookbook styling."
+                  ],
+                  "r-f1352e28e6": [
+                      "Photorealistic premium French cookbook photograph of a real homemade wholemeal bread loaf.",
+                      "Show one rustic baked wholemeal bread loaf, golden-brown crust, with two or three slices cut and placed beside it to reveal a dense but airy wholegrain crumb. The loaf must unmistakably be bread, not meatloaf, pâté, cake or a molded savory dish.",
+                      "Use only wholemeal flour, warm water, dry baker's yeast, salt and olive oil. No seeds, nuts, cheese, herbs, meat, vegetables or toppings.",
+                      "Set the loaf on a wooden bread board over a warm natural linen tablecloth, with a simple bread knife beside it and a few natural crumbs. Entire loaf visible, warm directional daylight, inviting artisan bakery cookbook styling."
+                  ]
+              }
+              if rid in retakes:
+                  prompt = retakes[rid]
               manifest.append({"id": rid, "name": name, "ingredients": ingredients, "prompt": " ".join(x for x in prompt if x)})
           Path("batch-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
           if not manifest:
