@@ -192,6 +192,42 @@ jobs:
                       "SCÈNE BISTROT STEAK-FRITES : présenter un steak haché bien saisi et juteux, accompagné de frites au four dorées et croustillantes et d'une salade verte avec tomates fraîches, dans une assiette ronde en grès brun clair à large bord, posée sur une table de bistrot en bois foncé. La sauce annoncée dans le titre, au St Môret et à la ciboulette, doit être visible et appétissante dans un petit pot en céramique ivoire à côté du steak, texture épaisse et onctueuse, parsemée de ciboulette fraîche ; en déposer aussi une petite cuillerée sur le bord du steak. Ne pas la cacher, ne pas la remplacer par du ketchup ou de la mayonnaise. Frites bien distinctes, steak au premier plan, salade et tomates fraîches à l'arrière. Ajouter une serviette à rayures bleu marine et une fourchette bistrot, pas de ramekin générique ni citron. Ambiance brasserie française chic, lumière chaude, vue trois-quarts."
                   ]
               }
+              # Scènes éditoriales spécifiques 179–188 : composition, vaisselle et décor uniques par recette.
+              scenes_179_188 = {
+                  "r-fffc139d41": [
+                      "SCÈNE BOULETTES ESPAGNOLES : présenter les boulettes rondes de poulet ou dinde hachée, dorées et nappées de sauce tomate-paprika rouge visible, dans une cocotte basse en terre cuite rustique, sur une table en pierre chaude avec torchon rouge brique. Montrer distinctement les carottes et la sauce tomate ; servir une seule petite portion de riz à côté, sans semoule ni courgette ni fromage ajouté si la fiche ne les associe pas clairement. Les boulettes doivent être le sujet principal, pas une assiette de pâtes. Vue trois-quarts."
+                  ],
+                  "r-79f9f3b7c4": [
+                      "SCÈNE POÊLÉE DE CHOU : montrer une vraie poêlée généreuse où le chou vert émincé et cuit est l'ingrédient dominant et immédiatement reconnaissable, accompagné de pommes de terre en morceaux, lardons de volaille, carottes, oignon, thym et laurier. Servir dans une large sauteuse en fonte noire posée sur une planche d'ardoise, avec une cuillère de service en métal et un linge vert forêt en arrière-plan. Le chou doit occuper la majorité de la poêlée, pas être remplacé par des feuilles de salade. Pas de sauce inventée. Vue plongeante oblique."
+                  ],
+                  "r-85fc3629ae": [
+                      "SCÈNE POULET SOJA-MIEL : présenter des morceaux de poulet laqués d'une sauce soja-miel brillante, fine mais bien visible, dans un bol large en céramique bleu nuit. Autour et mélangés au poulet, rendre clairement identifiables les bâtonnets de carotte, le chou émincé et les courgettes. Servir avec les nouilles chinoises (choisir les nouilles, pas le riz) dans le même bol. Décor asiatique sobre sur plateau en bois sombre, baguettes en bambou et petit morceau de lin ocre, sans ramekin ni pâtes italiennes. Vue trois-quarts."
+                  ],
+                  "r-0487b25e70": [
+                      "SCÈNE TARTINES SAUMON : montrer deux grandes tranches de pain complet grillées, généreusement tartinées de St Môret, garnies de rubans de saumon fumé et de fines rondelles de concombre. La salade verte est servie à côté en petite garniture, avec ciboulette et aneth visibles et un quartier de citron discret. Présenter sur une planche rectangulaire en céramique bleu pâle, posée sur un linge rayé marin, couverts fins en inox. Pas de pain blanc, pas d'avocat, pas d'œuf. Vue du dessus."
+                  ],
+                  "r-970c91ba88": [
+                      "SCÈNE BLANQUETTE — PRIORITÉ ABSOLUE : vraie blanquette de volaille mijotée, jamais un poulet rôti ni une assiette sèche. Dans une cocotte ovale basse en céramique ivoire, présenter des morceaux de poulet tendres, carottes en rondelles, champignons de Paris et poireau, tous partiellement immergés et généreusement enrobés d'une sauce blanche crémeuse au bouillon et skyr. La sauce doit être abondante, épaisse et nappante, remplir visiblement le fond de la cocotte et entourer chaque morceau ; elle ne doit pas être une simple trace ou un petit filet. Persil frais et thym discrets. Servir le riz séparément dans un petit bol en grès gris, avec pommes de terre visibles dans la blanquette seulement si la composition reste fidèle. Décor de déjeuner familial raffiné : table en chêne moyen, linge beige et louche en inox. Pas de tomate, pas de sauce brune, pas de légumes rôtis. Vue trois-quarts montrant bien le volume de sauce."
+                  ],
+                  "r-5c7f347d45": [
+                      "SCÈNE TAJINE CITRON-OLIVES : présenter un tajine ouvert dans un plat à tajine bas en terre cuite vernissée jaune safran, jamais avec couvercle. Montrer des morceaux de poulet mijotés, des quartiers de citron et surtout plusieurs olives vertes entières, nettement visibles et réparties sur le dessus. Sauce de cuisson citronnée brillante autour du poulet, herbes discrètes. Décor sur table en mosaïque artisanale avec serviette bleu profond et petite fourchette en laiton ; aucun couscous, aucun fruit sec, aucune carotte ou légume non listé. Vue trois-quarts."
+                  ],
+                  "r-8ff611b414": [
+                      "SCÈNE PENNE POULET TOMATES SÉCHÉES : servir des penne rigate dans une assiette creuse large en céramique vert sauge, avec des morceaux de poulet bien visibles et reconnaissables, des lamelles de tomates séchées rouge foncé et de la mozzarella fondante en petits morceaux. Les pâtes doivent être réellement des penne, pas des spaghetti ; répartir les ingrédients pour qu'aucun ne soit caché. Décor italien contemporain sur table en terrazzo beige rosé, serviette en lin prune et fourchette inox. Pas de basilic en bouquet géant ni sauce tomate ajoutée si non prévue. Vue plongeante."
+                  ],
+                  "r-d54ee232e0": [
+                      "SCÈNE BOWL GREC : composer un bowl dans un grand bol profond en céramique blanche à liseré bleu, avec poulet en morceaux, feta émiettée et houmous bien distincts et abondants. Présenter les composants en sections reconnaissables plutôt que tout mélanger ; utiliser uniquement les légumes réellement présents dans la liste d'ingrédients. Décor méditerranéen sur nappe en lin bleu et table en pierre claire, petite fourchette à gauche, sans olives ni tomates si elles ne figurent pas dans la recette. Vue du dessus."
+                  ],
+                  "r-9c0c81424f": [
+                      "SCÈNE RAVIOLES SAUMON : montrer des ravioles tendres dans une assiette creuse en porcelaine gris perle, généreusement nappées d'une sauce crémeuse au St Môret et citron, avec des morceaux identifiables de saumon. La sauce doit être visible entre les ravioles et au fond de l'assiette, pas servie à part ni absente. Décor chic et lumineux sur table en pierre gris chaud, linge jaune pâle et zeste de citron discret ; pas de pâtes longues, pas de tomate, pas de crème rouge. Vue trois-quarts."
+                  ],
+                  "r-50e9f84517": [
+                      "SCÈNE CHILI CON CARNE : présenter un chili épais et mijoté, rouge profond, avec viande hachée et haricots bien identifiables dans une cocotte individuelle en fonte émaillée turquoise. La préparation doit être généreuse et liée, pas une soupe ; montrer la texture du chili à la surface. Décor chaleureux sur table en bois fumé avec torchon terracotta et cuillère en métal noir. Ne pas ajouter de riz, fromage, avocat ou crème si ces ingrédients ne sont pas dans la fiche. Vue trois-quarts."
+                  ]
+              }
+              if rid in scenes_179_188:
+                  prompt.extend(scenes_179_188[rid])
+
               if rid in scenes_169_178:
                   prompt.extend(scenes_169_178[rid])
 
